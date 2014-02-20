@@ -1,0 +1,9 @@
+#!/usr/bin/perl
+
+use CGI qw (:standard) ;
+
+BEGIN {
+use CGI::Carp qw(carpout fatalsToBrowser);
+open (LOG, ">>server.err");
+carpout (*LOG);
+}
