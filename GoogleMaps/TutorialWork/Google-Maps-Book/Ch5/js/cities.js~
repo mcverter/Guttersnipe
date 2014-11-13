@@ -1,0 +1,7 @@
+(function() {
+    window.onload = function() {
+	var options = {
+	    zoom : 3,
+	    center : new google.maps.LatLng(37.09, -95.71),
+	    mapTypeId: google.maps.MapTypeId.ROADMAP
+	};

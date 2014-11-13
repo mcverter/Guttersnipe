@@ -1,0 +1,15 @@
+body {
+
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+form {
+    margin-bottom: 10px;
+}
+
+#map {
+    width: 500px;
+    height: 300px;
+    border: 1px solid black;
+}
+

@@ -1,0 +1,10 @@
+(function() {
+    window.onload = function() {
+	var options = {
+	    zoom: 12,
+	    center: new google.maps.LatLng(40.7257, -74.0047)
+	    mapTypeId:  google.maps.MapTypeId.ROADMAP
+	    };
+	var map = new google.maps.Map(document.getElementById('map'), options);
+	};
+    })();
