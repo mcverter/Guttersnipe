@@ -1,0 +1,1 @@
+(function(){stButtons.processCB({"yahoo":3,"google":8368,"clicks_total":8669,"facebook":27,"twitter":307,"linkedin":1,"googleplus":5,"total":8674,"shares":{"linkedin":1,"all":5,"googleplus":3,"twitter":2},"url":"http:\/\/laravelsnippets.com\/snippets\/angularjs-with-laravel","ourl":"http:\/\/laravelsnippets.com\/snippets\/angularjs-with-laravel#sthash.VV09VKDv"})})();

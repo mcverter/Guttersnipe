@@ -1,0 +1,1644 @@
+@media only screen and ( min-width: 1320px ) {
+/*===============================================
+
+	M O N I T O R
+	1320px/unlimited
+
+===============================================*//**/
+
+/**/}
+
+
+@media only screen and ( min-width: 960px ) and ( max-width: 1319px ) {
+/*===============================================
+
+	T A B L E T   /   L A P T O P
+	960px/1319px
+
+===============================================*//**/
+
+/*
+
+	1 - LAYOUT
+
+		- Header
+		- Content
+		- Footer
+
+	2 - MENU
+
+		- Primary
+		- Secondary
+
+	3 - SIDEBARS
+
+		- Sidebar
+		- Footer
+
+	4 - TEMPLATES / PROJECTS
+
+		- Template 1
+
+	5 - COMMON
+
+		- Titles
+
+*/
+
+	/*===========================================
+		L A Y O U T
+	===========================================*/
+
+	/*--- Header ------------------------------*/
+
+	#header-holder {
+		width: 935px;
+	}
+
+		#logo {
+			width: 240px;
+		}
+
+	#header-holder-2 {
+		width: 935px;
+	}
+
+	#hcustom {
+		width: 150px;
+	}
+
+	/*--- Content -----------------------------*/
+
+	#content-holder {
+		width: 935px;
+	}
+
+		div.post-single {
+			width: 524px;
+		}
+
+		.sidebar-position-right #content-box {
+			width: 695px;
+		}
+
+			.sidebar-position-right #content-box > div {
+				padding-right: 26px;
+			}
+
+		.sidebar-position-left #content-box {
+			width: 695px;
+		}
+		
+			.sidebar-position-left #content-box > div {
+				padding-left: 26px;
+			}
+
+		.sidebar-position-none div.post-single {
+			width: 790px;
+		}
+
+
+	/*--- Footer ------------------------------*/
+
+	#footer-holder,
+	#copyrights-box {
+		width: 935px;
+	}
+
+
+	/*===========================================
+		M E N U
+	===========================================*/
+
+	/*--- Primary -----------------------------*/
+
+	#menu {
+		width: 535px;
+	}
+
+	/*--- Secondary ---------------------------*/
+
+	#menu-2 {
+		padding-left: 240px;
+	}
+
+
+	/*===========================================
+		S I D E B A R S
+	===========================================*/
+
+	/*--- Sidebar -----------------------------*/
+
+	#sidebar {
+		width: 240px;
+	}
+
+		.sidebar-position-right .sidebar {
+			margin-left: 25px;
+		}
+
+		.sidebar-position-left .sidebar {
+			margin-right: 25px;
+		}
+
+	/*--- Footer ------------------------------*/
+
+	.sidebar-footer > div {
+		margin-right: 25px;
+	}
+
+		/*- 1/3 + 1/3 + 1/3 -*/
+	
+		.footer-box-v1 .sidebar-footer {
+			width: 320px;
+		}
+	
+		.footer-box-v1 .sidebar-footer.last {
+			width: 295px;
+		}
+
+		/*- 1/4 + 1/4 + 1/2 -*/
+	
+		.footer-box-v2 .sidebar-footer {
+			width: 240px;
+		}
+		
+		.footer-box-v2 .sidebar-footer.last {
+			width: 455px;
+		}
+
+		/*- 1/4 + 1/2 + 1/4 -*/
+	
+		.footer-box-v3 .sidebar-footer {
+			width: 480px;
+		}
+		
+		.footer-box-v3 .sidebar-footer:first-child {
+			width: 240px;
+		}
+	
+		.footer-box-v3 .sidebar-footer.last {
+			width: 215px;
+		}
+
+	/*- 1/2 + 1/4 + 1/4 -*/
+
+	.footer-box-v4 .sidebar-footer {
+		width: 240px;
+	}
+	
+	.footer-box-v4 .sidebar-footer:first-child {
+		width: 480px;
+	}
+
+	.footer-box-v4 .sidebar-footer.last {
+		width: 215px;
+	}
+
+	/*- 1/4 + 1/4 + 1/4 + 1/4 -*/
+
+	.footer-box-v5 .sidebar-footer {
+		width: 240px;
+	}
+	
+	.footer-box-v5 .sidebar-footer.last {
+		width: 215px;
+	}
+
+	/*- 2/3 + 1/3 -*/
+
+	.footer-box-v6 .sidebar-footer {
+		width: 295px;
+	}
+
+	.footer-box-v6 .sidebar-footer:first-child {
+		width: 640px;
+	}
+
+
+	/*===========================================
+		T E M P L A T E S / PROJECTS
+	===========================================*/
+
+	/*--- Template 1 --------------------------*/
+
+	.projects-t1-wrapper {
+		padding-bottom: 25px;
+	}
+
+		.projects-t1-wrapper > div.projects-t1-a-wrapper {
+			width: 455px;
+		}
+
+			.projects-t1-wrapper  > div.projects-t1-a-wrapper a.project-thumb {
+				height: 319px;
+				background-size: 456px auto;
+			}
+
+		.projects-t1-wrapper > div.projects-t1-b-wrapper {
+			width: 215px;
+			margin-left: 25px;
+		}
+
+		.projects-t1-wrapper > div {
+			width: 215px;
+			margin-bottom: 25px;
+			margin-right: 25px;
+		}
+	
+			.projects-t1-wrapper a.project-thumb {
+				height: 147px;
+				background-size: 216px auto;
+			}
+
+	.t1-dummy-big {
+		height: 319px;
+	}
+
+		.t1-dummy-big span {
+			margin-top: 150px;
+		}
+
+	.t1-dummy {
+		height: 147px;
+	}
+
+		.t1-dummy span {
+			margin-top: 61px;
+		}
+
+
+	/*===========================================
+		C O M M O N
+	===========================================*/
+
+	/*--- Titles ------------------------------*/
+
+	.sidebar-homepage-b h1 {
+		font-size: 2.1em;
+	}
+
+		.sidebar-homepage-b h1 span {
+			display: inline;
+		}
+
+
+
+/**/}
+
+
+@media only screen and ( min-width: 640px ) and ( max-width: 959px ) {
+/*===============================================
+
+	T A B L E T   V
+	640px/959px
+
+===============================================*//**/
+
+/*
+
+	1 - LAYOUT
+
+		- Header
+		- Content
+		- Footer
+
+	2 - MENU
+
+		- Primary
+		- Secondary
+
+	3 - SIDEBARS
+
+		- Sidebar
+		- Footer
+
+	4 - TEMPLATES / PROJECTS
+
+		- Template 1
+
+	5 - POST
+
+	6 - SHORTCODES
+
+	7 - WIDGETS
+
+		- Get In Touch
+
+	8 - COMMON
+
+		- Titles
+
+*/
+
+	/*===========================================
+		L A Y O U T
+	===========================================*/
+
+	body, div, td {
+		font-size: 1em;
+	}
+
+	/*--- Header ------------------------------*/
+
+	#header-holder {
+		width: auto;
+	}
+
+		#logo {
+			float: none;
+			height: auto;
+			margin: 0 auto;
+			padding: 35px 0 25px;
+		}
+
+			#logo h2 {
+				margin: 0;
+				text-align: center;
+			}
+
+				#logo h2 img {
+					margin: 0 auto;
+				}
+
+		#hcustom {
+			float: none;
+			width: auto;
+			height: auto;
+			margin: 0 auto;
+			padding: 25px;
+		}
+
+	#header-holder-2 {
+		width: auto;
+	}
+
+	/*--- Content -----------------------------*/
+
+	#content-holder {
+		width: 590px;
+		margin: 0 auto;
+	}
+
+		#content-holder #content-box {
+			float: none;
+			width: auto;
+		}
+
+			#content-box {
+				min-height: auto;
+			}
+
+				.home .projects #content-box {
+					padding-bottom: 50px;
+				}
+
+				#content-holder #content-box > div {
+					padding: 25px 0 50px;
+					background: none;
+				}
+	
+					.home #content-holder #content-box > div {
+						padding-bottom: 0;
+					}
+
+		#content-holder div.post-single {
+			float: none;
+			width: 590px;
+			margin: 0;
+		}
+
+	/*--- Footer ------------------------------*/
+
+	#footer-holder {
+		width: 590px;
+		padding-top: 40px;
+	}
+
+		#footer-box {
+			margin-right: -50px;
+		}
+
+	#copyrights-box {
+		width: 590px;
+	}
+
+
+	/*===========================================
+		M E N U
+	===========================================*/
+
+	/*--- Primary -----------------------------*/
+
+	#menu {
+		float: none;
+		width: auto;
+		height: auto;
+		margin: 0 auto;
+		padding: 0 25px;
+	}
+
+		ul.menu {
+			text-align: center;
+		}
+
+			ul.menu > li {
+				float: none;
+				display: inline-block;
+				margin: 0;
+			}
+	
+				#menu span.subline {
+					display: none;
+				}
+
+					#menuByClick {
+						display: block;
+					}
+
+	/*--- Secondary ---------------------------*/
+
+	#menu-2 {
+		display: table;
+		text-align: center;
+		margin: 0 auto;
+		padding: 0 25px;
+	}
+
+		ul.menu-2 > li {
+			margin-right: 0;
+		}
+
+			ul.menu-2 > li a span {
+				display: none;
+			}
+
+
+	/*===========================================
+		S I D E B A R S
+	===========================================*/
+
+	/*--- Sidebar -----------------------------*/
+
+	#content-holder #sidebar {
+		float: none;
+		width: auto;
+		padding: 0;
+	}
+
+		#content-holder .sidebar {
+			margin: 0;
+		}
+
+	#content-holder div.sidebar-post {
+		width: 540px;
+		margin: 50px 0 25px;
+		padding: 2em 25px;
+		background-repeat: repeat;
+	}
+	
+		.sidebar-post,
+		.sidebar-post div {
+			font-size: inherit;
+		}
+	
+		.sidebar-post .stickyDiv {
+			position: relative !important;
+			float: right;
+			width: 245px;
+			top: auto !important;
+		}
+
+			.sidebar-post .stickyDiv > div {
+				margin: 0 0 25px;
+			}
+
+	/*--- Footer ------------------------------*/
+
+	#footer-box .sidebar-footer,
+	#footer-box .sidebar-footer.last {
+		width: 307px;
+	}
+
+		#footer-box .sidebar-footer > div,
+		#footer-box .sidebar-footer.last > div {
+			margin-right: 25px;
+			margin-top: 0;
+		}
+
+
+	/*===========================================
+		T E M P L A T E S / PROJECTS
+	===========================================*/
+
+	.project-thumb,
+	.dummy {
+		font-size: 0.85em;
+	}
+
+	/*--- Template 1 --------------------------*/
+
+	.projects-t1-wrapper {
+		padding-bottom: 46px;
+	}
+
+		/* Project 1 */
+		.projects-t1-wrapper > div.projects-t1-a-wrapper {
+			width: 393px;
+		}
+	
+			.projects-t1-wrapper > div.projects-t1-a-wrapper a.project-thumb {
+				height: 271px;
+				background-size: 394px auto;
+			}
+
+		/* Projects 2,3 */
+		.projects-t1-wrapper > div.projects-t1-b-wrapper {
+			width: 196px;
+			margin-left: 1px;
+		}
+
+		/* Projects 4,5,6... */
+		.projects-t1-wrapper > div {
+			width: 196px;
+			margin-bottom: 1px;
+			margin-right: 1px;
+		}
+	
+			.projects-t1-wrapper a.project-thumb {
+				height: 135px;
+			}
+	
+			.projects-t1-wrapper i {
+				display: none;
+			}
+
+		/* Dummy */
+		.t1-dummy-big {
+			height: 270px;
+		}
+	
+			.t1-dummy-big span {
+				margin-top: 130px;
+			}
+	
+		.t1-dummy {
+			height: 135px;
+		}
+	
+			.t1-dummy span {
+				margin-top: 53px;
+			}
+
+
+	/*===========================================
+		P O S T
+	===========================================*/
+
+	.page-title {
+	}
+
+	h2.post-title {
+		margin-bottom: 0.5em;
+	}
+
+	.single-author-info {
+		min-height: 130px;
+	}
+
+		.single-author-upic {
+			float: right;
+			margin: 0 0 10px 25px;
+		}
+
+	.post-short-info {
+		float: left;
+		width: 245px;
+		margin: 0;
+		padding: 0.5em 25px 0.5em 0;
+		background-repeat: repeat-y;
+	}
+
+		#content-box .post-short-info > p,
+		#content-box .post-short-info > div {
+			background-position: left 0.35em;
+		}
+
+		.post-short-info p {
+			margin-bottom: 1em;
+		}
+
+
+	/*===========================================
+		S H O R T C O D E S
+	===========================================*/
+
+	.column {
+		float: none;
+		width: auto !important;
+	}
+
+		.column > div {
+			margin-right: 0 !important;
+		}
+
+	.pricing-table-featured .pricing-table-title {
+		margin-top: 0;
+	}
+
+	.ico16 {
+		background-position: left 0.4em;
+	}
+
+
+	/*===========================================
+		W I D G E T S
+	===========================================*/
+
+	/*--- Get In Touch ------------------------*/
+
+	.widget-info p.widget-info-address,
+	.widget-info p.widget-info-phone,
+	.widget-info p.widget-info-email,
+	.widget-info p.widget-info-name {
+		background-position: 0 0.4em;
+	}
+
+
+	/*===========================================
+		C O M M O N
+	===========================================*/
+
+	/*--- Titles ------------------------------*/
+
+	#content-holder .sidebar-homepage-b {
+		margin-top: 25px;
+	}
+
+		.sidebar-homepage-b h1 {
+			font-size: 1.5em;
+		}
+	
+			.sidebar-homepage-b h1 span {
+				display: inline;
+			}
+
+
+/**/}
+
+
+@media only screen and ( min-width: 480px ) and ( max-width: 639px ) {
+/*===============================================
+
+	P H O N E   H
+	480px/639px
+
+===============================================*//**/
+
+/*
+
+	1 - LAYOUT
+
+		- Header
+		- Content
+		- Footer
+
+	2 - MENU
+
+		- Primary
+		- Secondary
+
+	3 - SIDEBARS
+
+		- Sidebar
+		- Footer
+
+	4 - TEMPLATES / POSTS
+
+		- Template 3
+
+	5 - TEMPLATES / PROJECTS
+
+		- Template 1
+
+	6 - POST
+
+	7 - SHORTCODES
+
+	8 - WP CLASSES
+
+	9 - WIDGETS
+
+		- Get In Touch
+
+	10 - COMMON
+
+		- Titles
+
+*/
+
+	/*===========================================
+		L A Y O U T
+	===========================================*/
+
+	body, div, td {
+		font-size: 1em;
+	}
+
+	/*--- Header ------------------------------*/
+
+	#header-holder {
+		width: auto;
+	}
+
+		#logo {
+			float: none;
+			height: auto;
+			margin: 0 auto;
+			padding: 35px 0 25px;
+		}
+
+			#logo h2 {
+				margin: 0;
+				text-align: center;
+			}
+
+				#logo h2 img {
+					margin: 0 auto;
+				}
+
+		#hcustom {
+			float: none;
+			width: auto;
+			height: auto;
+			margin: 0 auto;
+			padding: 25px;
+		}
+
+	#header-holder-2 {
+		width: auto;
+	}
+
+	/*--- Content -----------------------------*/
+
+	#content-holder {
+		width: 430px;
+		margin: 0 auto;
+	}
+
+		#content-holder #content-box {
+			float: none;
+			width: auto;
+		}
+
+			#content-box {
+				min-height: auto;
+			}
+
+				.home .projects #content-box {
+					padding-bottom: 50px;
+				}
+
+				#content-holder #content-box > div {
+					padding: 25px 0 50px;
+					background: none;
+				}
+	
+					.home #content-holder #content-box > div {
+						padding-bottom: 0;
+					}
+
+		#content-holder div.post-single {
+			float: none;
+			width: 430px;
+			margin: 0;
+		}
+
+	/*--- Footer ------------------------------*/
+
+	#footer-holder {
+		width: 430px;
+		padding-top: 40px;
+	}
+
+	#copyrights-box {
+		width: 430px;
+	}
+
+		#copyrights-box > div {
+			width: 100%;
+			text-align: left;
+		}
+
+
+	/*===========================================
+		M E N U
+	===========================================*/
+
+	/*--- Primary -----------------------------*/
+
+	#menu {
+		float: none;
+		width: auto;
+		height: auto;
+		margin: 0 auto;
+		width: 430px;
+	}
+
+		ul.menu {
+			text-align: center;
+		}
+
+			ul.menu > li {
+				float: none;
+				display: inline-block;
+				margin-right: 0;
+			}
+	
+				#menu span.subline {
+					display: none;
+				}
+		
+					#menuByClick {
+						display: block;
+					}
+
+	/*--- Secondary ---------------------------*/
+
+	#menu-2 {
+		display: table;
+		text-align: center;
+		margin: 0 auto;
+		padding: 5px 0;
+	}
+
+		ul.menu-2 > li {
+			margin: 0;
+		}
+
+			ul.menu-2 > li > a {
+				padding: 5px 10px;
+			}
+
+				ul.menu-2 > li a span {
+					display: none;
+				}
+
+
+	/*===========================================
+		S I D E B A R S
+	===========================================*/
+
+	/*--- Sidebar -----------------------------*/
+
+	#content-holder #sidebar {
+		float: none;
+		width: auto;
+		padding: 0;
+	}
+
+		#content-holder .sidebar {
+			margin: 0;
+		}
+
+	#content-holder div.sidebar-post {
+		width: 380px;
+		margin: 50px 0 25px;
+		padding: 2em 25px;
+		background-repeat: repeat;
+	}
+	
+		.sidebar-post,
+		.sidebar-post div {
+			font-size: inherit;
+		}
+	
+		.sidebar-post .stickyDiv {
+			position: relative !important;
+			float: right;
+			width: 170px;
+			top: auto !important;
+		}
+
+			.sidebar-post .stickyDiv > div {
+				margin: 0 0 25px;
+			}
+
+	/*--- Footer ------------------------------*/
+
+	#footer-box .sidebar-footer,
+	#footer-box .sidebar-footer.last {
+		width: 430px;
+	}
+
+		#footer-box .sidebar-footer > div,
+		#footer-box .sidebar-footer.last > div {
+			margin-right: 0;
+			margin-top: 0;
+		}
+
+
+	/*===========================================
+		T E M P L A T E S / POSTS
+	===========================================*/
+
+	/*--- Template 3 --------------------------*/
+
+	.post-t3 img.t3 {
+		margin-bottom: 2.5em;
+	}
+
+	.t3-left {
+		float: none;
+		width: auto;
+		margin: 0;
+		padding: 2.5em 0 0;
+	}
+
+	.t3-right {
+		float: none;
+		width: auto;
+		margin: 0;
+	}
+
+
+	/*===========================================
+		T E M P L A T E S / PROJECTS
+	===========================================*/
+
+	.project-thumb,
+	.dummy {
+		font-size: 0.85em;
+	}
+
+	/*--- Template 1 --------------------------*/
+
+	.projects-t1-wrapper {
+		padding-bottom: 49px;
+	}
+
+		/* Project 1 */
+		.projects-t1-wrapper > div.projects-t1-a-wrapper {
+			width: 429px;
+		}
+	
+			.projects-t1-wrapper > div.projects-t1-a-wrapper a.project-thumb {
+				height: 295px;
+				background-size: 430px auto;
+			}
+
+		/* Projects 2,3 */
+		.projects-t1-wrapper > div.projects-t1-b-wrapper {
+			width: 214px;
+			margin: 0 1px 1px 0;
+		}
+
+		/* Projects 4,5,6... */
+		.projects-t1-wrapper > div {
+			width: 214px;
+			margin: 0 1px 1px 0;
+		}
+
+			.projects-t1-wrapper > div.first {
+				clear: none;
+			}
+
+			.projects-t1-wrapper > div.last {
+				margin-right: 1px;
+			}
+	
+				.projects-t1-wrapper a.project-thumb {
+					height: 147px;
+				}
+		
+				.projects-t1-wrapper i {
+					display: none;
+				}
+
+		/* Dummy */
+		.t1-dummy-big {
+			display: none;
+		}
+	
+		.t1-dummy {
+			display: none;
+		}
+
+
+	/*===========================================
+		P O S T
+	===========================================*/
+
+	/*--- Post data ---------------------------*/
+
+	.page-title {
+	}
+
+	h2.post-title {
+		margin-bottom: 0.5em;
+	}
+
+	/*--- Post info ---------------------------*/
+
+	.single-author-info {
+		min-height: 130px;
+	}
+
+		.single-author-upic {
+			float: right;
+			margin: 0 0 10px 25px;
+		}
+
+	.post-short-info {
+		float: left;
+		width: 160px;
+		margin: 0;
+		padding: 0.5em 25px 0.5em 0;
+		background-repeat: repeat-y;
+	}
+
+		#content-box .post-short-info > p,
+		#content-box .post-short-info > div {
+			background-position: left 0.35em;
+		}
+
+		.post-short-info p {
+			margin-bottom: 1em;
+		}
+
+	/*--- Prev/Next post links ----------------*/
+
+	#pre_next_post {
+		text-align: center;
+		padding: 1em 45px;
+		background-image: none;
+	}
+
+		#pre_next_post a {
+			margin: 0.5em 0;
+			max-width: none;
+		}
+
+			#pre_next_post a.n {
+				text-align: center;
+				float: none;
+			}
+
+
+	/*===========================================
+		S H O R T C O D E S
+	===========================================*/
+
+	.column {
+		float: none;
+		width: auto !important;
+	}
+
+		.column > div {
+			margin-right: 0 !important;
+		}
+
+	.pricing-table-featured .pricing-table-title {
+		margin-top: 0;
+	}
+
+	.ico16 {
+		background-position: left 0.4em;
+	}
+
+	.pullquote {
+		float: none;
+		width: auto;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	/*-------------------------------------------
+		W P   C L A S S E S
+	-------------------------------------------*/
+
+	.alignleft,
+	.alignright {
+		float: none;
+		clear: both;
+		display: table;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+
+	/*===========================================
+		W I D G E T S
+	===========================================*/
+
+	/*--- Get In Touch ------------------------*/
+
+	.widget-info p.widget-info-address,
+	.widget-info p.widget-info-phone,
+	.widget-info p.widget-info-email,
+	.widget-info p.widget-info-name {
+		background-position: 0 0.4em;
+	}
+
+
+	/*===========================================
+		C O M M O N
+	===========================================*/
+
+	/*--- Titles ------------------------------*/
+
+	#content-holder .sidebar-homepage-b {
+		margin-top: 25px;
+	}
+
+		.sidebar-homepage-b h1 {
+			font-size: 1.5em;
+		}
+	
+			.sidebar-homepage-b h1 span {
+				display: inline;
+			}
+
+
+/**/}
+
+
+@media only screen and ( max-width: 479px ) {
+/*===============================================
+
+	P H O N E   V
+	320px/479px
+
+===============================================*//**/
+
+/*
+
+	1 - LAYOUT
+
+		- Header
+		- Content
+		- Footer
+
+	2 - MENU
+
+		- Primary
+		- Secondary
+
+	3 - SIDEBARS
+
+		- Sidebar
+		- Footer
+
+	4 - TEMPLATES / POSTS
+
+		- Template 3
+
+	5 - TEMPLATES / PROJECTS
+
+		- Template 1
+
+	6 - POST
+
+	7 - SHORTCODES
+
+	8 - WP CLASSES
+
+	9 - COMMENTS
+
+	10 - WIDGETS
+
+		- Get In Touch
+
+	11 - COMMON
+
+		- Titles
+
+*/
+
+	/*===========================================
+		L A Y O U T
+	===========================================*/
+
+	body, div, td {
+		font-size: 1em;
+	}
+
+	/*--- Header ------------------------------*/
+
+	#header-holder {
+		width: auto;
+	}
+
+		#logo {
+			float: none;
+			width: auto;
+			height: auto;
+			margin: 0 auto;
+			padding: 25px;
+		}
+
+			#logo h2 {
+				margin: 0;
+				text-align: center;
+			}
+
+				#logo h2 img {
+					margin: 0 auto;
+				}
+
+		#hcustom {
+			float: none;
+			width: auto;
+			height: auto;
+			margin: 0 auto;
+			padding: 25px;
+		}
+
+	#header-holder-2 {
+		width: auto;
+	}
+
+	/*--- Content -----------------------------*/
+
+	#content-holder {
+		width: 300px;
+		margin: 0 auto;
+	}
+
+		#content-holder #content-box {
+			float: none;
+			width: auto;
+		}
+
+			.home .projects #content-box {
+				padding-bottom: 50px;
+			}
+
+			#content-box {
+				min-height: auto;
+			}
+
+				#content-holder #content-box > div {
+					padding: 25px 0 50px;
+					background: none;
+				}
+	
+					.home #content-holder #content-box > div {
+						padding-bottom: 0;
+					}
+
+		#content-holder div.post-single {
+			float: none;
+			width: 300px;
+			margin: 0;
+		}
+
+	/*--- Footer ------------------------------*/
+
+	#footer-holder {
+		width: 300px;
+		padding-top: 40px;
+	}
+
+	#copyrights-box {
+		width: 300px;
+	}
+
+		#copyrights-box > div {
+			width: 100%;
+			text-align: left;
+		}
+
+
+	/*===========================================
+		M E N U
+	===========================================*/
+
+	/*--- Primary -----------------------------*/
+
+	#menu {
+		float: none;
+		width: auto;
+		height: auto;
+		margin: 0 auto;
+		padding: 0 25px;
+	}
+
+		#menu-box {
+			display: none;
+		}
+	
+		#menu-select {
+			display: block;
+		}
+
+	/*--- Secondary ---------------------------*/
+
+	#menu-2 {
+		display: table;
+		text-align: center;
+		margin: 0 auto;
+		padding: 5px 0;
+	}
+
+		ul.menu-2 > li {
+			float: none;
+			margin: 0;
+		}
+
+			ul.menu-2 > li > a {
+				padding: 5px;
+			}
+	
+				ul.menu-2 > li a span {
+					display: none;
+				}
+
+
+	/*===========================================
+		S I D E B A R S
+	===========================================*/
+
+	/*--- Sidebar -----------------------------*/
+
+	#content-holder #sidebar {
+		float: none;
+		width: auto;
+		padding: 0;
+	}
+
+		#content-holder .sidebar {
+			margin: 0;
+		}
+
+	#content-holder div.sidebar-post {
+		width: 250px;
+		margin: 50px 0 10px;
+		padding: 2em 25px;
+		background-repeat: repeat;
+	}
+	
+		.sidebar-post,
+		.sidebar-post div {
+			font-size: inherit;
+		}
+	
+		.sidebar-post .stickyDiv {
+			position: relative !important;
+			width: 250px;
+			top: auto !important;
+		}
+
+
+	/*--- Footer ------------------------------*/
+
+	#footer-box .sidebar-footer,
+	#footer-box .sidebar-footer.last {
+		width: 300px;
+	}
+
+		#footer-box .sidebar-footer > div,
+		#footer-box .sidebar-footer.last > div {
+			margin-right: 0;
+			margin-top: 0;
+		}
+
+
+	/*===========================================
+		T E M P L A T E S / POSTS
+	===========================================*/
+
+	/*--- Template 3 --------------------------*/
+
+	.post-t3 img.t3 {
+		margin-bottom: 2.5em;
+	}
+
+	.t3-left {
+		float: none;
+		width: auto;
+		margin: 0;
+		padding: 2.5em 0 0;
+	}
+
+	.t3-right {
+		float: none;
+		width: auto;
+		margin: 0;
+	}
+
+
+	/*===========================================
+		T E M P L A T E S / PROJECTS
+	===========================================*/
+
+	.project-thumb,
+	.dummy {
+		font-size: 0.85em;
+	}
+
+	/*--- Template 1 --------------------------*/
+
+	.projects-t1-wrapper {
+		padding-bottom: 49px;
+	}
+
+		/* Project 1 */
+		.projects-t1-wrapper > div.projects-t1-a-wrapper {
+			width: 299px;
+		}
+	
+			.projects-t1-wrapper > div.projects-t1-a-wrapper a.project-thumb {
+				height: 205px;
+				background-size: 300px auto;
+			}
+
+		/* Projects 2,3 */
+		.projects-t1-wrapper > div.projects-t1-b-wrapper {
+			width: 149px;
+			margin: 0 1px 1px 0;
+		}
+
+		/* Projects 4,5,6... */
+		.projects-t1-wrapper > div {
+			width: 149px;
+			margin: 0 1px 1px 0;
+		}
+
+			.projects-t1-wrapper > div.first {
+				clear: none;
+			}
+
+			.projects-t1-wrapper > div.last {
+				margin-right: 1px;
+			}
+
+				.projects-t1-wrapper a.project-thumb {
+					height: 102px;
+					background-size: 150px auto;
+				}
+		
+				.projects-t1-wrapper i {
+					display: none;
+				}
+
+		/* Dummy */
+		.t1-dummy-big {
+			display: none;
+		}
+	
+		.t1-dummy {
+			display: none;
+		}
+
+
+	/*===========================================
+		P O S T
+	===========================================*/
+
+	/*--- Post data ---------------------------*/
+
+	.page-title {
+	}
+
+	h2.post-title {
+		margin-bottom: 0.5em;
+	}
+
+	/*--- Post info ---------------------------*/
+
+	.single-author-info {
+		min-height: 130px;
+	}
+
+		.single-author-upic {
+			float: right;
+			margin: 0 0 10px 25px;
+		}
+
+		#content-box .post-short-info > p,
+		#content-box .post-short-info > div {
+			background-position: left 0.35em;
+		}
+
+		.post-short-info p {
+			margin-bottom: 1em;
+		}
+
+	/*--- Prev/Next post links ----------------*/
+
+	#pre_next_post {
+		text-align: center;
+		padding: 1em 45px;
+		background-image: none;
+	}
+
+		#pre_next_post a {
+			margin: 0.5em 0;
+			max-width: none;
+		}
+
+			#pre_next_post a.n {
+				text-align: center;
+				float: none;
+			}
+
+
+	/*===========================================
+		S H O R T C O D E S
+	===========================================*/
+
+	.column {
+		float: none;
+		width: auto !important;
+	}
+
+		.column > div {
+			margin-right: 0 !important;
+		}
+
+	.pricing-table-featured .pricing-table-title {
+		margin-top: 0;
+	}
+
+	.ico16 {
+		background-position: left 0.4em;
+	}
+
+	.notice {
+		padding: 25px;
+	}
+
+	.pullquote {
+		float: none;
+		width: auto;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	/*===========================================
+		W P   C L A S S E S
+	===========================================*/
+
+	.alignleft,
+	.alignright {
+		float: none;
+		clear: both;
+		display: table;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/*===========================================
+		C O M M E N T S
+	===========================================*/
+
+	.children {
+		margin: 0;
+	}
+
+	.comment-top-level .comment-box,
+	.comment-low-level .comment-box {
+		padding-left: 0;
+	}
+
+		.avatar-box {
+			float: right;
+			margin-left: 1em;
+		}
+
+
+	/*===========================================
+		W I D G E T S
+	===========================================*/
+
+	/*--- Get In Touch ------------------------*/
+
+	.widget-info p.widget-info-address,
+	.widget-info p.widget-info-phone,
+	.widget-info p.widget-info-email,
+	.widget-info p.widget-info-name {
+		background-position: 0 0.4em;
+	}
+
+
+	/*===========================================
+		C O M M O N
+	===========================================*/
+
+	/*--- Titles ------------------------------*/
+
+	#content-holder .sidebar-homepage-b {
+		margin-top: 25px;
+	}
+
+		.sidebar-homepage-b h1 {
+			font-size: 1.5em;
+		}
+	
+			.sidebar-homepage-b h1 span {
+				display: inline;
+			}
+
+
+/**/}

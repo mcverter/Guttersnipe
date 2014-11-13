@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<!-- saved from url=(0095)http://www.codeheaps.com/php-programming/creating-restful-api-using-laravel-angularjs-frontend/ -->
+<html lang="en-US" prefix="og: http://ogp.me/ns#"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width">
+                <title>Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps</title>
+                <link rel="profile" href="http://gmpg.org/xfn/11">
+                <link rel="pingback" href="http://www.codeheaps.com/xmlrpc.php">
+                <link rel="shortcut icon" href="http://www.codeheaps.com/wp-content/themes/solarized/favicon.ico">
+                                <!--[if lt IE 9]>
+                <script src="http://www.codeheaps.com/wp-content/themes/solarized/assets/js/html5shiv.js" type="text/javascript"></script>
+                <![endif]-->
+                
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.6.3 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="./Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps_files/Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps.html">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps">
+<meta property="og:description" content="This will be the last part of the AngularJS Polling Application Tutorial series. In this part, we will create a RESTful API using Laravel for the AngularJS Single Page Application that we had created in the previous parts of this tutorial series. Requirements Laravel MySQL Faker Recommended Articles Database Migrations Models and Seeding Laravel Routing …">
+<meta property="og:url" content="http://www.codeheaps.com/php-programming/creating-restful-api-using-laravel-angularjs-frontend/">
+<meta property="og:site_name" content="CodeHeaps">
+<meta property="article:tag" content="AngularJS">
+<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="laravel tutorial">
+<meta property="article:tag" content="php">
+<meta property="article:tag" content="RESTful API">
+<meta property="article:tag" content="web development">
+<meta property="article:section" content="Laravel">
+<meta property="article:section" content="PHP">
+<meta property="article:section" content="PHP Frameworks">
+<meta property="article:published_time" content="2014-07-04T12:20:17+00:00">
+<meta property="article:modified_time" content="2014-07-21T18:10:20+00:00">
+<meta property="og:updated_time" content="2014-07-21T18:10:20+00:00">
+<meta property="og:image" content="http://www.codeheaps.com/wp-content/uploads/2014/07/poll_stats_schema_2-300x210.png">
+<meta property="og:image" content="http://www.codeheaps.com/wp-content/uploads/2014/07/seeded_polls_table_2-300x182.png">
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="CodeHeaps » Feed" href="http://www.codeheaps.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="CodeHeaps » Comments Feed" href="http://www.codeheaps.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="CodeHeaps » Creating a RESTful API using Laravel for AngularJS Frontend Comments Feed" href="http://www.codeheaps.com/php-programming/creating-restful-api-using-laravel-angularjs-frontend/feed/">
+<link rel="stylesheet" id="main-style-css" href="./Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="google-prettify-css" href="./Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps_files/prettify.css" type="text/css" media="all">
+<link rel="stylesheet" id="genericons-css" href="./Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps_files/genericons.css" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack_css-css" href="./Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps_files/jetpack.css" type="text/css" media="all">
+<script type="text/javascript" src="./Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps_files/jquery.js"></script>
+<script type="text/javascript" src="./Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps_files/jquery-migrate.min.js"></script>
+<style type="text/css">img#wpstats{display:none}</style>        <link rel="stylesheet" type="text/css" id="gravatar-card-css" href="./Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps_files/hovercard.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="./Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps_files/services.css"></head>
+        <body>
+                <div class="container" id="main-container">
+                        <!-- master header -->
+                        <header id="masthead" role="banner">
+                                <div id="subhead">
+                                        <!-- logo -->
+                                        <h1 class="site-title">
+                                        <a href="http://www.codeheaps.com/" title="CodeHeaps" rel="home">
+                                        <img id="logo" alt="CodeHeaps" src="./Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps_files/logo1.png"></a></h1>
+                                        <h2 class="site-description">Programming,web development and linux tutorials</h2>
+                                </div>                                
+                                <nav class="navbar" role="navigation">
+                                        <div class="navbar-inner">
+                                        <ul id="menu-menu-1" class="nav nav-pills"><li id="menu-item-7" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-7"><a title="Home" href="http://www.codeheaps.com/"><i class="icon-home icon-large"></i>&nbsp;Home</a></li>
+<li id="menu-item-9" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9"><a title="Privacy" href="http://www.codeheaps.com/privacy/"><i class="icon-eye-open icon-large"></i>&nbsp;Privacy</a></li>
+</ul>                                         <ul class="nav nav-pills pull-right">
+                                            <li>
+                                                <a href="http://twitter.com/codeheaps" target="_blank"><i class="icon-twitter icon-large"></i> Twitter</a>
+
+                                            </li>
+                                            <li>
+                                                <a href="https://plus.google.com/112642569349868023006" rel="publisher" target="_blank"><i class="icon-google-plus icon-large"></i> Google+</a>
+
+                                            </li>
+                                            <li>
+                                                <a href="http://www.codeheaps.com/feed/" target="_blank"><i class="icon-rss icon-large"></i> Feeds</a>
+                                            </li>
+                                        </ul>
+                                        </div>
+                                </nav>
+
+
+                        </header>
+<!-- end master header -->
+<div id="content-container">
+        <!-- main content row-->
+        <div class="row"> 
+                <!-- post area-->
+                <div class="span8 rest-color content" role="main"> 
+                                                                <article id="post-348" class="post-348 post type-post status-publish format-standard hentry category-laravel category-php-programming category-php-frameworks tag-angularjs tag-javascript tag-laravel-tutorial tag-php tag-restful-api tag-web-development">
+                                                <header class="post-header">
+                                                        <h1 class="post-title entry-title">Creating a RESTful API using Laravel for AngularJS Frontend</h1>
+                                                        <div><span class="label vcard author"><span class="fn"><i class="icon-pencil"></i><a href="http://www.codeheaps.com/author/admin/" title="Posts by Usman Riaz" rel="author">Usman Riaz</a></span></span> <em>on</em> <span class="label updated"><i class="icon-calendar"></i><a href="./Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps_files/Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps.html">Friday July 04, 2014</a></span>
+                                                                                                                                                                                                <div class="comments-link pull-right label"><i class="icon-comment"></i>
+                                                                                <a href="http://www.codeheaps.com/php-programming/creating-restful-api-using-laravel-angularjs-frontend/#respond" title="Comment on Creating a RESTful API using Laravel for AngularJS Frontend"><span class="leave-reply">Leave a reply</span></a>                                                                        </div><!-- .comments-link -->
+                                                                                                                         
+                                                        </div>
+                                                </header>
+                                                <div class="post-content clearfix">
+                                                        <p>This will be the last part of the AngularJS Polling Application Tutorial series. In this part, we will create a <strong>RESTful API using Laravel</strong> for the AngularJS Single Page Application that we had created in the previous parts of this tutorial series.<span id="more-348"></span></p>
+<p><b>Requirements</b></p>
+<ul>
+<li>Laravel</li>
+<li>MySQL</li>
+<li>Faker</li>
+</ul>
+<p><b id="recmd">Recommended Articles</b></p>
+<ul>
+<li><a href="http://www.codeheaps.com/php-programming/using-database-migrations-laravel-4/" target="_blank">Database Migrations</a></li>
+<li><a href="http://www.codeheaps.com/php-programming/creating-blog-using-laravel-4-part-1/" target="_blank">Models and Seeding</a></li>
+<li><a href="http://www.codeheaps.com/php-programming/creating-a-blog-using-laravel-4-part-3-routing/" target="_blank">Laravel Routing</a></li>
+</ul>
+<p><strong>Previous Parts:</strong></p>
+<ul>
+<li><a href="http://www.codeheaps.com/web-development-2/creating-polling-application-using-angularjs-and-laravel-part-1/" target="_blank">Creating a Polling Application Using AngularJS and Laravel Part 1</a></li>
+<li><a href="http://www.codeheaps.com/web-development-2/creating-polling-application-using-angularjs-and-laravel-part-2/" target="_blank">Creating a Polling Application Using AngularJS and Laravel Part 2</a></li>
+</ul>
+<p>Now, let us get started.</p>
+<h2>Migrations, Models and Seeding</h2>
+<p>The RESTful API will be utilizing two database tables for the data persistence: a <code>polls</code> table and a <code>stats</code> table. The <code>polls</code> table will be used to store all the polls, whereas the <code>stats</code> table will be used to store the related poll options and a voting count for each option. We will query the <code>stats</code> table to summarize the stats for a single poll.</p>
+<p>The following screenshot shows the association between these two tables:</p>
+<div id="attachment_384" style="width: 310px" class="wp-caption aligncenter"><a href="http://www.codeheaps.com/wp-content/uploads/2014/07/poll_stats_schema_2.png"><img class="wp-image-384 size-medium" title="RESTful API using Laravel Tutorial" src="./Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps_files/poll_stats_schema_2-300x210.png" alt="RESTful API using Laravel Tutorial" width="300" height="210"></a><p class="wp-caption-text">Polls and Stats table relationship</p></div>
+<h4>Migrations</h4>
+<blockquote><p>For more details and explanation on Database Migrations in Laravel, please refer to the <strong>Database Migrations</strong> article (see <a href="http://www.codeheaps.com/php-programming/creating-restful-api-using-laravel-angularjs-frontend/#recmd">Recommended Articles</a> above).</p></blockquote>
+<blockquote><p><strong>Quick Tip:</strong></p>
+<ul>
+<li>the <code>artisan migrate:make create_tablename_table --create=tablename</code> command is used to create a migration class for the <code>tablename</code>.</li>
+<li>The <code>artisan migrate</code> command is used to run migrations.</li>
+</ul>
+</blockquote>
+<p>The Migration class for the <code>polls</code> table:</p>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pun">&lt;?</span><span class="pln">php</span></li><li class="L1"><span class="com">// created using: artisan migrate:make create_polls_table --create=polls</span></li><li class="L2"><span class="com">// file: xxxx_xx_xx_xxxxxx_create_polls_table.php</span></li><li class="L3"><span class="pln">&nbsp;</span></li><li class="L4"><span class="kwd">use</span><span class="pln"> </span><span class="typ">Illuminate</span><span class="pln">\Database\Migrations\Migration</span><span class="pun">;</span></li><li class="L5"><span class="kwd">use</span><span class="pln"> </span><span class="typ">Illuminate</span><span class="pln">\Database\Schema\Blueprint</span><span class="pun">;</span></li><li class="L6"><span class="pln">&nbsp;</span></li><li class="L7"><span class="kwd">class</span><span class="pln"> </span><span class="typ">CreatePollsTable</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Migration</span><span class="pln"> </span><span class="pun">{</span></li><li class="L8"><span class="pln">&nbsp;</span></li><li class="L9"><span class="pln">    </span><span class="com">/**</span></li><li class="L0"><span class="com">     * Run the migrations.</span></li><li class="L1"><span class="com">     *</span></li><li class="L2"><span class="com">     * @return void</span></li><li class="L3"><span class="com">     */</span></li><li class="L4"><span class="pln">    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> up</span><span class="pun">()</span></li><li class="L5"><span class="pln">    </span><span class="pun">{</span></li><li class="L6"><span class="pln">        </span><span class="typ">Schema</span><span class="pun">::</span><span class="pln">create</span><span class="pun">(</span><span class="str">'polls'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="typ">Blueprint</span><span class="pln"> $table</span><span class="pun">)</span></li><li class="L7"><span class="pln">        </span><span class="pun">{</span></li><li class="L8"><span class="pln">            $table</span><span class="pun">-&gt;</span><span class="pln">increments</span><span class="pun">(</span><span class="str">'id'</span><span class="pun">);</span></li><li class="L9"><span class="pln">            $table</span><span class="pun">-&gt;</span><span class="kwd">string</span><span class="pun">(</span><span class="str">'question'</span><span class="pun">);</span></li><li class="L0"><span class="pln">            $table</span><span class="pun">-&gt;</span><span class="pln">timestamps</span><span class="pun">();</span></li><li class="L1"><span class="pln">        </span><span class="pun">});</span></li><li class="L2"><span class="pln">    </span><span class="pun">}</span></li><li class="L3"><span class="pln">&nbsp;</span></li><li class="L4"><span class="pln">    </span><span class="com">/**</span></li><li class="L5"><span class="com">     * Reverse the migrations.</span></li><li class="L6"><span class="com">     *</span></li><li class="L7"><span class="com">     * @return void</span></li><li class="L8"><span class="com">     */</span></li><li class="L9"><span class="pln">    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> down</span><span class="pun">()</span></li><li class="L0"><span class="pln">    </span><span class="pun">{</span></li><li class="L1"><span class="pln">        </span><span class="typ">Schema</span><span class="pun">::</span><span class="pln">drop</span><span class="pun">(</span><span class="str">'polls'</span><span class="pun">);</span></li><li class="L2"><span class="pln">    </span><span class="pun">}</span></li><li class="L3"><span class="pln">&nbsp;</span></li><li class="L4"><span class="pun">}</span></li></ol></pre>
+<p>In the above Migration class, the <code>question</code> table field will be used to store the poll questions. Here is the Migration class for the <code>stats</code> table:</p>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pun">&lt;?</span><span class="pln">php</span></li><li class="L1"><span class="com">// created using: artisan migrate:make create_stats_table --create=stats</span></li><li class="L2"><span class="com">// file: xxxx_xx_xx_xxxxxx_create_stats_table.php</span></li><li class="L3"><span class="pln">&nbsp;</span></li><li class="L4"><span class="kwd">use</span><span class="pln"> </span><span class="typ">Illuminate</span><span class="pln">\Database\Migrations\Migration</span><span class="pun">;</span></li><li class="L5"><span class="kwd">use</span><span class="pln"> </span><span class="typ">Illuminate</span><span class="pln">\Database\Schema\Blueprint</span><span class="pun">;</span></li><li class="L6"><span class="pln">&nbsp;</span></li><li class="L7"><span class="kwd">class</span><span class="pln"> </span><span class="typ">CreateStatsTable</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Migration</span><span class="pln"> </span><span class="pun">{</span></li><li class="L8"><span class="pln">&nbsp;</span></li><li class="L9"><span class="pln">    </span><span class="com">/**</span></li><li class="L0"><span class="com">     * Run the migrations.</span></li><li class="L1"><span class="com">     *</span></li><li class="L2"><span class="com">     * @return void</span></li><li class="L3"><span class="com">     */</span></li><li class="L4"><span class="pln">    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> up</span><span class="pun">()</span></li><li class="L5"><span class="pln">    </span><span class="pun">{</span></li><li class="L6"><span class="pln">        </span><span class="typ">Schema</span><span class="pun">::</span><span class="pln">create</span><span class="pun">(</span><span class="str">'stats'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="typ">Blueprint</span><span class="pln"> $table</span><span class="pun">)</span></li><li class="L7"><span class="pln">        </span><span class="pun">{</span></li><li class="L8"><span class="pln">            $table</span><span class="pun">-&gt;</span><span class="pln">increments</span><span class="pun">(</span><span class="str">'id'</span><span class="pun">);</span></li><li class="L9"><span class="pln">            $table</span><span class="pun">-&gt;</span><span class="pln">unsignedInteger</span><span class="pun">(</span><span class="str">'poll_id'</span><span class="pun">);</span></li><li class="L0"><span class="pln">            $table</span><span class="pun">-&gt;</span><span class="kwd">string</span><span class="pun">(</span><span class="str">'option'</span><span class="pun">);</span></li><li class="L1"><span class="pln">            $table</span><span class="pun">-&gt;</span><span class="pln">unsignedInteger</span><span class="pun">(</span><span class="str">'vote_count'</span><span class="pun">);</span></li><li class="L2"><span class="pln">            $table</span><span class="pun">-&gt;</span><span class="pln">timestamps</span><span class="pun">();</span></li><li class="L3"><span class="pln">        </span><span class="pun">});</span></li><li class="L4"><span class="pln">    </span><span class="pun">}</span></li><li class="L5"><span class="pln">&nbsp;</span></li><li class="L6"><span class="pln">    </span><span class="com">/**</span></li><li class="L7"><span class="com">     * Reverse the migrations.</span></li><li class="L8"><span class="com">     *</span></li><li class="L9"><span class="com">     * @return void</span></li><li class="L0"><span class="com">     */</span></li><li class="L1"><span class="pln">    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> down</span><span class="pun">()</span></li><li class="L2"><span class="pln">    </span><span class="pun">{</span></li><li class="L3"><span class="pln">        </span><span class="typ">Schema</span><span class="pun">::</span><span class="pln">drop</span><span class="pun">(</span><span class="str">'stats'</span><span class="pun">);</span></li><li class="L4"><span class="pln">    </span><span class="pun">}</span></li><li class="L5"><span class="pln">&nbsp;</span></li><li class="L6"><span class="pun">}</span></li></ol></pre>
+<p>The <code>poll_id</code> field will be used as the foreign key for the <code>polls</code> table. The <code>option</code> field will be used to store the related available options for a poll. Whenever an option will be selected by the user, we will increment its <code>vote_count</code>.</p>
+<h4>Models</h4>
+<p>Here is the code for both the <code>Poll</code> and the <code>Stat</code> models:</p>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pun">&lt;?</span><span class="pln">php</span></li><li class="L1"><span class="com">// file: app/models/Poll.php</span></li><li class="L2"><span class="pln">&nbsp;</span></li><li class="L3"><span class="kwd">class</span><span class="pln"> </span><span class="typ">Poll</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Eloquent</span><span class="pln"> </span><span class="pun">{</span></li><li class="L4"><span class="pln">&nbsp;</span></li><li class="L5"><span class="pln">    </span><span class="kwd">protected</span><span class="pln"> $hidden </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="str">'created_at'</span><span class="pun">,</span><span class="str">'updated_at'</span><span class="pun">];</span></li><li class="L6"><span class="pln">    </span><span class="kwd">protected</span><span class="pln"> $appends </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="str">'options'</span><span class="pun">];</span></li><li class="L7"><span class="pln">&nbsp;</span></li><li class="L8"><span class="pln">    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> stats</span><span class="pun">()</span></li><li class="L9"><span class="pln">    </span><span class="pun">{</span></li><li class="L0"><span class="pln">        </span><span class="kwd">return</span><span class="pln"> $this</span><span class="pun">-&gt;</span><span class="pln">hasMany</span><span class="pun">(</span><span class="str">'Stat'</span><span class="pun">);</span></li><li class="L1"><span class="pln">    </span><span class="pun">}</span></li><li class="L2"><span class="pln">&nbsp;</span></li><li class="L3"><span class="pln">    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> getOptionsAttribute</span><span class="pun">()</span></li><li class="L4"><span class="pln">    </span><span class="pun">{</span></li><li class="L5"><span class="pln">        </span><span class="kwd">return</span><span class="pln"> array_flatten</span><span class="pun">(</span><span class="pln">$this</span><span class="pun">-&gt;</span><span class="pln">stats</span><span class="pun">()-&gt;</span><span class="kwd">get</span><span class="pun">([</span><span class="str">'option'</span><span class="pun">])-&gt;</span><span class="pln">toArray</span><span class="pun">());</span></li><li class="L6"><span class="pln">    </span><span class="pun">}</span></li><li class="L7"><span class="pun">}</span></li></ol></pre>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pun">&lt;?</span><span class="pln">php</span></li><li class="L1"><span class="com">// file: app/models/Stat.php</span></li><li class="L2"><span class="pln">&nbsp;</span></li><li class="L3"><span class="kwd">class</span><span class="pln"> </span><span class="typ">Stat</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Eloquent</span><span class="pln"> </span><span class="pun">{</span></li><li class="L4"><span class="pln">&nbsp;</span></li><li class="L5"><span class="pln">    </span><span class="kwd">protected</span><span class="pln"> $hidden </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="str">'created_at'</span><span class="pun">,</span><span class="str">'updated_at'</span><span class="pun">];</span></li><li class="L6"><span class="pln">&nbsp;</span></li><li class="L7"><span class="pln">    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> poll</span><span class="pun">()</span></li><li class="L8"><span class="pln">    </span><span class="pun">{</span></li><li class="L9"><span class="pln">        </span><span class="kwd">return</span><span class="pln"> $this</span><span class="pun">-&gt;</span><span class="pln">belongsTo</span><span class="pun">(</span><span class="str">'Poll'</span><span class="pun">);</span></li><li class="L0"><span class="pln">    </span><span class="pun">}</span></li><li class="L1"><span class="pln">&nbsp;</span></li><li class="L2"><span class="pun">}</span></li></ol></pre>
+<p>To read more on Laravel Eloquent Models and Seeding, please read the article in the <a href="http://www.codeheaps.com/php-programming/creating-restful-api-using-laravel-angularjs-frontend/#recmd">Recommended Articles</a> section.</p>
+<h4>Database Seeding</h4>
+<p>Database Seeding in Laravel helps us in feeding the database tables with test data. We can create seeding classes by extending the <code>Seeder</code> class provided by the Laravel.</p>
+<p>Here is the code for the <code>PollsTableSeeder</code> class which will be used to seed the <code>polls</code> table:</p>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pun">&lt;?</span><span class="pln">php</span></li><li class="L1"><span class="com">// file: app/database/seeds/PollsTableSeeder.php</span></li><li class="L2"><span class="pln">&nbsp;</span></li><li class="L3"><span class="kwd">use</span><span class="pln"> </span><span class="typ">Faker</span><span class="pln">\Factory </span><span class="kwd">as</span><span class="pln"> </span><span class="typ">Faker</span><span class="pun">;</span></li><li class="L4"><span class="pln">&nbsp;</span></li><li class="L5"><span class="kwd">class</span><span class="pln"> </span><span class="typ">PollsTableSeeder</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Seeder</span><span class="pln"> </span><span class="pun">{</span></li><li class="L6"><span class="pln">&nbsp;</span></li><li class="L7"><span class="pln">    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> run</span><span class="pun">()</span></li><li class="L8"><span class="pln">    </span><span class="pun">{</span></li><li class="L9"><span class="pln">        </span><span class="com">// going 'Faker' </span><img src="./Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps_files/icon_smile.gif" alt=":)" class="wp-smiley"><span class="com"> on the polls table.</span></li><li class="L0"><span class="pln">        $faker </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Faker</span><span class="pun">::</span><span class="pln">create</span><span class="pun">();</span></li><li class="L1"><span class="pln">        </span><span class="kwd">for</span><span class="pun">(</span><span class="pln">$i </span><span class="pun">=</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln"> $i </span><span class="pun">&lt;=</span><span class="pln"> </span><span class="lit">15</span><span class="pln"> </span><span class="pun">;</span><span class="pln"> $i</span><span class="pun">++)</span></li><li class="L2"><span class="pln">        </span><span class="pun">{</span><span class="pln">   </span></li><li class="L3"><span class="pln">            $poll </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Poll</span><span class="pun">;</span></li><li class="L4"><span class="pln">            $poll</span><span class="pun">-&gt;</span><span class="pln">question </span><span class="pun">=</span><span class="pln"> preg_replace</span><span class="pun">(</span><span class="str">'/\.$/'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'?'</span><span class="pun">,</span><span class="pln"> $faker</span><span class="pun">-&gt;</span><span class="pln">sentence</span><span class="pun">());</span></li><li class="L5"><span class="pln">            $poll</span><span class="pun">-&gt;</span><span class="pln">save</span><span class="pun">();</span></li><li class="L6"><span class="pln">            </span><span class="kwd">foreach</span><span class="pln"> </span><span class="pun">(</span><span class="pln">$faker</span><span class="pun">-&gt;</span><span class="pln">words </span><span class="kwd">as</span><span class="pln"> $option</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span></li><li class="L7"><span class="pln">                $stat </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Stat</span><span class="pun">;</span></li><li class="L8"><span class="pln">                $stat</span><span class="pun">-&gt;</span><span class="pln">option </span><span class="pun">=</span><span class="pln"> $option</span><span class="pun">;</span></li><li class="L9"><span class="pln">                $stat</span><span class="pun">-&gt;</span><span class="pln">vote_count </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span></li><li class="L0"><span class="pln">                $poll</span><span class="pun">-&gt;</span><span class="pln">stats</span><span class="pun">()-&gt;</span><span class="pln">save</span><span class="pun">(</span><span class="pln">$stat</span><span class="pun">);</span></li><li class="L1"><span class="pln">            </span><span class="pun">}</span></li><li class="L2"><span class="pln">        </span><span class="pun">}</span></li><li class="L3"><span class="pln">    </span><span class="pun">}</span></li><li class="L4"><span class="pln">&nbsp;</span></li><li class="L5"><span class="pun">}</span></li></ol></pre>
+<blockquote><p><strong>Installing Faker</strong><br>
+To install the <code>Faker</code> library, add <code>"fzaninotto/faker": "1.3.*@dev"</code> in the <code>require-dev</code> section of your <code>composer.json</code> file and run the <code>composer update --dev</code> command from Terminal.<br>
+For more details you can refer to the Faker documentation <a href="https://github.com/fzaninotto/Faker" target="_blank" rel="nofollow">here</a>.</p></blockquote>
+<blockquote><p><strong>Quick Tips:</strong></p>
+<ul>
+<li>We use <code>artisan db:seed</code> command to seed the database.</li>
+<li>Add the following line inside the <code>run</code> method of <code>DatabaseSeeder</code> class (/app/database/seeds/DatabaseSeeder.php) before running the above command:
+<pre class="prettyprint"><span class="pln"> $this</span><span class="pun">-&gt;</span><span class="pln">call</span><span class="pun">(</span><span class="str">'PollsTableSeeder'</span><span class="pun">);</span></pre>
+</li>
+</ul>
+</blockquote>
+<p>A screenshot of the seeded <code>polls</code> table:</p>
+<div id="attachment_388" style="width: 310px" class="wp-caption aligncenter"><a href="http://www.codeheaps.com/wp-content/uploads/2014/07/seeded_polls_table_2.png"><img class="wp-image-388 size-medium" title="RESTful API using Laravel Tutorial" src="./Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps_files/seeded_polls_table_2-300x182.png" alt="RESTful API using Laravel Tutorial" width="300" height="182"></a><p class="wp-caption-text">Seeded Polls Table</p></div>
+<h2>RESTful Routing</h2>
+<p>The Routing Component in Laravel provides us with an easy RESTful interface through its <code>get</code>, <code>post</code>, <code>put</code> and <code>delete</code> methods. Each of these methods accepts two arguments: the name of the route and a <code>Closure</code> defining the route action. Alternatively, we can also pass the name of a controller action as the second argument instead of the <code>Closure</code>. For our simple RESTful API, Routing Closures are more then enough — IMHO — so, I will be sticking to the first option i.e, <code>Closures</code>.</p>
+<blockquote><p><strong>Note:</strong><br>
+Route Closures are great for developing small applications and quick prototypes. For larger applications and better code organization, you should always consider using Controllers.</p></blockquote>
+<p>Here is the code for our <code>app/routes.php</code>:</p>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pun">&lt;?</span><span class="pln">php</span></li><li class="L1"><span class="com">// file: app/routes.php</span></li><li class="L2"><span class="pln">&nbsp;</span></li><li class="L3"><span class="typ">Route</span><span class="pun">::</span><span class="kwd">group</span><span class="pun">([</span><span class="str">'prefix'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="str">'api'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'after'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="str">'allowOrigin'</span><span class="pun">],</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span></li><li class="L4"><span class="pln">&nbsp;</span></li><li class="L5"><span class="pln">    </span><span class="typ">Route</span><span class="pun">::</span><span class="kwd">get</span><span class="pun">(</span><span class="str">'/polls/{page}'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">$page</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span></li><li class="L6"><span class="pln">        </span><span class="kwd">return</span><span class="pln"> </span><span class="typ">Response</span><span class="pun">::</span><span class="pln">json</span><span class="pun">([</span><span class="str">'status'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="lit">200</span><span class="pun">,</span><span class="str">'polls'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="typ">Poll</span><span class="pun">::</span><span class="pln">skip</span><span class="pun">((</span><span class="pln">$page </span><span class="pun">-</span><span class="pln"> </span><span class="lit">1</span><span class="pun">)</span><span class="pln"> </span><span class="pun">*</span><span class="pln"> </span><span class="lit">5</span><span class="pun">)</span></li><li class="L7"><span class="pln">                </span><span class="pun">-&gt;</span><span class="pln">take</span><span class="pun">(</span><span class="lit">5</span><span class="pun">)</span></li><li class="L8"><span class="pln">                </span><span class="pun">-&gt;</span><span class="kwd">get</span><span class="pun">([</span><span class="str">'id'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'question'</span><span class="pun">])-&gt;</span><span class="pln">toArray</span><span class="pun">()</span></li><li class="L9"><span class="pln">        </span><span class="pun">]);</span></li><li class="L0"><span class="pln">    </span><span class="pun">});</span></li><li class="L1"><span class="pln">&nbsp;</span></li><li class="L2"><span class="pln">    </span><span class="typ">Route</span><span class="pun">::</span><span class="kwd">get</span><span class="pun">(</span><span class="str">'/poll/{id}'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">$id</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span></li><li class="L3"><span class="pln">        $poll </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Poll</span><span class="pun">::</span><span class="pln">find</span><span class="pun">(</span><span class="pln">$id</span><span class="pun">);</span></li><li class="L4"><span class="pln">        </span><span class="com">//out going format: {"status":200,"poll":{"id":"1","question":"What is your preferred framework for 2014 ?","options":["Laravel","PhalconPHP","CakePHP"]}}</span></li><li class="L5"><span class="pln">        </span><span class="kwd">return</span><span class="pln"> </span><span class="typ">Response</span><span class="pun">::</span><span class="pln">json</span><span class="pun">([</span><span class="str">'status'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="lit">200</span><span class="pun">,</span><span class="pln"> </span><span class="str">'poll'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> $poll</span><span class="pun">-&gt;</span><span class="pln">toArray</span><span class="pun">()]);</span></li><li class="L6"><span class="pln">    </span><span class="pun">});</span></li><li class="L7"><span class="pln">&nbsp;</span></li><li class="L8"><span class="pln">    </span><span class="typ">Route</span><span class="pun">::</span><span class="pln">post</span><span class="pun">(</span><span class="str">'/poll/{id}/option'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">$id</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span></li><li class="L9"><span class="pln">        $option </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Input</span><span class="pun">::</span><span class="kwd">get</span><span class="pun">(</span><span class="str">'option'</span><span class="pun">);</span></li><li class="L0"><span class="pln">        $poll </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Poll</span><span class="pun">::</span><span class="pln">find</span><span class="pun">(</span><span class="pln">$id</span><span class="pun">);</span></li><li class="L1"><span class="pln">        $options </span><span class="pun">=</span><span class="pln"> implode</span><span class="pun">(</span><span class="str">','</span><span class="pun">,</span><span class="pln"> $poll</span><span class="pun">-&gt;</span><span class="pln">options</span><span class="pun">);</span></li><li class="L2"><span class="pln">        $rules </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span></li><li class="L3"><span class="pln">            </span><span class="str">'option'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="str">'in:'</span><span class="pln"> </span><span class="pun">.</span><span class="pln"> $options</span><span class="pun">,</span></li><li class="L4"><span class="pln">        </span><span class="pun">];</span></li><li class="L5"><span class="pln">        $valid </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Validator</span><span class="pun">::</span><span class="pln">make</span><span class="pun">(</span><span class="pln">compact</span><span class="pun">(</span><span class="str">'option'</span><span class="pun">),</span><span class="pln"> $rules</span><span class="pun">);</span></li><li class="L6"><span class="pln">        </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">$valid</span><span class="pun">-&gt;</span><span class="pln">passes</span><span class="pun">())</span><span class="pln"> </span><span class="pun">{</span></li><li class="L7"><span class="pln">            $poll</span><span class="pun">-&gt;</span><span class="pln">stats</span><span class="pun">()-&gt;</span><span class="kwd">where</span><span class="pun">(</span><span class="str">'option'</span><span class="pun">,</span><span class="str">'='</span><span class="pun">,</span><span class="pln">$option</span><span class="pun">)-&gt;</span><span class="pln">increment</span><span class="pun">(</span><span class="str">'vote_count'</span><span class="pun">);</span></li><li class="L8"><span class="pln">            </span><span class="kwd">return</span><span class="pln"> </span><span class="typ">Response</span><span class="pun">::</span><span class="pln">json</span><span class="pun">([</span><span class="str">'status'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="lit">200</span><span class="pun">,</span><span class="pln"> </span><span class="str">'mesg'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="str">'saved successfully!'</span><span class="pun">]);</span></li><li class="L9"><span class="pln">        </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span></li><li class="L0"><span class="pln">            </span><span class="kwd">return</span><span class="pln"> </span><span class="typ">Response</span><span class="pun">::</span><span class="pln">json</span><span class="pun">([</span><span class="str">'status'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="lit">400</span><span class="pun">,</span><span class="pln"> </span><span class="str">'mesg'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="str">'option not allowed!'</span><span class="pun">],</span><span class="lit">400</span><span class="pun">);</span></li><li class="L1"><span class="pln">&nbsp;</span></li><li class="L2"><span class="pln">    </span><span class="pun">});</span></li><li class="L3"><span class="pln">&nbsp;</span></li><li class="L4"><span class="pln">    </span><span class="typ">Route</span><span class="pun">::</span><span class="kwd">get</span><span class="pun">(</span><span class="str">'/stats/{id}'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">$id</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span></li><li class="L5"><span class="pln">        $poll </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Poll</span><span class="pun">::</span><span class="pln">find</span><span class="pun">(</span><span class="pln">$id</span><span class="pun">);</span></li><li class="L6"><span class="pln">        $stats </span><span class="pun">=</span><span class="pln"> $poll</span><span class="pun">-&gt;</span><span class="pln">stats</span><span class="pun">()</span></li><li class="L7"><span class="pln">            </span><span class="pun">-&gt;</span><span class="kwd">select</span><span class="pun">([</span><span class="str">'option'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'vote_count as stats'</span><span class="pun">])</span></li><li class="L8"><span class="pln">            </span><span class="pun">-&gt;</span><span class="kwd">get</span><span class="pun">()-&gt;</span><span class="pln">toArray</span><span class="pun">();</span></li><li class="L9"><span class="pln">        </span><span class="kwd">return</span><span class="pln"> </span><span class="typ">Response</span><span class="pun">::</span><span class="pln">json</span><span class="pun">([</span><span class="str">'status'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> </span><span class="lit">200</span><span class="pun">,</span><span class="pln"> </span><span class="str">'stats'</span><span class="pln"> </span><span class="pun">=&gt;</span><span class="pln"> $stats</span><span class="pun">]);</span></li><li class="L0"><span class="pln">    </span><span class="pun">});</span></li><li class="L1"><span class="pun">});</span></li></ol></pre>
+<p>The <code>GET polls/{page}</code> route will return a JSON encoded array of five polls. The value of the offset in the query depends on the value of the <code>$page</code> variable. For example, if the value is <code>1</code>, the query will retrieve the first five polls. Similarly, for a page value of <code>2</code>, the next five polls starting from the sixth record in the <code>polls</code> table will be retrieved. The <code>GET poll/{id}</code> route will return a single poll with options as a JSON encoded object.</p>
+<p>The next route <code>POST poll/{id}/option</code>, will increment the <code>vote_count</code> for the user’s selected / submitted option. The route action also validates the posted data to make sure that the submitted option belongs to the poll.</p>
+<p>In the last route <code>GET stats/{id}</code>, we are querying the many side of the <code>polls</code> table i.e,<code>stats</code> to retrieve the <code>vote_count</code> for all the options of a single poll. This data is then returned as a part of the JSON response.</p>
+<blockquote><p><strong>Enabling Cross-origin Resource Sharing</strong><br>
+To enable simple CORS requests, we need to add the following header to the final response returned by the server:</p>
+<pre class="bash">Access-Control-Allow-Origin: *</pre>
+<p>In the above code, the after filter <code>allowOrigin</code> is applied to inject this header field in the final response returned by the API. Here is the code for this filter:</p>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="com">// file: app/filters.php</span></li><li class="L1"><span class="pln">&nbsp;</span></li><li class="L2"><span class="typ">Route</span><span class="pun">::</span><span class="pln">filter</span><span class="pun">(</span><span class="str">'allowOrigin'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">$route</span><span class="pun">,</span><span class="pln"> $request</span><span class="pun">,</span><span class="pln"> $response</span><span class="pun">)</span><span class="pln"> </span></li><li class="L3"><span class="pun">{</span></li><li class="L4"><span class="pln">    $response</span><span class="pun">-&gt;</span><span class="pln">header</span><span class="pun">(</span><span class="str">'access-control-allow-origin'</span><span class="pun">,</span><span class="str">'*'</span><span class="pun">);</span></li><li class="L5"><span class="pun">});</span></li></ol></pre>
+</blockquote>
+<h2>Testing with cURL</h2>
+<pre class="bash">┌─[usm4n@usm4n-desktop]―[~]
+└─•echo "`curl -s localhost:8000/api/poll/1`"
+{"status":200,"poll":{"id":"1","question":"Sint minima aut autem corrupti aliquid corporis doloribus?","options":["consequuntur","voluptatem","odit"]}}
+┌─[usm4n@usm4n-desktop]―[~]
+└─•echo "`curl -s --data "option=odit" localhost:8000/api/poll/1/option`"
+{"status":200,"mesg":"saved successfully!"}
+┌─[usm4n@usm4n-desktop]―[~]
+└─•echo "`curl -s --data "option=xyz" localhost:8000/api/poll/1/option`"
+{"status":400,"mesg":"option not allowed!"}
+┌─[usm4n@usm4n-desktop]―[~]
+└─•echo "`curl -s localhost:8000/api/stats/1`"
+{"status":200,"stats":[{"option":"consequuntur","stats":"0"},{"option":"voluptatem","stats":"0"},{"option":"odit","stats":"2"}]}</pre>
+<p>That’s all for now. If you need further clarification do not hesitate to ask!</p>
+<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-google-plus-1"><a rel="nofollow" class="share-google-plus-1 sd-button share-icon no-text" href="http://www.codeheaps.com/php-programming/creating-restful-api-using-laravel-angularjs-frontend/?share=google-plus-1&nb=1" title="Click to share on Google+" id="sharing-google-348"><span></span><span class="sharing-screen-reader-text">Click to share on Google+</span></a></li><li class="share-twitter"><a rel="nofollow" class="share-twitter sd-button share-icon no-text" href="http://www.codeheaps.com/php-programming/creating-restful-api-using-laravel-angularjs-frontend/?share=twitter&nb=1" title="Click to share on Twitter" id="sharing-twitter-348"><span><span class="share-count">39</span></span><span class="sharing-screen-reader-text">Click to share on Twitter</span></a></li><li class="share-facebook"><a rel="nofollow" class="share-facebook sd-button share-icon no-text" href="http://www.codeheaps.com/php-programming/creating-restful-api-using-laravel-angularjs-frontend/?share=facebook&nb=1" title="Share on Facebook" id="sharing-facebook-348"><span><span class="share-count">9</span></span><span class="sharing-screen-reader-text">Share on Facebook</span></a></li><li class="share-stumbleupon"><a rel="nofollow" class="share-stumbleupon sd-button share-icon no-text" href="http://www.codeheaps.com/php-programming/creating-restful-api-using-laravel-angularjs-frontend/?share=stumbleupon&nb=1" title="Click to share on StumbleUpon"><span></span><span class="sharing-screen-reader-text">Click to share on StumbleUpon</span></a></li><li class="share-pinterest"><a rel="nofollow" class="share-pinterest sd-button share-icon no-text" href="http://www.codeheaps.com/php-programming/creating-restful-api-using-laravel-angularjs-frontend/?share=pinterest&nb=1" title="Click to share on Pinterest"><span></span><span class="sharing-screen-reader-text">Click to share on Pinterest</span></a></li><li class="share-reddit"><a rel="nofollow" class="share-reddit sd-button share-icon no-text" href="http://www.codeheaps.com/php-programming/creating-restful-api-using-laravel-angularjs-frontend/?share=reddit&nb=1" title="Click to share on Reddit"><span></span><span class="sharing-screen-reader-text">Click to share on Reddit</span></a></li><li class="share-pocket"><a rel="nofollow" class="share-pocket sd-button share-icon no-text" href="http://www.codeheaps.com/php-programming/creating-restful-api-using-laravel-angularjs-frontend/?share=pocket&nb=1" title="Click to share on Pocket"><span></span><span class="sharing-screen-reader-text">Click to share on Pocket</span></a></li><li class="share-tumblr"><a rel="nofollow" class="share-tumblr sd-button share-icon no-text" href="http://www.codeheaps.com/php-programming/creating-restful-api-using-laravel-angularjs-frontend/?share=tumblr&nb=1" title="Click to share on Tumblr"><span></span><span class="sharing-screen-reader-text">Click to share on Tumblr</span></a></li><li class="share-linkedin"><a rel="nofollow" class="share-linkedin sd-button share-icon no-text" href="http://www.codeheaps.com/php-programming/creating-restful-api-using-laravel-angularjs-frontend/?share=linkedin&nb=1" title="Click to share on LinkedIn" id="sharing-linkedin-348"><span><span class="share-count">1</span></span><span class="sharing-screen-reader-text">Click to share on LinkedIn</span></a></li><li class="share-end"></li></ul></div></div></div>                                                </div>
+                                                <footer class="post-meta">
+                                                        <span class="label"><i class="icon-tags"></i>Tags: </span> <a href="http://www.codeheaps.com/tag/angularjs/" rel="tag">AngularJS</a>, <a href="http://www.codeheaps.com/tag/javascript/" rel="tag">JavaScript</a>, <a href="http://www.codeheaps.com/tag/laravel-tutorial/" rel="tag">laravel tutorial</a>, <a href="http://www.codeheaps.com/tag/php/" rel="tag">php</a>, <a href="http://www.codeheaps.com/tag/restful-api/" rel="tag">RESTful API</a>, <a href="http://www.codeheaps.com/tag/web-development/" rel="tag">web development</a>                                                </footer>
+                                        </article><hr>
+                                        <nav class="navbar" role="navigation">
+                                                <ul class="pager">
+                                                        <li class="previous">
+                                                                <a href="http://www.codeheaps.com/web-development-2/creating-polling-application-using-angularjs-and-laravel-part-2/" rel="prev">←Creating a Polling Application Using AngularJS and Laravel Part 2</a>                                                        </li>
+                                                        <li class="next">
+                                                                <a href="http://www.codeheaps.com/php-programming/laravel-5-new-awesome-form-validation/" rel="next">Laravel 5 New Awesome Form Validation→</a>                                                        </li>
+                                                </ul>
+                                                
+                                        </nav>
+                                                                <div id="comments" class="comments-area">
+
+	
+	
+								<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://www.codeheaps.com/php-programming/creating-restful-api-using-laravel-angularjs-frontend/#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://www.codeheaps.com/wp-comments-post.php" method="post" id="commentform" class="comment-form well">
+																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required="true"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required="true"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30"></p>
+<p class="cptch_block"><br>		<input type="hidden" name="cptch_result" value="vZ8=">
+		<input type="hidden" name="cptch_time" value="1415860189">
+		<input type="hidden" value="Version: 2.4">
+		<input id="cptch_input" type="text" autocomplete="off" name="cptch_number" value="" maxlength="2" size="2" aria-required="true" required="required" style="margin-bottom:0;display:inline;font-size: 12px;width: 40px;"> − 5 =  three	</p>												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" class="input-xlarge" rows="8" aria-required="true"></textarea></p>						<div class="alert"><p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;strike&gt; &lt;strong&gt; </code></p></div>						<p class="form-submit">
+							<input name="submit" type="submit" id="submit" class="btn btn-primary" value="Post Comment">
+							<input type="hidden" name="comment_post_ID" value="348" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+						</p>
+						<p class="comment-subscription-form"><input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"> <label class="subscribe-label" id="subscribe-label" for="subscribe_comments">Notify me of follow-up comments by email.</label></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog">Notify me of new posts by email.</label></p>					</form>
+							</div><!-- #respond -->
+			</div><!-- #comments .comments-area -->                       
+
+                </div>
+                <!-- side bar area -->
+                <div class="span4 rest-color">
+        <!-- the side bar -->
+        <div class="sidebar">
+                <div class="search">
+        <form class="form-search" role="search" method="get" action="http://www.codeheaps.com/">
+                <input name="s" data-provide="typeahead" autocomplete="off" type="text" class="input-medium search-query" placeholder="Site Search..." value="">
+                <input type="submit" class="btn btn-small btn-primary" value="Search">
+        </form>
+
+</div><hr>
+                <!-- widget area -->
+                                <div class="widget-area" role="complementary">
+                       <aside id="feedburner-email-subscription-2" class="widget feedburner-email-subscription"><h3 class="widget-title">Site Feeds</h3><div class="fes-default">
+	<form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#39;http://feedburner.google.com/fb/a/mailverify?uri=codeheaps&#39;, &#39;popupwindow&#39;, &#39;scrollbars=yes,width=550,height=520&#39;);return true">
+					<div class="form-group">
+				<label class="sr-only"><span class="screen-reader-text">Email Subscription</span></label>
+				<input class="form-control search-field" type="text" value="Your email here" onfocus="if(this.value==&#39;Your email here&#39;)this.value=&#39;&#39;;" onblur="if(this.value==&#39;&#39;)this.value=&#39;Your email here&#39;" name="email">
+			</div>
+			<button type="submit" class="btn btn-default btn-submit">Subscribe</button>			
+				<input type="hidden" value="codeheaps" name="uri">
+		<input type="hidden" name="loc" value="en_US">
+	</form>
+	</div></aside><hr><aside id="calendar-3" class="widget widget_calendar"><h3 class="widget-title">Calender</h3><div id="calendar_wrap"><table id="wp-calendar">
+	<caption>November 2014</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="Monday">M</th>
+		<th scope="col" title="Tuesday">T</th>
+		<th scope="col" title="Wednesday">W</th>
+		<th scope="col" title="Thursday">T</th>
+		<th scope="col" title="Friday">F</th>
+		<th scope="col" title="Saturday">S</th>
+		<th scope="col" title="Sunday">S</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="http://www.codeheaps.com/2014/10/">« Oct</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next" class="pad">&nbsp;</td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="5" class="pad">&nbsp;</td><td>1</td><td>2</td>
+	</tr>
+	<tr>
+		<td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td>
+	</tr>
+	<tr>
+		<td>10</td><td>11</td><td>12</td><td id="today">13</td><td>14</td><td>15</td><td>16</td>
+	</tr>
+	<tr>
+		<td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td>
+	</tr>
+	<tr>
+		<td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td>
+	</tr>
+	</tbody>
+	</table></div></aside><hr>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Articles</h3>		<ul>
+					<li>
+				<a href="http://www.codeheaps.com/php-programming/laravel-5-middleware-stack-decoded/">Laravel 5 Middleware Stack Decoded</a>
+						</li>
+					<li>
+				<a href="http://www.codeheaps.com/php-programming/helper-functions-laravel-5/">New Helper functions In Laravel 5</a>
+						</li>
+					<li>
+				<a href="http://www.codeheaps.com/php-programming/laravel-5-new-auth-generators-user-authentication/">Laravel 5 New Auth Generators and User Authentication</a>
+						</li>
+					<li>
+				<a href="http://www.codeheaps.com/php-programming/laravel-5-new-awesome-form-validation/">Laravel 5 New Awesome Form Validation</a>
+						</li>
+					<li>
+				<a href="./Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps_files/Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps.html">Creating a RESTful API using Laravel for AngularJS Frontend</a>
+						</li>
+				</ul>
+		</aside><hr><aside id="categories-2" class="widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul>
+	<li class="cat-item cat-item-8"><a href="http://www.codeheaps.com/category/php-programming/">PHP</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="http://www.codeheaps.com/category/php-frameworks/">PHP Frameworks</a>
+<ul class="children">
+	<li class="cat-item cat-item-11"><a href="http://www.codeheaps.com/category/php-frameworks/laravel/">Laravel</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-14"><a href="http://www.codeheaps.com/category/web-design/">Web Design</a>
+</li>
+	<li class="cat-item cat-item-9"><a href="http://www.codeheaps.com/category/web-development-2/">Web Development</a>
+</li>
+		</ul>
+</aside><hr><aside id="tag_cloud-3" class="widget widget_tag_cloud"><h3 class="widget-title">Tags</h3><div class="tagcloud"><a href="http://www.codeheaps.com/tag/angularjs/" class="tag-link-21" title="3 topics" style="font-size: 13.1851851852pt;">AngularJS</a>
+<a href="http://www.codeheaps.com/tag/bash/" class="tag-link-18" title="1 topic" style="font-size: 8pt;">bash</a>
+<a href="http://www.codeheaps.com/tag/design-patterns/" class="tag-link-7" title="2 topics" style="font-size: 11.1111111111pt;">design patterns</a>
+<a href="http://www.codeheaps.com/tag/javascript/" class="tag-link-20" title="3 topics" style="font-size: 13.1851851852pt;">JavaScript</a>
+<a href="http://www.codeheaps.com/tag/laravel-2/" class="tag-link-12" title="6 topics" style="font-size: 17.5061728395pt;">laravel</a>
+<a href="http://www.codeheaps.com/tag/laravel-5/" class="tag-link-26" title="4 topics" style="font-size: 14.9135802469pt;">Laravel 5</a>
+<a href="http://www.codeheaps.com/tag/laravel-tutorial/" class="tag-link-16" title="9 topics" style="font-size: 20.0987654321pt;">laravel tutorial</a>
+<a href="http://www.codeheaps.com/tag/object-oriented-programming/" class="tag-link-5" title="2 topics" style="font-size: 11.1111111111pt;">object oriented programming</a>
+<a href="http://www.codeheaps.com/tag/php/" class="tag-link-4" title="12 topics" style="font-size: 22pt;">php</a>
+<a href="http://www.codeheaps.com/tag/php-frameworks-2/" class="tag-link-13" title="10 topics" style="font-size: 20.7901234568pt;">php frameworks</a>
+<a href="http://www.codeheaps.com/tag/restful-api/" class="tag-link-22" title="1 topic" style="font-size: 8pt;">RESTful API</a>
+<a href="http://www.codeheaps.com/tag/ubuntu-linux/" class="tag-link-19" title="1 topic" style="font-size: 8pt;">ubuntu linux</a>
+<a href="http://www.codeheaps.com/tag/user-auth/" class="tag-link-25" title="1 topic" style="font-size: 8pt;">user auth</a>
+<a href="http://www.codeheaps.com/tag/vagrant/" class="tag-link-17" title="1 topic" style="font-size: 8pt;">vagrant</a>
+<a href="http://www.codeheaps.com/tag/validation/" class="tag-link-24" title="1 topic" style="font-size: 8pt;">validation</a>
+<a href="http://www.codeheaps.com/tag/web-design-2/" class="tag-link-15" title="5 topics" style="font-size: 16.2962962963pt;">web design</a>
+<a href="http://www.codeheaps.com/tag/web-development/" class="tag-link-6" title="12 topics" style="font-size: 22pt;">web development</a></div>
+</aside><hr>                </div>
+                        </div> <!-- end side bar-->
+</div>                <!--end side bar area-->
+        </div> <!--end row-->
+</div> <!-- end content-container -->
+<div id="big-footer">
+        <div class="row">
+                <div class="span12">
+                                                        <div class="span4">
+                                        <div class="widget-area">
+                                                <aside id="search-3" class="widget widget_search"><h3 class="widget-title">Site Search</h3><div class="search">
+        <form class="form-search" role="search" method="get" action="http://www.codeheaps.com/">
+                <input name="s" data-provide="typeahead" autocomplete="off" type="text" class="input-medium search-query" placeholder="Site Search..." value="">
+                <input type="submit" class="btn btn-small btn-primary" value="Search">
+        </form>
+
+</div></aside><hr><aside id="meta-3" class="widget widget_meta"><h3 class="widget-title">Meta</h3>			<ul>
+			<li><a rel="nofollow" href="http://www.codeheaps.com/wp-login.php?action=register">Register</a></li>			<li><a rel="nofollow" href="http://www.codeheaps.com/wp-login.php">Log in</a></li>
+			<li><a href="http://www.codeheaps.com/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://www.codeheaps.com/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+</aside><hr>                                        </div>
+                                </div>
+                                                                                <div class="span4">
+                                        <div class="widget-area">
+                                                <aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul>
+	<li><a href="http://www.codeheaps.com/2014/10/">October 2014</a>&nbsp;(1)</li>
+	<li><a href="http://www.codeheaps.com/2014/09/">September 2014</a>&nbsp;(2)</li>
+	<li><a href="http://www.codeheaps.com/2014/08/">August 2014</a>&nbsp;(1)</li>
+	<li><a href="http://www.codeheaps.com/2014/07/">July 2014</a>&nbsp;(1)</li>
+	<li><a href="http://www.codeheaps.com/2014/05/">May 2014</a>&nbsp;(1)</li>
+	<li><a href="http://www.codeheaps.com/2014/04/">April 2014</a>&nbsp;(1)</li>
+	<li><a href="http://www.codeheaps.com/2014/03/">March 2014</a>&nbsp;(2)</li>
+	<li><a href="http://www.codeheaps.com/2014/02/">February 2014</a>&nbsp;(2)</li>
+	<li><a href="http://www.codeheaps.com/2014/01/">January 2014</a>&nbsp;(1)</li>
+	<li><a href="http://www.codeheaps.com/2013/12/">December 2013</a>&nbsp;(6)</li>
+		</ul>
+</aside><hr>                                        </div>
+                                </div>
+                        
+                                                        <div class="span4">
+                                        <div class="widget-area">
+                                                <aside id="tag_cloud-4" class="widget widget_tag_cloud"><h3 class="widget-title">Tags</h3><div class="tagcloud"><a href="http://www.codeheaps.com/tag/angularjs/" class="tag-link-21" title="3 topics" style="font-size: 13.1851851852pt;">AngularJS</a>
+<a href="http://www.codeheaps.com/tag/bash/" class="tag-link-18" title="1 topic" style="font-size: 8pt;">bash</a>
+<a href="http://www.codeheaps.com/tag/design-patterns/" class="tag-link-7" title="2 topics" style="font-size: 11.1111111111pt;">design patterns</a>
+<a href="http://www.codeheaps.com/tag/javascript/" class="tag-link-20" title="3 topics" style="font-size: 13.1851851852pt;">JavaScript</a>
+<a href="http://www.codeheaps.com/tag/laravel-2/" class="tag-link-12" title="6 topics" style="font-size: 17.5061728395pt;">laravel</a>
+<a href="http://www.codeheaps.com/tag/laravel-5/" class="tag-link-26" title="4 topics" style="font-size: 14.9135802469pt;">Laravel 5</a>
+<a href="http://www.codeheaps.com/tag/laravel-tutorial/" class="tag-link-16" title="9 topics" style="font-size: 20.0987654321pt;">laravel tutorial</a>
+<a href="http://www.codeheaps.com/tag/object-oriented-programming/" class="tag-link-5" title="2 topics" style="font-size: 11.1111111111pt;">object oriented programming</a>
+<a href="http://www.codeheaps.com/tag/php/" class="tag-link-4" title="12 topics" style="font-size: 22pt;">php</a>
+<a href="http://www.codeheaps.com/tag/php-frameworks-2/" class="tag-link-13" title="10 topics" style="font-size: 20.7901234568pt;">php frameworks</a>
+<a href="http://www.codeheaps.com/tag/restful-api/" class="tag-link-22" title="1 topic" style="font-size: 8pt;">RESTful API</a>
+<a href="http://www.codeheaps.com/tag/ubuntu-linux/" class="tag-link-19" title="1 topic" style="font-size: 8pt;">ubuntu linux</a>
+<a href="http://www.codeheaps.com/tag/user-auth/" class="tag-link-25" title="1 topic" style="font-size: 8pt;">user auth</a>
+<a href="http://www.codeheaps.com/tag/vagrant/" class="tag-link-17" title="1 topic" style="font-size: 8pt;">vagrant</a>
+<a href="http://www.codeheaps.com/tag/validation/" class="tag-link-24" title="1 topic" style="font-size: 8pt;">validation</a>
+<a href="http://www.codeheaps.com/tag/web-design-2/" class="tag-link-15" title="5 topics" style="font-size: 16.2962962963pt;">web design</a>
+<a href="http://www.codeheaps.com/tag/web-development/" class="tag-link-6" title="12 topics" style="font-size: 22pt;">web development</a></div>
+</aside><hr>                                        </div>
+                                </div>
+                        
+                </div>
+        </div>
+        <footer role="contentinfo">
+                <div class="row">
+                        <div class="span10 offset1" id="copyright">
+                                <p>This website uses cookies. By using our services, you agree to our use of cookies. More info: <a href="http://www.codeheaps.com/privacy">Privacy</a></p>
+                                <p> <span>© 2013-2014</span> <a href="http://www.codeheaps.com/">codeheaps.com</a><span> All Rights Reserved</span> | <a href="http://www.codeheaps.com/terms-of-use/">Terms of Use</a> | <span>Wordpress Theme Solarized</span> - property of codeheaps.</p>
+                               
+                        </div>
+                </div>
+                 	<div style="display:none">
+	</div>
+
+	<script type="text/javascript">
+		WPCOM_sharing_counts = {"http:\/\/www.codeheaps.com\/php-programming\/creating-restful-api-using-laravel-angularjs-frontend\/":348}	</script>
+		<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-google-plus-1' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomgoogle-plus-1', 'menubar=1,resizable=1,width=480,height=550' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-twitter' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-facebook' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+		});
+		</script>
+							<script type="text/javascript">
+			jQuery(document).on('ready', function(){
+				jQuery('body').on('click', 'a.share-pinterest', function(e){
+					e.preventDefault();
+
+					// Load Pinterest Bookmarklet code
+					var s = document.createElement("script");
+					s.type = "text/javascript";
+					s.src = window.location.protocol + "//assets.pinterest.com/js/pinmarklet.js?r=" + ( Math.random() * 99999999 );
+					var x = document.getElementsByTagName("script")[0];
+					x.parentNode.insertBefore(s, x);
+
+					// Trigger Stats
+					var s = document.createElement("script");
+					s.type = "text/javascript";
+					s.src = this + ( this.toString().indexOf( '?' ) ? '&' : '?' ) + 'js_only=1';
+					var x = document.getElementsByTagName("script")[0];
+					x.parentNode.insertBefore(s, x);
+				});
+			});
+			</script>
+				<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-pocket' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcompocket', 'menubar=1,resizable=1,width=450,height=450' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-tumblr' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomtumblr', 'menubar=1,resizable=1,width=450,height=450' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-linkedin' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomlinkedin', 'menubar=1,resizable=1,width=580,height=450' );
+				return false;
+			});
+		});
+		</script>
+		<script type="text/javascript" src="./Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps_files/typeahead.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wp_typeahead = {"ajaxurl":"http:\/\/www.codeheaps.com\/wp-admin\/admin-ajax.php","sec_token":"bdf05fcaf1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps_files/wp-typeahead.js"></script>
+<script type="text/javascript" src="./Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps_files/devicepx-jetpack.js"></script>
+<script type="text/javascript" src="./Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps_files/gprofiles.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps_files/wpgroho.js"></script>
+<script type="text/javascript" src="./Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps_files/comment-reply.min.js"></script>
+<script type="text/javascript" src="./Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps_files/bootstrap-dropdown.js"></script>
+<script type="text/javascript" src="./Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps_files/prettify.js"></script>
+<script type="text/javascript" src="./Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps_files/run_prettify.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var recaptcha_options = {"lang":"en"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps_files/sharing.js"></script>
+
+	<script src="./Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps_files/e-201446.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	st_go({v:'ext',j:'1:3.2',blog:'61502865',post:'348',tz:'0'});
+	var load_cmc = function(){linktracker_init(61502865,348,2);};
+	if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+	else load_cmc();
+	</script><img id="wpstats" src="./Creating a RESTful API using Laravel for AngularJS Frontend - CodeHeaps_files/g.gif" alt="">        </footer>
+</div>
+</div> <!-- end main-container -->
+
+
+
+</body></html>

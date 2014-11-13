@@ -1,0 +1,764 @@
+/*
+
+	1 - SHORTCODES
+
+		1.1 - Columns
+		1.2 - Lists
+		1.3 - Button
+		1.4 - Alerts & Messages
+		1.5 - Highlight
+		1.6 - Dropcap
+		1.7 - Pull Quotes
+		1.8 - Toggle
+		1.9 - Accordion
+		1.10 - Tabs
+		1.11 - Tooltip
+		1.12 - Google maps
+		1.13 - Pricing Table
+		1.14 - Sidebar
+		1.15 - Notice
+		1.16 - Skill
+		1.17 - Icon Box
+		1.18 - Separator OR
+		1.19 - ST Gallery
+
+*/
+
+/*===============================================
+
+	S H O R T C O D E S
+	Shortcode styles
+
+===============================================*/
+
+	/*-------------------------------------------
+		1.1 - Columns
+	-------------------------------------------*/
+
+	.column {
+		position: relative;
+		float: left;
+		line-height: inherit;
+	}
+
+		.column > div {
+			margin-right: 25px;
+		}
+
+
+	.column-1-2 { width: 50%; }
+	
+	.column-1-3 { width: 33.333333%; }
+	.column-2-3 { width: 66.666666%; }
+	
+	.column-1-4 { width: 25%; }
+	.column-2-4 { width: 50%; }
+	.column-3-4 { width: 75%; }
+	
+	.column-1-5 { width: 20%; }
+	.column-2-5 { width: 40%; }
+	.column-3-5 { width: 60%; }
+	.column-4-5 { width: 80%; }
+	
+	.column-1-6 { width: 16.666666%; }
+	.column-2-6 { width: 33.333333%; }
+	.column-3-6 { width: 50%; }
+	.column-4-6 { width: 66.666666%; }
+	.column-5-6 { width: 83.333333%; }
+	
+	.column-1-7 { width: 14.285714%; }
+	.column-2-7 { width: 28.571428%; }
+	.column-3-7 { width: 42.857142%; }
+	.column-4-7 { width: 57.142857%; }
+	.column-5-7 { width: 71.428571%; }
+	.column-6-7 { width: 85.714285%; }
+	
+	.column-1-8 { width: 12.5%; }
+	.column-2-8 { width: 25%; }
+	.column-3-8 { width: 37.5%; }
+	.column-4-8 { width: 50%; }
+	.column-5-8 { width: 62.5%; }
+	.column-6-8 { width: 75%; }
+	.column-7-8 { width: 87.5%; }
+
+
+	/*-------------------------------------------
+		1.2 - Lists
+	-------------------------------------------*/
+
+	.list {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+		.list > li {
+			padding: 0.5em 0 0.5em 2em;
+			background: url('../images/line-light.png') left bottom repeat-x;
+		}
+
+			ul.list > li:before { /* ul needed */
+				float: left;
+				display: inline-block;
+				content: "";
+				width: 2em;
+				height: 16px;
+				margin: 0.20em 0 0 -2em;
+				background-size: 16px 16px;
+			}
+
+
+	/*-------------------------------------------
+		1.3 - Button
+	-------------------------------------------*/
+
+	a.button {
+		display: inline-block !important;
+		line-height: 1em !important;
+		color: #FFF;
+		text-decoration: none !important;
+		white-space: nowrap;
+		margin-bottom: 5px;
+		padding: 0.7em 1em 0.7em 1em;
+		background-color: #31ac97;
+		border-radius: 2px;
+		transition: background-color 150ms linear;
+	}
+	
+		a.button:hover {
+			color: #FFF;
+			background-color: #494158 !important;
+			cursor: pointer;
+			transition: background-color 150ms linear;
+		}
+
+			a.button-with-icon {
+				padding: 1em 1.5em 1em 40px;
+				background-position: 15px 50%;
+				background-repeat: no-repeat;
+				background-size: 16px 16px;
+			}
+
+
+
+
+	/*-------------------------------------------
+		1.4 - Alerts & Messages
+	-------------------------------------------*/
+
+	.alert {
+		position: relative;
+		text-align: center;
+		margin: 0 0 1em;
+		padding: 1em 4em;
+		box-shadow: 0 0 1px rgba(0,0,0,0.35) inset;
+	}
+
+		.alert-notice {
+			color: #777;
+			background: #FFF;
+		}
+
+		.alert-warning {
+			color: #AD8643;
+			background: #FBEED5;
+		}
+
+		.alert-success {
+			color: #468847;
+			background: #DFF0D8;
+		}
+
+		.alert-error {
+			color: #B94A48;
+			background: #F2DEDE;
+		}
+
+		.alert-info {
+			color: #3A87AD;
+			background: #D9EDF7;
+		}
+
+		.alert-close {
+			position: absolute;
+			display: inline-block;
+			top: 1em;
+			right: 1em;
+			width: 22px;
+			height: 22px;
+			background: url('../../../../plugins/stkit/assets/images/icons/16/glyphs/gray/delete.png') center no-repeat;
+			opacity: 0.50;
+		}
+
+			.hidpi .alert-close {
+				background-image: url('../../../../plugins/stkit/assets/images/icons/32/glyphs/gray/delete.png');
+				background-size: 16px 16px;
+			}
+
+		.alert-close:hover {
+			cursor: pointer;
+			opacity: 1;
+		}
+
+
+	/*-------------------------------------------
+		1.5 - Highlight
+	-------------------------------------------*/
+
+	.highlight {
+		color: #474733;
+		padding: 0.15em;
+		background: #efedac;
+	}
+
+
+	/*-------------------------------------------
+		1.6 - Dropcap
+	-------------------------------------------*/
+
+	.dropcap {
+		position: relative;
+		display: table;
+		float: left;
+		font-size: 4.2em;
+		line-height: 0.66em;
+		margin: 0 10px 0 0;
+		padding: 0.2em;
+		background: url('../images/bg-black-15.png');
+	}
+
+
+	/*-------------------------------------------
+		1.7 - Pull Quotes
+	-------------------------------------------*/
+
+	.pullquote {
+		font-size: 1.3em;
+		width: 40%;
+		margin: 0.5em 0;
+		padding: 1em 0;
+		background: url('../images/line.png') top left no-repeat, url('../images/line.png') bottom left no-repeat;
+		background-size: 100% 3px, 100% 3px;
+	}
+
+		.pullquote-left {
+			float: left;
+			margin-right: 1.5em;
+		}
+
+		.pullquote-right {
+			float: right;
+			margin-left: 1.5em;
+		}
+
+
+	/*-------------------------------------------
+		1.8 - Toggle
+	-------------------------------------------*/
+
+	.toggle {
+		text-align: left; /* needed */
+		margin-bottom: 1em;
+		border-radius: 2px;
+		box-shadow: 1px 1px 0 rgba(0,0,0,0.1) inset, -1px -1px 0 rgba(0,0,0,0.1) inset;
+	}
+
+		.toggle-title {
+			line-height: 20px;
+			padding: 15px 25px;
+			cursor: pointer;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+			.toggle-title span {
+				display: inline-block;
+				float: left;
+				width: 20px;
+				height: 20px;
+				margin-right: 10px;
+				border-radius: 2px;
+			}
+
+		.toggle-holder {
+			overflow: hidden;
+			height: 0;
+		}
+
+			.toggle-box {
+				padding: 15px 25px 25px;
+				border-top: 1px dashed #DDD;
+			}
+
+
+	/*--- Toggle closed -----------------------------*/
+
+	.toggle-closed {
+	}
+
+		.toggle-closed .toggle-title {
+		}
+
+			.toggle-closed .toggle-title span {
+				background: #31ac97 url('../../../../plugins/stkit/assets/images/icons/16/glyphs/white/arrow-down.png') center no-repeat;
+			}
+
+				.hidpi .toggle-closed .toggle-title span {
+					background-image: url('../../../../plugins/stkit/assets/images/icons/32/glyphs/white/arrow-down.png');
+					background-size: 16px 16px;
+				}
+
+
+	/*--- Toggle opened -----------------------------*/
+
+	.toggle-opened {
+	}
+
+		.toggle-opened .toggle-title {
+		}
+
+			.toggle-opened .toggle-title span {
+				background: #56646F url('../../../../plugins/stkit/assets/images/icons/16/glyphs/white/arrow-up.png') center no-repeat;
+			}
+
+				.hidpi .toggle-opened .toggle-title span {
+					background-image: url('../../../../plugins/stkit/assets/images/icons/32/glyphs/white/arrow-up.png');
+					background-size: 16px 16px;
+				}
+
+
+	/*-------------------------------------------
+		1.9 - Accordion
+	-------------------------------------------*/
+
+	.accordion {
+		margin-bottom: 1em;
+			background: url('../images/line.png') left top repeat-x;
+	}
+
+		.accordion .toggle {
+			margin-bottom: 0;
+			box-shadow: none;
+			background: url('../images/line.png') left bottom repeat-x;
+			border-radius: 0;
+		}
+
+			.accordion .toggle-title {
+				padding: 15px 0;
+			}
+
+				.accordion .toggle-holder {
+				}
+					.accordion .toggle-box {
+						padding: 0 0 25px;
+						border: none;
+					}
+
+
+	/*-------------------------------------------
+		1.10 - Tabs
+	-------------------------------------------*/
+
+	.st-tabs-holder {
+		display: block;
+		margin: 0 0 1em;
+	}
+
+
+		/*--- Labels -----------------------------*/
+
+		.st-ul {
+			list-style: none;
+			display: table;
+			width: 100%;
+			max-width: 100%;
+			margin: 0 0 -1px;
+			padding: 0;
+			border-left: 1px solid #DDD;
+		}
+		
+			.st-ul li {
+				float: left;
+				margin: 0;
+				padding: 10px 25px;
+				border-top: 1px solid #DDD;
+				border-right: 1px solid #DDD;
+				cursor: pointer;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+
+				.st-ul li:hover {
+					background-image: url('../images/bg-black-05.png');
+				}
+
+				.st-ul li.st-current,
+				.st-ul li.st-current:hover {
+					color: #31ac97;
+					border-top: 1px solid #31ac97;
+					background: #FFF;
+				}
+
+				
+		/*--- Tabs -----------------------------*/
+
+		.st-tabs {
+			clear: both;
+			text-align: left; /* needed */
+			padding: 25px;
+			background: #FFF;
+			border: 1px solid #DDD;
+			border-radius: 0 2px 2px 2px;
+		}
+		
+			.st-tabs > div {
+				position: absolute;
+				visibility: hidden;
+				top: -9999px;
+			}
+
+			.st-tabs .block {
+				position: relative;
+				visibility: visible;
+				top: 0;
+			}
+
+
+	/*-------------------------------------------
+		1.11 - Tooltip
+	-------------------------------------------*/
+
+	#tooltip-holder {
+		position: absolute;
+		z-index: 1000;
+	}
+	
+		.tooltip-holder {
+			font-size: 0.85em;
+			line-height: 1.54em;
+			color: #FFF;
+			max-width: 150px;
+			padding: 5px 10px;
+			background: #222;
+			box-shadow: 0 2px 2px rgba(0,0,0,0.1), 0 10px 30px rgba(0,0,0,0.04);
+			border-radius: 2px;
+		}
+
+			.tooltip-holder:before {
+				position: absolute;
+				content: "";
+				top: -7px;
+				left: 7px;
+				border-style: solid;
+				border-width: 7px 0 0 7px;
+				border-color: transparent transparent transparent #222;
+			}
+
+	span.tooltip {
+		border-bottom: 1px dashed;
+		cursor: help;
+	}
+
+
+	/*-------------------------------------------
+		1.12 - Google maps
+	-------------------------------------------*/
+
+	#googlemaps {
+		margin: 0 0 1em;
+	}
+
+
+	/*-------------------------------------------
+		1.13 - Pricing Table
+	-------------------------------------------*/
+
+	.pricing-table {
+		text-align: center;
+		margin: 0 0 1em -1px;
+		background: #FFF;
+		border: 1px solid #DDD;
+	}
+
+		.pricing-table-title {
+			color: #FFF;
+			font-size: 1.2em;
+			line-height: 1.2em;
+			margin: -1px -1px 0 -1px;
+			padding: 15px 5px;
+		}
+
+		.pricing-table-price {
+			color: #FFF;
+			font-size: 2em;
+			line-height: 1em;
+			margin: 0 -1px;
+			padding: 15px 5px;
+			background-image: url('../images/bg-black-20.png');
+		}
+
+		.pricing-table-comment {
+			font-size: 0.5em;
+			opacity: 0.65;
+		}
+
+		.pricing-table-content {
+			padding: 1em;
+			color: #56646F;
+		}
+
+			.pricing-table-content ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+
+				.pricing-table-content ul li {
+					padding: 4px 0;
+				}
+
+		.pricing-table-button {
+			padding: 15px 5px;
+			background: #F9F9F9;
+			border-top: 1px solid #DDD;
+		}
+
+
+	/*--- Gray -----------------------------*/
+
+	.pricing-table-gray .pricing-table-title,
+	.pricing-table-gray .pricing-table-price,
+	.pricing-table-gray .button {
+		background-color: #494158;
+	}
+
+	.pricing-table-gray .pricing-table-title {
+		background-image: url('../images/bg-white-40.png');
+	}
+
+	.pricing-table-gray .pricing-table-price,
+	.pricing-table-gray .button {
+		background-image: url('../images/bg-white-20.png');
+	}
+
+		.pricing-table-gray .button:hover {
+			background-image: none;
+		}
+
+
+	/*--- Dark -----------------------------*/
+
+	.pricing-table-dark .pricing-table-title,
+	.pricing-table-dark .pricing-table-price,
+	.pricing-table-dark .button {
+		background-color: #494158;
+	}
+
+	.pricing-table-dark .pricing-table-title {
+		background-image: url('../images/bg-white-20.png');
+	}
+
+	.pricing-table-dark .pricing-table-price,
+	.pricing-table-dark .button {
+		background-image: url('../images/bg-white-10.png');
+	}
+
+		.pricing-table-dark .button:hover {
+			background-image: none;
+		}
+
+
+	/*--- Featured -----------------------------*/
+
+	.pricing-table-featured {
+		position: relative;
+		box-shadow: 0 0px 5px rgba(0,0,0,0.07), 0 10px 30px rgba(0,0,0,0.04);
+	    z-index: 1;
+	}
+
+		.pricing-table-featured .pricing-table-title,
+		.pricing-table-featured .pricing-table-price,
+		.pricing-table-featured .button {
+			background-color: #31ac97;
+		}
+	
+		.pricing-table-featured .pricing-table-title {
+			margin-top: -11px;
+			padding: 20px 5px;
+		}
+	
+		.pricing-table-featured .pricing-table-button {
+			padding: 20px 5px;
+		}
+
+
+	/*-------------------------------------------
+		1.14 - Sidebar
+	-------------------------------------------*/
+
+	.sidebar-shortcode {
+		margin: 0 !important;
+	}
+
+
+	/*-------------------------------------------
+		1.15 - Notice
+	-------------------------------------------*/
+
+	.notice {
+		color: #AAADAE;
+		font-size: 1.2em;
+		padding: 3em;
+		margin-bottom: 1em;
+		background: #494158;
+		border-radius: 2px;
+	}
+
+		.sidebar .notice {
+			padding: 2em;
+		}
+
+		.notice h1,
+		.notice h2,
+		.notice h3,
+		.notice h4,
+		.notice h5,
+		.notice h6 {
+			color: #FFF;
+			padding-top: 0;
+		}
+
+
+	/*-------------------------------------------
+		1.16 - Skill
+	-------------------------------------------*/
+
+	.skill {
+		position: relative;
+		text-align: left; /* needed */
+		margin-bottom: 1em;
+		background: #FFF url('../images/bg-black-10.png');
+		overflow: hidden;
+	}
+
+		.skill-bar {
+			position: absolute;
+			width: 5px;
+			height: 100px;
+			background: #31ac97;
+		}
+
+		.skill-label {
+			position: relative;
+			color: #FFF;
+			margin-left: 1em;
+			padding: 1em 0;
+			z-index: 1;
+		}
+
+		.skill-label span {
+			font-size: 0.85em;
+			opacity: 0.65;
+		}
+
+
+	/*-------------------------------------------
+		1.17 - Icon Box
+	-------------------------------------------*/
+
+	.st_icon_box_16 {
+		text-align: left; /* needed */
+		padding: 0 15px 0 32px;
+		background-position: left 0.75em;
+		background-repeat: no-repeat;
+	}
+
+	.st_icon_box_32 {
+		text-align: left; /* needed */
+		padding: 0 15px 0 50px;
+		background-position: left 0.75em;
+		background-repeat: no-repeat;
+	}
+
+
+	/*-------------------------------------------
+		1.18 - Separator OR
+	-------------------------------------------*/
+
+	.separator-or {
+		text-align: center;
+		padding: 25px;
+		background: url('../images/line.png') left center repeat-x;
+	}
+
+		.separator-or span {
+			padding: 0 7px;
+			background: #F3F3F3;
+		}
+
+
+	/*-------------------------------------------
+		1.19 - ST Gallery
+	-------------------------------------------*/
+
+	.st-gallery {
+		position: relative;
+		display: block;
+		margin: 0 0 2em;
+	}
+
+		.st-gallery div {
+			position: relative;
+			overflow: hidden;
+			cursor: pointer;
+		}
+
+			.st-gallery div img {
+				margin: 0;
+			}
+
+		.st-gallery-pending {
+			position: absolute;
+			visibility: hidden;
+		}
+
+		.st-gallery-current {
+			display: block;
+			position: relative;
+			visibility: visible;
+		}
+
+		.st-gallery-flushed {
+			position: absolute;
+			top: 0;
+			z-index: 2;
+		}
+
+		.st-gallery ol {
+			list-style-type: none;
+			line-height: 0;
+			text-align: center;
+			margin: 0;
+			padding: 0;
+		}
+
+			.st-gallery ol li {
+				display: inline-block;
+				width: 5%;
+				height: 3px;
+				margin: 10px 3px 0 2px;
+				background: url('../../assets/images/bg-black-25.png');
+				border-radius: 10px;
+				cursor: pointer;
+			}
+
+				.st-gallery ol li.st-gallery-tab-current {
+					background: #31ac97;
+				}
+

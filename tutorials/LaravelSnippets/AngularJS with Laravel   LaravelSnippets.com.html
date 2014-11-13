@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)http://laravelsnippets.com/snippets/angularjs-with-laravel -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="shortcut icon" href="http://laravelsnippets.com/favicon.ico" type="image/x-icon">
+		<link rel="apple-touch-icon" href="http://laravelsnippets.com/apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="57x57" href="http://laravelsnippets.com/apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="http://laravelsnippets.com/apple-touch-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="http://laravelsnippets.com/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="http://laravelsnippets.com/apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="http://laravelsnippets.com/apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="http://laravelsnippets.com/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="http://laravelsnippets.com/apple-touch-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="http://laravelsnippets.com/apple-touch-icon-152x152.png">
+
+			<title>AngularJS with Laravel | LaravelSnippets.com</title>
+
+				<meta name="description" content="I have used AngularJS with laravel where All HTML and data modelling is done using AngularJS and Used REST APIs to get/put data using laravel.">
+	
+				<meta name="author" content="Manoj Saini">
+	
+		<!-- Google Web Fonts -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700">
+
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+		<!-- FontAwesome core CSS -->
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+
+		<!-- Code mirror css -->
+		<link rel="stylesheet" href="http://laravelsnippets.com/packages/codemirror-3.19/lib/codemirror.css">
+		<link rel="stylesheet" href="http://laravelsnippets.com/packages/codemirror-3.19/theme/monokai.css">
+
+		<!-- Google code prettify css -->
+		<link rel="stylesheet" href="http://laravelsnippets.com/packages/google-code-prettify/prettify.css">
+
+		<!-- Chosen.js css -->
+		<link rel="stylesheet" href="http://laravelsnippets.com/packages/chosen_v1.0.0/chosen.min.css">
+
+		<!-- Custom styles for this template -->
+		<link href="http://laravelsnippets.com/assets/css/styles.css" rel="stylesheet">
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+
+		
+			<!-- Google analytics script -->
+			<script async="" src="./AngularJS with Laravel   LaravelSnippets.com_files/analytics.js"></script><script>
+				(function (i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function () {
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+				ga('create', 'UA-45609720-1', 'laravelsnippets.com');
+				ga('send', 'pageview');
+			</script>
+
+		
+	<script type="text/javascript" async="" src="./AngularJS with Laravel   LaravelSnippets.com_files/embed.js"></script><script type="text/javascript" src="./AngularJS with Laravel   LaravelSnippets.com_files/getAllAppDefault.esi"></script><script type="text/javascript" src="./AngularJS with Laravel   LaravelSnippets.com_files/checkOAuth.esi"></script><link rel="stylesheet" type="text/css" href="./AngularJS with Laravel   LaravelSnippets.com_files/buttons.f72ae7c4435271cf3af83d1f10fbbbb0.css"><script type="text/javascript" src="./AngularJS with Laravel   LaravelSnippets.com_files/getCount2.php"></script></head>
+
+	<body id="snippets-angularjs-with-laravel" class="single-snippet" onclick="if(stWidget.buttonClicked==false){stWidget.stopClosing=false;stWidget.openDuration=0;stWidget.stClose(100);}">
+
+		<div class="navbar navbar-default" role="navigation">
+	<div class="container">
+
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="http://laravelsnippets.com/"><img src="./AngularJS with Laravel   LaravelSnippets.com_files/ls_brand_logo.png" height="40" alt="Laravel Snippets"></a>
+		</div>
+
+		<div class="collapse navbar-collapse">
+
+			<ul class="nav navbar-nav navbar-right">
+
+				<li class="dropdown">
+					<a href="http://laravelsnippets.com/snippets/angularjs-with-laravel#" class="dropdown-toggle" data-toggle="dropdown">SNIPPETS <b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="http://laravelsnippets.com/snippets">View all</a></li>
+						<li><a href="http://laravelsnippets.com/members/submit/snippet">Submit</a></li>
+					</ul>
+				</li>
+
+				
+				<li><a href="http://laravelsnippets.com/profiles">MEMBERS</a></li>
+
+				
+									<li>
+						<a href="http://laravelsnippets.com/login">SIGN IN</a>
+					</li>
+				
+				<li><a href="http://laravelsnippets.com/members/submit/snippet" class="btn">SUBMIT</a></li>
+
+			</ul>
+
+		</div>
+
+	</div>
+</div>
+
+	<div class="search-band narrow">
+	<div class="container">
+		<div class="row">
+
+			<!-- COMING SOON: SEARCH FORM HERE -->
+
+		</div>
+	</div>
+</div>	<div class="clearfix"><div class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#"><div class="container"><span typeof="v:Breadcrumb"><a href="http://laravelsnippets.com/snippets" rel="v:url" property="v:title">Snippets</a></span><i class="fa fa-chevron-right"></i></div></div></div>
+		<div class="container">
+			<div id="content">
+
+				
+				
+	<div class="row">
+
+		<div class="col-md-9">
+
+			<div class="row">
+				<div class="col-md-8">
+					<h1>AngularJS with Laravel</h1>
+				</div>
+				<div class="col-md-4">
+					<div class="snippet-stats">
+						<div class="snippet-stats-views"><i class="fa fa-eye"></i> 14047 views</div>
+						<div class="snippet-stats-stars btn-group snippet-starred ">
+															<a href="http://laravelsnippets.com/snippets/angularjs-with-laravel/star" class="btn btn-default"><i class="fa fa-star"></i> Star</a>
+														<div class="btn btn-default snippet-stats-stars-count">6</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<hr>
+
+							<div class="snippet-description">
+					<h2 class="h5"><strong>Description:</strong></h2>
+					<p></p><p>I have used AngularJS with laravel where All HTML and data modelling is done using AngularJS and Used REST APIs to get/put data using laravel.</p><p></p>
+				</div>
+			
+			
+			
+			<pre><code class="prettyprint linenums js-prettyprint prettyprinted"><ol class="linenums"><li class="L0"><span class="com">//   app/route.php</span></li><li class="L1"><span class="typ">Blade</span><span class="pun">::</span><span class="pln">setContentTags</span><span class="pun">(</span><span class="str">'&lt;%'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'%&gt;'</span><span class="pun">);</span><span class="pln"> 		</span><span class="com">// for variables and all things Blade</span></li><li class="L2"><span class="typ">Blade</span><span class="pun">::</span><span class="pln">setEscapedContentTags</span><span class="pun">(</span><span class="str">'&lt;%%'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'%%&gt;'</span><span class="pun">);</span><span class="pln"> 	</span><span class="com">// for escaped data</span></li><li class="L3"><span class="pln">&nbsp;</span></li><li class="L4"><span class="typ">Route</span><span class="pun">::</span><span class="kwd">get</span><span class="pun">(</span><span class="str">'/'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">()</span></li><li class="L5"><span class="pun">{</span></li><li class="L6"><span class="pln">	</span><span class="kwd">return</span><span class="pln"> </span><span class="typ">View</span><span class="pun">::</span><span class="pln">make</span><span class="pun">(</span><span class="str">'index'</span><span class="pun">);</span></li><li class="L7"><span class="pun">});</span></li><li class="L8"><span class="pln">&nbsp;</span></li><li class="L9"><span class="typ">Route</span><span class="pun">::</span><span class="kwd">group</span><span class="pun">(</span><span class="pln">array</span><span class="pun">(</span><span class="str">'prefix'</span><span class="pun">=&gt;</span><span class="str">'api/v1'</span><span class="pun">),</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span></li><li class="L0"><span class="pln">	</span><span class="typ">Route</span><span class="pun">::</span><span class="pln">resource</span><span class="pun">(</span><span class="str">'users'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'UsersController'</span><span class="pun">);</span></li><li class="L1"><span class="pun">});</span></li><li class="L2"><span class="pln">&nbsp;</span></li><li class="L3"><span class="pln">&nbsp;</span></li><li class="L4"><span class="com">//   app/views/index.blade.php</span></li><li class="L5"><span class="pln">&nbsp;</span></li><li class="L6"><span class="pun">&lt;!</span><span class="pln">DOCTYPE html PUBLIC </span><span class="str">"-//W3C//DTD XHTML 1.0 Transitional//EN"</span><span class="pln"> </span><span class="str">"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"</span><span class="pun">&gt;</span></li><li class="L7"><span class="pun">&lt;</span><span class="pln">html xmlns</span><span class="pun">=</span><span class="str">"http://www.w3.org/1999/xhtml"</span><span class="pln">  ng</span><span class="pun">-</span><span class="pln">app</span><span class="pun">=</span><span class="str">"myApp"</span><span class="pun">&gt;</span></li><li class="L8"><span class="pln">	</span><span class="str">&lt;head&gt;</span></li><li class="L9"><span class="pln">		</span><span class="pun">&lt;</span><span class="pln">meta http</span><span class="pun">-</span><span class="pln">equiv</span><span class="pun">=</span><span class="str">"Content-Type"</span><span class="pln"> content</span><span class="pun">=</span><span class="str">"text/html; charset=utf-8"</span><span class="pln"> </span><span class="pun">/&gt;</span></li><li class="L0"><span class="pln">		</span><span class="str">&lt;title&gt;</span><span class="typ">Laravel</span><span class="pun">-</span><span class="pln">angularJS</span><span class="pun">&lt;/</span><span class="pln">title</span><span class="pun">&gt;</span></li><li class="L1"><span class="pln">		</span><span class="pun">&lt;!--</span><span class="pln"> </span><span class="pun">&lt;</span><span class="pln">script type</span><span class="pun">=</span><span class="str">"text/javascript"</span><span class="pln"> src</span><span class="pun">=</span><span class="str">"https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"</span><span class="pun">&gt;&lt;/</span><span class="pln">script</span><span class="pun">&gt;</span><span class="pln"> </span><span class="pun">--&gt;</span></li><li class="L2"><span class="pln">		</span><span class="pun">&lt;</span><span class="pln">script type</span><span class="pun">=</span><span class="str">"text/javascript"</span><span class="pln"> src</span><span class="pun">=</span><span class="str">"app/js/jquery.min.js"</span><span class="pun">&gt;&lt;/</span><span class="pln">script</span><span class="pun">&gt;</span></li><li class="L3"><span class="pln">		</span><span class="pun">&lt;</span><span class="pln">script src</span><span class="pun">=</span><span class="str">"app/js/jquery-ui.js"</span><span class="pln"> type</span><span class="pun">=</span><span class="str">"text/javascript"</span><span class="pun">&gt;&lt;/</span><span class="pln">script</span><span class="pun">&gt;</span></li><li class="L4"><span class="pln">&nbsp;</span></li><li class="L5"><span class="pln">&nbsp;</span></li><li class="L6"><span class="pln">	</span><span class="pun">&lt;/</span><span class="pln">head</span><span class="pun">&gt;</span></li><li class="L7"><span class="pln">&nbsp;</span></li><li class="L8"><span class="pln">	</span><span class="str">&lt;body&gt;</span></li><li class="L9"><span class="pln">&nbsp;</span></li><li class="L0"><span class="pln">		</span><span class="pun">&lt;</span><span class="pln">div </span><span class="kwd">class</span><span class="pun">=</span><span class="str">"main-container"</span><span class="pln"> ng</span><span class="pun">-</span><span class="pln">view</span><span class="pun">&gt;&lt;/</span><span class="pln">div</span><span class="pun">&gt;</span></li><li class="L1"><span class="pln">&nbsp;</span></li><li class="L2"><span class="pln">&nbsp;</span></li><li class="L3"><span class="pln">&nbsp;</span></li><li class="L4"><span class="pln">		</span><span class="pun">&lt;</span><span class="pln">script src</span><span class="pun">=</span><span class="str">"app/lib/angular/angular.js"</span><span class="pun">&gt;&lt;/</span><span class="pln">script</span><span class="pun">&gt;</span></li><li class="L5"><span class="pln">		</span><span class="pun">&lt;</span><span class="pln">script src</span><span class="pun">=</span><span class="str">"app/lib/angular/angular-resource.min.js"</span><span class="pun">&gt;&lt;/</span><span class="pln">script</span><span class="pun">&gt;</span></li><li class="L6"><span class="pln">		</span><span class="pun">&lt;</span><span class="pln">script src</span><span class="pun">=</span><span class="str">"app/js/app.js"</span><span class="pun">&gt;&lt;/</span><span class="pln">script</span><span class="pun">&gt;</span></li><li class="L7"><span class="pln">		</span><span class="pun">&lt;</span><span class="pln">script src</span><span class="pun">=</span><span class="str">"app/js/services.js"</span><span class="pun">&gt;&lt;/</span><span class="pln">script</span><span class="pun">&gt;</span></li><li class="L8"><span class="pln">		</span><span class="pun">&lt;</span><span class="pln">script src</span><span class="pun">=</span><span class="str">"app/js/controllers.js"</span><span class="pun">&gt;&lt;/</span><span class="pln">script</span><span class="pun">&gt;</span></li><li class="L9"><span class="pln">		</span><span class="pun">&lt;</span><span class="pln">script src</span><span class="pun">=</span><span class="str">"app/js/filters.js"</span><span class="pun">&gt;&lt;/</span><span class="pln">script</span><span class="pun">&gt;</span></li><li class="L0"><span class="pln">		</span><span class="pun">&lt;</span><span class="pln">script src</span><span class="pun">=</span><span class="str">"app/js/directives.js"</span><span class="pun">&gt;&lt;/</span><span class="pln">script</span><span class="pun">&gt;</span></li><li class="L1"><span class="pln">		</span><span class="pun">&lt;</span><span class="pln">script src</span><span class="pun">=</span><span class="str">"app/js/date.js"</span><span class="pun">&gt;&lt;/</span><span class="pln">script</span><span class="pun">&gt;</span></li><li class="L2"><span class="pln">		</span><span class="pun">&lt;</span><span class="pln">script src</span><span class="pun">=</span><span class="str">"app/lib/angular/ui_bootstrap.js"</span><span class="pun">&gt;&lt;/</span><span class="pln">script</span><span class="pun">&gt;</span></li><li class="L3"><span class="pln">		</span><span class="pun">&lt;</span><span class="pln">script src</span><span class="pun">=</span><span class="str">"app/lib/angular/ui-bootstrap-tpls-0.9.0.min.js"</span><span class="pun">&gt;&lt;/</span><span class="pln">script</span><span class="pun">&gt;</span></li><li class="L4"><span class="pln">		</span><span class="pun">&lt;</span><span class="pln">script src</span><span class="pun">=</span><span class="str">"app/js/underscore.js"</span><span class="pun">&gt;&lt;/</span><span class="pln">script</span><span class="pun">&gt;</span></li><li class="L5"><span class="pln">		</span><span class="str">&lt;script&gt;</span></li><li class="L6"><span class="pln">			angular</span><span class="pun">.</span><span class="kwd">module</span><span class="pun">(</span><span class="str">"myApp"</span><span class="pun">).</span><span class="pln">constant</span><span class="pun">(</span><span class="str">"CSRF_TOKEN"</span><span class="pun">,</span><span class="pln"> </span><span class="str">'&lt;?php echo csrf_token(); ?&gt;'</span><span class="pun">);</span></li><li class="L7"><span class="pln">		</span><span class="pun">&lt;/</span><span class="pln">script</span><span class="pun">&gt;</span></li><li class="L8"><span class="pln">	</span><span class="pun">&lt;/</span><span class="pln">body</span><span class="pun">&gt;</span></li><li class="L9"><span class="pun">&lt;/</span><span class="pln">html</span><span class="pun">&gt;</span></li><li class="L0"><span class="pln">&nbsp;</span></li><li class="L1"><span class="com">// public/app/js/app.js</span></li><li class="L2"><span class="pln">			</span></li><li class="L3"><span class="str">'use strict'</span><span class="pun">;</span></li><li class="L4"><span class="pln">&nbsp;</span></li><li class="L5"><span class="kwd">var</span><span class="pln"> app </span><span class="pun">=</span><span class="pln"> angular</span><span class="pun">.</span><span class="kwd">module</span><span class="pun">(</span><span class="str">'myApp'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[</span><span class="str">'ngResource'</span><span class="pun">,</span><span class="str">'myApp.filters'</span><span class="pun">,</span><span class="str">'myApp.services'</span><span class="pun">,</span><span class="str">'myApp.directives'</span><span class="pun">,</span><span class="str">'myApp.controllers'</span><span class="pun">]);</span></li><li class="L6"><span class="pln">&nbsp;</span></li><li class="L7"><span class="pln">app</span><span class="pun">.</span><span class="pln">config</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">$routeProvider</span><span class="pun">){</span></li><li class="L8"><span class="pln">	$routeProvider</span><span class="pun">.</span><span class="kwd">when</span><span class="pun">(</span><span class="str">'/'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span></li><li class="L9"><span class="pln">		templateUrl</span><span class="pun">:</span><span class="pln"> </span><span class="str">'app/partials/users/index.html'</span><span class="pun">,</span></li><li class="L0"><span class="pln">		controller</span><span class="pun">:</span><span class="pln"> </span><span class="str">'UserListCtrl'</span></li><li class="L1"><span class="pln">	</span><span class="pun">});</span></li><li class="L2"><span class="pln">	$routeProvider</span><span class="pun">.</span><span class="pln">otherwise</span><span class="pun">({</span><span class="pln">templateUrl</span><span class="pun">:</span><span class="str">'app/partials/404.html'</span><span class="pun">});</span></li><li class="L3"><span class="pun">})</span></li><li class="L4"><span class="pln">	</span></li><li class="L5"><span class="com">// public/app/js/controllers.js</span></li><li class="L6"><span class="pln">&nbsp;</span></li><li class="L7"><span class="str">'use strict'</span><span class="pun">;</span></li><li class="L8"><span class="pln">&nbsp;</span></li><li class="L9"><span class="com">/* Controllers */</span></li><li class="L0"><span class="pln">&nbsp;</span></li><li class="L1"><span class="kwd">var</span><span class="pln"> app </span><span class="pun">=</span><span class="pln"> angular</span><span class="pun">.</span><span class="kwd">module</span><span class="pun">(</span><span class="str">'myApp.controllers'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[</span><span class="str">'ui.date'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'ui.bootstrap'</span><span class="pun">]);</span></li><li class="L2"><span class="pln">&nbsp;</span></li><li class="L3"><span class="pln">&nbsp;</span></li><li class="L4"><span class="pln">app</span><span class="pun">.</span><span class="pln">controller</span><span class="pun">(</span><span class="str">'UserListCtrl'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[</span><span class="str">'$scope'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'UsersFactory'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'$location'</span><span class="pun">,</span></li><li class="L5"><span class="pln">    </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">$scope</span><span class="pun">,</span><span class="pln"> </span><span class="typ">UsersFactory</span><span class="pun">,</span><span class="pln"> $location</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">  </span></li><li class="L6"><span class="pln">        $scope</span><span class="pun">.</span><span class="pln">users </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">;</span></li><li class="L7"><span class="pln">        </span><span class="typ">UsersFactory</span><span class="pun">.</span><span class="pln">query</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">res</span><span class="pun">){</span></li><li class="L8"><span class="pln">            $scope</span><span class="pun">.</span><span class="pln">users </span><span class="pun">=</span><span class="pln"> res</span><span class="pun">;</span></li><li class="L9"><span class="pln">        </span><span class="pun">});</span></li><li class="L0"><span class="pln">        </span><span class="com">//console.log($scope.users);        </span></li><li class="L1"><span class="pln">    </span><span class="pun">}]);</span></li><li class="L2"><span class="pln">&nbsp;</span></li><li class="L3"><span class="com">// public/app/js/services.js</span></li><li class="L4"><span class="pln">&nbsp;</span></li><li class="L5"><span class="str">'use strict'</span><span class="pun">;</span></li><li class="L6"><span class="pln">&nbsp;</span></li><li class="L7"><span class="com">/* Services */</span></li><li class="L8"><span class="kwd">var</span><span class="pln"> app </span><span class="pun">=</span><span class="pln"> angular</span><span class="pun">.</span><span class="kwd">module</span><span class="pun">(</span><span class="str">'myApp.services'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[]);</span></li><li class="L9"><span class="pln">app</span><span class="pun">.</span><span class="pln">factory</span><span class="pun">(</span><span class="str">'UsersFactory'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">(</span><span class="pln">$resource</span><span class="pun">,</span><span class="pln"> CSRF_TOKEN</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span></li><li class="L0"><span class="pln">    </span><span class="kwd">return</span><span class="pln"> $resource</span><span class="pun">(</span><span class="str">'/api/v1/users'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="str">'csrf_token'</span><span class="pln"> </span><span class="pun">:</span><span class="pln">CSRF_TOKEN </span><span class="pun">},</span><span class="pln"> </span><span class="pun">{</span></li><li class="L1"><span class="pln">         </span><span class="com">//query: { method: 'GET', isArray: true },</span></li><li class="L2"><span class="pln">         </span><span class="com">//create: { method: 'POST' }</span></li><li class="L3"><span class="pln">    </span><span class="pun">})</span></li><li class="L4"><span class="pun">});</span></li><li class="L5"><span class="pln">&nbsp;</span></li><li class="L6"><span class="pln">&nbsp;</span></li><li class="L7"><span class="com">// app/controllers/UsersControllers.php</span></li><li class="L8"><span class="kwd">class</span><span class="pln"> </span><span class="typ">UsersController</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">BaseController</span><span class="pln"> </span><span class="pun">{</span></li><li class="L9"><span class="pln">&nbsp;</span></li><li class="L0"><span class="pln">    </span><span class="com">/**</span></li><li class="L1"><span class="com">     * User Repository</span></li><li class="L2"><span class="com">     *</span></li><li class="L3"><span class="com">     * @var User</span></li><li class="L4"><span class="com">     */</span></li><li class="L5"><span class="pln">    </span><span class="kwd">protected</span><span class="pln"> $user</span><span class="pun">;</span></li><li class="L6"><span class="pln">&nbsp;</span></li><li class="L7"><span class="pln">    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> __construct</span><span class="pun">(</span><span class="typ">User</span><span class="pln"> $user</span><span class="pun">)</span></li><li class="L8"><span class="pln">    </span><span class="pun">{</span></li><li class="L9"><span class="pln">        $this</span><span class="pun">-&gt;</span><span class="pln">user </span><span class="pun">=</span><span class="pln"> $user</span><span class="pun">;</span></li><li class="L0"><span class="pln">    </span><span class="pun">}</span></li><li class="L1"><span class="pln">&nbsp;</span></li><li class="L2"><span class="pln">    </span><span class="com">/**</span></li><li class="L3"><span class="com">     * Display a listing of the resource.</span></li><li class="L4"><span class="com">     *</span></li><li class="L5"><span class="com">     * @return Response</span></li><li class="L6"><span class="com">     */</span></li><li class="L7"><span class="pln">    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> index</span><span class="pun">()</span></li><li class="L8"><span class="pln">    </span><span class="pun">{</span></li><li class="L9"><span class="pln">        $users </span><span class="pun">=</span><span class="pln"> DB</span><span class="pun">::</span><span class="pln">table</span><span class="pun">(</span><span class="str">'users'</span><span class="pun">)-&gt;</span><span class="kwd">get</span><span class="pun">();</span></li><li class="L0"><span class="pln">        </span><span class="kwd">return</span><span class="pln"> </span><span class="typ">Response</span><span class="pun">::</span><span class="pln">json</span><span class="pun">(</span><span class="pln">$users</span><span class="pun">,</span><span class="pln"> </span><span class="lit">200</span><span class="pun">);</span></li><li class="L1"><span class="pln">       </span></li><li class="L2"><span class="pln">    </span><span class="pun">}</span></li><li class="L3"><span class="pln">&nbsp;</span></li><li class="L4"><span class="pln">&nbsp;</span></li><li class="L5"><span class="pun">}</span></li><li class="L6"><span class="pln">&nbsp;</span></li><li class="L7"><span class="pln">&nbsp;</span></li><li class="L8"><span class="com">// public/app/partials/users/index.html</span></li><li class="L9"><span class="pln">&nbsp;</span></li><li class="L0"><span class="pun">&lt;</span><span class="pln">div </span><span class="kwd">class</span><span class="pun">=</span><span class="str">"contentWrapper"</span><span class="pun">&gt;</span></li><li class="L1"><span class="pln">	</span><span class="pun">&lt;</span><span class="pln">div </span><span class="kwd">class</span><span class="pun">=</span><span class="str">"contentInnerWrapper"</span><span class="pun">&gt;</span></li><li class="L2"><span class="pln">		</span><span class="str">&lt;table&gt;</span></li><li class="L3"><span class="pln">			</span><span class="str">&lt;tr&gt;</span></li><li class="L4"><span class="pln">				</span><span class="str">&lt;th&gt;</span><span class="pun">&lt;</span><span class="pln">div </span><span class="kwd">class</span><span class="pun">=</span><span class="str">"gap"</span><span class="pun">&gt;</span><span class="typ">Email</span><span class="pun">&lt;</span><span class="str">/div&gt;&lt;/</span><span class="pln">th</span><span class="pun">&gt;</span></li><li class="L5"><span class="pln">				</span><span class="str">&lt;th&gt;</span><span class="typ">First</span><span class="pln"> </span><span class="typ">Name</span><span class="pun">&lt;/</span><span class="pln">th</span><span class="pun">&gt;</span></li><li class="L6"><span class="pln">				</span><span class="str">&lt;th&gt;</span><span class="kwd">last</span><span class="pln"> name</span><span class="pun">&lt;/</span><span class="pln">th</span><span class="pun">&gt;</span></li><li class="L7"><span class="pln">				</span><span class="str">&lt;th&gt;</span><span class="typ">Status</span><span class="pun">&lt;/</span><span class="pln">th</span><span class="pun">&gt;</span></li><li class="L8"><span class="pln">				</span><span class="str">&lt;th&gt;</span><span class="typ">Created</span><span class="pun">&lt;/</span><span class="pln">th</span><span class="pun">&gt;</span></li><li class="L9"><span class="pln">			</span><span class="pun">&lt;/</span><span class="pln">tr</span><span class="pun">&gt;</span></li><li class="L0"><span class="pln">			</span><span class="pun">&lt;</span><span class="pln">tr ng</span><span class="pun">-</span><span class="pln">repeat</span><span class="pun">=</span><span class="str">"data in users"</span><span class="pun">&gt;</span></li><li class="L1"><span class="pln">				</span><span class="str">&lt;td&gt;</span></li><li class="L2"><span class="pln">					</span><span class="pun">&lt;</span><span class="pln">div </span><span class="kwd">class</span><span class="pun">=</span><span class="str">"subTitle"</span><span class="pun">&gt;{{</span><span class="pln">data</span><span class="pun">.</span><span class="pln">email</span><span class="pun">}}&lt;/</span><span class="pln">div</span><span class="pun">&gt;</span></li><li class="L3"><span class="pln">				</span><span class="pun">&lt;/</span><span class="pln">td</span><span class="pun">&gt;</span></li><li class="L4"><span class="pln">				</span><span class="str">&lt;td&gt;</span><span class="pun">{{</span><span class="pln">data</span><span class="pun">.</span><span class="pln">first_name</span><span class="pun">}}&lt;/</span><span class="pln">td</span><span class="pun">&gt;</span></li><li class="L5"><span class="pln">				</span><span class="str">&lt;td&gt;</span><span class="pun">{{</span><span class="pln">data</span><span class="pun">.</span><span class="pln">last_name</span><span class="pun">}}&lt;/</span><span class="pln">td</span><span class="pun">&gt;</span></li><li class="L6"><span class="pln">				</span><span class="pun">&lt;</span><span class="pln">td ng</span><span class="pun">-</span><span class="pln">show</span><span class="pun">=</span><span class="str">"data.activated"</span><span class="pun">&gt;</span><span class="typ">Activate</span><span class="pun">&lt;</span><span class="str">/li&gt;&lt;li ng-hide="data.activated"&gt;De-activate&lt;/</span><span class="pln">li</span><span class="pun">&gt;</span></li><li class="L7"><span class="pln">				</span><span class="str">&lt;td&gt;</span><span class="pun">{{</span><span class="pln">data</span><span class="pun">.</span><span class="pln">created_at</span><span class="pun">}}&lt;/</span><span class="pln">li</span><span class="pun">&gt;</span></li><li class="L8"><span class="pln">			</span><span class="pun">&lt;/</span><span class="pln">tr</span><span class="pun">&gt;</span></li><li class="L9"><span class="pln">		</span><span class="pun">&lt;/</span><span class="pln">table</span><span class="pun">&gt;</span></li><li class="L0"><span class="pln">	</span><span class="pun">&lt;/</span><span class="pln">div</span><span class="pun">&gt;</span></li><li class="L1"><span class="pun">&lt;/</span><span class="pln">div</span><span class="pun">&gt;</span></li><li class="L2"><span class="pln">&nbsp;</span></li></ol></code></pre>
+
+			<div class="snippet-share-links" <span="" displaytext="Facebook">
+				<span class="st_twitter_hcount" displaytext="Tweet" st_via="LaravelSnippets #Laravel #snippet" st_processed="yes"><span style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;" class="stButton"><span><span class="stMainServices st-twitter-counter" style="background-image: url(http://w.sharethis.com/images/twitter_counter.png);">&nbsp;</span><span class="stArrow"><span class="stButton_gradient stHBubble" style="display: inline-block;"><span class="stBubble_hcount">307</span></span></span></span></span></span>
+				<span class="st_linkedin_hcount" displaytext="LinkedIn" st_processed="yes"><span style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;" class="stButton"><span><span class="stMainServices st-linkedin-counter" style="background-image: url(http://w.sharethis.com/images/linkedin_counter.png);">&nbsp;</span><span class="stArrow"><span class="stButton_gradient stHBubble" style="display: inline-block;"><span class="stBubble_hcount">1</span></span></span></span></span></span>
+				<span class="st_googleplus_hcount" displaytext="Google +" st_processed="yes"><span style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;" class="stButton"><span><span class="stButton_gradient"><span class="chicklets googleplus">Google +</span></span><span class="stArrow"><span class="stButton_gradient stHBubble" style="display: inline-block;"><span class="stBubble_hcount">5</span></span></span></span></span></span>
+				<span class="st_tumblr_hcount" displaytext="Tumblr" st_processed="yes"><span style="text-decoration:none;color:#000000;display:inline-block;cursor:pointer;" class="stButton"><span><span class="stButton_gradient"><span class="chicklets tumblr">Tumblr</span></span><span class="stArrow"><span class="stButton_gradient stHBubble" style="display: inline-block;"><span class="stBubble_hcount">0</span></span></span></span></span></span>
+			</div>
+
+			<div class="snippet-meta">
+
+				
+					<ul class="snippet-categories list-inline">
+						<li>Categories:</li>
+													<li><a href="http://laravelsnippets.com/tags/version-4.x">Version 4.x</a></li>
+											</ul>
+
+				
+				<p>Submitted 9 months ago.<br>Updated 12 minutes ago.</p>
+
+			</div>
+
+			
+				<div class="disqus">
+					<div id="disqus_thread"><iframe id="dsq-207" data-disqus-uid="207" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./AngularJS with Laravel   LaravelSnippets.com_files/saved_resource.html" style="width: 100% !important; border: none !important; overflow: hidden !important; height: 75px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe></div>
+					<noscript>Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;</noscript>
+					
+				</div>
+
+			
+		</div>
+
+		<div id="sidebar" class="col-md-3">
+
+	<div class="sidebar-widget widget-author">
+
+	<h4><a href="http://laravelsnippets.com/profiles/manoj-saini">Manoj Saini</a></h4>
+	<img src="./AngularJS with Laravel   LaravelSnippets.com_files/6976eaee89f0c8ad4cdabec5a6cb35a6" height="80" width="80" class="widget-author-avatar">
+	
+	<hr>
+
+	<ul class="widget-author-stats">
+		<li>Snippets<a href="http://laravelsnippets.com/profiles/manoj-saini/snippets">1</a></li>
+		<li>Stars<span>-</span></li>
+		<li>Views<span>-</span></li>
+	</ul>
+
+	<hr>
+
+	<ul class="widget-social-icons">
+
+		<li><a href="http://laravelsnippets.com/profiles/manoj-saini"><i class="fa fa-user"></i></a></li>
+
+		
+		
+		
+			</ul>
+
+</div>	<div class="sidebar-widget widget-categories">
+		<h4>Categories</h4>
+		<ul>
+							<li class="category"><a href="http://laravelsnippets.com/tags/authentication">Authentication</a></li>
+							<li class="category"><a href="http://laravelsnippets.com/tags/eloquent">Eloquent</a></li>
+							<li class="category"><a href="http://laravelsnippets.com/tags/version-3.x">Version 3.x</a></li>
+							<li class="category"><a href="http://laravelsnippets.com/tags/version-4.x">Version 4.x</a></li>
+							<li class="category"><a href="http://laravelsnippets.com/tags/database">Database</a></li>
+							<li class="category"><a href="http://laravelsnippets.com/tags/macros">Macros</a></li>
+							<li class="category"><a href="http://laravelsnippets.com/tags/blade">Blade</a></li>
+							<li class="category"><a href="http://laravelsnippets.com/tags/requests">Requests</a></li>
+							<li class="category"><a href="http://laravelsnippets.com/tags/forms">Forms</a></li>
+							<li class="category"><a href="http://laravelsnippets.com/tags/filters">Filters</a></li>
+							<li class="category"><a href="http://laravelsnippets.com/tags/caching">Caching</a></li>
+							<li class="category"><a href="http://laravelsnippets.com/tags/mail">Mail</a></li>
+							<li class="category"><a href="http://laravelsnippets.com/tags/helpers">Helpers</a></li>
+							<li class="category"><a href="http://laravelsnippets.com/tags/testing">Testing</a></li>
+							<li class="category"><a href="http://laravelsnippets.com/tags/git">Git</a></li>
+							<li class="category"><a href="http://laravelsnippets.com/tags/routes">Routes</a></li>
+							<li class="category"><a href="http://laravelsnippets.com/tags/slug">Slug</a></li>
+							<li class="category"><a href="http://laravelsnippets.com/tags/menu">Menu</a></li>
+							<li class="category"><a href="http://laravelsnippets.com/tags/redis">Redis</a></li>
+							<li class="category"><a href="http://laravelsnippets.com/tags/version-4.1">Version 4.1</a></li>
+					</ul>
+	</div>
+
+	<div class="sidebar-widget widget-contributors">
+		<h4>Top 5 Snippet Contributors</h4>
+		<ul>
+							<li class="contributor">
+					<a href="http://laravelsnippets.com/profiles/john-kevin-basco">John Kevin Basco</a>
+					<a href="http://laravelsnippets.com/profiles/john-kevin-basco/snippets" class="snippet-count">12</a>
+				</li>
+							<li class="contributor">
+					<a href="http://laravelsnippets.com/profiles/christopher-pitt">Christopher Pitt</a>
+					<a href="http://laravelsnippets.com/profiles/christopher-pitt/snippets" class="snippet-count">10</a>
+				</li>
+							<li class="contributor">
+					<a href="http://laravelsnippets.com/profiles/david-knight">David Knight</a>
+					<a href="http://laravelsnippets.com/profiles/david-knight/snippets" class="snippet-count">6</a>
+				</li>
+							<li class="contributor">
+					<a href="http://laravelsnippets.com/profiles/sean-mumford">Sean Mumford</a>
+					<a href="http://laravelsnippets.com/profiles/sean-mumford/snippets" class="snippet-count">6</a>
+				</li>
+							<li class="contributor">
+					<a href="http://laravelsnippets.com/profiles/lee-stables">Lee Stables</a>
+					<a href="http://laravelsnippets.com/profiles/lee-stables/snippets" class="snippet-count">5</a>
+				</li>
+					</ul>
+	</div>
+
+	<div class="sidebar-widget widget-social">
+	<h4>Get Involved</h4>
+	<p><a href="http://laravelsnippets.com/">Laravel Snippets</a> is an <strong>open source</strong>, <strong>community driven project</strong> that aims to provide a resource for learning and a repository of useful snippets to speed up development.</p>
+	<p>Getting involved is easy, you can either contribute towards the site's code by forking the <a href="http://github.com/basco-johnkevin/laravelsnippets">github repo</a> or <a href="http://laravelsnippets.com/members/submit/snippet">submit your own useful code snippets</a>.</p>
+	<p>Follow us for new snippets, other useful resources that we find from time to time and of course to chat - see you there!</p>
+	<ul class="widget-social-icons">
+		<li><a href="https://twitter.com/laravelsnippets" target="_blank" class="twitter" title="@laravelsnippets on Twitter"><i class="fa fa-twitter"></i></a></li>
+		<li><a href="https://www.facebook.com/LaravelSnippets" target="_blank" class="facebook" title="laravelsnippets on Facebook"><i class="fa fa-facebook"></i></a></li>
+	</ul>
+</div>
+</div>
+	</div>
+
+
+			</div>
+		</div>
+
+		<div class="contribute-band">
+	<div class="container">
+		<p>Want to help with the site? We accept pull requests! <a href="http://github.com/basco-johnkevin/laravelsnippets">Find us on Github</a></p>
+	</div>
+</div>
+
+<div class="footer">
+	<div class="container">
+
+		<ul class="footer-links list-inline">
+
+			<li><a href="http://laravelsnippets.com/">SNIPPETS</a></li>
+
+			
+			<li><a href="http://laravelsnippets.com/profiles">MEMBERS</a></li>
+
+			
+							<li>
+					<a href="http://laravelsnippets.com/login">SIGN IN</a>
+				</li>
+			
+			<li><a href="http://laravelsnippets.com/members/submit/snippet">SUBMIT</a></li>
+
+		</ul>
+
+		<p class="digitalocean"><a href="http://www.digitalocean.com/" target="_blank" title="Hosting kindly provided by DigitalOcean"><img src="./AngularJS with Laravel   LaravelSnippets.com_files/digitalocean.png"></a></p>
+
+		<p class="footer-copyright">© <a href="http://laravelsnippets.com/">laravelsnippets.com</a> by <a href="https://twitter.com/johnkevinmbasco" target="_blank">John Kevin M. Basco</a> | <a href="http://mayonvolcanosoftware.com/" target="_blank">Mayon Volcano Software Ltd.</a></p>
+
+	</div>
+</div>
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="./AngularJS with Laravel   LaravelSnippets.com_files/jquery.min.js"></script>
+		<script src="./AngularJS with Laravel   LaravelSnippets.com_files/bootstrap.min.js"></script>
+
+		<!-- Codemirror javascript -->
+		<script src="./AngularJS with Laravel   LaravelSnippets.com_files/codemirror.js"></script>
+		<script src="./AngularJS with Laravel   LaravelSnippets.com_files/clike.js"></script>
+		<script src="./AngularJS with Laravel   LaravelSnippets.com_files/php.js"></script>
+
+		<!-- Google code prettify javascript -->
+		<script src="./AngularJS with Laravel   LaravelSnippets.com_files/prettify.js"></script>
+
+		<!-- Chosen.js javascript -->
+		<script src="./AngularJS with Laravel   LaravelSnippets.com_files/chosen.jquery.min.js"></script>
+
+		<!-- App specific javascript -->
+		<script src="./AngularJS with Laravel   LaravelSnippets.com_files/common.js"></script>
+		<script src="./AngularJS with Laravel   LaravelSnippets.com_files/snippet.js"></script>
+
+		<!--ShareThis Plugin-->
+		<script type="text/javascript" src="./AngularJS with Laravel   LaravelSnippets.com_files/buttons.js"></script>
+		<script type="text/javascript">
+			stLight.options({
+				publisher: "b1eb8f86-ebb5-408b-9cb8-0a08b830b3c7",
+				doNotHash: false,
+				doNotCopy: false,
+				hashAddressBar: false
+			});
+		</script>
+
+		
+	
+		<script type="text/javascript">
+			/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			var disqus_shortname = 'laravel-snippets'; // required: replace example with your forum shortname
+			var disqus_identifier = 'snippet-' + 'angularjs-with-laravel';
+			var disqus_title = 'AngularJS with Laravel';
+
+			/* * * DON'T EDIT BELOW THIS LINE * * */
+			(function () {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+
+	
+
+	
+<div id="stcpDiv" style="position: absolute; top: -1999px; left: -1988px;">ShareThis Copy and Paste</div><iframe id="stSegmentFrame" name="stSegmentFrame" src="./AngularJS with Laravel   LaravelSnippets.com_files/getSegment.html" frameborder="0" scrolling="no" width="0px" height="0px" style="display:none;"></iframe><div id="stwrapper" class="stwrapper" style="display: none;"><div class="stclose"></div><iframe allowtransparency="true" id="stLframe" class="stLframe" name="stLframe" frameborder="0" scrolling="no" width="353px" height="350px" src="./AngularJS with Laravel   LaravelSnippets.com_files/index.c3d69d987b2ad3b77822430dffdfe890.html" style="top: 0px; left: 0px;"></iframe></div></body></html>

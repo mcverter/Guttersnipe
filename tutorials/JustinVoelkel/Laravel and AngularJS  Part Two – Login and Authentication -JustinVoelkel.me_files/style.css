@@ -1,0 +1,25 @@
+/* 
+Theme Name: Recital
+Theme URI: http://strictthemes.com
+Author: StrictThemes
+Author URI: http://strictthemes.com
+Description: Portfolio + Blog
+Version: 1.0.6
+License: GPL2
+License URI: http://strictthemes.com/licensing/
+Tags: light, dark, theme-options, translation-ready, custom-background, custom-colors, two-columns, three-columns, left-sidebar, right-sidebar, flexible-width, featured-images, custom-menu, post-formats, sticky-post
+Text Domain: strictthemes
+*/
+
+@import "assets/css/reset.css";
+@import "assets/css/common.css";
+@import "assets/css/layout.css";
+@import "assets/css/special.css";
+@import "assets/css/menu.css";
+@import "assets/css/forms.css";
+@import "assets/css/sidebars.css";
+@import "assets/css/posts.css";
+@import "assets/css/comments.css";
+@import "assets/css/widgets.css";
+@import "assets/css/icons.css";
+@import "assets/css/pagination.css";

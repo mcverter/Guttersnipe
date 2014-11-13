@@ -1,0 +1,12 @@
+/*
+ * Theme Name: Solarized
+ * Theme URI: http://www.codeheaps.com
+ * Description: A programming blog theme
+ * Version: 1.0
+ * Author: Usman Riaz
+ * Author URI: http://www.codeheaps.com
+ * */
+
+@import url("./assets/css/bootstrap.min.css");
+@import url("./assets/fonts/css/font-awesome.min.css");
+@import url("./assets/css/custom.css");

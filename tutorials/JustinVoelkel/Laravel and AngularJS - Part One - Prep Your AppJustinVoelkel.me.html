@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)http://justinvoelkel.me/laravel-and-angularjs-part-one-prep-your-app/ -->
+<html lang="en-US" prefix="og: http://ogp.me/ns#"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me</title>
+		<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="dcterms.audience" content="Global">
+
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.6.3 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Part one of my multi-part series on combining Laravel and AngularJs. Learn about how to prep your app with Laravel and Angular in part one.">
+<link rel="canonical" href="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me.html">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Laravel and AngularJS - Part One - Prep Your App">
+<meta property="og:description" content="Part one of my multi-part series on combining Laravel and AngularJs. Learn about how to prep your app with Laravel and Angular in part one.">
+<meta property="og:url" content="http://justinvoelkel.me/laravel-and-angularjs-part-one-prep-your-app/">
+<meta property="og:site_name" content="JustinVoelkel.me">
+<meta property="article:tag" content="AngularJS">
+<meta property="article:tag" content="blog app">
+<meta property="article:tag" content="example app">
+<meta property="article:tag" content="Laravel">
+<meta property="article:tag" content="tutorial">
+<meta property="article:section" content="AngularJS">
+<meta property="article:section" content="Javascript">
+<meta property="article:section" content="Laravel">
+<meta property="article:section" content="MySQL">
+<meta property="article:section" content="PHP">
+<meta property="article:published_time" content="2014-05-05T21:25:50+00:00">
+<meta property="article:modified_time" content="2014-07-25T20:42:36+00:00">
+<meta property="og:updated_time" content="2014-07-25T20:42:36+00:00">
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="JustinVoelkel.me » Feed" href="http://justinvoelkel.me/feed/">
+<link rel="alternate" type="application/rss+xml" title="JustinVoelkel.me » Comments Feed" href="http://justinvoelkel.me/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="JustinVoelkel.me » Laravel and AngularJS: Part One – Prep Your App Comments Feed" href="http://justinvoelkel.me/laravel-and-angularjs-part-one-prep-your-app/feed/">
+<link rel="stylesheet" id="st-shortcodes-css-css" href="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/shortcodes.css" type="text/css" media="all">
+<link rel="stylesheet" id="st-projects-css-css" href="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/ctp.css" type="text/css" media="all">
+<link rel="stylesheet" id="st-prettyPhoto-css" href="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/prettyPhoto.css" type="text/css" media="screen">
+<link rel="stylesheet" id="st-style-css" href="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="mediaelement-css" href="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/mediaelementplayer.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="st-responsive-css" href="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/responsive.css" type="text/css" media="all">
+<link rel="stylesheet" id="st-dark-css" href="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/dark.css" type="text/css" media="screen">
+<link rel="stylesheet" id="st-custom-css" href="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/recital_custom.css" type="text/css" media="screen">
+<script async="" src="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/saved_resource"></script><script type="text/javascript" async="" src="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/ga.js"></script><script type="text/javascript" src="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/jquery.js"></script>
+<script type="text/javascript" src="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/external-tracking.min.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://justinvoelkel.me/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://justinvoelkel.me/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 4.0">
+<link rel="shortlink" href="http://justinvoelkel.me/?p=296">
+<link rel="Shortcut Icon" href="http://justinvoelkel.me/wp-content/themes/Recital/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/shCore.css"><link rel="stylesheet" type="text/css" href="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/shThemeDefault.css"><style type="text/css" id="syntaxhighlighteranchor"></style>
+<!-- Google Analytics Tracking by Google Analyticator 6.4.8: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+    var analyticsFileTypes = [''];
+    var analyticsSnippet = 'enabled';
+    var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+  
+	_gaq.push(['_setAccount', 'UA-45432821-1']);
+    _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+	<script type="text/javascript" async="" src="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/embed.js"></script><style id="st-dynamic-css" type="text/css"></style></head>
+
+	<body class="single single-post postid-296 single-format-standard dark chrome">
+	
+		<div id="layout">
+		
+			<div id="header">
+
+				<div id="header-layout-2">
+
+					<div id="header-holder-2">
+
+						
+						<div class="clear"><!-- --></div>
+
+					</div><!-- #header-holder-2 -->
+
+				</div><!-- #header-layout-2 -->
+
+				<div id="header-layout">
+
+					<div id="header-holder">
+
+						<div id="logo" class="div-as-table">
+							<div>
+								<div>
+									<h2><a href="http://justinvoelkel.me/"><img src="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/logo-sm.png" data-hidpi="http://justinvoelkel.me/wp-content/uploads/2013/10/logo2-e1382492414974.png" alt="Recital"></a></h2>								</div>
+							</div>
+						</div><!-- #logo -->
+
+						<div id="menu" class="div-as-table">
+							<div>
+								<div>
+									<div id="menu-box" class="menu-menu-1-container"><nav><ul class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home"><a href="http://justinvoelkel.me/">Home</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://justinvoelkel.me/category/general-web-development/">General Development</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent"><a href="http://justinvoelkel.me/category/php/">PHP</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://justinvoelkel.me/category/css3/">CSS3</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://justinvoelkel.me/category/problem-solved/">Problem Solved</a></li>
+</ul></nav></div><div id="menu-select" class="menu-menu-1-container"><select id="selectElement"><option value="#">Select a page ↵</option><option value="http://justinvoelkel.me/">Home</option>
+<option value="http://justinvoelkel.me/category/general-web-development/">General Development</option>
+<option value="http://justinvoelkel.me/category/php/">PHP</option>
+<option value="http://justinvoelkel.me/category/css3/">CSS3</option>
+<option value="http://justinvoelkel.me/category/problem-solved/">Problem Solved</option>
+</select></div>								</div>
+							</div>
+						</div><!-- #menu -->
+
+						<div id="hcustom" class="div-as-table">
+							<div>
+								<div>
+																	</div>
+							</div>
+						</div><!-- #hcustom -->
+
+						<div class="clear"><!-- --></div>
+
+					</div><!-- #header-holder -->
+
+				</div><!-- #header-layout -->
+
+			</div><!-- #header -->
+			<div id="content">
+			
+				<div id="content-layout">
+
+					<div id="content-holder" class="sidebar-position-none">
+		
+						<div id="content-box">
+				
+							<div>
+				
+								
+
+
+												<div id="post-296" class="post-296 post type-post status-publish format-standard hentry category-angularjs category-javascript category-laravel category-mysql category-php tag-angularjs tag-blog-app tag-example-app tag-laravel tag-tutorial post-single">
+	
+													<div class="breadcrumb breadcrumbs"><div class="breadcrumb-trail"><a href="http://justinvoelkel.me/" title="JustinVoelkel.me" rel="home" class="trail-begin">Home</a> <span class="sep"> </span> <span class="trail-end">Laravel and AngularJS: Part One – Prep Your App</span></div></div>	
+															<h1 class="post-title">Laravel and AngularJS: Part One – Prep Your App													
+															</h1>	
+														<article>
+
+															<div class="st-format-standard-holder">
+
+	
+</div>
+															<div id="article">
+
+																<p>I know it’s been over a month&nbsp;but, don’t think I’ve forgotten about my quest to deliver you the first part of my series on combining AngularJS and Laravel. I was having trouble coming up with an idea about – one – what to create for the example application, and – two – how I can effectively present it to you. I decided, since the to-do app is pretty played out by now that I’ll create a simple blog with a login and all that fun stuff. Regarding presenting it to you – well – I don’t have the face, voice, or typing skills required for a screen cast so I settled on a happy medium. I’m going to document, in full, my building of this project here on my blog, but you’ll be able to view the up to date project by going to to <a title="Laravel and AngularJS" href="http://laravelandangular.com/" target="_blank">laravelandangular.com</a>&nbsp;annnnd I will be adding the source to my github account so you’ll be able to grab it for yourself. So, yeah, that’s that – lets light this fire.</p>
+<h2>Things I’ll Thoughtlessly Assume</h2>
+<ol>
+<li>You have some sort of environment to do this in. Either Vagrant, Virtualbox, MAMP, WAMP, XAMPP, or some other form of a LAMP stack complete with <a title="PHP Composer" href="https://getcomposer.org/" target="_blank">composer</a>.</li>
+<li>You have a command line environment to run the install, migration, and db seeds. If you’re on windows that would be Git bash or something of the sorts.</li>
+<li>You know how to and have installed Laravel. If you haven’t done this you can see the <a title="How to install Laravel" href="http://laravel.com/docs/installation" target="_blank">official docs here</a>.</li>
+<li>You have setup a database to use for the app. You’ll need the username, password, and name of this database for Laravel’s database config.</li>
+</ol>
+<p>That’s it.</p>
+<h2>Laying The Groundwork</h2>
+<p>In case you don’t know – you can run the php artisan serve command to test locally but I’ve included an htaccess file in the repo that will just point all of your traffic to the public folder. In a production environment you’d follow these&nbsp;<a title="Setup laravel public folder" href="http://stackoverflow.com/questions/19923091/avoid-public-folder-of-laravel-and-open-directly-the-root-in-web-server" target="_blank">directions here</a> on moving the public folder into the web facing public_html directory and keeping the rest of the Laravel bits behind the scenes.</p>
+<p>I had mentioned in my <a title="Laravel and AngularJS: Ignite Your App Development" href="http://justinvoelkel.me/laravel-and-angularjs-ignite-your-app-development/" target="_blank">previous post</a>&nbsp;that one major benefit of this pairing is that it keeps things nice and loosely coupled. As we get going you’ll notice that all of the AngularJS work we’ll be doing will end up inside of the public folder. That front facing AngularJS code will then communicate with Laravel (inside of the App folder) through API routes. That might make more sense later after you see it put together.</p>
+<h2>Prepping Laravel</h2>
+<p>Lets&nbsp;start from square one and&nbsp;setup Laravel to connect with the database. Find your way to <strong>App &gt; Config &gt; database.php</strong>. For this example I’m sticking with mySql as my database of choice but you’ll notice several other options to chose from. Enter your database credentials starting at line 55.</p>
+<div><div id="highlighter_479289" class="syntaxhighlighter  php"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="php string">'mysql'</code> <code class="php plain">=&gt; </code><code class="php keyword">array</code><code class="php plain">(</code></div><div class="line number2 index1 alt1"><code class="php spaces">&nbsp;</code><code class="php string">'driver'</code> <code class="php plain">=&gt; </code><code class="php string">'mysql'</code><code class="php plain">,</code></div><div class="line number3 index2 alt2"><code class="php spaces">&nbsp;</code><code class="php string">'host'</code> <code class="php plain">=&gt; </code><code class="php string">'localhost'</code><code class="php plain">,</code></div><div class="line number4 index3 alt1"><code class="php spaces">&nbsp;</code><code class="php string">'database'</code> <code class="php plain">=&gt; </code><code class="php string">'[you db name]'</code><code class="php plain">,</code></div><div class="line number5 index4 alt2"><code class="php spaces">&nbsp;</code><code class="php string">'username'</code> <code class="php plain">=&gt; </code><code class="php string">'[your db username]'</code><code class="php plain">,</code></div><div class="line number6 index5 alt1"><code class="php spaces">&nbsp;</code><code class="php string">'password'</code> <code class="php plain">=&gt; </code><code class="php string">'[your db password]'</code><code class="php plain">,</code></div><div class="line number7 index6 alt2"><code class="php spaces">&nbsp;</code><code class="php string">'charset'</code> <code class="php plain">=&gt; </code><code class="php string">'utf8'</code><code class="php plain">,</code></div><div class="line number8 index7 alt1"><code class="php spaces">&nbsp;</code><code class="php string">'collation'</code> <code class="php plain">=&gt; </code><code class="php string">'utf8_unicode_ci'</code><code class="php plain">,</code></div><div class="line number9 index8 alt2"><code class="php spaces">&nbsp;</code><code class="php string">'prefix'</code> <code class="php plain">=&gt; </code><code class="php string">''</code><code class="php plain">,</code></div><div class="line number10 index9 alt1"><code class="php spaces">&nbsp;</code><code class="php plain">),</code></div></div></td></tr></tbody></table></div></div>
+<p>Great – with that you should be able to connect to your mySql database. Rejoice. Next were going to need some tables and data to go along with them. For the purpose of this project I’m going to keep it simple and use one table for users and one table for posts. To create these we’ll make use of table migrations and database seeding.</p>
+<h3>Creating The Users Table Migration</h3>
+<p>To setup our users table we’ll run an artisan migration. This is particularly helpful down the road when you’ll want to setup multiple tables when installing your application. To create that migration run the following from the command line:</p>
+<pre>$ php artisan migrate:make create-users-table --table=users --create
+
+</pre>
+<p>If you’ve done this correctly you should see something similar to the following:</p>
+<pre>Created Migration: 2014_04_18_171339_create-users-table
+Generating optimized class loader
+</pre>
+<p>If you get an error check it out – they’re fairly verbose. I ran into an issue with folder permissions at first and just had to run a simple chmod on my database folder to allow Laravel to write the migration file. Also, make sure you’re running the migration command from the <em><strong>directory with artisan inside</strong></em> of it (probably your root unless you’ve cloned the project from github in which case it would be in the directory <strong>/laravel</strong>). Great, so now that you’ve got the migration setup you can edit it. If you head to <strong>app/database/migrations </strong>you’ll see your time-stamped migration. Change the boilerplate they’ve given you in that file to the following:</p>
+<div><div id="highlighter_881031" class="syntaxhighlighter  php"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div><div class="line number24 index23 alt1">24</div><div class="line number25 index24 alt2">25</div><div class="line number26 index25 alt1">26</div><div class="line number27 index26 alt2">27</div><div class="line number28 index27 alt1">28</div><div class="line number29 index28 alt2">29</div><div class="line number30 index29 alt1">30</div><div class="line number31 index30 alt2">31</div><div class="line number32 index31 alt1">32</div><div class="line number33 index32 alt2">33</div><div class="line number34 index33 alt1">34</div><div class="line number35 index34 alt2">35</div><div class="line number36 index35 alt1">36</div><div class="line number37 index36 alt2">37</div><div class="line number38 index37 alt1">38</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="php keyword">use</code> <code class="php plain">Illuminate\Database\Schema\Blueprint;</code></div><div class="line number2 index1 alt1"><code class="php keyword">use</code> <code class="php plain">Illuminate\Database\Migrations\Migration;</code></div><div class="line number3 index2 alt2">&nbsp;</div><div class="line number4 index3 alt1"><code class="php keyword">class</code> <code class="php plain">CreateUsersTable </code><code class="php keyword">extends</code> <code class="php plain">Migration {</code></div><div class="line number5 index4 alt2">&nbsp;</div><div class="line number6 index5 alt1"><code class="php spaces">&nbsp;</code><code class="php comments">/**</code></div><div class="line number7 index6 alt2"><code class="php spaces">&nbsp;</code><code class="php comments">* Run the migrations.</code></div><div class="line number8 index7 alt1"><code class="php spaces">&nbsp;</code><code class="php comments">*</code></div><div class="line number9 index8 alt2"><code class="php spaces">&nbsp;</code><code class="php comments">* @return void</code></div><div class="line number10 index9 alt1"><code class="php spaces">&nbsp;</code><code class="php comments">*/</code></div><div class="line number11 index10 alt2"><code class="php spaces">&nbsp;</code><code class="php keyword">public</code> <code class="php keyword">function</code> <code class="php plain">up()</code></div><div class="line number12 index11 alt1"><code class="php spaces">&nbsp;</code><code class="php plain">{</code></div><div class="line number13 index12 alt2"><code class="php spaces">&nbsp;</code><code class="php plain">Schema::create(</code><code class="php string">'users'</code><code class="php plain">, </code><code class="php keyword">function</code><code class="php plain">(Blueprint </code><code class="php variable">$table</code><code class="php plain">)</code></div><div class="line number14 index13 alt1"><code class="php spaces">&nbsp;</code><code class="php plain">{</code></div><div class="line number15 index14 alt2"><code class="php spaces">&nbsp;</code><code class="php variable">$table</code><code class="php plain">-&gt;increments(</code><code class="php string">'id'</code><code class="php plain">);</code></div><div class="line number16 index15 alt1">&nbsp;</div><div class="line number17 index16 alt2"><code class="php spaces">&nbsp;</code><code class="php variable">$table</code><code class="php plain">-&gt;string(</code><code class="php string">'first_name'</code><code class="php plain">);</code></div><div class="line number18 index17 alt1"><code class="php spaces">&nbsp;</code><code class="php variable">$table</code><code class="php plain">-&gt;string(</code><code class="php string">'last_name'</code><code class="php plain">);</code></div><div class="line number19 index18 alt2"><code class="php spaces">&nbsp;</code><code class="php variable">$table</code><code class="php plain">-&gt;string(</code><code class="php string">'email'</code><code class="php plain">)-&gt;unique();</code></div><div class="line number20 index19 alt1"><code class="php spaces">&nbsp;</code><code class="php variable">$table</code><code class="php plain">-&gt;string(</code><code class="php string">'username'</code><code class="php plain">)-&gt;unique();</code></div><div class="line number21 index20 alt2"><code class="php spaces">&nbsp;</code><code class="php variable">$table</code><code class="php plain">-&gt;string(</code><code class="php string">'password'</code><code class="php plain">);</code></div><div class="line number22 index21 alt1"><code class="php spaces">&nbsp;</code><code class="php variable">$table</code><code class="php plain">-&gt;string(</code><code class="php string">'remember_token'</code><code class="php plain">)-&gt;nullable() </code><code class="php comments">//required as of 4.1.28 upgrade for remember me</code></div><div class="line number23 index22 alt2">&nbsp;</div><div class="line number24 index23 alt1"><code class="php spaces">&nbsp;</code><code class="php variable">$table</code><code class="php plain">-&gt;timestamps();</code><code class="php comments">//creates timestamps for created and udpated at</code></div><div class="line number25 index24 alt2"><code class="php spaces">&nbsp;</code><code class="php plain">});</code></div><div class="line number26 index25 alt1"><code class="php spaces">&nbsp;</code><code class="php plain">}</code></div><div class="line number27 index26 alt2">&nbsp;</div><div class="line number28 index27 alt1"><code class="php spaces">&nbsp;</code><code class="php comments">/**</code></div><div class="line number29 index28 alt2"><code class="php spaces">&nbsp;</code><code class="php comments">* Reverse the migrations.</code></div><div class="line number30 index29 alt1"><code class="php spaces">&nbsp;</code><code class="php comments">*</code></div><div class="line number31 index30 alt2"><code class="php spaces">&nbsp;</code><code class="php comments">* @return void</code></div><div class="line number32 index31 alt1"><code class="php spaces">&nbsp;</code><code class="php comments">*/</code></div><div class="line number33 index32 alt2"><code class="php spaces">&nbsp;</code><code class="php keyword">public</code> <code class="php keyword">function</code> <code class="php plain">down()</code></div><div class="line number34 index33 alt1"><code class="php spaces">&nbsp;</code><code class="php plain">{</code></div><div class="line number35 index34 alt2"><code class="php spaces">&nbsp;</code><code class="php plain">Schema::drop(</code><code class="php string">'users'</code><code class="php plain">);</code></div><div class="line number36 index35 alt1"><code class="php spaces">&nbsp;</code><code class="php plain">}</code></div><div class="line number37 index36 alt2">&nbsp;</div><div class="line number38 index37 alt1"><code class="php plain">}</code></div></div></td></tr></tbody></table></div></div>
+<p>If you’ve never worked with Laravel before I’ll give you a brief explanation – this is a table builder, it will convert what you’ve put into the&nbsp;<strong>up</strong> function into proper SQL to build the table you’ve specified. The&nbsp;<strong>down&nbsp;</strong>function will be run when you run a migration refresh or rollback. So, now if we jump back over to the command line we can run</p>
+<pre>$ php artisan migrate</pre>
+<p>and create our table from the migration above. If it was successful you should see something similar to</p>
+<pre>Migration table created successfully.
+Migrated: 2014_04_18_171339_create-users-table
+</pre>
+<p>And you should be able to see your new database table in phpmyadmin (if you’re using it).</p>
+<h3>Seeding The Users Table</h3>
+<p>Ok, now that the table is setup let’s fill it with a user account for our example. To do this we need to create a database seed with Laravel. You probably already saw the folder when you went to view your migration – this time head to <strong>app/database/seeds</strong>. You’ll need to create a new file called UserTableSeeder.php inside that folder and add the following:</p>
+<div><div id="highlighter_144049" class="syntaxhighlighter  php"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div><div class="line number24 index23 alt1">24</div><div class="line number25 index24 alt2">25</div><div class="line number26 index25 alt1">26</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="php plain">&lt;?php</code></div><div class="line number2 index1 alt1">&nbsp;</div><div class="line number3 index2 alt2"><code class="php keyword">class</code> <code class="php plain">UserTableSeeder </code><code class="php keyword">extends</code> <code class="php plain">Seeder {</code></div><div class="line number4 index3 alt1">&nbsp;</div><div class="line number5 index4 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php comments">/**</code></div><div class="line number6 index5 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php comments">* Run the database seeds.</code></div><div class="line number7 index6 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php comments">*</code></div><div class="line number8 index7 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php comments">* @return void</code></div><div class="line number9 index8 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php comments">*/</code></div><div class="line number10 index9 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php keyword">public</code> <code class="php keyword">function</code> <code class="php plain">run()</code></div><div class="line number11 index10 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php plain">{</code></div><div class="line number12 index11 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php plain">DB::table(</code><code class="php string">'users'</code><code class="php plain">)-&gt;</code><code class="php functions">delete</code><code class="php plain">();</code></div><div class="line number13 index12 alt2">&nbsp;</div><div class="line number14 index13 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php plain">User::create(</code><code class="php keyword">array</code><code class="php plain">(</code></div><div class="line number15 index14 alt2">&nbsp;</div><div class="line number16 index15 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php string">'first_name'</code>&nbsp;&nbsp;&nbsp; <code class="php plain">=&gt; </code><code class="php string">'Justin'</code><code class="php plain">,</code></div><div class="line number17 index16 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php string">'last_name'</code>&nbsp;&nbsp;&nbsp;&nbsp; <code class="php plain">=&gt; </code><code class="php string">'Voelkel'</code><code class="php plain">,</code></div><div class="line number18 index17 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php string">'email'</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="php plain">=&gt; </code><code class="php string">'justin@justinvoelkel.me'</code><code class="php plain">,</code></div><div class="line number19 index18 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php string">'username'</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="php plain">=&gt; </code><code class="php string">'admin'</code><code class="php plain">,</code></div><div class="line number20 index19 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php string">'password'</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code class="php plain">=&gt; Hash::make(</code><code class="php string">'password'</code><code class="php plain">); </code><code class="php comments">//hashes our password nicely for us</code></div><div class="line number21 index20 alt2">&nbsp;</div><div class="line number22 index21 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php plain">));</code></div><div class="line number23 index22 alt2">&nbsp;</div><div class="line number24 index23 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php plain">}</code></div><div class="line number25 index24 alt2">&nbsp;</div><div class="line number26 index25 alt1"><code class="php plain">}</code></div></div></td></tr></tbody></table></div></div>
+<p>Again, just a simple explanation of what’s going on for you that may be new to Laravel. When this seed is run it will empty the users table if it already has data in it (remember that if you decide to reseed the table), then it creates a new user with the info we’ve provided. Note, that there’s already a Model for users (<strong>app/models/user.php</strong>) so we can use the create method. This is part of the boilerplate that Laravel gives you. If it were something like a post (hint: we’ll be adding these later) you’ll have to have a model setup for it before you can create new instances of it. We will save that for when we begin expanding the blog functionality – since this is only about authorization we don’t have to worry about it just yet. Also noteworthy, it’s important to never, ever, – <em>like, not even in a trillion years</em> – store passwords as plain text. Laravel gives us sugar to make hashing our passwords really simple with <strong>Hash::make()</strong>. Now that the seed is setup we just need to tell Laravel to run it when the appropriate artisan command is given. To do that just open up <strong>DatabaseSeeder.php</strong> (still inside your seeds folder) and un-comment the following line:</p>
+<div><div id="highlighter_342825" class="syntaxhighlighter  php"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="php variable">$this</code><code class="php plain">-&gt;call(</code><code class="php string">'UserTableSeeder'</code><code class="php plain">);</code></div></div></td></tr></tbody></table></div></div>
+<p>This is already in there by default to go along with the User Model that they’ve included. If it were something else, say posts, we’d have to just copy this line and replace UserTableSeeder with the appropriate class (probably PostTableSeeder given our example). So now you can head back to your terminal and run the following:</p>
+<pre>$ php artisan db:seed
+</pre>
+<p>And, if everything went as expected you should see</p>
+<pre>Seeded: UserTableSeeder
+</pre>
+<p>Annnd voila – we’ve got a users table with our first admin user. Good job.</p>
+<h3>Routes and Controllers</h3>
+<p>Now that the database is setup and seeded with all the info we need (for now) we need to set up some routes and controllers to control the flow of traffic between the frontend – the blog – and the backened – the admin area. Everything on ‘the backend’ is going to live under /admin while everything else will just use the root URI. We’ll start out by making a simple Index view that will end up as our front page and include the blog roll of all our posts. Let’s head over to <strong>app/views</strong> and create two new files -<strong>index.blade.php </strong>and<strong> admin.php</strong>. If you’re familiar with Laravel and have made use of Blade templating in the past just know we’re not using it for the admin views because it’s double mustache syntax {{ }} is the same as Angular’s and, we’ll be referencing data in the views through Angular anyway – long story short we won’t need it for our admin area. Go ahead and open <strong>index.blade.php</strong> and just throw in a quick placeholder message:</p>
+<div><div id="highlighter_375668" class="syntaxhighlighter  xml"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">h1</code><code class="xml plain">&gt;Blog Goes Here&lt;/</code><code class="xml keyword">h1</code><code class="xml plain">&gt;</code></div></div></td></tr></tbody></table></div></div>
+<p>Odds are you already understand what’s going on so I won’t explain. Now, open up <strong>admin.php</strong>. Admin is going to, basically, be the shell we’re injecting our Angular views into. So, we will start with some boilerplate code:</p>
+<div><div id="highlighter_460021" class="syntaxhighlighter  xml"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml plain">&lt;!</code><code class="xml keyword">doctype</code> <code class="xml plain">html&gt;</code></div><div class="line number2 index1 alt1"><code class="xml plain">&lt;</code><code class="xml keyword">html</code> <code class="xml color1">lang</code><code class="xml plain">=</code><code class="xml string">"en"</code><code class="xml plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">head</code><code class="xml plain">&gt;</code></div><div class="line number4 index3 alt1"><code class="xml plain">&lt;</code><code class="xml keyword">title</code><code class="xml plain">&gt;Blog Administration&lt;/</code><code class="xml keyword">title</code><code class="xml plain">&gt;</code></div><div class="line number5 index4 alt2"><code class="xml comments">&lt;!--css--&gt;</code></div><div class="line number6 index5 alt1"><code class="xml plain">&lt;</code><code class="xml keyword">link</code> <code class="xml color1">rel</code><code class="xml plain">=</code><code class="xml string">"stylesheet"</code> <code class="xml color1">href</code><code class="xml plain">=</code><code class="xml string">"//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"</code><code class="xml plain">/&gt;</code></div><div class="line number7 index6 alt2">&nbsp;</div><div class="line number8 index7 alt1"><code class="xml comments">&lt;!--js--&gt;</code></div><div class="line number9 index8 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">script</code> <code class="xml color1">src</code><code class="xml plain">=</code><code class="xml string">"//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"</code><code class="xml plain">&gt;&lt;/</code><code class="xml keyword">script</code><code class="xml plain">&gt;</code></div><div class="line number10 index9 alt1">&nbsp;</div><div class="line number11 index10 alt2"><code class="xml comments">&lt;!--angular--&gt;</code></div><div class="line number12 index11 alt1"><code class="xml plain">&lt;</code><code class="xml keyword">script</code> <code class="xml color1">src</code><code class="xml plain">=</code><code class="xml string">"//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.js"</code><code class="xml plain">&gt;&lt;/</code><code class="xml keyword">script</code><code class="xml plain">&gt;</code></div><div class="line number13 index12 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">script</code> <code class="xml color1">src</code><code class="xml plain">=</code><code class="xml string">"//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular-route.js"</code><code class="xml plain">&gt;&lt;/</code><code class="xml keyword">script</code><code class="xml plain">&gt;</code></div><div class="line number14 index13 alt1"><code class="xml plain">&lt;/</code><code class="xml keyword">head</code><code class="xml plain">&gt;</code></div><div class="line number15 index14 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">body</code><code class="xml plain">&gt;</code></div><div class="line number16 index15 alt1"><code class="xml plain">&lt;</code><code class="xml keyword">h1</code><code class="xml plain">&gt;Admin Section&lt;/</code><code class="xml keyword">h1</code><code class="xml plain">&gt;</code></div><div class="line number17 index16 alt2"><code class="xml plain">&lt;/</code><code class="xml keyword">body</code><code class="xml plain">&gt;</code></div><div class="line number18 index17 alt1"><code class="xml plain">&lt;/</code><code class="xml keyword">html</code><code class="xml plain">&gt;</code></div></div></td></tr></tbody></table></div></div>
+<p>We’re just starting out adding some basic elements like bootstrap, jquery, and angular. Note that I’m not using the minified version of angular. The main reason for this is when angular throws a console error it will come out minified if you’re using the minified version. The errors are pretty verbose so it makes it extremely hard to pick apart – long story short, use the unminified version for development. You’ll notice below I’ve also included angular route, you’ll need to include this for routing as it is no longer packaged with angular’s core.</p>
+<h2>Prepping Angular Within Laravel</h2>
+<p>Since we have included Angular we can begin setting up the essentials for Angular within our application. As I mentioned above all of our angular work will take place within the web facing <strong>public</strong> folder. To start just open up public and create a&nbsp;<strong>js&nbsp;</strong>directory. After you’ve done that open up&nbsp;<strong>js</strong> and create three more directories –&nbsp;<strong>controllers, services,</strong>&nbsp;and<strong>&nbsp;templates.&nbsp;</strong>This will help us separate our concerns when dealing with our angular code. Ok, one more addition – go ahead and create a new file called&nbsp;<strong>app.js</strong>. When you’re all done you’re structure should look like this:</p>
+<pre>-public/
+    -js/
+        -app.js
+        -controllers/
+        -services/
+        -templates/
+    -packages/
+    .htaccess
+    favicion.ico
+    index.php
+    robots.txt
+
+</pre>
+<p>I think I’m going to wrap things up&nbsp;here as this post has gotten pretty long. Now that the basic prep work has been done with Laravel and Angular Part Two is going to cover creating a login to our administration area. This is where we’ll really start digging in and coding with both frameworks and setting up our API. That post should be coming shortly – well shorter than the month it’s taken me to produce this! Stay tuned during&nbsp;the coming week.</p>
+<div class="notice  ">
+<h2>Part Two</h2>
+<p>WELP. It took a few millennia but I managed to post part two!<a title="Laravel and AngularJS: Part Two – Login and Authentication" href="http://justinvoelkel.me/laravel-angularjs-part-two-login-and-authentication/"> Check it out…</a><br>
+</p><div class="clear"><!-- --></div></div>
+<p><time class="date updated none" datetime="2014-05-05" data-pubdate="">May 5, 2014</time><span class="author vcard none"><span class="fn">Justin Voelkel</span></span></p>
+
+																<div class="clear"><!-- --></div>
+
+															</div><!-- #article -->
+
+															
+														</article><div id="pre_next_post"><a class="p tooltip" title="Previous" href="http://justinvoelkel.me/laravel-and-angularjs-ignite-your-app-development/">Laravel and AngularJS: Ignite Your App Development</a><a class="n tooltip" title="Next" href="http://justinvoelkel.me/laravel-angularjs-part-two-login-and-authentication/">Laravel and AngularJS: Part Two – Login and Authentication</a><div class="clear"><!-- --></div></div>
+<div id="disqus_thread"><iframe id="dsq-274" data-disqus-uid="274" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/saved_resource.html" horizontalscrolling="no" verticalscrolling="no" style="width: 100% !important; border: none !important; overflow: hidden !important; height: 901px !important;"></iframe></div>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var disqus_url = 'http://justinvoelkel.me/laravel-and-angularjs-part-one-prep-your-app/';
+    var disqus_identifier = '296 http://justinvoelkel.me/?p=296';
+    var disqus_container_id = 'disqus_thread';
+    var disqus_domain = 'disqus.com';
+    var disqus_shortname = 'justinvoelkelme';
+    var disqus_title = "Laravel and AngularJS: Part One &#8211; Prep Your App";
+    var disqus_config = function () {
+        var config = this; // Access to the config object
+        config.language = '';
+
+        /* Add the ability to add javascript callbacks */
+        
+        /*
+           All currently supported events:
+            * preData — fires just before we request for initial data
+            * preInit - fires after we get initial data but before we load any dependencies
+            * onInit  - fires when all dependencies are resolved but before dtpl template is rendered
+            * afterRender - fires when template is rendered but before we show it
+            * onReady - everything is done
+         */
+
+        config.callbacks.preData.push(function() {
+            // clear out the container (its filled for SEO/legacy purposes)
+            document.getElementById(disqus_container_id).innerHTML = '';
+        });
+                config.callbacks.onReady.push(function() {
+            // sync comments in the background so we don't block the page
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = '?cf_action=sync_comments&post_id=296';
+
+            var firstScript = document.getElementsByTagName( "script" )[0];
+            firstScript.parentNode.insertBefore(script, firstScript);
+        });
+                    };
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var DsqLocal = {
+        'trackbacks': [
+        ],
+        'trackback_url': "http:\/\/justinvoelkel.me\/laravel-and-angularjs-part-one-prep-your-app\/trackback\/"    };
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.' + 'disqus.com' + '/' + 'embed' + '.js' + '?pname=wordpress&pver=2.77';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+/* ]]> */
+</script>
+	
+													<div class="clear"><!-- --></div>
+				
+												</div><!-- #post-% -->
+	
+	
+	
+												<div class="sidebar-post">
+								
+																			
+																<div class="single-author-info">
+						
+																	<div class="single-author-upic"><a href="http://justinvoelkel.me/author/stin4u/"><img src="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/avatar-150x150.png" width="110" height="110" alt="Justin Voelkel" class="avatar avatar-110 wp-user-avatar wp-user-avatar-110 alignnone photo"></a></div>
+												
+																	<h5>Justin Voelkel</h5>
+																	
+																							
+																</div>	
+															<div class="post-short-info">
+	
+																
+				<div class="meta">
+			
+					<span class="ico16 ico16-calendar">6 months ago</span>										<span class="ico16 ico16-folder"><a href="http://justinvoelkel.me/category/angularjs/">AngularJS</a>, <a href="http://justinvoelkel.me/category/javascript/">Javascript</a>, <a href="http://justinvoelkel.me/category/laravel/">Laravel</a>, <a href="http://justinvoelkel.me/category/mysql/">MySQL</a>, <a href="http://justinvoelkel.me/category/php/">PHP</a></span><span class="ico16 ico16-tag"><a href="http://justinvoelkel.me/tag/angularjs/" rel="tag">AngularJS</a>, <a href="http://justinvoelkel.me/tag/blog-app/" rel="tag">blog app</a>, <a href="http://justinvoelkel.me/tag/example-app/" rel="tag">example app</a>, <a href="http://justinvoelkel.me/tag/laravel/" rel="tag">Laravel</a>, <a href="http://justinvoelkel.me/tag/tutorial/" rel="tag">tutorial</a></span>			
+				</div><!-- .meta -->	
+															</div><div><!-- --></div><div class="stickyDiv" style="position: static;"></div>								
+												</div><!-- .sidebar-post -->
+
+
+
+															
+								<div class="clear"><!-- --></div>
+				
+							</div>
+					
+						</div><!-- #content-box -->
+
+							
+						<div class="clear"><!-- --></div>
+
+					</div><!-- #content-holder -->
+		
+				</div><!-- #content-layout -->
+		
+			</div><!-- #content -->
+	
+					<div class="clear"><!-- --></div>
+
+			<footer>
+
+				<div id="footer">
+	
+					<div id="footer-layout">
+	
+						<div id="footer-holder">
+					
+								
+	
+		<div id="footer-box" class="footer-box-v5"><div class="sidebar-footer"><div>
+<div class="widget widget_calendar">
+<div id="calendar_wrap"><table id="wp-calendar">
+	<caption>November 2014</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="Monday">M</th>
+		<th scope="col" title="Tuesday">T</th>
+		<th scope="col" title="Wednesday">W</th>
+		<th scope="col" title="Thursday">T</th>
+		<th scope="col" title="Friday">F</th>
+		<th scope="col" title="Saturday">S</th>
+		<th scope="col" title="Sunday">S</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="http://justinvoelkel.me/2014/10/" class="tooltip">« Oct</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next" class="pad">&nbsp;</td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="5" class="pad">&nbsp;</td><td>1</td><td>2</td>
+	</tr>
+	<tr>
+		<td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td>
+	</tr>
+	<tr>
+		<td>10</td><td>11</td><td>12</td><td id="today">13</td><td>14</td><td>15</td><td>16</td>
+	</tr>
+	<tr>
+		<td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td>
+	</tr>
+	<tr>
+		<td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td>
+	</tr>
+	</tbody>
+	</table></div>
+<div class="clear"><!-- --></div></div>
+</div></div><div class="sidebar-footer"><div>		
+<div class="widget widget_recent_entries">
+		<h5>Recent Posts</h5>
+		<ul>
+					<li>
+				<a href="http://justinvoelkel.me/saga-continues/">The Saga Continues</a>
+						</li>
+					<li>
+				<a href="http://justinvoelkel.me/laravel-angularjs-part-two-login-and-authentication/">Laravel and AngularJS: Part Two – Login and Authentication</a>
+						</li>
+					<li>
+				<a href="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me.html">Laravel and AngularJS: Part One – Prep Your App</a>
+						</li>
+					<li>
+				<a href="http://justinvoelkel.me/laravel-and-angularjs-ignite-your-app-development/">Laravel and AngularJS: Ignite Your App Development</a>
+						</li>
+					<li>
+				<a href="http://justinvoelkel.me/web-accessibility-matters-think/">Web Accessibility: It Matters More Than You Think</a>
+						</li>
+				</ul>
+		
+<div class="clear"><!-- --></div></div>
+</div></div><div class="sidebar-footer"><div>
+<div class="widget widget_tag_cloud">
+<h5>Categories</h5>
+<div class="tagcloud"><a href="http://justinvoelkel.me/category/general-web-development/" class="tag-link-2" title="" style="font-size: 13px;">General Web Development<span>19</span></a><a href="http://justinvoelkel.me/category/php/" class="tag-link-7" title="" style="font-size: 13px;">PHP<span>7</span></a><a href="http://justinvoelkel.me/category/development-tools/" class="tag-link-40" title="" style="font-size: 13px;">Development Tools<span>5</span></a><a href="http://justinvoelkel.me/category/problem-solved/" class="tag-link-9" title="" style="font-size: 13px;">Problem Solved<span>5</span></a><a href="http://justinvoelkel.me/category/javascript/" class="tag-link-34" title="" style="font-size: 13px;">Javascript<span>3</span></a><a href="http://justinvoelkel.me/category/mysql/" class="tag-link-25" title="" style="font-size: 13px;">MySQL<span>3</span></a><a href="http://justinvoelkel.me/category/performance/" class="tag-link-33" title="" style="font-size: 13px;">Performance<span>3</span></a><a href="http://justinvoelkel.me/category/css3/" class="tag-link-20" title="" style="font-size: 13px;">CSS3<span>3</span></a><a href="http://justinvoelkel.me/category/app-development/" class="tag-link-53" title="" style="font-size: 13px;">App Development<span>3</span></a><a href="http://justinvoelkel.me/category/laravel/" class="tag-link-42" title="" style="font-size: 13px;">Laravel<span>3</span></a><a href="http://justinvoelkel.me/category/angularjs/" class="tag-link-85" title="" style="font-size: 13px;">AngularJS<span>3</span></a><a href="http://justinvoelkel.me/category/wordpress/" class="tag-link-15" title="" style="font-size: 13px;">Wordpress<span>1</span></a><a href="http://justinvoelkel.me/category/accessibility/" class="tag-link-80" title="" style="font-size: 13px;">Accessibility<span>1</span></a><a href="http://justinvoelkel.me/category/nodejs/" class="tag-link-60" title="" style="font-size: 13px;">NodeJS<span>1</span></a><a href="http://justinvoelkel.me/category/ruby/" class="tag-link-45" title="" style="font-size: 13px;">Ruby<span>1</span></a><a href="http://justinvoelkel.me/category/recommended-reading/" class="tag-link-10" title="" style="font-size: 13px;">Recommended Reading<span>1</span></a><a href="http://justinvoelkel.me/category/services/" class="tag-link-11" title="" style="font-size: 13px;">Services<span>1</span></a></div>
+
+<div class="clear"><!-- --></div></div>
+</div></div><div class="sidebar-footer last"><div>
+<div class="widget widget_search">
+<form role="search" method="get" id="searchform" class="searchform" action="http://justinvoelkel.me/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" placeholder="Search">
+					<input type="submit" id="searchsubmit" value="Search">
+				</div>
+			</form>
+<div class="clear"><!-- --></div></div>
+</div></div><div class="clear"><!-- --></div>	
+		</div><!-- end footer-box -->		
+						</div><!-- #footer-holder -->
+	
+						<div id="copyrights-holder">
+	
+							<div id="copyrights-box">
+						
+								<div id="copyrights-company">2013 © Justin Voelkel</div>	
+								<div class="clear"><!-- --></div>
+	
+							</div><!-- #copyrights-box -->
+						
+						</div><!-- #copyrights-holder -->
+	
+					</div><!-- #footer-layout -->
+	
+				</div><!-- #footer -->
+
+			</footer>
+
+		</div><!-- #layout -->
+
+		<script type="text/javascript">/* <![CDATA[ */var stData = new Array();
+			stData[0] = "494158";
+			stData[1] = "6ddc77";
+			stData[2] = "http://justinvoelkel.me/wp-content/themes/Recital";
+			stData[3] = "http://justinvoelkel.me";/* ]]> */</script>
+<script type="text/javascript" src="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/shCore.js"></script>
+<script type="text/javascript" src="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/shBrushPhp.js"></script>
+<script type="text/javascript" src="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/shBrushXml.js"></script>
+<script type="text/javascript">
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://justinvoelkel.me/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "http://justinvoelkel.me/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.9";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
+<script type="text/javascript" src="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/jquery.hidpi.js"></script>
+<script type="text/javascript" src="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/jquery.shortcodes.js"></script>
+<script type="text/javascript" src="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/jquery.ctp.js"></script>
+<script type="text/javascript" src="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/jquery.menu.js"></script>
+<script type="text/javascript" src="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/jquery.st.js"></script>
+<script type="text/javascript" src="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/jquery.ie.js"></script>
+<script type="text/javascript" src="./Laravel and AngularJS - Part One - Prep Your AppJustinVoelkel.me_files/mediaelement-and-player.min.js"></script>
+
+	
+
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+
+ Served from: justinvoelkel.me @ 2014-11-13 06:18:25 by W3 Total Cache --></body></html>

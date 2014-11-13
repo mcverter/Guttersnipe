@@ -1,0 +1,365 @@
+/*
+
+	1 - POST
+
+		1.1 - Post data
+		1.2 - Post info
+
+	2 - TEMPLATES
+
+		2.1 - Default
+		2.2 - Template 1
+		2.3 - Template 2
+		2.4 - Template 5
+		2.5 - Template 6
+
+	3 - HOVERS
+
+*/
+
+/*===============================================
+
+	P O S T
+	Styles for post page
+
+===============================================*/
+
+/*
+	Hierarchy: 
+
+	#content
+	| #content-layout
+	| | #content-holder .sidebar-position-right/left/none
+	| | | #content-box
+	| | | | div
+	| | | | | div.post-single
+	| | | | | | .breadcrumbs
+	| | | | | | .post-title
+	| | | | | | #title-after
+	| | | | | | #post-excerpt
+	| | | | | | #post-before
+	| | | | | | #content-data
+	| | | | | | #post-after
+*/
+
+	/*-------------------------------------------
+		1.1 - Post data
+	-------------------------------------------*/
+
+	/* N/A*/
+
+
+	/*-------------------------------------------
+		1.2 - Post info
+	-------------------------------------------*/
+
+	/* N/A*/
+
+
+/*===============================================
+
+	T E M P L A T E S
+	Styles for post templates
+
+===============================================*/
+
+/*
+	Hierarchy: 
+
+	#content
+	| #content-layout
+	| | #content-holder .projects .projects-%templateName% .sidebar-position-right/left/none
+	| | | #content-box
+	| | | | div
+	| | | | | div
+	| | | | | | .breadcrumbs
+	| | | | | | (title)
+	| | | | | | .projects-%templateName%-wrapper
+	| | | | | | | ...
+	| | | | | | #wp-pagenavibox
+
+*/
+
+.project-thumb {
+	overflow: hidden;
+}
+
+	.project-thumb img {
+		display: table; /* needed*/
+		z-index: 1; /* needed*/
+	}
+	
+	.project-thumb p {
+		line-height: 1.3em;
+		padding: 0 1em;
+	}
+
+
+	/*-------------------------------------------
+		2.2 - Template 1
+	-------------------------------------------*/
+
+	/* If sidebar by right */
+	.projects-t1.sidebar-position-right #content-box > div {
+		background: none;
+		padding-right: 0;
+		margin: 0;
+	}
+
+	/* If sidebar by left */
+	.projects-t1.sidebar-position-left #content-box > div {
+		background: none;
+		padding-left: 0;
+		margin: 0;
+	}
+
+	/* The wrapper of all projects */
+	.projects-t1-wrapper {
+		display: inline-block; /* firefox */
+	}
+
+		.home .projects-t1-wrapper {
+			padding-top: 0;
+		}
+
+		/* Project 1 */
+		.projects-t1-wrapper > div.projects-t1-a-wrapper {
+			width: 574px;
+			margin-right: 0;
+		}
+
+			.projects-t1-wrapper > div.projects-t1-a-wrapper a.project-thumb {
+				display: block;
+				height: 410px;
+			}
+
+		/* Projects 2,3 */
+		.projects-t1-wrapper > div.projects-t1-b-wrapper {
+			width: 262px;
+			margin-right: 0;
+			margin-left: 50px;
+		}
+
+		/* Projects 4,5,6... */
+		.projects-t1-wrapper > div {
+			width: 262px;
+			float: left;
+			display: block;
+			margin-bottom: 50px;
+			margin-right: 50px;
+		}
+
+		.projects-t1-wrapper > div.first {
+			clear: left;
+		}
+
+		.projects-t1-wrapper > div.last {
+			clear: right;
+			margin-right: 0;
+		}
+	
+			.projects-t1-wrapper a.project-thumb {
+				display: block;
+				width: 100%;
+				height: 180px;
+				background-position: 0 0;
+				background-repeat: no-repeat;
+				background-size: 100% auto;
+				background-position: 0 center;
+				transition: background-position 250ms linear;
+				-webkit-transition: background-position 250ms linear; /* safari */
+			}
+
+				.projects-t1-wrapper a.project-thumb:hover {
+					background-position: -100px center;
+					transition: background-position 250ms linear;
+					-webkit-transition: background-position 250ms linear; /* safari */
+				}
+
+					.projects-t1-wrapper a.project-thumb p {
+						padding: 0 2em;
+					}
+
+
+	/*--- Hover -----------------------------*/
+
+	.projects-t1-wrapper i {
+		display: inline-block;
+		width: 32px;
+		height: 32px;
+		margin-bottom: 0.33em;
+		background: url('../../../../plugins/stkit/assets/images/icons/32/glyphs/white/portfolio.png') center center no-repeat;
+	}
+
+		.hidpi .projects-t1-wrapper i {
+			background-image: url('../../../../plugins/stkit/assets/images/icons/64/glyphs/white/portfolio.png');
+			background-size: 32px 32px;
+		}
+
+		.projects-t1-a-wrapper i {
+			margin-bottom: 0.66em;
+		}
+
+	.projects-t1-wrapper p {
+		font-size: 1.2em;
+		font-weight: bold;
+		margin-bottom: 0.25em;
+	}
+
+		.projects-t1-a-wrapper p {
+			font-size: 2em;
+			margin-bottom: 0.5em;
+		}
+
+
+	/*--- Dummy -----------------------------*/
+
+	.t1-dummy-big {
+		width: 100%;
+		height: 410px;
+		margin: 0 auto;
+		text-align: center;
+		background: url('../images/bg-black-10.png') repeat;
+	}
+
+		.t1-dummy-big span {
+			display: inline-block;
+			margin-top: 190px;
+			opacity: 0.5;
+		}
+
+	.t1-dummy {
+		height: 180px;
+		margin: 0 auto;
+		text-align: center;
+		background: url('../images/bg-black-10.png') repeat;
+	}
+
+		.t1-dummy span {
+			display: inline-block;
+			margin-top: 77px;
+			opacity: 0.5;
+		}
+
+
+/*===============================================
+
+	H O V E R S
+	Common styles for project hovers
+
+===============================================*/
+
+	.st-hover {
+		position: relative;
+		z-index: 2;
+	}
+
+		.st-hover-bg {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+
+		.st-hover-data {
+			text-align: center;
+			color: #FFF;
+			width: 100%;
+			height: 100%;
+		}
+
+
+/*===============================================
+
+	A R C H I V E
+	Styles for Archive page
+
+===============================================*/
+
+	#projects-term {
+		margin-bottom: 50px;
+		padding: 0 0 25px;
+		background: url('../images/line.png') left bottom repeat-x;
+	}
+
+		.projects-term-title {
+		}
+
+			.projects-term-title h1 {
+				font-size: 1.15em;
+				font-weight: normal;
+				margin-left: 0;
+				padding: 0;
+			}
+
+				.projects-term-title h1:before {
+					content: ' ';
+					display: inline-block;
+					width: 22px;
+					height: 22px;
+					margin: 0 0.3em -0.3em 0;
+					background: #31ac97 center center no-repeat;
+					background-size: 16px 16px;
+					border-radius: 2px;
+				}
+
+					/* Portfolio */
+					.page-template-template-projects-php .projects-term-title h1:before {
+						background-image: url('../../../../plugins/stkit/assets/images/icons/16/glyphs/white/portfolio.png'); }
+
+						.page-template-template-projects-php.hidpi .projects-term-title h1:before {
+							background-image: url('../../../../plugins/stkit/assets/images/icons/32/glyphs/white/portfolio.png'); }
+
+					/* Category */
+					.tax-st_category .projects-term-title h1:before {
+						background-image: url('../../../../plugins/stkit/assets/images/icons/16/glyphs/white/folder.png'); }
+
+						.tax-st_category.hidpi .projects-term-title h1:before {
+							background-image: url('../../../../plugins/stkit/assets/images/icons/32/glyphs/white/folder.png'); }
+
+					/* Tag */
+					.tax-st_tag .projects-term-title h1:before {
+						background-image: url('../../../../plugins/stkit/assets/images/icons/16/glyphs/white/tag.png'); }
+
+						.tax-st_tag.hidpi .projects-term-title h1:before {
+							background-image: url('../../../../plugins/stkit/assets/images/icons/32/glyphs/white/tag.png'); }
+
+					/* Gallery */
+					.term-gallery .projects-term-title h1:before,
+					.term-post-format-gallery .projects-term-title h1:before {
+						background-image: url('../../../../plugins/stkit/assets/images/icons/16/glyphs/white/gallery.png'); }
+
+						.term-gallery.hidpi .projects-term-title h1:before,
+						.term-post-format-gallery.hidpi .projects-term-title h1:before {
+							background-image: url('../../../../plugins/stkit/assets/images/icons/32/glyphs/white/gallery.png'); }
+
+					/* Audio */
+					.term-audio .projects-term-title h1:before,
+					.term-post-format-audio .projects-term-title h1:before {
+						background-image: url('../../../../plugins/stkit/assets/images/icons/16/glyphs/white/audio.png'); }
+
+						.term-audio.hidpi .projects-term-title h1:before,
+						.term-post-format-audio.hidpi .projects-term-title h1:before {
+							background-image: url('../../../../plugins/stkit/assets/images/icons/32/glyphs/white/audio.png'); }
+
+					/* Video */
+					.term-video .projects-term-title h1:before,
+					.term-post-format-video .projects-term-title h1:before {
+						background-image: url('../../../../plugins/stkit/assets/images/icons/16/glyphs/white/video.png'); }
+
+						.term-video.hidpi .projects-term-title h1:before,
+						.term-post-format-video.hidpi .projects-term-title h1:before {
+							background-image: url('../../../../plugins/stkit/assets/images/icons/32/glyphs/white/video.png'); }
+
+		#projects-term .title-sub {
+		}
+	
+		#projects-term .title-end {
+		}
+	
+		.projects-term-description {
+			padding: 1.5em 0 0;
+		}
+
+			.projects-term-description p {
+				margin-bottom: 0;
+			}

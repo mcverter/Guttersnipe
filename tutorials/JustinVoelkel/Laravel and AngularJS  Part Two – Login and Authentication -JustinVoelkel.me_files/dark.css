@@ -1,0 +1,716 @@
+/*
+
+	1 - LAYOUT
+
+		1.1 - Header
+		1.2 - Content
+		1.3 - Footer
+
+	2 - COMMON
+
+		2.1 - Body
+		2.2 - Titles
+		2.3 - Links
+		2.4 - Images
+		2.5 - Fieldsets
+		2.6 - Code
+
+	3 - FORMS
+
+	4 - COMMENTS
+
+	5 - ARCHIVE
+
+	6 - STANDARD WIDGETS
+
+		6.1 - Search
+
+	7 - CUSTOM WIDGETS
+
+		7.1 - ST Sharrre
+		7.2 - ST Subscribe
+
+	8 - SHORTCODES
+
+		8.1 - Toggle
+		8.2 - Tabs
+		8.3 - Tooltip
+		8.4 - Notice
+		8.5 - Skill
+		8.6 - Separator OR
+
+	9 - 16 PIXELS
+
+	10 - PAGINATION
+
+		10.1 - Comments pagination
+		10.2 - Default pagination
+		10.3 - WP-Pagenavi
+
+	11 - POST
+
+		11.1 - Post info
+		11.2 - Prev/Next post links
+
+	12 - FORMATS		
+
+	13 - TEMPLATES
+
+		13.1 - Default
+		13.2 - Template 1
+		13.3 - Template 2
+		13.4 - Template 5
+		13.5 - Template 6
+
+	14 - 404
+
+*/
+
+/*==01.==========================================
+
+	L A Y O U T
+	Layout styles
+
+===============================================*/
+
+	/*-------------------------------------------
+		1.1 - Header
+	-------------------------------------------*/
+
+	#header-layout-2 {
+	}
+
+
+	/*-------------------------------------------
+		1.2 - Content
+	-------------------------------------------*/
+
+	/* If sidebar by right */
+	.sidebar-position-right #content-box > div {
+		background: url('../../images/line-light.png') right top repeat-y;
+	}
+
+	/* If sidebar by left */
+	.sidebar-position-left #content-box > div {
+		background: url('../../images/line-light.png') left top repeat-y;
+	}
+
+
+	/*-------------------------------------------
+		1.3 - Footer
+	-------------------------------------------*/
+
+	#copyrights-holder {
+		background-image: url('../../images/bg-white-05.png');
+	}
+
+
+/*==02.==========================================
+
+	C O M M O N
+	General styles
+
+===============================================*/
+
+	/*--- Body --------------------------------*/
+
+	body {
+		color: #AAADAE;
+		background: #494158 url('../../images/bg-black-25.png');
+	}
+
+
+	/*--- Titles ------------------------------*/
+
+	.dark h1,
+	.dark h2,
+	.dark h3,
+	.dark h4,
+	.dark h5,
+	.dark h6 {
+		color: #FFF;
+	}
+
+		.dark h2 a,
+		.dark h3 a,
+		.dark h4 a,
+		.dark h5 a,
+		.dark h6 a {
+			color: #FFF;
+		}
+
+	.dark .term-title {
+		color: #FFF;
+	}
+
+
+	/*--- Links -------------------------------*/
+
+	.dark a:hover {
+		color: #FFF;
+	}
+
+
+	/*--- Attachment --------------------------*/
+
+	.wp-caption {
+		background: url('../../images/bg-black-25.png');
+	}
+
+
+	/*--- Gallery -----------------------------*/
+
+	.gallery {
+		background: url('../../images/bg-black-25.png');
+		border: none;
+	}
+
+	/*--- Code --------------------------------*/
+
+	pre {
+		color: #FFF;
+		background-color: transparent;
+		box-shadow: 0 0 1px rgba(255,255,255,0.2);
+	}
+
+
+/*==03.==========================================
+
+	F O R M S
+	Styles for HTML Controls
+
+===============================================*/
+
+	input,
+	select,
+	textarea {
+		color: inherit;
+		padding: 11px;
+		background: url('../../images/bg-black-25.png');
+		border: none;
+	}
+	
+	input:focus,
+	select:focus,
+	textarea:focus {
+		color: #FFF;
+		border: none;
+	}
+
+
+/*==04.==========================================
+
+	C O M M E N T S
+	Comment styles
+
+===============================================*/
+
+	.comment-author,
+	.comment-author a {
+		color: #FFF;
+	}
+
+
+/*==05.==========================================
+
+	A R C H I V E
+	Styles for Archive page
+
+===============================================*/
+	
+	.term-description {
+	}
+
+
+/*==06.==========================================
+
+	S T A N D A R D   W I D G E T S
+	Default WordPress widgets
+
+===============================================*/
+
+	/*--- Search ------------------------------*/
+
+	.widget_search form > div {
+		background: url('../../images/bg-black-25.png');
+		padding: 11px 45px 11px 11px;
+		border: none;
+	}
+	
+		.widget_search input[name="s"] {
+			color: #FFF;
+			background: none;
+		}
+	
+		.widget_search input[type="submit"] {
+			background: url('../../images/icons/16/glyphs/white/search.png') center center no-repeat;
+		}
+
+			.hidpi .widget_search input[type="submit"] {
+				background-image: url('../../images/icons/32/glyphs/white/search.png');
+				background-size: 16px 16px;
+			}
+
+
+/*==07.==========================================
+
+	C U S T O M   W I D G E T S
+	Another WordPress widgets
+
+===============================================*/
+
+	/*--- ST Sharrre --------------------------*/
+
+	.sharrre .count {
+		color: #FFF;
+		border: none;
+		background: url('../../images/bg-black-25.png');
+	}
+
+		.stickyDiv .sharrre .count:before {
+			border-color: #000 transparent transparent;
+			opacity: 0.25;
+		}
+
+		.sharrre .count:after {
+			display: none;
+		}
+
+
+	/*--- ST Subscribe ------------------------*/
+
+	.widget-subscribe form > div {
+		background: url('../../images/bg-black-25.png');
+		padding: 11px 45px 11px 11px;
+		border: none;
+	}
+
+		.widget-subscribe input[name="email"] {
+			background: none;
+		}
+	
+		.widget-subscribe input[type="submit"] {
+			background: url('../../../../../plugins/stkit/assets/images/icons/16/glyphs/white/mail.png') center center no-repeat;
+		}
+	
+			.hidpi .widget-subscribe input[type="submit"] {
+				background-image: url('../../../../../plugins/stkit/assets/images/icons/32/glyphs/white/mail.png');
+				background-size: 16px 16px;
+			}
+
+
+/*==08.==========================================
+
+	S H O R T C O D E S
+	Shortcode styles
+
+===============================================*/
+
+	/*--- Toggle ------------------------------*/
+
+	.toggle {
+		box-shadow: 1px 1px 0 rgba(255,255,255,0.15) inset, -1px -1px 0 rgba(255,255,255,0.15) inset;
+	}
+
+		.toggle-title:hover,
+		.toggle-opened .toggle-title {
+			color: #FFF;
+		}
+
+		.toggle-box {
+			border-top-color: #666;
+		}
+
+
+	/*--- Tab labels --------------------------*/
+
+	.st-ul {
+		margin: 0;
+		border-left: none;
+	}
+	
+		.st-ul li {
+			margin-right: 2px;
+			border-top-color: transparent;
+			border-right: none;
+			background: url('../../images/bg-black-20.png');
+		}
+
+			.st-ul li:hover {
+				color: #FFF;
+				background: url('../../images/bg-black-25.png');
+			}
+
+			.st-ul li.st-current,
+			.st-ul li.st-current:hover {
+				background: url('../../images/bg-black-25.png');
+			}
+
+			
+	/*--- Tabs --------------------------------*/
+
+	.st-tabs {
+		background: url('../../images/bg-black-25.png');
+		border: none;
+	}
+
+
+	/*--- Tooltip -----------------------------*/
+
+	.tooltip-holder {
+		background: #111;
+	}
+
+		.tooltip-holder:before {
+			border-color: transparent transparent transparent #111;
+		}
+
+
+	/*--- Notice ------------------------------*/
+
+	.notice {
+		background: url('../../images/bg-black-30.png');
+	}
+
+
+	/*--- Skill ------------------------------*/
+
+	.skill {
+		background: url('../../images/bg-black-30.png');
+	}
+
+
+	/*--- Separator OR ------------------------*/
+
+	.separator-or span {
+		background: #394043;
+	}
+
+
+/*==09.==========================================
+
+	1 6   P I X E L S
+	16px icons
+
+===============================================*/
+
+	.ico16-folder {
+		background-image: url('../../images/icons/16/glyphs/white/folder.png'); }
+
+		.hidpi .ico16-folder {
+			background-image: url('../../images/icons/32/glyphs/white/folder.png'); }
+
+
+	.ico16-calendar {
+		background-image: url('../../images/icons/16/glyphs/white/calendar.png'); }
+
+		.hidpi .ico16-calendar {
+			background-image: url('../../images/icons/32/glyphs/white/calendar.png'); }
+
+
+	.ico16-tag {
+		background-image: url('../../images/icons/16/glyphs/white/tag.png'); }
+
+		.hidpi .ico16-tag {
+			background-image: url('../../images/icons/32/glyphs/white/tag.png'); }
+
+
+	.ico16-comment {
+		background-image: url('../../images/icons/16/glyphs/white/comment.png'); }
+
+		.hidpi .ico16-comment {
+			background-image: url('../../images/icons/32/glyphs/white/comment.png'); }
+
+
+	.ico16-comment-2 {
+		background-image: url('../../images/icons/16/glyphs/white/comment-2.png'); }
+
+		.hidpi .ico16-comment-2 {
+			background-image: url('../../images/icons/32/glyphs/white/comment-2.png'); }
+
+
+	.ico16-link {
+		background-image: url('../../images/icons/16/glyphs/white/link.png'); }
+
+		.hidpi .ico16-link {
+			background-image: url('../../images/icons/32/glyphs/white/link.png'); }
+
+
+	.ico16-image {
+		background-image: url('../../images/icons/16/glyphs/white/image.png'); }
+
+		.hidpi .ico16-image {
+			background-image: url('../../images/icons/32/glyphs/white/image.png'); }
+
+
+	.ico16-gallery {
+		background-image: url('../../images/icons/16/glyphs/white/gallery.png'); }
+
+		.hidpi .ico16-gallery {
+			background-image: url('../../images/icons/32/glyphs/white/gallery.png'); }
+
+
+	.ico16-audio {
+		background-image: url('../../images/icons/16/glyphs/white/audio.png'); }
+
+		.hidpi .ico16-audio {
+			background-image: url('../../images/icons/32/glyphs/white/audio.png'); }
+
+
+	.ico16-video {
+		background-image: url('../../images/icons/16/glyphs/white/video.png'); }
+
+		.hidpi .ico16-video {
+			background-image: url('../../images/icons/32/glyphs/white/video.png'); }
+
+
+	.ico16-quote {
+		background-image: url('../../images/icons/16/glyphs/white/quote.png'); }
+
+		.hidpi .ico16-quote {
+			background-image: url('../../images/icons/32/glyphs/white/quote.png'); }
+
+
+	.ico16-status {
+		background-image: url('../../images/icons/16/glyphs/white/user.png'); }
+
+		.hidpi .ico16-status {
+			background-image: url('../../images/icons/32/glyphs/white/user.png'); }
+
+
+	.ico16-views {
+		background-image: url('../../images/icons/16/glyphs/white/view.png'); }
+
+		.hidpi .ico16-views {
+			background-image: url('../../images/icons/32/glyphs/white/view.png'); }
+
+
+/*==10.==========================================
+
+	P A G I N A T I O N
+	1,2,3,4...
+
+===============================================*/
+
+	/*--- Comments pagination -----------------*/
+
+	.nav-next a,
+	.nav-previous a {
+		color: inherit;
+	}
+
+
+	/*--- Default pagination ------------------*/
+
+	.dark #but-prev-next a {
+		color: #FFF;
+	}
+
+		.dark #but-prev-next a:hover {
+			color: #494158;
+		}
+
+	/*--- WP-Pagenavi -------------------------*/
+
+	.dark #wp-pagenavibox .wp-pagenavi * {
+		color: #FFF;
+	}
+
+		.dark #wp-pagenavibox .wp-pagenavi a:hover {
+			color: #494158;
+		}
+
+		/* 1 2 [3] 4 5 */
+		#wp-pagenavibox span.current {
+			background: url('../../images/bg-white-10.png') repeat;
+		}
+
+
+/*==11.==========================================
+
+	P O S T
+	Styles for post page
+
+===============================================*/
+
+	/*--- Post info ---------------------------*/
+
+	#post-short-info-cats {
+		background-image: url('../../images/icons/16/glyphs/white/folder.png');
+	}
+
+		.hidpi #post-short-info-cats {
+			background-image: url('../../images/icons/32/glyphs/white/folder.png');
+			background-size: 16px 16px;
+		}
+
+	#post-short-info-tags {
+		background-image: url('../../images/icons/16/glyphs/white/tag.png');
+	}
+
+		.hidpi #post-short-info-tags {
+			background-image: url('../../images/icons/32/glyphs/white/tag.png');
+			background-size: 16px 16px;
+		}
+
+	#post-short-info-date {
+		background-image: url('../../images/icons/16/glyphs/white/calendar.png');
+	}
+
+		.hidpi #post-short-info-date {
+			background-image: url('../../images/icons/32/glyphs/white/calendar.png');
+			background-size: 16px 16px;
+		}
+
+	#post-short-info-views {
+		background-image: url('../../images/icons/16/glyphs/white/view.png');
+	}
+
+		.hidpi #post-short-info-views {
+			background-image: url('../../images/icons/32/glyphs/white/view.png');
+			background-size: 16px 16px;
+		}
+
+
+	/*--- Prev/Next post links ----------------*/
+
+	#pre_next_post {
+		background: url('../../images/line-light.png') center center repeat-y;
+		box-shadow: 0 1px 0 rgba(255,255,255,0.1) inset, 0 -1px 0 rgba(255,255,255,0.1) inset;
+	}
+
+
+/*==12.==========================================
+
+	F O R M A T S
+	Styles for post formats
+
+===============================================*/
+
+	/*-------------------------------------------
+		4.3 - Link
+	-------------------------------------------*/
+
+	.st-format-link-holder {
+		background: url('../../images/bg-black-25.png');
+	}
+
+		.st-format-link-holder a:before {
+			background: url('../../images/icons/32/glyphs/white/link.png') center no-repeat;
+		}
+
+			.hidpi .st-format-link-holder a:before {
+				background-image: url('../../images/icons/64/glyphs/white/link.png');
+			}
+
+
+	/*-------------------------------------------
+		4.4 - Quote
+	-------------------------------------------*/
+
+	.st-format-quote-holder {
+		background: url('../../images/bg-black-25.png');
+	}
+
+
+/*==13.==========================================
+
+	T E M P L A T E S
+	Styles for post templates
+
+===============================================*/
+
+	/*--- Sticky post ---------------------------*/
+
+	#content-box .sticky {
+		background: url('../../images/bg-black-30.png');
+	}
+
+
+	/*--- Default -----------------------------*/
+
+	/* Info */
+	.projects-default-wrapper .project-info {
+		background: url('../../images/bg-black-25.png') repeat;
+	}
+
+
+	/*--- Dummy -----------------------------*/
+
+	.default-dummy {
+		background: url('../../images/bg-black-25.png') repeat;
+	}
+
+
+	/*-------------------------------------------
+		2.2 - Template 1
+	-------------------------------------------*/
+
+	/*--- Dummy -----------------------------*/
+
+	.t1-dummy-big {
+		background: url('../../images/bg-black-25.png') repeat;
+	}
+
+	.t1-dummy {
+		background: url('../../images/bg-black-25.png') repeat;
+	}
+
+
+	/*-------------------------------------------
+		2.3 - Template 2
+	-------------------------------------------*/
+
+	/*--- Dummy -----------------------------*/
+
+	.t2-dummy-big {
+		background: url('../../images/bg-black-25.png') repeat;
+	}
+
+	.t2-dummy {
+		background: url('../../images/bg-black-25.png') repeat;
+	}
+
+
+	/*-------------------------------------------
+		2.4 - Template 5
+	-------------------------------------------*/
+
+	/* Info */
+	.projects-t5-wrapper .project-info {
+		background: url('../../images/bg-black-25.png') repeat;
+	}
+
+
+	/*--- Dummy -----------------------------*/
+
+	.t5-dummy {
+		background: url('../../images/bg-black-25.png') repeat;
+	}
+
+
+	/*-------------------------------------------
+		2.5 - Template 6
+	-------------------------------------------*/
+
+	/* Info */
+	.projects-t6-wrapper .project {
+		background: url('../../images/bg-black-25.png') repeat;
+	}
+
+	.projects-t6-wrapper h3:before,
+	.projects-t6-wrapper h3:after {
+		display: none;
+	}
+
+
+/*==14.==========================================
+
+	4 0 4
+	Styles for error page
+
+===============================================*/
+
+	#page-404 form input {
+		border: 1px solid #666;
+	}
