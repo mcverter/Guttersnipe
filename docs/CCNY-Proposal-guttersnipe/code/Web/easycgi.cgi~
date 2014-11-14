@@ -1,0 +1,8 @@
+#!/usr/bin/perl
+
+use CGI qw (:standard) ;
+
+my $cgi = new CGI;
+print start_html;
+print "hi";
+print end_html;

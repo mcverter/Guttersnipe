@@ -1,0 +1,15 @@
+#!/usr/bin/perl
+use DB_File;
+
+my %dbhash;
+tie %dbhash, 'DB_File', "properties.db", O_RDWR|O_CREAT, 0644, $DB_BTREE or die  ("could not open file");
+open (TEMP_DB, "temp.db") || die "could not open temp.db";
+while (<TEMP_DB>) 
+{
+    $_ =~ /(.+[0-9]{9,9})(.+)/;
+    print "Dollar one is $1\n";
+    print "Dollar two is $2\n";
+    $dbhash{$1} = $2;
+}  
+
+untie %dbhash;

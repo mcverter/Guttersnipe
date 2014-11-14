@@ -1,0 +1,472 @@
+[Tue Jul 24 02:17:18 2001] searchsquat.cgi: String found where operator expected at searchsquat.cgi line 104, near "print ""
+[Tue Jul 24 02:17:18 2001] searchsquat.cgi:   (Might be a runaway multi-line "" string starting on line 103)
+[Tue Jul 24 02:17:18 2001] searchsquat.cgi: 	(Missing semicolon on previous line?)
+syntax error at searchsquat.cgi line 104, near "print ""
+[Tue Jul 24 02:17:18 2001] searchsquat.cgi: Scalar found where operator expected at searchsquat.cgi line 104, at end of line
+[Tue Jul 24 02:17:18 2001] searchsquat.cgi: 	(Missing operator before ?)
+[Tue Jul 24 02:17:18 2001] searchsquat.cgi: Bareword found where operator expected at searchsquat.cgi line 104, near "/a></li"
+[Tue Jul 24 02:17:18 2001] searchsquat.cgi: 	(Missing operator before li?)
+[Tue Jul 24 02:17:18 2001] searchsquat.cgi: String found where operator expected at searchsquat.cgi line 106, near "print ""
+[Tue Jul 24 02:17:18 2001] searchsquat.cgi:   (Might be a runaway multi-line "" string starting on line 104)
+[Tue Jul 24 02:17:18 2001] searchsquat.cgi: 	(Missing semicolon on previous line?)
+[Tue Jul 24 02:17:18 2001] searchsquat.cgi: Bareword found where operator expected at searchsquat.cgi line 109, near "print "<H2><a name=\"#address$i\">$daa</a"
+[Tue Jul 24 02:17:18 2001] searchsquat.cgi:   (Might be a runaway multi-line // string starting on line 106)
+[Tue Jul 24 02:17:18 2001] searchsquat.cgi: 	(Do you need to predeclare print?)
+[Tue Jul 24 02:17:18 2001] searchsquat.cgi: String found where operator expected at searchsquat.cgi line 112, near "print ""
+[Tue Jul 24 02:17:18 2001] searchsquat.cgi:   (Might be a runaway multi-line "" string starting on line 109)
+[Tue Jul 24 02:17:18 2001] searchsquat.cgi: 	(Missing semicolon on previous line?)
+syntax error at searchsquat.cgi line 115, near "}"
+[Tue Jul 24 02:17:18 2001] searchsquat.cgi: Execution of searchsquat.cgi aborted due to compilation errors.
+[Tue Jul 24 02:21:24 2001] searchsquat.cgi: Scalar found where operator expected at searchsquat.cgi line 84, at end of line
+[Tue Jul 24 02:21:24 2001] searchsquat.cgi: 	(Missing semicolon on previous line?)
+syntax error at searchsquat.cgi line 84, near "$address "
+[Tue Jul 24 02:21:24 2001] searchsquat.cgi: Execution of searchsquat.cgi aborted due to compilation errors.
+syntax error at searchsquat.cgi line 108, near "print"
+[Tue Jul 24 02:43:52 2001] searchsquat.cgi: Execution of searchsquat.cgi aborted due to compilation errors.
+Missing right bracket at searchsquat.cgi line 177, at end of line
+syntax error at searchsquat.cgi line 177, at EOF
+[Sat Aug  4 13:31:21 2001] searchsquat.cgi: Execution of searchsquat.cgi aborted due to compilation errors.
+[Wed Nov 28 10:51:53 2001] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Thu Nov 29 01:49:06 2001] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Thu Nov 29 01:49:17 2001] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Thu Nov 29 01:49:26 2001] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Sun Dec  2 22:38:58 2001] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Sun Dec  2 22:39:08 2001] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Sun Dec  2 22:39:18 2001] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Sun Dec  2 22:39:27 2001] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Mon Dec  3 21:51:02 2001] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Mon Dec  3 21:51:13 2001] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Mon Dec  3 21:52:25 2001] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Mon Dec  3 21:52:33 2001] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Thu Dec 13 23:40:24 2001] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Wed Jan  2 20:16:50 2002] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Wed Jan  2 20:17:10 2002] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Mon Jan  7 12:46:17 2002] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Mon Jan  7 12:46:42 2002] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Mon Jan 14 13:38:06 2002] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Tue Jan 29 20:20:26 2002] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Tue Jan 29 20:33:44 2002] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Tue Jan 29 20:34:00 2002] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Tue Jan 29 20:34:13 2002] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Tue Jan 29 20:34:23 2002] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Tue Jan 29 20:34:37 2002] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Tue Jan 29 20:34:52 2002] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Tue Jan 29 20:35:14 2002] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Wed Jan 30 02:24:10 2002] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Thu Feb  7 01:31:31 2002] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Thu Feb  7 01:32:22 2002] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Thu Feb  7 23:37:33 2002] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Thu Feb  7 23:38:26 2002] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Mon Apr  1 02:13:22 2002] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Mon Apr  1 02:13:31 2002] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Mon Apr  1 02:13:46 2002] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Mon Apr  1 02:14:04 2002] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Mon Apr  1 02:14:16 2002] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Mon Apr  1 02:15:02 2002] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Mon Apr  1 02:18:31 2002] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Mon Apr  1 02:23:14 2002] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Mon Apr  1 02:29:02 2002] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Mon Apr  1 02:35:13 2002] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Mon Apr  1 02:35:19 2002] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Mon Apr  1 02:36:22 2002] searchsquat.cgi: could not open file at searchsquat.cgi line 144.
+[Mon Apr  1 02:36:49 2002] searchsquat.cgi: could not oooopen file at searchsquat.cgi line 144.
+[Mon Apr  1 02:37:16 2002] searchsquat.cgi: could not oooopen file at searchsquat.cgi line 144.
+[Mon Apr  1 02:48:05 2002] searchsquat.cgi: Can't call method "seq" on an undefined value at searchsquat.cgi line 80.
+[Mon Apr  1 02:48:11 2002] searchsquat.cgi: Can't call method "seq" on an undefined value at searchsquat.cgi line 80.
+[Wed May 12 10:26:55 2004] rentForm.pl: Prototype mismatch: sub main::runStage_2 vs (0.5) at rentForm.pl line 148.
+[Wed May 12 10:26:55 2004] rentForm.pl: Can't find string terminator "=====" anywhere before EOF at rentForm.pl line 156.
+[Wed May 12 10:28:13 2004] rentForm.pl: Prototype mismatch: sub main::runStage_2 vs (0.5) at rentForm.pl line 148.
+[Wed May 12 10:28:13 2004] rentForm.pl: Can't find string terminator "=====" anywhere before EOF at rentForm.pl line 156.
+[Wed May 12 10:29:22 2004] rentForm.pl: Prototype mismatch: sub main::runStage_2 vs (0.5) at rentForm.pl line 148.
+[Wed May 12 10:31:09 2004] rentForm.cgi: Prototype mismatch: sub main::runStage_2 vs (0.5) at rentForm.cgi line 148.
+[Wed May 12 10:45:02 2004] moo.cgi: Prototype mismatch: sub main::runStage_2 vs (0.5) at moo.cgi line 150.
+[Wed May 12 11:22:17 2004] moo.cgi: Prototype mismatch: sub main::runStage_2 vs (0.5) at moo.cgi line 152.
+[Wed May 12 11:22:17 2004] moo.cgi: syntax error at moo.cgi line 187, near ")
+[Wed May 12 11:22:17 2004] moo.cgi: {"
+[Wed May 12 11:22:17 2004] moo.cgi: Execution of moo.cgi aborted due to compilation errors.
+[Wed May 12 11:22:51 2004] moo.cgi: Prototype mismatch: sub main::runStage_2 vs (0.5) at moo.cgi line 152.
+[Wed May 12 11:22:55 2004] moo.cgi: Prototype mismatch: sub main::runStage_2 vs (0.5) at moo.cgi line 152.
+[Wed May 12 11:25:13 2004] moo.cgi: Prototype mismatch: sub main::runStage_2 vs (0.5) at moo.cgi line 153.
+[Wed May 12 11:25:16 2004] moo.cgi: Prototype mismatch: sub main::runStage_2 vs (0.5) at moo.cgi line 153.
+[Wed May 12 11:26:18 2004] moo.cgi: Prototype mismatch: sub main::runStage_2 vs (0.5) at moo.cgi line 153.
+[Mon May 17 18:01:03 2004] moo.cgi: syntax error at moo.cgi line 534, near "my "
+[Mon May 17 18:01:03 2004] moo.cgi: BEGIN not safe after errors--compilation aborted at moo.cgi line 539.
+[Mon May 17 18:02:50 2004] moo.cgi: Bareword found where operator expected at moo.cgi line 541, near "</span"
+[Mon May 17 18:02:50 2004] moo.cgi:   (Might be a runaway multi-line // string starting on line 539)
+[Mon May 17 18:02:50 2004] moo.cgi: 	(Missing operator before pan?)
+[Mon May 17 18:02:50 2004] moo.cgi: syntax error at moo.cgi line 541, near "</span"
+[Mon May 17 18:02:50 2004] moo.cgi: Unterminated <> operator at moo.cgi line 541.
+[Mon May 17 18:02:55 2004] moo.cgi: Bareword found where operator expected at moo.cgi line 541, near "</span"
+[Mon May 17 18:02:55 2004] moo.cgi:   (Might be a runaway multi-line // string starting on line 539)
+[Mon May 17 18:02:55 2004] moo.cgi: 	(Missing operator before pan?)
+[Mon May 17 18:02:55 2004] moo.cgi: syntax error at moo.cgi line 541, near "</span"
+[Mon May 17 18:02:55 2004] moo.cgi: Unterminated <> operator at moo.cgi line 541.
+[Mon May 17 18:03:24 2004] moo.cgi: Bareword found where operator expected at moo.cgi line 541, near "</span"
+[Mon May 17 18:03:24 2004] moo.cgi:   (Might be a runaway multi-line // string starting on line 539)
+[Mon May 17 18:03:24 2004] moo.cgi: 	(Missing operator before pan?)
+[Mon May 17 18:03:24 2004] moo.cgi: syntax error at moo.cgi line 541, near "</span"
+[Mon May 17 18:03:24 2004] moo.cgi: Unterminated <> operator at moo.cgi line 541.
+[Mon May 17 18:03:31 2004] moo.cgi: Bareword found where operator expected at moo.cgi line 541, near "</span"
+[Mon May 17 18:03:31 2004] moo.cgi:   (Might be a runaway multi-line // string starting on line 539)
+[Mon May 17 18:03:31 2004] moo.cgi: 	(Missing operator before pan?)
+[Mon May 17 18:03:31 2004] moo.cgi: syntax error at moo.cgi line 541, near "</span"
+[Mon May 17 18:03:31 2004] moo.cgi: Unterminated <> operator at moo.cgi line 541.
+[Mon May 17 18:03:40 2004] moo.cgi: Bareword found where operator expected at moo.cgi line 541, near "</span"
+[Mon May 17 18:03:40 2004] moo.cgi:   (Might be a runaway multi-line // string starting on line 539)
+[Mon May 17 18:03:40 2004] moo.cgi: 	(Missing operator before pan?)
+[Mon May 17 18:03:40 2004] moo.cgi: syntax error at moo.cgi line 541, near "</span"
+[Mon May 17 18:03:40 2004] moo.cgi: Unterminated <> operator at moo.cgi line 541.
+[Mon May 17 18:20:16 2004] moo.cgi: syntax error at moo.cgi line 548, near "if $newTenancy "
+[Mon May 17 18:20:16 2004] moo.cgi:   (Might be a runaway multi-line << string starting on line 539)
+[Mon May 17 18:20:16 2004] moo.cgi: syntax error at moo.cgi line 552, near "else"
+[Mon May 17 18:20:16 2004] moo.cgi: Execution of moo.cgi aborted due to compilation errors.
+[Mon May 17 18:20:18 2004] moo.cgi: syntax error at moo.cgi line 548, near "if $newTenancy "
+[Mon May 17 18:20:18 2004] moo.cgi:   (Might be a runaway multi-line << string starting on line 539)
+[Mon May 17 18:20:18 2004] moo.cgi: syntax error at moo.cgi line 552, near "else"
+[Mon May 17 18:20:18 2004] moo.cgi: Execution of moo.cgi aborted due to compilation errors.
+[Tue May 18 20:11:26 2004] moo.cgi: elseif should be elsif at moo.cgi line 1248.
+[Tue May 18 20:11:26 2004] moo.cgi: syntax error at moo.cgi line 1249, near ")
+[Tue May 18 20:11:26 2004] moo.cgi: {"
+[Tue May 18 20:11:26 2004] moo.cgi: syntax error at moo.cgi line 1290, near "}"
+[Tue May 18 20:11:26 2004] moo.cgi: Execution of moo.cgi aborted due to compilation errors.
+[Tue May 18 20:12:31 2004] moo.cgi: elseif should be elsif at moo.cgi line 1248.
+[Tue May 18 20:12:31 2004] moo.cgi: syntax error at moo.cgi line 1249, near ")
+[Tue May 18 20:12:31 2004] moo.cgi: {"
+[Tue May 18 20:12:31 2004] moo.cgi: syntax error at moo.cgi line 1290, near "}"
+[Tue May 18 20:12:31 2004] moo.cgi: Execution of moo.cgi aborted due to compilation errors.
+[Tue May 18 20:13:19 2004] moo.cgi: Undefined subroutine &main::PayToWhom called at moo.cgi line 1234.
+[Tue May 18 20:14:28 2004] moo.cgi: Variable "$hidden" is not imported at moo.cgi line 44.
+[Tue May 18 20:14:28 2004] moo.cgi: 	(Did you mean &hidden instead?)
+[Tue May 18 20:14:28 2004] moo.cgi: Variable "@font" is not imported at moo.cgi line 274.
+[Tue May 18 20:14:28 2004] moo.cgi: 	(Did you mean &font instead?)
+[Tue May 18 20:14:28 2004] moo.cgi: Variable "@font" is not imported at moo.cgi line 274.
+[Tue May 18 20:14:28 2004] moo.cgi: 	(Did you mean &font instead?)
+[Tue May 18 20:14:28 2004] moo.cgi: Variable "@font" is not imported at moo.cgi line 274.
+[Tue May 18 20:14:28 2004] moo.cgi: 	(Did you mean &font instead?)
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$hidden" requires explicit package name at moo.cgi line 44.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$whenMove" requires explicit package name at moo.cgi line 162.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "@font" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "@font" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "@font" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "@page" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "@page" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "@list" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "@list" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$whenMove" requires explicit package name at moo.cgi line 601.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$moveInRent" requires explicit package name at moo.cgi line 631.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1187.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1188.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1195.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1196.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1197.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1200.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1213.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$whenMove" requires explicit package name at moo.cgi line 1214.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1214.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1215.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1218.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1219.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1220.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1227.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$whenMove" requires explicit package name at moo.cgi line 1228.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1228.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1229.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1230.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1231.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1232.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1233.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1234.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1241.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$whenMove" requires explicit package name at moo.cgi line 1242.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1242.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1243.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1244.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1245.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1246.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1252.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$whenMove" requires explicit package name at moo.cgi line 1253.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1253.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1254.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1255.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1256.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1257.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1259.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1260.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1261.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1262.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$nextDate" requires explicit package name at moo.cgi line 1263.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$nextDate" requires explicit package name at moo.cgi line 1264.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1266.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$increment" requires explicit package name at moo.cgi line 1267.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1267.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$increment" requires explicit package name at moo.cgi line 1268.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1270.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$newRent" requires explicit package name at moo.cgi line 1271.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1271.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$newRent" requires explicit package name at moo.cgi line 1272.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1274.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$reason" requires explicit package name at moo.cgi line 1275.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1275.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$reason" requires explicit package name at moo.cgi line 1276.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1278.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$evidence" requires explicit package name at moo.cgi line 1279.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1279.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$evidence" requires explicit package name at moo.cgi line 1280.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$mycgi" requires explicit package name at moo.cgi line 1282.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$bilSumbit" requires explicit package name at moo.cgi line 1284.
+[Tue May 18 20:14:28 2004] moo.cgi: Global symbol "$bilSumbit" requires explicit package name at moo.cgi line 1288.
+[Tue May 18 20:14:28 2004] moo.cgi: Execution of moo.cgi aborted due to compilation errors.
+[Tue May 18 20:16:08 2004] moo.cgi: Variable "@font" is not imported at moo.cgi line 274.
+[Tue May 18 20:16:08 2004] moo.cgi: 	(Did you mean &font instead?)
+[Tue May 18 20:16:08 2004] moo.cgi: Variable "@font" is not imported at moo.cgi line 274.
+[Tue May 18 20:16:08 2004] moo.cgi: 	(Did you mean &font instead?)
+[Tue May 18 20:16:08 2004] moo.cgi: Variable "@font" is not imported at moo.cgi line 274.
+[Tue May 18 20:16:08 2004] moo.cgi: 	(Did you mean &font instead?)
+[Tue May 18 20:16:08 2004] moo.cgi: Global symbol "@font" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:16:08 2004] moo.cgi: Global symbol "@font" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:16:08 2004] moo.cgi: Global symbol "@font" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:16:08 2004] moo.cgi: Global symbol "@page" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:16:08 2004] moo.cgi: Global symbol "@page" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:16:08 2004] moo.cgi: Global symbol "@list" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:16:08 2004] moo.cgi: Global symbol "@list" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:16:08 2004] moo.cgi: Global symbol "$moveInRent" requires explicit package name at moo.cgi line 631.
+[Tue May 18 20:16:08 2004] moo.cgi: Global symbol "$nextDate" requires explicit package name at moo.cgi line 1263.
+[Tue May 18 20:16:08 2004] moo.cgi: Global symbol "$nextDate" requires explicit package name at moo.cgi line 1264.
+[Tue May 18 20:16:08 2004] moo.cgi: Global symbol "$increment" requires explicit package name at moo.cgi line 1267.
+[Tue May 18 20:16:08 2004] moo.cgi: Global symbol "$increment" requires explicit package name at moo.cgi line 1268.
+[Tue May 18 20:16:08 2004] moo.cgi: Global symbol "$newRent" requires explicit package name at moo.cgi line 1271.
+[Tue May 18 20:16:08 2004] moo.cgi: Global symbol "$newRent" requires explicit package name at moo.cgi line 1272.
+[Tue May 18 20:16:08 2004] moo.cgi: Global symbol "$reason" requires explicit package name at moo.cgi line 1275.
+[Tue May 18 20:16:08 2004] moo.cgi: Global symbol "$reason" requires explicit package name at moo.cgi line 1276.
+[Tue May 18 20:16:08 2004] moo.cgi: Global symbol "$evidence" requires explicit package name at moo.cgi line 1279.
+[Tue May 18 20:16:08 2004] moo.cgi: Global symbol "$evidence" requires explicit package name at moo.cgi line 1280.
+[Tue May 18 20:16:08 2004] moo.cgi: Global symbol "$bilSumbit" requires explicit package name at moo.cgi line 1284.
+[Tue May 18 20:16:08 2004] moo.cgi: Global symbol "$bilSumbit" requires explicit package name at moo.cgi line 1288.
+[Tue May 18 20:16:08 2004] moo.cgi: Execution of moo.cgi aborted due to compilation errors.
+[Tue May 18 20:18:02 2004] moo.cgi: Variable "@font" is not imported at moo.cgi line 274.
+[Tue May 18 20:18:02 2004] moo.cgi: 	(Did you mean &font instead?)
+[Tue May 18 20:18:02 2004] moo.cgi: Variable "@font" is not imported at moo.cgi line 274.
+[Tue May 18 20:18:02 2004] moo.cgi: 	(Did you mean &font instead?)
+[Tue May 18 20:18:02 2004] moo.cgi: Variable "@font" is not imported at moo.cgi line 274.
+[Tue May 18 20:18:02 2004] moo.cgi: 	(Did you mean &font instead?)
+[Tue May 18 20:18:02 2004] moo.cgi: Global symbol "@font" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:18:02 2004] moo.cgi: Global symbol "@font" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:18:02 2004] moo.cgi: Global symbol "@font" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:18:02 2004] moo.cgi: Global symbol "@page" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:18:02 2004] moo.cgi: Global symbol "@page" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:18:02 2004] moo.cgi: Global symbol "@list" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:18:02 2004] moo.cgi: Global symbol "@list" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:18:02 2004] moo.cgi: Global symbol "$moveInRent" requires explicit package name at moo.cgi line 631.
+[Tue May 18 20:18:02 2004] moo.cgi: Global symbol "$nextDate" requires explicit package name at moo.cgi line 1263.
+[Tue May 18 20:18:02 2004] moo.cgi: Global symbol "$nextDate" requires explicit package name at moo.cgi line 1264.
+[Tue May 18 20:18:02 2004] moo.cgi: Global symbol "$bilSumbit" requires explicit package name at moo.cgi line 1284.
+[Tue May 18 20:18:02 2004] moo.cgi: Global symbol "$bilSumbit" requires explicit package name at moo.cgi line 1288.
+[Tue May 18 20:18:02 2004] moo.cgi: Execution of moo.cgi aborted due to compilation errors.
+[Tue May 18 20:19:05 2004] moo.cgi: Variable "@font" is not imported at moo.cgi line 274.
+[Tue May 18 20:19:05 2004] moo.cgi: 	(Did you mean &font instead?)
+[Tue May 18 20:19:05 2004] moo.cgi: Variable "@font" is not imported at moo.cgi line 274.
+[Tue May 18 20:19:05 2004] moo.cgi: 	(Did you mean &font instead?)
+[Tue May 18 20:19:05 2004] moo.cgi: Variable "@font" is not imported at moo.cgi line 274.
+[Tue May 18 20:19:05 2004] moo.cgi: 	(Did you mean &font instead?)
+[Tue May 18 20:19:05 2004] moo.cgi: Global symbol "@font" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:19:05 2004] moo.cgi: Global symbol "@font" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:19:05 2004] moo.cgi: Global symbol "@font" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:19:05 2004] moo.cgi: Global symbol "@page" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:19:05 2004] moo.cgi: Global symbol "@page" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:19:05 2004] moo.cgi: Global symbol "@list" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:19:05 2004] moo.cgi: Global symbol "@list" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:19:05 2004] moo.cgi: Global symbol "$moveInRent" requires explicit package name at moo.cgi line 631.
+[Tue May 18 20:19:05 2004] moo.cgi: Global symbol "$nextDate" requires explicit package name at moo.cgi line 1263.
+[Tue May 18 20:19:05 2004] moo.cgi: Global symbol "$nextDate" requires explicit package name at moo.cgi line 1264.
+[Tue May 18 20:19:05 2004] moo.cgi: Execution of moo.cgi aborted due to compilation errors.
+[Tue May 18 20:23:16 2004] moo.cgi: Variable "@font" is not imported at moo.cgi line 274.
+[Tue May 18 20:23:16 2004] moo.cgi: 	(Did you mean &font instead?)
+[Tue May 18 20:23:16 2004] moo.cgi: Variable "@font" is not imported at moo.cgi line 274.
+[Tue May 18 20:23:16 2004] moo.cgi: 	(Did you mean &font instead?)
+[Tue May 18 20:23:16 2004] moo.cgi: Variable "@font" is not imported at moo.cgi line 274.
+[Tue May 18 20:23:16 2004] moo.cgi: 	(Did you mean &font instead?)
+[Tue May 18 20:23:16 2004] moo.cgi: Global symbol "@font" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:23:16 2004] moo.cgi: Global symbol "@font" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:23:16 2004] moo.cgi: Global symbol "@font" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:23:16 2004] moo.cgi: Global symbol "@page" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:23:16 2004] moo.cgi: Global symbol "@page" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:23:16 2004] moo.cgi: Global symbol "@list" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:23:16 2004] moo.cgi: Global symbol "@list" requires explicit package name at moo.cgi line 274.
+[Tue May 18 20:23:16 2004] moo.cgi: Execution of moo.cgi aborted due to compilation errors.
+[Tue May 18 20:26:49 2004] moo.cgi: Undefined subroutine &main::PayToWhom called at moo.cgi line 1236.
+[Tue May 18 20:53:39 2004] moo.cgi: Variable "$printq2Hiddens" is not imported at moo.cgi line 50.
+[Tue May 18 20:53:39 2004] moo.cgi: 	(Did you mean &printq2Hiddens instead?)
+[Tue May 18 20:53:39 2004] moo.cgi: Global symbol "$printq2Hiddens" requires explicit package name at moo.cgi line 50.
+[Tue May 18 20:53:39 2004] moo.cgi: Execution of moo.cgi aborted due to compilation errors.
+[Tue May 18 20:56:37 2004] moo.cgi: syntax error at moo.cgi line 193, near "print"
+[Tue May 18 20:56:37 2004] moo.cgi: syntax error at moo.cgi line 206, near "print"
+[Tue May 18 20:56:37 2004] moo.cgi: syntax error at moo.cgi line 224, near "print"
+[Tue May 18 20:56:37 2004] moo.cgi: syntax error at moo.cgi line 274, near "print"
+[Tue May 18 20:56:37 2004] moo.cgi: Execution of moo.cgi aborted due to compilation errors.
+[Tue May 18 21:07:21 2004] moo.cgi: syntax error at moo.cgi line 1258, near "elsif"
+[Tue May 18 21:07:21 2004] moo.cgi: syntax error at moo.cgi line 1271, near "}"
+[Tue May 18 21:07:21 2004] moo.cgi: Execution of moo.cgi aborted due to compilation errors.
+[Tue May 18 21:10:35 2004] moo.cgi: syntax error at moo.cgi line 1258, near "elsif"
+[Tue May 18 21:10:35 2004] moo.cgi: syntax error at moo.cgi line 1271, near "}"
+[Tue May 18 21:10:35 2004] moo.cgi: Execution of moo.cgi aborted due to compilation errors.
+[Tue May 18 21:11:54 2004] moo.cgi: Undefined subroutine &main::printq3Hiddens called at moo.cgi line 204.
+[Tue May 18 22:14:41 2004] moo.cgi: Bareword found where operator expected at moo.cgi line 792, near "$newTenancy neq"
+[Tue May 18 22:14:41 2004] moo.cgi:   (Might be a runaway multi-line << string starting on line 737)
+[Tue May 18 22:14:41 2004] moo.cgi: 	(Missing operator before neq?)
+[Tue May 18 22:14:41 2004] moo.cgi: String found where operator expected at moo.cgi line 792, near "neq "tenant""
+[Tue May 18 22:14:41 2004] moo.cgi: 	(Do you need to predeclare neq?)
+[Tue May 18 22:14:41 2004] moo.cgi: syntax error at moo.cgi line 792, near "$newTenancy neq "
+[Tue May 18 22:14:41 2004] moo.cgi: syntax error at moo.cgi line 796, near "else"
+[Tue May 18 22:14:41 2004] moo.cgi: Execution of moo.cgi aborted due to compilation errors.
+[Tue May 18 23:06:47 2004] moo.cgi: Global symbol "$increaseRemtList" requires explicit package name at moo.cgi line 1018.
+[Tue May 18 23:06:47 2004] moo.cgi: Execution of moo.cgi aborted due to compilation errors.
+[Mon Mar 28 11:33:07 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Tue Apr 12 02:06:24 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sun Apr 24 11:41:01 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sun Apr 24 11:42:17 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sun Apr 24 15:36:57 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sun Apr 24 15:37:34 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sun Apr 24 15:38:15 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu May 12 11:31:28 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sat May 14 13:27:38 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sat May 14 13:30:21 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sun May 15 08:56:56 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sun May 15 08:57:43 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sun May 15 08:58:13 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Fri Jun  3 15:49:02 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Fri Jun  3 15:49:20 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sun Jun 12 00:33:32 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sun Jun 12 00:33:44 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sun Jun 12 00:34:24 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sun Jun 12 00:34:34 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sun Jun 12 00:37:41 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu Jun 30 19:09:10 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu Jun 30 19:09:25 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu Jun 30 19:10:08 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu Jun 30 19:10:25 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu Jun 30 19:11:18 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu Jun 30 19:11:28 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu Jun 30 19:11:33 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu Jun 30 19:13:58 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu Jun 30 22:02:35 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu Jun 30 22:02:47 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Fri Jul  1 00:42:00 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sat Jul  9 21:38:05 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Wed Jul 13 21:01:33 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Mon Jul 18 12:06:52 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Mon Jul 18 12:07:02 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Mon Jul 18 12:07:26 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Mon Jul 18 16:58:34 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Fri Jul 22 23:17:16 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Fri Jul 22 23:17:45 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Fri Jul 22 23:17:53 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Tue Jul 26 21:54:08 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Tue Jul 26 21:54:34 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Fri Aug 19 10:02:03 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Fri Aug 19 10:02:44 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Fri Aug 19 10:04:02 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Fri Aug 19 10:04:42 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Fri Aug 19 10:06:01 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu Sep  1 15:22:52 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu Sep  1 15:23:55 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sat Sep  3 12:26:43 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sat Sep  3 12:26:55 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sat Oct 15 13:47:14 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sat Oct 22 18:47:24 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sat Oct 22 18:47:34 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sat Oct 22 19:01:53 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Mon Oct 24 07:48:27 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Mon Oct 24 07:48:32 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Mon Oct 24 07:48:52 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Mon Oct 24 07:49:05 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sat Dec  3 20:13:18 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sat Dec  3 20:13:40 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sat Dec  3 20:13:47 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Mon Dec  5 19:01:40 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sat Dec 10 17:40:41 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sat Dec 10 17:41:03 2005] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Wed Jan 18 17:38:19 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Mon Jan 23 17:51:42 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Mon Jan 23 17:51:52 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Mon Jan 23 17:53:17 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Wed Jan 25 10:34:39 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sat Feb  4 02:02:07 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sat Feb  4 02:02:26 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu Mar 23 09:40:00 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu Mar 23 09:40:14 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu Mar 23 13:43:58 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Wed Mar 29 19:42:39 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Mon Apr  3 14:01:52 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Mon Apr  3 14:02:14 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Fri Apr  7 18:08:41 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Mon Apr 10 07:12:21 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Wed Apr 12 19:44:04 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Wed Apr 12 19:44:12 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sat Apr 15 02:52:07 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sat Apr 15 02:52:12 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sun Apr 16 00:39:23 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sun Apr 16 00:39:30 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Mon Apr 17 19:28:36 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Mon Apr 17 23:20:25 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Mon Apr 17 23:21:05 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Mon Apr 17 23:21:25 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Wed Apr 19 20:47:07 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu Apr 20 09:50:00 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Tue Apr 25 13:34:15 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Tue Apr 25 13:34:58 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu Apr 27 13:15:40 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Fri Apr 28 16:41:03 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Fri Apr 28 16:41:19 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Tue May  2 12:02:00 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Tue May  2 12:02:31 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Tue May  2 12:02:38 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Tue May  2 12:15:25 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Tue May  2 12:16:59 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Tue May  2 12:17:05 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Tue May  2 12:59:21 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Tue May  2 13:26:18 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Tue May  2 13:26:30 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Tue May  2 13:26:45 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Tue May  2 14:45:53 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Tue May  2 14:46:02 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Tue May  2 14:46:08 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Tue May  2 16:06:50 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Tue May  2 20:37:28 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Wed May  3 02:25:47 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Wed May  3 08:20:52 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Wed May  3 08:35:24 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu May  4 13:10:32 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu May  4 13:10:40 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu May  4 13:11:50 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu May  4 13:38:40 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu May  4 18:06:59 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Fri May  5 08:19:16 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Fri May  5 09:49:40 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Fri May  5 10:11:29 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Fri May  5 10:11:41 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Fri May  5 17:14:14 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Fri May  5 17:14:45 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Fri May  5 17:15:48 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Fri May  5 17:16:26 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Fri May  5 17:16:54 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sun May  7 21:28:33 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sun May  7 21:29:05 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Sun May  7 21:29:21 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Tue May  9 12:13:53 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Tue May  9 12:14:03 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Tue May  9 13:15:15 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Wed May 10 21:06:48 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu May 11 08:19:04 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu May 11 08:19:12 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu May 11 08:24:51 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu May 11 18:20:41 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu May 11 18:20:55 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Fri May 12 01:39:29 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Tue May 23 13:04:05 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Tue May 23 13:04:17 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Tue May 23 13:05:25 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu May 25 08:30:07 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu May 25 08:30:12 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu May 25 19:22:34 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu Aug 10 21:24:06 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
+[Thu Aug 10 21:24:47 2006] searchsquat.cgi: could not open file at searchsquat.cgi line 143.
