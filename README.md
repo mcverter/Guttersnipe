@@ -1,4 +1,4 @@
-[Guttersnipe Proposal ](http://gutter-snipe.eu1.frbit.net/CCNY-Proposal-guttersnipe/docs/Proposal/front.html)
+[Guttersnipe Proposal ](http://gutter-snipe.eu1.frbit.net/docs/CCNY-Proposal-guttersnipe/docs/Proposal/front.html)
 
 
 
