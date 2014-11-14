@@ -1,0 +1,351 @@
+bash-3.2$ !m
+mysql -u fall12021 -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 117743
+Server version: 5.0.22-log
+
+Type 'help;' or '\h' for help. Type '\c' to clear the buffer.
+
+mysql> use fall12021
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> warnings;
+Show warnings enabled.
+mysql> source MST.sql
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected, 3628 warnings (0.26 sec)
+
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
++----------+-------------------------------------------------------------------------------------------------------------------------------+
+| length   | pointList                                                                                                                     |
++----------+-------------------------------------------------------------------------------------------------------------------------------+
+| 14.21466 | 8,27,55,75,96,110,120,131,154,179,185,192,222,236,249,251,277,287,296,298,299,360,366,385,389,390,420,422,428,431,454,494,495 | 
++----------+-------------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected, 7256 warnings (0.26 sec)
+
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
++--------+----------------------------------------------------------------------------------------------------------------------------+
+| length | pointList                                                                                                                  |
++--------+----------------------------------------------------------------------------------------------------------------------------+
+| NULL   |     È   @ êù@ êù∏±ëùéÔû ©Øù            ˇˇˇˇ            $©Øù    ,©Øù    4©Øù    <©Øù                                    ˇˇ | 
++--------+----------------------------------------------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected, 1175 warnings (0.05 sec)
+
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
++---------+
+| @length |
++---------+
+| 9.99309 | 
++---------+
+1 row in set (0.01 sec)
+
+Query OK, 0 rows affected, 3628 warnings (0.17 sec)
+
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
+Note (Code 1265): Data truncated for column 'lon1' at row 500
+Note (Code 1265): Data truncated for column 'lat2' at row 500
+Note (Code 1265): Data truncated for column 'lon2' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'x' at row 500
+Note (Code 1265): Data truncated for column 'dist' at row 500
+Note (Code 1265): Data truncated for column 'lat1' at row 500
++----------+
+| @length  |
++----------+
+| 14.21466 | 
++----------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
++------+
+| @x   |
++------+
+| 120  | 
++------+
+1 row in set (0.00 sec)
+
+mysql> 
