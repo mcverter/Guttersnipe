@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head profile="http://www.w3.org/2005/11/profile">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="http://www-cs.engr.ccny.cuny.edu/%7Ecs336/images/akira.ico">
+<title>Akira's CSc336 Fall 2012</title></head>
+<body bgcolor="#ffffff">
+
+<table>
+<tbody><tr><td><a href="http://www-cs.ccny.cuny.edu/"><img src="prog2_files/CCNY-Logo.gif" alt="[CCNY Logo uploading...]" height="34" hspace="0" align="left" border="0"></a></td> <td> <font size="+2"><b>CSc336</b></font></td></tr></tbody></table> <font size="+3"><b>Introduction
+to Database Systems</b></font><br> <em>Bachelor's Program In Computer
+Science at the City College of New York, Fall 2012</em>
+
+<hr noshade="noshade">
+Update History: 
+
+<h2>Program Assignment #2</h2>
+
+The second programming assignment is to (1) populate a data set into
+MySQL back-end using a data generating capability prepared by the
+previous assignment, (2) realize a simple web interface that enables
+user to pull out the populated data based on several selection
+conditions, and (3) present the found items on a road map as embedded
+into a web browser. Study the application structure described below
+and develop a required web interface using PHP and Javascript
+references provided in this assignment.
+
+
+<p>This phase of course work will let you learn the core mechanism of
+web-oriented database handling. It is by means of the so-called
+PHP/MySQL's <em>powerful scripting</em> interface.  Many e-commerce
+and academic communities regard this level of work as today's <em>de
+facto standard</em> of database programming. Start your work as early
+as possible – feel free to ask me, in and out of class, for
+project clarification, trouble resolution, and implementation hint,
+but never share your implementation with classmate.
+
+</p><h3>Data Generation</h3>
+
+Generate a collection of 500 geopoints to populate your MySQL database
+using the data generator extended by the previous assignment. This
+data hypothesizes various points of interest spreading roughly over
+the areas of Manhattan. Therefore, wisely adjust the distribution of
+point locations. Each point consists of the following six attributes
+whose values will be generated within the capabilities of data
+generator:
+
+<ol>
+<li><b><tt><u>id</u></tt>:</b> unique integral number utilized as a
+primary key,
+</li><li><b><tt>lat</tt>:</b> decimal number to express latitude with
+<a href="http://en.wikipedia.org/wiki/Arithmetic_precision">precision</a> at
+least 6 fractional digits,
+</li><li><b><tt>lng</tt>:</b> longitude with the numeric property as above,
+</li><li><b><tt>name</tt>:</b> at most 20 character string,
+</li><li><b><tt>address</tt>:</b> at most 30 character string,
+</li><li><b><tt>type</tt>:</b> one of
+{ <tt>museum</tt>, <tt>historic_site</tt>, <tt>information</tt>, <tt>shop</tt>, <tt>eatery</tt>
+}.
+</li></ol>
+
+Choose an appropriate data type and length for each attribute to
+fulfill data import into a table. You may add more attribute(s) but no
+more than 500 geopoints (tuples) in order not to waste the storage
+space reserved at the CCNY's LAMP environment.
+
+<h3>Data Presentation</h3>
+
+Develop a browser interface that allows to filter out the points in
+database and present the pruned items in a road map being generated
+from a Google Maps capability. Specifically, the interface sought for
+this assignment is to let the user to choose:
+
+<ol>
+<li>a size of map in <var>p</var> × <var>p</var> pixels to be
+generated in response to user input as one of
+{ <tt>large:800×800</tt>, <tt>medium:600×600</tt>, <tt>small:400×400</tt>
+};
+
+</li><li>an initial zoom <var>z</var> of map as one of
+{ <tt>large:6</tt>, <tt>medium:8</tt>, <tt>small:10</tt> },
+
+</li><li>a central address <var>c</var> in a text string, e.g.,
+"<tt>Central Park</tt>,"
+</li><li>a parameter <var>m</var> miles as one of
+ { <tt>0.5</tt>, <tt>1</tt>, <tt>1.5</tt>, <tt>2</tt>, <tt>2.5</tt> }
+ to define a square boundary apart from <var>c</var> such as an area
+ surrounded by a half mile north/south and east/west from "<tt>Central
+ Park</tt>,"
+</li><li>a disjunctive selection of <tt>type</tt>
+ such as points of either "<tt>museum</tt>" or "<tt>shop</tt>."
+</li></ol>
+
+See Figure 3 for a sample web form gathering the above required
+items. Map generation is almost identical to a sample explained in
+<a href="http://code.google.com/apis/maps/articles/phpsqlajax_v3.html">Using
+PHP/MySQL with Google Maps</a>. Also,
+<a href="http://code.google.com/apis/maps/documentation/javascript/geocoding.html">Geocoding
+Service</a> exhibits a script that implements a conversion from
+address to latitude and longitude geocoding. Adjusting these solutions
+for this project implementation is just a matter of time!
+
+<table border="0" width="100%" cellpadding="0" cellspacing="0">
+<tbody><tr align="center"><td width="50%">
+<form>
+<table border="1" width="100%" cellpadding="10" cellspacing="0">
+<tbody><tr><td align="left">Roadmap size: 
+<select name="size"> 
+<option>large:800×800</option>
+<option selected="selected">medium:600×600</option>
+<option>small:400×400</option>
+</select>
+Initial zoom:
+<select name="zoom"> 
+<option>large:6</option>
+<option selected="selected">medium:8</option>
+<option>small:10</option>
+</select>
+<br><br>
+Central address: 
+<input name="address" size="50" value="Central Park, New York, NY" type="text">
+Surrounded by:
+<select name="mile"> 
+<option>0.5 mile</option>
+<option>1 mile</option>
+<option selected="selected">1.5 mile</option>
+<option>2 miles</option>
+<option>2.5 miles</option>
+</select>
+<br><br>
+Types:
+<input name="type[]" checked="checked" value="museum" type="checkbox"> museum 
+<input name="type[]" checked="checked" value="historic_site" type="checkbox"> historic_site
+<input name="type[]" checked="checked" value="information" type="checkbox"> information
+<input name="type[]" checked="checked" value="shop" type="checkbox"> shop
+<input name="type[]" checked="checked" value="eatery" type="checkbox"> eatery
+
+<div align="right"><input value="Find" type="submit"></div>
+</td></tr>
+</tbody></table>
+</form>
+</td>
+<td>
+<img src="prog2_files/Fig4-refine-example.png" height="400" width="500/">
+</td>
+</tr>
+<tr align="center"><td><b>Figure 3: Sample input interface</b></td>
+<td><b>Figure 4: Sample refinement input</b></td></tr>
+</tbody></table>
+
+<p>The output of the service consists of:
+
+</p><ol>
+<li>a road map generated by Google Maps API which should be sized
+in <var>p</var> × <var>p</var> pixels, zoomed to <var>z</var>,
+and centered at the geocoding of <var>c</var>,
+</li><li>an embedment of geo-markers that correspond to all the points
+meeting the conditions of <var>m</var> and <tt>type</tt>,
+</li><li>a list of textual point descriptions, each selectable to construct
+a subset for refinement, as well as marked for the start and end of a
+tour,
+</li><li> a map redrawn with geo-markers of non deselected and start/end
+marked points of 3, in response to a <em>refinement</em> button
+submission.
+</li></ol>
+Regenerating map based on the above 3 and 4 items is the technical
+heart of this assignment. See Figure 4 for a sample refinement input.
+
+<h2>Assignment</h2>
+
+The assignment is to generate a described set of data using your
+extended data generator, populate the data into database, and activate
+a required web interface for data presentation on your website. Use
+<a href="http://code.google.com/apis/maps/documentation/javascript/tutorial.html">Google
+Maps API V3</a> (not deprecated V2).  You need to deal with database
+operation from this assignment.  The last step of the assignment is to
+migrate your product to the CCNY's Linux environment.  Minimal
+requirements are:
+
+<ol>
+<li><b>Data:</b> <ul> 
+<li>500 hypothetical tuples having appropriate geo-decimal
+latitude/longitude values covering Manhattan – <strong>1 point</strong>.
+</li><li>browser input for <var>p</var>, <var>z</var>, <var>c</var>, <var>m</var>, 
+and <tt>type</tt> selection. 
+</li><li>browser input for pruning of retrieved points and start/end tour points.
+</li></ul>
+</li><li><b>Process:</b>
+<ul>
+<li>User can select options
+for <var>p</var>, <var>z</var>, <var>c</var>, <var>m</var>,
+and <tt>type</tt> selection to define the subsequent map generation
+– <strong>1 point</strong>.
+
+</li><li>User can see a geo-coded point of <var>c</var> in the generated map 
+– <strong>1 point</strong>.
+
+</li><li>User can see all the points captured from generated database on
+Google Map, marked with different colors depending on types
+– <strong>2 points</strong>.
+
+</li><li>User can see a list of points in textual description
+– <strong>1 point</strong>.
+
+</li><li>User can choose points in the textual list to select for further 
+refinement as well as start/end tour – <strong>2 points</strong>.
+
+</li><li>User can see those selected points, also indicated as start/end,
+in the map regenerated – <strong>2 point</strong>.
+
+</li><li>System generate error message with incorrect input value
+– <strong>1 point</strong>.
+</li></ul>
+
+</li><li><b>Product migration:</b>
+<ul><li>User can run your product at the CCNY's Linux Labs – <strong>1 points</strong>.
+</li></ul>
+
+</li><li><b>Not required:</b>
+<ul>
+<li>Session management for user re-access to the interface.
+</li><li>Extra capabilities like user registration and log-ins.
+</li><li>Fancy figures.
+</li></ul>
+
+</li><li><b>Extra credit:</b>
+<ul>
+<li>Adding an option to use circular distance (i.e., radius) from a
+specified center – <strong>1 point</strong>
+</li></ul>
+
+</li></ol>
+
+You should be familiar with the intended systems work on various AMP
+environments by now. The envisioned development is a small-scale web
+programming with PHP, mostly adaptations of typical coding found
+elsewhere, but this assignment cannot be finished in a few days. You
+need at least one week of study of Google Maps, MySQL/PHP interface,
+data generation, and web application development.  Start earlier.
+
+<h3>Grading Policy</h3> Grading will be done according to each score
+defined above. Your submission of this assignment will be counted
+about <b>12%</b> of your final grade. Your may need to demonstrate
+your product in front of me if needed.
+
+<h2>Submission</h2>
+
+You are to hand in your development by <b>Thursday 2:00 P.M. October
+11th</b>. See <a href="http://www-cs.engr.ccny.cuny.edu/%7Ecs336/progs/ccny-submit.html">here</a> for the submission
+instructions. Note that I want only your PHP-related coding, <u>not data
+instance</u>.
+
+<p></p><hr noshade="noshade">
+<table width="100%" cellpadding="0" cellspacing="0"><tbody> <tr><td width="50%">© Akira Kawaguchi, September 2012.</td><td align="right" width="50%"><font size="-1"><em>CSc336 Introduction to Database
+Systems</em></font></td></tr></tbody> </table>  
+
+
+
+
+
+
+
+
+
+
+</body></html>

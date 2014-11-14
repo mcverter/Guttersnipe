@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<title> Technologies </title>
+</head>
+<body>
+<h1> Technologies </h1>
+<ul>
+  <li> HTML 5 Forms</li>
+  <li>Backend Database (mySQL)</li>
+  <li>Google Maps API</li>
+  <li>Python backend (django/flask)</li>
+</ul>
+<a href=""> PREV </a>&nbsp;&nbsp;<a href="">NEXT</a>
+</body>
+</html>

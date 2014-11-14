@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html class="devsite wf-opensans-n4-active wf-active" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script async="" src="geocoding_files/cbgapi.loaded_0"></script><script gapi_processed="true" src="geocoding_files/plusone.js" async="" type="text/javascript"></script>
+    <meta charset="utf-8">
+    <script src="geocoding_files/script_head.js"></script>
+    <link rel="stylesheet" type="text/css" href="geocoding_files/screen.css">
+    <link rel="shortcut icon" href="https://developers.google.com/_static/images/favicon.ico">
+    <link rel="apple-touch-icon" href="https://developers.google.com/_static/images/apple-touch-icon.png">
+    <link href="geocoding_files/css_002.css" rel="stylesheet" type="text/css">
+    
+    <script src="geocoding_files/jquery.js"></script>
+    <script id="jqueryui" src="geocoding_files/jquery-ui.js"></script>
+    <script src="geocoding_files/jsapi"></script>
+    <script>
+      google.load('visualization', '1', {packages: ['table']});
+    </script><script src="geocoding_files/a_002" type="text/javascript"></script><script src="geocoding_files/formatendefaulttable.js" type="text/javascript"></script><style>.a-b-c{position:relative;display:-moz-inline-box;display:inline-block}* html .a-b-c,*:first-child+html .a-b-c{display:inline}.a-d-e{margin:2px;border:0;padding:0;font-family:Arial,sans-serif;color:#000;background:#ddd url(//ssl.gstatic.com/editor/button-bg.png) repeat-x top left;text-decoration:none;list-style:none;vertical-align:middle;cursor:default;outline:none}.a-d-e-f-g,.a-d-e-h-g{border-style:solid;border-color:#aaa;vertical-align:top}.a-d-e-f-g{margin:0;border-width:1px 0;padding:0}.a-d-e-h-g{-moz-box-orient:vertical;margin:0 -1px;border-width:0 1px;padding:3px 4px;white-space:nowrap}* html .a-d-e-h-g{left:-1px}* html .a-d-e-i .a-d-e-f-g{left:-1px}* html .a-d-e-i .a-d-e-h-g{right:auto}*:first-child+html .a-d-e-h-g{left:-1px}*:first-child+html .a-d-e-i .a-d-e-h-g{left:1px}::root .a-d-e,::root .a-d-e-f-g{line-height:0}::root .a-d-e-h-g{line-height:normal}.a-d-e-j{background-image:none!important;opacity:.3;-moz-opacity:.3;filter:alpha(opacity=30)}.a-d-e-j .a-d-e-f-g,.a-d-e-j .a-d-e-h-g{color:#333!important;border-color:#999!important}* html .a-d-e-j,*:first-child+html .a-d-e-j{margin:2px 1px!important;padding:0 1px!important}.a-d-e-k .a-d-e-f-g,.a-d-e-k .a-d-e-h-g{border-color:#9cf #69e #69e #7af!important}.a-d-e-l,.a-d-e-m{background-color:#bbb;background-position:bottom left}.a-d-e-n .a-d-e-f-g,.a-d-e-n .a-d-e-h-g{border-color:orange}.a-d-e-o-p,.a-d-e-o-p .a-d-e-f-g,.a-d-e-o-p .a-d-e-h-g{margin-right:0}.a-d-e-o-q,.a-d-e-o-q .a-d-e-f-g{margin-left:0}.a-d-e-o-q .a-d-e-h-g{margin-left:0;border-left:1px solid #fff}.a-d-e-o-q.a-d-e-m .a-d-e-h-g{border-left:1px solid #ddd}* html .a-d-e-o-q .a-d-e-h-g,*:first-child+html .a-d-e-o-q .a-d-e-h-g{left:0}.a-r-e{position:relative;margin:2px;border:1px solid #000;padding:2px 6px;font:normal 13px "Trebuchet MS",Tahoma,Arial,sans-serif;color:#fff;background-color:#8c2425;cursor:pointer;outline:none}.a-r-e-j{border-color:#888;color:#888;background-color:#ccc;cursor:default}.a-r-e-k{border-color:#8c2425;color:#8c2425;background-color:#eaa4a5}.a-r-e-l,.a-r-e-s,.a-r-e-m{border-color:#5b4169;color:#5b4169;background-color:#d1a8ea}.a-r-e-n{border-color:#5b4169}.a-r-e-o-p{margin-right:0}.a-r-e-o-q{margin-left:0;border-left:none}.a-e{color:#036;border-color:#036;background-color:#69c}.a-e-j{border-color:#333;color:#333;background-color:#999}.a-e-k{color:#369;border-color:#369;background-color:#9cf}.a-e-l{color:#69c;border-color:#69c}</style><link type="text/css" rel="stylesheet" href="geocoding_files/table.css">
+    <script type="text/javascript" src="geocoding_files/api.js"></script>
+    <!--[if lt IE 9]>
+    <script src="/_static/js/html5shim/html5.js"></script>
+    <![endif]-->
+
+    
+    <script>
+      google.load('search', '1', {language : 'en'});
+    </script><script src="geocoding_files/a" type="text/javascript"></script><link href="geocoding_files/defaulten.css" type="text/css" rel="stylesheet"><script src="geocoding_files/defaulten.js" type="text/javascript"></script>
+    
+
+    
+  <script type="text/javascript">
+    var contentTimer = new window.jstiming.Timer();
+
+    var ___gcfg = ___gcfg || {};
+    ___gcfg.lang = 'en';
+  </script>
+  <script src="geocoding_files/jquery-ui.js"></script>
+  
+  <title>Geocoding Service - Google Maps JavaScript API v3 — Google Developers</title><link href="geocoding_files/css.css" rel="stylesheet">
+  
+  
+  
+    
+    
+    
+  
+
+
+    
+    
+
+  </head>
+  <body class="two-column docs">
+    
+    <div id="sandbar">
+
+
+
+
+<header id="gc-googlebar">
+
+  <a id="gc-logo" href="https://developers.google.com/">
+    <img src="geocoding_files/developers-logo.png" alt="Google">
+  </a>
+
+  <div class="gc-social">
+    
+    <span class="signed-in">
+      <div>
+        <a class="email" href="https://plus.google.com/me">mitchell.verter@gmail.com</a>
+        <a href="https://www.google.com/accounts/Logout?continue=https://developers.google.com/maps/documentation/javascript/geocoding&amp;service=ahsid">Sign out</a>
+      </div>
+      <img src="geocoding_files/silhouette36.png">
+    </span>
+    
+  </div>
+
+  <form class="gc-search" action="/search/results" method="GET">
+    <div style="width: 464px;" class="searchbox">
+      
+      
+        <span class="button button-blue mini">Google Maps JavaScript API v3<pre>  X</pre></span>
+      
+      <input style="width: 263px;" name="q" class="q" id="q" placeholder="Search" autocomplete="off" type="text">
+    </div>
+    <button style="top: 0px; left: 483px;" class="button button-blue">
+      <img src="geocoding_files/search.png" alt="Search">
+    </button>
+    
+      <input name="p" id="search_project" value="/maps/documentation/javascript" type="hidden">
+    
+  </form>
+
+</header>
+
+
+
+</div>
+    
+
+    
+    
+    <div class="kd-butterbar shown">
+      <span>This page has moved to Google Developers. Welcome! <a href="https://developers.google.com/readme">Learn more</a> <a href="#" class="kd-butterbar-dismiss">Dismiss</a></span>
+    </div>
+    
+
+    <div id="gc-wrapper" itemscope="" itemtype="http://schema.org/Article">
+      
+      <input id="gc-analytics" value="UA-24532603-1" type="hidden">
+      
+
+      
+
+      <div id="gc-topnav">
+        <div>
+          <ul>
+            
+            
+            <li class=""><a href="https://developers.google.com/">Home</a></li>
+            
+            <li class="active"><a href="https://developers.google.com/products/">Products</a></li>
+            
+            <li class=""><a href="https://developers.google.com/events/">Events</a></li>
+            
+            <li class=""><a href="https://developers.google.com/showcase/">Showcase</a></li>
+            
+            <li class=""><a href="https://developers.google.com/live/">Live</a></li>
+            
+            <li class=""><a href="https://developers.google.com/groups/">Groups</a></li>
+            
+            
+          </ul>
+        </div>
+      </div>
+      
+      
+
+      
+      
+      
+        <div id="gc-appbar">
+          
+          
+<h1>
+
+  <a href="https://developers.google.com/maps/documentation/javascript">Google Maps JavaScript API v3</a>
+  <div class="plusone-container">
+    <div id="___plusone_0" style="height: 20px; width: 90px; display: inline-block; text-indent: 0px; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline;"><iframe src="geocoding_files/fastbutton.html" name="I0_1349194053377" id="I0_1349194053377" vspace="0" tabindex="0" style="position: absolute; top: -10000px; width: 90px; margin: 0px; border-style: none;" marginwidth="0" marginheight="0" hspace="0" allowtransparency="true" frameborder="0" scrolling="no" width="100%"></iframe></div>
+  </div>
+
+
+<div style="float:right;">
+  
+  <a href="" class="google-feedback" data-p="81777" data-b="" data-context="Maps JS API v3">Feedback on this document</a>
+</div>
+
+
+
+
+
+</h1>
+
+          
+        </div>
+      
+      
+
+      
+      <div id="gc-main">
+        
+      
+      
+      <div id="gc-sidebar">
+        
+
+  
+
+
+
+  <nav class="gc-toc"><ul><li class=""><a class="tlw-control tlw-expanded">▾</a><span class="tlw-title tlw-control-title" data-title="Developer's Guide">Developer's Guide</span><ul><li class=""><a href="https://developers.google.com/maps/documentation/javascript/tutorial" data-title="Getting Started"><span>Getting Started</span></a></li><li class=""><a href="https://developers.google.com/maps/documentation/javascript/usage" data-title="Usage Limits and Billing"><span>Usage Limits and Billing</span></a></li><li class=""><a href="https://developers.google.com/maps/documentation/javascript/basics" data-title="Concepts"><span>Concepts</span></a></li><li class=""><a href="https://developers.google.com/maps/documentation/javascript/events" data-title="Events"><span>Events</span></a></li><li class=""><a href="https://developers.google.com/maps/documentation/javascript/controls" data-title="Controls"><span>Controls</span></a></li><li class=""><a href="https://developers.google.com/maps/documentation/javascript/styling" data-title="Styles"><span>Styles</span></a></li><li class=""><a href="https://developers.google.com/maps/documentation/javascript/overlays" data-title="Overlays"><span>Overlays</span></a></li><li class=""><a href="https://developers.google.com/maps/documentation/javascript/layers" data-title="Layers"><span>Layers</span></a></li><li class=""><a href="https://developers.google.com/maps/documentation/javascript/maptypes" data-title="Map Types"><span>Map Types</span></a></li><li class=""><a class="tlw-control tlw-expanded">▾</a><span class="tlw-title tlw-control-title" data-title="Services">Services</span><ul><li class=""><a href="https://developers.google.com/maps/documentation/javascript/directions" data-title="Directions"><span>Directions</span></a></li><li class=""><a href="https://developers.google.com/maps/documentation/javascript/distancematrix" data-title="Distance Matrix"><span>Distance Matrix</span></a></li><li class=""><a href="https://developers.google.com/maps/documentation/javascript/elevation" data-title="Elevation"><span>Elevation</span></a></li><li class="active"><a href="https://developers.google.com/maps/documentation/javascript/geocoding" data-title="Geocoding"><span>Geocoding</span></a></li><li class=""><a href="https://developers.google.com/maps/documentation/javascript/maxzoom" data-title="Maximum Zoom Imagery"><span>Maximum Zoom Imagery</span></a></li><li class=""><a href="https://developers.google.com/maps/documentation/javascript/streetview" data-title="Street View"><span>Street View</span></a></li></ul></li><li class=""><a class="tlw-control tlw-collapsed">▸</a><span class="tlw-title tlw-control-title" data-title="Libraries">Libraries</span><ul style="display: none;"><li class=""><a href="https://developers.google.com/maps/documentation/javascript/libraries" data-title="Overview"><span>Overview</span></a></li><li class=""><a href="https://developers.google.com/maps/documentation/javascript/advertising" data-title="AdSense Library"><span>AdSense Library</span></a></li><li class=""><a href="https://developers.google.com/maps/documentation/javascript/overlays#drawing_tools" data-title="Drawing Library"><span>Drawing Library</span></a></li><li class=""><a href="https://developers.google.com/maps/documentation/javascript/geometry" data-title="Geometry Library"><span>Geometry Library</span></a></li><li class=""><a href="https://developers.google.com/maps/documentation/javascript/layers#PanoramioLibrary" data-title="Panoramio Library"><span>Panoramio Library</span></a></li><li class=""><a href="https://developers.google.com/maps/documentation/javascript/places" data-title="Places Library"><span>Places Library</span></a></li><li class=""><a href="https://developers.google.com/maps/documentation/javascript/layers#WeatherLayer" data-title="Weather Library"><span>Weather Library</span></a></li></ul></li></ul></li><li class=""><a class="tlw-control tlw-collapsed">▸</a><a class="tlw-title" href="https://developers.google.com/maps/documentation/javascript/reference" data-title="API Reference"><span>API Reference</span></a><ul style="display: none;"><li class=""><a href="https://developers.google.com/maps/documentation/javascript/3.exp/reference" data-title="3.exp (3.10)"><span>3.exp (3.10)</span></a></li><li class=""><a href="https://developers.google.com/maps/documentation/javascript/reference" data-title="Release (3.9)"><span>Release (3.9)</span></a></li><li class=""><a href="https://developers.google.com/maps/documentation/javascript/3.8/reference" data-title="Frozen (3.8)"><span>Frozen (3.8)</span></a></li></ul></li><li class=""><a class="tlw-control tlw-collapsed">▸</a><span class="tlw-title tlw-control-title" data-title="Code Samples">Code Samples</span><ul style="display: none;"><li class=""><a href="https://developers.google.com/maps/documentation/javascript/examples/" data-title="Samples"><span>Samples</span></a></li><li class=""><a href="https://developers.google.com/maps/documentation/javascript/demogallery" data-title="Demo Gallery"><span>Demo Gallery</span></a></li></ul></li><li class=""><a class="tlw-control tlw-collapsed">▸</a><span class="tlw-title tlw-control-title" data-title="More Resources">More Resources</span><ul style="display: none;"><li class=""><a href="https://developers.google.com/maps/articles" data-title="Articles"><span>Articles</span></a></li><li class=""><a href="http://code.google.com/p/gmaps-api-issues/issues/list?can=2&amp;q=apitype:Javascript3&amp;colspec=ID+Type+Status+Introduced+Fixed+Summary+Internal+Stars&amp;cells=tiles" data-title="Known Issues"><span>Known Issues</span></a></li><li class=""><a href="http://code.google.com/p/gmaps-api-issues/wiki/JavascriptMapsAPIv3Changelog" data-title="Changelog"><span>Changelog</span></a></li><li class=""><a href="http://code.google.com/p/google-maps-utility-library-v3/" data-title="Utility Library"><span>Utility Library</span></a></li></ul></li><li class=""><a href="http://googlegeodevelopers.blogspot.com/" data-title="Blog"><span>Blog</span></a></li><li class=""><a href="https://developers.google.com/maps/documentation/javascript/forum" data-title="Forum"><span>Forum</span></a></li><li class=""><a href="https://developers.google.com/maps/faq" data-title="FAQ"><span>FAQ</span></a></li></ul><hr><ul><li class=""><span class="tlw-title" data-title="----------">----------</span></li></ul><hr><ul><li class=""><a href="https://developers.google.com/maps/documentation/business/guide" data-title="Google Maps API for Business"><span>Google Maps API for Business</span></a></li><li class=""><a class="tlw-control tlw-collapsed">▸</a><span class="tlw-title tlw-control-title" data-title="Maps API Web Services">Maps API Web Services</span><ul style="display: none;"><li class=""><a href="https://developers.google.com/maps/documentation/webservices" data-title="Introduction"><span>Introduction</span></a></li><li class=""><a href="https://developers.google.com/maps/documentation/directions" data-title="Directions API"><span>Directions API</span></a></li><li class=""><a href="https://developers.google.com/maps/documentation/distancematrix" data-title="Distance Matrix API"><span>Distance Matrix API</span></a></li><li class=""><a href="https://developers.google.com/maps/documentation/elevation" data-title="Elevation API"><span>Elevation API</span></a></li><li class=""><a href="https://developers.google.com/maps/documentation/geocoding" data-title="Geocoding API"><span>Geocoding API</span></a></li></ul></li><li class=""><a href="https://developers.google.com/places/" data-title="Google Places API"><span>Google Places API</span></a></li><li class=""><a href="https://developers.google.com/maps/documentation/staticmaps/" data-title="Static Maps API"><span>Static Maps API</span></a></li><li class=""><a href="https://developers.google.com/maps/documentation/streetview/" data-title="Street View Image API"><span>Street View Image API</span></a></li><li class=""><a href="https://developers.google.com/earth/documentation" data-title="Earth API"><span>Earth API</span></a></li><li class=""><a class="tlw-control tlw-collapsed">▸</a><span class="tlw-title tlw-control-title" data-title="Deprecated APIs">Deprecated APIs</span><ul style="display: none;"><li class=""><a href="https://developers.google.com/maps/documentation/javascript/v2/introduction" data-title="Maps JavaScript v2"><span>Maps JavaScript v2</span></a></li><li class=""><a href="https://developers.google.com/maps/documentation/flash/intro" data-title="Maps API for Flash"><span>Maps API for Flash</span></a></li><li class=""><a href="https://developers.google.com/maps/documentation/localsearch" data-title="Local Search"><span>Local Search</span></a></li></ul></li></ul></nav>
+
+
+
+      </div>
+      
+
+      <div id="gc-content">
+        
+        <div>
+          
+  
+  <h1 itemprop="name" class="page-title">Geocoding Service</h1>
+  
+  <div itemprop="articleBody">
+  
+
+<ol class="toc">
+  <li><a href="#Geocoding">Overview</a></li>
+  <li><a href="#GeocodingRequests">Geocoding Requests</a></li>
+  <li><a href="#GeocodingResponses">Geocoding Responses</a>
+    <ol>
+      <li><a href="#GeocodingResults">Geocode Results</a></li><a href="#GeocodingResults">
+      </a><li><a href="#GeocodingResults"></a><a href="#GeocodingAddressTypes">Address Component Types</a></li><a href="#GeocodingAddressTypes">
+      </a><li><a href="#GeocodingAddressTypes"></a><a href="#GeocodingStatusCodes">Status Codes</a></li><a href="#GeocodingStatusCodes">
+    </a></ol><a href="#GeocodingStatusCodes">
+  </a></li><a href="#GeocodingStatusCodes">
+  </a><li><a href="#GeocodingStatusCodes"></a><a href="#ReverseGeocoding">Reverse Geocoding</a></li>
+  <li><a href="#GeocodingViewports">Viewport Biasing</a></li>
+  <li><a href="#GeocodingRegionCodes">Region Code Biasing</a></li>
+</ol>
+
+<h2 id="Geocoding">Overview</h2>
+
+<p>Geocoding is the process of converting addresses (like "1600 Amphitheatre
+  Parkway, Mountain View, CA") into geographic coordinates (like latitude
+  37.423021 and longitude -122.083739), which you can use to place markers or
+  position the map. </p>
+
+<p>The Google Maps API provides a geocoder class for geocoding addresses
+  dynamically from user input. These requests are rate-limited to discourage
+  abuse of the service. If instead, you wish to geocode static, known
+  addresses, see the
+  <a href="https://developers.google.com/maps/documentation/geocoding/index">Geocoding web
+    service</a> documentation.</p>
+
+<h2 id="GeocodingRequests">Geocoding Requests</h2>
+
+<p>Accessing the Geocoding service is asynchronous, since the Google Maps API
+  needs to make a call to an external server. For that reason, you need to pass
+  a <em>callback</em> method to execute upon completion of the request. This
+  callback method processes the result(s). Note that the geocoder may return
+  more than one result.</p>
+
+<p>You access the Google Maps API geocoding service within your code via the
+  <code>google.maps.Geocoder</code> object. The <code>Geocoder.geocode()</code>
+  method initiates a request to the geocoding service, passing it a
+  <code>GeocodeRequest</code> object literal containing the input terms and a
+  callback method to execute upon receipt of the response.</p>
+
+<p>The <code>GeocodeRequest</code> object literal contains the
+  following fields:</p>
+
+<pre class="prettyprint lang-javascript"><span class="pun">{</span><span class="pln"><br>&nbsp;address</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">string</span><span class="pun">,</span><span class="pln"><br>&nbsp;latLng</span><span class="pun">:</span><span class="pln"> </span><span class="typ">LatLng</span><span class="pun">,</span><span class="pln"><br>&nbsp;bounds</span><span class="pun">:</span><span class="pln"> </span><span class="typ">LatLngBounds</span><span class="pun">,</span><span class="pln"><br>&nbsp;region</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">string</span><span class="pln"><br></span><span class="pun">}</span></pre>
+
+<p>These fields are explained below.</p>
+<ul>
+  <li><code>address</code> (<em>required<span style="color:red">*</span></em>)
+    — The address which you want to geocode.</li>
+  <li><code>latLng</code> (<em>required<span style="color:red">*</span></em>)
+    — The <code>LatLng</code> for which you wish to obtain the closest,
+    human-readable address.</li>
+  <li><code>bounds</code> (<em>optional</em>) — The
+    <code>LatLngBounds</code> within which to bias geocode results more
+    prominently. (For more information see
+    <a href="#GeocodingViewports">Viewport Biasing </a> below.)</li>
+  <li><code>region</code> (<em>optional</em>) — The region code,
+    specified as a
+    <a href="http://www.iana.org/assignments/language-subtag-registry">IANA
+      language <code>region</code> subtag</a>. In most cases, these tags map
+      directly to familiar ccTLD ("top-level domain") two-character values.
+      (For more information see <a href="#GeocodingRegionCodes">Region Code
+        Biasing</a> below.)</li>
+</ul>
+
+<p><span style="color:red">* Note: </span> You may pass either an
+  <code>address</code> or a <code>latLng</code> to lookup. (If you pass a
+  <code>latLng</code>, the geocoder performs what is known as a <em>reverse
+    geocode</em>. See <a href="#ReverseGeocoding">Reverse Geocoding</a> for
+  more information.)</p>
+
+<p>The <code>bounds</code> and <code>region</code> parameters will only
+  influence, not fully restrict, results from the geocoder.</p>
+
+<h2 id="GeocodingResponses">Geocoding Responses</h2>
+
+<p>The Geocoding service requires a callback method to execute upon retrieval
+  of the geocoder's results. This callback should pass two parameters to hold
+  the <code>results</code> and a <code>status</code> code, in that order. Since
+  the Geocoder may return more than one entry, the <code>GeocoderResults</code>
+  object literal is an array.</p>
+
+<h3 id="GeocodingResults">Geocoding Results</h3>
+
+<p>The <code>GeocoderResults</code> object literal represents a single
+  Geocoding result and is an object of the following form:</p>
+
+
+<pre class="prettyprint lang-javascript"><span class="pln">results</span><span class="pun">[]:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp;types</span><span class="pun">[]:</span><span class="pln"> </span><span class="kwd">string</span><span class="pun">,</span><span class="pln"><br>&nbsp;formatted_address</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">string</span><span class="pun">,</span><span class="pln"><br>&nbsp;address_components</span><span class="pun">[]:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp;short_name</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">string</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp;long_name</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">string</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp;types</span><span class="pun">[]:</span><span class="pln"> </span><span class="kwd">string</span><span class="pln"><br>&nbsp;</span><span class="pun">},</span><span class="pln"><br>&nbsp;geometry</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp;location</span><span class="pun">:</span><span class="pln"> </span><span class="typ">LatLng</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp;location_type</span><span class="pun">:</span><span class="pln"> </span><span class="typ">GeocoderLocationType</span><span class="pln"><br>&nbsp; &nbsp;viewport</span><span class="pun">:</span><span class="pln"> </span><span class="typ">LatLngBounds</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp;bounds</span><span class="pun">:</span><span class="pln"> </span><span class="typ">LatLngBounds</span><span class="pln"><br>&nbsp;</span><span class="pun">}</span><span class="pln"><br></span><span class="pun">}</span></pre>
+
+
+<p>These fields are explained below:</p>
+
+<ul>
+  <li><code>types[]</code> is an array indicating the <em>type</em> of the
+    returned result. This array contains a set of one or more tags identifying
+    the type of feature returned in the result. For example, a geocode of
+    "Chicago" returns "locality" which indicates that "Chicago" is a city, and
+    also returns "political" which indicates it is a political entity.</li>
+  <li><code>formatted_address</code> is a string containing the
+    human-readable address of this location. Often this address is equivalent
+    to the "postal address," which sometimes differs from country to country.
+    (Note that some countries, such as Great Britain, do not allow distribution
+    of true postal addresses due to licensing restrictions.) This address is
+    generally composed of one or more <em>address components</em>. For example,
+    the address "111 8th Avenue, New York, NY" contains separate address
+    components for "111 8th Avenue" (a street address), "New York" (the city)
+    and "NY" (the US state). These address components are noted below. (For
+    more information on types, see <a href="#GeocodingAddressTypes">Types</a>
+    below.</li>
+  <li><code>address_component[]</code> is an array containing the separate
+    address components, as explained above.</li>
+  <li><p><code>geometry</code> contains the following information:</p>
+    <ul>
+      <li><code>location</code> contains the geocoded latitude,longitude value.
+        Note that we return this location as a <code>LatLng</code> object, not
+        as a formatted string.</li>
+      <li><code>location_type</code> stores additional data about the specified
+        location. The following values are currently supported:<p></p>
+        <ul>
+          <li><code>google.maps.GeocoderLocationType.ROOFTOP</code> indicates
+            that the returned result reflects a precise geocode.</li>
+          <li><code>google.maps.GeocoderLocationType.RANGE_INTERPOLATED</code>
+            indicates that the returned result reflects an approximation
+            (usually on a road) interpolated between two precise points (such
+            as intersections). Interpolated results are generally returned when
+            rooftop geocodes are unavailable for a street address.</li>
+          <li><code>google.maps.GeocoderLocationType.GEOMETRIC_CENTER</code>
+            indicates that the returned result is the geometric center of a
+            result such as a polyline (for example, a street) or polygon
+            (region).</li>
+          <li><code>google.maps.GeocoderLocationType.APPROXIMATE</code>
+            indicates that the returned result is approximate.</li>
+        </ul>
+      </li>
+      <br>
+      <li><code>viewport</code> stores the recommended viewport for the
+        returned result.</li>
+      <li><code>bounds</code> (optionally returned) stores the
+        <code>LatLngBounds</code> which can fully contain the returned result.
+        Note that these bounds may not match the recommended viewport. (For
+        example, San Francisco includes the
+        <a href="http://en.wikipedia.org/wiki/Farallon_Islands">Farallon
+          Islands</a>, which are technically part of the city, but should not
+        be returned in the viewport.)</li>
+    </ul>
+  </li>
+</ul>
+
+<p>The addresses will be returned by the Geocoder using the browser's preferred
+  language setting, or the language specified when loading the API JavaScript
+  using the <code>language</code> parameter. (For more information, see
+  <a href="https://developers.google.com/maps/documentation/javascript/basics#Localization">
+    Localization.</a>)</p>
+
+<h3 id="GeocodingAddressTypes">Address Component Types</h3>
+
+<p>The <code>types[]</code> array within the returned result indicates the
+  <em>address type</em>. These types may also be returned within
+  <code>address_components[]</code> arrays to indicate the type of the
+  particular address component. Addresses within the geocoder may have multiple
+  types; the types may be considered "tags". For example, many cities are
+  tagged with the <code>political</code> and <code>locality</code> type.</p>
+
+<p>The following types are supported and returned by the HTTP Geocoder:</p>
+
+<ul>
+  <li><code>street_address</code> indicates a precise street address.</li>
+  <li><code>route</code> indicates a named route (such as "US 101").</li>
+  <li><code>intersection</code> indicates a major intersection, usually of
+    two major roads.</li>
+  <li><code>political</code> indicates a political entity. Usually, this type
+    indicates a polygon of some civil administration.</li>
+  <li><code>country</code> indicates the national political entity, and is
+    typically the highest order type returned by the Geocoder.</li>
+  <li><code>administrative_area_level_1</code> indicates a
+    first-order civil entity below the country level. Within the United States,
+    these administrative levels are states. Not all nations exhibit these
+    administrative levels.</li>
+  <li><code>administrative_area_level_2</code>
+    indicates a second-order civil entity below the country level. Within the
+    United States, these administrative levels are counties. Not all nations
+    exhibit these administrative levels.</li>
+  <li><code>administrative_area_level_3</code> indicates a third-order civil
+    entity below the country level. This type indicates a minor civil division.
+    Not all nations exhibit these administrative levels.</li>
+  <li><code>colloquial_area</code> indicates a commonly-used alternative name
+    for the entity.</li>
+  <li><code>locality</code> indicates an incorporated city or town political
+    entity.</li>
+  <li><code>sublocality</code> indicates an first-order civil entity below a
+    locality.</li>
+  <li><code>neighborhood</code> indicates a named neighborhood.</li>
+  <li><code>premise</code> indicates a named location, usually a building or
+    collection of buildings with a common name</li>
+  <li><code>subpremise</code> indicates a first-order entity below a named
+    location, usually a singular building within a collection of buildings with
+    a common name.</li>
+  <li><code>postal_code</code> indicates a postal code as used to address
+    postal mail within the country.</li>
+  <li><code>natural_feature</code> indicates a prominent natural feature.</li>
+  <li><code>airport</code> indicates an airport.</li>
+  <li><code>park</code> indicates a named park.</li>
+</ul>
+
+<p>In addition to the above, address components may exhibit the following types:</p>
+
+<ul>
+  <li><code>post_box</code> indicates a specific postal box.</li>
+  <li><code>street_number</code> indicates the precise street number.</li>
+  <li><code>floor</code> indicates the floor of a building address.</li>
+  <li><code>room</code> indicates the room of a building address.</li>
+</ul>
+
+<h3 id="GeocodingStatusCodes">Status Codes</h3>
+
+<p>The <code>status</code> code may return one of the following values:</p>
+
+<ul>
+  <li><code>google.maps.GeocoderStatus.OK</code> indicates that the geocode
+    was successful.</li>
+  <li><code>google.maps.GeocoderStatus.ZERO_RESULTS</code> indicates that
+    the geocode was successful but returned no results. This may occur if the
+    geocode was passed a non-existent <code>address</code> or a
+    <code>latng</code> in a remote location.</li>
+  <li><code>google.maps.GeocoderStatus.OVER_QUERY_LIMIT</code> indicates
+    that you are over your quota.</li>
+  <li><code>google.maps.GeocoderStatus.REQUEST_DENIED</code> indicates that
+    your request was denied for some reason. </li>
+  <li><code>google.maps.GeocoderStatus.INVALID_REQUEST</code> generally
+    indicates that the query (<code>address</code> or <code>latLng</code>) is
+    missing.</li>
+</ul>
+
+<p>In this example, we geocode an address and place a marker at the returned
+  latitude and longitude values. Note that the handler is passed as an
+  anonymous function literal.</p>
+
+
+<pre class="prettyprint lang-javascript"><span class="pln">&nbsp; </span><span class="kwd">var</span><span class="pln"> geocoder</span><span class="pun">;</span><span class="pln"><br>&nbsp; </span><span class="kwd">var</span><span class="pln"> map</span><span class="pun">;</span><span class="pln"><br>&nbsp; </span><span class="kwd">function</span><span class="pln"> initialize</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; geocoder </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> google</span><span class="pun">.</span><span class="pln">maps</span><span class="pun">.</span><span class="typ">Geocoder</span><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> latlng </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> google</span><span class="pun">.</span><span class="pln">maps</span><span class="pun">.</span><span class="typ">LatLng</span><span class="pun">(-</span><span class="lit">34.397</span><span class="pun">,</span><span class="pln"> </span><span class="lit">150.644</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> mapOptions </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; zoom</span><span class="pun">:</span><span class="pln"> </span><span class="lit">8</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; center</span><span class="pun">:</span><span class="pln"> latlng</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; mapTypeId</span><span class="pun">:</span><span class="pln"> google</span><span class="pun">.</span><span class="pln">maps</span><span class="pun">.</span><span class="typ">MapTypeId</span><span class="pun">.</span><span class="pln">ROADMAP<br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; map </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> google</span><span class="pun">.</span><span class="pln">maps</span><span class="pun">.</span><span class="typ">Map</span><span class="pun">(</span><span class="pln">document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">"map_canvas"</span><span class="pun">),</span><span class="pln"> mapOptions</span><span class="pun">);</span><span class="pln"><br>&nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; </span><span class="kwd">function</span><span class="pln"> codeAddress</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> address </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">"address"</span><span class="pun">).</span><span class="pln">value</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; geocoder</span><span class="pun">.</span><span class="pln">geocode</span><span class="pun">(</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="str">'address'</span><span class="pun">:</span><span class="pln"> address</span><span class="pun">},</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">results</span><span class="pun">,</span><span class="pln"> status</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">status </span><span class="pun">==</span><span class="pln"> google</span><span class="pun">.</span><span class="pln">maps</span><span class="pun">.</span><span class="typ">GeocoderStatus</span><span class="pun">.</span><span class="pln">OK</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; map</span><span class="pun">.</span><span class="pln">setCenter</span><span class="pun">(</span><span class="pln">results</span><span class="pun">[</span><span class="lit">0</span><span class="pun">].</span><span class="pln">geometry</span><span class="pun">.</span><span class="pln">location</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> marker </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> google</span><span class="pun">.</span><span class="pln">maps</span><span class="pun">.</span><span class="typ">Marker</span><span class="pun">({</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; map</span><span class="pun">:</span><span class="pln"> map</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; position</span><span class="pun">:</span><span class="pln"> results</span><span class="pun">[</span><span class="lit">0</span><span class="pun">].</span><span class="pln">geometry</span><span class="pun">.</span><span class="pln">location<br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">});</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"Geocode was not successful for the following reason: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> status</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">});</span><span class="pln"><br>&nbsp; </span><span class="pun">}</span><span class="pln"><br><br></span><span class="pun">&lt;</span><span class="pln">body onload</span><span class="pun">=</span><span class="str">"initialize()"</span><span class="pun">&gt;</span><span class="pln"><br>&nbsp;</span><span class="pun">&lt;</span><span class="pln">div id</span><span class="pun">=</span><span class="str">"map_canvas"</span><span class="pln"> style</span><span class="pun">=</span><span class="str">"width: 320px; height: 480px;"</span><span class="pun">&gt;&lt;/</span><span class="pln">div</span><span class="pun">&gt;</span><span class="pln"><br>&nbsp; </span><span class="str">&lt;div&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">&lt;</span><span class="pln">input id</span><span class="pun">=</span><span class="str">"address"</span><span class="pln"> type</span><span class="pun">=</span><span class="str">"textbox"</span><span class="pln"> value</span><span class="pun">=</span><span class="str">"Sydney, NSW"</span><span class="pun">&gt;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">&lt;</span><span class="pln">input type</span><span class="pun">=</span><span class="str">"button"</span><span class="pln"> value</span><span class="pun">=</span><span class="str">"Encode"</span><span class="pln"> onclick</span><span class="pun">=</span><span class="str">"codeAddress()"</span><span class="pun">&gt;</span><span class="pln"><br>&nbsp; </span><span class="pun">&lt;</span><span class="str">/div&gt;<br>&lt;/</span><span class="pln">body</span><span class="pun">&gt;</span></pre>
+
+
+<p><a href="https://developers.google.com/maps/documentation/javascript/examples/geocoding-simple">View example
+  (geocoding-simple.html)</a></p>
+
+<h2 id="ReverseGeocoding">Reverse Geocoding (Address Lookup)</h2>
+
+<p>The term <em>geocoding</em> generally refers to translating a human-readable
+  address into a location on a map. The process of doing the converse,
+  translating a location on the map into a human-readable address, is known as
+  <em>reverse geocoding</em>.</p>
+
+<p>The <code>Geocoder</code> supports reverse geocoding directly. Instead of
+  supplying a textual <code>address</code>, supply a comma-separated
+  latitude/longitude pair in the <code>latLng</code> parameter.</p>
+
+<p>The following example geocodes a latitude/longitude value and centers the
+  map at that location, bringing up an info window with the formatted address.
+  We return the second result, which is less specific than the first (in this
+  case, a neighborhood name):</p>
+
+
+<pre class="prettyprint lang-javascript"><span class="pln">&nbsp; </span><span class="kwd">var</span><span class="pln"> geocoder</span><span class="pun">;</span><span class="pln"><br>&nbsp; </span><span class="kwd">var</span><span class="pln"> map</span><span class="pun">;</span><span class="pln"><br>&nbsp; </span><span class="kwd">var</span><span class="pln"> infowindow </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> google</span><span class="pun">.</span><span class="pln">maps</span><span class="pun">.</span><span class="typ">InfoWindow</span><span class="pun">();</span><span class="pln"><br>&nbsp; </span><span class="kwd">var</span><span class="pln"> marker</span><span class="pun">;</span><span class="pln"><br>&nbsp; </span><span class="kwd">function</span><span class="pln"> initialize</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; geocoder </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> google</span><span class="pun">.</span><span class="pln">maps</span><span class="pun">.</span><span class="typ">Geocoder</span><span class="pun">();</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> latlng </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> google</span><span class="pun">.</span><span class="pln">maps</span><span class="pun">.</span><span class="typ">LatLng</span><span class="pun">(</span><span class="lit">40.730885</span><span class="pun">,-</span><span class="lit">73.997383</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> mapOptions </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; zoom</span><span class="pun">:</span><span class="pln"> </span><span class="lit">8</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; center</span><span class="pun">:</span><span class="pln"> latlng</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; mapTypeId</span><span class="pun">:</span><span class="pln"> google</span><span class="pun">.</span><span class="pln">maps</span><span class="pun">.</span><span class="typ">MapTypeId</span><span class="pun">.</span><span class="pln">ROADMAP<br>&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; map </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> google</span><span class="pun">.</span><span class="pln">maps</span><span class="pun">.</span><span class="typ">Map</span><span class="pun">(</span><span class="pln">document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">"map_canvas"</span><span class="pun">),</span><span class="pln"> mapOptions</span><span class="pun">);</span><span class="pln"><br>&nbsp; </span><span class="pun">}</span><span class="pln"><br><br>&nbsp; </span><span class="kwd">function</span><span class="pln"> codeLatLng</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> input </span><span class="pun">=</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">"latlng"</span><span class="pun">).</span><span class="pln">value</span><span class="pun">;</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> latlngStr </span><span class="pun">=</span><span class="pln"> input</span><span class="pun">.</span><span class="pln">split</span><span class="pun">(</span><span class="str">","</span><span class="pun">,</span><span class="lit">2</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> lat </span><span class="pun">=</span><span class="pln"> parseFloat</span><span class="pun">(</span><span class="pln">latlngStr</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> lng </span><span class="pun">=</span><span class="pln"> parseFloat</span><span class="pun">(</span><span class="pln">latlngStr</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]);</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="kwd">var</span><span class="pln"> latlng </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> google</span><span class="pun">.</span><span class="pln">maps</span><span class="pun">.</span><span class="typ">LatLng</span><span class="pun">(</span><span class="pln">lat</span><span class="pun">,</span><span class="pln"> lng</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; geocoder</span><span class="pun">.</span><span class="pln">geocode</span><span class="pun">({</span><span class="str">'latLng'</span><span class="pun">:</span><span class="pln"> latlng</span><span class="pun">},</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">results</span><span class="pun">,</span><span class="pln"> status</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">status </span><span class="pun">==</span><span class="pln"> google</span><span class="pun">.</span><span class="pln">maps</span><span class="pun">.</span><span class="typ">GeocoderStatus</span><span class="pun">.</span><span class="pln">OK</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">results</span><span class="pun">[</span><span class="lit">1</span><span class="pun">])</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; map</span><span class="pun">.</span><span class="pln">setZoom</span><span class="pun">(</span><span class="lit">11</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; marker </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> google</span><span class="pun">.</span><span class="pln">maps</span><span class="pun">.</span><span class="typ">Marker</span><span class="pun">({</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; position</span><span class="pun">:</span><span class="pln"> latlng</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; map</span><span class="pun">:</span><span class="pln"> map<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">});</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; infowindow</span><span class="pun">.</span><span class="pln">setContent</span><span class="pun">(</span><span class="pln">results</span><span class="pun">[</span><span class="lit">1</span><span class="pun">].</span><span class="pln">formatted_address</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; infowindow</span><span class="pun">.</span><span class="pln">open</span><span class="pun">(</span><span class="pln">map</span><span class="pun">,</span><span class="pln"> marker</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; alert</span><span class="pun">(</span><span class="str">"Geocoder failed due to: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> status</span><span class="pun">);</span><span class="pln"><br>&nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="pun">});</span><span class="pln"><br>&nbsp; </span><span class="pun">}</span></pre>
+
+
+<p>Note that in the previous example we showed the second result (by
+  selecting <code>results[1]</code>. The reverse geocoder often returns more
+  than one result. Geocoding "addresses" are not just postal addresses, but any
+  way to geographically name a location. For example, when geocoding a point in
+  the city of Chicago, the geocoded point may be labeled as a street address,
+  as the city (Chicago), as its state (Illinois) or as a country (The United
+  States). All are addresses to the geocoder. The reverse geocoder returns all
+  of these results.</p>
+
+<p>The reverse geocoder matches political entities (countries, provinces,
+  cities and neighborhoods), street addresses, and postal codes.</p>
+
+<p>The full list of addresses returned by the previous query are shown
+below.</p>
+
+
+<pre class="prettyprint lang-javascript"><span class="pln">results</span><span class="pun">[</span><span class="lit">0</span><span class="pun">].</span><span class="pln">formatted_address</span><span class="pun">:</span><span class="pln"> </span><span class="str">"275-291 Bedford Ave, Brooklyn, NY 11211, USA"</span><span class="pun">,</span><span class="pln"><br>results</span><span class="pun">[</span><span class="lit">1</span><span class="pun">].</span><span class="pln">formatted_address</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Williamsburg, NY, USA"</span><span class="pun">,</span><span class="pln"><br>results</span><span class="pun">[</span><span class="lit">2</span><span class="pun">].</span><span class="pln">formatted_address</span><span class="pun">:</span><span class="pln"> </span><span class="str">"New York 11211, USA"</span><span class="pun">,</span><span class="pln"><br>results</span><span class="pun">[</span><span class="lit">3</span><span class="pun">].</span><span class="pln">formatted_address</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Kings, New York, USA"</span><span class="pun">,</span><span class="pln"><br>results</span><span class="pun">[</span><span class="lit">4</span><span class="pun">].</span><span class="pln">formatted_address</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Brooklyn, New York, USA"</span><span class="pun">,</span><span class="pln"><br>results</span><span class="pun">[</span><span class="lit">5</span><span class="pun">].</span><span class="pln">formatted_address</span><span class="pun">:</span><span class="pln"> </span><span class="str">"New York, New York, USA"</span><span class="pun">,</span><span class="pln"><br>results</span><span class="pun">[</span><span class="lit">6</span><span class="pun">].</span><span class="pln">formatted_address</span><span class="pun">:</span><span class="pln"> </span><span class="str">"New York, USA"</span><span class="pun">,</span><span class="pln"><br>results</span><span class="pun">[</span><span class="lit">7</span><span class="pun">].</span><span class="pln">formatted_address</span><span class="pun">:</span><span class="pln"> </span><span class="str">"United States"</span></pre>
+
+
+<p>Addresses are returned in the order of best to least matches. Generally,
+  the more exact address is the most prominent result, as it is in this case.
+  Note that we return different types of addresses, from the most specific
+  street address to less specific political entities such as neighborhoods,
+  cities, counties, states, etc. If you wish to match a more general address,
+  you may wish to inspect the <code>results[].types</code> field.</p>
+
+<p><span style="color:red">Note:</span> Reverse geocoding is not an exact
+  science. The geocoder will attempt to find the closest addressable location
+  within a certain tolerance.</p>
+
+<p><a href="https://developers.google.com/maps/documentation/javascript/examples/geocoding-reverse">View example
+  (geocoding-reverse.html)</a></p>
+
+<h2 id="GeocodingViewports">Viewport Biasing</h2>
+
+<p>You can also instruct the Geocoding Service to prefer results within a given
+  viewport (expressed as a bounding box). You do so by setting the
+  <code>bounds</code> parameter within the <code>GeocodeRequest</code> object
+  literal to define the bounds of this viewport. Note that biasing only
+  <em>prefers</em> results within the bounds; if more relevant results exist
+  outside of these bounds, they may be included.</p>
+
+<p>For example, a geocode for "Winnetka" generally returns this suburb of Chicago:</p>
+
+
+<pre class="prettyprint lang-javascript"><span class="pun">{</span><span class="pln"><br>&nbsp; </span><span class="str">"types"</span><span class="pun">:[</span><span class="str">"locality"</span><span class="pun">,</span><span class="str">"political"</span><span class="pun">],</span><span class="pln"><br>&nbsp; </span><span class="str">"formatted_address"</span><span class="pun">:</span><span class="str">"Winnetka, IL, USA"</span><span class="pun">,</span><span class="pln"><br>&nbsp; </span><span class="str">"address_components"</span><span class="pun">:[{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"long_name"</span><span class="pun">:</span><span class="str">"Winnetka"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"short_name"</span><span class="pun">:</span><span class="str">"Winnetka"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"types"</span><span class="pun">:[</span><span class="str">"locality"</span><span class="pun">,</span><span class="str">"political"</span><span class="pun">]</span><span class="pln"><br>&nbsp; </span><span class="pun">},{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"long_name"</span><span class="pun">:</span><span class="str">"Illinois"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"short_name"</span><span class="pun">:</span><span class="str">"IL"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"types"</span><span class="pun">:[</span><span class="str">"administrative_area_level_1"</span><span class="pun">,</span><span class="str">"political"</span><span class="pun">]</span><span class="pln"><br>&nbsp; </span><span class="pun">},{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"long_name"</span><span class="pun">:</span><span class="str">"United States"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"short_name"</span><span class="pun">:</span><span class="str">"US"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"types"</span><span class="pun">:[</span><span class="str">"country"</span><span class="pun">,</span><span class="str">"political"</span><span class="pun">]</span><span class="pln"><br>&nbsp; </span><span class="pun">}],</span><span class="pln"><br>&nbsp; </span><span class="str">"geometry"</span><span class="pun">:{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"location"</span><span class="pun">:[</span><span class="pln"> </span><span class="pun">-</span><span class="lit">87.7417070</span><span class="pun">,</span><span class="pln"> </span><span class="lit">42.1083080</span><span class="pun">],</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"location_type"</span><span class="pun">:</span><span class="str">"APPROXIMATE"</span><span class="pln"><br>&nbsp; </span><span class="pun">}</span><span class="pln"><br></span><span class="pun">}</span></pre>
+
+
+<p>However, specifying a <code>bounds</code> parameter defining a bounding box
+  for the San Fernando Valley of Los Angeles results in this geocode returning
+  the neighborhood named "Winnetka" in that location:</p>
+
+
+<pre class="prettyprint lang-javascript"><span class="pun">{</span><span class="pln"><br>&nbsp; </span><span class="str">"types"</span><span class="pun">:[</span><span class="str">"sublocality"</span><span class="pun">,</span><span class="str">"political"</span><span class="pun">],</span><span class="pln"><br>&nbsp; </span><span class="str">"formatted_address"</span><span class="pun">:</span><span class="str">"Winnetka, California, USA"</span><span class="pun">,</span><span class="pln"><br>&nbsp; </span><span class="str">"address_components"</span><span class="pun">:[{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"long_name"</span><span class="pun">:</span><span class="str">"Winnetka"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"short_name"</span><span class="pun">:</span><span class="str">"Winnetka"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"types"</span><span class="pun">:[</span><span class="str">"sublocality"</span><span class="pun">,</span><span class="str">"political"</span><span class="pun">]</span><span class="pln"><br>&nbsp; </span><span class="pun">},{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"long_name"</span><span class="pun">:</span><span class="str">"Los Angeles"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"short_name"</span><span class="pun">:</span><span class="str">"Los Angeles"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"types"</span><span class="pun">:[</span><span class="str">"administrative_area_level_3"</span><span class="pun">,</span><span class="str">"political"</span><span class="pun">]</span><span class="pln"><br>&nbsp; </span><span class="pun">},{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"long_name"</span><span class="pun">:</span><span class="str">"Los Angeles"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"short_name"</span><span class="pun">:</span><span class="str">"Los Angeles"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"types"</span><span class="pun">:[</span><span class="str">"administrative_area_level_2"</span><span class="pun">,</span><span class="str">"political"</span><span class="pun">]</span><span class="pln"><br>&nbsp; </span><span class="pun">},{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"long_name"</span><span class="pun">:</span><span class="str">"California"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"short_name"</span><span class="pun">:</span><span class="str">"CA"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"types"</span><span class="pun">:[</span><span class="str">"administrative_area_level_1"</span><span class="pun">,</span><span class="str">"political"</span><span class="pun">]</span><span class="pln"><br>&nbsp; </span><span class="pun">},{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"long_name"</span><span class="pun">:</span><span class="str">"United States"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"short_name"</span><span class="pun">:</span><span class="str">"US"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"types"</span><span class="pun">:[</span><span class="str">"country"</span><span class="pun">,</span><span class="str">"political"</span><span class="pun">]</span><span class="pln"><br>&nbsp; </span><span class="pun">}],</span><span class="pln"><br>&nbsp; </span><span class="str">"geometry"</span><span class="pun">:{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"location"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="lit">34.213171</span><span class="pun">,-</span><span class="lit">118.571022</span><span class="pun">],</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"location_type"</span><span class="pun">:</span><span class="str">"APPROXIMATE"</span><span class="pln"><br>&nbsp; </span><span class="pun">}</span><span class="pln"><br></span><span class="pun">}</span></pre>
+
+
+<h2 id="GeocodingRegionCodes">Region Code Biasing</h2>
+
+<p>You can also set the Geocoding Service to return results biased to a
+  particular region explicitly using the <code>region</code> parameter. This
+  parameter takes a region code, specified as a <a href="http://www.iana.org/assignments/language-subtag-registry">IANA language
+    <code>region</code> subtag</a>. In most cases, these tags map directly to
+  familiar ccTLD ("top-level domain") two-character values such as "uk" in
+  "co.uk" for example. In some cases, the <code>region</code> tag also supports
+  ISO-3166-1 codes, which sometimes differ from ccTLD values ("GB" for "Great
+  Britain" for example).</p>
+
+<p>Geocoding requests can be sent for every domain in which the main
+  Google Maps application offers geocoding. Note that biasing only
+  <em>prefers</em> results for a specific domain; if more relevant results
+  exist outside of this domain, they may be included.</p>
+
+<p>For example, a geocode for "Toledo" returns this result, as the default
+  domain for the Geocoding Service is set to the United States:</p>
+
+
+<pre class="prettyprint lang-javascript"><span class="pun">{</span><span class="pln"><br>&nbsp; </span><span class="str">"types"</span><span class="pun">:[</span><span class="str">"locality"</span><span class="pun">,</span><span class="str">"political"</span><span class="pun">],</span><span class="pln"><br>&nbsp; </span><span class="str">"formatted_address"</span><span class="pun">:</span><span class="str">"Toledo, OH, USA"</span><span class="pun">,</span><span class="pln"><br>&nbsp; </span><span class="str">"address_components"</span><span class="pun">:[{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"long_name"</span><span class="pun">:</span><span class="str">"Toledo"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"short_name"</span><span class="pun">:</span><span class="str">"Toledo"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"types"</span><span class="pun">:[</span><span class="str">"locality"</span><span class="pun">,</span><span class="str">"political"</span><span class="pun">]</span><span class="pln"><br>&nbsp; </span><span class="pun">},{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"long_name"</span><span class="pun">:</span><span class="str">"Ohio"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"short_name"</span><span class="pun">:</span><span class="str">"OH"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"types"</span><span class="pun">:[</span><span class="str">"administrative_area_level_1"</span><span class="pun">,</span><span class="str">"political"</span><span class="pun">]</span><span class="pln"><br>&nbsp; </span><span class="pun">},{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"long_name"</span><span class="pun">:</span><span class="str">"United States"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"short_name"</span><span class="pun">:</span><span class="str">"US"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"types"</span><span class="pun">:[</span><span class="str">"country"</span><span class="pun">,</span><span class="str">"political"</span><span class="pun">]</span><span class="pln"><br>&nbsp; </span><span class="pun">}]</span><span class="pln"><br></span><span class="pun">}</span></pre>
+
+
+<p>A geocode for "Toledo" with the <code>region</code> field set to
+  <code>'es'</code> (Spain) will return the Spanish city:</p>
+
+
+<pre class="prettyprint lang-javascript"><span class="pun">{</span><span class="pln"><br>&nbsp; </span><span class="str">"types"</span><span class="pun">:[</span><span class="str">"locality"</span><span class="pun">,</span><span class="str">"political"</span><span class="pun">],</span><span class="pln"><br>&nbsp; </span><span class="str">"formatted_address"</span><span class="pun">:</span><span class="str">"Toledo, España"</span><span class="pun">,</span><span class="pln"><br>&nbsp; </span><span class="str">"address_components"</span><span class="pun">:[{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"long_name"</span><span class="pun">:</span><span class="str">"Toledo"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"short_name"</span><span class="pun">:</span><span class="str">"Toledo"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"types"</span><span class="pun">:[</span><span class="str">"locality"</span><span class="pun">,</span><span class="str">"political"</span><span class="pun">]</span><span class="pln"><br>&nbsp; </span><span class="pun">},{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"long_name"</span><span class="pun">:</span><span class="str">"Toledo"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"short_name"</span><span class="pun">:</span><span class="str">"TO"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"types"</span><span class="pun">:[</span><span class="str">"administrative_area_level_2"</span><span class="pun">,</span><span class="str">"political"</span><span class="pun">]</span><span class="pln"><br>&nbsp; </span><span class="pun">},{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"long_name"</span><span class="pun">:</span><span class="str">"Castilla-La Mancha"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"short_name"</span><span class="pun">:</span><span class="str">"CM"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"types"</span><span class="pun">:[</span><span class="str">"administrative_area_level_1"</span><span class="pun">,</span><span class="str">"political"</span><span class="pun">]</span><span class="pln"><br>&nbsp; </span><span class="pun">},{</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"long_name"</span><span class="pun">:</span><span class="str">"España"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"short_name"</span><span class="pun">:</span><span class="str">"ES"</span><span class="pun">,</span><span class="pln"><br>&nbsp; &nbsp; </span><span class="str">"types"</span><span class="pun">:[</span><span class="str">"country"</span><span class="pun">,</span><span class="str">"political"</span><span class="pun">]</span><span class="pln"><br>&nbsp; </span><span class="pun">}]</span><span class="pln"><br></span><span class="pun">}</span></pre>
+
+
+  
+  </div>
+
+        </div>
+        
+<div id="gc-content-footer">
+
+
+
+<div itemprop="datePublished" content="2012-07-18T00:21:33.066672" id="gc-content-last-updated">Last updated July 18, 2012.</div>
+
+</div>
+
+
+
+
+      </div>
+
+      </div>
+      
+
+      
+      
+      <footer id="gc-footer">
+        <div id="gc-copyright">
+          <a href="https://developers.google.com/">
+            <img id="developers-logo-footer" src="geocoding_files/developers-logo-footer.png" alt="Google Developers logo" style="vertical-align: center; float: left">
+          </a>
+          <ul>
+            <li><a href="http://www.google.com/">Google</a></li>
+            <li><a href="https://developers.google.com/readme/terms">Terms of Service</a></li>
+            <li><a href="http://www.google.com/intl/en/privacy/">Privacy Policy</a></li>
+            <li><a href="https://developers.google.com/jobs">Jobs</a></li>
+            <li><a class="google-feedback" data-p="81425" data-b="Documentation" data-v="devsite-20121001-rc00.362150739779064226" href="">Report a bug</a></li>
+          </ul>
+        </div>
+        
+        <div id="gc-language">
+          <ul>
+            <li>
+              <form id="setlang" action="/i18n/setlang/" method="post">
+                <div style="display:none"><input name="csrfmiddlewaretoken" value="6da1e0f822c2cffe2d0dc74e9c3ace8b" type="hidden"></div>
+                <select style="display: none;" id="footer_language" name="language">
+                  
+                  
+                  <option value="ar">
+                    العربيّة
+                  </option>
+                  
+                  <option value="bg">
+                    български
+                  </option>
+                  
+                  <option value="ca">
+                    català
+                  </option>
+                  
+                  <option value="zh-cn">
+                    简体中文
+                  </option>
+                  
+                  <option value="zh-tw">
+                    繁體中文
+                  </option>
+                  
+                  <option value="hr">
+                    Hrvatski
+                  </option>
+                  
+                  <option value="cs">
+                    česky
+                  </option>
+                  
+                  <option value="da">
+                    Dansk
+                  </option>
+                  
+                  <option value="nl">
+                    Nederlands
+                  </option>
+                  
+                  <option value="en" selected="selected">
+                    English
+                  </option>
+                  
+                  <option value="fa">
+                    فارسی
+                  </option>
+                  
+                  <option value="fi">
+                    suomi
+                  </option>
+                  
+                  <option value="fr">
+                    Français
+                  </option>
+                  
+                  <option value="de">
+                    Deutsch
+                  </option>
+                  
+                  <option value="el">
+                    Ελληνικά
+                  </option>
+                  
+                  <option value="he">
+                    עברית
+                  </option>
+                  
+                  <option value="hi">
+                    Hindi
+                  </option>
+                  
+                  <option value="hu">
+                    Magyar
+                  </option>
+                  
+                  <option value="id">
+                    Bahasa Indonesia
+                  </option>
+                  
+                  <option value="it">
+                    italiano
+                  </option>
+                  
+                  <option value="ja">
+                    日本語
+                  </option>
+                  
+                  <option value="ko">
+                    한국어
+                  </option>
+                  
+                  <option value="lv">
+                    latviešu
+                  </option>
+                  
+                  <option value="lt">
+                    Lithuanian
+                  </option>
+                  
+                  <option value="nb">
+                    Norsk (bokmål)
+                  </option>
+                  
+                  <option value="nn">
+                    Norsk (nynorsk)
+                  </option>
+                  
+                  <option value="pl">
+                    polski
+                  </option>
+                  
+                  <option value="pt-br">
+                    Português Brasileiro
+                  </option>
+                  
+                  <option value="pt">
+                    Português
+                  </option>
+                  
+                  <option value="ro">
+                    Română
+                  </option>
+                  
+                  <option value="ru">
+                    Русский
+                  </option>
+                  
+                  <option value="sr">
+                    српски
+                  </option>
+                  
+                  <option value="sk">
+                    slovenský
+                  </option>
+                  
+                  <option value="sl">
+                    Slovenščina
+                  </option>
+                  
+                  <option value="es">
+                    español
+                  </option>
+                  
+                  <option value="sv">
+                    Svenska
+                  </option>
+                  
+                  <option value="th">
+                    Thai
+                  </option>
+                  
+                  <option value="tr">
+                    Türkçe
+                  </option>
+                  
+                  <option value="uk">
+                    Українська
+                  </option>
+                  
+                  <option value="vi">
+                    Vietnamese
+                  </option>
+                  
+                </select><span class="kd-button kd-menubutton kd-select"><div style="display: inline-block;"><div style="float: left;" class="label">
+                    English
+                  </div><div class="kd-disclosureindicator"></div></div></span>
+              </form>
+            </li>
+          </ul>
+        </div>
+        
+      </footer>
+      
+      
+    </div>
+    <div id="needAuth" class="msgDialogContent">
+      
+      <h1>Authentication required</h1>
+      
+      <div>
+        You need to be signed in with <a href="http://www.google.com/+">Google+</a> to do that.
+      </div>
+      <button>Sign in</button>
+      <button>Cancel</button>
+    </div>
+    <div id="signingIn" class="msgDialogContent">
+      
+      <h1>Signing you in...</h1>
+      <div>
+        
+        Google Developers needs your permission to do that.
+      </div>
+      
+      <button>Try again</button>
+      
+      <button>Cancel</button>
+    </div>
+    <script src="geocoding_files/script_foot.js"></script>
+    <script>
+      (function($) {
+        devsite.devsite.Init($, null, '');
+      })(jQuery);
+
+      
+      devsite.localInit = function() {
+        
+      };
+      
+    </script>
+    <!-- Google Code for PXL - Developers - Codesite - HP - 90d Remarketing List -->
+    <script type="text/javascript">
+    $('#setlang select').each(function() {
+      if ($.browser.msie) {
+        $(this).change(function() {
+          $('#setlang').submit();
+        });
+      } else {
+        $(this).kdSelect({'change': function() {
+          $('#setlang').submit();
+        }});
+      }
+    });
+    </script><ul class="kd-menulist" style="position: absolute; left: 758px; top: 8819.7px; display: none;"><li style="" class="kd-menulistitem">
+                    العربيّة
+                  </li><li class="kd-menulistitem">
+                    български
+                  </li><li class="kd-menulistitem">
+                    català
+                  </li><li class="kd-menulistitem">
+                    简体中文
+                  </li><li class="kd-menulistitem">
+                    繁體中文
+                  </li><li class="kd-menulistitem">
+                    Hrvatski
+                  </li><li class="kd-menulistitem">
+                    česky
+                  </li><li class="kd-menulistitem">
+                    Dansk
+                  </li><li class="kd-menulistitem">
+                    Nederlands
+                  </li><li class="kd-menulistitem selected">
+                    English
+                  </li><li class="kd-menulistitem">
+                    فارسی
+                  </li><li class="kd-menulistitem">
+                    suomi
+                  </li><li class="kd-menulistitem">
+                    Français
+                  </li><li class="kd-menulistitem">
+                    Deutsch
+                  </li><li class="kd-menulistitem">
+                    Ελληνικά
+                  </li><li class="kd-menulistitem">
+                    עברית
+                  </li><li class="kd-menulistitem">
+                    Hindi
+                  </li><li class="kd-menulistitem">
+                    Magyar
+                  </li><li class="kd-menulistitem">
+                    Bahasa Indonesia
+                  </li><li class="kd-menulistitem">
+                    italiano
+                  </li><li class="kd-menulistitem">
+                    日本語
+                  </li><li class="kd-menulistitem">
+                    한국어
+                  </li><li class="kd-menulistitem">
+                    latviešu
+                  </li><li class="kd-menulistitem">
+                    Lithuanian
+                  </li><li class="kd-menulistitem">
+                    Norsk (bokmål)
+                  </li><li class="kd-menulistitem">
+                    Norsk (nynorsk)
+                  </li><li class="kd-menulistitem">
+                    polski
+                  </li><li class="kd-menulistitem">
+                    Português Brasileiro
+                  </li><li class="kd-menulistitem">
+                    Português
+                  </li><li class="kd-menulistitem">
+                    Română
+                  </li><li class="kd-menulistitem">
+                    Русский
+                  </li><li class="kd-menulistitem">
+                    српски
+                  </li><li class="kd-menulistitem">
+                    slovenský
+                  </li><li class="kd-menulistitem">
+                    Slovenščina
+                  </li><li class="kd-menulistitem">
+                    español
+                  </li><li class="kd-menulistitem">
+                    Svenska
+                  </li><li class="kd-menulistitem">
+                    Thai
+                  </li><li class="kd-menulistitem">
+                    Türkçe
+                  </li><li class="kd-menulistitem">
+                    Українська
+                  </li><li class="kd-menulistitem">
+                    Vietnamese
+                  </li></ul>
+    <script type="text/javascript">
+      /* <![CDATA[ */
+      var google_conversion_id = 992540712;
+      var google_conversion_language = "en";
+      var google_conversion_format = "3";
+      var google_conversion_color = "ffffff";
+      var google_conversion_label = "qio2CKCPwQMQqPCj2QM";
+      var google_conversion_value = 0;
+      /* ]]> */
+    </script>
+    <script type="text/javascript" src="geocoding_files/conversion.js">
+    </script><img src="geocoding_files/a.gif" border="0" height="1" width="1">
+    <noscript>
+      <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/992540712/?label=qio2CKCPwQMQqPCj2QM&amp;guid=ON&amp;script=0"/>
+      </div>
+    </noscript>
+    
+
+
+
+
+
+<script type="text/javascript">
+$(document).ready(function(e) {
+    // Render any carousels on the page
+    $('.carousel').carousel();
+    // Render any feed widgets on the page
+    
+    $('.feed').rss();
+    $('.feed-plain').rss();
+    // Render any OSS widgets on the page.
+    $('.oss').oss();
+    });
+</script>
+
+<script type="text/javascript" defer="defer">
+
+
+$(document).ready(function() {
+    contentTimer.name = 'content';
+    contentTimer.tick('ol');
+    window.jstiming.report(contentTimer);
+
+    // Boilerplate javascript to enable the plusone button
+    var po = document.createElement('script'); po.type = 'text/javascript';
+    po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js?onload=devsite_plusoneLoaded';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(po, s);
+});
+</script>
+
+
+
+
+  
+
+</body></html>
