@@ -1,7 +1,3 @@
-Guttersnipe
-===========
-
-Transitioning Guttersnipe project to Python/Django from PERL/cgi
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,3 +5,9 @@ Transitioning Guttersnipe project to Python/Django from PERL/cgi
 <meta http-equiv="REFRESH" content="0;url=docs/Proposal/front.html">
 </HEAD>
 </HTML>
+
+
+Guttersnipe
+===========
+
+Transitioning Guttersnipe project to Python/Django from PERL/cgi
