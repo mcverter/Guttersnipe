@@ -1,2 +1,0 @@
- body.RedOnBlack { color:red; background-color:black;} 
- body.BlackOnRed { color:red; background-color:black;} 
