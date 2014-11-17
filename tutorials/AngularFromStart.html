@@ -1,0 +1,37 @@
+<html ng-app="myApp">
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+{{ someProperty }}
+<button ng-click="someAction()"></button>
+
+<div ng-controller="SomeController">
+    {{ someControllerModel.someControllerProperty }}
+    <button ng-click="someControllerAction()">Communicate</button>
+</div>
+<script src="JoeEames_Angular_Directives/ExerciseFiles/AfterEvents/app/lib/angular/angular.js"></script>
+
+<script>
+    angular.module('myApp', [])
+            .run(function($rootScope) {
+                $rootScope.someProperty= "hello angular";
+                $rootScope.someAction = function() {
+                    $rootScope.someProperty = 'hello human';
+                }
+            });
+    angular.module('myApp', [])
+            .controller('SomeController', function($scope) {
+                $scope.someControllerModel = {
+                    someControllerProperty: 'hello controller'
+                };
+                $scope.someControllerAction = function() {
+                    $scope.someControllerModel.someControllerProperty = 'bye controller';
+                }
+            });
+
+</script>
+</body>
+</html>
