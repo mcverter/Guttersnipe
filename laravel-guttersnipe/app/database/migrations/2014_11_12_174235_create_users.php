@@ -23,10 +23,6 @@ class CreateUsers extends Migration {
             $table->boolean('is_admin');
             $table->timestamps();
         });
-        Schema::table('cats', function($table){
-            $table->integer('user_id')->nullable()
-                ->references('id')->on('users');
-        });
 	}
 
 	/**

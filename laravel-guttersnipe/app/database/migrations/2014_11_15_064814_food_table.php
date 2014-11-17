@@ -12,6 +12,17 @@ class FoodTable extends Migration {
 	 */
 	public function up()
 	{
+
+        Schema::drop('users');
+
+        Schema::create('users', function($table){
+            $table->increments('id');
+            $table->integer('meat');
+            $table->integer('grains');
+            $table->integer('produce');
+            $table->integer('dairy');
+            $table->integer('foodtype');
+        });
         #FoodCategories[meat, dairy, bread, packaged, produce, vegetarian/vegan]
         # Dairy set (‘CHEESE', 'MILK', 'GOAT', 'CREAM')
         # Meat ENUM('EGGS', 'COW', 'PIG', 'SEAFOOD', 'BIRD', 'ANIMAL')
