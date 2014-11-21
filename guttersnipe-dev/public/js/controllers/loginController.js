@@ -1,3 +1,12 @@
+/*(function (angular, app) {
+    'use strict';
+
+    app.controller('MooCtrl', [function () {
+    }]);
+})(window.angular, window.guttersnipe);
+
+*/
+
 var login = angular.module('LoginCtrl', []);
 login.controller('LoginController', function($scope, $location, Login, SessionService){
     $scope.loginSubmit = function(){

@@ -1,0 +1,131 @@
+<h1> Report on Food </h1>
+<ng-form role="form" class="form-horizontal">
+    <div id="address">
+        <label for="street_address">Street Address</label>
+        <input type="text" class="form-control" id="street_address" placeholder="">
+    </div>
+    <button type="button" class="btn btn-default" ng-click="geolocateAddress()">Find Address</button>
+    <div id="mapdiv">
+        <div id="map-display">
+
+        </div>
+        <div id="map-approval">
+            <button type="button" class="btn btn-success" ng-click="">Correct</button>
+            <button type="button" class="btn btn-danger" ng-click="">Incorrect</button>
+        </div>
+    </div>
+    <div id="site_detail">
+        <div id="summary_div">
+            <div class="form-group">
+                <label for="summary">Summary</label>
+                <input type="text" class="form-control" id="summary" placeholder="Brief summary (less than 50 characters)">
+            </div>
+        </div>
+        <div id="description_div">
+            <div class="form-group">
+                <label for="description">Detailed Description</label>
+                <textarea class="form-control" id="description" rows="5"></textarea>
+            </div>
+        </div>
+        <div id="food_div">
+            <div id="main_food_div">
+                <h2>Food Type</h2>
+                <label class="checkbox-inline">
+                    <input type="checkbox" name="grain" value="Bread"> Bread
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" name="grain" value="Pastries"> Pastries
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" name="grain" value="grains">Grains (rice, oats, etc)
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" name="grain" value="Other grain"> Other grains
+                </label>
+            </div>
+
+        </div>
+
+        <div id="produce_div">
+            <h2> Produce </h2>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="produce" value="fruit">  Fruit
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="produce" value="vegetables"> Vegetables
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="produce" value="juice"> Juice
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="produce" value="herbs"> Herbs
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="produce" value="other"> Other Produce
+            </label>
+        </div>
+
+
+
+        <div id="dairy_div">
+            <h2> Dairy </h2>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="dairy" value="milk"> Milk
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="dairy" value="cheese"> Cheese
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="dairy" value="cream"> Cream/Yogurt
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="dairy" value="nocow"> Non-Cow Dairy
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="dairy" value="other"> Other Dairy
+            </label>
+        </div>
+
+        <div id="protein_div">
+            <h2> Protein</h2>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="protein" value="Cow"> Cow
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="protein" value="Pig"> Pig
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="protein" value="Bird"> Poultry
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="protein" value="Nuts"> Nuts
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="protein" value="Beans"> Beans
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="protein" value="Other animal protein"> Other animal protein
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="protein" value="Other non-animal protein"> Other non-animal protein
+            </label>
+        </div>
+
+
+        <div id="grain_div">
+            <h2>Breads and Grains</h2>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="grain" value="Bread"> Bread
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="grain" value="Pastries"> Pastries
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="grain" value="grains">Grains (rice, oats, etc)
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="grain" value="Other grain"> Other grains
+            </label>
+        </div>
+    </div>
+</ng-form>
