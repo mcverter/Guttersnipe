@@ -112,6 +112,10 @@
                         templateUrl: 'js/partials/admin/manage_users.html',
                         controller: 'ManageUsersCtrl'
                     })
+                    .when('/maps_example',{
+                        templateUrl: 'js/partials/edit_profile.html',
+                        controller: 'EditProfileCtrl'
+                    })
                     .otherwise({
                         templateUrl: 'js/partials/home.html',
                         controller: 'HomeCtrl'
