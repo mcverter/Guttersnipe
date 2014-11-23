@@ -5,9 +5,11 @@
 
     window.guttersnipe =  angular.module('guttersnipe', [
         'ngRoute',
-        'uiGmapgoogle-maps'
+        'leaflet-directive',
+        'mgo-angular-wizard',
 
-    /*
+    /* 'leaflet-directive',
+     'uiGmapgoogle-maps',
      'ngCookies',
      'ngAnimate',
      'debug',
@@ -42,15 +44,16 @@
          };
          }];
          })*/
-        .config(['$routeProvider', 'uiGmapGoogleMapApiProvider',
-            function config($routeProvider, uiGmapGoogleMapApiProvider) {
+        .config(['$routeProvider', //"leaflet-directive", 'uiGmapGoogleMapApiProvider',
+            function config($routeProvider/*, uiGmapGoogleMapApiProvider*/) {
 
-                uiGmapGoogleMapApiProvider.configure({
+/*                uiGmapGoogleMapApiProvider
+                    .configure({
                     //    key: 'your api key',
                     v: '3.17',
                     libraries: 'weather,geometry,visualization'
                 });
-
+*/
                 /*
                  var authRequiredFilter = ['$log', '$user',
                  function checkAuth($log, $user) {
@@ -75,6 +78,10 @@
                     .when('/', {
                         templateUrl: 'js/partials/home.html',
                         controller: 'HomeCtrl'
+                    })
+                    .when('/wizard', {
+                        templateUrl: 'js/partials/wizard.html',
+                        controller: 'WizardCtrl'
                     })
                     .when('/register',{
                         templateUrl: 'js/partials/register.html',
