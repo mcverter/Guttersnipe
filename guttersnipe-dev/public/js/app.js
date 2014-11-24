@@ -1,17 +1,12 @@
 (function (angular, app) {
     'use strict';
 
-//  var loginPath = '/security/login';
-
-    window.guttersnipe =  angular.module('guttersnipe', [
+    window.guttersnipe = app || angular.module('guttersnipe', [
         'ngRoute',
         'leaflet-directive',
         'mgo-angular-wizard',
 
-    /* 'leaflet-directive',
-     'uiGmapgoogle-maps',
-     'ngCookies',
-     'ngAnimate',
+    /*
      'debug',
      'app-config',
      'bootstrap',
