@@ -81,7 +81,13 @@ resourceTaxonomy.factory('ResourceTaxonomy', function($http){
                 }, {
                     name: 'Sexual / Physical Abuse',
                     img: ''
-                } 
+                }, {
+                    name: 'Trans*',
+                    img: ''
+                }, {
+                    name: 'Women\'s',
+                    img: ''
+                }
             ]
         },
 
