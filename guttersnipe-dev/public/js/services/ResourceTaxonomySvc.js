@@ -1,7 +1,12 @@
+/**
+ *
+ */
+
 var resourceTaxonomy=angular.module('ResourceTaxonomyService', []);
 resourceTaxonomy.factory('ResourceTaxonomy', function($http){
-    var resources = {
-        top_level : {
+
+    var resourceTax = {
+        resource_types : {
             notes: '',
             groupImg: '',
             selection: [
@@ -18,10 +23,89 @@ resourceTaxonomy.factory('ResourceTaxonomy', function($http){
                     img: ''
                 },
             ]},
+
+        housing : {
+            notes: '',
+            groupImg: '',
+            selection: [
+                {
+                    name: 'Existing Squat',
+                    img: ''
+                }, {
+                    name: 'Start a Squat',
+                    img: ''
+                }, {
+                    name: 'Free Communal House',
+                    img: ''
+                }, {
+                    name: 'Shelter',
+                    img: ''
+                }, {
+                    name: 'Other Housing',
+                    img: ''
+                }
+            ]
+        },
+        medical : {
+
+            notes: '',
+            groupImg: '',
+            selection: [
+                {
+                    name: 'General Medicine (Western) ',
+                    img: ''
+                }, {
+                    name: 'Emergency Medicine (Western) ',
+                    img: ''
+                }, {
+                    name: 'Mental Health',
+                    img: ''
+                }, {
+                    name: 'Holistic',
+                    img: ''
+                }, {
+                    name: 'Herbal',
+                    img: ''
+                }, {
+                    name: 'Non Western',
+                    img: ''
+                }, {
+                    name: 'Health Clinic',
+                    img: ''
+                } ,  {
+                    name: 'Drug Health / Abuse',
+                    img: ''
+                }, {
+                    name: 'Sexual Health',
+                    img: ''
+                }, {
+                    name: 'Sexual / Physical Abuse',
+                    img: ''
+                } 
+            ]
+        },
+
         food: {
             grain: {
                 notes: '',
                 groupImg: '',
+                eating_arrangement : {
+                    selection: [
+                        {
+                            name: 'Food Not Bombs',
+                            img: ''
+                        },             {
+                            name: 'Free Communal Meal',
+                            img: ''
+                        },      {
+                            name: 'Free Food',
+                            img: ''
+                        } ,    {
+                            name: 'Dumpster',
+                            img: ''
+                        }
+                    ],
+                },
                 selection: [
                     {
                         name: 'Bread',
@@ -103,16 +187,16 @@ resourceTaxonomy.factory('ResourceTaxonomy', function($http){
                     {
                         name: 'Milk',
                         img: 'milk8'
-                    },                     {
+                    },  {
                         name: 'Cheese',
                         img: ''
-                    },                    {
+                    }, {
                         name: 'Yogurt',
                         img: ''
-                    },                    {
+                    }, {
                         name: 'Non-Cow Dairy',
                         img: ''
-                    },                    {
+                    }, {
                         name: 'Non-Animal Dairy',
                         img: ''
                     }
@@ -123,7 +207,7 @@ resourceTaxonomy.factory('ResourceTaxonomy', function($http){
     return {
 
         get: function () {
-            return resourceTaxonomy;
+            return resourceTax;
         }
     }
 });

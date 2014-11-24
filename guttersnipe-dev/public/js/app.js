@@ -73,58 +73,59 @@
                  return _.extend(def, props);
                  };
                  */
+
                 $routeProvider
 
                     .when('/', {
-                        templateUrl: 'js/partials/home.html',
+                        templateUrl: 'js/templates/home.html',
                         controller: 'HomeCtrl'
                     })
                     .when('/wizard', {
-                        templateUrl: 'js/partials/wizard.html',
+                        templateUrl: 'js/templates/wizard.html',
                         controller: 'WizardCtrl'
                     })
                     .when('/register',{
-                        templateUrl: 'js/partials/register.html',
+                        templateUrl: 'js/templates/register.html',
                         controller: 'RegistrationCtrl'
                     })
                     .when('/edit_profile',{
-                        templateUrl: 'js/partials/edit_profile.html',
+                        templateUrl: 'js/templates/edit_profile.html',
                         controller: 'EditProfileCtrl'
                     })
                     .when('/create_report',{
-                        templateUrl: 'js/partials/create_report.html',
+                        templateUrl: 'js/templates/create_report.html',
                         controller: 'CreateReportCtrl'
                     })
                     .when('/login',{
-                        templateUrl: 'js/partials/login.html',
+                        templateUrl: 'js/templates/login.html',
                         controller: 'LoginCtrl'
                     })
                     .when('/logout',{
-                        templateUrl: 'js/partials/logout.html',
+                        templateUrl: 'js/templates/logout.html',
                         controller: 'LogoutCtrl'
                     })
                     .when('/search',{
-                        templateUrl: 'js/partials/search.html',
+                        templateUrl: 'js/templates/search.html',
                         controller: 'SearchCtrl'
                     })
                     .when('/site{id}',{
-                        templateUrl: 'js/partials/site.html',
+                        templateUrl: 'js/templates/site.html',
                         controller: 'SiteCtrl'
                     })
                     .when('/admin/manage_data',{
-                        templateUrl: 'js/partials/admin/manage_data.html',
+                        templateUrl: 'js/templates/admin/manage_data.html',
                         controller: 'ManageDataCtrl'
                     })
                     .when('/admin/manage_users',{
-                        templateUrl: 'js/partials/admin/manage_users.html',
+                        templateUrl: 'js/templates/admin/manage_users.html',
                         controller: 'ManageUsersCtrl'
                     })
                     .when('/maps_example',{
-                        templateUrl: 'js/partials/edit_profile.html',
+                        templateUrl: 'js/templates/edit_profile.html',
                         controller: 'EditProfileCtrl'
                     })
                     .otherwise({
-                        templateUrl: 'js/partials/home.html',
+                        templateUrl: 'js/templates/home.html',
                         controller: 'HomeCtrl'
                     })
             }]);
