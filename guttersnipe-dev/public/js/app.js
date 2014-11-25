@@ -2,18 +2,13 @@
     'use strict';
 
     window.guttersnipe = app || angular.module('guttersnipe', [
-        'ngRoute',
+        'ui.router',
         'leaflet-directive',
         'mgo-angular-wizard',
-
-    /*
-     'debug',
-     'app-config',
-     'bootstrap',
-     'google-visualization',
-     'google-maps',
-     'nvd3ChartDirectives'
-     */
+        'ui.calendar',
+//        'ui.bootstrap',
+        'debug',
+        'bootstrap'
     ])
         /*
          .provider('authResponseInterceptor', function authResponseInterceptor() {
@@ -39,16 +34,73 @@
          };
          }];
          })*/
-        .config(['$routeProvider', //"leaflet-directive", 'uiGmapGoogleMapApiProvider',
-            function config($routeProvider/*, uiGmapGoogleMapApiProvider*/) {
+        .config(['$stateProvider', '$urlRouterProvider',
+            function config($stateProvider, $urlRouterProvider) {
+                $urlRouterProvider.otherwise("/home");
 
-/*                uiGmapGoogleMapApiProvider
-                    .configure({
-                    //    key: 'your api key',
-                    v: '3.17',
-                    libraries: 'weather,geometry,visualization'
-                });
-*/
+                $stateProvider
+                    .state('home', {
+                        url: '/',
+                        templateUrl: 'js/templates/home.html',
+                        controller: 'HomeCtrl'
+                    })
+                    .state( 'wizard', {
+                        url:'/wizard',
+                        templateUrl: 'js/templates/wizard.html',
+                        controller: 'WizardCtrl'
+                    })
+                    .state('wizard2', {
+                        url: '/wizard2',
+                        templateUrl: 'js/templates/wizard2.html',
+                        controller: 'Wizard2Ctrl'
+                    })
+                    .state('register',{
+                        url: '/register',
+                        templateUrl: 'js/templates/register.html',
+                        controller: 'RegistrationCtrl'
+                    })
+                    .state('edit_profile',{
+                        url: '/edit_profile',
+                        templateUrl: 'js/templates/edit_profile.html',
+                        controller: 'EditProfileCtrl'
+                    })
+                    .state('create_report',{
+                        url: '/create_report',
+                        templateUrl: 'js/templates/create_report.html',
+                        controller: 'CreateReportCtrl'
+                    })
+                    .state('login',{
+                        url: '/login',
+                        templateUrl: 'js/templates/login.html',
+                        controller: 'LoginCtrl'
+                    })
+                    .state('logout',{
+                        url: '/logout',
+                        templateUrl: 'js/templates/logout.html',
+                        controller: 'LogoutCtrl'
+                    })
+                    .state('search',{
+                        url: '/search',
+                        templateUrl: 'js/templates/search.html',
+                        controller: 'SearchCtrl'
+                    })
+                    .state('site{id}',{
+                        url: '/site{id}t',
+                        templateUrl: 'js/templates/site.html',
+                        controller: 'SiteCtrl'
+                    })
+                    .state('manage_data',{
+                        url: '/admin/manage_data',
+                        templateUrl: 'js/templates/admin/manage_data.html',
+                        controller: 'ManageDataCtrl'
+                    })
+                    .state('manage_users',{
+                        url: '/admin/manage_users',
+                        templateUrl: 'js/templates/admin/manage_users.html',
+                        controller: 'ManageUsersCtrl'
+                    })
+
+                ;
                 /*
                  var authRequiredFilter = ['$log', '$user',
                  function checkAuth($log, $user) {
@@ -68,61 +120,6 @@
                  return _.extend(def, props);
                  };
                  */
-
-                $routeProvider
-
-                    .when('/', {
-                        templateUrl: 'js/templates/home.html',
-                        controller: 'HomeCtrl'
-                    })
-                    .when('/wizard', {
-                        templateUrl: 'js/templates/wizard.html',
-                        controller: 'WizardCtrl'
-                    })
-                    .when('/register',{
-                        templateUrl: 'js/templates/register.html',
-                        controller: 'RegistrationCtrl'
-                    })
-                    .when('/edit_profile',{
-                        templateUrl: 'js/templates/edit_profile.html',
-                        controller: 'EditProfileCtrl'
-                    })
-                    .when('/create_report',{
-                        templateUrl: 'js/templates/create_report.html',
-                        controller: 'CreateReportCtrl'
-                    })
-                    .when('/login',{
-                        templateUrl: 'js/templates/login.html',
-                        controller: 'LoginCtrl'
-                    })
-                    .when('/logout',{
-                        templateUrl: 'js/templates/logout.html',
-                        controller: 'LogoutCtrl'
-                    })
-                    .when('/search',{
-                        templateUrl: 'js/templates/search.html',
-                        controller: 'SearchCtrl'
-                    })
-                    .when('/site{id}',{
-                        templateUrl: 'js/templates/site.html',
-                        controller: 'SiteCtrl'
-                    })
-                    .when('/admin/manage_data',{
-                        templateUrl: 'js/templates/admin/manage_data.html',
-                        controller: 'ManageDataCtrl'
-                    })
-                    .when('/admin/manage_users',{
-                        templateUrl: 'js/templates/admin/manage_users.html',
-                        controller: 'ManageUsersCtrl'
-                    })
-                    .when('/maps_example',{
-                        templateUrl: 'js/templates/edit_profile.html',
-                        controller: 'EditProfileCtrl'
-                    })
-                    .otherwise({
-                        templateUrl: 'js/templates/home.html',
-                        controller: 'HomeCtrl'
-                    })
             }]);
 
     app = window.guttersnipe;
