@@ -17,3 +17,13 @@
     margin-right: 8px;
     opacity: 0.7;
 }
+
+
+
+
+.angular-leaflet-map {
+    height: 400px;
+    border: 4px #fff solid;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px -1px rgba(0, 0, 0, 1);
+}

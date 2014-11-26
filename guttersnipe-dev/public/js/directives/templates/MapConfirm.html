@@ -1,0 +1,12 @@
+<h2>home</h2>
+leaflet
+
+
+<form>
+    Latitude : <input type="number" step="any" ng-model="center.lat">
+    Longitude : <input type="number" step="any" ng-model="center.lng">
+    Zoom : <input type="number" step="any" ng-model="center.zoom">
+</form>
+<leaflet center="center" markers="markers" center="osloCenter" defaults="defaults" width="640px" height="480px"></leaflet>
+
+
