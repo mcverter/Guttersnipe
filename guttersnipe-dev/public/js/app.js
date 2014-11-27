@@ -1,6 +1,10 @@
 (function (angular, app) {
     'use strict';
 
+    var BASE_DIR = 'js/templates/';
+
+    var RESOURCE_WIZARD_DIR = BASE_DIR + 'wizard_resource/';
+
     window.guttersnipe = app || angular.module('guttersnipe', [
         'ui.router',
         'leaflet-directive',
@@ -42,119 +46,119 @@
                     // route to show our basic form (/form)
                     .state('wizard_resource', {
                         url: '/resources/wizard',
-                        templateUrl: '',
+                        templateUrl: RESOURCE_WIZARD_DIR,
                         controller: ''
                     })
                     .state('wizard_resource.start', {
                         url: '/start',
-                        templateUrl: ''
+                        templateUrl: RESOURCE_WIZARD_DIR + ''
                     })
 
                     .state('wizard_resource.agreement', {
                         url: '/agreement',
-                        templateUrl: ''
+                        templateUrl: RESOURCE_WIZARD_DIR + 'ResourceCreateAgreement.html'
                     })
 
 
                     .state('wizard_resource.instruction', {
                         url: '/instructions',
-                        templateUrl: ''
+                        templateUrl: RESOURCE_WIZARD_DIR + 'ResourceCreateInstructions.html'
                     })
                     .state('wizard_resource.location', {
                         url: '/location',
-                        templateUrl: ''
+                        templateUrl: RESOURCE_WIZARD_DIR + 'LocationSearch.html'
                     })
                     .state('wizard_resource.map', {
                         url: '/map',
-                        templateUrl: ''
+                        templateUrl: RESOURCE_WIZARD_DIR + 'MapConfirm.html'
                     })
                     .state('wizard_resource.type', {
                         url: '/type',
-                        templateUrl: ''
+                        templateUrl: RESOURCE_WIZARD_DIR + 'ResourceGeneral.html'
                     })
                     .state('wizard_resource.details', {
                         url: '/details',
-                        templateUrl: ''
+                        templateUrl: RESOURCE_WIZARD_DIR + 'ResourceSpecific.html'
                     })
                     .state('wizard_resource.time', {
                         url: '/time',
-                        templateUrl: ''
+                        templateUrl: RESOURCE_WIZARD_DIR + ''
                     })
                     .state('wizard_resource.confirmation', {
                         url: '/confirmation',
-                        templateUrl: ''
+                        templateUrl: RESOURCE_WIZARD_DIR + ''
                     })
 
                 .state('home', {
                         url: '/',
-                        templateUrl: 'js/templates/home.html',
+                        templateUrl: BASE_DIR + 'home.html',
                         controller: 'HomeCtrl'
                     })
                     .state( 'wizard', {
                         url:'/wizard',
-                        templateUrl: 'js/templates/wizard.html',
+                        templateUrl: BASE_DIR + 'wizard.html',
                         controller: 'WizardCtrl'
                     })
                     .state('wizard2', {
                         url: '/wizard2',
-                        templateUrl: 'js/templates/wizard2.html',
+                        templateUrl: BASE_DIR + 'wizard2.html',
                         controller: 'Wizard2Ctrl'
                     })
                     .state('register',{
                         url: '/register',
-                        templateUrl: 'js/templates/register.html',
+                        templateUrl: BASE_DIR + 'register.html',
                         controller: 'RegistrationCtrl'
                     })
                     .state('edit_profile',{
                         url: '/edit_profile',
-                        templateUrl: 'js/templates/edit_profile.html',
+                        templateUrl: BASE_DIR + 'edit_profile.html',
                         controller: 'EditProfileCtrl'
                     })
                     .state('create_report',{
                         url: '/create_report',
-                        templateUrl: 'js/templates/create_report.html',
+                        templateUrl: BASE_DIR + 'create_report.html',
                         controller: 'CreateReportCtrl'
                     })
 
                     .state('resource_type',{
                         url: '/resource_type',
-                        templateUrl: 'js/templates/resource_type.html',
+                        templateUrl: BASE_DIR + 'resource_type.html',
                         controller: 'ResourceTypeCtrl'
                     })
                     .state('resource_details',{
                         url: '/resource_details',
-                        templateUrl: 'js/templates/resource_details.html',
+                        templateUrl: BASE_DIR + 'resource_details.html',
                         controller: 'ResourceDetailsCtrl'
                     })
 
                     .state('login',{
                         url: '/login',
-                        templateUrl: 'js/templates/login.html',
+                        templateUrl: BASE_DIR + 'login.html',
                         controller: 'LoginCtrl'
                     })
                     .state('logout',{
                         url: '/logout',
-                        templateUrl: 'js/templates/logout.html',
+                        templateUrl: BASE_DIR + 'logout.html',
                         controller: 'LogoutCtrl'
                     })
                     .state('search',{
                         url: '/search',
-                        templateUrl: 'js/templates/search.html',
+                        templateUrl: BASE_DIR + 'search.html',
                         controller: 'SearchCtrl'
                     })
                     .state('site{id}',{
                         url: '/site{id}t',
-                        templateUrl: 'js/templates/site.html',
+                        templateUrl: BASE_DIR + 'site.html',
                         controller: 'SiteCtrl'
                     })
                     .state('manage_data',{
                         url: '/admin/manage_data',
-                        templateUrl: 'js/templates/admin/manage_data.html',
+                        templateUrl: BASE_DIR + 'admin/manage_data.html',
                         controller: 'ManageDataCtrl'
                     })
                     .state('manage_users',{
                         url: '/admin/manage_users',
-                        templateUrl: 'js/templates/admin/manage_users.html',
+                        templateUrl: BASE_DIR + 'admin/manage_users.html',
                         controller: 'ManageUsersCtrl'
                     })
 
