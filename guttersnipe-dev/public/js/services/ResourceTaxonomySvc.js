@@ -1,11 +1,12 @@
 (function (angular, app, _) {
     'use strict';
 
-    app.factory('ResourceTaxonomy', ['$log', '$debug',
+    app.factory('ResourceTaxonomyService', ['$log', '$debug',
         function ($log, $debug) {
-            var resourceTax = {
+            var resourceTaxonomy = {
+                IMG_DIR : 'img/icons/svg/',
                 resource_types : {
-                    notes: '',
+                    notes: 'food ood ',
                     groupImg: '',
                     selection: [
                         {
@@ -18,12 +19,12 @@
                         },
                         {
                             name: 'medical',
-                            img: ''
+                            img: 'home153'
                         },
                     ]},
 
                 housing : {
-                    notes: '',
+                    notes: 'house mouse',
                     groupImg: '',
                     selection: [
                         {
@@ -210,7 +211,7 @@
             return {
 
                 get: function () {
-                    return resourceTax;
+                    return resourceTaxonomy;
                 }
             };
         }]);

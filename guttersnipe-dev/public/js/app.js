@@ -8,8 +8,7 @@
         'ui.calendar',
 //        'ui.bootstrap',
         'debug',
-        'bootstrap',
-        'ResourceTaxonomy'
+        'bootstrap'
     ])
         /*
          .provider('authResponseInterceptor', function authResponseInterceptor() {
@@ -70,6 +69,18 @@
                         templateUrl: 'js/templates/create_report.html',
                         controller: 'CreateReportCtrl'
                     })
+
+                    .state('resource_type',{
+                        url: '/resource_type',
+                        templateUrl: 'js/templates/resource_type.html',
+                        controller: 'ResourceTypeCtrl'
+                    })
+                    .state('resource_details',{
+                        url: '/resource_details',
+                        templateUrl: 'js/templates/resource_details.html',
+                        controller: 'ResourceDetailsCtrl'
+                    })
+
                     .state('login',{
                         url: '/login',
                         templateUrl: 'js/templates/login.html',

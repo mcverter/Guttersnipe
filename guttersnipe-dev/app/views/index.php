@@ -72,6 +72,8 @@
 <script src="js/controllers/siteController.js"></script>
 <script src="js/controllers/wizardController.js"></script>
 <script src="js/controllers/wizardController2.js"></script>
+<script src="js/controllers/resourceTypeController.js"></script>
+<script src="js/controllers/resourceDetailsController.js"></script>
 
 <!-- admin controllers -->
 <script src="js/controllers/admin/manageDataController.js"></script>
