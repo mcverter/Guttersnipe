@@ -8,7 +8,8 @@
         'ui.calendar',
 //        'ui.bootstrap',
         'debug',
-        'bootstrap'
+        'bootstrap',
+        'ResourceTaxonomy'
     ])
         /*
          .provider('authResponseInterceptor', function authResponseInterceptor() {

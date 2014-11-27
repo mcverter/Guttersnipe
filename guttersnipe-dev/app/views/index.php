@@ -50,11 +50,18 @@
 <script src="js/lib/wizard/angular-wizard.js"></script>
 
 
-<!--  angular services and controllers and directives -->
+<!--  angular  -->
+
+<!-- app -->
 <script src="js/app.js"></script>
 
+<!-- services -->
 <script src="js/services/authService.js"></script>
+<script src="js/services/ResourceTaxonomySvc.js"></script>
 
+
+
+<!-- controllers -->
 <script src="js/controllers/loginController.js"></script>
 <script src="js/controllers/homeController.js"></script>
 <script src="js/controllers/registerController.js"></script>
@@ -66,9 +73,11 @@
 <script src="js/controllers/wizardController.js"></script>
 <script src="js/controllers/wizardController2.js"></script>
 
+<!-- admin controllers -->
 <script src="js/controllers/admin/manageDataController.js"></script>
 <script src="js/controllers/admin/manageUsersController.js"></script>
 
+<!-- directives -->
 <script src="js/directives/ResourceDirective.js"></script>
 
 </body>
