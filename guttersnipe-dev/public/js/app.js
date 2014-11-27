@@ -39,7 +39,53 @@
               //  $urlRouterProvider.otherwise("/home");
 
                 $stateProvider
-                    .state('home', {
+                    // route to show our basic form (/form)
+                    .state('wizard_resource', {
+                        url: '/resources/wizard',
+                        templateUrl: '',
+                        controller: ''
+                    })
+                    .state('wizard_resource.start', {
+                        url: '/start',
+                        templateUrl: ''
+                    })
+
+                    .state('wizard_resource.agreement', {
+                        url: '/agreement',
+                        templateUrl: ''
+                    })
+
+
+                    .state('wizard_resource.instruction', {
+                        url: '/instructions',
+                        templateUrl: ''
+                    })
+                    .state('wizard_resource.location', {
+                        url: '/location',
+                        templateUrl: ''
+                    })
+                    .state('wizard_resource.map', {
+                        url: '/map',
+                        templateUrl: ''
+                    })
+                    .state('wizard_resource.type', {
+                        url: '/type',
+                        templateUrl: ''
+                    })
+                    .state('wizard_resource.details', {
+                        url: '/details',
+                        templateUrl: ''
+                    })
+                    .state('wizard_resource.time', {
+                        url: '/time',
+                        templateUrl: ''
+                    })
+                    .state('wizard_resource.confirmation', {
+                        url: '/confirmation',
+                        templateUrl: ''
+                    })
+
+                .state('home', {
                         url: '/',
                         templateUrl: 'js/templates/home.html',
                         controller: 'HomeCtrl'
