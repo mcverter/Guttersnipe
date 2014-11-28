@@ -56,6 +56,11 @@
                         templateUrl: DOC_DIR + 'CCNYProposal/front.html',
                         controller: ''
                     })
+                    .state('kropotkin', {
+                        url: '/docs/kropotkin',
+                        templateUrl: DOC_DIR + 'KropotkinQuote.html',
+                        controller: ''
+                    })
                     // route to show our basic form (/form)
                     .state('resources_wizard', {
                         url: '/resources/wizard',
