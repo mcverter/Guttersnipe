@@ -105,3 +105,27 @@
 }
 
 
+/* guttersnipe styles */
+h1
+{
+    font-size:76px;
+    font-family:"Futura";
+    font-weight:bold;
+    text-decoration: line-through;
+}
+ul
+{
+    font-size:36px;
+    font-family:"Verdana";
+    text-decoration: italic;
+    text-align:justify
+}
+.RedOnBlack { color:red; background-color:black;}
+.BlackOnRed { color:black; background-color:red;}
+.RedOnBlackSlide { color:red; background-color:black;text-align:center;}
+.BlackOnRedSlide { color:black; background-color:red;text-align:center;}
+div.navigation
+{
+    font-size:48px;
+    font-family:"Helvetica";
+}
