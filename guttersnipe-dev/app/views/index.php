@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/bootstrap.css"/>
     <link rel="stylesheet" href="css/leaflet.css">
     <link rel="stylesheet" href="css/angular-wizard.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body ng-app="guttersnipe">
@@ -24,6 +25,7 @@
 
 <!--angular-->
 <script src="js/lib/angular/angular.js"></script>
+<script src="js/lib/angular/angular-animate.js"></script>
 
 <!-- novo plugins -->
 <script src="js/lib/novolib/debug.js"></script>
@@ -56,31 +58,35 @@
 <script src="js/app.js"></script>
 
 <!-- services -->
-<script src="js/services/authService.js"></script>
-<script src="js/services/ResourceTaxonomySvc.js"></script>
+<script src="js/services/users/authService.js"></script>
+<script src="js/services/resources/ResourceTaxonomySvc.js"></script>
 
 
 
 <!-- controllers -->
-<script src="js/controllers/loginController.js"></script>
-<script src="js/controllers/homeController.js"></script>
-<script src="js/controllers/registerController.js"></script>
-<script src="js/controllers/editProfileController.js"></script>
-<script src="js/controllers/createReportController.js"></script>
-<script src="js/controllers/logoutController.js"></script>
-<script src="js/controllers/searchController.js"></script>
-<script src="js/controllers/siteController.js"></script>
-<script src="js/controllers/wizardController.js"></script>
-<script src="js/controllers/wizardController2.js"></script>
-<script src="js/controllers/resourceTypeController.js"></script>
-<script src="js/controllers/resourceDetailsController.js"></script>
+<script src="js/controllers/users/loginController.js"></script>
+<script src="js/controllers/users/homeController.js"></script>
+<script src="js/controllers/users/registerController.js"></script>
+<script src="js/controllers/users/editProfileController.js"></script>
+<script src="js/controllers/users/logoutController.js"></script>
+
+<script src="js/controllers/resources/searchController.js"></script>
+<script src="js/controllers/resources/createReportController.js"></script>
+<script src="js/controllers/resources/resourceTypeController.js"></script>
+<script src="js/controllers/resources/resourceDetailsController.js"></script>
+
+<script src="js/controllers/experimental/wizardController.js"></script>
+<script src="js/controllers/experimental/wizardController2.js"></script>
+<script src="js/controllers/experimental/siteController.js"></script>
+
+
 
 <!-- admin controllers -->
 <script src="js/controllers/admin/manageDataController.js"></script>
 <script src="js/controllers/admin/manageUsersController.js"></script>
 
 <!-- directives -->
-<script src="js/directives/ResourceDirective.js"></script>
+<script src="js/directives/resources/ResourceDirective.js"></script>
 
 </body>
 </html>

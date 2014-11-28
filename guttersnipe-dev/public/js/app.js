@@ -3,7 +3,7 @@
 
     var BASE_DIR = 'js/templates/';
 
-    var RESOURCE_WIZARD_DIR = BASE_DIR + 'wizard_resource/';
+    var RESOURCE_WIZARD_DIR = BASE_DIR + 'resources/wizard/';
 
     window.guttersnipe = app || angular.module('guttersnipe', [
         'ui.router',
@@ -12,7 +12,8 @@
         'ui.calendar',
 //        'ui.bootstrap',
         'debug',
-        'bootstrap'
+        'bootstrap',
+        'ngAnimate'
     ])
         /*
          .provider('authResponseInterceptor', function authResponseInterceptor() {
@@ -44,47 +45,47 @@
 
                 $stateProvider
                     // route to show our basic form (/form)
-                    .state('wizard_resource', {
+                    .state('resources_wizard', {
                         url: '/resources/wizard',
-                        templateUrl: RESOURCE_WIZARD_DIR,
+                        templateUrl: BASE_DIR + 'resources/wizard.html',
                         controller: ''
                     })
-                    .state('wizard_resource.start', {
+                    .state('resources_wizard.start', {
                         url: '/start',
-                        templateUrl: RESOURCE_WIZARD_DIR + ''
+                        templateUrl: RESOURCE_WIZARD_DIR + 'ResourceCreateAgreement.html'
                     })
 
-                    .state('wizard_resource.agreement', {
+                    .state('resources_wizard.agreement', {
                         url: '/agreement',
                         templateUrl: RESOURCE_WIZARD_DIR + 'ResourceCreateAgreement.html'
                     })
 
 
-                    .state('wizard_resource.instruction', {
+                    .state('resources_wizard.instructions', {
                         url: '/instructions',
                         templateUrl: RESOURCE_WIZARD_DIR + 'ResourceCreateInstructions.html'
                     })
-                    .state('wizard_resource.location', {
+                    .state('resources_wizard.location', {
                         url: '/location',
                         templateUrl: RESOURCE_WIZARD_DIR + 'LocationSearch.html'
                     })
-                    .state('wizard_resource.map', {
+                    .state('resources_wizard.map', {
                         url: '/map',
                         templateUrl: RESOURCE_WIZARD_DIR + 'MapConfirm.html'
                     })
-                    .state('wizard_resource.type', {
+                    .state('resources_wizard.type', {
                         url: '/type',
                         templateUrl: RESOURCE_WIZARD_DIR + 'ResourceGeneral.html'
                     })
-                    .state('wizard_resource.details', {
+                    .state('resources_wizard.details', {
                         url: '/details',
                         templateUrl: RESOURCE_WIZARD_DIR + 'ResourceSpecific.html'
                     })
-                    .state('wizard_resource.time', {
+                    .state('resources_wizard.time', {
                         url: '/time',
                         templateUrl: RESOURCE_WIZARD_DIR + ''
                     })
-                    .state('wizard_resource.confirmation', {
+                    .state('resources_wizard.confirmation', {
                         url: '/confirmation',
                         templateUrl: RESOURCE_WIZARD_DIR + ''
                     })
