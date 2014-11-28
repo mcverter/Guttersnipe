@@ -4,6 +4,7 @@
     var BASE_DIR = 'js/templates/';
 
     var RESOURCE_WIZARD_DIR = BASE_DIR + 'resources/wizard/';
+    var DOC_DIR = BASE_DIR + 'docs/';
 
     window.guttersnipe = app || angular.module('guttersnipe', [
         'ui.router',
@@ -44,6 +45,17 @@
               //  $urlRouterProvider.otherwise("/home");
 
                 $stateProvider
+          /*
+                    .state('kropotkin', {
+                        url: '/',
+                        templateUrl: DOC_DIR + 'CCNYProposal/front.html',
+                        controller: ''
+                    }) */
+                    .state('CCNY', {
+                        url: '/docs/presentation2013',
+                        templateUrl: DOC_DIR + 'CCNYProposal/front.html',
+                        controller: ''
+                    })
                     // route to show our basic form (/form)
                     .state('resources_wizard', {
                         url: '/resources/wizard',
