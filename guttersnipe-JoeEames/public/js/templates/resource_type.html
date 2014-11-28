@@ -1,0 +1,16 @@
+<ng-form>
+    <h3>Choose a resource type:</h3>
+    <ul class="nav nav-pills nav-stacked center ">
+        <li ng-repeat="resourceType in resourceTaxonomy.resource_types.selection">
+
+            <!-- make this into a directive   <img class="img-responsive" ng-src="{{resourceTaxonomy.IMG_DIR}}{{resourceType.img}}.svg" height="30px" >
+            -->
+            <button type="button" class="btn btn-default btn-lg">
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span> {{resourceType.name}}
+            </button>
+
+        </li>
+    </ul>
+
+</ng-form>
+

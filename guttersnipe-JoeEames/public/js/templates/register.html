@@ -1,0 +1,30 @@
+<h2>register</h2>
+
+<div id="register" class="col-md-4 col-md-offset-4">
+    <div id="registration-form">
+        <h4>Register</h4>
+        <form ng-submit="registrationSubmit()">
+            <div class="form-group"><input id="username" type="text" ng-model="registrationData.username"/></div>
+
+            <!--password-->
+            <div class="form-group"><input id="password" type="password" ng-model="registrationData.password" /></div>
+
+            <!--confirm password-->
+            <div class="form-group"><input id="confirmpassword" type="password" ng-model="registrationData.confirmpassword" /></div>
+
+            <!-- email -->
+            <div class="form-group"><input id="email" type="email" ng-model="registrationData.email" /></div>
+
+            <!-- expiration date -->
+            <select class="form-group">
+                <option>One Day</option>
+                <option>One Week</option>
+                <option>One Month</option>
+                <option>One Year</option>
+                <option>Permanent</option>
+            </select>
+            <!--submit-->
+            <div class="form-group"><button class="btn btn-primary" type="submit">Login</button></div>
+        </form>
+    </div>
+</div>
