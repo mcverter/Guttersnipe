@@ -1,16 +1,17 @@
+
 <!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
     <title>Guttersnipe </title>
-    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet"  href="css/bootstrap.css"/>
     <link rel="stylesheet" href="css/leaflet.css">
     <link rel="stylesheet" href="css/angular-wizard.css">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body ng-app="guttersnipe">
-
+Hello Guttersnipe
 <div id="wrapper">
     <div class="container" id="view" ui-view>
 
@@ -18,12 +19,12 @@
 </div>
 
 
-<!--js-->
+<!-- js -->
 <script src="js/lib/jquery/jquery.js"></script>
 <script src="js/lib/bootstrap/bootstrap.js"></script>
 <script src="js/lib/lodash/lodash.js"></script>
 
-<!--angular-->
+<!-- angular -->
 <script src="js/lib/angular/angular.js"></script>
 <script src="js/lib/angular/angular-animate.js"></script>
 
