@@ -1,6 +1,4 @@
-var express = require('express'),
-    bodyParser = require('body-parser'),
-    logger = require('logger');
+var express = require('express');
 
 
 
@@ -11,7 +9,7 @@ var app = express();
 app.set('views', __dirname + '/server/views');
 app.set('view engine', 'jade');
 
-app.use(bodyParser());
+//app.use(bodyParser());
 //app.use(logger('dev'))
 app.use(express.static(__dirname + '/public'));
 
