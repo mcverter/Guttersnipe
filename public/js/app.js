@@ -4,6 +4,7 @@
     var BASE_DIR = 'js/templates/';
 
     var RESOURCE_WIZARD_DIR = BASE_DIR + 'resources/wizard/';
+    var PRESENTATION_DIR = BASE_DIR + 'CCNYProposal/presentation/';
     var DOC_DIR = BASE_DIR + 'docs/';
 
     window.guttersnipe = app || angular.module('guttersnipe', [
@@ -16,46 +17,72 @@
         'bootstrap',
         'ngAnimate'
     ])
-        /*
-         .provider('authResponseInterceptor', function authResponseInterceptor() {
-         var self = this;
-         self.$get = ['$log', '$injector', '$location', '$q',
-         function $get($log, $injector, $location, $q) {
-         return {
-         responseError: function responseError(rejection) {
-         // using $injector to avoid circular dependency authResponseInterceptor > $http > $api > $http
-         return $injector.invoke(['$api',
-         function ($api) {
-         if (rejection.status === 401 && $location.path() !== loginPath) {
-         $log.warn('Not Authorized (HTTP 401), clearing session and returning to login page');
-         $api.$logout().then(function redirectAfter401() {
-         var returnTo = $location.search('returnTo', null).url();
-         $location.search('returnTo', returnTo).path('/security/login');
-         });
-         }
 
-         return $q.reject(rejection);
-         }]);
-         }
-         };
-         }];
-         })*/
         .config(['$stateProvider', '$urlRouterProvider',
             function config($stateProvider, $urlRouterProvider) {
-              //  $urlRouterProvider.otherwise("/home");
+             //   $urlRouterProvider.otherwise("/home");
 
                 $stateProvider
-          /*
-                    .state('kropotkin', {
-                        url: '/',
-                        templateUrl: DOC_DIR + 'CCNYProposal/front.html',
-                        controller: ''
-                    }) */
                     .state('CCNY', {
                         url: '/docs/presentation2013',
-                        templateUrl: DOC_DIR + 'CCNYProposal/front.html',
+                        templateUrl: DOC_DIR + 'CCNYProposal/presentation.html',
                         controller: ''
                     })
+
+                    .state('CCNY.front', {
+                        url: '/front',
+                        templateUrl: PRESENTATION_DIR + 'front.html'
+                    })
+                    /*
+                    .state('CCNY.objective', {
+                        url: '/objective',
+                        templateUrl: PRESENTATION_DIR + 'objective.html'
+                    })
+                    .state('CCNY.audience', {
+                        url: '/audience',
+                        templateUrl: PRESENTATION_DIR + 'audience.html'
+                    })
+
+                    .state('CCNY.consultations', {
+                        url: '/consultations',
+                        templateUrl: PRESENTATION_DIR + 'consultations.html'
+                    })
+
+                    .state('CCNY.otherSites', {
+                        url: '/otherSites',
+                        templateUrl: PRESENTATION_DIR + 'otherSites.html'
+                    })
+
+                    .state('CCNY.questionOfMethod', {
+                        url: '/questionOfMethod',
+                        templateUrl: PRESENTATION_DIR + 'questionOfMethod.html'
+                    })
+
+                    .state('CCNY.answerOfMethod', {
+                        url: '/answerOfMethod',
+                        templateUrl: PRESENTATION_DIR + 'answerOfMethod.html'
+                    })
+                    .state('CCNY.example', {
+                        url: '/example',
+                        templateUrl: PRESENTATION_DIR + 'example.html'
+                    })
+                    .state('CCNY.report', {
+                        url: '/report',
+                        templateUrl: PRESENTATION_DIR + 'report.html'
+                    })
+                    .state('CCNY.result', {
+                        url: '/result',
+                        templateUrl: PRESENTATION_DIR + 'result.html'
+                    })
+                    .state('CCNY.research', {
+                        url: '/research',
+                        templateUrl: PRESENTATION_DIR + 'research.html'
+                    })
+                    .state('CCNY.fin', {
+                        url: '/fin',
+                        templateUrl: PRESENTATION_DIR + 'fin.html'
+                    })
+*/
                     .state('kropotkin', {
                         url: '/docs/kropotkin',
                         templateUrl: DOC_DIR + 'KropotkinQuote.html',
@@ -107,7 +134,7 @@
                         templateUrl: RESOURCE_WIZARD_DIR + ''
                     })
 
-                .state('home', {
+                    .state('home', {
                         url: '/',
                         templateUrl: BASE_DIR + 'home.html',
                         controller: 'HomeCtrl'
@@ -181,25 +208,6 @@
                     })
 
                 ;
-                /*
-                 var authRequiredFilter = ['$log', '$user',
-                 function checkAuth($log, $user) {
-                 $log.debug('Checking Authorization', $user.current);
-
-                 if (!$user.current) {
-                 return $user.$login();
-                 }
-                 }],
-                 secureRoute = function secureRoute(props) {
-                 var def = {
-                 resolve: { authFilter: authRequiredFilter },
-                 reloadOnSearch: false,
-                 secure: true
-                 };
-
-                 return _.extend(def, props);
-                 };
-                 */
             }]);
 
     app = window.guttersnipe;
@@ -207,3 +215,49 @@
 
 })(window.angular, window.guttersnipe);
 
+
+
+/*
+ var authRequiredFilter = ['$log', '$user',
+ function checkAuth($log, $user) {
+ $log.debug('Checking Authorization', $user.current);
+
+ if (!$user.current) {
+ return $user.$login();
+ }
+ }],
+ secureRoute = function secureRoute(props) {
+ var def = {
+ resolve: { authFilter: authRequiredFilter },
+ reloadOnSearch: false,
+ secure: true
+ };
+
+ return _.extend(def, props);
+ };
+ */
+
+/*
+ .provider('authResponseInterceptor', function authResponseInterceptor() {
+ var self = this;
+ self.$get = ['$log', '$injector', '$location', '$q',
+ function $get($log, $injector, $location, $q) {
+ return {
+ responseError: function responseError(rejection) {
+ // using $injector to avoid circular dependency authResponseInterceptor > $http > $api > $http
+ return $injector.invoke(['$api',
+ function ($api) {
+ if (rejection.status === 401 && $location.path() !== loginPath) {
+ $log.warn('Not Authorized (HTTP 401), clearing session and returning to login page');
+ $api.$logout().then(function redirectAfter401() {
+ var returnTo = $location.search('returnTo', null).url();
+ $location.search('returnTo', returnTo).path('/security/login');
+ });
+ }
+
+ return $q.reject(rejection);
+ }]);
+ }
+ };
+ }];
+ })*/
