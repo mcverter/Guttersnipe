@@ -17,6 +17,6 @@ app.get('*', function respondToHTTPRequest(req, res) {
     res.sendFile( __dirname + '/server/views'+'/index.html');
 });
 
-//var port = 4444;
-//app.listen(port);
-//console.log('Listening to port ' + port + '...');
+var port = process.env.PORT || 4444;
+app.listen(port);
+console.log('Listening to port ' + port + '...');
