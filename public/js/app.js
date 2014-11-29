@@ -4,8 +4,8 @@
     var BASE_DIR = 'js/templates/';
 
     var RESOURCE_WIZARD_DIR = BASE_DIR + 'resources/wizard/';
-    var PRESENTATION_DIR = BASE_DIR + 'CCNYProposal/presentation/';
     var DOC_DIR = BASE_DIR + 'docs/';
+    var PRESENTATION_DIR = DOC_DIR + 'CCNYProposal/presentation/';
 
     window.guttersnipe = app || angular.module('guttersnipe', [
         'ui.router',
@@ -26,18 +26,18 @@
                     .state('CCNY', {
                         url: '/docs/presentation2013',
                         templateUrl: DOC_DIR + 'CCNYProposal/presentation.html',
-                        controller: ''
                     })
 
                     .state('CCNY.front', {
                         url: '/front',
                         templateUrl: PRESENTATION_DIR + 'front.html'
                     })
-                    /*
+
                     .state('CCNY.objective', {
                         url: '/objective',
                         templateUrl: PRESENTATION_DIR + 'objective.html'
                     })
+
                     .state('CCNY.audience', {
                         url: '/audience',
                         templateUrl: PRESENTATION_DIR + 'audience.html'
@@ -82,7 +82,7 @@
                         url: '/fin',
                         templateUrl: PRESENTATION_DIR + 'fin.html'
                     })
-*/
+
                     .state('kropotkin', {
                         url: '/docs/kropotkin',
                         templateUrl: DOC_DIR + 'KropotkinQuote.html',

@@ -129,3 +129,54 @@ div.navigation
     font-size:48px;
     font-family:"Helvetica";
 }
+
+
+
+
+/* style.css */
+/* BASIC STYLINGS
+============================================================================= */
+
+/* form styling */
+#presentation-form-container                { background:#2f2f2f; margin-bottom:20px;
+    border-radius:5px; }
+#presentation-form-container .page-header   { background:#151515; margin:0; padding:30px;
+    border-top-left-radius:5px; border-top-right-radius:5px; }
+
+/* numbered buttons */
+#presentation-status-buttons                 {  }
+#presentation-status-buttons a               { color:#FFF; display:inline-block; font-size:12px; margin-right:10px; text-align:center; text-transform:uppercase; }
+#presentation-status-buttons a:hover         { text-decoration:none; }
+
+/* we will style the span as the circled number */
+#presentation-status-buttons span            { background:#080808; display:block; height:30px; margin:0 auto 10px; padding-top:5px; width:30px;
+    border-radius:50%; }
+
+/* active buttons turn light green-blue*/
+#presentation-status-buttons a.active span   { background:#00BC8C; }
+
+/* ANIMATION STYLINGS
+============================================================================= */
+#presentation-signup-form            { position:relative; min-height:300px; overflow:hidden; padding:30px; }
+#presentation-form-views             { width:auto; }
+
+/* basic styling for entering and leaving */
+/* left and right added to ensure full width */
+#presentation-form-views.ng-enter,
+#presentation-form-views.ng-leave      { position:absolute; left:30px; right:30px;
+    transition:0.5s all ease; -moz-transition:0.5s all ease; -webkit-transition:0.5s all ease;
+}
+
+/* enter animation */
+#presentation-form-views.ng-enter            {
+    -webkit-animation:slideInRight 0.5s both ease;
+    -moz-animation:slideInRight 0.5s both ease;
+    animation:slideInRight 0.5s both ease;
+}
+
+/* leave animation */
+#presentation-form-views.ng-leave            {
+    -webkit-animation:slideOutLeft 0.5s both ease;
+    -moz-animation:slideOutLeft 0.5s both ease;
+    animation:slideOutLeft 0.5s both ease;
+}

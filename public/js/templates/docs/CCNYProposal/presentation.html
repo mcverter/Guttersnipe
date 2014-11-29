@@ -1,16 +1,13 @@
 <!-- presentation.html -->
 <div class="row">
     <div class="col-sm-8 col-sm-offset-2">
-
         <div>
-
-            <div class="">
+            <div class="page-header text-center">
                 <h2>Presentation: 2013</h2>
 
                 <!-- the links to our nested states using relative paths -->
                 <!-- add the active class if the state matches our ui-sref -->
-                <!--
-                <div id="status-buttons" class="text-center">
+                <div id="presentation-status-buttons" class="text-center">
                     <a ui-sref-active="active" ui-sref=".front"><span>1</span> Start </a>
                     <a ui-sref-active="active" ui-sref=".objective"><span>2</span> Objective </a>
                     <a ui-sref-active="active" ui-sref=".audience"><span>3</span> Audience </a>
@@ -24,15 +21,15 @@
                     <a ui-sref-active="active" ui-sref=".research"><span>6</span> Research </a>
                     <a ui-sref-active="active" ui-sref=".fin"><span>6</span> Fin </a>
                 </div>
-                -->
             </div>
 
 
             <!-- use ng-submit to catch the form submission and use our Angular function -->
-            <form id="" ng-submit="processForm()">
-hello
+            <form  ng-submit="processForm()">
+formylormy
                 <!-- our nested state views will be injected here -->
-                <ui-view id="form-views"></ui-view>
+                <div ui-view></div>
+
             </form>
 
         </div>
