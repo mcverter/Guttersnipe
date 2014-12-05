@@ -6,7 +6,7 @@
             var resourceTaxonomy = {
                 IMG_DIR : 'img/icons/svg/',
                 resource_types : {
-                    notes: 'food ood ',
+                    notes: 'food',
                     groupImg: '',
                     selection: [
                         {
@@ -209,9 +209,12 @@
                 }
             };
             return {
+                getDetails: function(type) {
+                  return resourceTaxonomy[type];
+                },
 
-                get: function () {
-                    return resourceTaxonomy;
+                getTypes: function () {
+                    return resourceTaxonomy.resource_types;
                 }
             };
         }]);

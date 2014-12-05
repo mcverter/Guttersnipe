@@ -1,13 +1,13 @@
 <h2>home</h2>
-leaflet
 
 
 <form>
-    Latitude : <input type="number" step="any" ng-model="center.lat">
-    Longitude : <input type="number" step="any" ng-model="center.lng">
-    Zoom : <input type="number" step="any" ng-model="center.zoom">
+    Address of Resource : <input type="text" ng-model="inputAddress">
 </form>
-<leaflet center="center" markers="markers" center="osloCenter" defaults="defaults" width="640px" height="480px"></leaflet>
+        <button class="btn btn-info" ng-click="locateAddress($event)"> Find Address </button>
+
+{{inputAddress}}
+<leaflet markers="markers" center="center" defaults="defaults" width="640px" height="480px"></leaflet>
 
 
 <div class="form-group row">

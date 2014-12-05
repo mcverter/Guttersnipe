@@ -9,18 +9,23 @@
 
     window.guttersnipe = app || angular.module('guttersnipe', [
         'ui.router',
-        'leaflet-directive',
+       'leaflet-directive',
         'mgo-angular-wizard',
         'ui.calendar',
 //        'ui.bootstrap',
         'debug',
         'bootstrap',
         'ngAnimate'
+ //       ,'uiGmapgoogle-maps'
     ])
 
-        .config(['$stateProvider', '$urlRouterProvider',
-            function config($stateProvider, $urlRouterProvider) {
-             //   $urlRouterProvider.otherwise("/home");
+        .config(['$stateProvider', '$urlRouterProvider', '$httpProvider',
+            function config($stateProvider, $urlRouterProvider, $httpProvider) {
+                //   $urlRouterProvider.otherwise("/home");
+
+                $httpProvider.defaults.useXDomain = true;
+                delete $httpProvider.defaults.headers
+                    .common['X-Requested-With'];
 
                 $stateProvider
                     .state('CCNY', {
@@ -111,11 +116,13 @@
                     })
                     .state('resources_wizard.location', {
                         url: '/location',
-                        templateUrl: RESOURCE_WIZARD_DIR + 'LocationSearch.html'
+                        templateUrl: RESOURCE_WIZARD_DIR + 'LocationSearch.html',
+                        controller: 'LocationCtrl'
                     })
                     .state('resources_wizard.map', {
                         url: '/map',
-                        templateUrl: RESOURCE_WIZARD_DIR + 'MapConfirm.html'
+                        templateUrl: RESOURCE_WIZARD_DIR + 'MapConfirm.html',
+                        controller: 'MapCtrl'
                     })
                     .state('resources_wizard.type', {
                         url: '/type',
@@ -127,7 +134,8 @@
                     })
                     .state('resources_wizard.time', {
                         url: '/time',
-                        templateUrl: RESOURCE_WIZARD_DIR + ''
+                        templateUrl: RESOURCE_WIZARD_DIR + 'Schedule.html',
+                        controller: 'ScheduleCtrl'
                     })
                     .state('resources_wizard.confirmation', {
                         url: '/confirmation',
@@ -168,12 +176,12 @@
                     .state('resource_type',{
                         url: '/resource_type',
                         templateUrl: BASE_DIR + 'resource_type.html',
-                        controller: 'ResourceTypeCtrl'
+                        controller: 'ResourceCtrl'
                     })
                     .state('resource_details',{
                         url: '/resource_details',
                         templateUrl: BASE_DIR + 'resource_details.html',
-                        controller: 'ResourceDetailsCtrl'
+                        controller: 'ResourceCtrl'
                     })
 
                     .state('login',{

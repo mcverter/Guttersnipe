@@ -6,21 +6,20 @@ app.factory('geocodeService', ['$http',
         // return object
         var geocoder = {};
 
-        // make a class
-        Report.prototype = Object.create(Object.prototype, {
-
-            id: {
-                enumerable: true,
-                get: function getId() {
-                    var self = this;
-                    return self.data.id;
-                }
-            }
-        });
-
+        var address = "73 St Pauls Place Brooklyn NY";
+        var response = $http.get(
+            "http://rpc.geocoder.us/service/csv?address=" + address).
+            success(function(data, status, headers, config) {
+                console.log("Success");
+                console.log("Data", data);
+            }).
+            error(function(data, status, headers, config) {
+                console.log("Error");
+                console.log("Data", data);
+            });
 
         // return object
-    geocoder = Object.create(Object.prototype, {
+        geocoder = Object.create(Object.prototype, {
             id: {
                 enumerable: true,
                 get: function getId() {
@@ -43,17 +42,6 @@ app.factory('geocodeService', ['$http',
                 }
             }});
 
-        var address = "73 St Pauls Place Brooklyn NY";
-        var response = $http.get(
-            "http://rpc.geocoder.us/service/csv?address=" + address).
-            success(function(data, status, headers, config) {
-                console.log("Success");
-                console.log("Data", data);
-            }).
-            error(function(data, status, headers, config) {
-                console.log("Error");
-                console.log("Data", data);
-            });
 
         return geocoder;
 
