@@ -1,8 +1,9 @@
-var places =[{
-    _id: '<ObjectId1>',
+var spaceSchema =[{
+    address: String,
     location: {
-        lng: 44,
-        lat: 33
+        lng: Number,
+        lat: Number
     },
-    address: 'default'
+    notes: String
 }];
+

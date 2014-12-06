@@ -1,8 +1,9 @@
-var reports =[{
-    _id: '<ObjectId1>',
-    type: 'demanuel',
-    details: '',
-    place: 'demanuel@westnet.com',
-    time: 'password',
-    admin: true
-}];
+var reportSchema = mongoose.Schema({
+    type: [ObjectId],
+    details: [ObjectId],
+    space: [ObjectId],
+    time: [ObjectId],
+    author: String,
+    created_at: Date,
+    updated_at: Date
+});

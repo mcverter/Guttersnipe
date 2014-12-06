@@ -1,33 +1,13 @@
-$dates =
-    [
-        {
-            _id: "foo",
-            dailys: [
-
-                {
-                    day: "Oct 5",
-                    duration: 4,
-                    repeating: false
-                },
-                {
-                    day: "Oct 22",
-                    duration: 2,
-                    repeating: true
-                }
-            ]
-        } ,
-        {
-            _id: "foo",
-
-            dailys: [
-                {
-                    day: "Nov 22",
-                    duration: 2,
-                    repeating: true
-
-                }
-            ]
-
-        }
-    ];
+/**
+ *
+ * An array of up to seven daily events,
+ * Each of which has
+ *   (1) DateTime,
+ *   (2) Duration,
+ *   (3) Repeating
+ *
+ *  @type {{dailys: {day: Date, duration: (Number|*|Function), repeating: (Boolean|*|Function)}[]}[]}
+ */
+$timeSchema =
+    [{dailys: [ {day: Date, duration: Number, repeating: Boolean} ] }];
 
