@@ -1,14 +1,18 @@
-var express = require('express'),
+var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development',
+  express = require('express'),
   mongoose = require('mongoose'),
   morgan = require('morgan'),
   methodOverride = require('method-override'),
-  bodyParser = require('body-parser');
+  bodyParser = require('body-parser'),
+  app = express();
 
-mongoose.connect('mongodb://localhost/guttersnipe');
+if (env === 'development') {
+  mongoose.connect('mongodb://localhost/guttersnipe');
+}
+else {
+  mongoose.connect('mongodb://mongo_guttersnipe:guttersnipe_mongo@ds061370.mongolab.com:61370/guttersnipe');
+}
 
-var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
-
-var app = express();
 app.set('views', __dirname + '/server/views');
 app.set('view engine', 'jade');
 
@@ -20,47 +24,46 @@ app.use(bodyParser.json({type: 'application/vnd.api+json'}));
 app.use(methodOverride());
 
 /*
-app.post('/api/todos', function(req, res){
-  Todo.create({
-      text: req.body.text,
-      done: false
-    }, function(err, todo) {
-      if (err){
-        res.send(err);
-      }
-      res.json(todos);
-    }
-  );
-});
+ app.post('/api/todos', function(req, res){
+ Todo.create({
+ text: req.body.text,
+ done: false
+ }, function(err, todo) {
+ if (err){
+ res.send(err);
+ }
+ res.json(todos);
+ }
+ );
+ });
 
-app.delete('/api/todos/:todo_id', function(req, res){
-  Todo.remove({
-      _id: req.params.todo_id
-    }, function(err, todo) {
-      if (err){
-        res.send(err);
-      }
-      Todo.find(function(err, todos){
-        if (err){
-          res.send(err);
-        }
-        res.json(todos);
-      })
-    }
-  );
-});
-*/
+ app.delete('/api/todos/:todo_id', function(req, res){
+ Todo.remove({
+ _id: req.params.todo_id
+ }, function(err, todo) {
+ if (err){
+ res.send(err);
+ }
+ Todo.find(function(err, todos){
+ if (err){
+ res.send(err);
+ }
+ res.json(todos);
+ })
+ }
+ );
+ });
+ */
 /*  Let's use public ...
-app.get('*', function (req, res){
-  res.sendfile('./public/index.html');
-});
+ app.get('*', function (req, res){
+ res.sendfile('./public/index.html');
+ });
  */
 
 /**
- MONGOLAB_URI: mongodb://heroku_app28026988:fd49ia382a06ji8hnmiruodnet@ds063170.mongolab.com:63170/heroku_app28
- 026988
 
- mongodb://dbuser:dbpass@host:port/dbname
+
+
 
  */
 

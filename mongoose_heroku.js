@@ -117,6 +117,15 @@ db.once('open', function callback () {
 
 
 /**
+ *
+ * To connect using the shell:
+
+u: mongo_guttersnipe
+p: guttersnipe_mongo
+ mongo ds061370.mongolab.com:61370/guttersnipe -u <dbuser> -p <dbpassword>
+ To connect using a driver via the standard URI (what's this?):
+ mongodb://<dbuser>:<dbpassword>@ds061370.mongolab.com:61370/guttersnipe
+
 
  A DIFF3RENT
  // mongoose 3.8.x
