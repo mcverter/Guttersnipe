@@ -6,7 +6,7 @@ var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development',
   bodyParser = require('body-parser'),
   app = express();
 
-if (env === 'development') {
+if (false) {//(env === 'development') {
   mongoose.connect('mongodb://localhost/guttersnipe');
 }
 else {
