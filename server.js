@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.json({type: 'application/vnd.api+json'}));
 app.use(methodOverride());
 
-
+/*
 app.post('/api/todos', function(req, res){
   Todo.create({
       text: req.body.text,
@@ -49,13 +49,20 @@ app.delete('/api/todos/:todo_id', function(req, res){
     }
   );
 });
-
+*/
 /*  Let's use public ...
 app.get('*', function (req, res){
   res.sendfile('./public/index.html');
 });
  */
 
+/**
+ MONGOLAB_URI: mongodb://heroku_app28026988:fd49ia382a06ji8hnmiruodnet@ds063170.mongolab.com:63170/heroku_app28
+ 026988
+
+ mongodb://dbuser:dbpass@host:port/dbname
+
+ */
 
 app.get('*', function respondToHTTPRequest(req, res) {
   res.sendFile( __dirname + '/server/views'+'/index.html');
