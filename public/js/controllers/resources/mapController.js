@@ -4,7 +4,7 @@
     app.controller('MapCtrl', ['$scope', '$log',
         function ($scope, $log) {
             var inputAddress = 'Prospect Park',
-                center = {lat: 40.095,lng: -3.823, zoom: 14},
+                center = {lat: 40.660204,lng: -73.968956, zoom: 14},
                 geocoder = new google.maps.Geocoder();
 
             $scope.center = {lat: 40.095,lng: -3.823, zoom: 14};
