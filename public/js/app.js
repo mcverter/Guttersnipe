@@ -8,7 +8,9 @@
       USERS_DIR = BASE_DIR + 'users/',
 
       DOC_DIR = BASE_DIR + 'docs/',
-      PRESENTATION_DIR = DOC_DIR + 'CCNYProposal/presentation/';
+      PRESENTATION_DIR = DOC_DIR + 'CCNYProposal/presentation/',
+
+      ADMIN_DIR = BASE_DIR + 'admin/';
 
     window.guttersnipe = app || angular.module('guttersnipe', [
         'ui.router',
