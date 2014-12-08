@@ -122,13 +122,13 @@
 
                   .state('search',{
                     url: '/search',
-                    templateUrl: BASE_DIR + 'search.html',
-                    controller: 'SearchCtrl'
+                    templateUrl: RESOURCES_DIR + 'search.html'
+                    //controller: 'SearchCtrl'
                   })
                   .state('site{id}',{
                     url: '/site{id}t',
                     templateUrl: BASE_DIR + 'site.html',
-                    controller: 'SiteCtrl'
+                    //controller: 'SiteCtrl'
                   })
 
                 /*************
