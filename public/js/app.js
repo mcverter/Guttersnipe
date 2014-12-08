@@ -137,22 +137,22 @@
                     .state('register',{
                         url: '/register',
                         templateUrl: USERS_DIR + 'register.html',
-                        controller: 'RegistrationCtrl'
+                        //controller: 'RegistrationCtrl'
                     })
                     .state('edit_profile',{
                         url: '/edit_profile',
                         templateUrl: USERS_DIR + 'edit_profile.html',
-                        controller: 'EditProfileCtrl'
+                        //controller: 'EditProfileCtrl'
                     })
                   .state('login',{
                         url: '/login',
                         templateUrl: USERS_DIR + 'login.html',
-                        controller: 'LoginCtrl'
+                        //controller: 'LoginCtrl'
                     })
                     .state('logout',{
                         url: '/logout',
                         templateUrl: USERS_DIR + 'logout.html',
-                        controller: 'LogoutCtrl'
+                        //controller: 'LogoutCtrl'
                     })
 
                 /*********************
