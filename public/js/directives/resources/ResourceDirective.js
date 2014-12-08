@@ -9,7 +9,7 @@
 
     app.directive('resourceCreateAgreementTerms', function() {
         var linker = function(scope, element, attrs) {},
-            templateUrl = BASE_ROUTE + 'ResourceCreateAgreement.html',
+            templateUrl = BASE_ROUTE + 'AgreementPage.html',
             controller = function($scope){};
         return {
             link: linker,
@@ -21,7 +21,7 @@
 
     app.directive('resourceCreateInstructions', function() {
         var linker = function(scope, element, attrs) {},
-            templateUrl = BASE_ROUTE + 'ResourceCreateInstructions.html',
+            templateUrl = BASE_ROUTE + 'InstructionsPage.html',
             controller = function($scope){ };
         return {
             link: linker,
@@ -58,7 +58,7 @@
 
     app.directive('mapConfirm', function() {
         var linker = function(scope, element, attrs) {},
-            templateUrl = BASE_ROUTE + 'MapConfirm.html',
+            templateUrl = BASE_ROUTE + 'MapPage.html',
             controller = function homeController() {
                 $scope.center = {
                     lat: 40.095,
@@ -115,7 +115,7 @@
         };
     });
 
-    app.directive('resourceType', function() {
+    app.directive('type', function() {
         var linker = function(scope, element, attrs) {},
             templateUrl = BASE_ROUTE + 'ResourceGeneral.html',
             controller = function($scope){ };
@@ -129,7 +129,7 @@
 
     app.directive('resourceDetails', function() {
         var linker = function(scope, element, attrs) {},
-            templateUrl = BASE_ROUTE + 'ResourceSpecific.html',
+            templateUrl = BASE_ROUTE + 'TypePage.html',
             controller = function($scope){ };
         return {
             link: linker,
@@ -159,7 +159,7 @@
      };
      });
 
-     app.directive('resourceType', [function () {
+     app.directive('type', [function () {
      var linker = function(scope, element, attrs) {
 
      };

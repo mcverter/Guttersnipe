@@ -48,9 +48,11 @@
                 /********************
                  * RESOURCES: CREATE
                  *******************/
+
+                 /*
                   .state('create_report',{
                     url: '/create_report',
-                    templateUrl: RESOURCE_CREATE_DIR + 'create_report.html',
+                    templateUrl: RESOURCE_CREATE_DIR + 'DetailsPage.html',
                     controller: 'CreateReportCtrl'
                   })
 
@@ -65,7 +67,7 @@
                     controller: 'ResourceCtrl'
                   })
 
-
+*/
                   // route to show our basic form (/form)
                     .state('resources_wizard', {
                         url: '/resources/wizard',
@@ -74,18 +76,18 @@
                     })
                     .state('resources_wizard.start', {
                         url: '/start',
-                        templateUrl: RESOURCE_CREATE_DIR + 'ResourceCreateAgreement.html'
+                        templateUrl: RESOURCE_CREATE_DIR + 'AgreementPage.html'
                     })
 
                     .state('resources_wizard.agreement', {
                         url: '/agreement',
-                        templateUrl: RESOURCE_CREATE_DIR + 'ResourceCreateAgreement.html'
+                        templateUrl: RESOURCE_CREATE_DIR + 'AgreementPage.html'
                     })
 
 
                     .state('resources_wizard.instructions', {
                         url: '/instructions',
-                        templateUrl: RESOURCE_CREATE_DIR + 'ResourceCreateInstructions.html'
+                        templateUrl: RESOURCE_CREATE_DIR + 'InstructionsPage.html'
                     })
                     .state('resources_wizard.location', {
                         url: '/location',
@@ -94,25 +96,27 @@
                     })
                     .state('resources_wizard.map', {
                         url: '/map',
-                        templateUrl: RESOURCE_CREATE_DIR + 'MapConfirm.html',
+                        templateUrl: RESOURCE_CREATE_DIR + 'MapPage.html',
                         controller: 'MapCtrl'
                     })
                     .state('resources_wizard.type', {
                         url: '/type',
-                        templateUrl: RESOURCE_CREATE_DIR + 'ResourceGeneral.html'
+                        templateUrl: RESOURCE_CREATE_DIR + 'TypePage.html',
+                        controller: 'ResourceCtrl'
                     })
                     .state('resources_wizard.details', {
                         url: '/details',
-                        templateUrl: RESOURCE_CREATE_DIR + 'ResourceSpecific.html'
-                    })
+                        templateUrl: RESOURCE_CREATE_DIR + 'DetailsPage.html',
+                        controller: 'ResourceCtrl'
+                  })
                     .state('resources_wizard.time', {
                         url: '/time',
-                        templateUrl: RESOURCE_CREATE_DIR + 'Schedule.html',
+                        templateUrl: RESOURCE_CREATE_DIR + 'SchedulePage.html',
                         controller: 'ScheduleCtrl'
                     })
                     .state('resources_wizard.confirmation', {
                         url: '/confirmation',
-                        templateUrl: RESOURCE_CREATE_DIR + 'ConfirmReport.html'
+                        templateUrl: RESOURCE_CREATE_DIR + 'ConfirmationPage.html'
                     })
 
 

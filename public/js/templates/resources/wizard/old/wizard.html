@@ -6,10 +6,10 @@
         <div class="form-group">
             <label for="location">Location</label>
             <input type="text" class="form-control" id="location"
-                   placeholder="Address of {{ resourceType }}">
+                   placeholder="Address of {{ type }}">
         </div>
         <div class="instructionHdr">
-            Enter Address of {{resourceType}}
+            Enter Address of {{type}}
         </div>
 
         <ol class="instructionBdy">
@@ -31,11 +31,11 @@
         <input type="submit" wz-next-value="Resource Description">
     </wz-step>
     <wz-step class="" title="Describe Resource">
-        <div class="{{resourceType}}-description-pane"></div>
+        <div class="{{type}}-description-pane"></div>
         <input type="submit" wz-next-value="Best Schedule">
     </wz-step>
     <wz-step class="" title="Best Times for Pickup">
-        <div class="{{resourceType}}-description-pane"></div>
+        <div class="{{type}}-description-pane"></div>
         <input type="submit" wz-next-value="Confirm Details">
     </wz-step>
     <wz-step class="" title="Confirm Description">
