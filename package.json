@@ -9,9 +9,10 @@
   "author": "Mitchell Verter",
   "license": "ISC",
   "dependencies": {
+    "node": "0.10.31",
     "express": "^4.10.4",
-      "mongo": "*",
-      "mongoose": "*",
+    "mongo": "*",
+    "mongoose": "*",
     "morgan": "~1.2.2",
     "body-parser": "~1.5.2",
     "method-override": "~2.1.2"
