@@ -11,10 +11,24 @@
     */
 var mongoose = require('mongoose'),
   UserSchema = new mongoose.Schema({
-    username: String,
-    email: String,
-    password: String,
-    expiration: Date,
-    role: String
-    });
+    username: {
+      type: String,
+      unique: true,
+      required: true
+    },
+    email: {
+      type: String,
+      unique: true,
+      required: true
+    },
+    password: {
+      type: String,
+    },
+    expiration: {
+      type: Date
+    },
+    role: {
+      type: String
+    }
+  });
 module.exports = UserSchema;
