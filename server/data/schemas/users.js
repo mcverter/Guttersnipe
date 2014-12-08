@@ -9,11 +9,12 @@
     * role: For administrative roles
 *        Content admin vs. User Admin.
     */
-
-var userSchema =mongoose.Schema([{
+var mongoose = require('mongoose'),
+  UserSchema = new mongoose.Schema({
     username: String,
     email: String,
     password: String,
     expiration: Date,
     role: String
-    }]);
+    });
+module.exports = UserSchema;

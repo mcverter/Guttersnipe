@@ -4,7 +4,8 @@ var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development',
   morgan = require('morgan'),
   methodOverride = require('method-override'),
   bodyParser = require('body-parser'),
-  app = express();
+  app = express()
+  var db = {};
 
 if (env === 'localhost') {
   mongoose.connect('mongodb://localhost/guttersnipe');
@@ -12,6 +13,12 @@ if (env === 'localhost') {
 else {
   mongoose.connect('mongodb://mongo_guttersnipe:guttersnipe_mongo@ds061370.mongolab.com:61370/guttersnipe');
 }
+db = mongoose.connection;
+db.on('error', console.error.bind(console, "Connection error ..."));
+db.once('open', function callback(){
+  console.log('guttersnipe db opened');
+});
+
 
 app.set('views', __dirname + '/server/views');
 app.set('view engine', 'jade');

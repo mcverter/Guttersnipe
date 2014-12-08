@@ -12,6 +12,15 @@
  *   (3) Repeating
  *
  */
-var timeSchema = mongoose.Schema(
-    [{notes: String, dailys: [ {day: Date, duration: Number, repeating: Boolean} ] }]);
+var mongoose = require('mongoose'),
+  TimeSchema = new mongoose.Schema({
+    notes: String,
+    dailys: [{
+      day: Date,
+      duration: Number,
+      repeating: Boolean
+    }]
+  });
+
+module.exports = TimeSchema;
 
