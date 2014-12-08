@@ -9,7 +9,7 @@
   "author": "Mitchell Verter",
   "license": "ISC",
   "dependencies": {
-    "node": "~0.10.31",
+    "node": "*",
     "express": "^4.10.4",
     "mongo": "*",
     "mongoose": "*",
