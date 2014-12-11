@@ -1,16 +1,16 @@
 (function (angular, app) {
     'use strict';
 
-    var BASE_DIR = 'js/templates/',
-      RESOURCES_DIR = BASE_DIR + 'resources/',
+
+    var TEMPLATE_DIR = 'templates/',
+      RESOURCES_DIR = TEMPLATE_DIR + 'resources/',
       RESOURCE_CREATE_DIR = RESOURCES_DIR + 'wizard/',
+      USERS_DIR = TEMPLATE_DIR + 'users/',
 
-      USERS_DIR = BASE_DIR + 'users/',
-
-      DOC_DIR = BASE_DIR + 'docs/',
+      DOC_DIR = TEMPLATE_DIR + 'docs/',
       PRESENTATION_DIR = DOC_DIR + 'CCNYProposal/presentation/',
 
-      ADMIN_DIR = BASE_DIR + 'admin/';
+      ADMIN_DIR = TEMPLATE_DIR + 'admin/';
 
     window.guttersnipe = app || angular.module('guttersnipe', [
         'ui.router',
@@ -40,7 +40,7 @@
                  ************/
                   .state('home', {
                     url: '/',
-                    templateUrl: BASE_DIR + 'home.html',
+                    templateUrl: TEMPLATE_DIR + 'home.html',
                     controller: 'HomeCtrl'
                   })
 
@@ -71,7 +71,7 @@
                   // route to show our basic form (/form)
                     .state('resources_wizard', {
                         url: '/resources/wizard',
-                        templateUrl: BASE_DIR + 'resources/wizard.html',
+                        templateUrl: TEMPLATE_DIR + 'resources/wizard.html',
                         controller: ''
                     })
                     .state('resources_wizard.start', {
@@ -116,7 +116,7 @@
                     })
                     .state('resources_wizard.confirmation', {
                         url: '/confirmation',
-                        templateUrl: RESOURCE_CREATE_DIR + 'ConfirmationPage.html'
+                        templateUrl: RESOURCES_DIR + 'CreationPage.html'
                     })
 
 
@@ -131,7 +131,7 @@
                   })
                   .state('site{id}',{
                     url: '/site{id}t',
-                    templateUrl: BASE_DIR + 'site.html',
+                    templateUrl: TEMPLATE_DIR + 'site.html',
                     //controller: 'SiteCtrl'
                   })
 
@@ -252,12 +252,12 @@
                   /*
                        .state( 'wizard', {
                        url:'/wizard',
-                       templateUrl: BASE_DIR + 'wizard.html',
+                       templateUrl: TEMPLATE_DIR + 'wizard.html',
                        controller: 'WizardCtrl'
                        })
                        .state('wizard2', {
                        url: '/wizard2',
-                       templateUrl: BASE_DIR + 'wizard2.html',
+                       templateUrl: TEMPLATE_DIR + 'wizard2.html',
                        controller: 'Wizard2Ctrl'
                        })
                        */
