@@ -44,17 +44,53 @@
     'debug',
     'bootstrap',
     'ngAnimate'
+
     //       ,'uiGmapgoogle-maps'
   ])
-
+    /*
+     */
     .constant('filePaths', filePaths)
-    .config(['$stateProvider', '$urlRouterProvider', '$httpProvider',
-      function config($stateProvider, $urlRouterProvider, $httpProvider) {
-        //   $urlRouterProvider.otherwise("/home");
+    .config([ '$rootScope', '$stateProvider', '$urlRouterProvider', '$httpProvider',
+      function config( $rootScope, $stateProvider, $urlRouterProvider, $httpProvider) {
+        (function debugStates ($rootScope){
+          $rootScope.$on('$stateChangeStart',function(event, toState, toParams, fromState, fromParams){
+            var toStateTo = toState.to;
+            if (toStateTo === undefined) {
+              console.log("ToState" , toState, "ToParams", toParams)
+            }
+            console.log('$stateChangeStart to '+toStateTo+'- fired when the transition begins. toState,toParams : \n',toState, toParams);
+          });
+          $rootScope.$on('$stateChangeError',function(event, toState, toParams, fromState, fromParams){
+            console.log('$stateChangeError - fired when an error occurs during transition.');
+            console.log(arguments);
+          });
+          $rootScope.$on('$stateChangeSuccess',function(event, toState, toParams, fromState, fromParams){
+            console.log('$stateChangeSuccess to '+toState.name+'- fired once the state transition is complete.');
+          });
+          // $rootScope.$on('$viewContentLoading',function(event, viewConfig){
+          //   // runs on individual scopes, so putting it in "run" doesn't work.
+          //   console.log('$viewContentLoading - view begins loading - dom not rendered',viewConfig);
+          // });
+          $rootScope.$on('$viewContentLoaded',function(event){
+            console.log('$viewContentLoaded - fired after dom rendered',event);
+          });
+          $rootScope.$on('$stateNotFound',function(event, unfoundState, fromState, fromParams){
+            console.log('$stateNotFound '+unfoundState.to+'  - fired when a state cannot be found by its name.');
+            console.log(unfoundState, fromState, fromParams);
+          });
+        })($rootScope);
+
 
         $httpProvider.defaults.useXDomain = true;
         delete $httpProvider.defaults.headers
           .common['X-Requested-With'];
+
+
+
+        $urlRouterProvider.otherwise("/home");
+
+
+
         /*********
          * State Map
          *
@@ -189,7 +225,10 @@
 
           /*********************
            * ADMIN: RESOURCES
-           ********************/
+           **
+           * angular.module('upTimeApp', []).run(function($rootScope) {
+$rootScope.appStarted = new Date();
+});******************/
 
             .state('manage_data', {
               url: '/admin/manage_data',
