@@ -87,7 +87,7 @@
 
 
 
-        $urlRouterProvider.otherwise("/home");
+        $urlRouterProvider.otherwise("/index");
 
 
 
@@ -99,12 +99,12 @@
         (function stateMap($stateProvider){
           $stateProvider
           /*************
-           * HOME
+           * index
            ************/
-            .state('home', {
+            .state('index', {
               url: '/',
-              templateUrl: TEMPLATE_DIR + 'home.html',
-              controller: 'HomeCtrl'
+              templateUrl: TEMPLATE_DIR + 'index.html',
+              controller: 'indexCtrl'
             })
 
 

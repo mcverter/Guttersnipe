@@ -2471,7 +2471,7 @@ if (typeof module !== "undefined" && typeof exports !== "undefined" && module.ex
          *   - {array.&lt;object&gt;} - state parameters extracted from the current $location.path() by
          *     applying the current state
          *
-         * <pre>templateUrl: "home.html"</pre>
+         * <pre>templateUrl: "index.html"</pre>
          * <pre>templateUrl: function(params) {
    *     return myTemplates[params.pageId]; }</pre>
          *

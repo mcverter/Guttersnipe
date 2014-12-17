@@ -30,6 +30,18 @@ app.use(bodyParser.json());
 app.use(bodyParser.json({type: 'application/vnd.api+json'}));
 app.use(methodOverride());
 
+
+app.get('*', function respondToHTTPRequest(req, res) {
+  console.log("responding to get request")
+  res.sendFile( __dirname + '/server/views'+'/index.html');
+});
+
+var port = process.env.PORT || 4444;
+app.listen(port);
+console.log('Listening to port ' + port + '...');
+
+
+
 /*
  app.post('/api/todos', function(req, res){
  Todo.create({
@@ -60,24 +72,11 @@ app.use(methodOverride());
  }
  );
  });
- */
-/*  Let's use public ...
+
+
+//  Let's use public ...
  app.get('*', function (req, res){
  res.sendfile('./public/index.html');
  });
  */
 
-/**
-
-
-
-
- */
-
-app.get('*', function respondToHTTPRequest(req, res) {
-  res.sendFile( __dirname + '/server/views'+'/index.html');
-});
-
-var port = process.env.PORT || 4444;
-app.listen(port);
-console.log('Listening to port ' + port + '...');
