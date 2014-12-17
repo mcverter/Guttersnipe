@@ -7,17 +7,6 @@
 
     var BASE_ROUTE ='js/directives/templates/';
 
-    app.directive('resourceCreateAgreementTerms', function() {
-        var linker = function(scope, element, attrs) {},
-            templateUrl = BASE_ROUTE + 'AgreementPage.html',
-            controller = function($scope){};
-        return {
-            link: linker,
-            restrict: 'E',
-            templateUrl: templateUrl,
-            controller: controller
-        };
-    });
 
     app.directive('resourceCreateInstructions', function() {
         var linker = function(scope, element, attrs) {},
