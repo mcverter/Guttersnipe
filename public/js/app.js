@@ -2,15 +2,18 @@
     'use strict';
 
 
-    var TEMPLATE_DIR = 'templates/',
-      RESOURCES_DIR = TEMPLATE_DIR + 'resources/',
-      RESOURCE_CREATE_DIR = RESOURCES_DIR + 'wizard/',
-      USERS_DIR = TEMPLATE_DIR + 'users/',
+    var TEMPLATE_DIR = '../templates/',
+      TEMPLATE_PAGES_DIR = TEMPLATE_DIR + 'pages/',
+      RESOURCES_DIR = TEMPLATE_PAGES_DIR + 'resources/',
+      RESOURCE_CREATE_DIR = RESOURCES_DIR + 'creation/wizard/',
+      USERS_DIR = TEMPLATE_PAGES_DIR + 'users/',
 
-      DOC_DIR = TEMPLATE_DIR + 'docs/',
+      DOC_DIR = TEMPLATE_PAGES_DIR + 'docs/',
       PRESENTATION_DIR = DOC_DIR + 'CCNYProposal/presentation/',
 
-      ADMIN_DIR = TEMPLATE_DIR + 'admin/';
+      ADMIN_DIR = TEMPLATE_PAGES_DIR + 'admin/';
+
+
 
     window.guttersnipe = app || angular.module('guttersnipe', [
         'ui.router',
@@ -24,6 +27,7 @@
  //       ,'uiGmapgoogle-maps'
     ])
 
+
         .config(['$stateProvider', '$urlRouterProvider', '$httpProvider',
             function config($stateProvider, $urlRouterProvider, $httpProvider) {
                 //   $urlRouterProvider.otherwise("/home");
@@ -31,10 +35,13 @@
                 $httpProvider.defaults.useXDomain = true;
                 delete $httpProvider.defaults.headers
                     .common['X-Requested-With'];
-
+              /*********
+               * State Map
+               *
+               * @param $stateProvider
+               */
+              (function stateMap($stateProvider){
                 $stateProvider
-
-
                 /*************
                  * HOME
                  ************/
@@ -49,133 +56,134 @@
                  * RESOURCES: CREATE
                  *******************/
 
-                 /*
-                  .state('create_report',{
-                    url: '/create_report',
-                    templateUrl: RESOURCE_CREATE_DIR + 'DetailsPage.html',
-                    controller: 'CreateReportCtrl'
-                  })
+                  /*
+                   .state('create_report',{
+                   url: '/create_report',
+                   templateUrl: RESOURCE_CREATE_DIR + 'rsc_DetailsPage.html',
+                   controller: 'CreateReportCtrl'
+                   })
 
-                  .state('resource_type',{
-                    url: '/resource_type',
-                    templateUrl: RESOURCE_CREATE_DIR + 'resource_type.html',
-                    controller: 'ResourceCtrl'
-                  })
-                  .state('resource_details',{
-                    url: '/resource_details',
-                    templateUrl: RESOURCE_CREATE_DIR + 'resource_details.html',
-                    controller: 'ResourceCtrl'
-                  })
+                   .state('resource_type',{
+                   url: '/resource_type',
+                   templateUrl: RESOURCE_CREATE_DIR + 'rsc_resource_typePage.html',
+                   controller: 'ResourceCtrl'
+                   })
+                   .state('resource_details',{
+                   url: '/resource_details',
+                   templateUrl: RESOURCE_CREATE_DIR + 'rsc_resource_detailsPage.html',
+                   controller: 'ResourceCtrl'
+                   })
 
-*/
+                   */
                   // route to show our basic form (/form)
-                    .state('resources_wizard', {
-                        url: '/resources/wizard',
-                        templateUrl: TEMPLATE_DIR + 'resources/wizard.html',
-                        controller: ''
-                    })
-                    .state('resources_wizard.start', {
-                        url: '/start',
-                        templateUrl: RESOURCE_CREATE_DIR + 'AgreementPage.html'
-                    })
-
-                    .state('resources_wizard.agreement', {
-                        url: '/agreement',
-                        templateUrl: RESOURCE_CREATE_DIR + 'AgreementPage.html'
-                    })
-
-
-                    .state('resources_wizard.instructions', {
-                        url: '/instructions',
-                        templateUrl: RESOURCE_CREATE_DIR + 'InstructionsPage.html'
-                    })
-                    .state('resources_wizard.location', {
-                        url: '/location',
-                        templateUrl: RESOURCE_CREATE_DIR + 'LocationSearch.html',
-                        controller: 'LocationCtrl'
-                    })
-                    .state('resources_wizard.map', {
-                        url: '/map',
-                        templateUrl: RESOURCE_CREATE_DIR + 'MapPage.html',
-                        controller: 'MapCtrl'
-                    })
-                    .state('resources_wizard.type', {
-                        url: '/type',
-                        templateUrl: RESOURCE_CREATE_DIR + 'TypePage.html',
-                        controller: 'ResourceCtrl'
-                    })
-                    .state('resources_wizard.details', {
-                        url: '/details',
-                        templateUrl: RESOURCE_CREATE_DIR + 'DetailsPage.html',
-                        controller: 'ResourceCtrl'
+                  .state('resources_wizard', {
+                    url: '/resources/wizard',
+                    templateUrl: RESOURCES_DIR + 'rsc_wizardPage.html',
+                    controller: ''
                   })
-                    .state('resources_wizard.time', {
-                        url: '/time',
-                        templateUrl: RESOURCE_CREATE_DIR + 'SchedulePage.html',
-                        controller: 'ScheduleCtrl'
-                    })
-                    .state('resources_wizard.confirmation', {
-                        url: '/confirmation',
-                        templateUrl: RESOURCES_DIR + 'CreationPage.html'
-                    })
+                  .state('resources_wizard.start', {
+                    url: '/start',
+                    templateUrl: RESOURCE_CREATE_DIR + 'rsc_StartPage.html'
+                  })
+
+                  .state('resources_wizard.agreement', {
+                    url: '/agreement',
+                    templateUrl: RESOURCE_CREATE_DIR + 'rsc_AgreementPage.html'
+                  })
+
+
+                  .state('resources_wizard.instructions', {
+                    url: '/instructions',
+                    templateUrl: RESOURCE_CREATE_DIR + 'rsc_InstructionsPage.html'
+                  })
+                  .state('resources_wizard.location', {
+                    url: '/location',
+                    templateUrl: RESOURCE_CREATE_DIR + 'rsc_LocationSearchPage.html',
+                    controller: 'LocationCtrl'
+                  })
+                  .state('resources_wizard.map', {
+                    url: '/map',
+                    templateUrl: RESOURCE_CREATE_DIR + 'rsc_MapPage.html',
+                    controller: 'MapCtrl'
+                  })
+                  .state('resources_wizard.type', {
+                    url: '/type',
+                    templateUrl: RESOURCE_CREATE_DIR + 'rsc_TypePage.html',
+                    controller: 'ResourceCtrl'
+                  })
+                  .state('resources_wizard.details', {
+                    url: '/details',
+                    templateUrl: RESOURCE_CREATE_DIR + 'rsc_DetailsPage.html',
+                    controller: 'ResourceCtrl'
+                  })
+                  .state('resources_wizard.time', {
+                    url: '/time',
+                    templateUrl: RESOURCE_CREATE_DIR + 'rsc_SchedulePage.html',
+                    controller: 'ScheduleCtrl'
+                  })
+                  .state('resources_wizard.confirmation', {
+                    url: '/confirmation',
+                    templateUrl: RESOURCES_DIR + 'CreationPage.html'
+                  })
 
 
                 /*********************
                  * RESOURCES: SEARCH
                  ********************/
 
-                  .state('search',{
+                  .state('search', {
                     url: '/search',
                     templateUrl: RESOURCES_DIR + 'search.html'
                     //controller: 'SearchCtrl'
                   })
-                  .state('site{id}',{
-                    url: '/site{id}t',
-                    templateUrl: TEMPLATE_DIR + 'site.html',
-                    //controller: 'SiteCtrl'
-                  })
-
+                  /*
+                   .state('site{id}', {
+                   url: '/site{id}t',
+                   templateUrl: TEMPLATE_DIR + 'site.html',
+                   //controller: 'SiteCtrl'
+                   })
+                   */
                 /*************
                  * USERS
                  ************/
-                    .state('register',{
-                        url: '/register',
-                        templateUrl: USERS_DIR + 'register.html',
-                        //controller: 'RegistrationCtrl'
-                    })
-                    .state('edit_profile',{
-                        url: '/edit_profile',
-                        templateUrl: USERS_DIR + 'edit_profile.html',
-                        //controller: 'EditProfileCtrl'
-                    })
-                  .state('login',{
-                        url: '/login',
-                        templateUrl: USERS_DIR + 'login.html',
-                        //controller: 'LoginCtrl'
-                    })
-                    .state('logout',{
-                        url: '/logout',
-                        templateUrl: USERS_DIR + 'logout.html',
-                        //controller: 'LogoutCtrl'
-                    })
+                  .state('register', {
+                    url: '/register',
+                    templateUrl: USERS_DIR + 'register.html',
+                    //controller: 'RegistrationCtrl'
+                  })
+                  .state('edit_profile', {
+                    url: '/edit_profile',
+                    templateUrl: USERS_DIR + 'edit_profile.html',
+                    //controller: 'EditProfileCtrl'
+                  })
+                  .state('login', {
+                    url: '/login',
+                    templateUrl: USERS_DIR + 'login.html',
+                    //controller: 'LoginCtrl'
+                  })
+                  .state('logout', {
+                    url: '/logout',
+                    templateUrl: USERS_DIR + 'logout.html',
+                    //controller: 'LogoutCtrl'
+                  })
 
                 /*********************
                  * ADMIN: RESOURCES
                  ********************/
 
-                  .state('manage_data',{
-                        url: '/admin/manage_data',
-                        templateUrl: ADMIN_DIR + 'admin/manage_data.html',
-                        controller: 'ManageDataCtrl'
-                    })
+                  .state('manage_data', {
+                    url: '/admin/manage_data',
+                    templateUrl: ADMIN_DIR + 'admin/manage_data.html',
+                    controller: 'ManageDataCtrl'
+                  })
                 /*********************
                  * ADMIN: USERS
                  ********************/
-                    .state('manage_users',{
-                        url: '/admin/manage_users',
-                        templateUrl: ADMIN_DIR + 'admin/manage_users.html',
-                        controller: 'ManageUsersCtrl'
-                    })
+                  .state('manage_users', {
+                    url: '/admin/manage_users',
+                    templateUrl: ADMIN_DIR + 'admin/manage_users.html',
+                    controller: 'ManageUsersCtrl'
+                  })
                 /*********************
                  * ADMIN: COMMENTS
                  ********************/
@@ -247,22 +255,8 @@
                     url: '/docs/kropotkin',
                     templateUrl: DOC_DIR + 'KropotkinQuote.html',
                     controller: ''
-                  })
-
-                  /*
-                       .state( 'wizard', {
-                       url:'/wizard',
-                       templateUrl: TEMPLATE_DIR + 'wizard.html',
-                       controller: 'WizardCtrl'
-                       })
-                       .state('wizard2', {
-                       url: '/wizard2',
-                       templateUrl: TEMPLATE_DIR + 'wizard2.html',
-                       controller: 'Wizard2Ctrl'
-                       })
-                       */
-
-                ;
+                  });
+              })($stateProvider);
             }]);
 
     app = window.guttersnipe;
