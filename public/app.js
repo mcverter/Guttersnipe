@@ -7,7 +7,15 @@
     DOC_DIR =  'docs/',
     PRESENTATION_DIR = DOC_DIR + 'CCNYProposal/presentation/',
 
-    TEMPLATE_SUBDIRDIR = 'templates/',
+    MODULES_SUBDIR = 'modules',
+
+    RESOURCES_SUBDIR = 'resources/',
+    USERS_SUBDIR = 'users/',
+    ADMIN_SUBDIR =  'admin/',
+    RATINGS_SUBDIR = 'ratings',
+    COMMENTS_SUBDIR =  'comments/',
+
+    VIEWS_SUBDIR =  'views/',
     PAGES_SUBDIR = 'pages/',
     WIDGETS_SUBDIR = 'widgets/',
 
@@ -15,19 +23,16 @@
     READ_SUBDIR =  'read/',
     UPDATE_SUBDIR =  'update/',
     DELETE_SUBDIR =  'delete/',
+
     WIZARD_SUBDIR =  'wizard/',
 
-    RESOURCES_SUBDIR = 'resources/',
-    USERS_SUBDIR = 'users/',
-    ADMIN_SUBDIR =  'admin/',
 
-    RESOURCES_DIR = '',
-    RESOURCE_CREATE_DIR = '',
-    USERS_DIR = '',
-    ADMIN_DIR = '',
+    RESOURCES_DIR = MODULES_SUBDIR + "/" + RESOURCES_SUBDIR + "/" + VIEWS_SUBDIR + "/" + PAGES_SUBDIR,
+    RESOURCE_CREATE_DIR = RESOURCES_DIR + "/" + CREATE_SUBDIR + "/" + WIZARD_SUBDIR,
+    USERS_DIR = 'FOO',
+    ADMIN_DIR = 'FOO',
 
     filePaths = {
-      'templates' : TEMPLATE_SUBDIRDIR ,
       'pages' : PAGES_SUBDIR,
       'widgets' : WIDGETS_SUBDIR,
       'create' : CREATE_SUBDIR,
