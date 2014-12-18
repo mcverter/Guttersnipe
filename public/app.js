@@ -21,6 +21,11 @@
     USERS_SUBDIR = 'users/',
     ADMIN_SUBDIR =  'admin/',
 
+    RESOURCES_DIR = '',
+    RESOURCE_CREATE_DIR = '',
+    USERS_DIR = '',
+    ADMIN_DIR = '',
+
     filePaths = {
       'templates' : TEMPLATE_SUBDIRDIR ,
       'pages' : PAGES_SUBDIR,
@@ -50,8 +55,9 @@
     /*
      */
     .constant('filePaths', filePaths)
-    .config([ '$rootScope', '$stateProvider', '$urlRouterProvider', '$httpProvider',
-      function config( $rootScope, $stateProvider, $urlRouterProvider, $httpProvider) {
+    .config([ '$stateProvider', '$urlRouterProvider', '$httpProvider',
+      function config(  $stateProvider, $urlRouterProvider, $httpProvider) {
+        /*
         (function debugStates ($rootScope){
           $rootScope.$on('$stateChangeStart',function(event, toState, toParams, fromState, fromParams){
             var toStateTo = toState.to;
@@ -80,14 +86,14 @@
           });
         })($rootScope);
 
-
+*/
         $httpProvider.defaults.useXDomain = true;
         delete $httpProvider.defaults.headers
           .common['X-Requested-With'];
 
 
 
-        $urlRouterProvider.otherwise("/index");
+//        $urlRouterProvider.otherwise("/index");
 
 
 
@@ -101,10 +107,10 @@
           /*************
            * index
            ************/
-            .state('index', {
+            .state('home', {
               url: '/',
-              templateUrl: TEMPLATE_DIR + 'index.html',
-              controller: 'indexCtrl'
+              templateUrl: 'home.html',
+              controller: 'HomeCtrl'
             })
 
 
