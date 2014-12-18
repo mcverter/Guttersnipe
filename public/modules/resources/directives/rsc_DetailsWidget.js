@@ -1,16 +1,19 @@
 (function (angular, app) {
   'use strict';
+  var linker = function(scope, element, attrs) {},
+    controller = function($scope){},
+    templateUrl = filePaths.resources_create_wizard + 'rsc_DetailsWidget.html'
 
-  var BASE_ROUTE ='js/directives/templates/';
-  app.directive('resourceDetails', function() {
-    var linker = function(scope, element, attrs) {},
-      templateUrl = BASE_ROUTE + 'TypePage.html',
-      controller = function($scope){ };
-    return {
-      link: linker,
-      restrict: 'E',
-      templateUrl: templateUrl,
-      controller: controller
-    };
-  });
+  app.directive('resourceDetails', ['filePaths', function(filePaths) {
+      var linker = function(scope, element, attrs) {},
+        templateUrl = templateUrl,
+        controller = function($scope){ };
+      return {
+        link: linker,
+        restrict: 'E',
+        templateUrl: templateUrl,
+        controller: controller
+      };
+    }]
+  );
 })(window.angular, window.guttersnipe);

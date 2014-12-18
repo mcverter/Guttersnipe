@@ -1,16 +1,17 @@
 (function (angular, app) {
   'use strict';
 
-  var BASE_ROUTE ='js/directives/templates/';
-  app.directive('resourceCreateInstructions', function() {
+  app.directive('resourceCreateInstructions', ['filePaths', function(filePaths) {
     var linker = function(scope, element, attrs) {},
-      templateUrl = BASE_ROUTE + 'InstructionsPage.html',
-      controller = function($scope){ };
+      controller = function($scope){},
+      templateUrl = filePaths.resources_create_wizard + 'rsc_AgreementWidget.html';
+
     return {
       link: linker,
       restrict: 'E',
       template: templateUrl,
       controller: controller
     };
-  });
+  }]
+  );
 })(window.angular, window.guttersnipe);

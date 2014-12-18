@@ -1,15 +1,16 @@
 (function (angular, app) {
   'use strict';
+  var linker = function(scope, element, attrs) {},
+    controller = function($scope){},
+    templateUrl = filePaths.resources_create_wizard + 'rsc_AgreementWidget.html'
 
-  app.directive('resourceCreateAgreement', function() {
-//    var linker = function(scope, element, attrs) {},
-//      templateUrl = BASE_ROUTE + 'InstructionsPage.html',
-//      controller = function($scope){ };
-    return {
-//      link: linker,
-      restrict: 'E',
-      template: "foo foo bar bar",
- //     controller: controller
-    };
-  });
+  app.directive('resourceCreateAgreement', ['filePaths', function(filePaths) {
+      return {
+        restrict: 'E',
+        template: templateUrl,
+        link: linker,
+        controller: controller
+      };
+    }]
+  );
 })(window.angular, window.guttersnipe);

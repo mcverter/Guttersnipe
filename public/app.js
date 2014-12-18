@@ -5,12 +5,12 @@
     DOC_DIR =  'docs/',
     PRESENTATION_DIR = DOC_DIR + 'CCNYProposal/presentation/',
 
-    MODULES_SUBDIR = 'modules',
+    MODULES_SUBDIR = 'modules/',
 
     RESOURCES_SUBDIR = 'resources/',
     USERS_SUBDIR = 'users/',
     ADMIN_SUBDIR =  'admin/',
-    RATINGS_SUBDIR = 'ratings',
+    RATINGS_SUBDIR = 'ratings/',
     COMMENTS_SUBDIR =  'comments/',
 
     VIEWS_SUBDIR =  'views/',
@@ -22,23 +22,15 @@
 
     WIZARD_SUBDIR =  'wizard/',
 
-    RESOURCES_DIR = MODULES_SUBDIR + "/" + RESOURCES_SUBDIR + "/" + VIEWS_SUBDIR,
-    RESOURCE_CREATE_DIR = RESOURCES_DIR + "/" + CREATE_SUBDIR + "/" + WIZARD_SUBDIR,
+    RESOURCES_DIR = MODULES_SUBDIR  + RESOURCES_SUBDIR  + VIEWS_SUBDIR,
+    RESOURCE_CREATE_DIR = RESOURCES_DIR  + CREATE_SUBDIR  + WIZARD_SUBDIR,
     USERS_DIR = 'FOO',
-    ADMIN_DIR = 'FOO';
-/*
+    ADMIN_DIR = 'FOO',
+
     filePaths = {
-      'widgets' : WIDGETS_SUBDIR,
-      'create' : CREATE_SUBDIR,
-      'read' : READ_SUBDIR,
-      'update' : UPDATE_SUBDIR,
-      'delete' : DELETE_SUBDIR,
-      'wizard' : WIZARD_SUBDIR,
-      'resources' : RESOURCES_SUBDIR,
-      'users' : USERS_SUBDIR,
-      'admin' : ADMIN_SUBDIR,
+      'resources_create_wizard' : RESOURCE_CREATE_DIR,
     };
-*/
+
   window.guttersnipe = app || angular.module('guttersnipe', [
     'ui.router',
     'leaflet-directive',
@@ -51,9 +43,9 @@
 
     //       ,'uiGmapgoogle-maps'
   ])
-    /*
+
      .constant('filePaths', filePaths)
-     */
+
     .config([ '$stateProvider', '$urlRouterProvider', '$httpProvider',
       function config(  $stateProvider, $urlRouterProvider, $httpProvider) {
         $httpProvider.defaults.useXDomain = true;
