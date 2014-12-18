@@ -1,7 +1,7 @@
 (function (angular, app) {
   'use strict';
 
-  app.controller('ResourceCtrl', ['$scope', '$compile', // general
+  app.controller('ResourceController', ['$scope', '$compile', // general
 //        'uiCalendarConfig', // place
 //        '$locationService', // time
 //        '$resourceTaxonomyService', //kind

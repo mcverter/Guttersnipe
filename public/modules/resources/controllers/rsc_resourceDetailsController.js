@@ -1,7 +1,7 @@
 (function (angular, app) {
     'use strict';
 
-    app.controller('ResourceDetailsCtrl', ['$scope', 'ResourceTaxonomyService',
+    app.controller('ResourceDetailsController', ['$scope', 'ResourceTaxonomyService',
         function ($scope, ResourceTaxonomy) {
             console.log($scope);
             console.log(ResourceTaxonomy);

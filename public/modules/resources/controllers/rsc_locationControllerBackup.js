@@ -1,7 +1,7 @@
 (function (angular, app, _) {
     'use strict';
 
-    app.controller('LocationCtrl', ['$scope', '$log', 'geocodeService',
+    app.controller('LocationController', ['$scope', '$log', 'geocodeService',
         function ($scope, $log, geocodeService) {
                     var args = {};
 

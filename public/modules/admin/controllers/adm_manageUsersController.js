@@ -1,7 +1,7 @@
 (function (angular, app) {
     'use strict';
 
-    app.controller('ManageUsersCtrl', [function () {
+    app.controller('ManageUsersController', [function () {
     }]);
 })(window.angular, window.guttersnipe);
 

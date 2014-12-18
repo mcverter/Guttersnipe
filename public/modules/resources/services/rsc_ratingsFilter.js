@@ -10,7 +10,7 @@ app.factory("ratingsFilter", function(){
   }
 });
 
-app.controller('classCtrl', function($scope, ratingsFilter){
+app.controller('classController', function($scope, ratingsFilter){
   $scope.classes = [
     {name:"chemistry", rating:2},
     {name:"math", rating:3},
@@ -30,7 +30,7 @@ app.controller('classCtrl', function($scope, ratingsFilter){
  <title></title>
  </head>
  <body>
- <div ng-controller="classCtrl">
+ <div ng-controller="classController">
  <h1> classes</h1>
  <div ng-repeat="class in classes">
  <button ng-click="schedule.addClass(class)">Register</button>{{class.name}} rating:{{class.rating | ratings}}

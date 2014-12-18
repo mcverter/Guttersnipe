@@ -1,8 +1,6 @@
 (function (angular, app) {
   'use strict';
 
-//REST  post put get delete
-// CRUD create read update delete
   var
     DOC_DIR =  'docs/',
     PRESENTATION_DIR = DOC_DIR + 'CCNYProposal/presentation/',
@@ -16,24 +14,20 @@
     COMMENTS_SUBDIR =  'comments/',
 
     VIEWS_SUBDIR =  'views/',
-    PAGES_SUBDIR = 'pages/',
-    WIDGETS_SUBDIR = 'widgets/',
 
-    CREATE_SUBDIR =  'create/',
-    READ_SUBDIR =  'read/',
-    UPDATE_SUBDIR =  'update/',
-    DELETE_SUBDIR =  'delete/',
+    CREATE_SUBDIR =  'create/', // POST
+    READ_SUBDIR =  'read/',     // GET
+    UPDATE_SUBDIR =  'update/', // PUT
+    DELETE_SUBDIR =  'delete/', // DELETE
 
     WIZARD_SUBDIR =  'wizard/',
 
-
-    RESOURCES_DIR = MODULES_SUBDIR + "/" + RESOURCES_SUBDIR + "/" + VIEWS_SUBDIR + "/" + PAGES_SUBDIR,
+    RESOURCES_DIR = MODULES_SUBDIR + "/" + RESOURCES_SUBDIR + "/" + VIEWS_SUBDIR,
     RESOURCE_CREATE_DIR = RESOURCES_DIR + "/" + CREATE_SUBDIR + "/" + WIZARD_SUBDIR,
     USERS_DIR = 'FOO',
-    ADMIN_DIR = 'FOO',
-
+    ADMIN_DIR = 'FOO';
+/*
     filePaths = {
-      'pages' : PAGES_SUBDIR,
       'widgets' : WIDGETS_SUBDIR,
       'create' : CREATE_SUBDIR,
       'read' : READ_SUBDIR,
@@ -44,7 +38,7 @@
       'users' : USERS_SUBDIR,
       'admin' : ADMIN_SUBDIR,
     };
-
+*/
   window.guttersnipe = app || angular.module('guttersnipe', [
     'ui.router',
     'leaflet-directive',
@@ -58,40 +52,10 @@
     //       ,'uiGmapgoogle-maps'
   ])
     /*
+     .constant('filePaths', filePaths)
      */
-    .constant('filePaths', filePaths)
     .config([ '$stateProvider', '$urlRouterProvider', '$httpProvider',
       function config(  $stateProvider, $urlRouterProvider, $httpProvider) {
-        /*
-        (function debugStates ($rootScope){
-          $rootScope.$on('$stateChangeStart',function(event, toState, toParams, fromState, fromParams){
-            var toStateTo = toState.to;
-            if (toStateTo === undefined) {
-              console.log("ToState" , toState, "ToParams", toParams)
-            }
-            console.log('$stateChangeStart to '+toStateTo+'- fired when the transition begins. toState,toParams : \n',toState, toParams);
-          });
-          $rootScope.$on('$stateChangeError',function(event, toState, toParams, fromState, fromParams){
-            console.log('$stateChangeError - fired when an error occurs during transition.');
-            console.log(arguments);
-          });
-          $rootScope.$on('$stateChangeSuccess',function(event, toState, toParams, fromState, fromParams){
-            console.log('$stateChangeSuccess to '+toState.name+'- fired once the state transition is complete.');
-          });
-          // $rootScope.$on('$viewContentLoading',function(event, viewConfig){
-          //   // runs on individual scopes, so putting it in "run" doesn't work.
-          //   console.log('$viewContentLoading - view begins loading - dom not rendered',viewConfig);
-          // });
-          $rootScope.$on('$viewContentLoaded',function(event){
-            console.log('$viewContentLoaded - fired after dom rendered',event);
-          });
-          $rootScope.$on('$stateNotFound',function(event, unfoundState, fromState, fromParams){
-            console.log('$stateNotFound '+unfoundState.to+'  - fired when a state cannot be found by its name.');
-            console.log(unfoundState, fromState, fromParams);
-          });
-        })($rootScope);
-
-*/
         $httpProvider.defaults.useXDomain = true;
         delete $httpProvider.defaults.headers
           .common['X-Requested-With'];
@@ -123,25 +87,6 @@
            * RESOURCES: CREATE
            *******************/
 
-            /*
-             .state('create_report',{
-             url: '/create_report',
-             templateUrl: RESOURCE_CREATE_DIR + 'rsc_DetailsPage.html',
-             controller: 'CreateReportCtrl'
-             })
-
-             .state('resource_type',{
-             url: '/resource_type',
-             templateUrl: RESOURCE_CREATE_DIR + 'rsc_resource_typePage.html',
-             controller: 'ResourceCtrl'
-             })
-             .state('resource_details',{
-             url: '/resource_details',
-             templateUrl: RESOURCE_CREATE_DIR + 'rsc_resource_detailsPage.html',
-             controller: 'ResourceCtrl'
-             })
-
-             */
             // route to show our basic form (/form)
             .state('resources_wizard', {
               url: '/resources/wizard',
@@ -380,3 +325,56 @@ $rootScope.appStarted = new Date();
  };
  }];
  })*/
+
+
+
+/*
+ (function debugStates ($rootScope){
+ $rootScope.$on('$stateChangeStart',function(event, toState, toParams, fromState, fromParams){
+ var toStateTo = toState.to;
+ if (toStateTo === undefined) {
+ console.log("ToState" , toState, "ToParams", toParams)
+ }
+ console.log('$stateChangeStart to '+toStateTo+'- fired when the transition begins. toState,toParams : \n',toState, toParams);
+ });
+ $rootScope.$on('$stateChangeError',function(event, toState, toParams, fromState, fromParams){
+ console.log('$stateChangeError - fired when an error occurs during transition.');
+ console.log(arguments);
+ });
+ $rootScope.$on('$stateChangeSuccess',function(event, toState, toParams, fromState, fromParams){
+ console.log('$stateChangeSuccess to '+toState.name+'- fired once the state transition is complete.');
+ });
+ // $rootScope.$on('$viewContentLoading',function(event, viewConfig){
+ //   // runs on individual scopes, so putting it in "run" doesn't work.
+ //   console.log('$viewContentLoading - view begins loading - dom not rendered',viewConfig);
+ // });
+ $rootScope.$on('$viewContentLoaded',function(event){
+ console.log('$viewContentLoaded - fired after dom rendered',event);
+ });
+ $rootScope.$on('$stateNotFound',function(event, unfoundState, fromState, fromParams){
+ console.log('$stateNotFound '+unfoundState.to+'  - fired when a state cannot be found by its name.');
+ console.log(unfoundState, fromState, fromParams);
+ });
+ })($rootScope);
+
+ */
+
+/*
+ .state('create_report',{
+ url: '/create_report',
+ templateUrl: RESOURCE_CREATE_DIR + 'rsc_DetailsPage.html',
+ controller: 'CreateReportCtrl'
+ })
+
+ .state('resource_type',{
+ url: '/resource_type',
+ templateUrl: RESOURCE_CREATE_DIR + 'rsc_resource_typePage.html',
+ controller: 'ResourceCtrl'
+ })
+ .state('resource_details',{
+ url: '/resource_details',
+ templateUrl: RESOURCE_CREATE_DIR + 'rsc_resource_detailsPage.html',
+ controller: 'ResourceCtrl'
+ })
+
+ */

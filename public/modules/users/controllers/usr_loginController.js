@@ -1,13 +1,13 @@
 /*(function (angular, app) {
     'use strict';
 
-    app.controller('MooCtrl', [function () {
+    app.controller('MooController', [function () {
     }]);
 })(window.angular, window.guttersnipe);
 
 */
 
-var login = angular.module('LoginCtrl', []);
+var login = angular.module('LoginController', []);
 login.controller('LoginController', function($scope, $location, Login, SessionService){
     $scope.loginSubmit = function(){
         console.dir($scope.loginData);

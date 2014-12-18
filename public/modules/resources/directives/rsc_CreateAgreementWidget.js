@@ -1,16 +1,15 @@
 (function (angular, app) {
   'use strict';
 
-  var BASE_ROUTE ='js/directives/templates/';
   app.directive('resourceCreateAgreement', function() {
-    var linker = function(scope, element, attrs) {},
-      templateUrl = BASE_ROUTE + 'InstructionsPage.html',
-      controller = function($scope){ };
+//    var linker = function(scope, element, attrs) {},
+//      templateUrl = BASE_ROUTE + 'InstructionsPage.html',
+//      controller = function($scope){ };
     return {
-      link: linker,
+//      link: linker,
       restrict: 'E',
-      template: templateUrl,
-      controller: controller
+      template: "foo foo bar bar",
+ //     controller: controller
     };
   });
 })(window.angular, window.guttersnipe);

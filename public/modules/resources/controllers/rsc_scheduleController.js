@@ -1,7 +1,7 @@
 (function (angular, app, _) {
     'use strict';
 
-    app.controller('ScheduleCtrl', ['$scope', '$compile', 'uiCalendarConfig',
+    app.controller('ScheduleController', ['$scope', '$compile', 'uiCalendarConfig',
         function ($scope,$compile,uiCalendarConfig) {
             var date = new Date();
             var d = date.getDate();

@@ -1,7 +1,7 @@
 (function (angular, app, _) {
     'use strict';
 
-    app.controller('LocationCtrl', ['$scope', '$log',
+    app.controller('LocationController', ['$scope', '$log',
         function ($scope, $log) {
             var geocoder = new google.maps.Geocoder();
             $scope.map = { center: { latitude: 40.651849, longitude: -73.962817 }, zoom: 15 };

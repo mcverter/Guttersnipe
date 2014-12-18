@@ -1,7 +1,7 @@
 (function (angular, app) {
     'use strict';
 
-    app.controller('RegisterCtrl', [function () {
+    app.controller('RegisterController', [function () {
     }]);
 })(window.angular, window.guttersnipe);
 
