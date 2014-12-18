@@ -1,10 +1,11 @@
 (function (angular, app) {
   'use strict';
-  var linker = function(scope, element, attrs) {},
-    controller = function($scope){},
-    templateUrl = filePaths.resources_create_wizard + 'rsc_AgreementWidget.html'
 
   app.directive('resourceCreateAgreement', ['filePaths', function(filePaths) {
+      var linker = function(scope, element, attrs) {},
+        controller = function($scope){},
+        templateUrl = filePaths.resources_create_wizard + 'rsc_AgreementWidget.html'
+
       return {
         restrict: 'E',
         template: templateUrl,
