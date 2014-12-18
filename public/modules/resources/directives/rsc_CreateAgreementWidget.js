@@ -8,7 +8,7 @@
 
       return {
         restrict: 'E',
-        template: templateUrl,
+        templateUrl: templateUrl,
         link: linker,
         controller: controller
       };

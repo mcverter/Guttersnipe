@@ -71,7 +71,7 @@
             .state('home', {
               url: '/',
               templateUrl: 'home.html',
-              controller: 'HomeCtrl'
+              controller: 'HomeController'
             })
 
 
@@ -103,27 +103,27 @@
             .state('resources_wizard.location', {
               url: '/location',
               templateUrl: RESOURCE_CREATE_DIR + 'rsc_LocationSearchPage.html',
-              controller: 'LocationCtrl'
+              controller: 'LocationController'
             })
             .state('resources_wizard.map', {
               url: '/map',
               templateUrl: RESOURCE_CREATE_DIR + 'rsc_MapPage.html',
-              controller: 'MapCtrl'
+              controller: 'MapController'
             })
             .state('resources_wizard.type', {
               url: '/type',
               templateUrl: RESOURCE_CREATE_DIR + 'rsc_TypePage.html',
-              controller: 'ResourceCtrl'
+              controller: 'ResourceController'
             })
             .state('resources_wizard.details', {
               url: '/details',
               templateUrl: RESOURCE_CREATE_DIR + 'rsc_DetailsPage.html',
-              controller: 'ResourceCtrl'
+              controller: 'ResourceController'
             })
             .state('resources_wizard.time', {
               url: '/time',
               templateUrl: RESOURCE_CREATE_DIR + 'rsc_SchedulePage.html',
-              controller: 'ScheduleCtrl'
+              controller: 'ScheduleController'
             })
             .state('resources_wizard.confirmation', {
               url: '/confirmation',
@@ -138,13 +138,13 @@
             .state('search', {
               url: '/search',
               templateUrl: RESOURCES_DIR + 'search.html'
-              //controller: 'SearchCtrl'
+              //controller: 'SearchController'
             })
             /*
              .state('site{id}', {
              url: '/site{id}t',
              templateUrl: TEMPLATE_DIR + 'site.html',
-             //controller: 'SiteCtrl'
+             //controller: 'SiteController'
              })
              */
           /*************
@@ -153,22 +153,22 @@
             .state('register', {
               url: '/register',
               templateUrl: USERS_DIR + 'register.html',
-              //controller: 'RegistrationCtrl'
+              //controller: 'RegistrationController'
             })
             .state('edit_profile', {
               url: '/edit_profile',
               templateUrl: USERS_DIR + 'edit_profile.html',
-              //controller: 'EditProfileCtrl'
+              //controller: 'EditProfileController'
             })
             .state('login', {
               url: '/login',
               templateUrl: USERS_DIR + 'login.html',
-              //controller: 'LoginCtrl'
+              //controller: 'LoginController'
             })
             .state('logout', {
               url: '/logout',
               templateUrl: USERS_DIR + 'logout.html',
-              //controller: 'LogoutCtrl'
+              //controller: 'LogoutController'
             })
 
           /*********************
@@ -181,7 +181,7 @@ $rootScope.appStarted = new Date();
             .state('manage_data', {
               url: '/admin/manage_data',
               templateUrl: ADMIN_DIR + 'admin/manage_data.html',
-              controller: 'ManageDataCtrl'
+              controller: 'ManageDataController'
             })
           /*********************
            * ADMIN: USERS
@@ -189,7 +189,7 @@ $rootScope.appStarted = new Date();
             .state('manage_users', {
               url: '/admin/manage_users',
               templateUrl: ADMIN_DIR + 'admin/manage_users.html',
-              controller: 'ManageUsersCtrl'
+              controller: 'ManageUsersController'
             })
           /*********************
            * ADMIN: COMMENTS
@@ -355,18 +355,18 @@ $rootScope.appStarted = new Date();
  .state('create_report',{
  url: '/create_report',
  templateUrl: RESOURCE_CREATE_DIR + 'rsc_DetailsPage.html',
- controller: 'CreateReportCtrl'
+ controller: 'CreateReportController'
  })
 
  .state('resource_type',{
  url: '/resource_type',
  templateUrl: RESOURCE_CREATE_DIR + 'rsc_resource_typePage.html',
- controller: 'ResourceCtrl'
+ controller: 'ResourceController'
  })
  .state('resource_details',{
  url: '/resource_details',
  templateUrl: RESOURCE_CREATE_DIR + 'rsc_resource_detailsPage.html',
- controller: 'ResourceCtrl'
+ controller: 'ResourceController'
  })
 
  */
