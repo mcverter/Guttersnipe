@@ -1,7 +1,7 @@
 (function (angular, app) {
     'use strict';
 
-    app.controller('HomeController',  ['$scope', '$rootScope','kropotkinService', function ($scope, $rootScope) {
+    app.controller('HomeController',  ['$scope', '$rootScope', function ($scope, $rootScope) {
       console.log("in the home controller");
         $scope.center = {
             lat: 40.095,

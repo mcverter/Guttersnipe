@@ -3,15 +3,13 @@
 
 
   app.directive('kropotkinQuote', ['filePaths',  function(filePaths) {
-      //var templateUrl =  filePaths.kropotkin + 'kropotkinWidget.html';
+      var templateUrl =  filePaths.kropotkin + 'kropotkinWidget.html';
 
       return {
         restrict: 'E',
-        template: '<blockquote>{{quote}}</blockquote>',
+        templateUrl: templateUrl,
         controller: ['$scope', '$http', '$log',
           function ($scope, $http, $log) {
-            $log.debug('jasperEmbed.controller');
-            $log.debug($scope.quote);
             $http.get(filePaths.kropotkin + 'kropotkinConquestBread.txt')
               .success(function(data, status, headers, config){
                 console.log("Success");

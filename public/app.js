@@ -262,8 +262,8 @@ $rootScope.appStarted = new Date();
             })
 
             .state('kropotkin', {
-              url: '/docs/kropotkin',
-              templateUrl: DOC_DIR + 'KropotkinQuote.html',
+              url: '/kropotkin',
+              templateUrl: KROPOTKIN_DIR + 'kropotkinPage.html',
               controller: ''
             });
         })($stateProvider);
