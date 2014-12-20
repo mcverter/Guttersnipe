@@ -1,15 +1,16 @@
 (function (angular, app) {
   'use strict';
 
-  app.directive('mapConfirm', ['filePaths', function(filePaths) {
+  app.directive('resourceCreateInstructions', ['filePaths', function(filePaths) {
     var linker = function(scope, element, attrs) {},
-      templateUrl = filePaths.resources_create_wizard + 'rsc_MapConfirmtWidget.html';
+      controller = function($scope){},
+      templateUrl = filePaths.resources_create_wizard + 'rsc_InstructionsWidget.html';
 
     return {
       link: linker,
       restrict: 'E',
       templateUrl: templateUrl,
-      controller: 'MapController'
+      controller: controller
     };
   }]
   );

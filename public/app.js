@@ -7,6 +7,7 @@
 
     MODULES_SUBDIR = 'modules/',
 
+    KROPOTKIN_SUBDIR = 'kropotkin/',
     RESOURCES_SUBDIR = 'resources/',
     USERS_SUBDIR = 'users/',
     ADMIN_SUBDIR =  'admin/',
@@ -22,6 +23,7 @@
 
     WIZARD_SUBDIR =  'wizard/',
 
+    KROPOTKIN_DIR = MODULES_SUBDIR + KROPOTKIN_SUBDIR,
     RESOURCES_DIR = MODULES_SUBDIR  + RESOURCES_SUBDIR  + VIEWS_SUBDIR,
     RESOURCE_CREATE_DIR = RESOURCES_DIR  + CREATE_SUBDIR  + WIZARD_SUBDIR,
     USERS_DIR = 'FOO',
@@ -29,6 +31,7 @@
 
     filePaths = {
       'resources_create_wizard' : RESOURCE_CREATE_DIR,
+      'kropotkin' : KROPOTKIN_DIR
     };
 
   window.guttersnipe = app || angular.module('guttersnipe', [
