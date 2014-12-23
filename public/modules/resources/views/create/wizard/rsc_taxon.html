@@ -1,7 +1,7 @@
 <button type="button" class="btn btn-default"
-        ng-class="{ 'btn-success': selected,
-              'btn-default': !selected && !hovered,
-              'btn-warning': hovered && !selected 
+        ng-class="{ 'btn-default': !selected && hovered,
+              'btn-success': selected,
+              'btn-warning': hovered && !selected
             }"
         ng-click="selected=!selected"
         ng-mouseenter="hovered=true"
