@@ -1,1 +1,12 @@
-<button type="button" class="btn" ng-class="buttonClass"   ng-click="changeClickColor($event)"  ng-mouseenter="changeHoverColor($event)"> {{name}}</button>
+<button type="button" class="btn btn-default"
+        ng-class="{ 'btn-success': selected,
+              'btn-default': !selected && !hovered,
+              'btn-warning': hovered && !selected 
+            }"
+        ng-click="selected=!selected"
+        ng-mouseenter="hovered=true"
+        ng-mouseleave="hovered=false">
+    {{name}}
+selected   is {{selected}}
+hovered   is {{hovered}}
+</button>
