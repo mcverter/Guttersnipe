@@ -1,0 +1,42 @@
+<div class="text-center">
+    <ng-form>
+        <h1>Food Details:</h1>
+        <hr>
+
+        <h2>Distribution Type</h2>
+        <ul>
+            <li ng-repeat="arrangement in resourceTaxonomy.taxonomy.top[0].eating_arrangement.selections">
+                <resource-taxon name="{{arrangement.name}}"></resource-taxon>
+            </li>
+        </ul>
+
+        <h2>Grain</h2>
+        <ul>
+            <li ng-repeat="grain in resourceTaxonomy.taxonomy.top[0].grains.selections">
+                <resource-taxon name="{{grain.name}}"></resource-taxon>
+            </li>
+        </ul>
+
+        <h2>Produce</h2>
+        <ul>
+            <li ng-repeat="produce in resourceTaxonomy.taxonomy.top[0].produce.selections">
+                <resource-taxon name="{{produce.name}}"></resource-taxon>
+            </li>
+        </ul>
+
+        <h2>Protein</h2>
+        <ul>
+            <li ng-repeat="protein in resourceTaxonomy.taxonomy.top[0].protein.selections">
+                <resource-taxon name="{{protein.name}}"></resource-taxon>
+            </li>
+        </ul>
+
+        <h2>Dairy</h2>
+        <ul>
+            <li ng-repeat="dairy in resourceTaxonomy.taxonomy.top[0].dairy.selections">
+                <resource-taxon name="{{dairy.name}}"></resource-taxon>
+            </li>
+        </ul>
+
+</div>
+

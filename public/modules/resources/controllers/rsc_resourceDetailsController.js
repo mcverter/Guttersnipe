@@ -2,11 +2,8 @@
     'use strict';
 
     app.controller('ResourceDetailsController', ['$scope', 'ResourceTaxonomyService',
-        function ($scope, ResourceTaxonomy) {
-            console.log($scope);
-            console.log(ResourceTaxonomy);
-            $scope.resourceTaxonomy = ResourceTaxonomy.get();
-            console.log($scope.resourceTaxonomy);
-            var a = 5;
+        function ($scope, ResourceTaxonomyService) {
+            console.log(ResourceTaxonomyService);
+
     }]);
 })(window.angular, window.guttersnipe);

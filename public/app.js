@@ -111,16 +111,16 @@
             .state('resources_wizard.map', {
               url: '/map',
               templateUrl: RESOURCE_CREATE_DIR + 'rsc_MapPage.html',
-              controller: 'MapController'
+              //controller: 'MapController'
             })
             .state('resources_wizard.type', {
               url: '/type',
               templateUrl: RESOURCE_CREATE_DIR + 'rsc_TypePage.html',
               controller: 'ResourceController'
             })
-            .state('resources_wizard.details', {
-              url: '/details',
-              templateUrl: RESOURCE_CREATE_DIR + 'rsc_DetailsPage.html',
+            .state('resources_wizard.food_details', {
+              url: '/food_details',
+              templateUrl: RESOURCE_CREATE_DIR + 'rsc_FoodDetailsPage.html',
               controller: 'ResourceController'
             })
             .state('resources_wizard.time', {
