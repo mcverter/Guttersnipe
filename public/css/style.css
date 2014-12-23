@@ -129,10 +129,17 @@ ul
     text-decoration: italic;
     text-align:justify
 }
-.RedOnBlack { color:red; background-color:black;}
-.BlackOnRed { color:black; background-color:red;}
-.RedOnBlackSlide { color:red; background-color:black;text-align:center;}
-.BlackOnRedSlide { color:black; background-color:red;text-align:center;}
+.RedOnBlack {
+    color:red;
+    background-color:black;
+    border: 4px #ec971f solid;
+}
+.BlackOnRed {
+    color:black;
+    background-color:red;
+    border: 4px #4c971f solid;
+}
+
 div.navigation
 {
     font-size:48px;
