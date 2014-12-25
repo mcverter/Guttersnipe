@@ -123,6 +123,16 @@
               templateUrl: RESOURCE_CREATE_DIR + 'rsc_FoodDetailsPage.html',
               controller: 'ResourceController'
             })
+            .state('resources_wizard.housing_details', {
+              url: '/housing_details',
+              templateUrl: RESOURCE_CREATE_DIR + 'rsc_HousingDetailsPage.html',
+              controller: 'ResourceController'
+            })
+            .state('resources_wizard.medical_details', {
+              url: '/medical_details',
+              templateUrl: RESOURCE_CREATE_DIR + 'rsc_MedicalDetailsPage.html',
+              controller: 'ResourceController'
+            })
             .state('resources_wizard.time', {
               url: '/time',
               templateUrl: RESOURCE_CREATE_DIR + 'rsc_SchedulePage.html',
