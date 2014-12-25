@@ -3,20 +3,26 @@
   "version": "1.0.0",
   "description": "Resource Sharing",
   "main": "server.js",
+  "repository": {
+    "repository": "git",
+    "url": "https://github.com/mcverter/guttersnipe"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Mitchell Verter",
-  "license": "ISC",
+  "license": "GNU",
+  "homepage": "http://guttersnipe.org",
   "engines": {
     "node": "0.10.x"
   },
   "dependencies": {
+    "body-parser": "~1.5.2",
     "express": "^4.10.4",
+    "method-override": "~2.1.2",
     "mongo": "*",
     "mongoose": "*",
     "morgan": "~1.2.2",
-    "body-parser": "~1.5.2",
-    "method-override": "~2.1.2"
+    "passport": "^0.2.1"
   }
 }

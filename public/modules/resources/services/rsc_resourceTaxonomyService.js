@@ -69,7 +69,7 @@
                 {name: 'Non-Animal Dairy', img: ''}
               ]}},
           {
-            name: 'shelter',
+            name: 'housing',
             notes: '' ,
             img: '',
             multiple: false,
