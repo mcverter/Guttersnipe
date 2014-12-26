@@ -19,6 +19,8 @@
       $scope.center = center;
       $scope.markers = markers;
 
+      console.log("in mapg controller");
+
       Object.defineProperties($scope, {
 
 
