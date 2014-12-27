@@ -92,7 +92,10 @@
               url: '/start',
               templateUrl: RESOURCE_CREATE_DIR + 'rsc_StartPage.html'
             })
-
+            .state('resources_wizard.summary', {
+              url: '/summary',
+              templateUrl: RESOURCE_CREATE_DIR + 'rsc_SummaryPage.html'
+            })
             .state('resources_wizard.agreement', {
               url: '/agreement',
               templateUrl: RESOURCE_CREATE_DIR + 'rsc_AgreementPage.html'
