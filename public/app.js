@@ -2,6 +2,7 @@
   'use strict';
 
   var
+    DEBUG = false,
     DOC_DIR =  'docs/',
     PRESENTATION_DIR = DOC_DIR + 'CCNYProposal/presentation/',
 
@@ -47,10 +48,11 @@
 
     //       ,'uiGmapgoogle-maps'
   ])
-
     .constant('filePaths', filePaths)
     .run(function($rootScope) {
-//      debugStates($rootScope);
+      if (DEBUG) {
+        debugStates($rootScope);
+      }
     })
     .config([ '$stateProvider', '$urlRouterProvider', '$httpProvider',
       function config(  $stateProvider, $urlRouterProvider, $httpProvider) {
