@@ -146,18 +146,15 @@
             .state('resources_wizard.punctual', {
               url: '/time/punctual',
               templateUrl: RESOURCES_DIR + 'time/punctual/rsc_PunctualPage.html',
-              controller: 'ScheduleController'
-            })
+              })
             .state('resources_wizard.recurring', {
               url: '/time/recurring',
               templateUrl: RESOURCES_DIR + 'time/recurring/rsc_WeeklyRecurringPage.html',
-              controller: 'ScheduleController'
-            })
+              })
             .state('resources_wizard.seasonal', {
               url: '/time/seasonal',
               templateUrl: RESOURCES_DIR + 'time/seasonal/rsc_SeasonalPage.html',
-              controller: 'ScheduleController'
-            })
+              })
             .state('resources_wizard.confirmation', {
               url: '/confirmation',
               templateUrl: RESOURCES_DIR + 'CreationPage.html'
