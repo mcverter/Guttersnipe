@@ -50,7 +50,7 @@
 
     .constant('filePaths', filePaths)
     .run(function($rootScope) {
-      debugStates($rootScope);
+//      debugStates($rootScope);
     })
     .config([ '$stateProvider', '$urlRouterProvider', '$httpProvider',
       function config(  $stateProvider, $urlRouterProvider, $httpProvider) {
