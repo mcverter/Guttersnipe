@@ -61,40 +61,43 @@
 
 <!-- services-->
 <script type="application/javascript" src="/modules/users/services/usr_authService.js"></script>
-<script type="application/javascript" src="/modules/resources/services/rsc_resourceTaxonomyService.js"></script>
-<script type="application/javascript" src="/modules/resources/services/rsc_geocodeService.js"></script>
+<script type="application/javascript" src="/modules/resources/thing/taxonomy/common/rsc_taxonomyService.js"></script>
+<script type="application/javascript" src="/modules/resources/place/rsc_geocodeService.js"></script>
 
 <!-- controllers-->
 <script type="application/javascript" src="/modules/users/controllers/usr_loginController.js"></script>
 <script type="application/javascript" src="/modules/users/controllers/usr_registerController.js"></script>
 <script type="application/javascript" src="/modules/users/controllers/usr_editProfileController.js"></script>
 <script type="application/javascript" src="/modules/users/controllers/usr_logoutController.js"></script>
-<script type="application/javascript" src="/modules/resources/controllers/rsc_searchController.js"></script>
-<script type="application/javascript" src="/modules/resources/controllers/rsc_createReportController.js"></script>
-<script type="application/javascript" src="/modules/resources/controllers/rsc_resourceController.js"></script>
-<script type="application/javascript" src="/modules/resources/controllers/rsc_locationController.js"></script>
-<script type="application/javascript" src="/modules/resources/controllers/rsc_mapController.js"></script>
-<script type="application/javascript" src="/modules/resources/controllers/rsc_scheduleController.js"></script>
+
+<script type="application/javascript" src="/modules/resources/main/rsc_searchController.js"></script>
+<script type="application/javascript" src="/modules/resources/main/rsc_createReportController.js"></script>
+<script type="application/javascript" src="/modules/resources/main/rsc_resourceController.js"></script>
+
+<script type="application/javascript" src="/modules/resources/place/rsc_locationController.js"></script>
+<script type="application/javascript" src="/modules/resources/place/rsc_mapController.js"></script>
+
+<script type="application/javascript" src="/modules/resources/time/common/rsc_scheduleController.js"></script>
 
 <!-- admin controllers-->
 <script type="application/javascript" src="/modules/admin/controllers/adm_manageDataController.js"></script>
 <script type="application/javascript" src="/modules/admin/controllers/adm_manageUsersController.js"></script>
-<!-- directives-->
 
+<!-- directives-->
 <script type="application/javascript" src="/modules/kropotkin/kropotkinDirective.js"></script>
 
-<script type="application/javascript" src="/modules/resources/directives/rsc_summaryDirective.js"></script>
-<script type="application/javascript" src="/modules/resources/directives/rsc_createAgreementDirective.js"></script>
-<script type="application/javascript" src="/modules/resources/directives/rsc_createInstructionsDirective.js"></script>
+<script type="application/javascript" src="/modules/resources/thing/summary/rsc_summaryDirective.js"></script>
+<script type="application/javascript" src="/modules/resources/agreement/rsc_createAgreementDirective.js"></script>
+<script type="application/javascript" src="/modules/resources/instructions/rsc_createInstructionsDirective.js"></script>
 
-<script type="application/javascript" src="/modules/resources/directives/rsc_mapLeafletDirective.js"></script>
+<script type="application/javascript" src="/modules/resources/place/rsc_mapLeafletDirective.js"></script>
 
-<script type="application/javascript" src="/modules/resources/directives/rsc_taxonDirective.js"></script>
-<script type="application/javascript" src="/modules/resources/directives/rsc_typeDirective.js"></script>
-<script type="application/javascript" src="/modules/resources/directives/rsc_foodDetailsDirective.js"></script>
-<script type="application/javascript" src="/modules/resources/directives/rsc_medicalDetailsDirective.js"></script>
-<script type="application/javascript" src="/modules/resources/directives/rsc_housingDetailsDirective.js"></script>
-<script type="application/javascript" src="/modules/resources/directives/rsc_scheduleDirective.js"></script>
+<script type="application/javascript" src="/modules/resources/thing/taxonomy/common/rsc_taxonDirective.js"></script>
+<script type="application/javascript" src="/modules/resources/thing/taxonomy/common/rsc_typeDirective.js"></script>
+<script type="application/javascript" src="/modules/resources/thing/taxonomy/food/rsc_foodDetailsDirective.js"></script>
+<script type="application/javascript" src="/modules/resources/thing/taxonomy/medical/rsc_medicalDetailsDirective.js"></script>
+<script type="application/javascript" src="/modules/resources/thing/taxonomy/housing/rsc_housingDetailsDirective.js"></script>
+<script type="application/javascript" src="/modules/resources/time/common/rsc_scheduleDirective.js"></script>
 
 </body>
 </html>

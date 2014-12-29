@@ -2,7 +2,7 @@
   'use strict';
 
   app.directive('resourceTaxon', ['filePaths', function(filePaths) {
-      var templateUrl = filePaths.resources_create_wizard + 'rsc_Taxon.html';
+      var templateUrl = filePaths.resources_dir + 'thing/taxonomy/common/rsc_Taxon.html';
 
       return {
         restrict: 'E',

@@ -24,13 +24,14 @@
     WIZARD_SUBDIR =  'wizard/',
 
     KROPOTKIN_DIR = MODULES_SUBDIR + KROPOTKIN_SUBDIR,
-    RESOURCES_DIR = MODULES_SUBDIR  + RESOURCES_SUBDIR  + VIEWS_SUBDIR,
-    RESOURCE_CREATE_DIR = RESOURCES_DIR  + CREATE_SUBDIR  + WIZARD_SUBDIR,
+    RESOURCES_DIR = MODULES_SUBDIR  + RESOURCES_SUBDIR,
+  //  + VIEWS_SUBDIR,
+  //   RESOURCE_CREATE_DIR = RESOURCES_DIR  + CREATE_SUBDIR  + WIZARD_SUBDIR,
     USERS_DIR = 'FOO',
     ADMIN_DIR = 'FOO',
 
     filePaths = {
-      'resources_create_wizard' : RESOURCE_CREATE_DIR,
+       'resources_dir' : RESOURCES_DIR,
       'kropotkin' : KROPOTKIN_DIR
     };
 
@@ -42,13 +43,15 @@
 //        'ui.bootstrap',
     'debug',
     'bootstrap',
-    'ngAnimate'
+    'ngAnimate',
 
     //       ,'uiGmapgoogle-maps'
   ])
 
-     .constant('filePaths', filePaths)
-
+    .constant('filePaths', filePaths)
+    .run(function($rootScope) {
+      debugStates($rootScope);
+    })
     .config([ '$stateProvider', '$urlRouterProvider', '$httpProvider',
       function config(  $stateProvider, $urlRouterProvider, $httpProvider) {
         $httpProvider.defaults.useXDomain = true;
@@ -85,60 +88,57 @@
             // route to show our basic form (/form)
             .state('resources_wizard', {
               url: '/resources/wizard',
-              templateUrl: RESOURCES_DIR + 'rsc_wizardPage.html',
-              controller: ''
+              templateUrl: RESOURCES_DIR + 'main/rsc_wizardPage.html',
+              controller: 'ResourceController'
             })
             .state('resources_wizard.start', {
               url: '/start',
-              templateUrl: RESOURCE_CREATE_DIR + 'rsc_StartPage.html'
+              templateUrl: RESOURCES_DIR + 'main/rsc_StartPage.html'
             })
             .state('resources_wizard.summary', {
               url: '/summary',
-              templateUrl: RESOURCE_CREATE_DIR + 'rsc_SummaryPage.html'
+              templateUrl: RESOURCES_DIR + 'thing/summary/rsc_SummaryPage.html'
             })
             .state('resources_wizard.agreement', {
               url: '/agreement',
-              templateUrl: RESOURCE_CREATE_DIR + 'rsc_AgreementPage.html'
+              templateUrl: RESOURCES_DIR + 'agreement/rsc_AgreementPage.html'
             })
-
-
             .state('resources_wizard.instructions', {
               url: '/instructions',
-              templateUrl: RESOURCE_CREATE_DIR + 'rsc_InstructionsPage.html'
+              templateUrl: RESOURCES_DIR + 'instructions/rsc_InstructionsPage.html'
             })
             .state('resources_wizard.location', {
               url: '/location',
-              templateUrl: RESOURCE_CREATE_DIR + 'rsc_LocationSearchPage.html',
+              templateUrl: RESOURCES_DIR + 'place/rsc_LocationSearchPage.html',
               controller: 'LocationController'
             })
             .state('resources_wizard.map', {
               url: '/map',
-              templateUrl: RESOURCE_CREATE_DIR + 'rsc_MapPage.html',
-              //controller: 'MapController'
+              templateUrl: RESOURCES_DIR + 'place/rsc_MapPage.html',
             })
             .state('resources_wizard.type', {
               url: '/type',
-              templateUrl: RESOURCE_CREATE_DIR + 'rsc_TypePage.html',
+              templateUrl: RESOURCES_DIR + 'thing/taxonomy/common/rsc_TypePage.html',
               controller: 'ResourceController'
             })
             .state('resources_wizard.food_details', {
               url: '/food_details',
-              templateUrl: RESOURCE_CREATE_DIR + 'rsc_FoodDetailsPage.html',
+              templateUrl: RESOURCES_DIR + 'thing/taxonomy/food/rsc_FoodDetailsPage.html',
               controller: 'ResourceController'
             })
             .state('resources_wizard.housing_details', {
               url: '/housing_details',
-              templateUrl: RESOURCE_CREATE_DIR + 'rsc_HousingDetailsPage.html',
+              templateUrl: RESOURCES_DIR + 'thing/taxonomy/housing/rsc_HousingDetailsPage.html',
               controller: 'ResourceController'
             })
             .state('resources_wizard.medical_details', {
               url: '/medical_details',
-              templateUrl: RESOURCE_CREATE_DIR + 'rsc_MedicalDetailsPage.html',
+              templateUrl: RESOURCES_DIR + 'thing/taxonomy/medical/rsc_MedicalDetailsPage.html',
               controller: 'ResourceController'
             })
             .state('resources_wizard.time', {
               url: '/time',
-              templateUrl: RESOURCE_CREATE_DIR + 'rsc_SchedulePage.html',
+              templateUrl: RESOURCES_DIR + 'time/common/rsc_SchedulePage.html',
               controller: 'ScheduleController'
             })
             .state('resources_wizard.confirmation', {
@@ -336,36 +336,37 @@ $rootScope.appStarted = new Date();
 
 
 
-/*
- (function debugStates ($rootScope){
- $rootScope.$on('$stateChangeStart',function(event, toState, toParams, fromState, fromParams){
- var toStateTo = toState.to;
- if (toStateTo === undefined) {
- console.log("ToState" , toState, "ToParams", toParams)
- }
- console.log('$stateChangeStart to '+toStateTo+'- fired when the transition begins. toState,toParams : \n',toState, toParams);
- });
- $rootScope.$on('$stateChangeError',function(event, toState, toParams, fromState, fromParams){
- console.log('$stateChangeError - fired when an error occurs during transition.');
- console.log(arguments);
- });
- $rootScope.$on('$stateChangeSuccess',function(event, toState, toParams, fromState, fromParams){
- console.log('$stateChangeSuccess to '+toState.name+'- fired once the state transition is complete.');
- });
- // $rootScope.$on('$viewContentLoading',function(event, viewConfig){
- //   // runs on individual scopes, so putting it in "run" doesn't work.
- //   console.log('$viewContentLoading - view begins loading - dom not rendered',viewConfig);
- // });
- $rootScope.$on('$viewContentLoaded',function(event){
- console.log('$viewContentLoaded - fired after dom rendered',event);
- });
- $rootScope.$on('$stateNotFound',function(event, unfoundState, fromState, fromParams){
- console.log('$stateNotFound '+unfoundState.to+'  - fired when a state cannot be found by its name.');
- console.log(unfoundState, fromState, fromParams);
- });
- })($rootScope);
 
- */
+function debugStates ($rootScope){
+  console.log("Root Scope", $rootScope);
+  $rootScope.$on('$stateChangeStart',function(event, toState, toParams, fromState, fromParams){
+    var toStateTo = toState.to;
+    if (toStateTo === undefined) {
+      console.log("ToState" , toState, "ToParams", toParams)
+    }
+    console.log('$stateChangeStart to '+toStateTo+'- fired when the transition begins. toState,toParams : \n',toState, toParams);
+  });
+  $rootScope.$on('$stateChangeError',function(event, toState, toParams, fromState, fromParams){
+    console.log('$stateChangeError - fired when an error occurs during transition.');
+    console.log(arguments);
+  });
+  $rootScope.$on('$stateChangeSuccess',function(event, toState, toParams, fromState, fromParams){
+    console.log('$stateChangeSuccess to '+toState.name+'- fired once the state transition is complete.');
+  });
+  // $rootScope.$on('$viewContentLoading',function(event, viewConfig){
+  //   // runs on individual scopes, so putting it in "run" doesn't work.
+  //   console.log('$viewContentLoading - view begins loading - dom not rendered',viewConfig);
+  // });
+  $rootScope.$on('$viewContentLoaded',function(event){
+    console.log('$viewContentLoaded - fired after dom rendered',event);
+  });
+  $rootScope.$on('$stateNotFound',function(event, unfoundState, fromState, fromParams){
+    console.log('$stateNotFound '+unfoundState.to+'  - fired when a state cannot be found by its name.');
+    console.log(unfoundState, fromState, fromParams);
+  });
+}
+
+
 
 /*
  .state('create_report',{

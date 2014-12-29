@@ -2,7 +2,7 @@
   'use strict';
 
   app.directive('mapConfirm', ['filePaths', function(filePaths) {
-    var templateUrl = filePaths.resources_create_wizard + 'rsc_MapWidget.html';
+    var templateUrl = filePaths.resources_dir + 'place/rsc_MapWidget.html';
 
     return {
       restrict: 'E',
