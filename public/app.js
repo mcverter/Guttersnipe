@@ -41,10 +41,9 @@
     'leaflet-directive',
     'mgo-angular-wizard',
     'ui.calendar',
-//        'ui.bootstrap',
+        'ui.bootstrap',
     'debug',
-    'bootstrap',
-    'ngAnimate',
+     'ngAnimate',
 
     //       ,'uiGmapgoogle-maps'
   ])
