@@ -8,7 +8,8 @@
     "url": "https://github.com/mcverter/guttersnipe"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "./node_modules/bower/bin/bower install"
   },
   "author": "Mitchell Verter",
   "license": "GNU",
@@ -17,12 +18,12 @@
     "node": "0.10.x"
   },
   "dependencies": {
-    "bower": "*",
+    "bower": "latest",
     "body-parser": "~1.5.2",
     "express": "^4.10.4",
     "method-override": "~2.1.2",
-    "mongo": "*",
-    "mongoose": "*",
+    "mongo": "latest",
+    "mongoose": "latest",
     "morgan": "~1.2.2",
     "passport": "^0.2.1"
   }
