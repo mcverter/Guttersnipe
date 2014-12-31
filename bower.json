@@ -1,12 +1,12 @@
 {
-  "name": "guttersnipe-JoeEames",
+  "name": "guttersnipe",
   "version": "0.0.0",
   "description": "Resource Sharing",
   "moduleType": [
     "node"
   ],
-  "license": "MIT",
-  "homepage": "http://www.guttersnip.org",
+  "license": "GNU",
+  "homepage": "http://www.guttersnipe.org",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -14,5 +14,17 @@
     "public/vendor",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "angular": "~1.3.*",
+    "angular-ui-router": "~0.2.13",
+    "angular-ui-bootstrap": "~0.12.0",
+    "lodash": "~2.4.1",
+    "angular-ui-calendar": "*",
+    "angular-wizard": "~0.4.1",
+    "angular-leaflet": "~0.7.10",
+    "moment": "~2.8.4",
+    "jquery": "*",
+    "angular-animate": "~1.3.8"
+  }
 }
