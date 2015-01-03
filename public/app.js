@@ -32,7 +32,7 @@
     ADMIN_DIR = 'FOO',
 
     filePaths = {
-       'resources_dir' : RESOURCES_DIR,
+      'resources_dir' : RESOURCES_DIR,
       'kropotkin' : KROPOTKIN_DIR
     };
 
@@ -41,11 +41,9 @@
     'leaflet-directive',
     'mgo-angular-wizard',
     'ui.calendar',
-        'ui.bootstrap',
+    'ui.bootstrap',
     'debug',
-     'ngAnimate',
-
-    //       ,'uiGmapgoogle-maps'
+    'ngAnimate',
   ])
     .constant('filePaths', filePaths)
     .run(function($rootScope) {
@@ -59,11 +57,7 @@
         delete $httpProvider.defaults.headers
           .common['X-Requested-With'];
 
-
-
 //        $urlRouterProvider.otherwise("/index");
-
-
 
         /*********
          * State Map
@@ -90,7 +84,7 @@
             .state('resources_wizard', {
               url: '/resources/wizard',
               templateUrl: RESOURCES_DIR + 'main/rsc_wizardPage.html',
-              controller: 'ResourceController'
+              controller: 'CreateResourceController'
             })
             .state('resources_wizard.start', {
               url: '/start',
@@ -111,7 +105,7 @@
             .state('resources_wizard.location', {
               url: '/location',
               templateUrl: RESOURCES_DIR + 'place/rsc_LocationSearchPage.html',
-              controller: 'LocationController'
+         //     controller: 'LocationController'
             })
             .state('resources_wizard.map', {
               url: '/map',
@@ -120,23 +114,19 @@
             .state('resources_wizard.type', {
               url: '/type',
               templateUrl: RESOURCES_DIR + 'thing/taxonomy/common/rsc_TypePage.html',
-              controller: 'ResourceController'
             })
             .state('resources_wizard.food_details', {
               url: '/food_details',
               templateUrl: RESOURCES_DIR + 'thing/taxonomy/food/rsc_FoodDetailsPage.html',
-              controller: 'ResourceController'
-            })
+             })
             .state('resources_wizard.housing_details', {
               url: '/housing_details',
               templateUrl: RESOURCES_DIR + 'thing/taxonomy/housing/rsc_HousingDetailsPage.html',
-              controller: 'ResourceController'
             })
             .state('resources_wizard.medical_details', {
               url: '/medical_details',
               templateUrl: RESOURCES_DIR + 'thing/taxonomy/medical/rsc_MedicalDetailsPage.html',
-              controller: 'ResourceController'
-            })
+             })
             .state('resources_wizard.time', {
               url: '/time',
               templateUrl: RESOURCES_DIR + 'time/common/rsc_SchedulePage.html',
@@ -145,15 +135,15 @@
             .state('resources_wizard.punctual', {
               url: '/time/punctual',
               templateUrl: RESOURCES_DIR + 'time/punctual/rsc_PunctualPage.html',
-              })
+            })
             .state('resources_wizard.recurring', {
               url: '/time/recurring',
               templateUrl: RESOURCES_DIR + 'time/recurring/rsc_WeeklyRecurringPage.html',
-              })
+            })
             .state('resources_wizard.seasonal', {
               url: '/time/seasonal',
               templateUrl: RESOURCES_DIR + 'time/seasonal/rsc_SeasonalPage.html',
-              })
+            })
             .state('resources_wizard.confirmation', {
               url: '/confirmation',
               templateUrl: RESOURCES_DIR + 'CreationPage.html'
