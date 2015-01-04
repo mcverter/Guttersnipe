@@ -113,7 +113,7 @@
             })
             .state('resources_wizard.type', {
               url: '/type',
-              templateUrl: RESOURCES_DIR + 'thing/taxonomy/common/rsc_TypePage.html',
+              templateUrl: RESOURCES_DIR + 'thing/taxonomy/type/rsc_TypePage.html',
             })
             .state('resources_wizard.food_details', {
               url: '/food_details',
