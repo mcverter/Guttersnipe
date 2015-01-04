@@ -1,8 +1,8 @@
 (function (angular, app) {
   'use strict';
 
-  app.directive('resourceFoodDetails', ['filePaths', function(filePaths) {
-      var templateUrl = filePaths.resources_dir + 'thing/taxonomy/food/rsc_FoodDetailsWidget.html';
+  app.directive('resourceTypeInput', ['filePaths', function(filePaths) {
+      var templateUrl = filePaths.resources_dir + 'thing/taxonomy/type/rsc_TypeInputWidget.html';
 
       return {
         restrict: 'E',
