@@ -36,15 +36,9 @@
 <!-- map-->
 <script type="application/javascript" src="/lib/leaflet/dist/leaflet.js"></script>
 <script type="application/javascript" src="/lib/angular-leaflet/dist/angular-leaflet-directive.js"></script>
-<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+<script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
 
 
-
-<!-- calendar
-Resource interpreted as Script but transferred with MIME type text/html: "http://localhost:4444/lib/wizard/angular-wizard.js". localhost/:50
-Uncaught SyntaxError: Unexpected token <
-
--->
 <script type="application/javascript" src="/lib/moment/moment.js"></script>
 <script type="application/javascript" src="/lib/fullcalendar/fullcalendar.js"></script>
 <!--
@@ -54,6 +48,7 @@ Uncaught SyntaxError: Unexpected token <
 
 <!-- utilities-->
 <script type="application/javascript" src="/lib/angular-wizard/dist/angular-wizard.js"></script>
+
 <!------------->
 <!--  angular-->
 <!------------->
@@ -65,42 +60,63 @@ Uncaught SyntaxError: Unexpected token <
 <script type="application/javascript" src="/homeController.js"></script>
 
 <!-- services-->
-<script type="application/javascript" src="/modules/users/services/usr_authService.js"></script>
-<script type="application/javascript" src="/modules/resources/thing/taxonomy/common/rsc_taxonomyService.js"></script>
-<script type="application/javascript" src="/modules/resources/place/rsc_geocodeService.js"></script>
+<script type="application/javascript" src="/modules/users/services/usr_AuthService.js"></script>
+<script type="application/javascript" src="/modules/resources/place/rsc_GeocodeService.js"></script>
 
 <!-- controllers-->
-<script type="application/javascript" src="/modules/users/controllers/usr_loginController.js"></script>
-<script type="application/javascript" src="/modules/users/controllers/usr_registerController.js"></script>
-<script type="application/javascript" src="/modules/users/controllers/usr_editProfileController.js"></script>
-<script type="application/javascript" src="/modules/users/controllers/usr_logoutController.js"></script>
+<script type="application/javascript" src="/modules/users/controllers/usr_LoginController.js"></script>
+<script type="application/javascript" src="/modules/users/controllers/usr_RegisterController.js"></script>
+<script type="application/javascript" src="/modules/users/controllers/usr_EditProfileController.js"></script>
+<script type="application/javascript" src="/modules/users/controllers/usr_LogoutController.js"></script>
 
-<script type="application/javascript" src="/modules/resources/main/rsc_createResourceController.js"></script>
+<script type="application/javascript" src="/modules/resources/main/rsc_CreateResourceController.js"></script>
 
-<script type="application/javascript" src="/modules/resources/place/rsc_locationController.js"></script>
-<script type="application/javascript" src="/modules/resources/place/rsc_mapController.js"></script>
+<script type="application/javascript" src="/modules/resources/place/rsc_LocationController.js"></script>
+<script type="application/javascript" src="/modules/resources/place/rsc_MapController.js"></script>
 
-<script type="application/javascript" src="/modules/resources/time/common/rsc_scheduleController.js"></script>
+<script type="application/javascript" src="/modules/resources/time/common/rsc_ScheduleController.js"></script>
 
 <!-- admin controllers-->
-<script type="application/javascript" src="/modules/admin/controllers/adm_manageDataController.js"></script>
-<script type="application/javascript" src="/modules/admin/controllers/adm_manageUsersController.js"></script>
+<script type="application/javascript" src="/modules/admin/controllers/adm_ManageDataController.js"></script>
+<script type="application/javascript" src="/modules/admin/controllers/adm_ManageUsersController.js"></script>
 
 <!-- directives-->
-<script type="application/javascript" src="/modules/kropotkin/kropotkinDirective.js"></script>
+<script type="application/javascript" src="/modules/kropotkin/kro_kropotkinDirective.js"></script>
 
-<script type="application/javascript" src="/modules/resources/thing/summary/rsc_summaryDirective.js"></script>
-<script type="application/javascript" src="/modules/resources/agreement/rsc_createAgreementDirective.js"></script>
-<script type="application/javascript" src="/modules/resources/instructions/rsc_createInstructionsDirective.js"></script>
+<script type="application/javascript" src="/modules/resources/thing/summary/rsc_SummaryMasterDirective.js"></script>
+<script type="application/javascript" src="/modules/resources/thing/summary/rsc_SummaryInputDirective.js"></script>
+<script type="application/javascript" src="/modules/resources/thing/summary/rsc_SummaryConfirmedDirective.js"></script>
 
-<script type="application/javascript" src="/modules/resources/place/rsc_mapLeafletDirective.js"></script>
+<script type="application/javascript" src="/modules/resources/agreement/rsc_CreateAgreementDirective.js"></script>
+<script type="application/javascript" src="/modules/resources/instructions/rsc_CreateInstructionsDirective.js"></script>
 
+<script type="application/javascript" src="/modules/resources/place/rsc_MapLeafletDirective.js"></script>
+
+<!-------------------->
 <!-- Classification -->
-<script type="application/javascript" src="/modules/resources/thing/taxonomy/common/rsc_taxonDirective.js"></script>
-<script type="application/javascript" src="/modules/resources/thing/taxonomy/common/rsc_typeDirective.js"></script>
-<script type="application/javascript" src="/modules/resources/thing/taxonomy/food/rsc_foodDetailsDirective.js"></script>
-<script type="application/javascript" src="/modules/resources/thing/taxonomy/medical/rsc_medicalDetailsDirective.js"></script>
-<script type="application/javascript" src="/modules/resources/thing/taxonomy/housing/rsc_housingDetailsDirective.js"></script>
+<!-------------------->
+<script type="application/javascript" src="/modules/resources/thing/taxonomy/common/rsc_TaxonomyService.js"></script>
+<script type="application/javascript" src="/modules/resources/thing/taxonomy/common/rsc_TaxonDirective.js"></script>
+
+<!-- Type -->
+<script type="application/javascript" src="/modules/resources/thing/taxonomy/type/rsc_TypeMasterDirective.js"></script>
+<script type="application/javascript" src="/modules/resources/thing/taxonomy/type/rsc_TypeInputDirective.js"></script>
+<script type="application/javascript" src="/modules/resources/thing/taxonomy/type/rsc_TypeConfirmedDirective.js"></script>
+
+<!-- Food -->
+<script type="application/javascript" src="/modules/resources/thing/taxonomy/food/rsc_FoodDetailsMasterDirective.js"></script>
+<script type="application/javascript" src="/modules/resources/thing/taxonomy/food/rsc_FoodDetailsInputDirective.js"></script>
+<script type="application/javascript" src="/modules/resources/thing/taxonomy/food/rsc_FoodDetailsConfirmedDirective.js"></script>
+
+<!-- Medical -->
+<script type="application/javascript" src="/modules/resources/thing/taxonomy/medical/rsc_MedicalDetailsMasterDirective.js"></script>
+<script type="application/javascript" src="/modules/resources/thing/taxonomy/medical/rsc_MedicalDetailsInputDirective.js"></script>
+<script type="application/javascript" src="/modules/resources/thing/taxonomy/medical/rsc_MedicalDetailsConfirmedDirective.js"></script>
+
+<!-- Housing -->
+<script type="application/javascript" src="/modules/resources/thing/taxonomy/housing/rsc_HousingDetailsMasterDirective.js"></script>
+<script type="application/javascript" src="/modules/resources/thing/taxonomy/housing/rsc_HousingDetailsInputDirective.js"></script>
+<script type="application/javascript" src="/modules/resources/thing/taxonomy/housing/rsc_HousingDetailsConfirmedDirective.js"></script>
 
 <!-- Schedule -->
 <script type="application/javascript" src="/modules/resources/time/common/rsc_ScheduleDirective.js"></script>
