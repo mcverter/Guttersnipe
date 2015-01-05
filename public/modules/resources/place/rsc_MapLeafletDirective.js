@@ -1,8 +1,8 @@
 (function (angular, app) {
   'use strict';
 
-  app.directive('mapConfirm', ['filePaths', function(filePaths) {
-    var templateUrl = filePaths.resources_dir + 'place/rsc_MapWidget.html';
+  app.directive('mapInput', ['filePaths', function(filePaths) {
+    var templateUrl = filePaths.resources_dir + 'place/rsc_MapInputWidget.html';
 
     return {
       restrict: 'E',

@@ -3,4 +3,9 @@
 </div>
 <div ng-if="isTaxonomySet">
     <resource-type-confirmed></resource-type-confirmed>
+    <div ng-switch on="type">
+        <resource-food-details-master ng-switch-when="food"></resource-food-details-master>
+        <resource-medical-details-master ng-switch-when="medical"></resource-medical-details-master>
+        <resource-housing-details-master ng-switch-when="housing"></resource-housing-details-master>
+    </div>
 </div>

@@ -9,10 +9,12 @@
           headline: '',
           description: '',
           type: '',
-          details: {}
+          details: []
         },
         isSummarySet = false,
         isTaxonomySet = false,
+        isTypeSet = false,
+        areDetailsSet = false,
 
 
       // PLACE:
@@ -58,6 +60,23 @@
           }
         },
 
+        toggleDetail : {
+          enumerable: true,
+          value: function (category, detail) {
+            var idx;
+             if ((category in thing.details) &&
+               (idx = _.find(thing.details.category, detail))) {
+               thing.details.category.splice(idx, 1);
+             }
+            else {
+               if (! category in thing.details) {
+                 thing.details.category = [];
+               }
+               thing.details.category.push(detail);
+             }
+          }
+        },
+
         isSummarySet : {
           enumerable: true,
           get: function () {
@@ -65,6 +84,24 @@
           },
           set: function(val) {
             isSummarySet = val;
+          }
+        },
+        isTypeSet : {
+          enumerable: true,
+          get: function () {
+            return isTypeSet;
+          },
+          set: function(val) {
+            isTypeSet = val;
+          }
+        },
+        areDetailsSet : {
+          enumerable: true,
+          get: function () {
+            return areDetailsSet;
+          },
+          set: function(val) {
+            areDetailsSet = val;
           }
         },
 

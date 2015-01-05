@@ -2,7 +2,14 @@
   'use strict';
 
   app.directive('resourceSummary', ['filePaths', function(filePaths) {
-      var templateUrl = filePaths.resources_dir + 'thing/summary/rsc_SummaryMasterWidget.html';
+      var template = multiline(/*
+       <div ng-if="!isSummarySet">
+          <resource-summary-input></resource-summary-input>
+       </div>
+       <div ng-if="isSummarySet">
+          <resource-summary-confirmed></resource-summary-confirmed>
+       </div>
+       */);
 
       return {
         restrict: 'E',
