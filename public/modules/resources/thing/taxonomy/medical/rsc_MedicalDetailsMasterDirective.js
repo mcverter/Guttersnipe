@@ -2,18 +2,11 @@
   'use strict';
 
   app.directive('medicalDetailsMaster', ['filePaths', function(filePaths) {
-      var template =
-        '      <div ng-if="!areDetailsSet">' +
-        '        <medical-details-input></medical-details-input>' +
-        '      </div>' +
-        '      <div ng-if="areDetailsSet">' +
-        '        <medical-details-confirmed></medical-details-confirmed>' +
-        '      </div>';
-
+      var templateUrl = filePaths.resources_dir + "thing/taxonomy/medical/rsc_MedicalDetailsMasterWidget.html";
 
       return {
         restrict: 'E',
-        template: template
+        templateUrl: templateUrl
       }
     }]
   );

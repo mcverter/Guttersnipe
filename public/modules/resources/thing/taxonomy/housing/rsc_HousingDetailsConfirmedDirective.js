@@ -2,23 +2,11 @@
   'use strict';
 
   app.directive('housingDetailsConfirmed', ['filePaths', function(filePaths) {
-
-      var template=
-        '        <div>' +
-        '          <div>' +
-        '            <div ng-repeat="category in details">' +
-        '                {{category}}' +
-        '              <div ng-repeat="detail in details.category">' +
-        '                {{detail}}' +
-        '              </div>' +
-        '            </div>' +
-        '            <a class="btn btn-warning" href="#" role="button" ng-click="isSummarySet=false">Edit</a>' +
-        '          </div>' +
-        '        </div>';
+      var templateUrl = filePaths.resources_dir + "thing/taxonomy/housing/rsc_HousingDetailsConfirmedWidget.html";
 
       return {
         restrict: 'E',
-        template: template
+        templateUrl: templateUrl
       }
     }]
   );

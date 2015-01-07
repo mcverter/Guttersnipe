@@ -2,18 +2,11 @@
   'use strict';
 
   app.directive('resourceSummaryConfirmed', ['filePaths', function(filePaths) {
-      var template =
-        '      <div>' +
-        '        <div>' +
-        '          <h2> Headline </h2> {{headline}}' +
-        '          <h2> Summary </h2> {{description}}' +
-        '        </div>' +
-        '        <a class="btn btn-warning" href="#" role="button" ng-click="isSummarySet=false">Edit</a>' +
-        '      </div>' ;
+      var templateUrl = filePaths.resources_dir + "thing/summary/rsc_SummaryConfirmedWidget.html";
 
       return {
         restrict: 'E',
-        template: template
+        templateUrl: templateUrl
       }
     }]
   );

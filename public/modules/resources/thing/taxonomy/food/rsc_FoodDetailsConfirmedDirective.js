@@ -2,24 +2,11 @@
   'use strict';
 
   app.directive('foodDetailsConfirmed', ['filePaths', function(filePaths) {
-
-      var template=
-        'blarghhh ' +
-        '        <div>' +
-        '          <div>' +
-        '            <div ng-repeat="category in details">' +
-        '                {{category}}' +
-        '              <div ng-repeat="detail in details.category">' +
-        '                {{detail}}' +
-        '              </div>' +
-        '            </div>' +
-        '            <a class="btn btn-warning" href="#" role="button" ng-click="isSummarySet=false">Edit</a>' +
-        '          </div>' +
-        '        </div>';
+      var templateUrl = filePaths.resources_dir + "thing/taxonomy/food/rsc_FoodDetailsConfirmedWidget.html";
 
       return {
         restrict: 'E',
-        template: template
+        templateUrl: templateUrl
       }
     }]
   );

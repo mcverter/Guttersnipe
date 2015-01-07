@@ -2,17 +2,12 @@
   'use strict';
 
   app.directive('housingDetailsMaster', ['filePaths', function(filePaths) {
-      var template =
-        '      <div ng-if="!areDetailsSet">' +
-        '        <housing-details-input></housing-details-input>' +
-        '      </div>' +
-        '      <div ng-if="areDetailsSet">' +
-        '        <housing-details-confirmed></housing-details-confirmed>' +
-        '      </div>';
+      var templateUrl = filePaths.resources_dir + "thing/taxonomy/housing/rsc_HousingDetailsMasterWidget.html";
+
 
       return {
         restrict: 'E',
-        template: template
+        templateUrl: templateUrl
       }
     }]
   );

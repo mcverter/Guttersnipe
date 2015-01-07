@@ -2,18 +2,11 @@
   'use strict';
 
   app.directive('mapConfirmed', ['filePaths', function(filePaths) {
-      var template =
-        '<div>' +
-        '   <em> Description </em> {{placeDescription}} <br>' +
-        '   <em> Address </em> {{inputAddress}} <br>' +
-        '    <leaflet markers="markers" center="center" defaults="defaults" width="640px" height="480px"></leaflet>' +
-        '</div>' +
-        '<a class="btn btn-warning" href="#" role="button" ng-click="isLocationSet=false">Edit</a>' ;
-
+      var templateUrl = filePaths.resources_dir + "place/rsc_MapConfirmedWidget.html";
 
       return {
         restrict: 'E',
-        template: template
+        templateUrl: templateUrl
       }
     }]
   );

@@ -2,17 +2,11 @@
   'use strict';
 
   app.directive('mapMaster', ['filePaths', function(filePaths) {
-      var template =
-        '        <div ng-if="!isLocationSet">' +
-        '           <map-input></map-input>' +
-        '        </div>' +
-        '        <div ng-if="isLocationSet">' +
-        '           <map-confirmed></map-confirmed>' +
-        '        </div>';
+      var templateUrl = filePaths.resources_dir + "place/rsc_MapMasterWidget.html";
 
       return {
         restrict: 'E',
-        template: template
+        templateUrl: templateUrl
       }
     }]
   );
