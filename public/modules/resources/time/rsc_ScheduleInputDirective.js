@@ -1,9 +1,8 @@
 (function (angular, app) {
   'use strict';
 
-  app.directive('schedulePunctual', ['filePaths', function(filePaths) {
-      console.log('in punctual directive');
-      var templateUrl = filePaths.resources_dir + 'time/punctual/rsc_PunctualWidget.html',
+  app.directive('scheduleInput', ['filePaths', function(filePaths) {
+      var templateUrl = filePaths.resources_dir + 'time/rsc_ScheduleInputWidget.html',
         controller = function($scope, $modal) {
 
           $scope.eventSources = [];
@@ -16,13 +15,14 @@
                 center: 'title',
                 right: 'today prev,next'
               },
+              defaultView: 'agendaWeek',
               dayClick: function (start) {
                 start.setHours(12);
                 console.log(start);
                 var end = angular.copy(start);
                 end.setMinutes(start.getMinutes()+30);
                 var modalInstance = $modal.open({
-                  templateUrl: filePaths.resources_dir + 'time/punctual/rsc_PunctualDialogWidget.html',
+                  templateUrl: filePaths.resources_dir + 'time/rsc_ScheduleDialogWidget.html',
                   controller: function($scope, $modalInstance) {
                     Object.defineProperties($scope, {
                       start: {

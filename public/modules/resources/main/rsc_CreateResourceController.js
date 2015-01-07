@@ -41,11 +41,8 @@
         geocoder = new google.maps.Geocoder(),
 
       // TIME
-        time = {
-          weeklyRecurrences : [],
-          seasonalRecurrences: [],
-          punctualDates : []
-        };
+        isScheduleSet = false,
+        dates = [];
 
 
       Object.defineProperties($scope, {
@@ -301,6 +298,17 @@
         },
 
         // TIME
+
+        isScheduleSet : {
+          enumerable: true,
+          get: function() {
+            return isScheduleSet;
+          },
+          set: function(val) {
+            isScheduleSet = val;
+          }
+        },
+
         weeklyRecurrences : {
           enumerable: true,
           get: function() {
