@@ -9,7 +9,7 @@
           headline: '',
           description: '',
           type: '',
-          details: []
+          details: {}
         },
         isSummarySet = false,
         isTaxonomySet = false,
@@ -18,13 +18,27 @@
 
 
       // PLACE:
+        isLocationSet = false,
+        inputAddress = 'Prospect Park',
+        center = {lat: 40.660204,lng: -73.968956, zoom: 14},
         place = {
-          coordinates: {
-            lat: '',
-            lng: ''
+          center: {
+            lat: center.lat,
+            lng: center.lng
           },
           description : ''
         },
+
+        markers =  {
+          mainMarker: {
+            lat: 40.660204,
+            lng: -73.968956,
+            focus: true,
+            message: thing.headline,
+            draggable: true
+          }
+        },
+        geocoder = new google.maps.Geocoder(),
 
       // TIME
         time = {
@@ -63,17 +77,17 @@
         toggleDetail : {
           enumerable: true,
           value: function (category, detail) {
-            var idx;
-             if ((category in thing.details) &&
-               (idx = _.find(thing.details.category, detail))) {
-               thing.details.category.splice(idx, 1);
-             }
+            var idx,
+              selections = category ?
+                thing.details[category]['selections'] :
+                thing.details['selections'];
+
+            if (idx = _.find(selections, detail)) {
+              selections.splice(idx, 1);
+            }
             else {
-               if (! category in thing.details) {
-                 thing.details.category = [];
-               }
-               thing.details.category.push(detail);
-             }
+              selections.push(detail);
+            }
           }
         },
 
@@ -86,6 +100,7 @@
             isSummarySet = val;
           }
         },
+
         isTypeSet : {
           enumerable: true,
           get: function () {
@@ -106,10 +121,61 @@
         },
 
         // Taxonomy Widgets
-        // (Type Widget, Details Widgeet)
+        // (Type Widget, Details Widget)
+        clearTaxonomy : {
+          enumerable: true,
+          value: function() {
+            thing.type = '';
+            thing.details = {};
+            isTaxonomySet = false;
+            areDetailsSet - false;
+            isTypeSet = false;
+
+          }
+        },
         resourceTaxonomy : {
           enumerable: true,
-          value:  ResourceTaxonomy
+          get:  function() {
+            return ResourceTaxonomy;
+          }
+        },
+        setType : {
+          enumerable: true,
+          value : function(t) {
+            isTypeSet = true;
+            thing.type = t;
+            switch(t) {
+              case "food":
+                thing.details = {
+                  eating_arrangement: {
+                    selections: []
+                  },
+                  protein: {
+                    selections: []
+                  },
+                  grains: {
+                    selections: []
+                  },
+                  produce:  {
+                    selections: []
+                  },
+                  dairy:  {
+                    selections: []
+                  }
+                }
+                break;
+              case "medical":
+                thing.details = {
+                  selections: []
+                }
+                break;
+              case "housing":
+                thing.details = {
+                  selections: []
+                }
+                break;
+            }
+          }
         },
 
         type : {
@@ -155,10 +221,13 @@
         isLocationSet : {
           enumerable: true,
           get: function () {
-            return false;
+            return isLocationSet;
+          },
+          set: function(val) {
+            isLocationSet = val;
           }
         },
-        locationDescription : {
+        placeDescription : {
           enumerable: true,
           get: function() {
             return place.description;
@@ -167,10 +236,60 @@
             place.description = val;
           }
         },
-        isLocationDescriptionSet : {
+
+        inputAddress: {
           enumerable: true,
-          get: function () {
-            return false;
+          get: function getInputAdress() {
+            return inputAddress
+          },
+          set: function setMapTextAdress(val) {
+            inputAddress = val
+          }
+        },
+
+        center: {
+          enumerable: true,
+          get: function getCenter() {
+            return center
+          },
+          set: function setCenter(val) {
+            center = val
+          }
+        },
+
+        markers: {
+          enumerable: true,
+          get: function getMarkers() {
+            return markers;
+          },
+          set: function setMarkers(val) {
+            markers = val
+          }
+        },
+
+        locateAddress : {
+          enumerable: true,
+          value: function locateAddress($event) {
+            $event.preventDefault();
+            geocoder.geocode( { "address": inputAddress }, function(results, status) {
+              if (status == google.maps.GeocoderStatus.OK && results.length > 0) {
+                inputAddress =   results[0].formatted_address;
+                center = {
+                  lat: results[0].geometry.location.k,
+                  lng: results[0].geometry.location.D,
+                  zoom: 15
+                };
+                markers = {
+                  mainMarker: {
+                    lat: results[0].geometry.location.k,
+                    lng: results[0].geometry.location.D,
+                    focus: true,
+                    message: thing.headline,
+                    draggable: true
+                  }
+                };
+              }
+            })
           }
         },
 

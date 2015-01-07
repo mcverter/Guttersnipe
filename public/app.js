@@ -102,14 +102,9 @@
               url: '/instructions',
               templateUrl: RESOURCES_DIR + 'instructions/rsc_InstructionsPage.html'
             })
-            .state('resources_wizard.location', {
-              url: '/location',
-              templateUrl: RESOURCES_DIR + 'place/rsc_LocationSearchPage.html',
-         //     controller: 'LocationController'
-            })
             .state('resources_wizard.map', {
               url: '/map',
-              templateUrl: RESOURCES_DIR + 'place/rsc_MapPage.html',
+              templateUrl: RESOURCES_DIR + 'place/rsc_MapPage.html'
             })
             .state('resources_wizard.type', {
               url: '/type',
@@ -146,7 +141,7 @@
             })
             .state('resources_wizard.confirmation', {
               url: '/confirmation',
-              templateUrl: RESOURCES_DIR + 'CreationPage.html'
+              templateUrl: RESOURCES_DIR + 'confirm/rsc_createPage.html'
             })
 
 
@@ -356,10 +351,6 @@ function debugStates ($rootScope){
   $rootScope.$on('$stateChangeSuccess',function(event, toState, toParams, fromState, fromParams){
     console.log('$stateChangeSuccess to '+toState.name+'- fired once the state transition is complete.');
   });
-  // $rootScope.$on('$viewContentLoading',function(event, viewConfig){
-  //   // runs on individual scopes, so putting it in "run" doesn't work.
-  //   console.log('$viewContentLoading - view begins loading - dom not rendered',viewConfig);
-  // });
   $rootScope.$on('$viewContentLoaded',function(event){
     console.log('$viewContentLoaded - fired after dom rendered',event);
   });
@@ -371,22 +362,3 @@ function debugStates ($rootScope){
 
 
 
-/*
- .state('create_report',{
- url: '/create_report',
- templateUrl: RESOURCE_CREATE_DIR + 'rsc_DetailsPage.html',
- controller: 'CreateReportController'
- })
-
- .state('resource_type',{
- url: '/resource_type',
- templateUrl: RESOURCE_CREATE_DIR + 'rsc_resource_typePage.html',
- controller: 'ResourceController'
- })
- .state('resource_details',{
- url: '/resource_details',
- templateUrl: RESOURCE_CREATE_DIR + 'rsc_resource_detailsPage.html',
- controller: 'ResourceController'
- })
-
- */

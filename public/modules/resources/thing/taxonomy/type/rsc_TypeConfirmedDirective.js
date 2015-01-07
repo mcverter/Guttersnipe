@@ -2,11 +2,15 @@
   'use strict';
 
   app.directive('resourceTypeConfirmed', ['filePaths', function(filePaths) {
-      var templateUrl = filePaths.resources_dir + 'thing/taxonomy/type/rsc_TypeConfirmedWidget.html';
+
+      var template =
+        '      <div>' +
+        '        <h2> The resource type is {{type}} </h2>' +
+        '      </div>';
 
       return {
         restrict: 'E',
-        templateUrl: templateUrl
+        template: template
       }
     }]
   );

@@ -1,12 +1,18 @@
 (function (angular, app) {
   'use strict';
 
-  app.directive('resourceHousingDetails', ['filePaths', function(filePaths) {
-      var templateUrl = filePaths.resources_dir  + 'thing/taxonomy/housing/rsc_HousingDetailsWidget.html';
+  app.directive('housingDetailsMaster', ['filePaths', function(filePaths) {
+      var template =
+        '      <div ng-if="!areDetailsSet">' +
+        '        <housing-details-input></housing-details-input>' +
+        '      </div>' +
+        '      <div ng-if="areDetailsSet">' +
+        '        <housing-details-confirmed></housing-details-confirmed>' +
+        '      </div>';
 
       return {
         restrict: 'E',
-        templateUrl: templateUrl
+        template: template
       }
     }]
   );
