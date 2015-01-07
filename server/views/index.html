@@ -48,6 +48,7 @@
 
 <!-- utilities-->
 <script type="application/javascript" src="/lib/angular-wizard/dist/angular-wizard.js"></script>
+<script type="application/javascript" src="/lib/multiline/browser.js"></script>
 
 <!------------->
 <!--  angular-->
@@ -61,7 +62,6 @@
 
 <!-- services-->
 <script type="application/javascript" src="/modules/users/services/usr_AuthService.js"></script>
-<script type="application/javascript" src="/modules/resources/place/rsc_GeocodeService.js"></script>
 
 <!-- controllers-->
 <script type="application/javascript" src="/modules/users/controllers/usr_LoginController.js"></script>
@@ -70,9 +70,6 @@
 <script type="application/javascript" src="/modules/users/controllers/usr_LogoutController.js"></script>
 
 <script type="application/javascript" src="/modules/resources/main/rsc_CreateResourceController.js"></script>
-
-<script type="application/javascript" src="/modules/resources/place/rsc_LocationController.js"></script>
-<script type="application/javascript" src="/modules/resources/place/rsc_MapController.js"></script>
 
 <script type="application/javascript" src="/modules/resources/time/common/rsc_ScheduleController.js"></script>
 
@@ -83,16 +80,22 @@
 <!-- directives-->
 <script type="application/javascript" src="/modules/kropotkin/kro_kropotkinDirective.js"></script>
 
+<script type="application/javascript" src="/modules/resources/agreement/rsc_CreateAgreementDirective.js"></script>
+<script type="application/javascript" src="/modules/resources/instructions/rsc_CreateInstructionsDirective.js"></script>
+
+<!-------------------->
+<!--     THING      -->
+<!--    Summary     -->
+<!-------------------->
+
 <script type="application/javascript" src="/modules/resources/thing/summary/rsc_SummaryMasterDirective.js"></script>
 <script type="application/javascript" src="/modules/resources/thing/summary/rsc_SummaryInputDirective.js"></script>
 <script type="application/javascript" src="/modules/resources/thing/summary/rsc_SummaryConfirmedDirective.js"></script>
 
-<script type="application/javascript" src="/modules/resources/agreement/rsc_CreateAgreementDirective.js"></script>
-<script type="application/javascript" src="/modules/resources/instructions/rsc_CreateInstructionsDirective.js"></script>
 
-<script type="application/javascript" src="/modules/resources/place/rsc_MapLeafletDirective.js"></script>
 
 <!-------------------->
+<!--     THING      -->
 <!-- Classification -->
 <!-------------------->
 <script type="application/javascript" src="/modules/resources/thing/taxonomy/common/rsc_TaxonomyService.js"></script>
@@ -118,10 +121,25 @@
 <script type="application/javascript" src="/modules/resources/thing/taxonomy/housing/rsc_HousingDetailsInputDirective.js"></script>
 <script type="application/javascript" src="/modules/resources/thing/taxonomy/housing/rsc_HousingDetailsConfirmedDirective.js"></script>
 
+<!-------------------->
+<!--     PLACE      -->
+<!-------------------->
+
+<script type="application/javascript" src="/modules/resources/place/rsc_MapMasterDirective.js"></script>
+<script type="application/javascript" src="/modules/resources/place/rsc_MapInputDirective.js"></script>
+<script type="application/javascript" src="/modules/resources/place/rsc_MapConfirmedDirective.js"></script>
+
+<!-------------------->
+<!--     TIME       -->
+<!-------------------->
+
 <!-- Schedule -->
 <script type="application/javascript" src="/modules/resources/time/common/rsc_ScheduleDirective.js"></script>
 <script type="application/javascript" src="/modules/resources/time/punctual/rsc_PunctualDirective.js"></script>
 <script type="application/javascript" src="/modules/resources/time/seasonal/rsc_SeasonalDirective.js"></script>
 <script type="application/javascript" src="/modules/resources/time/recurring/rsc_WeeklyRecurringDirective.js"></script>
+
+
+
 </body>
 </html>
