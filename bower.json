@@ -20,11 +20,11 @@
     "angular-ui-router": "~0.2.13",
     "angular-ui-bootstrap": "~0.12.0",
     "lodash": "~2.4.1",
-    "angular-ui-calendar": "*",
+    "angular-ui-calendar": "latest",
     "angular-wizard": "~0.4.1",
     "angular-leaflet": "~0.7.10",
     "moment": "~2.8.4",
-    "jquery": "*",
-    "angular-animate": "~1.3.8"
+    "jquery": "latest",
+    "angular-animate": "~1.3.8",
   }
 }
