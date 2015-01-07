@@ -1,11 +1,18 @@
 <div>
     <div>
-        <div ng-repeat="category in details">
-            {{category}}
-            <div ng-repeat="detail in details.category">
-                {{detail}}
+        <div ng-repeat="(category, selections) in details">
+            <div>
+                <h3>{{category}}</h3>
+                <div ng-if="(selections.selections.length > 0)">
+                    <div ng-repeat="selection in selections.selections">
+                        <h4>{{selection}}</h4>
+                    </div>
+                </div>
+                <div ng-if="(selections.selections.length === 0)">
+                    <h4>None</h4>
+                </div>
             </div>
         </div>
-        <a class="btn btn-warning" href="#" role="button" ng-click="isSummarySet=false">Edit</a>
+        <a class="btn btn-warning" href="#" role="button" ng-click="isTaxonomySet=false">Edit</a>
     </div>
 </div>

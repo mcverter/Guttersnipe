@@ -1,9 +1,8 @@
-<div ng-if="!isTaxonomySet">
+<div ng-if="!isTypeSet">
     <resource-type-input></resource-type-input>
 </div>
-<div ng-if="isTaxonomySet">
+<div ng-if="isTypeSet">
     <resource-type-confirmed></resource-type-confirmed>
-    {{type}}
     <div ng-switch on="type">
         <food-details-master ng-switch-when="food"></food-details-master>
         <medical-details-master ng-switch-when="medical"></medical-details-master>

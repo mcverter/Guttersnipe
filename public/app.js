@@ -110,18 +110,6 @@
               url: '/type',
               templateUrl: RESOURCES_DIR + 'thing/taxonomy/type/rsc_TypePage.html',
             })
-            .state('resources_wizard.food_details', {
-              url: '/food_details',
-              templateUrl: RESOURCES_DIR + 'thing/taxonomy/food/rsc_FoodDetailsPage.html',
-             })
-            .state('resources_wizard.housing_details', {
-              url: '/housing_details',
-              templateUrl: RESOURCES_DIR + 'thing/taxonomy/housing/rsc_HousingDetailsPage.html',
-            })
-            .state('resources_wizard.medical_details', {
-              url: '/medical_details',
-              templateUrl: RESOURCES_DIR + 'thing/taxonomy/medical/rsc_MedicalDetailsPage.html',
-             })
             .state('resources_wizard.time', {
               url: '/time',
               templateUrl: RESOURCES_DIR + 'time/common/rsc_SchedulePage.html',

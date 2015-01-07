@@ -139,6 +139,13 @@
             return ResourceTaxonomy;
           }
         },
+        unsetType: {
+          enumerable: true,
+          value: function() {
+            isTaxonomySet = false;
+            isTypeSet = false;
+          }
+        },
         setType : {
           enumerable: true,
           value : function(t) {
