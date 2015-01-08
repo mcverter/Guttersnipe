@@ -3,9 +3,10 @@
 
   app.directive('scheduleInput', ['filePaths', function(filePaths) {
       var templateUrl = filePaths.resources_dir + 'time/rsc_ScheduleInputWidget.html',
+        MSEC_TO_30MIN = 60 * 30 * 1000,
+        eventSources = [],
         controller = function($scope, $modal) {
-
-          $scope.eventSources = [];
+          $scope.eventSources = eventSources;
           $scope.punctualConfig = {
             calendar:{
               height: 450,
@@ -20,7 +21,8 @@
                 start.setHours(12);
                 console.log(start);
                 var end = angular.copy(start);
-                end.setMinutes(start.getMinutes()+30);
+                var repeating = false;
+                end.setTime(start.getTime()+MSEC_TO_30MIN);
                 var modalInstance = $modal.open({
                   templateUrl: filePaths.resources_dir + 'time/rsc_ScheduleDialogWidget.html',
                   controller: function($scope, $modalInstance) {
@@ -32,9 +34,18 @@
                         },
                         set: function (val) {
                           start = val;
-                          console.log("End before", end);
-                          end.setMinutes(start.getMinutes() + 30);
-                          console.log("End after", end);
+                          if (start.getTime() >= end.getTime()) {
+                            end.setTime(start.getTime() + MSEC_TO_30MIN);
+                          }
+                        }
+                      },
+                      repeating: {
+                        enumerable: true,
+                        get: function () {
+                          return repeating;
+                        },
+                        set: function (val) {
+                          repeating = val;
                         }
                       },
                       /**
@@ -45,14 +56,46 @@
                        $scope.$watch(start);
 
                        */
+                      updateEnd : {
+                        enumerable: true,
+                        value: function(start) {
+                          console.log('in update Time');
+                        }
+                      },
 
+                      addSchedule : {
+                        enumerable: true,
+                        value: function(e, start, end, repeating) {
+                          e.preventDefault();
+                          eventSources.push({
+                            title  : 'event2',
+                            start  : start,
+                            end    : end,
+                              repeating: repeating
+                          });
+
+                          $modalInstance.dismiss('added');
+                        }
+                      },
+
+                      invalidTimes: {
+                        enumerable: true,
+                        value: function() {
+                          return start.getTime() >= end.getTime();
+                        }
+                      },
                       end: {
                         enumerable: true,
                         get: function () {
                           return end;
                         },
                         set: function (val) {
-                          end = val;
+                          if (val.getTime() >= start.getTime()+MSEC_TO_30MIN) {
+                            end = val;
+                          }
+                          else {
+                            end.setTime(start.getTime() + MSEC_TO_30MIN);
+                          }
                         }
                       },
                       ok: {

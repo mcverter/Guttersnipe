@@ -3,15 +3,46 @@
     <h2 class="modal-title" id="deployModalLabel">Choose Schedule</h2>
 </div>
 <div class="modal-body">
-    <h2>    Event occurs on {{start | date: 'fullDate'}}</h2>
-    <h4>    Start Time </h4>
-    <timepicker ng-model="start" hour-step=1 minute-step=30></timepicker>
-    <h4>    End Time </h4>
-    <timepicker ng-model="end" hour-step=1 minute-step=30></timepicker>
+    <ng-form id="scheduleForm" name="scheduleForm">
+        <div>
+            <h3>Recurring Event</h3>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" ng-model="repeating"> Event Repeats every {{ start | date: 'EEEE'}}
+                </label>
+            </div>
+        </div>
+        <div>
+            <h2>    Event occurs on {{start | date: 'fullDate'}}</h2>
+            <h4>    Start Time </h4>
+            <timepicker ng-model="start" ng-change="updateEnd(start)" hour-step=1 minute-step=30></timepicker>
+            <h4>    End Time </h4>
+            <timepicker ng-model="end" hour-step=1 minute-step=30></timepicker>
+        </div>
+    </ng-form>
 
-
+    <div>
+        <h2>Schedule:  </h2>
+        <div ng-if="eventSources.length<1">
+            None
+        </div>
+        <h4>Event sources are {{eventSources}}</h4>
+        <div ng-if="eventSources.length>0">
+            <ul>
+                <li ng-repeat="event in eventSources">
+                    New Event!!!
+                    <ol>
+                        <ul>Start:  {{event.start}}</ul>
+                        <ul>End:  {{event.end}}</ul>
+                        <ul>Repeating: {{event.end}}</ul>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>
+
 <div class="modal-footer">
     <button type="button" class="btn btn-default" ng-click="cancelSchedule($event)">Cancel</button>
-    <button type="button" class="btn btn-primary" ng-click="confirmSchedule($event)">OK</button>
+    <button type="button" class="btn btn-primary" ng-disabled="invalidTimes()" ng-click="addSchedule($event, start, end, repeating)">OK</button>
 </div>
