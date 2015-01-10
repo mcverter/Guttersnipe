@@ -1,10 +1,16 @@
 (function (angular, app) {
   'use strict';
 
+<<<<<<< HEAD:public/modules/resources/time/rsc_ScheduleInputDirective.js
   app.directive('scheduleInput', ['filePaths', function(filePaths) {
       var templateUrl = filePaths.resources_dir + 'time/rsc_ScheduleInputWidget.html',
         MSEC_TO_30MIN = 60 * 30 * 1000,
         eventSources = [],
+=======
+  app.directive('schedulePunctual', ['filePaths', function(filePaths) {
+      console.log('in punctual directive');
+      var templateUrl = filePaths.resources_dir + 'time/punctual/rsc_PunctualWidget.html',
+>>>>>>> parent of 2cda0d8... single schedule option, as Master/Input/Confirmed -- also Dialog:public/modules/resources/time/punctual/rsc_PunctualDirective.js
         controller = function($scope, $modal) {
           $scope.eventSources = eventSources;
           $scope.punctualConfig = {
@@ -16,7 +22,6 @@
                 center: 'title',
                 right: 'today prev,next'
               },
-              defaultView: 'agendaWeek',
               dayClick: function (start) {
                 start.setHours(12);
                 console.log(start);
@@ -24,7 +29,7 @@
                 var repeating = false;
                 end.setTime(start.getTime()+MSEC_TO_30MIN);
                 var modalInstance = $modal.open({
-                  templateUrl: filePaths.resources_dir + 'time/rsc_ScheduleDialogWidget.html',
+                  templateUrl: filePaths.resources_dir + 'time/punctual/rsc_PunctualDialogWidget.html',
                   controller: function($scope, $modalInstance) {
                     Object.defineProperties($scope, {
                       start: {

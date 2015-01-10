@@ -39,6 +39,7 @@
           }
         },
       // TIME
+<<<<<<< HEAD
         isScheduleSet = false,
         dates = [],
         geocoder = {},
@@ -50,6 +51,13 @@
       if (google && google.maps){
         geocoder = new google.maps.Geocoder();
       }
+=======
+        time = {
+          weeklyRecurrences : [],
+          seasonalRecurrences: [],
+          punctualDates : []
+        };
+>>>>>>> parent of 2cda0d8... single schedule option, as Master/Input/Confirmed -- also Dialog
 
 
       Object.defineProperties($scope, {
@@ -305,17 +313,6 @@
         },
 
         // TIME
-
-        isScheduleSet : {
-          enumerable: true,
-          get: function() {
-            return isScheduleSet;
-          },
-          set: function(val) {
-            isScheduleSet = val;
-          }
-        },
-
         weeklyRecurrences : {
           enumerable: true,
           get: function() {
