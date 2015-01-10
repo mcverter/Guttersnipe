@@ -1,4 +1,5 @@
 *~
+#*
 node_modules
 .idea
 lib
@@ -7,3 +8,4 @@ Tutorial
 arshaw
 bootstrap_tutorial
 W9
+bootstrap_tutorial.pdf

@@ -1,4 +1,4 @@
-var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development',
+var env = process.env.NODE_ENV = 'localhost', //process.env.NODE_ENV || 'development',
   express = require('express'),
   mongoose = require('mongoose'),
   morgan = require('morgan'),
