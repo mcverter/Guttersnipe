@@ -205,13 +205,13 @@ $rootScope.appStarted = new Date();
           })
 
             .state ('about', {
-            url: '/docs/mission',
-            templateUrl: DOC_DIR + 'mission/doc_MissionStatement.html'
+            url: '/docs/about',
+            templateUrl: DOC_DIR + 'about/doc_AboutSite.html'
           })
 
             .state ('contact', {
             url: '/docs/mission',
-            templateUrl: DOC_DIR + 'mission/doc_MissionStatement.html'
+            templateUrl: DOC_DIR + 'contact/doc_ContactInfo.html'
           })
 
             .state('CCNY', {
