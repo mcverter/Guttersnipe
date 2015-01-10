@@ -58,27 +58,48 @@
 
 
 <script type="application/javascript" src="/homeController.js"></script>
-
+<!--
+users/services/usr_AuthService.js
+users/controllers/usr_LoginController.js
+users/controllers/usr_RegisterController.js
+users/controllers/usr_EditProfileController.js
+users/controllers/usr_LogoutController.js
+admin/controllers/adm_ManageDataController.js
+admin/controllers/adm_ManageUsersController.js
+kropotkin/kro_kropotkinDirective.js
+resources/instructions/rsc_CreateInstructionsDirective.js
+users/services/usr_authService.js
+users/controllers/usr_loginController.js
+users/controllers/usr_registerController.js
+users/controllers/usr_editProfileController.js
+users/controllers/usr_logoutController.js
+admin/controllers/adm_manageDataController.js
+admin/controllers/adm_manageUsersController.js
+WARNING: Tried to load angular more than once.
+16
+Uncaught SyntaxError: Unexpected token < guttersnipe.herokuapp.com/#/
+Failed to execute 'write' on 'Document': It isn't possible to write into a document from an asynchronously-loaded external script unless it is explicitly opened.
+-->
 <!-- services-->
-<script type="application/javascript" src="/modules/users/services/usr_AuthService.js"></script>
+<script type="application/javascript" src="/modules/users/services/usr_AuthSvc.js"></script>
 
 <!-- controllers-->
-<script type="application/javascript" src="/modules/users/controllers/usr_LoginController.js"></script>
-<script type="application/javascript" src="/modules/users/controllers/usr_RegisterController.js"></script>
-<script type="application/javascript" src="/modules/users/controllers/usr_EditProfileController.js"></script>
-<script type="application/javascript" src="/modules/users/controllers/usr_LogoutController.js"></script>
+<script type="application/javascript" src="/modules/users/controllers/usr_LoginCtrl.js"></script>
+<script type="application/javascript" src="/modules/users/controllers/usr_RegisterCtrl.js"></script>
+<script type="application/javascript" src="/modules/users/controllers/usr_EditProfileCtrl.js"></script>
+<script type="application/javascript" src="/modules/users/controllers/usr_LogoutCtrl.js"></script>
 
 <script type="application/javascript" src="/modules/resources/main/rsc_CreateResourceController.js"></script>
 
 <!-- admin controllers-->
-<script type="application/javascript" src="/modules/admin/controllers/adm_ManageDataController.js"></script>
-<script type="application/javascript" src="/modules/admin/controllers/adm_ManageUsersController.js"></script>
+<script type="application/javascript" src="/modules/admin/controllers/adm_ManageDataCtrl.js"></script>
+<script type="application/javascript" src="/modules/admin/controllers/adm_ManageUsersCtrl.js"></script>
 
 <!-- directives-->
-<script type="application/javascript" src="/modules/kropotkin/kro_kropotkinDirective.js"></script>
+<script type="application/javascript" src="/modules/kropotkin/kro_KropotkinDrct.js"></script>
 
 <script type="application/javascript" src="/modules/resources/agreement/rsc_CreateAgreementDirective.js"></script>
-<script type="application/javascript" src="/modules/resources/instructions/rsc_CreateInstructionsDirective.js"></script>
+<script type="application/javascript" src="/modules/resources/instructions/rsc_CreateInstructionsDrct.js"></script>
 
 <!-------------------->
 <!--     THING      -->
@@ -143,24 +164,6 @@
     filname casing
     ----------------------------------->
 
-<!-- services-->
-<script type="application/javascript" src="/modules/users/services/usr_authService.js"></script>
-
-<!-- controllers-->
-<script type="application/javascript" src="/modules/users/controllers/usr_loginController.js"></script>
-<script type="application/javascript" src="/modules/users/controllers/usr_registerController.js"></script>
-<script type="application/javascript" src="/modules/users/controllers/usr_editProfileController.js"></script>
-<script type="application/javascript" src="/modules/users/controllers/usr_logoutController.js"></script>
-
-<script type="application/javascript" src="/modules/resources/main/rsc_createResourceController.js"></script>
-
-<!-- admin controllers-->
-<script type="application/javascript" src="/modules/admin/controllers/adm_manageDataController.js"></script>
-<script type="application/javascript" src="/modules/admin/controllers/adm_manageUsersController.js"></script>
-
-<!-- directives-->
-<script type="application/javascript" src="/modules/kropotkin/kro_KropotkinDirective.js"></script>
-<script type="application/javascript" src="/modules/resources/instructions/rsc_createInstructionsDirective.js"></script>
 
 </body>
 </html>

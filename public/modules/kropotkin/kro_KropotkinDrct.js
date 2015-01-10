@@ -3,14 +3,14 @@
 
 
   app.directive('kropotkinQuote', ['filePaths',  function(filePaths) {
-      var templateUrl =  filePaths.kropotkin + 'kropotkinWidget.html';
+      var templateUrl =  filePaths.kropotkin + 'kro_KropotkinWidget.html';
 
       return {
         restrict: 'E',
         templateUrl: templateUrl,
         controller: ['$scope', '$http', '$log',
           function ($scope, $http, $log) {
-            $http.get(filePaths.kropotkin + 'kropotkinConquestBread.txt')
+            $http.get(filePaths.kropotkin + 'kro_KropotkinConquestBread.txt')
               .success(function(data, status, headers, config){
                 console.log("Success");
                 var paragraphs = data.split("\n"),

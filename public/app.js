@@ -2,7 +2,7 @@
   'use strict';
 
   var
-    DEBUG = false,
+    DEBUG = true,
     DOC_DIR =  'docs/',
     PRESENTATION_DIR = DOC_DIR + 'CCNYProposal/presentation/',
 
@@ -261,7 +261,7 @@ $rootScope.appStarted = new Date();
 
             .state('kropotkin', {
               url: '/kropotkin',
-              templateUrl: KROPOTKIN_DIR + 'kropotkinPage.html',
+              templateUrl: KROPOTKIN_DIR + 'kro_KropotkinPg.html',
               controller: ''
             });
         })($stateProvider);
