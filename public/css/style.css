@@ -1,3 +1,7 @@
+body {
+    background-color: #FFCCCC;
+}
+
 .angular-google-map-container { height: 400px; width:400px}
 .legend {
     padding: 6px 8px;

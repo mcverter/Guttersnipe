@@ -199,6 +199,21 @@ $rootScope.appStarted = new Date();
           /*************
            * DOCS
            ************/
+            .state ('mission', {
+            url: '/docs/mission',
+            templateUrl: DOC_DIR + 'mission/doc_MissionStatement.html'
+          })
+
+            .state ('about', {
+            url: '/docs/mission',
+            templateUrl: DOC_DIR + 'mission/doc_MissionStatement.html'
+          })
+
+            .state ('contact', {
+            url: '/docs/mission',
+            templateUrl: DOC_DIR + 'mission/doc_MissionStatement.html'
+          })
+
             .state('CCNY', {
               url: '/docs/presentation2013',
               templateUrl: DOC_DIR + 'CCNYProposal/presentation.html',
