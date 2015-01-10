@@ -210,7 +210,7 @@ $rootScope.appStarted = new Date();
           })
 
             .state ('contact', {
-            url: '/docs/mission',
+            url: '/docs/about',
             templateUrl: DOC_DIR + 'contact/doc_ContactInfo.html'
           })
 
