@@ -2,7 +2,7 @@
   'use strict';
 
   var
-    DEBUG = true,
+    DEBUG = false,
     DOC_DIR =  'docs/',
     PRESENTATION_DIR = DOC_DIR + 'CCNYProposal/presentation/',
 
