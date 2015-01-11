@@ -1,16 +1,10 @@
 (function (angular, app) {
   'use strict';
 
-<<<<<<< HEAD:public/modules/resources/time/rsc_ScheduleInputDirective.js
   app.directive('scheduleInput', ['filePaths', function(filePaths) {
       var templateUrl = filePaths.resources_dir + 'time/rsc_ScheduleInputWidget.html',
         MSEC_TO_30MIN = 60 * 30 * 1000,
         eventSources = [],
-=======
-  app.directive('schedulePunctual', ['filePaths', function(filePaths) {
-      console.log('in punctual directive');
-      var templateUrl = filePaths.resources_dir + 'time/punctual/rsc_PunctualWidget.html',
->>>>>>> parent of 2cda0d8... single schedule option, as Master/Input/Confirmed -- also Dialog:public/modules/resources/time/punctual/rsc_PunctualDirective.js
         controller = function($scope, $modal) {
           $scope.eventSources = eventSources;
           $scope.punctualConfig = {
