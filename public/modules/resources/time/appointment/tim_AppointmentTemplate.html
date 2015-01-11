@@ -1,0 +1,24 @@
+<tr>
+    <td>
+        <div ng-switch="scheduleType">
+    <span ng-switch-when="weeklyPunctual">
+        Punctual
+    </span>
+    <span ng-switch-when="oncePunctual">
+        Punctual
+    </span>
+    <span ng-switch-when="yearlySeasonal">
+        Seasonal
+    </span>
+        </div>
+    </td>
+
+    <td>
+        <strong> Start: </strong>
+        {{event.start | date: 'hh:mm a' }}
+    </td>
+    <td>
+        <strong> End: </strong>
+        {{event.end | date: 'hh:mm a'}}
+    </td>
+</tr>
