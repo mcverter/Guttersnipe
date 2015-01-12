@@ -112,8 +112,8 @@
             })
             .state('resources_wizard.time', {
               url: '/time',
-              templateUrl: RESOURCES_DIR + 'time/common/rsc_SchedulePage.html',
-              controller: 'ScheduleController'
+              templateUrl: RESOURCES_DIR + 'time/rsc_SchedulePage.html'
+              // ,controller: 'ScheduleController'
             })
             .state('resources_wizard.punctual', {
               url: '/time/punctual',

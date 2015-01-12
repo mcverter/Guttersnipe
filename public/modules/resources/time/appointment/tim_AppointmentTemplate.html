@@ -1,15 +1,9 @@
 <tr>
     <td>
         <div ng-switch="scheduleType">
-    <span ng-switch-when="weeklyPunctual">
-        Punctual
-    </span>
-    <span ng-switch-when="oncePunctual">
-        Punctual
-    </span>
-    <span ng-switch-when="yearlySeasonal">
-        Seasonal
-    </span>
+            <punctual ng-switch-when="punctual" />
+            <yearly ng-switch-when="yearly" />
+            <weekly ng-switch-when="weekly" />
         </div>
     </td>
 

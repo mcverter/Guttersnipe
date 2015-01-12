@@ -1,9 +1,21 @@
 <table>
-    <tr ng-repeat="event in eventSources">
-        <td ng-if="!event.repeating"> <strong> Date: </strong> {{event.start | date: 'longDate' }} </td>
-        <td ng-if="event.repeating"> <strong> Repeats: </strong> Every {{event.start | date: 'EEEE' }} </td>
-        <td> <strong> Start: </strong> {{event.start | date: 'hh:mm a' }}</td>
-        <td> <strong> End: </strong> {{event.end | date: 'hh:mm a'}}</td>
+    <tr ng-repeat="appointment in appointments">
+        <td>
+            <div ng-switch="appointment.scheduleType">
+                <span ng-switch-when="weekly">
+                    Weekly
+                </span>
+                <span ng-switch-when="punctual">
+                    Punctual
+                </span>
+                <span ng-switch-when="yearly">
+                    Seasonal
+                </span>
+            </div>
+        </td>
+        <td>
+            <button type="button" class="btn btn-default"  ng-click="deleteEvent(appointment)">Delete</button>
+        </td>
     </tr>
 </table>
 
