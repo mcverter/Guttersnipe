@@ -9,5 +9,8 @@ REM do ren "%x" *.cpp
 REM Example batch:
 REM for /r "< DIR >" %%x in (*.c) do ren "%%x" *.cpp
 
-for /r %%i in (*Widget*) do echo %%i "%%i"
+for /r %%i in (*Widget*) do echo %%i
 
+REM Dir | Rename-Item { $_.name –replace “Widget“,”Template” }
+
+REM
