@@ -3,7 +3,7 @@
 
   app.directive('resourceSchedule', ['filePaths', function(filePaths) {
       console.log('in resource schedule directive');
-      var templateUrl = filePaths.resources_dir + 'time/common/rsc_ScheduleWidget.html';
+      var templateUrl = filePaths.resources_dir + 'time/common/rsc_ScheduleTemplate.html';
 
       return {
         restrict: 'E',

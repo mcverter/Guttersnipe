@@ -2,7 +2,7 @@
   'use strict';
 
   app.directive('mapInput', ['filePaths', function(filePaths) {
-    var templateUrl = filePaths.resources_dir + "place/rsc_MapInputWidget.html";
+    var templateUrl = filePaths.resources_dir + "place/rsc_MapInputTemplate.html";
 
     return {
       restrict: 'E',

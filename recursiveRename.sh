@@ -1,3 +1,3 @@
 echo "foo"
 
-find -r . -type f -exec rename 's/Widget/Template/' '{}' \;
+find . -type f -exec rename 's/Widget/Template/' '{}' \;

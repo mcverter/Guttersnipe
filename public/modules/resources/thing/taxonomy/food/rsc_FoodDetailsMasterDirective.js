@@ -2,7 +2,7 @@
   'use strict';
 
   app.directive('foodDetailsMaster', ['filePaths', function(filePaths) {
-      var templateUrl = filePaths.resources_dir + "thing/taxonomy/food/rsc_FoodDetailsMasterWidget.html";
+      var templateUrl = filePaths.resources_dir + "thing/taxonomy/food/rsc_FoodDetailsMasterTemplate.html";
 
       return {
         restrict: 'E',

@@ -3,7 +3,7 @@
 
   app.directive('scheduleSeasonal', ['filePaths', function(filePaths) {
       console.log('in seasonal directive');
-      var templateUrl = filePaths.resources_dir + 'time/seasonal/rsc_SeasonalWidget.html',
+      var templateUrl = filePaths.resources_dir + 'time/seasonal/rsc_SeasonalTemplate.html',
         controller = function($scope, $modal) {
           $scope.eventSources = [];
           $scope.seasonalConfig = {
@@ -19,7 +19,7 @@
                 console.log(start);
                 var end = angular.copy(start);
                 var modalInstance = $modal.open({
-                  templateUrl: filePaths.resources_dir + 'time/seasonal/rsc_SeasonalDialogWidget.html',
+                  templateUrl: filePaths.resources_dir + 'time/seasonal/rsc_SeasonalDialogTemplate.html',
                   controller: function($scope, $modalInstance) {
                     Object.defineProperties($scope, {
                       start: {

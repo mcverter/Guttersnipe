@@ -4,7 +4,7 @@
   app.directive('resourceCreateInstructions', ['filePaths', function(filePaths) {
     var linker = function(scope, element, attrs) {},
       controller = function($scope){},
-      templateUrl = filePaths.resources_dir + 'instructions/rsc_InstructionsWidget.html';
+      templateUrl = filePaths.resources_dir + 'instructions/rsc_InstructionsTemplate.html';
 
     return {
       link: linker,

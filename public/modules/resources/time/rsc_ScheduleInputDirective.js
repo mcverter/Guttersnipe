@@ -2,7 +2,7 @@
   'use strict';
 
   app.directive('scheduleInput', ['filePaths', function(filePaths) {
-      var templateUrl = filePaths.resources_dir + 'time/rsc_ScheduleInputWidget.html',
+      var templateUrl = filePaths.resources_dir + 'time/rsc_ScheduleInputTemplate.html',
         MSEC_TO_30MIN = 60 * 30 * 1000,
         eventSources = [],
         controller = function($scope, $modal) {
@@ -24,7 +24,7 @@
                 var repeating = false;
                 end.setTime(start.getTime()+MSEC_TO_30MIN);
                 var modalInstance = $modal.open({
-                  templateUrl: filePaths.resources_dir + 'time/rsc_ScheduleDialogWidget.html',
+                  templateUrl: filePaths.resources_dir + 'time/rsc_ScheduleDialogTemplate.html',
                   controller: function($scope, $modalInstance) {
                     Object.defineProperties($scope, {
                       start: {

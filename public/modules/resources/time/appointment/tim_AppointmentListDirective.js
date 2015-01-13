@@ -3,7 +3,7 @@
   'use strict';
 
   app.directive('appointmentList', ['filePaths', function(filePaths) {
-      var templateUrl = filePaths.resources_dir + "time/appointment/tim_AppointmentWidget.html",
+      var templateUrl = filePaths.resources_dir + "time/appointment/tim_AppointmentTemplate.html",
         controller = function($scope) {
 
         };

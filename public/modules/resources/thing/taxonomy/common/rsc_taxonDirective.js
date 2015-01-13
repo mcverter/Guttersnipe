@@ -2,7 +2,7 @@
   'use strict';
 
   app.directive('resourceTaxon', ['filePaths', function(filePaths) {
-      var templateUrl = filePaths.resources_dir + 'thing/taxonomy/common/rsc_TaxonWidget.html';
+      var templateUrl = filePaths.resources_dir + 'thing/taxonomy/common/rsc_TaxonTemplate.html';
 
       return {
         restrict: 'E',

@@ -2,7 +2,7 @@
   'use strict';
 
   app.directive('resourceSummaryConfirmed', ['filePaths', function(filePaths) {
-      var templateUrl = filePaths.resources_dir + "thing/summary/rsc_SummaryConfirmedWidget.html";
+      var templateUrl = filePaths.resources_dir + "thing/summary/rsc_SummaryConfirmedTemplate.html";
 
       return {
         restrict: 'E',

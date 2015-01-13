@@ -2,7 +2,7 @@
   'use strict';
 
   app.directive('scheduleMaster', ['filePaths', function(filePaths) {
-      var templateUrl = filePaths.resources_dir + "time/rsc_ScheduleMasterWidget.html";
+      var templateUrl = filePaths.resources_dir + "time/rsc_ScheduleMasterTemplate.html";
 
       return {
         restrict: 'E',

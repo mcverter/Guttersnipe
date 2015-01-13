@@ -2,7 +2,7 @@
   'use strict';
 
   app.directive('address', ['filePaths', function(filePaths) {
-      var templateUrl = filePaths.resources_dir + "place/rsc_MapConfirmedWidget.html";
+      var templateUrl = filePaths.resources_dir + "place/rsc_MapConfirmedTemplate.html";
 
       return {
         restrict: 'E',

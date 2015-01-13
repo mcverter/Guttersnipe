@@ -56,7 +56,7 @@
 
         // THING
         //
-        //  Summary Widget
+        //  Summary Template
         //
         headline : {
           enumerable: true,
@@ -124,8 +124,8 @@
           }
         },
 
-        // Taxonomy Widgets
-        // (Type Widget, Details Widget)
+        // Taxonomy Templates
+        // (Type Template, Details Template)
         clearTaxonomy : {
           enumerable: true,
           value: function() {

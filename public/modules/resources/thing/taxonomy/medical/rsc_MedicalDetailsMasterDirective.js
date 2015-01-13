@@ -2,7 +2,7 @@
   'use strict';
 
   app.directive('medicalDetailsMaster', ['filePaths', function(filePaths) {
-      var templateUrl = filePaths.resources_dir + "thing/taxonomy/medical/rsc_MedicalDetailsMasterWidget.html";
+      var templateUrl = filePaths.resources_dir + "thing/taxonomy/medical/rsc_MedicalDetailsMasterTemplate.html";
 
       return {
         restrict: 'E',

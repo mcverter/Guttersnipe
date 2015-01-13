@@ -2,7 +2,7 @@
   'use strict';
 
   app.directive('resourceTypeInput', ['filePaths', function(filePaths) {
-      var templateUrl = filePaths.resources_dir + "thing/taxonomy/type/rsc_TypeInputWidget.html";
+      var templateUrl = filePaths.resources_dir + "thing/taxonomy/type/rsc_TypeInputTemplate.html";
 
       return {
         restrict: 'E',

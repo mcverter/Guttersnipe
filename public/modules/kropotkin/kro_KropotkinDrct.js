@@ -3,7 +3,7 @@
 
 
   app.directive('kropotkinQuote', ['filePaths',  function(filePaths) {
-      var templateUrl =  filePaths.kropotkin + 'kro_KropotkinWidget.html';
+      var templateUrl =  filePaths.kropotkin + 'kro_KropotkinTemplate.html';
 
       return {
         restrict: 'E',

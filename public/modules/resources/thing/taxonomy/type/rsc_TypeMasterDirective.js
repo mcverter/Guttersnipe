@@ -2,7 +2,7 @@
   'use strict';
 
   app.directive('resourceType', ['filePaths', function(filePaths) {
-      var templateUrl = filePaths.resources_dir + "thing/taxonomy/type/rsc_TypeMasterWidget.html";
+      var templateUrl = filePaths.resources_dir + "thing/taxonomy/type/rsc_TypeMasterTemplate.html";
 
       return {
         restrict: 'E',

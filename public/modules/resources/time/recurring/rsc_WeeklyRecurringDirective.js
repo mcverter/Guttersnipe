@@ -2,7 +2,7 @@
   'use strict';
 
   app.directive('scheduleRecurring', ['filePaths', function(filePaths) {
-    var templateUrl = filePaths.resources_dir + 'time/recurring/rsc_WeeklyRecurringWidget.html',
+    var templateUrl = filePaths.resources_dir + 'time/recurring/rsc_WeeklyRecurringTemplate.html',
       controller = function($scope, $modal) {
         $scope.eventSources = [];
         $scope.recurringConfig = {

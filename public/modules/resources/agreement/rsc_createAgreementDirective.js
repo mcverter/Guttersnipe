@@ -4,7 +4,7 @@
   app.directive('resourceCreateAgreement', ['filePaths', function(filePaths) {
       var linker = function(scope, element, attrs) {},
         controller = function($scope){},
-        templateUrl = filePaths.resources_dir + 'agreement/rsc_AgreementWidget.html'
+        templateUrl = filePaths.resources_dir + 'agreement/rsc_AgreementTemplate.html'
 
       return {
         restrict: 'E',
