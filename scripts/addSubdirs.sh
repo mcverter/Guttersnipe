@@ -21,10 +21,7 @@ else
 
 	if [ -d $subdir ]
 	then
-	    echo subdir is $subdir
-	    new_subdir=${subdir}"/"$1
-	    mkdir $new_subdir
-	 
+	    mkdir ${subdir}"/"$1
 	fi
     done
 fi
