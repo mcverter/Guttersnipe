@@ -2,7 +2,7 @@
   'use strict';
 
   app.directive('mapConfirmed', ['filePaths', function(filePaths) {
-      var templateUrl = filePaths.resources_dir + "place/rsc_MapConfirmedTemplate.html";
+      var templateUrl = filePaths.resources_dir + "place/" + filePaths.templates_subdir + "rsc_MapConfirmedTemplate.html";
 
       return {
         restrict: 'E',

@@ -23,6 +23,7 @@
     DELETE_SUBDIR =  'delete/', // DELETE
 
     WIZARD_SUBDIR =  'wizard/',
+    TEMPLATES_SUBDIR = 'templates/',
 
     KROPOTKIN_DIR = MODULES_SUBDIR + KROPOTKIN_SUBDIR,
     RESOURCES_DIR = MODULES_SUBDIR  + RESOURCES_SUBDIR,
@@ -33,7 +34,8 @@
 
     filePaths = {
       'resources_dir' : RESOURCES_DIR,
-      'kropotkin' : KROPOTKIN_DIR
+      'kropotkin' : KROPOTKIN_DIR,
+      'templates_subdir' : TEMPLATES_SUBDIR
     };
 
   window.guttersnipe = app || angular.module('guttersnipe', [

@@ -2,7 +2,7 @@
   'use strict';
 
   app.directive('foodDetailsConfirmed', ['filePaths', function(filePaths) {
-      var templateUrl = filePaths.resources_dir + "thing/taxonomy/food/rsc_FoodDetailsConfirmedTemplate.html";
+      var templateUrl = filePaths.resources_dir + "thing/taxonomy/food/" + filePaths.templates_subdir + "rsc_FoodDetailsConfirmedTemplate.html";
 
       return {
         restrict: 'E',

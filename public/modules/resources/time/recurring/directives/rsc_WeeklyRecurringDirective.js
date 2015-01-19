@@ -2,7 +2,7 @@
   'use strict';
 
   app.directive('scheduleRecurring', ['filePaths', function(filePaths) {
-    var templateUrl = filePaths.resources_dir + 'time/recurring/rsc_WeeklyRecurringTemplate.html',
+    var templateUrl = filePaths.resources_dir + 'time/recurring/' + filePaths.templates_subdir + 'rsc_WeeklyRecurringTemplate.html',
       controller = function($scope, $modal) {
         $scope.eventSources = [];
         $scope.recurringConfig = {
@@ -20,7 +20,7 @@
               var end = angular.copy(start);
               end.setMinutes(start.getMinutes()+30);
               var modalInstance = $modal.open({
-                templateUrl: filePaths.resources_dir + 'time/recurring/rsc_WeeklyRecurringEventDialog.html',
+                templateUrl: filePaths.resources_dir + 'time/recurring/' + filePaths.templates_subdir + 'rsc_WeeklyRecurringEventDialog.html',
                 controller: function($scope, $modalInstance) {
                   Object.defineProperties($scope, {
                     start : {
