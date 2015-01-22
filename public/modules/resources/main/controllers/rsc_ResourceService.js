@@ -1,7 +1,82 @@
+/**
+ * Used to contain the data for creating a resource on Guttersnipe.
+ *
+ * Each aspect of resource creation is determined by a particular
+ *     Directive which directs that stage of creation.
+ *
+ * Functionality that is isolated to that directive will be defined by that
+ *    directive's particular controller
+ *
+ * Other aspects of resource creation must persist between creation stages.
+ * Furthermore, many of these data will need to be pushed to the database
+ *   in order to create a persistent object that can be retrieved in searches.
+ *
+ *
+ * These data are :
+ * (1)  THING
+ * ... (a) Headline -- Short description
+ * ... (b) Summary -- Long description
+ * ... (c) Type  -- Food, Medical, or Housing
+ * ... (d) Details -- Detailed breakdown
+ * (2) PLACE
+ * ... (a) Description -- A description of the location
+ * ... (b) Coordinates -- Lat, Lng pair
+ * ... (c) Street Address -- Geocode Normalized address
+ * (3) TIME
+ * ... (a) Schedules -- an array of Date + Duration objects
+ *
+ */
+
+
 (function (angular, app) {
   'use strict';
 
-  app.controller('CreateResourceController', ['$scope', 'ResourceTaxonomyService',
+  app.factory('ResourceService', ['$log',
+    function ($log) {
+      var resourceFactory;
+
+      resourceFactory = Object.create(Object.prototype, {
+        thing : {
+          headine : {
+
+          },
+          summary : {
+
+          },
+          type: {
+
+          },
+          details : {
+
+          }
+
+        },
+        place : {
+          description : {
+
+          },
+          coordinates : {
+            lat : {
+
+            },
+            lng : {
+
+            }
+          }
+        },
+        time : {
+          schedules : {
+
+          }
+
+        }
+      });
+
+    }])
+})(window.angular, window.guttersnipe);
+
+/*
+    app.controller('NewCreateResourceController', ['$scope', 'ResourceTaxonomyService',
     function ($scope, ResourceTaxonomy) {
       var
       // THING
@@ -360,5 +435,4 @@
           }
         }
       });
-    }]);
-})(window.angular, window.guttersnipe);
+    }]);*/
