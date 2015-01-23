@@ -12,7 +12,7 @@ Thumbs.db
 npm-debug.log
 node_modules/
 public/lib
-app/tests/coverage/
+server/tests/coverage/
 .bower-*/
 .idea/
 
