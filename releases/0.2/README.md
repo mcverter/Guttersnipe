@@ -1,149 +1,105 @@
-[![MEAN.JS Logo](http://meanjs.org/img/logo-small.png)](http://meanjs.org/)
-
-[![Build Status](https://travis-ci.org/meanjs/mean.svg?branch=master)](https://travis-ci.org/meanjs/mean)
-[![Dependencies Status](https://david-dm.org/meanjs/mean.svg)](https://david-dm.org/meanjs/mean)
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/meanjs/mean?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-MEAN.JS is a full-stack JavaScript open-source solution, which provides a solid starting point for [MongoDB](http://www.mongodb.org/), [Node.js](http://www.nodejs.org/), [Express](http://expressjs.com/), and [AngularJS](http://angularjs.org/) based applications. The idea is to solve the common issues with connecting those frameworks, build a robust framework to support daily development needs, and help developers use better practices while working with popular JavaScript components.
-
-## Before You Begin
-Before you begin we recommend you read about the basic building blocks that assemble a MEAN.JS application:
-* MongoDB - Go through [MongoDB Official Website](http://mongodb.org/) and proceed to their [Official Manual](http://docs.mongodb.org/manual/), which should help you understand NoSQL and MongoDB better.
-* Express - The best way to understand express is through its [Official Website](http://expressjs.com/), which has a [Getting Started](http://expressjs.com/starter/installing.html) guide, as well as an [ExpressJS Guide](http://expressjs.com/guide/error-handling.html) guide for general express topics. You can also go through this [StackOverflow Thread](http://stackoverflow.com/questions/8144214/learning-express-for-node-js) for more resources.
-* AngularJS - Angular's [Official Website](http://angularjs.org/) is a great starting point. You can also use [Thinkster Popular Guide](http://www.thinkster.io/), and the [Egghead Videos](https://egghead.io/).
-* Node.js - Start by going through [Node.js Official Website](http://nodejs.org/) and this [StackOverflow Thread](http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js), which should get you going with the Node.js platform in no time.
+[Guttersnipe Website ](http://guttersnipe.org)
 
 
-## Prerequisites
-Make sure you have installed all of the following prerequisites on your development machine:
-* Node.js - [Download & Install Node.js](http://www.nodejs.org/download/) and the npm package manager. If you encounter any problems, you can also use this [GitHub Gist](https://gist.github.com/isaacs/579814) to install Node.js.
-* MongoDB - [Download & Install MongoDB](http://www.mongodb.org/downloads), and make sure it's running on the default port (27017).
-* Bower - You're going to use the [Bower Package Manager](http://bower.io/) to manage your front-end packages. Make sure you've installed Node.js and npm first, then install bower globally using npm:
 
-```bash
-$ npm install -g bower
-```
+<h1>PROPOSAL:  GUTTERSNIPE FAQ</h1>
 
-* Grunt - You're going to use the [Grunt Task Runner](http://gruntjs.com/) to automate your development process. Make sure you've installed Node.js and npm first, then install grunt globally using npm:
+<dl>
+<dt>1. What is the site/app?</dt>
+<dd><a href="http://www.guttersnipe.org"> Guttersnipe</a> is a web portal and mobile app that caters to anarcho-communist street youth (and adults) who desire to subvert capitalism by sharing resources.</dd>
+<dd>It will enable people to broadcast to each other locations of abandoned properties that can be squatted as well as dumpsters which can be dived for food and other resources.</dd>
+<dd>Eventually, other types of resource sharing will be integrated into this product.  A calender will be used to map and schedule Really Really Free Markets and Food Not Bombs meals.   </dd>
+<dd>Perhaps ridesharing will also be integrated</dd>
+<dd>Perhaps maps of the train system and good times for hopping</dd>
+<dd>Further development will require a close study of the writings of Kropotkin and Fourier.<dd>
+</dl>
 
-```bash
-$ npm install -g grunt-cli
-```
+<dl>
+<dt>2. What need does this meet? or problem does it solve?</dt>
+<dd>This application serves the urgent need to overthrow capitalism by helping people to self-organize outside and beyond the market of commerce.</dd>
+<dd>The ultimate intention is to facilitate the creation of alternate avenues of exchange, freely organized by free individuals.</dd>
+</dl>
 
-## Downloading MEAN.JS
-There are several ways you can get the MEAN.JS boilerplate:
+<dl>
+<dt>3. Who is going to go/use to this site/app?</dt>
+<dd>In the current incarnation, it is mostly aimed towards the freegans gutterpunks, who live off of dumpstered food, live in squatted housing, and travel by hopping trains.</dd>
+<dd>As we get a better sense on the needs of the anticapitalist community and possibilities for alternative organizing, we will expand the possibilities for anti-market resource sharing.</dd>
+</dl>
 
-### Yo Generator
-The recommended way would be to use the [Official Yo Generator](http://meanjs.org/generator.html), which generates the latest stable copy of the MEAN.JS boilerplate and supplies multiple sub-generators to ease your daily development cycles.
+<dl>
+<dt>4. Why will they go to this site/app?</dt>
+<dd>To find food, clothing, shelter, etc.  </dd>
+</dl>
 
-### Cloning The GitHub Repository
-You can also use Git to directly clone the MEAN.JS repository:
-```bash
-$ git clone https://github.com/meanjs/mean.git meanjs
-```
-This will clone the latest version of the MEAN.JS repository to a **meanjs** folder.
+<dl>
+<dt>5. Why will they keep coming back to your site/app?</dt>
+<dd>See above.  </dd>
+</dl>
 
-### Downloading The Repository Zip File
-Another way to use the MEAN.JS boilerplate is to download a zip copy from the [master branch on GitHub](https://github.com/meanjs/mean/archive/master.zip). You can also do this using `wget` command:
-```bash
-$ wget https://github.com/meanjs/mean/archive/master.zip -O meanjs.zip; unzip meanjs.zip; rm meanjs.zip
-```
-Don't forget to rename **mean-master** after your project name.
+<dl>
+<dt>6. How is it different from other similar sites?</dt>
+<dd>There are similar sites of various types, but many of them have certain faults.</dd>
+<dd>There is a site called rideshare.com; there is a site named couchsurfer.com; there is freecycle.com, which allows the sharing of goods.</dd>
+<dd> These are all laudable efforts.  Some of these are marred by an underlying desire for profit.  But some of them are motivated out of genuine desire to promote Mutual Aid.</dd>
+<dd>The very mission of Guttersnipe.net will be to promote the organization of the lumpenproletariat and to create alternative exchanges outside of capitalism.  This mission will enable Guttersnipe.net to be singularly focused on this goal.  </dd>
+<dd>It will thus be able to bring together whatever resources necessary for the undermining of capitalism:  the various services-- such as squatting, dumpster diving, hitchhiking, train hopping, resource sharing, etc  -- will be coordinated on a singular web portal.</dd>
+<dd>In addition, there are several web portals that are dedicated towards the promotion of anarcho-communist goals..  </dd>
+<dd> Such sites are 
+  <ul>
+    <li> <a href="http://www.freegan.info"> Freegan.info</a> </li>
+    <li> <a href="http://picturethehomeless.org"> Picture the Homeless </a></li>
+    <li> <a href="http://www.squat.net"> Squat.net</a> </li> 
+    <li> <a href="http://foodsharing.de/"> Foodsharing (Germany) </a></li>
+  </ul>
+</dd>
+<dd>
+Many of our initial design specifications will be taken from the freegan group and Picture the Homeless.  </dd>
+<dd>In addition, we intend Guttersnipe to be cross platform, available both via the web and as a mobile app.  To my knowledge, there are not yet any apps dedicated with such a task.  </dd>
 
-## Quick Install
-Once you've downloaded the boilerplate and installed all the prerequisites, you're just a few steps away from starting to develop your MEAN application.
+<dl>
+<dt>7. What steps will a person go through interacting with the site/app?</dt>
+<dd>Most of the various interactions will be handled using forms.</dd>
+<dd>The various services offered by Guttersnipe all boil essentially boil down to two types of transaction:  
+<dd> <ol>
+    <li>  information submission; </li>
+    <li>  information retrieval.  </li>
+    </ol>
+</dd>
+<dd> One person posts about an abandoned building or a good dumpster; another person searches for such information.  </dd>
+<dd>There may be very many different interfaces for the reporting and retrieval.  Some of the data will be entered and retrieved using forms and text inputs; some will be accessed through map interfaces; some will be accessed through calendar interfaces.  </dd>
+<dd>In addition, there may be some need for identity management.  Some users may choose to register accounts.  Others may choose to always have singular, anonymous transactions.</dd>
+</dl>
 
-The first thing you should do is install the Node.js dependencies. The boilerplate comes pre-bundled with a package.json file that contains the list of modules you need to start your application. To learn more about the modules installed visit the NPM & Package.json section.
-
-To install Node.js dependencies you're going to use npm again. In the application folder run this in the command-line:
-
-```bash
-$ npm install
-```
-
-This command does a few things:
-* First it will install the dependencies needed for the application to run.
-* If you're running in a development environment, it will then also install development dependencies needed for testing and running your application.
-* Finally, when the install process is over, npm will initiate a bower install command to install all the front-end modules needed for the application.
-
-## Running Your Application
-After the install process is over, you'll be able to run your application using Grunt. Just run grunt default task:
-
-```bash
-$ grunt
-```
-
-Your application should run on port 3000, so in your browser just go to [http://localhost:3000](http://localhost:3000)
-
-That's it! Your application should be running. To proceed with your development, check the other sections in this documentation.
-If you encounter any problems, try the Troubleshooting section.
-
-## Development and deployment With Docker
-
-* Install [Docker](http://www.docker.com/)
-* Install [Fig](https://github.com/orchardup/fig)
-
-* Local development and testing with fig:
-```bash
-$ fig up
-```
-
-* Local development and testing with just Docker:
-```bash
-$ docker build -t mean .
-$ docker run -p 27017:27017 -d --name db mongo
-$ docker run -p 3000:3000 --link db:db_1 mean
-$
-```
-
-* To enable live reload, forward port 35729 and mount /app and /public as volumes:
-```bash
-$ docker run -p 3000:3000 -p 35729:35729 -v /Users/mdl/workspace/mean-stack/mean/public:/home/mean/public -v /Users/mdl/workspace/mean-stack/mean/app:/home/mean/app --link db:db_1 mean
-```
-
-## Running in a secure environment
-To run your application in a secure manner you'll need to use OpenSSL and generate a set of self-signed certificates. Unix-based users can use the following command:
-```bash
-$ sh ./scripts/generate-ssl-certs.sh
-```
-Windows users can follow instructions found [here](http://www.websense.com/support/article/kbarticle/How-to-use-OpenSSL-and-Microsoft-Certification-Authority).
-After you've generated the key and certificate, place them in the *config/sslcerts* folder.
-
-## Getting Started With MEAN.JS
-You have your application running, but there is a lot of stuff to understand. We recommend you go over the [Official Documentation](http://meanjs.org/docs.html).
-In the docs we'll try to explain both general concepts of MEAN components and give you some guidelines to help you improve your development process. We tried covering as many aspects as possible, and will keep it updated by your request. You can also help us develop and improve the documentation by checking out the *gh-pages* branch of this repository.
-
-## Community
-* Use the [Official Website](http://meanjs.org) to learn about changes and the roadmap.
-* Join #meanjs on freenode.
-* Discuss it in the new [Google Group](https://groups.google.com/d/forum/meanjs)
-* Ping us on [Twitter](http://twitter.com/meanjsorg) and [Facebook](http://facebook.com/meanjs)
-
-## Live Example
-Browse the live MEAN.JS example on [http://meanjs.herokuapp.com](http://meanjs.herokuapp.com).
-
-## Credits
-Inspired by the great work of [Madhusudhan Srinivasa](https://github.com/madhums/)
-The MEAN name was coined by [Valeri Karpov](http://blog.mongodb.org/post/49262866911/the-mean-stack-mongodb-expressjs-angularjs-and)
-
-## License
-(The MIT License)
-
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-'Software'), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
-
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+<h2>Practical Constraints</h2>
+<dl>
+<dt>
+1. The project should involve some (basic) computation or processing on the server
+side and a database/data store.
+</dt>
+<dd>
+Yes.  There is plenty of room for processing.
+As stated above, there are quite a number of databases and forms to be set up to account for the various functionalities 
+</dd>
+<dd>
+In addition, we will have to build in a security infrastructure in the project in order to guarantee anonymity of transactions.
+</dd>
+</dl>
+<dl>
+<dt>
+2. The project should be appropriate for 3-6 people. On the developer sides there
+should be significant user and backend functionality for 2-3 full time developers.</dt>
+<dd>
+Yes.  There is plenty of work to go around.
+</dd>
+</dl>
+<dl>
+<dt>
+3. You must not recode basic functionality just to create something to work on if
+you can use a library. 
+</dt>
+<dd>
+Most certainly, the <a href="https://developers.google.com/maps/"> Google Maps API</a> will be used.  In all likelihood, we will use some open source package to do calendaring.
+</dd>
+<dd>
+ <a href="https://www.torproject.org/"> Tor</a>  will be used to anonymize transactions.
+</dd>

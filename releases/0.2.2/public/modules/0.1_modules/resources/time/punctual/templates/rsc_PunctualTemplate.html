@@ -1,0 +1,24 @@
+<div class="jumbotron">Schedule for {{headline}}</div>
+<div ng-if="isPunctual()" punctual-event-dialog></div>
+
+<div ui-calendar="punctualConfig.calendar" class="span8 calendar" ng-model="eventSources"></div>
+
+<div>
+    <h2>Schedule:  </h2>
+    <div ng-if="eventSources.length<1">
+        None
+    </div>
+    <div ng-if="eventSources.length>0">
+        <table>
+            <tr ng-repeat="event in eventSources">
+                <tabbed-button></tabbed-button>
+                <td ng-if="!event.repeating"> <strong> Date: </strong> {{event.start | date: 'longDate' }} </td>
+                <td ng-if="event.repeating"> <strong> Repeats: </strong> Every {{event.start | date: 'EEEE' }} </td>
+                <td> <strong> Start: </strong> {{event.start | date: 'hh:mm a' }}</td>
+                <td> <strong> End: </strong> {{event.end | date: 'hh:mm a'}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<button type="button" class="btn btn-default" ng-disabled="eventSources.length<1" ng-click="isScheduleSet=true">OK</button>

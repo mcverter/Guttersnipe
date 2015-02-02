@@ -1,0 +1,19 @@
+<section data-ng-controller="PlacesController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Places</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="place in places" data-ng-href="#!/places/{{place._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="place.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="place.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="place.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!places.$resolved || places.length">
+    	No Places yet, why don't you <a href="/#!/places/create">create one</a>?
+    </div>
+</section>
