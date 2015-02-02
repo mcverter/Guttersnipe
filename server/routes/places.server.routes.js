@@ -1,8 +1,8 @@
 'use strict';
 
 module.exports = function(app) {
-	var users = require('../../app/controllers/users.server.controller');
-	var places = require('../../app/controllers/places.server.controller');
+	var users = require('../../server/controllers/users.server.controller');
+	var places = require('../../server/controllers/places.server.controller');
 
 	// Places Routes
 	app.route('/places')

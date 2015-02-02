@@ -1,8 +1,8 @@
 'use strict';
 
 module.exports = function(app) {
-	var users = require('../../app/controllers/users.server.controller');
-	var times = require('../../app/controllers/times.server.controller');
+	var users = require('../../server/controllers/users.server.controller');
+	var times = require('../../server/controllers/times.server.controller');
 
 	// Times Routes
 	app.route('/times')

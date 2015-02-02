@@ -1,8 +1,8 @@
 'use strict';
 
 module.exports = function(app) {
-	var users = require('../../app/controllers/users.server.controller');
-	var kropotkins = require('../../app/controllers/kropotkins.server.controller');
+	var users = require('../../server/controllers/users.server.controller');
+	var kropotkins = require('../../server/controllers/kropotkins.server.controller');
 
 	// Kropotkins Routes
 	app.route('/kropotkins')
