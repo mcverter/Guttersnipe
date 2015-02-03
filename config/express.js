@@ -1,6 +1,15 @@
 'use strict';
 
 /**
+ *
+ *  'ui.router',
+ 'leaflet-directive',
+ 'mgo-angular-wizard',
+ 'ui.calendar',
+ 'ui.bootstrap',
+ 'debug',
+ 'ngAnimate',
+
  * Module dependencies.
  */
 var fs = require('fs'),
