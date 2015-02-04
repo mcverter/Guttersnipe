@@ -6,24 +6,30 @@
 var mongoose = require('mongoose'),
 	Schema = mongoose.Schema;
 
+
 /**
  * Time Schema
+ *
+ * @type {Schema}
  */
-var TimeSchema = new Schema({
-	name: {
-		type: String,
-		default: '',
-		required: 'Please fill Time name',
-		trim: true
-	},
-	created: {
-		type: Date,
-		default: Date.now
-	},
-	user: {
-		type: Schema.ObjectId,
-		ref: 'User'
-	}
+
+var ScheduleSchema = new Schema ({
+  startTime: {
+    type: Date,
+    required: true
+  },
+  duration : {
+    type: Number,
+    required: true
+  },
+  recurrence: {
+    type: String,
+    required: false
+  }
+});
+
+var TimeSchema = new Schema ({
+  schedules : [ScheduleSchema]
 });
 
 mongoose.model('Time', TimeSchema);

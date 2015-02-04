@@ -8,22 +8,30 @@ var mongoose = require('mongoose'),
 
 /**
  * Place Schema
+ *
+ * @type {Schema}
  */
-var PlaceSchema = new Schema({
-	name: {
-		type: String,
-		default: '',
-		required: 'Please fill Place name',
-		trim: true
-	},
-	created: {
-		type: Date,
-		default: Date.now
-	},
-	user: {
-		type: Schema.ObjectId,
-		ref: 'User'
-	}
+
+var PlaceSchema = new Schema ({
+  placeDescription : {
+    type: String,
+    required: true
+  },
+  normalizedAddress : {
+    type: String,
+    required: true
+  },
+
+  location : {
+    lat : {
+      type: Number,
+      required: true
+    },
+    lng : {
+      type: Number,
+      required: true
+    }
+  }
 });
 
 mongoose.model('Place', PlaceSchema);

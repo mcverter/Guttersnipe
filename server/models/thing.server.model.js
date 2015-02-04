@@ -8,22 +8,51 @@ var mongoose = require('mongoose'),
 
 /**
  * Thing Schema
+ *
+ * @type {Schema}
  */
+
+var TaxonSchema = new Schema({
+  name : {
+    type: String,
+    required: true
+  },
+  icon: {
+    type: String,
+    required: true
+  }
+});
+
+var TaxonomySchema = new Schema({
+  type : {
+    type: Schema.ObjectId,
+    ref: 'TaxonSchema'
+  },
+  details : [TaxonSchema]
+})
+
+var DescriptionSchema = new Schema ({
+  headline : {
+    type: String,
+    required: true
+  },
+  summary : {
+    type: String,
+    required: true
+  }
+});
+
+
 var ThingSchema = new Schema({
-	name: {
-		type: String,
-		default: '',
-		required: 'Please fill Thing name',
-		trim: true
-	},
-	created: {
-		type: Date,
-		default: Date.now
-	},
-	user: {
-		type: Schema.ObjectId,
-		ref: 'User'
-	}
+  description: {
+    type: Schema.ObjectId,
+    ref: 'DescriptionSchema'
+  },
+  taxonomy : {
+    type: Schema.ObjectId,
+    ref: 'TaxonomySchema'
+  }
+
 });
 
 mongoose.model('Thing', ThingSchema);
