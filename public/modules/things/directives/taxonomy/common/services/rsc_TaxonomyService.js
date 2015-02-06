@@ -98,7 +98,7 @@
               {name: 'Sexual Health', img: ''},
               {name: 'Sexual / Physical Abuse', img: ''},
               {name: 'Trans*', img: ''},
-              {name: "Women's", img: ''}
+              {name: 'Women's', img: ''}
             ]
           }
         ]

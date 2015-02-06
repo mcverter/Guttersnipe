@@ -30,9 +30,9 @@
                       },
                       set: function(val) {
                         start = val;
-                        console.log("End before", end);
+                        console.log('End before', end);
                         end.setMinutes(start.getMinutes()+30);
-                        console.log("End after", end);
+                        console.log('End after', end);
                       }
                     },
 

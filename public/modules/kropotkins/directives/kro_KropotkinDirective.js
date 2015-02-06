@@ -9,7 +9,6 @@ angular.module('kropotkins').directive('kropotkinQuote', ['Kropotkins', function
     templateUrl: templateUrl,
     controller: ['$scope', '$http', '$log',
       function ($scope, $http, $log) {
-        console.log("in kropotkin directive");
         var loadQuote = function loadQuote() {
           Kropotkins.get({
             kropotkinId: 'random'
@@ -17,7 +16,7 @@ angular.module('kropotkins').directive('kropotkinQuote', ['Kropotkins', function
             $scope.quote = data;
             console.log($scope.quote);
           }, function(err) {
-            console.err('Could not load quote')
+            console.err('Could not load quote');
           });
         };
 

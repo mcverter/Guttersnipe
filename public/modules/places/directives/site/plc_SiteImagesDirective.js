@@ -2,7 +2,7 @@
   'use strict';
 
   app.directive('address', ['filePaths', function(filePaths) {
-      var templateUrl = filePaths.resources_dir + "navigation";
+      var templateUrl = filePaths.resources_dir + 'navigation';
 
       return {
         restrict: 'E',

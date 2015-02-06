@@ -155,7 +155,7 @@
             isTypeSet = true;
             thing.type = t;
             switch(t) {
-              case "food":
+              case 'food':
                 thing.details = {
                   eating_arrangement: {
                     selections: []
@@ -174,12 +174,12 @@
                   }
                 }
                 break;
-              case "medical":
+              case 'medical':
                 thing.details = {
                   selections: []
                 }
                 break;
-              case "housing":
+              case 'housing':
                 thing.details = {
                   selections: []
                 }
@@ -281,7 +281,7 @@
           enumerable: true,
           value: function locateAddress($event) {
             $event.preventDefault();
-            geocoder.geocode( { "address": inputAddress }, function(results, status) {
+            geocoder.geocode( { 'address': inputAddress }, function(results, status) {
               if (status == google.maps.GeocoderStatus.OK && results.length > 0) {
                 inputAddress =   results[0].formatted_address;
                 center = {

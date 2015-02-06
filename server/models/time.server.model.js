@@ -31,5 +31,5 @@ var ScheduleSchema = new Schema ({
 var TimeSchema = new Schema ({
   schedules : [ScheduleSchema]
 });
-
+mongoose.model('Schedule', ScheduleSchema);
 mongoose.model('Time', TimeSchema);

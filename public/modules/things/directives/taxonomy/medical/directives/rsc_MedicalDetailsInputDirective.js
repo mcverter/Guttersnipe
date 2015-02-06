@@ -2,7 +2,7 @@
   'use strict';
 
   app.directive('medicalDetailsInput', ['filePaths', function(filePaths) {
-      var templateUrl = filePaths.resources_dir + "thing/taxonomy/medical/" + filePaths.templates_subdir + "rsc_MedicalDetailsInputTemplate.html";
+      var templateUrl = filePaths.resources_dir + 'thing/taxonomy/medical/' + filePaths.templates_subdir + 'rsc_MedicalDetailsInputTemplate.html';
 
       return {
         restrict: 'E',

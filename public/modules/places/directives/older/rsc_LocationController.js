@@ -6,7 +6,7 @@
             var geocoder = new google.maps.Geocoder();
             $scope.map = { center: { latitude: 40.651849, longitude: -73.962817 }, zoom: 15 };
 
-            geocoder.geocode( { "address": "1355 lombard street, 94109" }, function(results, status) {
+            geocoder.geocode( { 'address': '1355 lombard street, 94109' }, function(results, status) {
                 if (status == google.maps.GeocoderStatus.OK && results.length > 0) {
                     var result = results[0];
                     var formatted_address =   result.formatted_address;
