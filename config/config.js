@@ -67,7 +67,7 @@ console.log('output javascript assets are ' + output);
 	return output;
 };
 
-/**
+ /**
  * Get the modules CSS files
  */
 module.exports.getCSSAssets = function() {
