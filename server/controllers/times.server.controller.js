@@ -6,7 +6,68 @@
 var mongoose = require('mongoose'),
 	errorHandler = require('./errors.server.controller'),
 	Time = mongoose.model('Time'),
+  Schedule = mongoose.model('Schedule'),
 	_ = require('lodash');
+
+var REPETITION_ENUM = [
+  {
+    abbr: 'N',
+    full: 'None'
+  }, {
+    abbr: 'E',
+    full: 'Every Week'
+  }, {
+    abbr: '1',
+    full: 'First Week of Every Month'
+  },{
+    abbr: '2',
+    full: 'Second Week of Every Month'
+  }, {
+    abbr: '3',
+    full: 'Third Week of Every Month'
+  }, {
+    abbr: 'L',
+    full: 'Last Week of Every Month'
+  }, {
+    abbr: 'Y',
+    full: "Every Year"
+  }
+];
+
+/**
+ *
+ * Every resource is assigned a Time.
+ * A "Time" object is collection of schedules.
+ * A "Schedule" consists of
+ *    (1) A Date
+ *    (2) A Duration.
+ *    (3) A Repetition ENUM
+ *
+ * Schedules are like "sparse matrixes".
+ * Every Thursday from 6-9 PM is a timeslot that can be attached to
+ *   multiple different events.
+ *
+ * That said, the folowing rules pertain to Schedules:
+ * (1) DELETE:  Schedules can never be deleted.  They can only be removed.
+ * (2) CREATE:  Only create a new Schedule if it does not exist
+ * (3) READ:  Normal read
+ * (4) UPDATE:  When changing a schedule, what you are doing is
+ *          removing the link to that schedule and creating a link to a new one.
+ *
+ */
+var createSchedule = function(date, duration, repetition) {
+  if (Schedule.find) {
+
+  }
+};
+
+var updateSchedule = function() {
+
+};
+
+var createSchedule = function() {
+
+};
 
 /**
  * Create a Time
@@ -35,7 +96,7 @@ exports.read = function(req, res) {
 
 /**
  * Update a Time
- */
+*/
 exports.update = function(req, res) {
 	var time = req.time ;
 
