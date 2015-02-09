@@ -1,7 +1,7 @@
 'use strict';
 
 // Setting up route
-angular.module('articles').config(['$stateProvider',
+angular.module('docs').config(['$stateProvider',
 	function($stateProvider) {
 		// Articles state routing
 		$stateProvider.
