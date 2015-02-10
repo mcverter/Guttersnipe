@@ -1,7 +1,9 @@
 'use strict';
 
 //Setting up route
-angular.module('places').config(['$stateProvider',
+angular.module('places')
+    .constant('TEMPLATE_DIR', 'modules/places/views/')
+    .config(['$stateProvider',
 	function($stateProvider) {
 		// Places state routing
 		$stateProvider.

@@ -2,9 +2,9 @@
 
 module.exports = {
 	app: {
-		title: 'Guttersnipe',
-		description: 'Anarchocommunist resource sharing',
-		keywords: 'Kropotkin'
+		title: 'MEAN',
+		description: 'Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js',
+		keywords: 'MongoDB, Express, AngularJS, Node.js'
 	},
 	port: process.env.PORT || 3000,
 	templateEngine: 'swig',
@@ -35,8 +35,6 @@ module.exports = {
 			'public/config.js',
 			'public/application.js',
 			'public/modules/*/*.js',
-            'public/modules/*/*/*.js',
-            'public/modules/*/*/*/*.js',
 			'public/modules/*/*[!tests]*/*.js'
 		],
 		tests: [
