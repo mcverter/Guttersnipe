@@ -1,7 +1,6 @@
-(function (angular, app) {
   'use strict';
-
-  app.controller('CreateResourceController', ['$scope', 'ResourceTaxonomyService',
+angular.module('resources')
+    .controller('CreateResourceController', ['$scope', 'ResourceTaxonomyService',
     function ($scope, ResourceTaxonomy) {
       var
       // THING
@@ -360,4 +359,3 @@
         }
       });
     }]);
-})(window.angular, window.guttersnipe);

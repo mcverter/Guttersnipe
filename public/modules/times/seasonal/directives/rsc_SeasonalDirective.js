@@ -1,9 +1,8 @@
-(function (angular, app) {
   'use strict';
-
-  app.directive('scheduleSeasonal', ['filePaths', function(filePaths) {
+  angular.module('templates')
+ .directive('scheduleSeasonal', [function() {
       console.log('in seasonal directive');
-      var templateUrl = filePaths.resources_dir + 'time/seasonal/' + filePaths.templates_subdir + 'rsc_SeasonalTemplate.html',
+      var templateUrl = 'modules/times/seasonal/templates/rsc_SeasonalTemplate.html',
         controller = function($scope, $modal) {
           $scope.eventSources = [];
           $scope.seasonalConfig = {
@@ -75,6 +74,5 @@
       }
     }]
   );
-})(window.angular, window.guttersnipe);
 
 

@@ -28,10 +28,9 @@
  */
 
 
-(function (angular, app) {
   'use strict';
-
-  app.controller('NewCreateResourceController', ['$scope', 'ResourceTaxonomyService',
+angular.module('resources')
+.controller('NewCreateResourceController', ['$scope', 'ResourceTaxonomyService',
     function ($log) {
       var
         isSummarySet = false,
@@ -179,7 +178,6 @@
       });
 
     }])
-})(window.angular, window.guttersnipe);
 
 /*
  app.controller('NewCreateResourceController', ['$scope', 'ResourceTaxonomyService',

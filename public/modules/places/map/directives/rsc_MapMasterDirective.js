@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('places')
-    .directive('mapMaster', ['TEMPLATE_DIR', function(TEMPLATE_DIR) {
-          var templateUrl  = TEMPLATE_DIR + 'rsc_MapMasterTemplate.html';
+    .directive('mapMaster', ['templates', function(templates) {
+        var templateUrl = templates.map + 'rsc_MapMasterTemplate.html';
 
       return {
         restrict: 'E',

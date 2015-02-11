@@ -1,7 +1,7 @@
-(function (angular, app, _) {
   'use strict';
 
-  app.controller('MapController', ['$scope', '$log',
+  angular.module('resources')
+  .controller('MapController', ['$scope', '$log',
     function ($scope, $log) {
       var inputAddress = 'Prospect Park',
         center = {lat: 40.660204,lng: -73.968956, zoom: 14},
@@ -86,4 +86,3 @@
       });
       var moo = 1 +1;
     }])
-}) (window.angular, window.guttersnipe, window._);

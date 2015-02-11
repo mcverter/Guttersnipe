@@ -1,8 +1,7 @@
-(function (angular, app) {
   'use strict';
 
-  app.directive('foodDetailsInput', ['filePaths', function(filePaths) {
-      var templateUrl = filePaths.resources_dir + 'thing/taxonomy/food/' + filePaths.templates_subdir + 'rsc_FoodDetailsInputTemplate.html';
+  angular.module('things').directive('foodDetailsInput', ['templates', function(templates) {
+      var templateUrl = 'modules/things/taxonomy/food/templates/rsc_FoodDetailsInputTemplate.html';
 
       return {
         restrict: 'E',
@@ -10,6 +9,5 @@
       }
     }]
   );
-})(window.angular, window.guttersnipe);
 
 

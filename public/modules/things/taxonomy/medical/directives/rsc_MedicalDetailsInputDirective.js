@@ -1,8 +1,7 @@
-(function (angular, app) {
   'use strict';
 
-  app.directive('medicalDetailsInput', ['filePaths', function(filePaths) {
-      var templateUrl = filePaths.resources_dir + 'thing/taxonomy/medical/' + filePaths.templates_subdir + 'rsc_MedicalDetailsInputTemplate.html';
+    angular.module('things').directive('medicalDetailsInput', ['templates', function(templates) {
+      var templateUrl = 'modules/things/taxonomy/medical/templates/rsc_MedicalDetailsInputTemplate.html';
 
       return {
         restrict: 'E',
@@ -10,6 +9,5 @@
       }
     }]
   );
-})(window.angular, window.guttersnipe);
 
 

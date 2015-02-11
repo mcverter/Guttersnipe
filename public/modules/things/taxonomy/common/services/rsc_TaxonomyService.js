@@ -1,7 +1,6 @@
-(function (angular, app, _) {
   'use strict';
-
-  app.factory('ResourceTaxonomyService', ['$log',
+angular.module('resources')
+    .factory('ResourceTaxonomyService', ['$log',
     function ($log) {
       var taxonomyFactory,
         resourceTaxonomy = {
@@ -115,4 +114,3 @@
       return taxonomyFactory;
     }
   ])
-}) (window.angular, window.guttersnipe, window._);

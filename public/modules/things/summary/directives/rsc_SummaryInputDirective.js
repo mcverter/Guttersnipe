@@ -1,8 +1,8 @@
-(function (angular, app) {
   'use strict';
 
-  app.directive('resourceSummaryInput', ['filePaths', function(filePaths) {
-      var templateUrl = filePaths.resources_dir + 'thing/summary/' + filePaths.templates_subdir + 'rsc_SummaryInputTemplate.html';
+  angular.module('things')
+      .directive('resourceSummaryInput', ['templates', function(templates) {
+      var templateUrl = 'modules/things/summary/templates/rsc_SummaryInputTemplate.html';
 
       return {
         restrict: 'E',
@@ -10,6 +10,4 @@
       }
     }]
   );
-})(window.angular, window.guttersnipe);
-
 

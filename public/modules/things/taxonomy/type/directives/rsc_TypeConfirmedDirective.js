@@ -1,8 +1,7 @@
-(function (angular, app) {
   'use strict';
-
-  app.directive('resourceTypeConfirmed', ['filePaths', function(filePaths) {
-      var templateUrl = filePaths.resources_dir + 'thing/taxonomy/type/' + filePaths.templates_subdir + 'rsc_TypeConfirmedTemplate.html';
+  angular.module('things')
+      .directive('resourceTypeConfirmed', ['templates', function(templates) {
+      var templateUrl = 'modules/things/taxonomy/type/templates/rsc_TypeConfirmedTemplate.html';
 
       return {
         restrict: 'E',
@@ -10,6 +9,5 @@
       }
     }]
   );
-})(window.angular, window.guttersnipe);
 
 

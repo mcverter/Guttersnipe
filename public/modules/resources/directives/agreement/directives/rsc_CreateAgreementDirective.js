@@ -1,10 +1,9 @@
-(function (angular, app) {
   'use strict';
-
-  app.directive('resourceCreateAgreement', ['filePaths', function(filePaths) {
+angular.module('resources')
+    .directive('resourceCreateAgreement', [function() {
       var linker = function(scope, element, attrs) {},
         controller = function($scope){},
-        templateUrl = filePaths.resources_dir + 'agreement/' + filePaths.templates_subdir + 'rsc_AgreementTemplate.html'
+        templateUrl = 'agreement/templates/rsc_AgreementTemplate.html'
 
       return {
         restrict: 'E',
@@ -14,4 +13,3 @@
       };
     }]
   );
-})(window.angular, window.guttersnipe);

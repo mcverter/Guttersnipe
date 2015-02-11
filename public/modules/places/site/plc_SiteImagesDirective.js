@@ -1,8 +1,7 @@
-(function (angular, app) {
   'use strict';
-
-  app.directive('address', ['filePaths', function(filePaths) {
-      var templateUrl = filePaths.resources_dir + 'navigation';
+angular.module('places')
+.directive('address', [function() {
+      var templateUrl =  'modules/places/site/plc_SiteImagesTemplate.html';
 
       return {
         restrict: 'E',
@@ -10,6 +9,5 @@
       }
     }]
   );
-})(window.angular, window.guttersnipe);
 
 

@@ -1,9 +1,7 @@
-
-(function (angular, app) {
   'use strict';
 
-  app.directive('appointment', ['filePaths', function(filePaths) {
-      var templateUrl = filePaths.resources_dir + 'time/appointment/' + filePaths.templates_subdir + 'tim_AppointmentTemplate.html';
+  angular.module('times').directive('appointment', ['templates', function(templates) {
+      var templateUrl = 'modules/times/appointment/templates/tim_AppointmentTemplate.html';
 
       return {
         restrict: 'E',
@@ -14,6 +12,5 @@
       }
     }]
   );
-})(window.angular, window.guttersnipe);
 
 

@@ -1,7 +1,7 @@
-(function (angular, app, _) {
     'use strict';
 
-    app.controller('ScheduleController', ['$scope', '$compile', 'uiCalendarConfig',
+    angular.module('resources')
+        .controller('ScheduleController', ['$scope', '$compile', 'uiCalendarConfig',
         function ($scope,$compile,uiCalendarConfig) {
             var date = new Date();
             var d = date.getDate();
@@ -123,5 +123,3 @@
             $scope.eventSources = [$scope.events, $scope.eventSource, $scope.eventsF];
             $scope.eventSources2 = [$scope.calEventsExt, $scope.eventsF, $scope.events];
         }]);
-    /* EOF */
-}) (window.angular, window.guttersnipe, window._);

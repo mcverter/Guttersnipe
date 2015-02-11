@@ -1,8 +1,8 @@
-(function (angular, app) {
   'use strict';
 
-  app.directive('scheduleRecurring', ['filePaths', function(filePaths) {
-    var templateUrl = filePaths.resources_dir + 'time/recurring/' + filePaths.templates_subdir + 'rsc_WeeklyRecurringTemplate.html',
+  angular.module('times')
+      .directive('scheduleRecurring', ['templates', function(templates) {
+    var templateUrl = 'modules/times/recurring/templates/rsc_WeeklyRecurringTemplate.html',
       controller = function($scope, $modal) {
         $scope.eventSources = [];
         $scope.recurringConfig = {
@@ -79,6 +79,5 @@ return {
 }
 }]
 );
-})(window.angular, window.guttersnipe);
 
 

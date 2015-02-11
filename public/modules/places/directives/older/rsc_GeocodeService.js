@@ -1,6 +1,6 @@
-(function (angular, app, _) {
     'use strict';
-    app.factory('geocodeService', ['$http',
+    angular.module('resources')
+        .factory('geocodeService', ['$http',
         function ($http) {
             // return object
             var geocoder = {};
@@ -24,4 +24,3 @@
 
             return geocoder;
         }]);
-})(window.angular, window.guttersnipe, window._)

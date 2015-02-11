@@ -1,8 +1,8 @@
-(function (angular, app) {
   'use strict';
 
-  app.directive('resourceTaxon', ['filePaths', function(filePaths) {
-      var templateUrl = filePaths.resources_dir + 'thing/taxonomy/common/' + filePaths.templates_subdir + 'rsc_TaxonTemplate.html';
+  angular.module('things')
+      .directive('resourceTaxon', ['templates', function(templates) {
+      var templateUrl = 'modules/things/taxonomy/common/templates/rsc_TaxonTemplate.html';
 
       return {
         restrict: 'E',
@@ -14,6 +14,5 @@
       }
     }]
   );
-})(window.angular, window.guttersnipe);
 
 

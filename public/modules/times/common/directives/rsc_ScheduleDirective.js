@@ -1,9 +1,8 @@
-(function (angular, app) {
   'use strict';
-
-  app.directive('resourceSchedule', ['filePaths', function(filePaths) {
+  angular.module('times')
+      .directive('resourceSchedule', ['templates', function(templates) {
       console.log('in resource schedule directive');
-      var templateUrl = filePaths.resources_dir + 'time/common/' + filePaths.templates_subdir + 'rsc_ScheduleTemplate.html';
+      var templateUrl = 'modules/times/common/templates/rsc_ScheduleTemplate.html';
 
       return {
         restrict: 'E',
@@ -11,6 +10,5 @@
       }
     }]
   );
-})(window.angular, window.guttersnipe);
 
 

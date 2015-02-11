@@ -1,8 +1,7 @@
-(function (angular, app) {
   'use strict';
-
-  app.directive('scheduleInput', ['filePaths', function(filePaths) {
-      var templateUrl = filePaths.resources_dir + 'time/' + filePaths.templates_subdir + 'rsc_ScheduleInputTemplate.html',
+  angular.module('times').
+      directive('scheduleInput', ['templates', function(templates) {
+      var templateUrl = 'modules/times/punctual/templates/rsc_ScheduleInputTemplate.html',
         MSEC_TO_30MIN = 60 * 30 * 1000,
         eventSources = [],
         controller = function($scope, $modal) {
@@ -136,6 +135,5 @@
       }
     }]
   );
-})(window.angular, window.guttersnipe);
 
 

@@ -1,8 +1,8 @@
-(function (angular, app) {
   'use strict';
 
-  app.directive('resourceSummaryConfirmed', ['filePaths', function(filePaths) {
-      var templateUrl = filePaths.resources_dir + 'thing/summary/' + filePaths.templates_subdir + 'rsc_SummaryConfirmedTemplate.html';
+  angular.module('times')
+      .directive('resourceSummaryConfirmed', ['templates', function(templates) {
+      var templateUrl = 'modules/things/summary/templates/rsc_SummaryConfirmedTemplate.html';
 
       return {
         restrict: 'E',
@@ -10,6 +10,5 @@
       }
     }]
   );
-})(window.angular, window.guttersnipe);
 
 

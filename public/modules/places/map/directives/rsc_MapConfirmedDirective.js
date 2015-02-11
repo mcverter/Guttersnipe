@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('places')
-    .directive('mapConfirmed',  ['TEMPLATE_DIR', function(TEMPLATE_DIR) {
-          var templateUrl = TEMPLATE_DIR + 'rsc_MapConfirmedTemplate.html';
+    .directive('mapConfirmed',  ['templates', function(templates) {
+          var templateUrl = templates.map + 'rsc_MapConfirmedTemplate.html';
       return {
         restrict: 'E',
         templateUrl: templateUrl

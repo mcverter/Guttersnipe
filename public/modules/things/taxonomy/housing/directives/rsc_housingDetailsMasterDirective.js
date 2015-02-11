@@ -1,8 +1,7 @@
-(function (angular, app) {
   'use strict';
 
-  app.directive('housingDetailsMaster', ['filePaths', function(filePaths) {
-      var templateUrl = filePaths.resources_dir + 'thing/taxonomy/housing/' + filePaths.templates_subdir + 'rsc_HousingDetailsMasterTemplate.html';
+    angular.module('things').directive('housingDetailsMaster', ['templates', function(templates) {
+      var templateUrl = 'modules/things/taxonomy/housing/templates/rsc_HousingDetailsMasterTemplate.html';
 
 
       return {
@@ -11,6 +10,5 @@
       }
     }]
   );
-})(window.angular, window.guttersnipe);
 
 

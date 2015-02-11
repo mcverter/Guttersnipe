@@ -28,10 +28,10 @@
  */
 
 
-(function (angular, app) {
   'use strict';
 
-  app.factory('ResourceService', ['$log',
+angular.module('resources')
+    .factory('ResourceService', ['$log',
     function ($log) {
       var resourceFactory;
 
@@ -73,7 +73,6 @@
       });
 
     }])
-})(window.angular, window.guttersnipe);
 
 /*
     app.controller('NewCreateResourceController', ['$scope', 'ResourceTaxonomyService',
