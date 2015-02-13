@@ -25,7 +25,22 @@ module.exports = {
 				'public/lib/angular-sanitize/angular-sanitize.js', 
 				'public/lib/angular-ui-router/release/angular-ui-router.js',
 				'public/lib/angular-ui-utils/ui-utils.js',
-				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js'
+				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
+				'public/lib/leaflet/dist/leaflet.js',
+			        'public/lib/angular-wizard/dist/angular-wizard.js',
+				'public/lib/fullcalendar/fullcalendar.js',
+				'public/lib/angular-strap/dist/angular-strap.js',
+		
+			    'public/lib/jquery/dist/jquery.js',
+			    'public/lib/lodash/dist/lodash.js',
+			    'public/lib/angular-bootstrap/ui-bootstrap-tpls.js'
+			     'public/lib/leaflet/dist/leaflet.js',
+			    'public/lib/angular-leaflet/dist/angular-leaflet-directive.js',
+			    '//maps.googleapis.com/maps/api/js?sensor=false',
+			    'public/lib/moment/moment.js',
+			    'public/lib/fullcalendar/fullcalendar.js',
+			    'public/lib/angular-ui-calendar/src/calendar.js',
+			    'public/lib/angular-wizard/dist/angular-wizard.js',
 			]
 		},
 		css: [
