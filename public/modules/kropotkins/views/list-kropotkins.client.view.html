@@ -3,7 +3,7 @@
         <h1>Kropotkins</h1>
     </div>
     <div class="list-group">
-        <a data-ng-repeat="kropotkin in kropotkins" data-ng-href="#!/kropotkins/{{kropotkin._id}}" class="list-group-item">
+        <a data-ng-repeat="kropotkin in kropotkins" data-ng-href="#/kropotkins/{{kropotkin._id}}" class="list-group-item">
 			<small class="list-group-item-text">
 				Posted on
 				<span data-ng-bind="kropotkin.created | date:'medium'"></span>
@@ -14,6 +14,6 @@
         </a>
     </div>
     <div class="alert alert-warning text-center" data-ng-hide="!kropotkins.$resolved || kropotkins.length">
-    	No Kropotkins yet, why don't you <a href="/#!/kropotkins/create">create one</a>?
+    	No Kropotkins yet, why don't you <a href="/#/kropotkins/create">create one</a>?
     </div>
 </section>

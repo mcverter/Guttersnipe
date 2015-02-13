@@ -1,5 +1,5 @@
   'use strict';
-  angular.module('templates')
+  angular.module('times')
  .directive('scheduleSeasonal', [function() {
       console.log('in seasonal directive');
       var templateUrl = 'modules/times/seasonal/templates/rsc_SeasonalTemplate.html',

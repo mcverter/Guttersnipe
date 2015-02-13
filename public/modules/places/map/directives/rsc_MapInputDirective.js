@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('places')
-    .directive('mapInput', ['templates', function(templates) {
+    .directive('mapInput', ['places_templates', function(templates) {
         var templateUrl = templates.map + 'rsc_MapInputTemplate.html';
 
         return {

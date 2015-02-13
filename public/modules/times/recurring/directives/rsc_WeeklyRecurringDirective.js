@@ -1,7 +1,7 @@
   'use strict';
 
   angular.module('times')
-      .directive('scheduleRecurring', ['templates', function(templates) {
+      .directive('scheduleRecurring', ['times_templates', function(templates) {
     var templateUrl = 'modules/times/recurring/templates/rsc_WeeklyRecurringTemplate.html',
       controller = function($scope, $modal) {
         $scope.eventSources = [];

@@ -1,6 +1,6 @@
   'use strict';
 angular.module('times')
-  .directive('scheduleInput', ['templates', function(templates) {
+  .directive('scheduleInput', ['times_templates', function(templates) {
         var templateUrl = templates.schedule +'rsc_ScheduleInputTemplate.html',
         MSEC_TO_30MIN = 60 * 30 * 1000,
         eventSources = [],

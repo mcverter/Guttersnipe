@@ -1,7 +1,7 @@
   'use strict';
 
-    angular.module('things').directive('housingDetailsMaster', ['templates', function(templates) {
-      var templateUrl = 'modules/things/taxonomy/housing/templates/rsc_HousingDetailsMasterTemplate.html';
+    angular.module('things').directive('housingDetailsMaster', ['things_templates', function(templates) {
+      var templateUrl = templates.housing + 'rsc_HousingDetailsMasterTemplate.html';
 
 
       return {

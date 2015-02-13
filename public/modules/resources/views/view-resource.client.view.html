@@ -3,7 +3,7 @@
 		<h1 data-ng-bind="resource.name"></h1>
 	</div>
 	<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == resource.user._id))">
-		<a class="btn btn-primary" href="/#!/resources/{{resource._id}}/edit">
+		<a class="btn btn-primary" href="/#/resources/{{resource._id}}/edit">
 			<i class="glyphicon glyphicon-edit"></i>
 		</a>
 		<a class="btn btn-primary" data-ng-click="remove();">

@@ -1,7 +1,7 @@
   'use strict';
 
-  angular.module('things').directive('housingDetailsInput', ['templates', function(templates) {
-      var templateUrl = 'modules/things/taxonomy/housing/templates/rsc_HousingDetailsInputTemplate.html';
+  angular.module('things').directive('housingDetailsInput', ['things_templates', function(templates) {
+      var templateUrl = templates.housing + 'rsc_HousingDetailsInputTemplate.html';
 
       return {
         restrict: 'E',

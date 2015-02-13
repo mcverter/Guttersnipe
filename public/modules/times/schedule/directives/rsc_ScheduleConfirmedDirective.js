@@ -1,7 +1,7 @@
   'use strict';
   angular.module('times')
-      .directive('scheduleConfirmed', ['templates', function(templates) {
-          var templateUrl = templates.schedule + '/rsc_ScheduleConfirmedWidget.html';
+      .directive('scheduleConfirmed', ['times_templates', function(templates) {
+          var templateUrl = templates.schedule + '/rsc_ScheduleConfirmedTemplate.html';
 
       return {
         restrict: 'E',

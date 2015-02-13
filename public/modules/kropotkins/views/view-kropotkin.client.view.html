@@ -3,7 +3,7 @@
 		<h1 data-ng-bind="kropotkin.paragraph"></h1>
 	</div>
 	<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == kropotkin.user._id))">
-		<a class="btn btn-primary" href="/#!/kropotkins/{{kropotkin._id}}/edit">
+		<a class="btn btn-primary" href="/#/kropotkins/{{kropotkin._id}}/edit">
 			<i class="glyphicon glyphicon-edit"></i>
 		</a>
 		<a class="btn btn-primary" data-ng-click="remove();">

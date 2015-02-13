@@ -9,8 +9,9 @@ var BASE_DIR = 'modules/things/',
     COMMON_SUBDIR = TAXONOMY_SUBDIR + 'common/',
     FOOD_SUBDIR = TAXONOMY_SUBDIR + 'food/',
     HOUSING_SUBDIR = TAXONOMY_SUBDIR + 'housing/',
-    MEDICAL_SUBDIR = TAXONOMY_SUBDIR + 'medical/';
-;
+    MEDICAL_SUBDIR = TAXONOMY_SUBDIR + 'medical/',
+    TYPE_SUBDIR = TAXONOMY_SUBDIR + 'type/'
+    ;
 
 var templates = {
     summary: BASE_DIR + SUMMARY_SUBDIR + TEMPLATES_SUBDIR,
@@ -18,8 +19,9 @@ var templates = {
     food: BASE_DIR + FOOD_SUBDIR + TEMPLATES_SUBDIR,
     medical: BASE_DIR + MEDICAL_SUBDIR + TEMPLATES_SUBDIR,
     housing: BASE_DIR + HOUSING_SUBDIR + TEMPLATES_SUBDIR,
+    type: BASE_DIR + HOUSING_SUBDIR + TYPE_SUBDIR
 
 };
 
 angular.module('things')
-    .constant('templates', templates)
+    .constant('things_templates', templates)

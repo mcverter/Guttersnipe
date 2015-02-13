@@ -3,7 +3,7 @@
         <h1>Things</h1>
     </div>
     <div class="list-group">
-        <a data-ng-repeat="thing in things" data-ng-href="#!/things/{{thing._id}}" class="list-group-item">
+        <a data-ng-repeat="thing in things" data-ng-href="#/things/{{thing._id}}" class="list-group-item">
 			<small class="list-group-item-text">
 				Posted on
 				<span data-ng-bind="thing.created | date:'medium'"></span>
@@ -14,6 +14,6 @@
         </a>
     </div>
     <div class="alert alert-warning text-center" data-ng-hide="!things.$resolved || things.length">
-    	No Things yet, why don't you <a href="/#!/things/create">create one</a>?
+    	No Things yet, why don't you <a href="/#/things/create">create one</a>?
     </div>
 </section>

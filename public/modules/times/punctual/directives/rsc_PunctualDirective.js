@@ -1,7 +1,7 @@
   'use strict';
   angular.module('times').
-      directive('scheduleInput', ['templates', function(templates) {
-      var templateUrl = 'modules/times/punctual/templates/rsc_ScheduleInputTemplate.html',
+      directive('punctualInput', ['times_templates', function(templates) {
+      var templateUrl = 'modules/times/punctual/templates/rsc_PunctualTemplate.html',
         MSEC_TO_30MIN = 60 * 30 * 1000,
         eventSources = [],
         controller = function($scope, $modal) {

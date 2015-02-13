@@ -1,8 +1,8 @@
   'use strict';
 
   angular.module('things')
-      .directive('resourceTaxon', ['templates', function(templates) {
-      var templateUrl = 'modules/things/taxonomy/common/templates/rsc_TaxonTemplate.html';
+      .directive('resourceTaxon', ['things_templates', function(templates) {
+      var templateUrl = templates.common + 'rsc_TaxonTemplate.html';
 
       return {
         restrict: 'E',

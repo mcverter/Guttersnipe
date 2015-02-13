@@ -11,4 +11,4 @@ var templates = {
 };
 
 angular.module('places')
-    .constant('templates', templates)
+    .constant('places_templates', templates)

@@ -1,7 +1,7 @@
   'use strict';
 
-    angular.module('things').directive('medicalDetailsConfirmed', ['templates', function(templates) {
-      var templateUrl = 'modules/things/taxonomy/medical/templates/rsc_MedicalDetailsConfirmedTemplate.html';
+    angular.module('things').directive('medicalDetailsConfirmed', ['things_templates', function(templates) {
+      var templateUrl = templates.medical + 'rsc_MedicalDetailsConfirmedTemplate.html';
 
       return {
         restrict: 'E',

@@ -10,5 +10,4 @@ var templates = {
     schedule: BASE_DIR + SCHEDULE_SUBDIR + TEMPLATES_SUBDIR
 };
 
-angular.module('times')
-    .constant('templates', templates)
+angular.module('times').constant('times_templates', templates)

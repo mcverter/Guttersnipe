@@ -1,6 +1,6 @@
   'use strict';
-  angular.module('things').directive('resourceType', ['templates', function(templates) {
-      var templateUrl = 'modules/things/taxonomy/type/templates/rsc_TypeMasterTemplate.html';
+  angular.module('things').directive('resourceType', ['things_templates', function(templates) {
+      var templateUrl = templates.type + 'rsc_TypeMasterTemplate.html';
 
       return {
         restrict: 'E',

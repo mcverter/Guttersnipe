@@ -1,10 +1,15 @@
 'use strict';
 
 // Things controller
-angular.module('things').controller('ThingsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Things',
+angular.module('things').controller('ThingsSummaryController', ['$scope', '$stateParams', '$location', 'Authentication', 'Things',
 	function($scope, $stateParams, $location, Authentication, Things) {
 		$scope.authentication = Authentication;
-        $scope.isSummarySet = false;
+        $scope.summary = {
+            isSummarySet : false,
+            headline: '',
+            description: ''
+
+            };
 
 		// Create new Thing
 		$scope.create = function() {
