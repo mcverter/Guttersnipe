@@ -6,7 +6,8 @@ angular.module('places')
 
       return {
         restrict: 'E',
-        templateUrl: templateUrl
+        templateUrl: templateUrl,
+        controller: 'PlacesController'
       }
     }]);
 
