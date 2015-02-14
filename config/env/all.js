@@ -17,6 +17,7 @@ module.exports = {
                 'public/lib/bootstrap/dist/css/bootstrap-theme.css',
             ],
             js: [
+                'public/lib/jquery/dist/jquery.js',
                 'public/lib/angular/angular.js',
                 'public/lib/angular-resource/angular-resource.js',
                 'public/lib/angular-cookies/angular-cookies.js',
@@ -26,9 +27,8 @@ module.exports = {
                 'public/lib/angular-ui-router/release/angular-ui-router.js',
                 'public/lib/angular-ui-utils/ui-utils.js',
                 'public/lib/leaflet/dist/leaflet.js',
-
-                'public/lib/jquery/dist/jquery.js',
-                'public/lib/angular-strap/dist/angular-strap.js',
+                'public/lib/angular-bootstrap/ui-bootstrap.js',
+                'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
                 'public/lib/lodash/dist/lodash.js',
                 'public/lib/angular-leaflet/dist/angular-leaflet-directive.js',
                 '//maps.googleapis.com/maps/api/js?sensor=false',

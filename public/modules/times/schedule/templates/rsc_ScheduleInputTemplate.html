@@ -1,6 +1,6 @@
-<div class="jumbotron">Schedule for {{headline}}</div>
-<div ui-calendar="punctualConfig.calendar" class="span8 calendar" ng-model="eventSources"></div>
 
+<div class="jumbotron">Schedule for Event</div>
+<div ui-calendar="punctualConfig.calendar" class="span8 calendar" ng-model="eventSources"></div>
 
 <div>
     <h2>Schedule:  </h2>
@@ -19,4 +19,4 @@
     </div>
 </div>
 
-<button type="button" class="btn btn-default" ng-disabled="eventSources.length<1" ng-click="isScheduleSet=true">OK</button>
+<button type="button" class="btn btn-default" ng-disabled="eventSources.length<1" ng-click="time.isScheduleSet=true">OK</button>

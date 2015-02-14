@@ -5,7 +5,8 @@
 
       return {
         restrict: 'E',
-        templateUrl: templateUrl
+        templateUrl: templateUrl,
+          controller: 'TimesController'
       }
     }]
   );

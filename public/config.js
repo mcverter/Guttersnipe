@@ -8,7 +8,7 @@ var ApplicationConfiguration = (function() {
 	    'ngResource', 'ngCookies',  'ngAnimate',
             'ngTouch',  'ngSanitize',  'ui.router',
             'ui.utils', 'leaflet-directive',
-	    'mgo-angular-wizard',    'ui.calendar'];
+	    'mgo-angular-wizard',    'ui.calendar', 'ui.bootstrap'];
 	// Add a new vertical module
 	var registerModule = function(moduleName, dependencies) {
 		// Create angular module
