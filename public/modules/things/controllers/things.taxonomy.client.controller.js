@@ -1,11 +1,11 @@
 'use strict';
 
 // Things controller
-angular.module('things').controller('ThingsSummaryController', ['ResourceTaxonomyService', '$scope', '$stateParams', '$location', 'Authentication', 'Things',
+angular.module('things').controller('ThingsTaxonomyController', ['ResourceTaxonomyService', '$scope', '$stateParams', '$location', 'Authentication', 'Things',
     function(ResourceTaxonomyService, $scope, $stateParams, $location, Authentication, Things) {
         $scope.authentication = Authentication;
         $scope.taxonomy = {
-            taxonomy : ResourceTaxonomyService,
+            model : ResourceTaxonomyService.taxonomy,
             isTaxonomySet : false,
             isTypeSet : false,
             areDetailsSet : false,
@@ -13,13 +13,19 @@ angular.module('things').controller('ThingsSummaryController', ['ResourceTaxonom
             details: {}
         };
 
+        console.log($scope.taxonomy);
+
+        $scope.unsetType = function() {
+            $scope.taxonomy.isTaxonomySet = false;
+            $scope.taxonomy.isTypeSet = false;
+        }
 
         $scope.setType = function(t) {
             $scope.taxonomy.isTypeSet = true;
             $scope.taxonomy.type = t;
             switch(t) {
                 case "food":
-                    thing.details = {
+                    $scope.taxonomy.details = {
                         eating_arrangement: {
                             selections: []
                         },
@@ -38,12 +44,12 @@ angular.module('things').controller('ThingsSummaryController', ['ResourceTaxonom
                     }
                     break;
                 case "medical":
-                    thing.details = {
+                    $scope.taxonomy.details = {
                         selections: []
                     }
                     break;
                 case "housing":
-                    thing.details = {
+                    $scope.taxonomy.details = {
                         selections: []
                     }
                     break;

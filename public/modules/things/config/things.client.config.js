@@ -19,8 +19,7 @@ var templates = {
     food: BASE_DIR + FOOD_SUBDIR + TEMPLATES_SUBDIR,
     medical: BASE_DIR + MEDICAL_SUBDIR + TEMPLATES_SUBDIR,
     housing: BASE_DIR + HOUSING_SUBDIR + TEMPLATES_SUBDIR,
-    type: BASE_DIR + HOUSING_SUBDIR + TYPE_SUBDIR
-
+    type: BASE_DIR + TYPE_SUBDIR + TEMPLATES_SUBDIR
 };
 
 angular.module('things')

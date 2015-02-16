@@ -46,7 +46,8 @@ module.exports = {
             'public/application.js',
             'public/modules/*/*.js',
             'public/modules/*/*[!tests]*/*.js',
-            'public/modules/*/*[!tests]*/*/*.js'
+            'public/modules/*/*[!tests]*/*/*.js',
+            'public/modules/*/*[!tests]*/*/*/*.js'
 
         ],
         tests: [
