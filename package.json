@@ -4,8 +4,8 @@
   "version": "0.0.1",
   "author": "W.A.S.T.E.",
   "engines": {
-    "node": "latest",
-    "npm": "latest"
+    "node": "1.4.x",
+    "npm": "2.5.x"
   },
   "scripts": {
     "start": "grunt",
