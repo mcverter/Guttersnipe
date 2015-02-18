@@ -1,5 +1,8 @@
 body {
     background-color: #be0404;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+
 }
 .angular-leaflet-map {
     height: 400px;
@@ -71,19 +74,16 @@ html {
     position: relative;
     min-height: 100%;
 }
-body {
-    /* Margin bottom by footer height */
-    margin-bottom: 60px;
-}
+
 .footer {
     position: absolute;
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer here */
     height: 60px;
-    background-color: orange;
+    background-color: #282828;
 }
 .OrangePurple  {
-    background-color: orange;
-    color: #800080;
+    background-color: #282828;
+   color: rgb(163, 163, 163);
 }
