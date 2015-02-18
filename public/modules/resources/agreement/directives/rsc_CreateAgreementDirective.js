@@ -1,10 +1,9 @@
   'use strict';
 angular.module('resources')
-    .directive('resourceCreateAgreement', [function() {
-      var linker = function(scope, element, attrs) {},
+    .directive('resourceCreateAgreement', ['resource_templates', function(templates) {
+    var linker = function(scope, element, attrs) {},
         controller = function($scope){},
-        templateUrl = 'agreement/templates/rsc_AgreementTemplate.html'
-
+        templateUrl = templates.agreement + 'rsc_AgreementTemplate.html'
       return {
         restrict: 'E',
         templateUrl: templateUrl,

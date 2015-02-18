@@ -1,9 +1,9 @@
   'use strict';
 angular.module('resources')
-    .directive('resourceCreateInstructions', [function() {
+    .directive('resourceCreateInstructions', ['resource_templates', function(templates) {
     var linker = function(scope, element, attrs) {},
       controller = function($scope){},
-      templateUrl =  'instructions/templates/rsc_InstructionsTemplate.html';
+      templateUrl = templates.instructions + 'rsc_InstructionsTemplate.html';
 
     return {
       link: linker,

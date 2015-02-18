@@ -1,23 +1,33 @@
 <section data-ng-controller="ResourcesController">
     <div class="page-header">
-        <h1>New Resource</h1>
+        <h1>Create New Resource</h1>
     </div>
     <div class="col-md-12">
-        <div>
+
+        <div class="jumbotron BlackOnRed">
+            <h2> Agree </h2>
+            <resource-create-agreement></resource-create-agreement>
+        </div>
+        <div class="jumbotron RedOnBlack">
+            <h2>Learn</h2>
+            <resource-create-instructions></resource-create-instructions>
+        </div>
+
+        <div class="jumbotron BlackOnRed">
             <h2> Describe </h2>
             <resource-summary></resource-summary>
         </div>
-        <div>
+        <div class="jumbotron RedOnBlack">
             <h2>Classify</h2>
             <resource-type></resource-type>
         </div>
 
-        <div>
+        <div class="jumbotron BlackOnRed">
             <h2>Map</h2>
             <map-master></map-master>
         </div>
 
-        <div>
+        <div class="jumbotron RedOnBlack">
             <h2>Schedule</h2>
             <schedule-master></schedule-master>
         </div>
