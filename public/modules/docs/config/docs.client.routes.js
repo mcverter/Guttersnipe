@@ -38,11 +38,10 @@ angular.module('docs').config(['$stateProvider',
                 url: '/docs/contact',
                 templateUrl: DOC_DIR + 'contact.client.view.html'
             })
-
-            .state('CCNY', {
+/*            .state('CCNY', {
                 url: '/docs/presentation2013',
                 templateUrl: PRESENTATION_DIR + 'presentation.html'
-            })
+            })            */
             .state('CCNY.front', {
                 url: '/front',
                 templateUrl: PRESENTATION_DIR + 'front.html'
@@ -95,11 +94,6 @@ angular.module('docs').config(['$stateProvider',
             .state('CCNY.fin', {
                 url: '/fin',
                 templateUrl: PRESENTATION_DIR + 'fin.html'
-            })
-
-
-
-
-        ;
+            });
     }
 ]);

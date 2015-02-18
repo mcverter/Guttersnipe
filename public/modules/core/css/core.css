@@ -1,4 +1,6 @@
-
+body {
+    background-color: #e10505;
+}
 .angular-leaflet-map {
     height: 400px;
     border: 4px #fff solid;
