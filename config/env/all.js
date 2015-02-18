@@ -17,6 +17,7 @@ module.exports = {
                 'public/lib/bootstrap/dist/css/bootstrap-theme.css',
             ],
             js: [
+              'foo.js',
               'public/lib/jquery/dist/jquery.js',
               'public/lib/angular/angular.js',
               'public/lib/angular-resource/angular-resource.js',
