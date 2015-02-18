@@ -3,10 +3,6 @@
   "version": "0.0.1",
   "description": "Anarchocommunist resource sharing",
   "dependencies": {
-    "angular-leaflet": "~0.7.11"  ,
-    "angular-ui-calendar": "~0.8.1",
-    "lodash": "~3.2.0",
-    "angular-wizard": "~0.4.2",
     "less": "~2.4.0",
     "angular-resource": "~1.3.13",
     "angular-mocks": "~1.3.13",
@@ -16,14 +12,14 @@
     "angular-sanitize": "~1.3.13",
     "angular-ui-utils": "~0.2.1",
     "angular-ui-router": "~0.2.13",
-    "angular-ui-bootstrap": "~0.12.0",
     "bootstrap": "~3.3.2",
-    "angular-strap": "~2.1.6",
-    "angular-bootstrap": "~0.12.0"
+    "angular-leaflet": "~0.7.11",
+    "angular-ui-calendar": "~0.8.1",
+    "angular-bootstrap": "~0.12.0",
+    "angular-wizard": "~0.4.2"
   },
   "resolutions": {
-    "angular": "1.3.13",
-    "jquery": "~2.x",
-    "lodash": "~3.2.0"
+    "angular": "1.3.x",
+    "jquery": "~2.x"
   }
 }
