@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Anarchocommunist resource sharing",
   "dependencies": {
-    "angular-leaflet": "~0.7.11",
+    "angular-leaflet": "~0.7.11"  ,
     "angular-ui-calendar": "~0.8.1",
     "lodash": "~3.2.0",
     "angular-wizard": "~0.4.2",
