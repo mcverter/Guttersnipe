@@ -1,0 +1,41 @@
+<nav class="navbar-collapse collapse bottom-collapse" data-ng-controller="HeaderController">
+
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand OrangePurple" href="#">Guttersnipe</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a ui-sref="faq" class="navbar-brand OrangePurple">FAQ</a></li>
+                </li>
+                <li class="divider-vertical"></li>
+                <li ui-route="/signin" ng-class="{active: $uiRoute}">
+                    <a ui-sref="mission"  class="navbar-brand OrangePurple">Mission</a>
+                </li>
+                <li class="divider-vertical"></li>
+                <li ui-route="/signin" ng-class="{active: $uiRoute}">
+                    <a ui-sref="about"  class="navbar-brand OrangePurple">About</a>
+                </li>
+                <li class="divider-vertical"></li>
+                <li ui-route="/signin" ng-class="{active: $uiRoute}">
+                    <a ui-sref="documentation"  class="navbar-brand OrangePurple">Documentation</a>
+                </li>
+                <li class="divider-vertical"></li>
+                <li ui-route="/signin" ng-class="{active: $uiRoute}">
+                    <a ui-sref="illlegal"  class="navbar-brand OrangePurple">Ill Legal</a>
+                </li>
+                <li class="divider-vertical"></li>
+                <li ui-route="/signin" ng-class="{active: $uiRoute}">
+                    <a ui-sref="contact"  class="navbar-brand OrangePurple">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
