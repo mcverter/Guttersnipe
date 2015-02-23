@@ -1,20 +1,40 @@
 <!-- Static navbar -->
-<div class="navbar  navbar-collapse navbar-fixed-bottom" role="navigation">
-    <!-- div class="navbar-collapse collapse" -->
-    <!-- Right nav -->
-    <ul class="nav navbar-nav navbar-right">
-        <li><a ui-sref="faq" class="navbar-brand OrangePurple">
-            FAQ</a></li>
-        <li  ng-class="{active: $uiRoute}">
-            <a ui-sref="documentation"  class="navbar-brand OrangePurple">
-                Docs</a></li>
-        <li  ng-class="{active: $uiRoute}">
-            <a ui-sref="illlegal"  class="navbar-brand OrangePurple">
-                L@W</a></li>
-        <li  ng-class="{active: $uiRoute}">
-            <a ui-sref="contact"  class="navbar-brand OrangePurple">
-                <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-            </a></li>
-    </ul>
-</div><!--/.nav-collapse -->
+<div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" ui-sref="home">Guttersnipe</a>
+        </div>
+        <!-- Left nav -->
+            <ul class="nav navbar-nav sm">
+                <li><a href="#">Dropdown</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                    </ul>
+                </li>
+            </ul>
 
+            <!-- Right nav -->
+            <ul class="nav navbar-nav navbar-right sm">
+                <li><a ui-sref="faq" class="navbar-brand ">
+                    FAQ</a></li>
+                <li  ng-class="{active: $uiRoute}">
+                    <a ui-sref="documentation"  class="navbar-brand ">
+                        Docs</a></li>
+                <li  ng-class="{active: $uiRoute}">
+                    <a ui-sref="illlegal"  class="navbar-brand ">
+                        L@W</a></li>
+                <li  ng-class="{active: $uiRoute}">
+                    <a ui-sref="contact"  class="navbar-brand ">
+                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                    </a></li>
+            </ul>
+        </div>
+    </div>
+</div>

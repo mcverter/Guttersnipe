@@ -31,7 +31,7 @@ module.exports = {
               'public/lib/angular-bootstrap/ui-bootstrap.js',
               'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
               'public/lib/lodash/dist/lodash.js',
-              'public/lib/smartmenus/dist/smartmenus.js',
+              'public/lib/smartmenus/dist/jquery.smartmenus.js',
               'public/lib/angular-leaflet/dist/angular-leaflet-directive.js',
               '//maps.googleapis.com/maps/api/js?sensor=false',
               'public/lib/moment/moment.js',

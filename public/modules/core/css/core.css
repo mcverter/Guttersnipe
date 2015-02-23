@@ -21,18 +21,22 @@ background-color: red;
     border: 5px solid rgb(182,183,187);
 }
 
+.BlackOnRed > a {
+    color: black;
+}
+
 .RedOnBlack{
     background-color: black;
     color: red ;
     border: 5px solid darkred;
 }
-.RB_Link  {
+.RedOnBlack > a  {
     color: #ff5555
 }
-.RB_Link:hover {
+.RedOnBlack > a:hover {
     color: #ff1111;
 }
-.RB_Link:active {
+.RedOnBlack > a:active {
     color: #ff5555;
 }
 
@@ -83,7 +87,8 @@ html {
     height: 60px;
     background-color: #282828;
 }
+
 .OrangePurple  {
     background-color: #282828;
-   color: rgb(163, 163, 163);
+    color: rgb(163, 163, 163);
 }
