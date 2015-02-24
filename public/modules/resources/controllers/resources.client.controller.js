@@ -3,7 +3,23 @@
 // Resources controller
 angular.module('resources').controller('ResourcesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Resources',
 	function($scope, $stateParams, $location, Authentication, Resources) {
-		$scope.authentication = Authentication;
+
+    $scope.addTime = function(){};
+    $scope.addPlace = function(){};
+    $scope.addThingSummary = function(){};
+    $scope.addThingTaxonomy = function(){};
+
+    $scope.updateTime = function(){};
+    $scope.updatePlace = function(){};
+    $scope.updateThingSummary = function(){};
+    $scope.updateThingTaxonomy = function(){};
+
+    $scope.deleteResource = function(){};
+    $scope.createResource = function(){};
+    $scope.updateResource = function(){};
+    $scope.findResource = function(){};
+
+    $scope.authentication = Authentication;
 
 		// Create new Resource
 		$scope.create = function() {
