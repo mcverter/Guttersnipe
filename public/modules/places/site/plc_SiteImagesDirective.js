@@ -1,6 +1,8 @@
-  (function (angular, _) { 'use strict';
-angular.module('places')
-.directive('address', [function() {
+(function (angular, _) {
+  'use strict';
+
+  angular.module('places')
+    .directive('address', [function() {
       var templateUrl =  'modules/places/site/plc_SiteImagesTemplate.html';
 
       return {
@@ -9,5 +11,5 @@ angular.module('places')
       }
     }]
   );
-
+})(window.angular, window._);
 

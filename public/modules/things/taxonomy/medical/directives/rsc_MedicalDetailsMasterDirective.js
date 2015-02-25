@@ -1,6 +1,7 @@
-  (function (angular, _) { 'use strict';
+(function (angular, _) {
+  'use strict';
 
-    angular.module('things').directive('medicalDetailsMaster', ['things_templates', function(templates) {
+  angular.module('things').directive('medicalDetailsMaster', ['things_templates', function(templates) {
       var templateUrl = templates.medical + 'rsc_MedicalDetailsMasterTemplate.html';
 
       return {
@@ -9,5 +10,5 @@
       }
     }]
   );
-
+})(window.angular, window._);
 

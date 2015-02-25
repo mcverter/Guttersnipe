@@ -1,6 +1,7 @@
-  (function (angular, _) { 'use strict';
+(function (angular, _) {
+  'use strict';
   angular.module('times')
- .directive('scheduleSeasonal', [function() {
+    .directive('scheduleSeasonal', [function() {
       console.log('in seasonal directive');
       var templateUrl = 'modules/times/seasonal/templates/rsc_SeasonalTemplate.html',
         controller = function($scope, $modal) {
@@ -74,5 +75,5 @@
       }
     }]
   );
-
+})(window.angular, window._);
 

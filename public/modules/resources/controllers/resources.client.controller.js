@@ -1,4 +1,5 @@
-(function (angular, _) { 'use strict';
+(function (angular, _) {
+  'use strict';
 
 // Resources controller
   angular.module('resources').controller('ResourcesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Resources',

@@ -1,4 +1,5 @@
-/**
+(function (angular, _) {
+  /**
  * Used to contain the data for creating a resource on Guttersnipe.
  *
  * Each aspect of resource creation is determined by a particular

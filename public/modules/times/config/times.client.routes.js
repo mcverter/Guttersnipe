@@ -1,4 +1,5 @@
-(function (angular, _) { 'use strict';
+(function (angular, _) {
+  'use strict';
 
 //Setting up route
 angular.module('times').config(['$stateProvider',
@@ -23,3 +24,4 @@ angular.module('times').config(['$stateProvider',
 		});
 	}
 ]);
+})(window.angular, window._);

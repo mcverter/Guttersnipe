@@ -1,14 +1,14 @@
-/**
- * Created by Owner on 2/11/15.
- */
+(function (angular, _) {
 
-var BASE_DIR = 'modules/wizard/',
-  TEMPLATES_SUBDIR = 'templates/'
-  ;
+  var BASE_DIR = 'modules/wizard/',
+    TEMPLATES_SUBDIR = 'templates/'
+    ;
 
-var templates = {
-  templateDir: BASE_DIR + TEMPLATES_SUBDIR
-};
+  var templates = {
+    templateDir: BASE_DIR + TEMPLATES_SUBDIR
+  };
 
-angular.module('resources')
-  .constant('wizard_templates', templates)
+  angular.module('resources')
+    .constant('wizard_templates', templates);
+
+})(window.angular, window._);

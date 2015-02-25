@@ -1,4 +1,5 @@
-  (function (angular, _) { 'use strict';
+(function (angular, _) {
+  'use strict';
 
   angular.module('things').directive('housingDetailsConfirmed', ['things_templates', function(templates) {
       var templateUrl = templates.housing + 'rsc_HousingDetailsConfirmedTemplate.html';
@@ -9,5 +10,7 @@
       }
     }]
   );
+})(window.angular,  window._);
+
 
 

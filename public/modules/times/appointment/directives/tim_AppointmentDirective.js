@@ -1,4 +1,5 @@
-  (function (angular, _) { 'use strict';
+(function (angular, _) {
+  'use strict';
 
   angular.module('times').directive('appointment', ['times_templates', function(templates) {
       var templateUrl = 'modules/times/appointment/templates/tim_AppointmentTemplate.html';
@@ -12,5 +13,6 @@
       }
     }]
   );
+})(window.angular, window._);
 
 

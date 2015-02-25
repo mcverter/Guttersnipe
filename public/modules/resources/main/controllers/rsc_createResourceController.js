@@ -1,361 +1,362 @@
-  (function (angular, _) { 'use strict';
-angular.module('resources')
+(function (angular, _) {
+  'use strict';
+  angular.module('resources')
     .controller('CreateResourceController', ['$scope', 'ResourceTaxonomyService',
-    function ($scope, ResourceTaxonomy) {
-      var
-      // THING
-        thing = {
-          headline: '',
-          description: '',
-          type: '',
-          details: {}
-        },
-        isSummarySet = false,
-        isTaxonomySet = false,
-        isTypeSet = false,
-        areDetailsSet = false,
-
-
-      // PLACE:
-        isLocationSet = false,
-        inputAddress = 'Prospect Park',
-        center = {lat: 40.660204,lng: -73.968956, zoom: 14},
-        place = {
-          center: {
-            lat: center.lat,
-            lng: center.lng
-          },
-          description : ''
-        },
-
-        markers =  {
-          mainMarker: {
-            lat: 40.660204,
-            lng: -73.968956,
-            focus: true,
-            message: thing.headline,
-            draggable: true
-          }
-        },
-      // TIME
-        isScheduleSet = false,
-        dates = [],
-        geocoder = {},
-        google = google || {};
-
-      console.log('Google is', google);
-
-      // Google not set if no network connnection
-      if (google && google.maps){
-        geocoder = new google.maps.Geocoder();
-      }
-
-      Object.defineProperties($scope, {
-
+      function ($scope, ResourceTaxonomy) {
+        var
         // THING
-        //
-        //  Summary Template
-        //
-        headline : {
-          enumerable: true,
-          get: function() {
-            return thing.headline;
+          thing = {
+            headline: '',
+            description: '',
+            type: '',
+            details: {}
           },
-          set: function(val) {
-            thing.headline = val;
-          }
-        },
+          isSummarySet = false,
+          isTaxonomySet = false,
+          isTypeSet = false,
+          areDetailsSet = false,
 
-        description : {
-          enumerable: true,
-          get: function() {
-            return thing.description;
+
+        // PLACE:
+          isLocationSet = false,
+          inputAddress = 'Prospect Park',
+          center = {lat: 40.660204,lng: -73.968956, zoom: 14},
+          place = {
+            center: {
+              lat: center.lat,
+              lng: center.lng
+            },
+            description : ''
           },
-          set: function(val) {
-            thing.description = val;
-          }
-        },
 
-        toggleDetail : {
-          enumerable: true,
-          value: function (category, detail) {
-            var idx,
-              selections = category ?
-                thing.details[category]['selections'] :
-                thing.details['selections'];
-
-            if (idx = _.find(selections, detail)) {
-              selections.splice(idx, 1);
+          markers =  {
+            mainMarker: {
+              lat: 40.660204,
+              lng: -73.968956,
+              focus: true,
+              message: thing.headline,
+              draggable: true
             }
-            else {
-              selections.push(detail);
+          },
+        // TIME
+          isScheduleSet = false,
+          dates = [],
+          geocoder = {},
+          google = google || {};
+
+        console.log('Google is', google);
+
+        // Google not set if no network connnection
+        if (google && google.maps){
+          geocoder = new google.maps.Geocoder();
+        }
+
+        Object.defineProperties($scope, {
+
+          // THING
+          //
+          //  Summary Template
+          //
+          headline : {
+            enumerable: true,
+            get: function() {
+              return thing.headline;
+            },
+            set: function(val) {
+              thing.headline = val;
             }
-          }
-        },
-
-        isSummarySet : {
-          enumerable: true,
-          get: function () {
-            return isSummarySet;
           },
-          set: function(val) {
-            isSummarySet = val;
-          }
-        },
 
-        isTypeSet : {
-          enumerable: true,
-          get: function () {
-            return isTypeSet;
+          description : {
+            enumerable: true,
+            get: function() {
+              return thing.description;
+            },
+            set: function(val) {
+              thing.description = val;
+            }
           },
-          set: function(val) {
-            isTypeSet = val;
-          }
-        },
-        areDetailsSet : {
-          enumerable: true,
-          get: function () {
-            return areDetailsSet;
+
+          toggleDetail : {
+            enumerable: true,
+            value: function (category, detail) {
+              var idx,
+                selections = category ?
+                  thing.details[category]['selections'] :
+                  thing.details['selections'];
+
+              if (idx = _.find(selections, detail)) {
+                selections.splice(idx, 1);
+              }
+              else {
+                selections.push(detail);
+              }
+            }
           },
-          set: function(val) {
-            areDetailsSet = val;
-          }
-        },
 
-        // Taxonomy Templates
-        // (Type Template, Details Template)
-        clearTaxonomy : {
-          enumerable: true,
-          value: function() {
-            thing.type = '';
-            thing.details = {};
-            isTaxonomySet = false;
-            areDetailsSet - false;
-            isTypeSet = false;
+          isSummarySet : {
+            enumerable: true,
+            get: function () {
+              return isSummarySet;
+            },
+            set: function(val) {
+              isSummarySet = val;
+            }
+          },
 
-          }
-        },
-        resourceTaxonomy : {
-          enumerable: true,
-          get:  function() {
-            return ResourceTaxonomy;
-          }
-        },
-        unsetType: {
-          enumerable: true,
-          value: function() {
-            isTaxonomySet = false;
-            isTypeSet = false;
-          }
-        },
-        setType : {
-          enumerable: true,
-          value : function(t) {
-            isTypeSet = true;
-            thing.type = t;
-            switch(t) {
-              case 'food':
-                thing.details = {
-                  eating_arrangement: {
-                    selections: []
-                  },
-                  protein: {
-                    selections: []
-                  },
-                  grains: {
-                    selections: []
-                  },
-                  produce:  {
-                    selections: []
-                  },
-                  dairy:  {
+          isTypeSet : {
+            enumerable: true,
+            get: function () {
+              return isTypeSet;
+            },
+            set: function(val) {
+              isTypeSet = val;
+            }
+          },
+          areDetailsSet : {
+            enumerable: true,
+            get: function () {
+              return areDetailsSet;
+            },
+            set: function(val) {
+              areDetailsSet = val;
+            }
+          },
+
+          // Taxonomy Templates
+          // (Type Template, Details Template)
+          clearTaxonomy : {
+            enumerable: true,
+            value: function() {
+              thing.type = '';
+              thing.details = {};
+              isTaxonomySet = false;
+              areDetailsSet - false;
+              isTypeSet = false;
+
+            }
+          },
+          resourceTaxonomy : {
+            enumerable: true,
+            get:  function() {
+              return ResourceTaxonomy;
+            }
+          },
+          unsetType: {
+            enumerable: true,
+            value: function() {
+              isTaxonomySet = false;
+              isTypeSet = false;
+            }
+          },
+          setType : {
+            enumerable: true,
+            value : function(t) {
+              isTypeSet = true;
+              thing.type = t;
+              switch(t) {
+                case 'food':
+                  thing.details = {
+                    eating_arrangement: {
+                      selections: []
+                    },
+                    protein: {
+                      selections: []
+                    },
+                    grains: {
+                      selections: []
+                    },
+                    produce:  {
+                      selections: []
+                    },
+                    dairy:  {
+                      selections: []
+                    }
+                  }
+                  break;
+                case 'medical':
+                  thing.details = {
                     selections: []
                   }
-                }
-                break;
-              case 'medical':
-                thing.details = {
-                  selections: []
-                }
-                break;
-              case 'housing':
-                thing.details = {
-                  selections: []
-                }
-                break;
+                  break;
+                case 'housing':
+                  thing.details = {
+                    selections: []
+                  }
+                  break;
+              }
             }
-          }
-        },
+          },
 
-        type : {
-          enumerable: true,
-          get: function() {
-            return thing.type;
+          type : {
+            enumerable: true,
+            get: function() {
+              return thing.type;
+            },
+            set: function(val) {
+              thing.type = val;
+            }
           },
-          set: function(val) {
-            thing.type = val;
-          }
-        },
-        details : {
-          enumerable: true,
-          get: function() {
-            return thing.details;
+          details : {
+            enumerable: true,
+            get: function() {
+              return thing.details;
+            },
+            set: function(val) {
+              thing.details = val;
+            }
           },
-          set: function(val) {
-            thing.details = val;
-          }
-        },
 
-        isTaxonomySet : {
-          enumerable: true,
-          get: function () {
-            return isTaxonomySet;
+          isTaxonomySet : {
+            enumerable: true,
+            get: function () {
+              return isTaxonomySet;
+            },
+            set: function(val) {
+              isTaxonomySet = val;
+            }
           },
-          set: function(val) {
-            isTaxonomySet = val;
-          }
-        },
 
-        // PLACE
+          // PLACE
 
-        location : {
-          enumerable: true,
-          get: function() {
-            return place.location;
+          location : {
+            enumerable: true,
+            get: function() {
+              return place.location;
+            },
+            set: function(val) {
+              place.location = val;
+            }
           },
-          set: function(val) {
-            place.location = val;
-          }
-        },
-        isLocationSet : {
-          enumerable: true,
-          get: function () {
-            return isLocationSet;
+          isLocationSet : {
+            enumerable: true,
+            get: function () {
+              return isLocationSet;
+            },
+            set: function(val) {
+              isLocationSet = val;
+            }
           },
-          set: function(val) {
-            isLocationSet = val;
-          }
-        },
-        placeDescription : {
-          enumerable: true,
-          get: function() {
-            return place.description;
+          placeDescription : {
+            enumerable: true,
+            get: function() {
+              return place.description;
+            },
+            set: function(val) {
+              place.description = val;
+            }
           },
-          set: function(val) {
-            place.description = val;
-          }
-        },
 
-        inputAddress: {
-          enumerable: true,
-          get: function getInputAdress() {
-            return inputAddress
+          inputAddress: {
+            enumerable: true,
+            get: function getInputAdress() {
+              return inputAddress
+            },
+            set: function setMapTextAdress(val) {
+              inputAddress = val
+            }
           },
-          set: function setMapTextAdress(val) {
-            inputAddress = val
-          }
-        },
 
-        center: {
-          enumerable: true,
-          get: function getCenter() {
-            return center
+          center: {
+            enumerable: true,
+            get: function getCenter() {
+              return center
+            },
+            set: function setCenter(val) {
+              center = val
+            }
           },
-          set: function setCenter(val) {
-            center = val
-          }
-        },
 
-        markers: {
-          enumerable: true,
-          get: function getMarkers() {
-            return markers;
+          markers: {
+            enumerable: true,
+            get: function getMarkers() {
+              return markers;
+            },
+            set: function setMarkers(val) {
+              markers = val
+            }
           },
-          set: function setMarkers(val) {
-            markers = val
-          }
-        },
 
-        locateAddress : {
-          enumerable: true,
-          value: function locateAddress($event) {
-            $event.preventDefault();
-            geocoder.geocode( { 'address': inputAddress }, function(results, status) {
-              if (status == google.maps.GeocoderStatus.OK && results.length > 0) {
-                inputAddress =   results[0].formatted_address;
-                center = {
-                  lat: results[0].geometry.location.k,
-                  lng: results[0].geometry.location.D,
-                  zoom: 15
-                };
-                markers = {
-                  mainMarker: {
+          locateAddress : {
+            enumerable: true,
+            value: function locateAddress($event) {
+              $event.preventDefault();
+              geocoder.geocode( { 'address': inputAddress }, function(results, status) {
+                if (status == google.maps.GeocoderStatus.OK && results.length > 0) {
+                  inputAddress =   results[0].formatted_address;
+                  center = {
                     lat: results[0].geometry.location.k,
                     lng: results[0].geometry.location.D,
-                    focus: true,
-                    message: thing.headline,
-                    draggable: true
-                  }
-                };
-              }
-            })
-          }
-        },
-
-        // TIME
-        weeklyRecurrences : {
-          enumerable: true,
-          get: function() {
-            return time.weeklyRecurrences;
+                    zoom: 15
+                  };
+                  markers = {
+                    mainMarker: {
+                      lat: results[0].geometry.location.k,
+                      lng: results[0].geometry.location.D,
+                      focus: true,
+                      message: thing.headline,
+                      draggable: true
+                    }
+                  };
+                }
+              })
+            }
           },
-          set: function(val) {
-            time.weeklyRecurrences = val;
-          }
-        },
-        seasonalRecurrences : {
-          enumerable: true,
-          get: function() {
-            return time.seasonalRecurrences;
+
+          // TIME
+          weeklyRecurrences : {
+            enumerable: true,
+            get: function() {
+              return time.weeklyRecurrences;
+            },
+            set: function(val) {
+              time.weeklyRecurrences = val;
+            }
           },
-          set: function(val) {
-            time.seasonalRecurrences = val;
-          }
-        },
-        punctualDates : {
-          enumerable: true,
-          get: function() {
-            return time.punctualDates;
+          seasonalRecurrences : {
+            enumerable: true,
+            get: function() {
+              return time.seasonalRecurrences;
+            },
+            set: function(val) {
+              time.seasonalRecurrences = val;
+            }
           },
-          set: function(val) {
-            time.punctualDates = val;
-          }
-        },
+          punctualDates : {
+            enumerable: true,
+            get: function() {
+              return time.punctualDates;
+            },
+            set: function(val) {
+              time.punctualDates = val;
+            }
+          },
 
-        addSeasonalRecurrence : {
-          enumerable: true,
-          value: function(schedule) {
-            time.seasonalRecurrences.push(schedule);
-          }
-        },
-        addWeeklyRecurrence : {
-          enumerable: true,
-          value: function(schedule) {
-            time.weeklyRecurrences.push(schedule);
-          }
-        },
+          addSeasonalRecurrence : {
+            enumerable: true,
+            value: function(schedule) {
+              time.seasonalRecurrences.push(schedule);
+            }
+          },
+          addWeeklyRecurrence : {
+            enumerable: true,
+            value: function(schedule) {
+              time.weeklyRecurrences.push(schedule);
+            }
+          },
 
-        addPunctualDate : {
-          enumerable: true,
-          value: function(schedule) {
-            time.punctualDates.push(schedule);
-          }
-        },
+          addPunctualDate : {
+            enumerable: true,
+            value: function(schedule) {
+              time.punctualDates.push(schedule);
+            }
+          },
 
-        isScheduled : {
-          enumerable: true,
-          get: function () {
-            return false;
+          isScheduled : {
+            enumerable: true,
+            get: function () {
+              return false;
+            }
           }
-        }
-      });
-    }]);})(window.angular, window._)
+        });
+      }]);})(window.angular, window._)

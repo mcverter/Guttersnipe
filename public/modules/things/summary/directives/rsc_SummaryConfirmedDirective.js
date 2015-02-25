@@ -1,7 +1,8 @@
-  (function (angular, _) { 'use strict';
+(function (angular, _) {
+  'use strict';
 
   angular.module('things')
-      .directive('resourceSummaryConfirmed', ['things_templates', function(templates) {
+    .directive('resourceSummaryConfirmed', ['things_templates', function(templates) {
       var templateUrl = templates.summary + 'rsc_SummaryConfirmedTemplate.html';
 
       return {
@@ -11,5 +12,7 @@
       }
     }]
   );
+})(window.angular,  window._);
+
 
 

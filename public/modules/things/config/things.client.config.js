@@ -1,4 +1,6 @@
-/**
+(function (angular, _) {
+  'use strict';
+  /**
  * Created by Owner on 2/11/15.
  */
 
@@ -24,3 +26,5 @@ var templates = {
 
 angular.module('things')
     .constant('things_templates', templates)
+
+})(window.angular, window._);

@@ -1,4 +1,5 @@
-(function (angular, _) { 'use strict';
+(function (angular, _) {
+  'use strict';
 
 // Config HTTP Error Handling
   angular.module('users').config(['$httpProvider',

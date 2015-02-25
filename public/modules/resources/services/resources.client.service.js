@@ -2,16 +2,16 @@
 
   'use strict';
 
- angular.module('resources').factory('Resources', ['$resource',
- function($resource) {
- return $resource('resources/:resourceId', { resourceId: '@_id'
- }, {
- update: {
- method: 'PUT'
- }
- });
- }
- ]);
+  angular.module('resources').factory('Resources', ['$resource',
+    function($resource) {
+      return $resource('resources/:resourceId', { resourceId: '@_id'
+      }, {
+        update: {
+          method: 'PUT'
+        }
+      });
+    }
+  ]);
 
 })(window.angular,  window._);
 

@@ -1,4 +1,5 @@
-(function (angular, _) { 'use strict';
+(function (angular, _) {
+  'use strict';
 
 //Setting up route
   angular.module('wizard').config(['$stateProvider', function($stateProvider) {

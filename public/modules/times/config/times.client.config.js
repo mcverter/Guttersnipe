@@ -1,13 +1,13 @@
-/**
- * Created by Owner on 2/11/15.
- */
+(function (angular, _) {
 
-var BASE_DIR = 'modules/times/',
+  var BASE_DIR = 'modules/times/',
     TEMPLATES_SUBDIR = 'templates/',
     SCHEDULE_SUBDIR = 'schedule/';
 
-var templates = {
+  var templates = {
     schedule: BASE_DIR + SCHEDULE_SUBDIR + TEMPLATES_SUBDIR
-};
+  };
 
-angular.module('times').constant('times_templates', templates)
+  angular.module('times').constant('times_templates', templates)
+
+})(window.angular, window._);

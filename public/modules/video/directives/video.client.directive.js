@@ -1,4 +1,4 @@
-(function (angular, app) {
+(function (angular, _) {
   'use strict';
 
   var template =
@@ -18,4 +18,4 @@
       };
     }
   ])
-})(window.angular, window[ApplicationConfiguration.applicationModuleName]);
+})(window.angular, window._);

@@ -1,7 +1,8 @@
-  (function (angular, _) { 'use strict';
+(function (angular, _) {
+  'use strict';
 
   angular.module('times')
-      .directive('appointmentList', ['times_templates', function(templates) {
+    .directive('appointmentList', ['times_templates', function(templates) {
       var templateUrl = 'modules/times/appointment/templates/tim_AppointmentTemplate.html',
         controller = function($scope) {
 
@@ -17,5 +18,5 @@
       }
     }]
   );
-
+})(window.angular, window._);
 

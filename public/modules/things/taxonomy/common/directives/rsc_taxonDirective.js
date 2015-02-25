@@ -1,7 +1,8 @@
-  (function (angular, _) { 'use strict';
+(function (angular, _) {
+  'use strict';
 
   angular.module('things')
-      .directive('resourceTaxon', ['things_templates', function(templates) {
+    .directive('resourceTaxon', ['things_templates', function(templates) {
       var templateUrl = templates.common + 'rsc_TaxonTemplate.html';
 
       return {
@@ -14,5 +15,5 @@
       }
     }]
   );
-
+})(window.angular, window._);
 

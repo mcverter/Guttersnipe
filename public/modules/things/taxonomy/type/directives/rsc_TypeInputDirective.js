@@ -1,4 +1,5 @@
-  (function (angular, _) { 'use strict';
+(function (angular, _) {
+  'use strict';
 
   angular.module('things').directive('resourceTypeInput', ['things_templates', function(templates) {
       var templateUrl = templates.type + 'rsc_TypeInputTemplate.html';
@@ -9,5 +10,6 @@
       }
     }]
   );
+})(window.angular,  window._);
 
 

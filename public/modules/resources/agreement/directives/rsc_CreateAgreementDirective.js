@@ -12,3 +12,4 @@ angular.module('resources')
       };
     }]
   );
+  })(window.angular,  window._);

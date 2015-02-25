@@ -1,6 +1,7 @@
-  (function (angular, _) { 'use strict';
+(function (angular, _) {
+  'use strict';
   angular.module('times').
-      directive('punctualInput', ['times_templates', function(templates) {
+    directive('punctualInput', ['times_templates', function(templates) {
       var templateUrl = 'modules/times/punctual/templates/rsc_PunctualTemplate.html',
         MSEC_TO_30MIN = 60 * 30 * 1000,
         eventSources = [],
@@ -69,7 +70,7 @@
                             title  : 'event2',
                             start  : start,
                             end    : end,
-                              repeating: repeating
+                            repeating: repeating
                           });
 
                           $modalInstance.dismiss('added');
@@ -135,5 +136,5 @@
       }
     }]
   );
-
+})(window.angular, window._);
 

@@ -1,6 +1,7 @@
-  (function (angular, _) { 'use strict';
+(function (angular, _) {
+  'use strict';
   angular.module('times')
-      .directive('resourceSchedule', ['times_templates', function(templates) {
+    .directive('resourceSchedule', ['times_templates', function(templates) {
       console.log('in resource schedule directive');
       var templateUrl = 'modules/times/common/templates/rsc_ScheduleTemplate.html';
 
@@ -10,5 +11,5 @@
       }
     }]
   );
-
+})(window.angular, window._);
 
