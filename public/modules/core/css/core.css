@@ -16,28 +16,32 @@ gut-video {
 background-color: red;
 }
 .BlackOnRed{
-    background-color: red;
-    color: black;
+    background-color: red !important;
+    color: #222222 !important;
     border: 5px solid rgb(182,183,187);
 }
 
 .BlackOnRed > a {
-    color: black;
+    color: black !important;
+    background-color: red !important;
 }
 
 .RedOnBlack{
-    background-color: black;
-    color: red ;
+    background-color: black !important;
+    color: red !important;
     border: 5px solid darkred;
 }
 .RedOnBlack > a  {
-    color: #ff5555
+    color: red !important;
+    background-color: black !important;
 }
 .RedOnBlack > a:hover {
-    color: #ff1111;
+    color: #ff1111 !important;
+    background-color: black !important;
 }
 .RedOnBlack > a:active {
-    color: #ff5555;
+    color: #ff5555 !important;
+    background-color: black !important;
 }
 
 input {
