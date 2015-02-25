@@ -1,3 +1,64 @@
+/**
+ * @class Taxonomys (Factory):
+ * Returns an object containing all the Novantas Taxonomys,
+ in the Microsoft ui.Taxonomys table
+ *
+ * Private
+ * --------
+ * @field taxonomyFactory:  Returned object
+ * @field taxonomys:  List of Taxonomys
+ * @field afterLoadEventKey : Trigger for reloading the taxonomys from the server
+ *                            and updating the factory
+ * @method initialize : Initializes to taxonomys object
+ * @method getTemplateIds:  Returns the taxonomys which are Templates for new taxonomys
+ * @method loadTaxonomy(taxonomyId):
+ *
+ * Public
+ * --------
+ *
+ * @field all:
+ * @method onLoad(handler):
+ * @method get(taxonomyId)
+ * @method templates()
+ *
+ *
+ * Extern
+ * ------
+ * $api.onLogin(): Provides callback to $api for login
+ *                 Initializes Taxonomys factory
+ * $api.onLogout(): Provides callback to $api for logout
+ *                  Deletes Taxonomy factory
+ * $api.taxonomys.onUpdate(): Provides callback to $api
+ *                  for updating Taxonomy factory
+ *
+
+
+ */
+
+
+/**
+ * Class Taxonomy:
+ * Object representing a Novantas Taxonomy, a row in the Microsoft ui.Taxonomys table
+ *
+ * @field data:
+ * @field state:
+ * @field id:
+ * @field uri:
+ * @field viewUri
+ * @field label:
+ * @field description
+ * @field custom:
+ * @field table:
+ * @field controls
+ * @field widgets:
+ * @field filters:
+ * @field isTemplate
+ * @method $update(name, description):
+ * @method $copy(label, description):
+ * @method $delete
+ */
+
+
 (function (angular, _) {
   'use strict';
 
