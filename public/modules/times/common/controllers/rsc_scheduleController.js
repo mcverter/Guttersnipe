@@ -1,4 +1,4 @@
-    'use strict';
+    (function (angular, _) { 'use strict';
 
     angular.module('resources')
         .controller('ScheduleController', ['$scope', '$compile', 'uiCalendarConfig',
@@ -122,4 +122,4 @@
             /* event sources array*/
             $scope.eventSources = [$scope.events, $scope.eventSource, $scope.eventsF];
             $scope.eventSources2 = [$scope.calEventsExt, $scope.eventsF, $scope.events];
-        }]);
+        }]);})(window.angular, window._)

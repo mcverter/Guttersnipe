@@ -1,3 +1,5 @@
+(function (angular, _) {
+
 'use strict';
 
 //Articles service used for communicating with the articles REST endpoints
@@ -12,3 +14,4 @@ angular.module('articles').factory('Articles', ['$resource',
 		});
 	}
 ]);
+})(window.angular,  window._);

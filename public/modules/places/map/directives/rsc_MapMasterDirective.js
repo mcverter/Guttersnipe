@@ -1,4 +1,4 @@
-'use strict';
+(function (angular, _) { 'use strict';
 
 angular.module('places')
     .directive('mapMaster', ['places_templates', function(templates) {
@@ -9,6 +9,6 @@ angular.module('places')
         templateUrl: templateUrl,
         controller: 'PlacesController'
       }
-    }]);
+    }]);})(window.angular, window._)
 
 

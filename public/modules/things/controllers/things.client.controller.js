@@ -1,4 +1,4 @@
-'use strict';
+(function (angular, _) { 'use strict';
 
 // Things controller
 angular.module('things').controller('ThingsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Things',

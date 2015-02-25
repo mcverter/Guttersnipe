@@ -1,4 +1,4 @@
-  'use strict';
+  (function (angular, _) { 'use strict';
 angular.module('resources')
     .controller('CreateResourceController', ['$scope', 'ResourceTaxonomyService',
     function ($scope, ResourceTaxonomy) {
@@ -358,4 +358,4 @@ angular.module('resources')
           }
         }
       });
-    }]);
+    }]);})(window.angular, window._)

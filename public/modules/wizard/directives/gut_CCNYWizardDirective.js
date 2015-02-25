@@ -1,4 +1,4 @@
-'use strict';
+(function (angular, _) { 'use strict';
 angular.module('wizard')
   .directive('gutCcnyWizard', ['wizard_templates', function(templates) {
     var linker = function(scope, element, attrs) {},

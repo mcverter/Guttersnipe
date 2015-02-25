@@ -1,4 +1,4 @@
-  'use strict';
+  (function (angular, _) { 'use strict';
   angular.module('times')
  .directive('scheduleSeasonal', [function() {
       console.log('in seasonal directive');

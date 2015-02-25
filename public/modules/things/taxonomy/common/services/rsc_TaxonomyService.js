@@ -1,4 +1,4 @@
-  'use strict';
+  (function (angular, _) { 'use strict';
 angular.module('resources')
     .factory('ResourceTaxonomyService', ['$log',
     function ($log) {

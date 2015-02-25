@@ -1,4 +1,4 @@
-  'use strict';
+  (function (angular, _) { 'use strict';
 
   angular.module('places')
       .directive('address', [function() {

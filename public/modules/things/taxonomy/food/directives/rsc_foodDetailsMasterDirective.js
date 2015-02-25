@@ -1,4 +1,4 @@
-  'use strict';
+  (function (angular, _) { 'use strict';
 
   angular.module('things').directive('foodDetailsMaster', ['things_templates', function(templates) {
       var templateUrl = templates.food + 'rsc_FoodDetailsMasterTemplate.html';

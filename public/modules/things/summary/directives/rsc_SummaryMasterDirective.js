@@ -1,4 +1,4 @@
-  'use strict';
+  (function (angular, _) { 'use strict';
 
   angular.module('things')
       .directive('resourceSummary', ['things_templates', function(templates) {

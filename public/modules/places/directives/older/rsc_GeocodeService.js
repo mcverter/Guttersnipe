@@ -1,4 +1,4 @@
-    'use strict';
+    (function (angular, _) { 'use strict';
     angular.module('resources')
         .factory('geocodeService', ['$http',
         function ($http) {
@@ -23,4 +23,4 @@
                 });
 
             return geocoder;
-        }]);
+        }]);})(window.angular, window._)

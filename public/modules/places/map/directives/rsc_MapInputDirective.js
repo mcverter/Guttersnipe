@@ -1,4 +1,4 @@
-'use strict';
+(function (angular, _) { 'use strict';
 
 angular.module('places')
     .directive('mapInput', ['places_templates', function(templates) {
@@ -8,4 +8,4 @@ angular.module('places')
             restrict: 'E',
             templateUrl: templateUrl
         }
-    }]);
+    }]);})(window.angular, window._)

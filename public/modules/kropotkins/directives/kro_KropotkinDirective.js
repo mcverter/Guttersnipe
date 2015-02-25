@@ -1,4 +1,4 @@
-'use strict';
+(function (angular, _) { 'use strict';
 
 // Kropotkins controller
 angular.module('kropotkins').directive('kropotkinQuote', ['Kropotkins', function(Kropotkins) {
@@ -28,4 +28,4 @@ angular.module('kropotkins').directive('kropotkinQuote', ['Kropotkins', function
 
       }]
   };
-}]);
+}]);})(window.angular, window._)

@@ -1,4 +1,4 @@
-'use strict';
+(function (angular, _) { 'use strict';
 
 // Times controller
 angular.module('times').controller('TimesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Times',

@@ -1,3 +1,4 @@
+(function (angular, _) {
 'use strict';
 
 // Things controller
@@ -116,3 +117,4 @@ angular.module('things')
             return taxonomyFactory;
         }
     ])
+})(window.angular,  window._);

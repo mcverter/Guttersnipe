@@ -1,13 +1,30 @@
-'use strict';
+(function (angular, _) {
+
+  'use strict';
+
+ angular.module('resources').factory('Resources', ['$resource',
+ function($resource) {
+ return $resource('resources/:resourceId', { resourceId: '@_id'
+ }, {
+ update: {
+ method: 'PUT'
+ }
+ });
+ }
+ ]);
+
+})(window.angular,  window._);
 
 //Resources service used to communicate Resources REST endpoints
-angular.module('resources').factory('Resources', ['$resource',
-	function($resource) {
-		return $resource('resources/:resourceId', { resourceId: '@_id'
-		}, {
-			update: {
-				method: 'PUT'
-			}
-		});
-	}
-]);
+/*
+ angular.module('resources').factory('Resources', ['$resource',
+ function($resource) {
+ return $resource('resources/:resourceId', { resourceId: '@_id'
+ }, {
+ update: {
+ method: 'PUT'
+ }
+ });
+ }
+ ]);
+ */

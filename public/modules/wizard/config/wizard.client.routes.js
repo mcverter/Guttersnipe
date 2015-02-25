@@ -1,10 +1,10 @@
-'use strict';
+(function (angular, _) { 'use strict';
 
 //Setting up route
-angular.module('wizard').config(['$stateProvider', function($stateProvider) {
-  var RESOURCES_DIR = '';
+  angular.module('wizard').config(['$stateProvider', function($stateProvider) {
+    var RESOURCES_DIR = '';
 
-  // Resource Creation Form
+    // Resource Creation Form
     $stateProvider
       .state('resources_wizard', {
         url: '/resources/wizard',
@@ -57,14 +57,7 @@ angular.module('wizard').config(['$stateProvider', function($stateProvider) {
         templateUrl: RESOURCES_DIR + 'confirm/rsc_createPage.html'
       });
 
-}
-]);
+  }
+  ]);
+})(window.angular, window._)
 
-/**
- * function($stateProvider) {
-  ********************
-   * RESOURCES: CREATE
-   * *******************
-$stateProvider
-
-*/

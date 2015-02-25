@@ -1,4 +1,4 @@
-'use strict';
+(function (angular, _) { 'use strict';
 
 //Times service used to communicate Times REST endpoints
 angular.module('times').factory('Times', ['$resource',

@@ -1,4 +1,4 @@
-'use strict';
+(function (angular, _) { 'use strict';
 
 // Things controller
 angular.module('things').controller('ThingsTaxonomyController', ['ResourceTaxonomyService', '$scope', '$stateParams', '$location', 'Authentication', 'Things',

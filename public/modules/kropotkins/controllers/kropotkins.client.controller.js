@@ -1,4 +1,4 @@
-'use strict';
+(function (angular, _) { 'use strict';
 
 // Kropotkins controller
 angular.module('kropotkins').controller('KropotkinsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Kropotkins',

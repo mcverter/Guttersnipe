@@ -1,4 +1,4 @@
-    'use strict';
+    (function (angular, _) { 'use strict';
 angular.module('resources')
     .controller('LocationController', ['$scope', '$log',
         function ($scope, $log) {
@@ -15,4 +15,4 @@ angular.module('resources')
             });
 
 //            Object.defineProperties($scope, {});
-        }])
+        }]);})(window.angular, window._)

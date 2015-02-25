@@ -1,4 +1,4 @@
-'use strict';
+(function (angular, _) { 'use strict';
 
 angular.module('users').controller('SettingsController', ['$scope', '$http', '$location', 'Users', 'Authentication',
 	function($scope, $http, $location, Users, Authentication) {

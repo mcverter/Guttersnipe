@@ -1,4 +1,4 @@
-'use strict';
+(function (angular, _) { 'use strict';
 
 //Kropotkins service used to communicate Kropotkins REST endpoints
 angular.module('kropotkins').factory('Kropotkins', ['$resource',

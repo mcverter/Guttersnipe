@@ -1,4 +1,4 @@
-  'use strict';
+  (function (angular, _) { 'use strict';
 
   angular.module('resources')
   .controller('MapController', ['$scope', '$log',
@@ -85,4 +85,4 @@
         }
       });
       var moo = 1 +1;
-    }])
+    }]);})(window.angular, window._)

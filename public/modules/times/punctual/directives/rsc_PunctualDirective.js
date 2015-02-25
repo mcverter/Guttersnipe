@@ -1,4 +1,4 @@
-  'use strict';
+  (function (angular, _) { 'use strict';
   angular.module('times').
       directive('punctualInput', ['times_templates', function(templates) {
       var templateUrl = 'modules/times/punctual/templates/rsc_PunctualTemplate.html',

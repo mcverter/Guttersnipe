@@ -1,4 +1,4 @@
-'use strict';
+(function (angular, _) { 'use strict';
 
 //Setting up route
 angular.module('times').config(['$stateProvider',
