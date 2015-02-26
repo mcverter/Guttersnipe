@@ -18,6 +18,11 @@
           url: '/resources/:resourceId',
           templateUrl: 'modules/resources/views/view-resource.client.view.html'
         }).
+        state('findResource', {
+          url: '/resources/find',
+          templateUrl: 'modules/resources/views/find-resource.client.view.html'
+        }).
+
         state('editResource', {
           url: '/resources/:resourceId/edit',
           templateUrl: 'modules/resources/views/edit-resource.client.view.html'
