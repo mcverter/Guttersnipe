@@ -54,7 +54,7 @@
 (function (angular, _) {
   'use strict';
 
-  angular.module('times').factory('Geolocation',
+  angular.module('times').factory('Times',
     function() {
       var timeFactory = {},
         times = {},

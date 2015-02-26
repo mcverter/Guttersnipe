@@ -55,7 +55,7 @@
 (function (angular, _) {
   'use strict';
 
-  angular.module('resources').factory('Geolocation',
+  angular.module('resources').factory('Resources',
     function() {
       var resourceFactory = {},
         resources = {},

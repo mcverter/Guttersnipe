@@ -1,9 +1,15 @@
 <section data-ng-controller="HomeController">
     <div class="text-center jumbotron RedOnBlack">
-        <a ui-sref="createResource" class="btn btn-lg BlackOnRed">
-            Create Resource
-        </a>
+        <ul class="nav nav-pills nav-stacked">
+            <li><a ui-sref="createResource" class="btn btn-lg BlackOnRed">
+                Create Resource
+            </a></li>
+            <li><a ui-sref="searchResource" class="btn btn-lg BlackOnRed">
+                Find Resource
+            </a></li>
+        </ul>
     </div>
+
     <br><hr><br>
     <div class="jumbotron BlackOnRed text-center">
         <a ui-sref="mission">

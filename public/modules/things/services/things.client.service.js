@@ -112,7 +112,7 @@
 (function (angular, _) {
   'use strict';
 
-  angular.module('things').factory('Geolocation',
+  angular.module('things').factory('Things',
     function() {
       var thingFactory = {},
         things = {},
