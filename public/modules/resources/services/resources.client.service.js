@@ -10,8 +10,9 @@
  * @field afterLoadEventKey : Trigger for reloading the resources from the server
  *                            and updating the factory
  * @method initialize : Initializes to resources object
- * @method getTemplateIds:  Returns the resources which are Templates for new resources
  * @method loadResource(resourceId):
+ * @addToResources
+ * @removeFromResources
  *
  * Public
  * --------
@@ -19,7 +20,6 @@
  * @field all:
  * @method onLoad(handler):
  * @method get(resourceId)
- * @method templates()
  *
  *
  * Extern
@@ -31,8 +31,6 @@
  * $api.resources.onUpdate(): Provides callback to $api
  *                  for updating Resource factory
  *
-
-
  */
 
 
@@ -40,19 +38,13 @@
  * Class Resource:
  * Object representing a Novantas Resource, a row in the Microsoft ui.Resources table
  *
- * @field data:
- * @field state:
- * @field id:
- * @field uri:
- * @field viewUri
- * @field label:
- * @field description
- * @field custom:
- * @field table:
- * @field controls
- * @field widgets:
- * @field filters:
- * @field isTemplate
+ * @field data:  All data retreived from Mongo
+
+ * @field id:  ObjectID
+ * @field coordinates: Object {lat, lng}
+ * @field address: String
+ * @field description: String
+
  * @method $update(name, description):
  * @method $copy(label, description):
  * @method $delete

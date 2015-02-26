@@ -10,8 +10,9 @@
  * @field afterLoadEventKey : Trigger for reloading the taxonomys from the server
  *                            and updating the factory
  * @method initialize : Initializes to taxonomys object
- * @method getTemplateIds:  Returns the taxonomys which are Templates for new taxonomys
  * @method loadTaxonomy(taxonomyId):
+ * @addToTaxonomys
+ * @removeFromTaxonomys
  *
  * Public
  * --------
@@ -19,7 +20,6 @@
  * @field all:
  * @method onLoad(handler):
  * @method get(taxonomyId)
- * @method templates()
  *
  *
  * Extern
@@ -31,8 +31,6 @@
  * $api.taxonomys.onUpdate(): Provides callback to $api
  *                  for updating Taxonomy factory
  *
-
-
  */
 
 
@@ -40,19 +38,13 @@
  * Class Taxonomy:
  * Object representing a Novantas Taxonomy, a row in the Microsoft ui.Taxonomys table
  *
- * @field data:
- * @field state:
- * @field id:
- * @field uri:
- * @field viewUri
- * @field label:
- * @field description
- * @field custom:
- * @field table:
- * @field controls
- * @field widgets:
- * @field filters:
- * @field isTemplate
+ * @field data:  All data retreived from Mongo
+
+ * @field id:  ObjectID
+ * @field coordinates: Object {lat, lng}
+ * @field address: String
+ * @field description: String
+
  * @method $update(name, description):
  * @method $copy(label, description):
  * @method $delete

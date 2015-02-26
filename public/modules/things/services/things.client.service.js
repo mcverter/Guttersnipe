@@ -10,6 +10,57 @@
  * @field afterLoadEventKey : Trigger for reloading the things from the server
  *                            and updating the factory
  * @method initialize : Initializes to things object
+ * @method loadThing(thingId):
+ * @addToThings
+ * @removeFromThings
+ *
+ * Public
+ * --------
+ *
+ * @field all:
+ * @method onLoad(handler):
+ * @method get(thingId)
+ *
+ *
+ * Extern
+ * ------
+ * $api.onLogin(): Provides callback to $api for login
+ *                 Initializes Things factory
+ * $api.onLogout(): Provides callback to $api for logout
+ *                  Deletes Thing factory
+ * $api.things.onUpdate(): Provides callback to $api
+ *                  for updating Thing factory
+ *
+ */
+
+
+/**
+ * Class Thing:
+ * Object representing a Novantas Thing, a row in the Microsoft ui.Things table
+ *
+ * @field data:  All data retreived from Mongo
+
+ * @field id:  ObjectID
+ * @field coordinates: Object {lat, lng}
+ * @field address: String
+ * @field description: String
+
+ * @method $update(name, description):
+ * @method $copy(label, description):
+ * @method $delete
+ */
+/**
+ * @class Things (Factory):
+ * Returns an object containing all the Novantas Things,
+ in the Microsoft ui.Things table
+ *
+ * Private
+ * --------
+ * @field thingFactory:  Returned object
+ * @field things:  List of Things
+ * @field afterLoadEventKey : Trigger for reloading the things from the server
+ *                            and updating the factory
+ * @method initialize : Initializes to things object
  * @method getTemplateIds:  Returns the things which are Templates for new things
  * @method loadThing(thingId):
  *

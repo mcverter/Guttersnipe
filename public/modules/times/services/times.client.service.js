@@ -10,8 +10,9 @@
  * @field afterLoadEventKey : Trigger for reloading the times from the server
  *                            and updating the factory
  * @method initialize : Initializes to times object
- * @method getTemplateIds:  Returns the times which are Templates for new times
  * @method loadTime(timeId):
+ * @addToTimes
+ * @removeFromTimes
  *
  * Public
  * --------
@@ -19,7 +20,6 @@
  * @field all:
  * @method onLoad(handler):
  * @method get(timeId)
- * @method templates()
  *
  *
  * Extern
@@ -31,8 +31,6 @@
  * $api.times.onUpdate(): Provides callback to $api
  *                  for updating Time factory
  *
-
-
  */
 
 
@@ -40,19 +38,13 @@
  * Class Time:
  * Object representing a Novantas Time, a row in the Microsoft ui.Times table
  *
- * @field data:
- * @field state:
- * @field id:
- * @field uri:
- * @field viewUri
- * @field label:
- * @field description
- * @field custom:
- * @field table:
- * @field controls
- * @field widgets:
- * @field filters:
- * @field isTemplate
+ * @field data:  All data retreived from Mongo
+
+ * @field id:  ObjectID
+ * @field coordinates: Object {lat, lng}
+ * @field address: String
+ * @field description: String
+
  * @method $update(name, description):
  * @method $copy(label, description):
  * @method $delete

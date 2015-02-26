@@ -10,8 +10,9 @@
  * @field afterLoadEventKey : Trigger for reloading the users from the server
  *                            and updating the factory
  * @method initialize : Initializes to users object
- * @method getTemplateIds:  Returns the users which are Templates for new users
  * @method loadUser(userId):
+ * @addToUsers
+ * @removeFromUsers
  *
  * Public
  * --------
@@ -19,7 +20,6 @@
  * @field all:
  * @method onLoad(handler):
  * @method get(userId)
- * @method templates()
  *
  *
  * Extern
@@ -31,8 +31,6 @@
  * $api.users.onUpdate(): Provides callback to $api
  *                  for updating User factory
  *
-
-
  */
 
 
@@ -40,19 +38,13 @@
  * Class User:
  * Object representing a Novantas User, a row in the Microsoft ui.Users table
  *
- * @field data:
- * @field state:
- * @field id:
- * @field uri:
- * @field viewUri
- * @field label:
- * @field description
- * @field custom:
- * @field table:
- * @field controls
- * @field widgets:
- * @field filters:
- * @field isTemplate
+ * @field data:  All data retreived from Mongo
+
+ * @field id:  ObjectID
+ * @field coordinates: Object {lat, lng}
+ * @field address: String
+ * @field description: String
+
  * @method $update(name, description):
  * @method $copy(label, description):
  * @method $delete
