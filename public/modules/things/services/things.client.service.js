@@ -35,21 +35,6 @@
 
 
 /**
- * Class Thing:
- * Object representing a Novantas Thing, a row in the Microsoft ui.Things table
- *
- * @field data:  All data retreived from Mongo
-
- * @field id:  ObjectID
- * @field coordinates: Object {lat, lng}
- * @field address: String
- * @field description: String
-
- * @method $update(name, description):
- * @method $copy(label, description):
- * @method $delete
- */
-/**
  * @class Things (Factory):
  * Returns an object containing all the Novantas Things,
  in the Microsoft ui.Things table
@@ -82,39 +67,16 @@
  * $api.things.onUpdate(): Provides callback to $api
  *                  for updating Thing factory
  *
-
-
  */
 
 
-/**
- * Class Thing:
- * Object representing a Novantas Thing, a row in the Microsoft ui.Things table
- *
- * @field data:
- * @field state:
- * @field id:
- * @field uri:
- * @field viewUri
- * @field label:
- * @field description
- * @field custom:
- * @field table:
- * @field controls
- * @field widgets:
- * @field filters:
- * @field isTemplate
- * @method $update(name, description):
- * @method $copy(label, description):
- * @method $delete
- */
 
 (function (angular, _) {
   'use strict';
 
   angular.module('things').factory('Things',
     function() {
-      var thingFactory = {},
+      var thingFactory,
         things = {},
         afterLoadEventKey = '$thing.afterLoad',
         initialize = function $thingInitialize(state) {
@@ -149,6 +111,24 @@
         self.data = data || {};
         self.state = {};
       }
+
+
+      /**
+       * Class Thing:
+       * Object representing a Guttersnipe Thing,
+       * a row in the mongo guttersnipe.place Collection
+       *
+       * @field data:  Received from server
+
+       * @field id: ObjectId
+       * @field headline: String
+       * @field summary: String
+       * @field taxonomy: Taxonomy Object
+
+       * @method $update(name, description):
+       * @method $copy(label, description):
+       * @method $delete
+       */
 
 
 
