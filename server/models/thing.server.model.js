@@ -12,23 +12,13 @@ var mongoose = require('mongoose'),
  * @type {Schema}
  */
 
-var TaxonSchema = new Schema({
-  name : {
-    type: String,
-    required: true
-  },
-  icon: {
-    type: String,
-    required: true
-  }
-});
-
 var TaxonomySchema = new Schema({
   type : {
-    type: Schema.ObjectId,
-    ref: 'TaxonSchema'
+    type: String,
+    required: true
   },
-  details : [TaxonSchema]
+  subtypes : [String],
+  details : [String]
 })
 
 var DescriptionSchema = new Schema ({
@@ -39,6 +29,10 @@ var DescriptionSchema = new Schema ({
   summary : {
     type: String,
     required: true
+  },
+  notes : {
+    type: String,
+    required: false
   }
 });
 

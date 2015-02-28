@@ -14,7 +14,7 @@ var mongoose = require('mongoose'),
  */
 
 var ScheduleSchema = new Schema ({
-  startTime: {
+  startDateTime: {
     type: Date,
     required: true
   },
@@ -29,7 +29,11 @@ var ScheduleSchema = new Schema ({
 });
 
 var TimeSchema = new Schema ({
-  schedules : [ScheduleSchema]
+  schedules : [ScheduleSchema],
+  notes : {
+    type: String,
+    required: false
+  }
 });
 mongoose.model('Schedule', ScheduleSchema);
 mongoose.model('Time', TimeSchema);

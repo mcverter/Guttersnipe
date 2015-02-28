@@ -7,17 +7,28 @@ var mongoose = require('mongoose'),
   Schema = mongoose.Schema;
 
 var ResourceSchema = new Schema({
+  method: {
+    type: String,
+    required: false
+  },
+  notes:  {
+    type: String,
+    required: false
+  },
   thing: {
     type: Schema.ObjectId,
-    ref: 'ThingSchema'
+    ref: 'ThingSchema',
+    required: true
   },
   place: {
     type: Schema.ObjectId,
-    ref: 'PlaceSchema'
+    ref: 'PlaceSchema',
+    required: true
   },
   time: {
     type: Schema.ObjectId,
-    ref: 'TimeSchema'
+    ref: 'TimeSchema',
+    required: true
   },
   created: {
     type: Date,

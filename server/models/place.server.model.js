@@ -1,28 +1,10 @@
 'use strict';
 
-/**
- * Module dependencies.
- */
 var mongoose = require('mongoose'),
 	Schema = mongoose.Schema;
 
-/**
- * Place Schema
- *
- * @type {Schema}
- */
-
 var PlaceSchema = new Schema ({
-  placeDescription : {
-    type: String,
-    required: true
-  },
-  normalizedAddress : {
-    type: String,
-    required: true
-  },
-
-  location : {
+  coordinates : {
     lat : {
       type: Number,
       required: true
@@ -31,6 +13,18 @@ var PlaceSchema = new Schema ({
       type: Number,
       required: true
     }
+  },
+  name: {
+    type: String,
+    required: true
+  },
+  address : {
+    type: String,
+    required: true
+  },
+  notes : {
+    type: String,
+    required: false
   }
 });
 
