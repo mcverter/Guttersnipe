@@ -2,11 +2,11 @@ var mongoose = require('./config/db'),
   _ = require('lodash')
   ;
 exports.up = function(db, next){
-    next();
+  next();
 };
 
 exports.down = function(db, next){
-    next();
+  next();
 };
 
 
