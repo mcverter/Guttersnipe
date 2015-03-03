@@ -1,7 +1,7 @@
 
 var mongodb = require('mongodb'),
   _ = require('lodash'),
-  kropotkinData = require ('./data/kropotkin.data'),
+  kropotkinData = require ('./data/kropotkin.data.js'),
   bread = kropotkinData.conquestofbread
   ;
 

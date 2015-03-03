@@ -1,4 +1,8 @@
 'use strict';
+/**
+ *
+ * Module dependencies.
+ */
 
 // Init the application configuration module for AngularJS application
 var ApplicationConfiguration = (function() {

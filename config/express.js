@@ -1,15 +1,6 @@
 'use strict';
 
 /**
- *
- *  'ui.router',
- 'leaflet-directive',
- 'mgo-angular-wizard',
- 'ui.calendar',
- 'ui.bootstrap',
- 'debug',
- 'ngAnimate',
-
  * Module dependencies.
  */
 var fs = require('fs'),
@@ -48,8 +39,6 @@ module.exports = function(db) {
 	app.locals.facebookAppId = config.facebook.clientID;
 	app.locals.jsFiles = config.getJavaScriptAssets();
 	app.locals.cssFiles = config.getCSSAssets();
-
-    console.log('js files:', app.locals.jsFiles);
 
 	// Passing the request url to environment locals
 	app.use(function(req, res, next) {
