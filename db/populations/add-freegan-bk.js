@@ -4,22 +4,13 @@ var db = require('../config/db'),
   bkFreeganData = require ('../data/bk.freegan.data.js'),
   resources = bkFreeganData.resources;
 
-var Resource = mongoose.model('Resource'),
-  Thing = mongoose.model('Thing'),
-  Place = mongoose.model('Place'),
-  Time = mongoose.model('Time');
+var Resource = mongoose.model('Resource');
 
 console.log('add freegan bk up');
-_.forEach(resources, function(rsc) {
-  var place = rsc.place,
-    time = rsc.time,
-    thing = rsc.thing,
-    method = rsc.method,
-    notes = rsc.notes;
-
-
-  Resource.create(rsc,
+_.forEach(resources, function(data) {
+  Resource.create(data,
     function (err, resource) {
+      console.log("Data", data);
       if (err) {
         console.log('Mongoose error :', err);
       } else {

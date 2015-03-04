@@ -2,7 +2,7 @@
 
 var mongoose = require('mongoose'),
   db = 'mongodb://localhost/guttersnipe-dev',
-  model_dir = '../../models/',
+  model_dir = '../../server/models/',
   Place = require(model_dir + 'place.server.model'),
   Kropotkin = require(model_dir + 'kropotkin.server.model'),
   Thing = require(model_dir + 'thing.server.model'),
