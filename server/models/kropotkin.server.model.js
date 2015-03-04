@@ -34,4 +34,4 @@ KropotkinSchema.statics.random = function(cb) {
 
 var Kropotkin = mongoose.model('Kropotkin', KropotkinSchema);
 
-mongoose.model('Kropotkin', KropotkinSchema);
+module.exports = Kropotkin;

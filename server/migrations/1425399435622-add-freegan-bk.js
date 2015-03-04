@@ -1,11 +1,33 @@
-var mongoose = require('./config/db'),
-  _ = require('lodash')
-  ;
-exports.up = function(db, next){
+var db = require('./config/db'),
+  _ = require('lodash'),
+  Place = db.Place,
+  Time = db.Time,
+  Thing = db.Thing,
+  Resource = db.Resource,
+  bkFreeganData = require ('./data/bk.freegan.data.js'),
+  resources = bkFreeganData.resources;
+
+console.log(resources);
+
+
+exports.up = function(next){
+  console.log('add freegan bk up');
+  _.forEach(resources, function(data) {
+    console.log('Freegan Record', data);
+    Resource.create(data,
+      function (err, resource) {
+        if (err) {
+          console.err('Mongoose error :', err);
+        } else {
+          console.log('Resource saved!', resource);
+        }
+      });
+  });
   next();
 };
 
-exports.down = function(db, next){
+exports.down = function(next){
+  console.log('add freegan bk down');
   next();
 };
 

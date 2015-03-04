@@ -28,4 +28,4 @@ var PlaceSchema = new Schema ({
   }
 });
 
-mongoose.model('Place', PlaceSchema);
+var Place = mongoose.model('Place', PlaceSchema);
