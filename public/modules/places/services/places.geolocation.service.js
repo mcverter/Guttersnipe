@@ -36,7 +36,7 @@
 
               $event.preventDefault();
               geocoder.geocode(
-                { "address": address },
+                { 'address': address },
                 function (results, status) {
                   if (status == google.maps.GeocoderStatus.OK
                     && results.length > 0) {

@@ -1,30 +1,52 @@
-(function (angular, _) { 'use strict';
+(function (angular, _) {
+  'use strict';
 
+// Resources controller
   angular.module('resources').controller('ResourcesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Resources',
     function($scope, $stateParams, $location, Authentication, Resources) {
+
+      $scope.addTime = function(){};
+      $scope.addPlace = function(){};
+      $scope.addThingSummary = function(){};
+      $scope.addThingTaxonomy = function(){};
+
+      $scope.updateTime = function(){};
+      $scope.updatePlace = function(){};
+      $scope.updateThingSummary = function(){};
+      $scope.updateThingTaxonomy = function(){};
+
+      $scope.deleteResource = function(){};
+      $scope.createResource = function(){};
+      $scope.updateResource = function(){};
+      $scope.findResource = function(){};
+
       $scope.authentication = Authentication;
 
+      // Create new Resource
       $scope.create = function() {
-        var resource = new Resources({
-          title: this.title,
-          content: this.content
+        // Create new Resource object
+        var resource = new Resources ({
+          name: this.name
         });
+
+        // Redirect after save
         resource.$save(function(response) {
           $location.path('resources/' + response._id);
 
-          $scope.title = '';
-          $scope.content = '';
+          // Clear form fields
+          $scope.name = '';
         }, function(errorResponse) {
           $scope.error = errorResponse.data.message;
         });
       };
 
+      // Remove existing Resource
       $scope.remove = function(resource) {
-        if (resource) {
+        if ( resource ) {
           resource.$remove();
 
           for (var i in $scope.resources) {
-            if ($scope.resources[i] === resource) {
+            if ($scope.resources [i] === resource) {
               $scope.resources.splice(i, 1);
             }
           }
@@ -35,6 +57,7 @@
         }
       };
 
+      // Update existing Resource
       $scope.update = function() {
         var resource = $scope.resource;
 
@@ -45,10 +68,12 @@
         });
       };
 
+      // Find a list of Resources
       $scope.find = function() {
         $scope.resources = Resources.query();
       };
 
+      // Find existing Resource
       $scope.findOne = function() {
         $scope.resource = Resources.get({
           resourceId: $stateParams.resourceId
@@ -56,4 +81,4 @@
       };
     }
   ]);
-})(window.angular, window._);
+})(window.angular, window._)

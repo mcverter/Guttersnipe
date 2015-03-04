@@ -25,7 +25,7 @@
         $scope.taxonomy.isTypeSet = true;
         $scope.taxonomy.type = t;
         switch(t) {
-          case "food":
+          case 'food':
             $scope.taxonomy.details = {
               eating_arrangement: {
                 selections: []
@@ -44,12 +44,12 @@
               }
             }
             break;
-          case "medical":
+          case 'medical':
             $scope.taxonomy.details = {
               selections: []
             }
             break;
-          case "housing":
+          case 'housing':
             $scope.taxonomy.details = {
               selections: []
             }

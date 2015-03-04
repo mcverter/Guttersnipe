@@ -47,12 +47,14 @@
 
       $scope.find = function() {
         $scope.articles = Articles.query();
+        console.log('Scope Articles ', $scope.articles);
       };
 
       $scope.findOne = function() {
         $scope.article = Articles.get({
           articleId: $stateParams.articleId
         });
+        console.log('Scope Article ', $scope.article);
       };
     }
   ]);

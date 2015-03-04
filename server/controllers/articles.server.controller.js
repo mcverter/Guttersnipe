@@ -12,6 +12,7 @@ var mongoose = require('mongoose'),
  * Create a article
  */
 exports.create = function(req, res) {
+  console.log('Creating Article ', req.body)
 	var article = new Article(req.body);
 	article.user = req.user;
 
@@ -73,13 +74,19 @@ exports.delete = function(req, res) {
  * List of Articles
  */
 exports.list = function(req, res) {
+  var articles = Article.find();
+
+  console.log(articles);
 	Article.find().sort('-created').populate('user', 'displayName').exec(function(err, articles) {
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)
 			});
 		} else {
-			res.json(articles);
+			var json = res.json(articles);
+      console.log('JSON', json)
+//      console.log('JSON Model Collection', json.mongooseCollection.model.collection)
+
 		}
 	});
 };

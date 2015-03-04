@@ -31,7 +31,7 @@
 
       $scope.locateAddress =  function locateAddress($event) {
         $event.preventDefault();
-        geocoder.geocode( { "address": $scope.place.address }, function(results, status) {
+        geocoder.geocode( { 'address': $scope.place.address }, function(results, status) {
           if (status == google.maps.GeocoderStatus.OK && results.length > 0) {
             $scope.place.address =   results[0].formatted_address;
             $scope.place.center = {
@@ -44,7 +44,7 @@
                 lat: results[0].geometry.location.k,
                 lng: results[0].geometry.location.D,
                 focus: true,
-                message: "Resource Location",
+                message: 'Resource Location',
                 draggable: true
               }
             };
