@@ -18,23 +18,78 @@ var ResourceSchema = new Schema({
 
 
   thing: {
-    type: Schema.ObjectId,
-    ref: 'ThingSchema',
-    required: true
+    description: {
+      headline : {
+        type: String,
+        required: true
+      },
+      summary : {
+        type: String,
+        required: true
+      },
+      notes : {
+        type: String,
+        required: false
+      }
+    },
+    taxonomy : {
+      type : {
+        type: String,
+        required: true
+      },
+      subtypes : [String],
+      details : [String]
+    }
   },
 
 
   place: {
-    type: Schema.ObjectId,
-    ref: 'PlaceSchema',
-    required: true
+    coordinates : {
+      lat : {
+        type: Number,
+        required: true
+      },
+      lng : {
+        type: Number,
+        required: true
+      }
+    },
+    name: {
+      type: String,
+      required: true
+    },
+    address : {
+      type: String,
+      required: true
+    },
+    notes : {
+      type: String,
+      required: false
+    }
   },
 
 
   time: {
-    type: Schema.ObjectId,
-    ref: 'TimeSchema',
-    required: true
+    schedules : [
+      {
+        startDateTime: {
+          type: Date,
+          required: true
+        },
+        duration : {
+          type: Number,
+          required: true
+        },
+        recurrence: {
+          type: String,
+          required: false
+        }
+      }
+    ],
+    notes : {
+      type: String,
+      required: false
+    }
   },
 
 

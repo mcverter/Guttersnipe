@@ -15,25 +15,18 @@ _.forEach(resources, function(rsc) {
     time = rsc.time,
     thing = rsc.thing,
     method = rsc.method,
-    notes = rsc.notes,
-    rsc_place = new Place(place),
-    rsc_time = new Time(time),
-    rsc_thing = new Thing(thing);
+    notes = rsc.notes;
 
 
-//  console.log('Freegan Record', data);
-  Resource.create({
-      place : rsc_place,
-      time : rsc_time,
-      thing : rsc_thing,
-      method: method,
-      notes: notes
-    },
+  Resource.create(rsc,
     function (err, resource) {
       if (err) {
         console.log('Mongoose error :', err);
       } else {
         console.log('Resource saved!', resource);
+        console.log('Time', resource.time);
+        console.log('Thing', resource.thing);
+        console.log('Place', resource.place);
       }
     });
 });
