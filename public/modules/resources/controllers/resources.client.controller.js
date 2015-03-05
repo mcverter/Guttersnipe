@@ -47,6 +47,7 @@
 
       $scope.find = function() {
         $scope.resources = Resources.query();
+        console.log('Scope Resources', $scope.resources);
       };
 
       $scope.findOne = function() {
