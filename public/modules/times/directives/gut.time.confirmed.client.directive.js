@@ -1,8 +1,8 @@
 (function (angular, _) {
   'use strict';
 
-  angular.module('resources').directive('gutResourceNotes', ['resource_templates', function(templates) {
-      var templateUrl = templates.main + 'resource-notes.template.html';
+  angular.module('resources').directive('gutTimeConfirmed', ['resource_templates', function(templates) {
+      var templateUrl = templates.main + 'confirmed-resource.template.html';
       console.log('In gut resource confirmed');
 
       return {

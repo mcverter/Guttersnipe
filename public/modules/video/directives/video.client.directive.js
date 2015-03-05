@@ -5,7 +5,7 @@
       '<video ' +
       '   src="modules/video/content/vid_ClashGuttersnipe.mp4">' +
       '</video>',
-    templateUrl = '/modules/video/views/video.client.template.html';
+    templateUrl = '/modules/video/templates/video.client.template.html';
 
   angular.module('core').directive('gutVideo', [
     function () {

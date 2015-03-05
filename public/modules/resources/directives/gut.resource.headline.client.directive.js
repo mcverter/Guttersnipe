@@ -1,7 +1,7 @@
 (function (angular, _) {
   'use strict';
 
-  angular.module('resources').directive('gutResourceNotes', ['resource_templates', function(templates) {
+  angular.module('resources').directive('gutResourceHeadline', ['resource_templates', function(templates) {
       var templateUrl = templates.main + 'resource-headline.template.html';
       console.log('In gut resource confirmed');
 

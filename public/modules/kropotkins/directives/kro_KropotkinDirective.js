@@ -2,7 +2,7 @@
 
 // Kropotkins controller
 angular.module('kropotkins').directive('kropotkinQuote', ['Kropotkins', function(Kropotkins) {
-  var templateUrl =  'modules/kropotkins/views/kropotkinDirective.view.html';
+  var templateUrl =  'modules/kropotkins/templates/kropotkinDirective.view.html';
 
   return {
     restrict: 'E',

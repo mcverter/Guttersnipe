@@ -4,7 +4,7 @@
 // Setting up route
   angular.module('docs').config(['$stateProvider',
     function($stateProvider) {
-      var DOC_DIR = 'modules/docs/views/',
+      var DOC_DIR = 'modules/docs/templates/',
         PRESENTATION_DIR = DOC_DIR + 'CCNYProposal/presentation/';
 
 

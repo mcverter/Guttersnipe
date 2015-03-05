@@ -8,19 +8,19 @@ angular.module('times').config(['$stateProvider',
 		$stateProvider.
 		state('listTimes', {
 			url: '/times',
-			templateUrl: 'modules/times/views/list-times.client.view.html'
+			templateUrl: 'modules/times/templates/list-times.client.view.html'
 		}).
 		state('createTime', {
 			url: '/times/create',
-			templateUrl: 'modules/times/views/create-time.client.view.html'
+			templateUrl: 'modules/times/templates/create-time.client.view.html'
 		}).
 		state('viewTime', {
 			url: '/times/:timeId',
-			templateUrl: 'modules/times/views/view-time.client.view.html'
+			templateUrl: 'modules/times/templates/view-time.client.view.html'
 		}).
 		state('editTime', {
 			url: '/times/:timeId/edit',
-			templateUrl: 'modules/times/views/edit-time.client.view.html'
+			templateUrl: 'modules/times/templates/edit-time.client.view.html'
 		});
 	}
 ]);

@@ -8,24 +8,24 @@
       $stateProvider.
         state('listResources', {
           url: '/resources',
-          templateUrl: 'modules/resources/views/list-resources.client.view.html'
+          templateUrl: 'modules/resources/templates/list-resources.client.view.html'
         }).
         state('createResource', {
           url: '/resources/create',
-          templateUrl: 'modules/resources/views/create-resource.client.view.html'
+          templateUrl: 'modules/resources/templates/create-resource.client.view.html'
         }).
         state('viewResource', {
           url: '/resources/:resourceId',
-          templateUrl: 'modules/resources/views/view-resource.client.view.html'
+          templateUrl: 'modules/resources/templates/view-resource.client.view.html'
         }).
         state('findResource', {
           url: '/resources/find',
-          templateUrl: 'modules/resources/views/find-resource.client.view.html'
+          templateUrl: 'modules/resources/templates/find-resource.client.view.html'
         }).
 
         state('editResource', {
           url: '/resources/:resourceId/edit',
-          templateUrl: 'modules/resources/views/edit-resource.client.view.html'
+          templateUrl: 'modules/resources/templates/edit-resource.client.view.html'
         });
     }
   ]);
