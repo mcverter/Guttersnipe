@@ -1,0 +1,19 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Place</h3>
+    </div>
+    <div class="panel-body">
+        <em>Address: </em>    {{resource.place.address}} <br />
+        <leaflet markers="places.markers" center="place.center" defaults="defaults" width="640px" height="480px"></leaflet>    </div> <br />
+    <em>Notes: </em>  {{resource.place.notes}}
+<!--
+    place: {
+      coordinates : {
+        lat: 40.693483,
+        lng: -73.991377
+      },
+      address: '175 Remsen St    Brooklyn, NY 11201',
+      notes: 'Remsen St across from Borough Hall, between Court and Clinton Sts, Brooklyn'
+    },
+-->
+</div>
