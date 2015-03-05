@@ -10,7 +10,7 @@
     ;
 
   var templates = {
-    main: BASE_DIR + MAIN_SUBDIR + TEMPLATES_SUBDIR,
+    main: BASE_DIR + TEMPLATES_SUBDIR,
     agreement: BASE_DIR + AGREEMENT_SUBDIR + TEMPLATES_SUBDIR,
     instructions: BASE_DIR + INSTRUCTIONS_SUBDIR + TEMPLATES_SUBDIR
   };

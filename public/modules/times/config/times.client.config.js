@@ -5,6 +5,7 @@
     SCHEDULE_SUBDIR = 'schedule/';
 
   var templates = {
+    main: BASE_DIR + TEMPLATES_SUBDIR,
     schedule: BASE_DIR + SCHEDULE_SUBDIR + TEMPLATES_SUBDIR
   };
 

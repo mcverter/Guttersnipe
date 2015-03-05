@@ -1,10 +1,10 @@
 (function (angular, _) {
   'use strict';
   /**
- * Created by Owner on 2/11/15.
- */
+   * Created by Owner on 2/11/15.
+   */
 
-var BASE_DIR = 'modules/things/',
+  var BASE_DIR = 'modules/things/',
     TEMPLATES_SUBDIR = 'templates/',
     SUMMARY_SUBDIR = 'summary/',
     TAXONOMY_SUBDIR = 'taxonomy/',
@@ -15,16 +15,17 @@ var BASE_DIR = 'modules/things/',
     TYPE_SUBDIR = TAXONOMY_SUBDIR + 'type/'
     ;
 
-var templates = {
+  var templates = {
+    main: BASE_DIR + TEMPLATES_SUBDIR,
     summary: BASE_DIR + SUMMARY_SUBDIR + TEMPLATES_SUBDIR,
     common: BASE_DIR + COMMON_SUBDIR + TEMPLATES_SUBDIR,
     food: BASE_DIR + FOOD_SUBDIR + TEMPLATES_SUBDIR,
     medical: BASE_DIR + MEDICAL_SUBDIR + TEMPLATES_SUBDIR,
     housing: BASE_DIR + HOUSING_SUBDIR + TEMPLATES_SUBDIR,
     type: BASE_DIR + TYPE_SUBDIR + TEMPLATES_SUBDIR
-};
+  };
 
-angular.module('things')
+  angular.module('things')
     .constant('things_templates', templates)
 
 })(window.angular, window._);

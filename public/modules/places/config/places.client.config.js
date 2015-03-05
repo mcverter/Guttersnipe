@@ -7,6 +7,7 @@ var BASE_DIR = 'modules/places/',
     MAP_SUBDIR = 'map/';
 
 var templates = {
+  main: BASE_DIR + TEMPLATES_SUBDIR,
     map: BASE_DIR + MAP_SUBDIR + TEMPLATES_SUBDIR
 };
 

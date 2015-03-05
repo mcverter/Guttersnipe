@@ -3,9 +3,8 @@
         <h1>Resources</h1>
     </div>
     <div class="list-group">
-
         <a data-ng-repeat="resource in resources" data-ng-href="#/resources/{{resource._id}}" class="list-group-item">
-            <gut-resource-confirmed></gut-resource-confirmed>
+            <gut-resource-li></gut-resource-li>
 			<small class="list-group-item-text">
 				Created by
 				<span data-ng-bind="resource.created | date:'medium'"></span>
