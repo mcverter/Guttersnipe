@@ -3,10 +3,9 @@
         <h3 class="panel-title">Thing</h3>
     </div>
     <div class="panel-body">
-
         <dl> Description
             <li>
-                {{resource.thing.summary.description}}
+                {{resource.thing.description.summary}}
             </li>
         </dl>
 
@@ -17,7 +16,7 @@
         </dl>
 
         <dl> Subtypes
-            <li ng-repeat="subtype in resource.thing.taxonomy.type">
+            <li ng-repeat="subtype in resource.thing.taxonomy.subtypes">
                 {{subtype}}
             </li>
         </dl>
