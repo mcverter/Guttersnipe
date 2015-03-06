@@ -7,7 +7,7 @@
       return {
         restrict: 'E',
         templateUrl: templateUrl
-      }
+      };
     }]
   );
 })(window.angular,  window._);

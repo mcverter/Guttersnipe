@@ -1,6 +1,5 @@
-/**
- * Created by mitchell on 2/23/2015.
- */
+'use strict';
+
 var controller = function($scope) {
   $scope.onRightClick = '';
-}
+};

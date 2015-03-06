@@ -16,5 +16,5 @@
   };
 
   angular.module('resources')
-    .constant('resource_templates', templates)
+    .constant('resource_templates', templates);
 })(window.angular,  window._);

@@ -1,6 +1,6 @@
-function (angular, _) { 'use strict';
-
-(function() {
+(function (angular, _) {
+  'use strict';
+/*
 	describe('HeaderController', function() {
 		//Initialize global variables
 		var scope,
@@ -20,5 +20,5 @@ function (angular, _) { 'use strict';
 		it('should expose the authentication service', function() {
 			expect(scope.authentication).toBeTruthy();
 		});
-	});
-})();
+*/
+})(window.angular, window._);

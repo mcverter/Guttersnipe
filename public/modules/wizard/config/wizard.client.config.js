@@ -1,4 +1,5 @@
 (function (angular, _) {
+  'use strict';
 
   var BASE_DIR = 'modules/wizard/',
     TEMPLATES_SUBDIR = 'templates/'

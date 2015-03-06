@@ -6,8 +6,11 @@
 
       return {
         restrict: 'E',
-        templateUrl: templateUrl
-      }
+        templateUrl: templateUrl,
+        scope : {
+          thing: '='
+        }
+      };
     }]
   );
 })(window.angular, window._);

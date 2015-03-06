@@ -5,24 +5,24 @@
     <div class="panel-body">
         <dl> Description
             <li>
-                {{resource.thing.description.summary}}
+                {{thing.description.summary}}
             </li>
         </dl>
 
         <dl> Type
             <li>
-                {{resource.thing.taxonomy.type}}
+                {{thing.taxonomy.type}}
             </li>
         </dl>
 
         <dl> Subtypes
-            <li ng-repeat="subtype in resource.thing.taxonomy.subtypes">
+            <li ng-repeat="subtype in thing.taxonomy.subtypes">
                 {{subtype}}
             </li>
         </dl>
 
         <dl> Details
-            <li ng-repeat="detail in resource.thing.summary.details">
+            <li ng-repeat="detail in thing.summary.details">
                 {{detail}}
             </li>
         </dl>

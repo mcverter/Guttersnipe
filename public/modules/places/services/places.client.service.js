@@ -40,8 +40,8 @@
   'use strict';
 
   angular.module('places').factory('Places',
-    ['Geolocator',
-    function(Geolocator) {
+    ['Geolocator', '$log', '$q', '$api',
+    function(Geolocator, $log, $q, $api) {
       var placeFactory = {},
         places = {},
         afterLoadEventKey = '$place.afterLoad',

@@ -9,7 +9,7 @@
         restrict: 'E',
         templateUrl: templateUrl,
         controller: 'ThingsSummaryController'
-      }
+      };
     }]
   );
 })(window.angular,  window._);

@@ -1,226 +1,63 @@
-Microsoft Windows [Version 6.1.7601]
-Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
-
-c:\Users\mitchell>cd c:/ComputerScience_WINDOWS/
-cd c:/ComputerScience_WINDOWS/
-
-c:\ComputerScience_WINDOWS>cd Projects/Guttersnipe_GIT/
-cd Projects/Guttersnipe_GIT/
-
-c:\ComputerScience_WINDOWS\Projects\Guttersnipe_GIT>grunt
+hgrunt
 grunt
 [4mRunning "jshint:all" (jshint) task[24m
 
-[1m   public\modules\articles\tests\articles.client.controller.test.js[22m
-      1 |[90m(function (angular, _) { 'use strict';[39m
-                                ^ Unmatched '{'.
-      1 |[90m(function (angular, _) { 'use strict';[39m
-         ^ Unmatched '('.
-      1 |[90m(function (angular, _) { 'use strict';[39m
-         ^ Wrapping non-IIFE function literals in parens is unnecessary.
-    170 |[90m}());[39m
-             ^ Expected an assignment or function call and instead saw an expression.
-    170 |[90m}());[39m
-              ^ Missing semicolon.
-[1m   public\modules\core\tests\header.client.controller.test.js[22m
-      1 |[90mfunction (angular, _) { 'use strict';[39m
-                  ^ Missing name in function declaration.
-      1 |[90mfunction (angular, _) { 'use strict';[39m
-                               ^ Unmatched '{'.
-[1m   public\modules\kropotkins\directives\kro_KropotkinDirective.js[22m
-     31 |[90m}]);})(window.angular, window._)[39m
-                                         ^ Missing semicolon.
-[1m   public\modules\kropotkins\directives\lan_LanguageDirectivw.js[22m
-      5 |[90m  $scope.onRightClick = "";[39m
-           ^ Missing "use strict" statement.
-      5 |[90m  $scope.onRightClick = "";[39m
-                                   ^ Strings must use singlequote.
-      6 |[90m}[39m
-          ^ Missing semicolon.
 [1m   public\modules\kropotkins\tests\kropotkins.client.controller.test.js[22m
-      1 |[90mfunction (angular, _) { 'use strict';[39m
+      1 |[90mfunction (angular, _) {[39m
                   ^ Missing name in function declaration.
-      1 |[90mfunction (angular, _) { 'use strict';[39m
-                               ^ Unmatched '{'.
-[1m   public\modules\places\config\places.client.config.js[22m
-     14 |[90m    .constant('places_templates', templates)[39m
-                                                     ^ Missing semicolon.
+    163 |[90m}(window.angular, window._));[39m
+          ^ Function declarations are not invocable. Wrap the whole function invocation in parens.
+    163 |[90m}(window.angular, window._));[39m
+                                   ^ Expected an assignment or function call and instead saw an expression.
+    163 |[90m}(window.angular, window._));[39m
+                                    ^ Missing semicolon.
+    163 |[90m}(window.angular, window._));[39m
+                                    ^ Expected an identifier and instead saw ')'.
+    163 |[90m}(window.angular, window._));[39m
+                                    ^ Expected an assignment or function call and instead saw an expression.
 [1m   public\modules\places\controllers\places.client.controller.js[22m
-      8 |[90m      var geocoder = new google.maps.Geocoder();;[39m
-                                                         ^ Unnecessary semicolon.
-     34 |[90m        geocoder.geocode( { "address": $scope.place.address }, function(results, status) {[39m
-                                              ^ Strings must use singlequote.
-     35 |[90m          if (status == google.maps.GeocoderStatus.OK && results.length > 0) {[39m
-                                ^ Expected '===' and instead saw '=='.
-     47 |[90m                message: "Resource Location",[39m
-                                                     ^ Strings must use singlequote.
-     52 |[90m        })[39m
-                   ^ Missing semicolon.
-     53 |[90m      }[39m
+     56 |[90m      }[39m
                 ^ Missing semicolon.
-      8 |[90m      var geocoder = new google.maps.Geocoder();;[39m
-                                  ^ 'google' is not defined.
-     35 |[90m          if (status == google.maps.GeocoderStatus.OK && results.length > 0) {[39m
-                                 ^ 'google' is not defined.
-[1m   public\modules\places\directives\older\rsc_GeocodeService.js[22m
-     22 |[90m                    console.log(response)[39m
-                                                  ^ Missing semicolon.
-     26 |[90m        }]);})(window.angular, window._)[39m
-                                                 ^ Missing semicolon.
-[1m   public\modules\places\directives\older\rsc_LocationController.js[22m
-      9 |[90m                if (status == google.maps.GeocoderStatus.OK && results.length > 0) {[39m
-                                      ^ Expected '===' and instead saw '=='.
-     18 |[90m        }]);})(window.angular, window._)[39m
-                                                 ^ Missing semicolon.
-      5 |[90m            var geocoder = new google.maps.Geocoder();[39m
-                                        ^ 'google' is not defined.
-      9 |[90m                if (status == google.maps.GeocoderStatus.OK && results.length > 0) {[39m
-                                       ^ 'google' is not defined.
-[1m   public\modules\places\directives\older\rsc_LocationControllerBackup.js[22m
-      9 |[90m        }]);})(window.angular, window._)[39m
-                                                 ^ Missing semicolon.
+[1m   public\modules\places\directives\gut.place.full.client.directive.js[22m
+     18 |[90m      }[39m
+                ^ Missing semicolon.
 [1m   public\modules\places\directives\older\rsc_oldMapController.js[22m
-     30 |[90m            return inputAddress[39m
-                                        ^ Missing semicolon.
-     33 |[90m            inputAddress = val[39m
-                                       ^ Missing semicolon.
-     40 |[90m            return center[39m
-                                  ^ Missing semicolon.
-     43 |[90m            center = val[39m
-                                 ^ Missing semicolon.
-     50 |[90m            $log.debug('markers get ', markers)[39m
-                                                        ^ Missing semicolon.
-     54 |[90m            $log.debug('markers set ', val)[39m
-                                                    ^ Missing semicolon.
-     55 |[90m            markers = val[39m
-                                  ^ Missing semicolon.
-     64 |[90m              if (status == google.maps.GeocoderStatus.OK && results.length > 0) {[39m
-                                    ^ Expected '===' and instead saw '=='.
-     83 |[90m            })[39m
-                       ^ Missing semicolon.
-     88 |[90m    }]);})(window.angular, window._)[39m
-                                             ^ Missing semicolon.
-     17 |[90m        geocoder = new google.maps.Geocoder();[39m
-                                ^ 'google' is not defined.
-     64 |[90m              if (status == google.maps.GeocoderStatus.OK && results.length > 0) {[39m
-                                     ^ 'google' is not defined.
-[1m   public\modules\places\map\directives\rsc_MapConfirmedDirective.js[22m
-      9 |[90m      }[39m
-                ^ Missing semicolon.
-     10 |[90m    }]);})(window.angular, window._)[39m
-                                             ^ Missing semicolon.
+     83 |[90m              })[39m
+                         ^ Missing semicolon.
 [1m   public\modules\places\map\directives\rsc_MapInputDirective.js[22m
      10 |[90m        }[39m
                   ^ Missing semicolon.
      11 |[90m    }]);})(window.angular, window._)[39m
                                              ^ Missing semicolon.
-[1m   public\modules\places\map\directives\rsc_MapMasterDirective.js[22m
-     11 |[90m      }[39m
-                ^ Missing semicolon.
-     12 |[90m    }]);})(window.angular, window._)[39m
-                                             ^ Missing semicolon.
-[1m   public\modules\places\services\places.client.service.js[22m
-     58 |[90m          $log.debug('$place Initialized', places);[39m
-                   ^ '$log' is not defined.
-     65 |[90m            $log.error('Invalid placeId:', placeId, places);[39m
-                     ^ '$log' is not defined.
-     66 |[90m            return $q.reject('Invalid placeId: ' + placeId);[39m
-                            ^ '$q' is not defined.
-     69 |[90m          return $api.jasper.place(place.uri).then(function (jasperData) {[39m
-                          ^ '$api' is not defined.
-    152 |[90m            return $api.places.update(self.id, self.uri, name, description)[39m
-                            ^ '$api' is not defined.
-    154 |[90m              $log.debug('Place Updated', self.data);[39m
-                       ^ '$log' is not defined.
-    162 |[90m            return $api.places.copy(self.id, label, description).then(function $copyPlaceResponse(data) {[39m
-                            ^ '$api' is not defined.
-    163 |[90m              $log.debug('Place Copied', data);[39m
-                       ^ '$log' is not defined.
-    166 |[90m              $log.debug('New Place', newPlace);[39m
-                       ^ '$log' is not defined.
-    176 |[90m            return $api.places.delete(self.id).then(function $deletePlaceResponse() {[39m
-                            ^ '$api' is not defined.
-    177 |[90m              $log.debug('Place Deleted', self.data);[39m
-                       ^ '$log' is not defined.
-    205 |[90m              $log.debug('Already loaded, triggering handler');[39m
-                       ^ '$log' is not defined.
 [1m   public\modules\places\services\places.geolocation.service.js[22m
-     39 |[90m                { "address": address },[39m
-                                    ^ Strings must use singlequote.
-     41 |[90m                  if (status == google.maps.GeocoderStatus.OK[39m
-                                        ^ Expected '===' and instead saw '=='.
-     42 |[90m                    && results.length > 0) {[39m
+     41 |[90m                    && results.length > 0) {[39m
                              ^ Bad line breaking before '&&'.
-     56 |[90m    })[39m
+     55 |[90m    })[39m
                ^ Missing semicolon.
-     23 |[90m      var geocoder = geocoder || new google.maps.Geocoder(),[39m
-                                              ^ 'google' is not defined.
-     37 |[90m              $event.preventDefault();[39m
-                       ^ '$event' is not defined.
-     41 |[90m                  if (status == google.maps.GeocoderStatus.OK[39m
-                                         ^ 'google' is not defined.
-[1m   public\modules\places\site\plc_SiteImagesDirective.js[22m
-     11 |[90m      }[39m
-                ^ Missing semicolon.
 [1m   public\modules\places\tests\places.client.controller.test.js[22m
+    160 |[90m  }());[39m
+             ^ Wrap an immediate function invocation in parens to assist the reader in understanding that the expression is the result of a function, and not the function itself.
       1 |[90m(function (angular, _) { 'use strict';[39m
                                 ^ Unmatched '{'.
       1 |[90m(function (angular, _) { 'use strict';[39m
          ^ Unmatched '('.
       1 |[90m(function (angular, _) { 'use strict';[39m
          ^ Wrapping non-IIFE function literals in parens is unnecessary.
-    163 |[90m}());[39m
-             ^ Expected an assignment or function call and instead saw an expression.
-    163 |[90m}());[39m
-              ^ Missing semicolon.
-[1m   public\modules\resources\agreement\directives\rsc_CreateAgreementDirective.js[22m
-      6 |[90m        templateUrl = templates.agreement + 'rsc_AgreementTemplate.html'[39m
-                                                                                 ^ Missing semicolon.
-[1m   public\modules\resources\config\resources.client.config.js[22m
-     19 |[90m    .constant('resource_templates', templates)[39m
-                                                       ^ Missing semicolon.
-[1m   public\modules\resources\controllers\resources.client.controller.js[22m
+    160 |[90m  }());[39m
+               ^ Expected an assignment or function call and instead saw an expression.
+    160 |[90m  }());[39m
+                ^ Missing semicolon.
+[1m   public\modules\resources\controllers\gut.resources.client.controller.js[22m
      84 |[90m})(window.angular, window._)[39m
                                      ^ Missing semicolon.
 [1m   public\modules\resources\main\controllers\rsc_NewCreateResourceController.js[22m
-    181 |[90m    }]);})(window.angular, window._)[39m
-                                             ^ Missing semicolon.
      51 |[90m      Object.defineProperties($scope, {[39m
                                        ^ '$scope' is not defined.
-[1m   public\modules\resources\main\controllers\rsc_ResourceService.js[22m
-     76 |[90m    }]);})(window.angular, window._)[39m
-                                             ^ Missing semicolon.
 [1m   public\modules\resources\main\controllers\rsc_createResourceController.js[22m
-     85 |[90m                  thing.details[category]['selections'] :[39m
-                                                  ^ ['selections'] is better written in dot notation.
-     86 |[90m                  thing.details['selections'];[39m
-                                        ^ ['selections'] is better written in dot notation.
      88 |[90m              if (idx = _.find(selections, detail)) {[39m
                                                            ^ Expected a conditional expression and instead saw an assignment.
-    134 |[90m              areDetailsSet - false;[39m
-                                       ^ Expected an assignment or function call and instead saw an expression.
-    175 |[90m                  }[39m
-                            ^ Missing semicolon.
-    180 |[90m                  }[39m
-                            ^ Missing semicolon.
-    185 |[90m                  }[39m
-                            ^ Missing semicolon.
-    253 |[90m              return inputAddress[39m
-                                          ^ Missing semicolon.
-    256 |[90m              inputAddress = val[39m
-                                         ^ Missing semicolon.
-    263 |[90m              return center[39m
-                                    ^ Missing semicolon.
-    266 |[90m              center = val[39m
-                                   ^ Missing semicolon.
-    276 |[90m              markers = val[39m
-                                    ^ Missing semicolon.
     285 |[90m                if (status == google.maps.GeocoderStatus.OK && results.length > 0) {[39m
                                       ^ Expected '===' and instead saw '=='.
-    302 |[90m              })[39m
-                         ^ Missing semicolon.
-    362 |[90m      }]);})(window.angular, window._)[39m
-                                               ^ Missing semicolon.
     310 |[90m              return time.weeklyRecurrences;[39m
                               ^ 'time' is not defined.
     313 |[90m              time.weeklyRecurrences = val;[39m
@@ -239,7 +76,7 @@ grunt
                        ^ 'time' is not defined.
     351 |[90m              time.punctualDates.push(schedule);[39m
                        ^ 'time' is not defined.
-[1m   public\modules\resources\services\resources.client.service.js[22m
+[1m   public\modules\resources\services\gut.resources.client.service.js[22m
      73 |[90m          $log.debug('$resource Initialized', resources);[39m
                    ^ '$log' is not defined.
      80 |[90m            $log.error('Invalid resourceId:', resourceId, resources);[39m
@@ -264,13 +101,6 @@ grunt
                        ^ '$log' is not defined.
     198 |[90m              $log.debug('Already loaded, triggering handler');[39m
                        ^ '$log' is not defined.
-[1m   public\modules\resources\services\resources.taxonomy.client.service.js[22m
-    156 |[90m                  {name: "Women's", img: ''}[39m
-                                           ^ Strings must use singlequote.
-    160 |[90m          }[39m
-                    ^ Missing semicolon.
-    172 |[90m    ])[39m
-               ^ Missing semicolon.
 [1m   public\modules\resources\tests\resources.client.controller.test.js[22m
       1 |[90m(function (angular, _) { 'use strict';[39m
                                 ^ Unmatched '{'.
@@ -282,24 +112,9 @@ grunt
              ^ Expected an assignment or function call and instead saw an expression.
     163 |[90m}());[39m
               ^ Missing semicolon.
-[1m   public\modules\things\config\things.client.config.js[22m
-     28 |[90m    .constant('things_templates', templates)[39m
-                                                     ^ Missing semicolon.
-[1m   public\modules\things\controllers\things.taxonomy.client.controller.js[22m
-     22 |[90m      }[39m
+[1m   public\modules\things\directives\gut.thing.small.client.directive.js[22m
+     13 |[90m      }[39m
                 ^ Missing semicolon.
-     28 |[90m          case "food":[39m
-                              ^ Strings must use singlequote.
-     45 |[90m            }[39m
-                      ^ Missing semicolon.
-     47 |[90m          case "medical":[39m
-                                 ^ Strings must use singlequote.
-     50 |[90m            }[39m
-                      ^ Missing semicolon.
-     52 |[90m          case "housing":[39m
-                                 ^ Strings must use singlequote.
-     55 |[90m            }[39m
-                      ^ Missing semicolon.
 [1m   public\modules\things\services\things.client.service.js[22m
      92 |[90m          $log.debug('$thing Initialized', things);[39m
                    ^ '$log' is not defined.
@@ -325,59 +140,6 @@ grunt
                        ^ '$log' is not defined.
     235 |[90m              $log.debug('Already loaded, triggering handler');[39m
                        ^ '$log' is not defined.
-[1m   public\modules\things\summary\directives\rsc_SummaryConfirmedDirective.js[22m
-     12 |[90m      }[39m
-                ^ Missing semicolon.
-[1m   public\modules\things\summary\directives\rsc_SummaryInputDirective.js[22m
-     12 |[90m      }[39m
-                ^ Missing semicolon.
-[1m   public\modules\things\summary\directives\rsc_SummaryMasterDirective.js[22m
-     12 |[90m      }[39m
-                ^ Missing semicolon.
-[1m   public\modules\things\taxonomy\common\directives\rsc_taxonDirective.js[22m
-     15 |[90m      }[39m
-                ^ Missing semicolon.
-[1m   public\modules\things\taxonomy\common\services\rsc_TaxonomyService.js[22m
-    105 |[90m          }[39m
-                    ^ Missing semicolon.
-    117 |[90m    ])[39m
-               ^ Missing semicolon.
-[1m   public\modules\things\taxonomy\food\directives\rsc_FoodDetailsConfirmedDirective.js[22m
-     11 |[90m      }[39m
-                ^ Missing semicolon.
-[1m   public\modules\things\taxonomy\food\directives\rsc_FoodDetailsInputDirective.js[22m
-     10 |[90m      }[39m
-                ^ Missing semicolon.
-[1m   public\modules\things\taxonomy\food\directives\rsc_foodDetailsMasterDirective.js[22m
-     10 |[90m      }[39m
-                ^ Missing semicolon.
-[1m   public\modules\things\taxonomy\housing\directives\rsc_HousingDetailsConfirmedDirective.js[22m
-     10 |[90m      }[39m
-                ^ Missing semicolon.
-[1m   public\modules\things\taxonomy\housing\directives\rsc_HousingDetailsInputDirective.js[22m
-     10 |[90m      }[39m
-                ^ Missing semicolon.
-[1m   public\modules\things\taxonomy\housing\directives\rsc_housingDetailsMasterDirective.js[22m
-     11 |[90m      }[39m
-                ^ Missing semicolon.
-[1m   public\modules\things\taxonomy\medical\directives\rsc_MedicalDetailsConfirmedDirective.js[22m
-     10 |[90m      }[39m
-                ^ Missing semicolon.
-[1m   public\modules\things\taxonomy\medical\directives\rsc_MedicalDetailsInputDirective.js[22m
-     10 |[90m      }[39m
-                ^ Missing semicolon.
-[1m   public\modules\things\taxonomy\medical\directives\rsc_MedicalDetailsMasterDirective.js[22m
-     10 |[90m      }[39m
-                ^ Missing semicolon.
-[1m   public\modules\things\taxonomy\type\directives\rsc_TypeConfirmedDirective.js[22m
-     10 |[90m      }[39m
-                ^ Missing semicolon.
-[1m   public\modules\things\taxonomy\type\directives\rsc_TypeInputDirective.js[22m
-     10 |[90m      }[39m
-                ^ Missing semicolon.
-[1m   public\modules\things\taxonomy\type\directives\rsc_TypeMasterDirective.js[22m
-     10 |[90m      }[39m
-                ^ Missing semicolon.
 [1m   public\modules\things\tests\things.client.controller.test.js[22m
       1 |[90m(function (angular, _) { 'use strict';[39m
                                 ^ Unmatched '{'.
@@ -406,7 +168,7 @@ grunt
 [1m   public\modules\times\config\times.client.config.js[22m
       3 |[90m  var BASE_DIR = 'modules/times/',[39m
            ^ Missing "use strict" statement.
-     11 |[90m  angular.module('times').constant('times_templates', templates)[39m
+     12 |[90m  angular.module('times').constant('times_templates', templates)[39m
                                                                          ^ Missing semicolon.
 [1m   public\modules\times\controllers\times.client.controller.js[22m
      10 |[90m      }[39m
@@ -416,8 +178,6 @@ grunt
                                ^ Missing semicolon.
     128 |[90m          }[39m
                     ^ Missing semicolon.
-    136 |[90m      }[39m
-                ^ Missing semicolon.
      26 |[90m                  templateUrl: filePaths.resources_dir + 'time/punctual/' + filePaths.templates_subdir + 'rsc_PunctualDialogTemplate.html',[39m
                                         ^ 'filePaths' is not defined.
      26 |[90m                  templateUrl: filePaths.resources_dir + 'time/punctual/' + filePaths.templates_subdir + 'rsc_PunctualDialogTemplate.html',[39m
@@ -427,32 +187,20 @@ grunt
                                ^ Missing semicolon.
      74 |[90m          }[39m
                     ^ Missing semicolon.
-     80 |[90m      }[39m
-                ^ Missing semicolon.
      24 |[90m                  templateUrl: filePaths.resources_dir + 'time/recurring/' + filePaths.templates_subdir + 'rsc_WeeklyRecurringEventDialog.html',[39m
                                         ^ 'filePaths' is not defined.
      24 |[90m                  templateUrl: filePaths.resources_dir + 'time/recurring/' + filePaths.templates_subdir + 'rsc_WeeklyRecurringEventDialog.html',[39m
                                                                                       ^ 'filePaths' is not defined.
-[1m   public\modules\times\schedule\directives\rsc_ScheduleConfirmedDirective.js[22m
-      9 |[90m      }[39m
-                ^ Missing semicolon.
 [1m   public\modules\times\schedule\directives\rsc_ScheduleInputDirective.js[22m
     107 |[90m                    })[39m
                                ^ Missing semicolon.
     122 |[90m          }[39m
                     ^ Missing semicolon.
-    130 |[90m      }[39m
-                ^ Missing semicolon.
-[1m   public\modules\times\schedule\directives\rsc_ScheduleMasterDirective.js[22m
-     11 |[90m      }[39m
-                ^ Missing semicolon.
 [1m   public\modules\times\seasonal\directives\rsc_SeasonalDirective.js[22m
      54 |[90m                    })[39m
                                ^ Missing semicolon.
      68 |[90m          }[39m
                     ^ Missing semicolon.
-     75 |[90m      }[39m
-                ^ Missing semicolon.
      22 |[90m                  templateUrl: filePaths.resources_dir + 'time/' + filePaths.templates_subdir + 'seasonal/rsc_SeasonalDialogTemplate.html',[39m
                                         ^ 'filePaths' is not defined.
      22 |[90m                  templateUrl: filePaths.resources_dir + 'time/' + filePaths.templates_subdir + 'seasonal/rsc_SeasonalDialogTemplate.html',[39m
@@ -487,45 +235,14 @@ grunt
                   ^ Missing name in function declaration.
       1 |[90mfunction (angular, _) { 'use strict';[39m
                                ^ Unmatched '{'.
-[1m   public\modules\users\config\users.client.config.js[22m
-     32 |[90m})(window.angular, window._)[39m
-                                     ^ Missing semicolon.
-[1m   public\modules\users\config\users.client.routes.js[22m
-     47 |[90m})(window.angular, window._)[39m
-                                     ^ Missing semicolon.
-[1m   public\modules\users\controllers\authentication.client.controller.js[22m
-     36 |[90m})(window.angular, window._)[39m
-                                     ^ Missing semicolon.
-[1m   public\modules\users\controllers\password.client.controller.js[22m
-     46 |[90m})(window.angular, window._)[39m
-                                     ^ Missing semicolon.
-[1m   public\modules\users\controllers\settings.client.controller.js[22m
-     73 |[90m})(window.angular, window._)[39m
-                                     ^ Missing semicolon.
-[1m   public\modules\users\services\authentication.client.service.js[22m
-    106 |[90m})(window.angular, window._)[39m
-                                     ^ Missing semicolon.
-[1m   public\modules\users\services\users.client.service.js[22m
-     67 |[90m})(window.angular, window._)[39m
-                                     ^ Missing semicolon.
 [1m   public\modules\users\tests\authentication.client.controller.test.js[22m
       3 |[90m    describe('AuthenticationController', function() {[39m
              ^ Missing "use strict" statement.
-[1m   public\modules\video\directives\video.client.directive.js[22m
-     20 |[90m  ])[39m
-             ^ Missing semicolon.
-[1m   public\modules\wizard\config\wizard.client.config.js[22m
-      3 |[90m  var BASE_DIR = 'modules/wizard/',[39m
-           ^ Missing "use strict" statement.
-[1m   public\modules\wizard\config\wizard.client.routes.js[22m
-     63 |[90m})(window.angular, window._)[39m
-                                     ^ Missing semicolon.
-[1m   public\modules\wizard\directives\gut_CCNYWizardDirective.js[22m
-      7 |[90m        templateUrl = templates.templateDir + 'ccny_WizardTemplate.html'[39m
-                                                                                 ^ Missing semicolon.
-[1m   public\modules\wizard\directives\gut_RscWizardDirective.js[22m
-      7 |[90m        templateUrl = templates.templateDir + 'rsc_WizardTemplate.html'[39m
-                                                                                ^ Missing semicolon.
+[1m   server\controllers\articles.server.controller.js[22m
+     15 |[90m  console.log('Creating Article ', req.body)[39m
+                                                     ^ Missing semicolon.
+     87 |[90m      console.log('JSON', json)[39m
+                                        ^ Missing semicolon.
 [1m   server\controllers\kropotkins.server.controller.js[22m
      91 |[90m  console.log("id " + id);[39m
                             ^ Strings must use singlequote.
@@ -540,7 +257,7 @@ grunt
      22 |[90m})[39m
            ^ Missing semicolon.
 
-[31m>> [39m225 errors in 171 files
+[31m>> [39m111 errors in 183 files
 [33mWarning: Task "jshint:all" failed. [4mUsed --force, continuing.[24m[39m
 
 [4mRunning "csslint:all" (csslint) task[24m
@@ -728,8 +445,8 @@ WARNING: Fallback border (hex or RGB) should precede RGBA border. For older brow
 [32m>> [39m8 files lint free.
 
 [4mRunning "concurrent:default" (concurrent) task[24m
-[4mRunning "nodemon:dev" (nodemon) task[24m
 [4mRunning "watch" task[24m
+[4mRunning "nodemon:dev" (nodemon) task[24m
 Waiting...
 [33m[nodemon] v1.2.1[39m
 [33m[nodemon] to restart at any time, enter `rs`[39m

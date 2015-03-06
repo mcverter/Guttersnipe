@@ -26,6 +26,6 @@
   };
 
   angular.module('things')
-    .constant('things_templates', templates)
+    .constant('things_templates', templates);
 
 })(window.angular, window._);

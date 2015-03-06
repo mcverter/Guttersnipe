@@ -15,7 +15,7 @@
  *
  */
 
-(function (angular, _) {
+(function (angular,google,  _) {
   'use strict';
 
   angular.module('places').factory('Geolocator',
@@ -34,11 +34,10 @@
 
               var center, formattedAddress;
 
-              $event.preventDefault();
               geocoder.geocode(
                 { 'address': address },
                 function (results, status) {
-                  if (status == google.maps.GeocoderStatus.OK
+                  if (status === google.maps.GeocoderStatus.OK
                     && results.length > 0) {
                     formattedAddress =
                       results[0].formatted_address;
@@ -54,9 +53,5 @@
         });
       return geolocatorFactory;
     })
-})(window.angular, window._);
+})(window.angular, window.google, window._);
 
-
-/*
-
- */

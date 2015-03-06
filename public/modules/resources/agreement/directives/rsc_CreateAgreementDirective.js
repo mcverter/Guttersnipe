@@ -3,7 +3,7 @@ angular.module('resources')
     .directive('resourceCreateAgreement', ['resource_templates', function(templates) {
     var linker = function(scope, element, attrs) {},
         controller = function($scope){},
-        templateUrl = templates.agreement + 'rsc_AgreementTemplate.html'
+        templateUrl = templates.agreement + 'rsc_AgreementTemplate.html';
       return {
         restrict: 'E',
         templateUrl: templateUrl,

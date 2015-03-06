@@ -103,4 +103,4 @@
       return _this._data;
     }
   ]);
-})(window.angular, window._)
+})(window.angular, window._);

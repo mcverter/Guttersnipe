@@ -133,7 +133,7 @@
         restrict: 'E',
         templateUrl: templateUrl,
         controller: controller
-      }
+      };
     }]
   );
 })(window.angular, window._);

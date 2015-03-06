@@ -8,7 +8,7 @@
         restrict: 'E',
         templateUrl: templateUrl,
         controller: 'TimesController'
-      }
+      };
     }]
   );
 })(window.angular, window._);

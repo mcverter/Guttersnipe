@@ -4,7 +4,7 @@
     .directive('gutRscWizard', ['wizard_templates', function(templates) {
       var linker = function(scope, element, attrs) {},
         controller = function($scope){},
-        templateUrl = templates.templateDir + 'rsc_WizardTemplate.html'
+        templateUrl = templates.templateDir + 'rsc_WizardTemplate.html';
       return {
         restrict: 'E',
         templateUrl: templateUrl,

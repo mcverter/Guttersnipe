@@ -5,9 +5,12 @@
       var templateUrl = templates.main + 'place-small.client.template.html';
 
       return {
+        scope : {
+          place: '='
+        },
         restrict: 'E',
         templateUrl: templateUrl
-      }
+      };
     }]
   );
 })(window.angular, window._);

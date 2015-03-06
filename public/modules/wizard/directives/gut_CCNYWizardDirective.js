@@ -4,7 +4,7 @@
     .directive('gutCcnyWizard', ['wizard_templates', function(templates) {
       var linker = function(scope, element, attrs) {},
         controller = function($scope){},
-        templateUrl = templates.templateDir + 'ccny_WizardTemplate.html'
+        templateUrl = templates.templateDir + 'ccny_WizardTemplate.html';
       return {
         restrict: 'E',
         templateUrl: templateUrl,

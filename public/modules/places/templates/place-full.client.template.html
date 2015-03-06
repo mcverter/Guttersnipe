@@ -3,10 +3,10 @@
         <h3 class="panel-title">Place</h3>
     </div>
     <div class="panel-body">
-        <em>Address: </em>    {{resource.place.address}} <br />
-        {{resource.place.coordinates}}
-        <leaflet markers="places.markers" center="resource.place.coordinates" defaults="defaults" width="640px" height="480px"></leaflet>    </div> <br />
-    <em>Notes: </em>  {{resource.place.notes}}
+        <em>Address: </em>    {{place.address}} <br />
+        {{place.coordinates}}
+        <leaflet markers="places.markers" center="place.coordinates" defaults="defaults" width="640px" height="480px"></leaflet>    </div> <br />
+    <em>Notes: </em>  {{place.notes}}
 <!--
     place: {
       coordinates : {

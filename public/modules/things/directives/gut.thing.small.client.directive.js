@@ -5,6 +5,9 @@
       var templateUrl = templates.main + 'thing-small.client.template.html';
 
       return {
+        scope : {
+          thing: '='
+        },
         restrict: 'E',
         templateUrl: templateUrl
       }

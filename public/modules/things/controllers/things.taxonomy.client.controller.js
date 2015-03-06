@@ -19,7 +19,7 @@
       $scope.unsetType = function() {
         $scope.taxonomy.isTaxonomySet = false;
         $scope.taxonomy.isTypeSet = false;
-      }
+      };
 
       $scope.setType = function(t) {
         $scope.taxonomy.isTypeSet = true;
@@ -42,17 +42,17 @@
               dairy:  {
                 selections: []
               }
-            }
+            };
             break;
           case 'medical':
             $scope.taxonomy.details = {
               selections: []
-            }
+            };
             break;
           case 'housing':
             $scope.taxonomy.details = {
               selections: []
-            }
+            };
             break;
         }
       };

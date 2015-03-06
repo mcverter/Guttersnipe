@@ -153,11 +153,11 @@
                   {name: 'Sexual Health', img: ''},
                   {name: 'Sexual / Physical Abuse', img: ''},
                   {name: 'Trans*', img: ''},
-                  {name: "Women's", img: ''}
+                  {name: 'Women\'s', img: ''}
                 ]
               }
             ]
-          }
+          };
         $log.debug(resourceTaxonomy);
 
         taxonomyFactory = Object.create(Object.prototype, {
@@ -169,5 +169,5 @@
 
         return taxonomyFactory;
       }
-    ])
+    ]);
 })(window.angular,  window._);

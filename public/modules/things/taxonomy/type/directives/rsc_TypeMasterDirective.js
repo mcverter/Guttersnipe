@@ -7,7 +7,7 @@
         restrict: 'E',
         templateUrl: templateUrl,
         controller: 'ThingsTaxonomyController'
-      }
+      };
     }]
   );
 })(window.angular,  window._);

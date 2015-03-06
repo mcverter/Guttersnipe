@@ -5,9 +5,12 @@
       var templateUrl = templates.main + 'time-small.client.template.html';
 
       return {
+        scope : {
+          time: '='
+        },
         restrict: 'E',
         templateUrl: templateUrl
-      }
+      };
     }]
   );
 })(window.angular, window._);

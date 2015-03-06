@@ -5,7 +5,10 @@
   angular.module('places').controller('PlacesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Places',
     function($scope, $stateParams, $location, Authentication, Places) {
 
-      var geocoder = new google.maps.Geocoder();;
+
+
+      var google = google || {},
+        geocoder = new google.maps.Geocoder();
 
       $scope.authentication = Authentication;
 
@@ -32,7 +35,7 @@
       $scope.locateAddress =  function locateAddress($event) {
         $event.preventDefault();
         geocoder.geocode( { 'address': $scope.place.address }, function(results, status) {
-          if (status == google.maps.GeocoderStatus.OK && results.length > 0) {
+          if (status === google.maps.GeocoderStatus.OK && results.length > 0) {
             $scope.place.address =   results[0].formatted_address;
             $scope.place.center = {
               lat: results[0].geometry.location.k,
@@ -49,7 +52,7 @@
               }
             };
           }
-        })
+        });
       }
 
     }

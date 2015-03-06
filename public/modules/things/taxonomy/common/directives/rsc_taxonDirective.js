@@ -12,7 +12,7 @@
         link: function (scope, element, attrs) {
           scope.name = attrs.name;
         }
-      }
+      };
     }]
   );
 })(window.angular, window._);

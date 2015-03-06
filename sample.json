@@ -1,0 +1,33 @@
+{
+  "_id":"54f713f7077138f82aa50145",
+  "method":"",
+  "notes":"",
+  "__v":0,
+  "updated":"2015-03-04T14:17:27.951Z",
+  "created":"2015-03-04T14:17:27.951Z",
+  "time":{
+    "notes":"",
+    "schedules":[
+      {"recurringDay":"fri",
+        "recurrenceType":"A",
+        "startTime":2100,
+        "duration":120,
+        "_id":"54f713f7077138f82aa50146"
+      }]},
+  "place":{
+    "address":"1419 Avenue J Brooklyn, NY 11230",
+    "notes":"",
+    "coordinates":{
+      "lat":40.62539,
+      "lng":-73.961645
+    }},
+  "thing":{
+    "taxonomy":{
+      "type":"food",
+      "details":[],
+      "subtypes":["dumpster"]
+    },
+    "description":{
+      "headline":"Isaac's Bake Shop",
+      "summary":"Bags on the street of bread and pastries, particularly on Friday evening. "
+    }}}

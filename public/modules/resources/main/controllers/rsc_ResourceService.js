@@ -73,7 +73,7 @@ angular.module('resources')
         }
       });
 
-    }]);})(window.angular, window._)
+    }]);})(window.angular, window._);
 
 /*
     app.controller('NewCreateResourceController', ['$scope', 'ResourceTaxonomyService',

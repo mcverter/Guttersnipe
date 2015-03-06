@@ -5,11 +5,11 @@
     <div class="panel-body">
         <dl> Type
             <li>
-                {{resource.thing.taxonomy.type}}
+                {{thing.taxonomy.type}}
             </li>
         </dl>
         <dl> Subtypes
-            <li ng-repeat="subtype in resource.thing.taxonomy.type">
+            <li ng-repeat="subtype in thing.taxonomy.subtypes">
                 {{subtype}}
             </li>
         </dl>

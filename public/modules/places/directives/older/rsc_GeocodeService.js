@@ -19,8 +19,8 @@
             $http.get('https://geoservices.tamu.edu/Services/Geocode/WebService/GeocoderService_V04_01.asmx')
                 .success(function Response (response) {
                     console.log('Response');
-                    console.log(response)
+                    console.log(response);
                 });
 
             return geocoder;
-        }]);})(window.angular, window._)
+        }]);})(window.angular, window._);

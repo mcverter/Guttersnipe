@@ -1,7 +1,6 @@
-'use strict';
-
-(function() {
-	describe('HomeController', function() {
+(function (angular, _) {
+  'use strict';
+  describe('HomeController', function() {
 		//Initialize global variables
 		var scope,
 			HomeController;
@@ -21,4 +20,4 @@
 			expect(scope.authentication).toBeTruthy();
 		});
 	});
-})();
+})(window.angular, window._);

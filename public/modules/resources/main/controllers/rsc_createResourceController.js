@@ -82,8 +82,8 @@
             value: function (category, detail) {
               var idx,
                 selections = category ?
-                  thing.details[category]['selections'] :
-                  thing.details['selections'];
+                  thing.details.category.selections :
+                  thing.details.selections;
 
               if (idx = _.find(selections, detail)) {
                 selections.splice(idx, 1);
@@ -131,7 +131,7 @@
               thing.type = '';
               thing.details = {};
               isTaxonomySet = false;
-              areDetailsSet - false;
+              areDetailsSet = false;
               isTypeSet = false;
 
             }
@@ -172,17 +172,17 @@
                     dairy:  {
                       selections: []
                     }
-                  }
+                  };
                   break;
                 case 'medical':
                   thing.details = {
                     selections: []
-                  }
+                  };
                   break;
                 case 'housing':
                   thing.details = {
                     selections: []
-                  }
+                  };
                   break;
               }
             }
@@ -250,20 +250,20 @@
           inputAddress: {
             enumerable: true,
             get: function getInputAdress() {
-              return inputAddress
+              return inputAddress;
             },
             set: function setMapTextAdress(val) {
-              inputAddress = val
+              inputAddress = val;
             }
           },
 
           center: {
             enumerable: true,
             get: function getCenter() {
-              return center
+              return center;
             },
             set: function setCenter(val) {
-              center = val
+              center = val;
             }
           },
 
@@ -273,7 +273,7 @@
               return markers;
             },
             set: function setMarkers(val) {
-              markers = val
+              markers = val;
             }
           },
 
@@ -299,7 +299,7 @@
                     }
                   };
                 }
-              })
+              });
             }
           },
 
@@ -359,4 +359,4 @@
             }
           }
         });
-      }]);})(window.angular, window._)
+      }]);})(window.angular, window._);

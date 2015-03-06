@@ -1,9 +1,10 @@
-    (function (angular, _) { 'use strict';
-    angular.module('resources')
+(function (angular, _) {
+  'use strict';
+  angular.module('resources')
     .controller('LocationController', ['$scope', '$log', 'geocodeService',
-        function ($scope, $log, geocodeService) {
-                    var args = {};
+      function ($scope, $log, geocodeService) {
+        var args = {};
 
-            // setup scope
-            Object.defineProperties($scope, {});
-        }]);})(window.angular, window._)
+        // setup scope
+        Object.defineProperties($scope, {});
+      }]);})(window.angular, window._);

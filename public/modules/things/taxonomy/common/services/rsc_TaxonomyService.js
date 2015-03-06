@@ -102,7 +102,7 @@
                 ]
               }
             ]
-          }
+          };
         $log.debug(resourceTaxonomy);
 
         taxonomyFactory = Object.create(Object.prototype, {
@@ -114,5 +114,5 @@
 
         return taxonomyFactory;
       }
-    ])
+    ]);
 })(window.angular, window._);
