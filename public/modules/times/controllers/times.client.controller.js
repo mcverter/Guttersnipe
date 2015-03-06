@@ -7,7 +7,7 @@
 
       $scope.time = {
         isScheduled : false
-      }
+      };
 
 
       $scope.authentication = Authentication;

@@ -10,7 +10,7 @@
         scope : {
           scheduleType: '='
         }
-      }
+      };
     }]
   );
 })(window.angular, window._);

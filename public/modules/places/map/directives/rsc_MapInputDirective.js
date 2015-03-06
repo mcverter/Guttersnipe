@@ -7,5 +7,5 @@ angular.module('places')
         return {
             restrict: 'E',
             templateUrl: templateUrl
-        }
-    }]);})(window.angular, window._)
+        };
+    }]);})(window.angular, window._);

@@ -1,4 +1,5 @@
-(function (angular, _) { 'use strict';
+(function (angular, _) {
+  'use strict';
   // Places Controller Spec
   describe('Places Controller Tests', function() {
     // Initialize global variables
@@ -157,4 +158,4 @@
       // Test array after successful delete
       expect(scope.places.length).toBe(0);
     }));
-  }());
+  })(window.angular, window._);

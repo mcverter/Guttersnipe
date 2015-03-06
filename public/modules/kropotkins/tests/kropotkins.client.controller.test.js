@@ -1,6 +1,6 @@
-function (angular, _) {
+(function (angular, _) {
   'use strict';
-	/*
+
 	// Kropotkins Controller Spec
 	describe('Kropotkins Controller Tests', function() {
 		// Initialize global variables
@@ -159,5 +159,5 @@ function (angular, _) {
 			// Test array after successful delete
 			expect(scope.kropotkins.length).toBe(0);
 		}));
-		*/
+
 }(window.angular, window._));

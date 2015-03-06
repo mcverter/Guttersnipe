@@ -7,6 +7,7 @@
         eventSources = [],
         controller = function($scope, $modal) {
           $scope.eventSources = eventSources;
+
           $scope.punctualConfig = {
             calendar:{
               height: 450,
@@ -110,7 +111,7 @@
                           $modalInstance.dismiss('cancel');
                         }
                       }
-                    })
+                    });
 
                   }
                 });
@@ -125,7 +126,7 @@
               eventDrop: $scope.alertOnDrop,
               eventResize: $scope.alertOnResize
             }
-          }
+          };
         };
 
 

@@ -53,8 +53,7 @@
             };
           }
         });
-      }
-
+      };
     }
   ]);
 })(window.angular, window._);

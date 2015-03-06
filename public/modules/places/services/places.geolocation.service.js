@@ -37,8 +37,8 @@
               geocoder.geocode(
                 { 'address': address },
                 function (results, status) {
-                  if (status === google.maps.GeocoderStatus.OK
-                    && results.length > 0) {
+                  if ((status === google.maps.GeocoderStatus.OK) &&
+                    results.length > 0) {
                     formattedAddress =
                       results[0].formatted_address;
                     center = {
@@ -52,6 +52,6 @@
           }
         });
       return geolocatorFactory;
-    })
+    });
 })(window.angular, window.google, window._);
 

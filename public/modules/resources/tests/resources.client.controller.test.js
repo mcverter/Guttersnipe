@@ -1,6 +1,6 @@
-(function (angular, _) { 'use strict';
+(function (angular, _) {
+  'use strict';
 
-(function() {
 	// Resources Controller Spec
 	describe('Resources Controller Tests', function() {
 		// Initialize global variables
@@ -160,4 +160,4 @@
 			expect(scope.resources.length).toBe(0);
 		}));
 	});
-}());
+})(window.angular, window._);

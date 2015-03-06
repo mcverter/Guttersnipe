@@ -15,7 +15,7 @@
         link: function(scope, el, attrs) {
 
         }
-      }
+      };
     }]
   );
 })(window.angular, window._);

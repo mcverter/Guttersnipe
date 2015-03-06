@@ -1,6 +1,6 @@
 (function (angular, _) { 
     'use strict';
-/*
+
 	// Articles Controller Spec
 	describe('ArticlesController', function() {
 		// Initialize global variables
@@ -166,5 +166,4 @@
 			// Test array after successful delete
 			expect(scope.articles.length).toBe(0);
 		}));
-*/
 })(window.angular, window._);

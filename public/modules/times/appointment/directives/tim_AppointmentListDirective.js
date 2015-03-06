@@ -15,7 +15,7 @@
           appointments: '='
         },
         controller: controller
-      }
+      };
     }]
   );
 })(window.angular, window._);

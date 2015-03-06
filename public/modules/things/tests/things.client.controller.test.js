@@ -1,6 +1,5 @@
 (function (angular, _) { 'use strict';
 
-(function() {
 	// Things Controller Spec
 	describe('Things Controller Tests', function() {
 		// Initialize global variables
@@ -160,4 +159,4 @@
 			expect(scope.things.length).toBe(0);
 		}));
 	});
-}());
+})(window.angular, window._);
