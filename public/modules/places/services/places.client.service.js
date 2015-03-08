@@ -47,57 +47,8 @@
         self.data = data || {};
       }
 
-      /**
-       * Class Place:
-       * Object representing a Guttersnipe Place,
-       * a row in the mongo guttersnipe.place Collection
-       *
-       * @field data:
-
-       * @field id:
-       * @field coordinates:
-       * @field address:
-       * @field description
-
-       * @method $update(name, description):
-       * @method $copy(label, description):
-       * @method $delete
-       */
-
 
       Place.prototype = Object.create(Object.prototype, {
-
-        id: {
-          enumerable: true,
-          get: function getId() {
-            var self = this;
-            return self.data.id;
-          }
-        },
-
-        coordinates: {
-          enumerable: true,
-          get: function getCoordinates() {
-            var self = this;
-            return self.data.coordinates;
-          }
-        },
-
-        address: {
-          enumerable: true,
-          get: function getAddress() {
-            var self = this;
-            return self.data.address;
-          }
-        },
-
-        description: {
-          enumerable: true,
-          get: function getDescription() {
-            var self = this;
-            return self.data.description;
-          }
-        }
       });
     }]
   );

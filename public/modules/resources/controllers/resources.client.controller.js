@@ -54,6 +54,7 @@
         $scope.resource = Resources.get({
           resourceId: $stateParams.resourceId
         });
+        console.log('Scope Resource', $scope.resource)
       };
     }
   ]);
