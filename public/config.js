@@ -6,25 +6,26 @@
 
 // Init the application configuration module for AngularJS application
 var ApplicationConfiguration = (function() {
-	// Init module configuration options
-	var applicationModuleName = 'guttersnipe';
-	var applicationModuleVendorDependencies = [
-	    'ngResource', 'ngCookies',  'ngAnimate',
-            'ngTouch',  'ngSanitize',  'ui.router',
-            'ui.utils', 'leaflet-directive',
-	    'mgo-angular-wizard',    'ui.calendar', 'ui.bootstrap'];
-	// Add a new vertical module
-	var registerModule = function(moduleName, dependencies) {
-		// Create angular module
-		angular.module(moduleName, dependencies || []);
+  // Init module configuration options
+  var applicationModuleName = 'guttersnipe';
+  var applicationModuleVendorDependencies = [
+    'ngResource', 'ngCookies',  'ngAnimate',
+    'ngTouch',  'ngSanitize',  'ui.router',
+    'ui.utils', 'leaflet-directive','uiGmapgoogle-maps',
+    'mgo-angular-wizard',    'ui.calendar', 'ui.bootstrap'];
 
-		// Add the module to the AngularJS configuration file
-		angular.module(applicationModuleName).requires.push(moduleName);
-	};
+  // Add a new vertical module
+  var registerModule = function(moduleName, dependencies) {
+    // Create angular module
+    angular.module(moduleName, dependencies || []);
 
-	return {
-		applicationModuleName: applicationModuleName,
-		applicationModuleVendorDependencies: applicationModuleVendorDependencies,
-		registerModule: registerModule
-	};
+    // Add the module to the AngularJS configuration file
+    angular.module(applicationModuleName).requires.push(moduleName);
+  };
+
+  return {
+    applicationModuleName: applicationModuleName,
+    applicationModuleVendorDependencies: applicationModuleVendorDependencies,
+    registerModule: registerModule
+  };
 })();

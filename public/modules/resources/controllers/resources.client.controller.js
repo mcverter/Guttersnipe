@@ -51,10 +51,29 @@
       };
 
       $scope.findOne = function() {
-        $scope.resource = Resources.get({
+        Resources.get({
           resourceId: $stateParams.resourceId
-        });
-        console.log('Scope Resource', $scope.resource)
+        }).$promise.then(function(rsc) {
+            $scope.resource = rsc;
+            var coordinates = $scope.resource.place.coordinates;
+            $scope.map = {
+              center: {
+                latitude: coordinates.lat,
+                longitude: coordinates.lng
+              },
+              markers: {
+                coords: {
+                  latitude: coordinates.lat,
+                  longitude: coordinates.lng
+                },
+              },
+              zoom: 16
+            };
+
+            console.log('Scope Resource', $scope.resource);
+            console.log('Scope place', $scope.resource.place)
+
+          });
       };
     }
   ]);

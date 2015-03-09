@@ -5,9 +5,17 @@
     <div class="panel-body">
         <em>Address: </em>    {{place.address}} <br />
         {{place.coordinates}}
-        <leaflet markers="places.markers" center="place.coordinates" defaults="defaults" width="640px" height="480px"></leaflet>    </div> <br />
+        <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+
+        <!--
+        leaflet center=center defaults="defaults" width="640px" height="480px"></leaflet>    </div> <br />
+-->
     <em>Notes: </em>  {{place.notes}}
-<!--
+</div>
+
+
+
+    <!--
     place: {
       coordinates : {
         lat: 40.693483,
@@ -17,4 +25,3 @@
       notes: 'Remsen St across from Borough Hall, between Court and Clinton Sts, Brooklyn'
     },
 -->
-</div>

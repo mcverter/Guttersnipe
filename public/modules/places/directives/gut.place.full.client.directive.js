@@ -5,16 +5,8 @@
       var templateUrl = templates.main + 'place-full.client.template.html';
 
       return {
-        scope : {
-          place: '='
-        },
         restrict: 'E',
-        templateUrl: templateUrl,
-        controller: function($scope) {
-        },
-        link: function(scope, el, attrs) {
-
-        }
+        templateUrl: templateUrl
       };
     }]
   );

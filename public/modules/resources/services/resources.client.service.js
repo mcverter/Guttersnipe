@@ -1,5 +1,4 @@
 (function (angular, _) {
-
   'use strict';
 
 //Resources service used for communicating with the resources REST endpoints
@@ -15,7 +14,84 @@
 /*     BOOM-SHAKA-LAKA {"_id":"54fb431401944afce2dfc3aa","headline":"New Banana King","__v":0,"updated":"2015-03-07T18:27:32.065Z","created":"2015-03-07T18:27:32.065Z","time":{"schedules":[{"recurringDay":"all","recurrenceType":"A","startTime":2300,"duration":120,"_id":"54fb431401944afce2dfc3ab"}]},"place":{"address":"1123 Avenue J Brooklyn, NY 11230","coordinates":{"lat":40.625042,"lng":-73.964342}},"thing":{"taxonomy":{"type":"food","details":[],"subtypes":["dumpster"]},"description":{"summary":"As late at night as you can stand, on E 12th Street, big black plastic bags. This store stays open very late and some of the managers will diligently shoo you away. They throw out huge quantities of produce, seemingly entire cases of stuff not up to their standard. My partner and I have made gallons of cider from a single night’s pickup of apples and pears, for instance. Other typical mass dumps include bananas and tomatoes. Be prepared to can, dry, freeze or ferment. "}}} */
       var transformResponseSingle = function(data, headers) {
         //MESS WITH THE DATA
-        console.log ('BOOM-SHAKA-LAKA', data);
+        data = angular.fromJson(data);
+
+        var schedules = data.time.schedules,
+          coordinates = data.place.coordinates,
+          lat = coordinates.lat;
+        _.forEach(schedules, function(sked){
+          console.log ('Sked', sked);
+          var startTime = Number(sked.startTime);
+
+          if(startTime < 1200 ) {
+            startTime = startTime + ' AM';
+          } else {
+            if (startTime > 1300) {
+              startTime -= 1200;
+            }
+            startTime = startTime + ' PM';
+          }
+          sked.startTime = startTime;
+
+          switch(sked.recurringDay) {
+            case "all":
+              sked.recurringDay = "day";
+             break;
+            case "mon":
+              sked.recurringDay = "Monday";
+              break;
+            case "tue":
+              sked.recurringDay = "Tuesday";
+              break;
+            case "wed":
+              sked.recurringDay = "Wednesday";
+              break;
+            case "thu":
+              sked.recurringDay = "Thursday";
+              break;
+            case "fri":
+              sked.recurringDay = "Friday";
+              break;
+            case "sat":
+              sked.recurringDay = "Saturday";
+              break;
+            case "sun":
+              sked.recurringDay = "Sunday";
+              break;
+          }
+
+          switch(sked.recurrenceType) {
+            case "A":
+              sked.recurrenceType = "Every";
+              break;
+            case "1":
+              sked.recurrenceType = "First";
+              break;
+            case "2":
+              sked.recurrenceType = "Second";
+              break;
+            case "3":
+              sked.recurrenceType = "Third";
+              break;
+            case "4":
+              sked.recurrenceType = "Fourth";
+              break;
+            case "L":
+              sked.recurrenceType = "Last";
+              break;
+
+          }
+
+          /* Sked Object { recurrenceType: "A", startTime: 1900, duration: 120, _id: "54fb431401944afce2dfc3a9"} */
+
+        })
+        console.log ('Coordinates', coordinates);
+        coordinates.lat = lat;
+        data.center = {
+          lat: coordinates.lat,
+          lng: coordinates.lng,
+          zoom: 14
+        };
         return data;
       };
 
