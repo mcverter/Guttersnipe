@@ -58,33 +58,21 @@
             $scope.options = {scrollwheel: false};
             var coordinates = $scope.resource.place.coordinates;
 
-            $scope.marker = {
-              id: 0,
-              coords: {
-                latitude: coordinates.lat,
-                longitude: coordinates.lng
-              },
-              options: { draggable: false }
-            };
-
-
             $scope.map = {
               center: {
                 latitude: coordinates.lat,
                 longitude: coordinates.lng
               },
-              markers: {
+              marker : {
+                id: 0,
                 coords: {
                   latitude: coordinates.lat,
                   longitude: coordinates.lng
                 },
+                options: { draggable: false }
               },
               zoom: 16
             };
-
-            console.log('Scope Resource', $scope.resource);
-            console.log('Scope place', $scope.resource.place)
-
           });
       };
     }
