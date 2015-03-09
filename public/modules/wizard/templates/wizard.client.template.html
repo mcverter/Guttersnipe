@@ -21,6 +21,14 @@
                 <!-- our nested state views will be injected here -->
                 <div ui-view></div>
             </form>
+            <div class="navigation">
+                <div ng-show="prevExists(wizard.index)">
+                    <a ui-sref=".getPrev(wizard.index)"> BACKWARDS </a>
+                </div>
+                <div ng-show="nextExists(wizard.index)">
+                    <a ui-sref=".getNext(wizard.index)"> FORWARD </a>
+                </div>
+            </div>
 
         </div>
 

@@ -1,9 +1,10 @@
 <div class="container-fluid">
     <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
     <div class="row">
-        <div class="col-xs-6 col-md-3"><gut-resource-headline></gut-resource-headline></div>
+        <div class="col-xs-6 col-md-2"><gut-resource-headline></gut-resource-headline></div>
         <div class="col-xs-6 col-md-3"><gut-thing-small thing="resource.thing"></gut-thing-small></div>
-        <div class="col-xs-6 col-md-3"><gut-place-small place="resource.place"></gut-place-small></div>
+        <div class="col-xs-6 col-md-2"><gut-place-small place="resource.place"></gut-place-small></div>
         <div class="col-xs-6 col-md-3"><gut-time-small time="resource.time"></gut-time-small></div>
+        <div class="col-xs-6 col-md-2"><a role="button" class="btn btn-danger" data-ng-href="#/resources/{{resource._id}}">Full Record</a></div>
     </div>
 </div>
