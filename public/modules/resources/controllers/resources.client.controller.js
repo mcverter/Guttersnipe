@@ -55,7 +55,19 @@
           resourceId: $stateParams.resourceId
         }).$promise.then(function(rsc) {
             $scope.resource = rsc;
+            $scope.options = {scrollwheel: false};
             var coordinates = $scope.resource.place.coordinates;
+
+            $scope.marker = {
+              id: 0,
+              coords: {
+                latitude: coordinates.lat,
+                longitude: coordinates.lng
+              },
+              options: { draggable: false }
+            };
+
+
             $scope.map = {
               center: {
                 latitude: coordinates.lat,
