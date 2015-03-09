@@ -14,8 +14,6 @@
         details: {}
       };
 
-      console.log($scope.taxonomy);
-
       $scope.unsetType = function() {
         $scope.taxonomy.isTaxonomySet = false;
         $scope.taxonomy.isTypeSet = false;

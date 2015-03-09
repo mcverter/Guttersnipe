@@ -24,9 +24,6 @@
           loadQuote();
 
           $scope.reloadQuote =  loadQuote;
-
-          console.log('scope', $scope);
-
         }]
     };
   }]);})(window.angular, window._);

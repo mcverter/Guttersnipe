@@ -44,8 +44,6 @@
           geocoder = {},
           google = google || {};
 
-        console.log('Google is', google);
-
         // Google not set if no network connnection
         if (google && google.maps){
           geocoder = new google.maps.Geocoder();

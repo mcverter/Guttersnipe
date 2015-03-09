@@ -18,8 +18,6 @@
 
             $http.get('https://geoservices.tamu.edu/Services/Geocode/WebService/GeocoderService_V04_01.asmx')
                 .success(function Response (response) {
-                    console.log('Response');
-                    console.log(response);
                 });
 
             return geocoder;

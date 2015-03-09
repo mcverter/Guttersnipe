@@ -7,7 +7,6 @@
 
       function transformSchedules(schedules) {
         _.forEach(schedules, function(sked){
-          console.log ('Sked', sked);
           var startTime = Number(sked.startTime);
 
           if(startTime < 1200 ) {
@@ -74,7 +73,6 @@
       var transformResponseList = function(data){
         data = angular.fromJson(data);
         _.forEach(data, function(rsc){
-          console.log('rsc is ', rsc);
           transformSchedules(rsc.time.schedules);
         });
         return data;
@@ -95,9 +93,9 @@
         self.place = new Place(data.place);
         self.time = new Time(data.time);
         self.thing = new Thing(data.thing);
-
       }
-      var foo =  $resource(
+
+      return  $resource(
         'resources/:resourceId',
         {
           resourceId: '@_id'
@@ -116,9 +114,6 @@
             method: 'PUT'
           }
         });
-      console.log ("Response from query is ", foo);
-
-      return foo;
     }
   ]);
 })(window.angular,  window._);
