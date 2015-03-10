@@ -1,3 +1,4 @@
+/*
 (function (angular, app, _) {
 
   'use strict';
@@ -239,3 +240,4 @@
 
 })(window.angular, window.novantas, window._);
 
+ */

@@ -1,3 +1,4 @@
+/*
 (function (angular, app, _, btoa, URI) {
   'use strict';
 
@@ -1049,3 +1050,4 @@
 
 }) (window.angular, window.novantas, window._, window.btoa, window.URI);
 
+ */
