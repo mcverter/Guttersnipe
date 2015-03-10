@@ -25,7 +25,7 @@
                 var repeating = false;
                 end.setTime(start.getTime()+MSEC_TO_30MIN);
                 var modalInstance = $modal.open({
-                  templateUrl: templates.schedule + 'rsc_ScheduleDialogTemplate.html',
+                  templateUrl: templates.main + 'gut.time.schedule-dialog.client.template.html',
                   controller: function($scope, $modalInstance) {
                     Object.defineProperties($scope, {
                       start: {

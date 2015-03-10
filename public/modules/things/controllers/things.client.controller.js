@@ -4,7 +4,7 @@
 // Things controller
   angular.module('things').controller('ThingsController', ['$scope', '$stateParams', '$location', 'Authentication', 'Things',
     function($scope, $stateParams, $location, Authentication, Things) {
-      $scope.authentication = Authentication;
+/*      $scope.authentication = Authentication;
       $scope.isSummarySet = false;
 
       // Create new Thing
@@ -64,6 +64,7 @@
           thingId: $stateParams.thingId
         });
       };
+      */
     }
   ]);
 })(window.angular, window._);
