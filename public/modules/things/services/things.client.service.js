@@ -13,6 +13,7 @@
 
         Thing.prototype = Object.create(Object.prototype, {
         });
+        return {};
       }]
   );
 })(window.angular, window._);

@@ -1,5 +1,6 @@
-(function (angular, app, _) {
 /*
+(function (angular, app, _) {
+
   'use strict';
 
   app.factory('$report', ['$log', '$debug', '$api', '$user', '$q',
@@ -236,6 +237,7 @@
       $debug.services.$report = reportFactory;
       return reportFactory;
     }]);
-*/
+
 })(window.angular, window.novantas, window._);
 
+ */

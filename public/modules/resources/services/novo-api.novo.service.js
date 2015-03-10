@@ -1,6 +1,7 @@
+/*
 (function (angular, app, _, btoa, URI) {
   'use strict';
-/*
+
   app.factory('$api', ['$log', '$debug', '$timeout', '$config', '$http', '$q', '$cacheFactory',
 
     function ($log, $debug, $timeout, $config, $http, $q, $cacheFactory) {
@@ -1046,6 +1047,7 @@
       $debug.services.$api = api;
       return api;
     }]);
-*/
+
 }) (window.angular, window.novantas, window._, window.btoa, window.URI);
 
+ */

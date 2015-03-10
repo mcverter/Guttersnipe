@@ -4,7 +4,7 @@
 // Things controller
   angular.module('things').controller('ThingsTaxonomyController', ['ResourceTaxonomyService', '$scope', '$stateParams', '$location', 'Authentication', 'Things',
     function(ResourceTaxonomyService, $scope, $stateParams, $location, Authentication, Things) {
-      $scope.authentication = Authentication;
+/*      $scope.authentication = Authentication;
       $scope.taxonomy = {
         model : ResourceTaxonomyService.taxonomy,
         isTaxonomySet : false,
@@ -112,6 +112,7 @@
           thingId: $stateParams.thingId
         });
       };
+      */
     }
   ]);
 })(window.angular, window._);
