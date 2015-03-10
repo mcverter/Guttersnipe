@@ -3,7 +3,7 @@
 
   angular.module('times')
     .directive('scheduleInput',['times_templates', function(templates) {
-      var templateUrl = templates.schedule + 'rsc_ScheduleInputTemplate.html',
+      var templateUrl = templates.main + 'rsc_ScheduleInputTemplate.html',
         MSEC_TO_30MIN = 60 * 30 * 1000,
         eventSources = [],
         controller = function($scope, $modal) {
