@@ -3,7 +3,7 @@
 
   angular.module('things')
     .directive('resourceSummary', ['things_templates', function(templates) {
-      var templateUrl = templates.summary + 'rsc_SummaryMasterTemplate.html';
+      var templateUrl = templates.main + 'gut.thing.summary-master.client.template.html';
 
       return {
         restrict: 'E',

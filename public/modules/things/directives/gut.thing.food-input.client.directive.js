@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('things').directive('foodDetailsInput', ['things_templates', function(templates) {
-      var templateUrl = templates.food + 'rsc_FoodDetailsInputTemplate.html';
+      var templateUrl = templates.main  + 'gut.thing.food-input.client.template.html';
 
       return {
         restrict: 'E',

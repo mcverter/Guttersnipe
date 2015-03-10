@@ -3,7 +3,7 @@
 
   angular.module('things')
     .directive('resourceSummaryInput', ['things_templates', function(templates) {
-      var templateUrl = templates.summary + 'rsc_SummaryInputTemplate.html';
+      var templateUrl = templates.main + 'gut.thing.summary-input.client.template.html';
 
       return {
         restrict: 'E',

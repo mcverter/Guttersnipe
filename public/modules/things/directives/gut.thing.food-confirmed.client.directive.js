@@ -3,7 +3,7 @@
 
   angular.module('things')
     .directive('foodDetailsConfirmed', ['things_templates', function(templates) {
-      var templateUrl = templates.food + 'rsc_FoodDetailsConfirmedTemplate.html';
+      var templateUrl = templates.main  + 'gut.thing.food-confirmed.client.template.html';;
 
       return {
         restrict: 'E',

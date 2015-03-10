@@ -2,7 +2,7 @@
   'use strict';
   angular.module('times')
     .directive('scheduleMaster', ['times_templates', function(templates) {
-      var templateUrl = templates.main + 'rsc_ScheduleMasterTemplate.html';
+      var templateUrl = templates.main + 'gut.time.schedule-master.client.template.html';
 
       return {
         restrict: 'E',

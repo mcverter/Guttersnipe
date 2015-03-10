@@ -3,7 +3,7 @@
 
   angular.module('things')
     .directive('resourceTaxon', ['things_templates', function(templates) {
-      var templateUrl = templates.common + 'rsc_TaxonTemplate.html';
+      var templateUrl = templates.main + 'gut.thing.taxon.client.template.html';
 
       return {
         restrict: 'E',

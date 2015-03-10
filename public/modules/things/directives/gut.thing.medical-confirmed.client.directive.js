@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('things').directive('medicalDetailsConfirmed', ['things_templates', function(templates) {
-      var templateUrl = templates.medical + 'rsc_MedicalDetailsConfirmedTemplate.html';
+      var templateUrl = templates.main + 'gut.thing.medical-confirmed.client.template.html';
 
       return {
         restrict: 'E',

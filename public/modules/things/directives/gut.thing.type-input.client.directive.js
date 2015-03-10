@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('things').directive('resourceTypeInput', ['things_templates', function(templates) {
-      var templateUrl = templates.type + 'rsc_TypeInputTemplate.html';
+      var templateUrl = templates.main + 'gut.thing.type-input.client.template.html';
 
       return {
         restrict: 'E',

@@ -1,7 +1,8 @@
 (function (angular, _) {
   'use strict';
   angular.module('things').directive('resourceType', ['things_templates', function(templates) {
-      var templateUrl = templates.type + 'rsc_TypeMasterTemplate.html';
+      var templateUrl = templates.main +
+        'gut.thing.type-master.client.template.html';
 
       return {
         restrict: 'E',

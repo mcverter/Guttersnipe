@@ -4,7 +4,7 @@
     .directive('resourceCreateInstructions', ['resource_templates', function(templates) {
       var linker = function(scope, element, attrs) {},
         controller = function($scope){},
-        templateUrl = templates.instructions + 'rsc_InstructionsTemplate.html';
+        templateUrl =  templates.main + 'resource-instructions.client.template.html';
 
       return {
         link: linker,

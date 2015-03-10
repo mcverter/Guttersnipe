@@ -2,7 +2,7 @@
 
 angular.module('places')
     .directive('mapInput', ['places_templates', function(templates) {
-        var templateUrl = templates.main + 'rsc_MapInputTemplate.html';
+        var templateUrl = templates.main + 'place-map-input.client.template.html';
 
         return {
             restrict: 'E',

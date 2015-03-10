@@ -3,7 +3,7 @@
   gut.time.schedule-confirmed.client.directive.js
   angular.module('places')
     .directive('mapMaster', ['places_templates', function(templates) {
-      var templateUrl = templates.main + 'rsc_MapMasterTemplate.html';
+      var templateUrl = templates.main + 'place-map-master.client.template.html';
 
       return {
         restrict: 'E',
