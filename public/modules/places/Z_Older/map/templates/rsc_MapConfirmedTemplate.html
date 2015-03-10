@@ -1,0 +1,8 @@
+<div>
+    <div>
+        <em> Description </em> {{place.description}} <br>
+        <em> Address </em> {{place.address}} <br>
+        <leaflet markers="place.markers" center="place.center" defaults="defaults" width="640px" height="480px"></leaflet>
+    </div>
+    <a class="btn btn-warning" href="#" role="button" ng-click="place.isLocationSet=false">Edit</a>
+</div>
