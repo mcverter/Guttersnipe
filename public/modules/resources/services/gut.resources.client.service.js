@@ -48,6 +48,7 @@
  * @method $update(name, description):
  * @method $copy(label, description):
  * @method $delete
+ */
 
 
 
@@ -216,4 +217,3 @@
   );
 })(window.angular, window._);
 
- */

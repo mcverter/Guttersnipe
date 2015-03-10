@@ -2,9 +2,8 @@
   'use strict';
 
 //Resources service used for communicating with the resources REST endpoints
-  angular.module('wizard').factory('WizardMaker',
-    [
-    function() {
+  angular.module('resources').factory('Resources', ['$resource',
+    function($resource) {
       var stages = [];
 
       function Stage(data) {
