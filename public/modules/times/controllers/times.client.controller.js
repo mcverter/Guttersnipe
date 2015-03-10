@@ -9,7 +9,7 @@
         isScheduled : false
       };
 
-/*
+
       $scope.authentication = Authentication;
 
 
@@ -70,7 +70,6 @@
           timeId: $stateParams.timeId
         });
       };
-      */
     }
   ]);
 })(window.angular, window._);

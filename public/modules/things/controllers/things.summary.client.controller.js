@@ -4,7 +4,7 @@
 // Things controller
   angular.module('things').controller('ThingsSummaryController', ['$scope', '$stateParams', '$location', 'Authentication', 'Things',
     function($scope, $stateParams, $location, Authentication, Things) {
-/*      $scope.authentication = Authentication;
+      $scope.authentication = Authentication;
       $scope.summary = {
         isSummarySet : false,
         headline: '',
@@ -69,7 +69,6 @@
           thingId: $stateParams.thingId
         });
       };
-      */
     }
   ]);
 })(window.angular, window._);
