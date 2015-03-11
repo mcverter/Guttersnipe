@@ -3,7 +3,35 @@
   angular.module('resources').controller('ResourcesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Resources',
     function($scope, $stateParams, $location, Authentication, Resources) {
 
-      var resource = {};
+      var resource = {
+        method: '',
+        notes: '',
+        headline: '',
+        thing: {
+          description: {
+            summary: '',
+            notes: ''
+          },
+          taxonomy: {
+            type: '',
+            subtypes: [],
+            details: []
+          }
+        },
+        place: {
+          coordinates: {
+            lat: '',
+            lng: ''
+          },
+          name: '',
+          address: '',
+          notes: ''
+        },
+        time: {
+          schedules: [],
+          notes: ''
+        }
+      };
 
 
       Object.defineProperties($scope, {
@@ -114,103 +142,3 @@
     }
   ]);
 })(window.angular, window._);
-
-
-
-
-
-
-/*
- method: {
- enumerable: true,
- get: function() {return '';},
- set: function(val){}
- },
- notes: {
- enumerable: true,
- ge: function() {return '';},
- set: function(val){}
- },
- headline: {
- enumerable: true,
- get: function() {return '';},
- set: function(val){}
- },
- thing: {
- description: {
- summary: {
- enumerable: true,
- get: function() {return '';},
- set: function(val){}
- },
- notes: {
- enumerable: true,
- get: function() {return '';},
- set: function(val){}
- }
- },
- taxonomy: {
- type: {
- enumerable: true,
- get: function() {return '';},
- set: function(val){}
- },
- subtypes: [String],
- details: [String]
- }
- },
- place: {
- coordinates: {
- lat: {
- enumerable: true,
- get: function() {return '';},
- set: function(val){}
- },
- lng: {
- enumerable: true,
- get: function() {return '';},
- set: function(val){}
- }
- },
- name: {
- },
- address: {
- enumerable: true,
- get: function() {return '';},
- set: function(val){}
- },
- notes: {
- enumerable: true,
- get: function() {return '';},
- set: function(val){}
- }
- },
- time: {
- schedules: [
- {
- punctualDate: {
- },
- recurringDay: {
- enum: weekdayEnum
- },
- recurrenceType: {
- enum: recurrenceTypeEnum
- },
- startTime: {
- enumerable: true,
- get: function() {return '';},
- set: function(val){}
- },
- duration: {
- enumerable: true,
- get: function() {return '';},
- set: function(val){}
- }
- }
- ],
- notes: {
- enumerable: true,
- get: function() {return '';},
- set: function(val){}
- }
- }*/
