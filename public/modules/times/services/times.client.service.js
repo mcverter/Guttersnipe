@@ -7,6 +7,11 @@
       var weekdayEnum = 	   ['all', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
         recurrenceTypeEnum = ['A', '1', '2', '3', '4', 'L'];
 
+      var emptyTime = {
+          schedules: [],
+          notes: ''
+      };
+
       function Time(schedules, notes) {
         var self = this;
         if (!schedules || !schedules.length || schedules.length < 1) {

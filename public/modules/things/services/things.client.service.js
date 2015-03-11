@@ -6,6 +6,22 @@
     [
       function() {
 
+        var emptyThing = {
+            description: {
+              summary: '',
+              notes: ''
+            },
+            taxonomy: {
+              type: '',
+              subtypes: [],
+              details: []
+            }
+        };
+
+
+        function getEmptyThing() {
+          return _.cloneDeep(emptyThing);
+        }
 
         function Thing(description, taxonomy) {
           var self = this;
@@ -14,7 +30,7 @@
           }
           if (!taxonomy || !taxonomy.type) {
             console.error('Error:  No thing type');
-          }
+        }
           self.description = description;
           self.taxonomy = taxonomy;
         }

@@ -4,6 +4,35 @@
 //Resources service used for communicating with the resources REST endpoints
   angular.module('resources').factory('Resources', ['$resource',
     function($resource) {
+      var emptyResource = {
+        method: '',
+        notes: '',
+        headline: '',
+        thing: {
+          description: {
+            summary: '',
+            notes: ''
+          },
+          taxonomy: {
+            type: '',
+            subtypes: [],
+            details: []
+          }
+        },
+        place: {
+          coordinates: {
+            lat: '',
+            lng: ''
+          },
+          name: '',
+          address: '',
+          notes: ''
+        },
+        time: {
+          schedules: [],
+          notes: ''
+        }
+      };
 
       function transformSchedules(schedules) {
         _.forEach(schedules, function(sked){

@@ -2,59 +2,25 @@
 
   angular.module('resources').controller('ResourcesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Resources',
     function($scope, $stateParams, $location, Authentication, Resources) {
+      $scope.addTime = function(){};
+      $scope.addPlace = function(){};
+      $scope.addThingSummary = function(){};
+      $scope.addThingTaxonomy = function(){};
 
-      var resource = {
-        method: '',
-        notes: '',
-        headline: '',
-        thing: {
-          description: {
-            summary: '',
-            notes: ''
-          },
-          taxonomy: {
-            type: '',
-            subtypes: [],
-            details: []
-          }
-        },
-        place: {
-          coordinates: {
-            lat: '',
-            lng: ''
-          },
-          name: '',
-          address: '',
-          notes: ''
-        },
-        time: {
-          schedules: [],
-          notes: ''
-        }
-      };
+      $scope.updateTime = function(){};
+      $scope.updatePlace = function(){};
+      $scope.updateThingSummary = function(){};
+      $scope.updateThingTaxonomy = function(){};
+
+      $scope.deleteResource = function(){};
+      $scope.createResource = function(){};
+      $scope.updateResource = function(){};
+      $scope.findResource = function(){};
 
 
-      Object.defineProperties($scope, {
-        resource: {
-          enumerable: true,
-          get: function () {
-            return resource;
-          },
-          set: function (val) {
-            resource = val
-          }
-        },
-        authentication: {
-          enumerable: true,
-          get: function () {
-            return Authentication;
-          },
-          set: function (val) {
-            Authentication = val
-          }
 
-        }
-      });
+
+      $scope.Authentication = Authentication;
       $scope.create =  function()
       {
         var resource = new Resources({
@@ -121,21 +87,21 @@
                 }
               }
             });
-              $scope.map = {
-                center: {
+            $scope.map = {
+              center: {
+                latitude: coordinates.lat,
+                longitude: coordinates.lng
+              },
+              marker : {
+                id: 0,
+                coords: {
                   latitude: coordinates.lat,
                   longitude: coordinates.lng
                 },
-                marker : {
-                  id: 0,
-                  coords: {
-                    latitude: coordinates.lat,
-                    longitude: coordinates.lng
-                  },
-                  options: { draggable: false }
-                },
-                zoom: 16
-              }
+                options: { draggable: false }
+              },
+              zoom: 16
+            }
             console.log("scoop", $scope);
           });
       };
