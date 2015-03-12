@@ -18,6 +18,22 @@
             isTypeSet = false;
           
           Object.defineProperties($scope, {
+            toggleSubtype : {
+              enumerable: true,
+              value: function(subtype) {
+                console.log("toggling subtype");
+                var idx = _.findIndex($scope.thing.taxonomy.subtypes, subtype);
+
+                console.log('found index', idx);
+                if (idx < 0) {
+                  console.log('adding to subtypes ', subtype);
+                  $scope.thing.taxonomy.subtypes.push(subtype);
+                } else {
+                  console.log('removing from subtypes: ', subtype);
+                  $scope.thing.taxonomy.subtypes.splice(idx, 1);
+                }
+              }
+            },
             isTypeSet : {
               enumerable:true,
               set: function(val) {

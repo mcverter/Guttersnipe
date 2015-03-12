@@ -1,11 +1,7 @@
 <div>
-
-    Thing is {{thing}} <br />
-    is description set {{isDescriptionSet}}
-
+    
 <!-- INPUT -->
-
-    <div ng-if="!isDescriptionSet">
+    <div ng-show="!isDescriptionSet">
         <div>
             <ng-form role="form" name="summaryForm" novalidate>
                 <div class="form-group">
@@ -32,7 +28,7 @@
     </div>
 
 <!-- CONFIRMED -->
-    <div ng-if="isDescriptionSet">
+    <div ng-show="isDescriptionSet">
         <div>
             <div>
                 <h2> Headline </h2> {{thing.description.headline}}
