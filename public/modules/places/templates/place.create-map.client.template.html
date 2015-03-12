@@ -16,8 +16,14 @@
                     </div>
 
                     <button class="btn btn-info" ng-click="locateAddress($event)"> Find Address </button>
-                    <leaflet markers="places.markers" center="place.center" defaults="defaults" width="640px" height="480px"></leaflet>
-                </div>
+
+
+                    <ui-gmap-google-map center="map.center" zoom="map.zoom">
+                        <ui-gmap-marker coords="map.marker.coords" idkey="map.marker.id">
+                        </ui-gmap-marker>
+                    </ui-gmap-google-map>
+
+                                    </div>
             </div>
             <button type="button" class="btn btn-default" ng-disabled="!(place.description)" ng-click="place.isLocationSet=true">OK</button>
         </ng-form>
@@ -28,7 +34,11 @@
         <div>
             <em> Description </em> {{place.description}} <br>
             <em> Address </em> {{place.address}} <br>
-            <leaflet markers="place.markers" center="place.center" defaults="defaults" width="640px" height="480px"></leaflet>
+            <ui-gmap-google-map center="map.center" zoom="map.zoom">
+                <ui-gmap-marker coords="map.marker.coords" idkey="map.marker.id">
+                </ui-gmap-marker>
+            </ui-gmap-google-map>
+
         </div>
         <a class="btn btn-warning" href="#" role="button" ng-click="place.isLocationSet=false">Edit</a>
     </div>
