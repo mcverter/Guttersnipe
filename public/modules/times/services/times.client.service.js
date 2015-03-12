@@ -4,7 +4,8 @@
 
   angular.module('times').factory('Times',
     function() {
-      var weekdayEnum = 	   ['all', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
+      var timeFactory,
+        weekdayEnum = 	   ['all', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
         recurrenceTypeEnum = ['A', '1', '2', '3', '4', 'L'];
 
       var emptyTime = {
@@ -48,9 +49,16 @@
         self.state = {};
       }
 
+      timeFactory = Object.create(Object.prototype, {
+        emptyTime: {
+          enumerable: true,
+          get: function getEmptyTime() {
+            return _.cloneDeep(emptyTime);
+          }
+        }
+      });
 
-
-      return {};
+      return timeFactory;
     }
   );
 })(window.angular, window._);

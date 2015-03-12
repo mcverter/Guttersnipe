@@ -6,22 +6,20 @@
     [
       function() {
 
+        console.log('in thing service');
+        var thingFactory;
+
         var emptyThing = {
-            description: {
-              summary: '',
-              notes: ''
-            },
-            taxonomy: {
-              type: '',
-              subtypes: [],
-              details: []
-            }
+          description: {
+            summary: '',
+            notes: ''
+          },
+          taxonomy: {
+            type: '',
+            subtypes: [],
+            details: []
+          }
         };
-
-
-        function getEmptyThing() {
-          return _.cloneDeep(emptyThing);
-        }
 
         function Thing(description, taxonomy) {
           var self = this;
@@ -30,7 +28,7 @@
           }
           if (!taxonomy || !taxonomy.type) {
             console.error('Error:  No thing type');
-        }
+          }
           self.description = description;
           self.taxonomy = taxonomy;
         }
@@ -38,7 +36,17 @@
 
         Thing.prototype = Object.create(Object.prototype, {
         });
-        return {};
+
+        thingFactory = Object.create(Object.prototype, {
+          emptyThing: {
+            enumerable: true,
+            get: function getEmptyThing() {
+              return _.cloneDeep(emptyThing);
+            }
+          }
+        });
+
+        return thingFactory;
       }]
   );
 })(window.angular, window._);

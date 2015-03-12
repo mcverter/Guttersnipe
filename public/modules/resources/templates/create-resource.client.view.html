@@ -20,21 +20,21 @@
 
                 <div class="jumbotron BlackOnRed">
                     <h2> Describe </h2>
-                    <resource-summary></resource-summary>
+                    <resource-summary headline="resource.headline" thing="resource.thing"></resource-summary>
                 </div>
                 <div class="jumbotron RedOnBlack">
                     <h2>Classify</h2>
-                    <resource-type></resource-type>
+                    <resource-type thing="resource.thing"></resource-type>
                 </div>
 
                 <div class="jumbotron BlackOnRed">
                     <h2>Map</h2>
-                    <map-master></map-master>
+                    <map-master place="resource.place"></map-master>
                 </div>
 
                 <div class="jumbotron RedOnBlack">
                     <h2>Schedule</h2>
-                    <schedule-master></schedule-master>
+                    <schedule-master time="resource.time"></schedule-master>
                 </div>
                 <div class="form-group">
                     <input type="submit" value="Create Resource" class="btn btn-default">

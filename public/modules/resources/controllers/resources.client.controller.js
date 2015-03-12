@@ -2,22 +2,8 @@
 
   angular.module('resources').controller('ResourcesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Resources',
     function($scope, $stateParams, $location, Authentication, Resources) {
-      $scope.addTime = function(){};
-      $scope.addPlace = function(){};
-      $scope.addThingSummary = function(){};
-      $scope.addThingTaxonomy = function(){};
-
-      $scope.updateTime = function(){};
-      $scope.updatePlace = function(){};
-      $scope.updateThingSummary = function(){};
-      $scope.updateThingTaxonomy = function(){};
-
-      $scope.deleteResource = function(){};
-      $scope.createResource = function(){};
-      $scope.updateResource = function(){};
-      $scope.findResource = function(){};
-
-
+      $scope.resource = Resources.getEmptyResource;
+      $scope.createAgreed = false;
 
 
       $scope.Authentication = Authentication;
@@ -67,26 +53,11 @@
         Resources.get({
           resourceId: $stateParams.resourceId
         }).$promise.then(function(rsc) {
-            var createAgreed = false;
-
-            console.log("receourse gotten is ", rsc)
-
             $scope.resource = rsc;
             $scope.options = {scrollwheel: false};
             var coordinates = $scope.resource.place.coordinates;
-            console.log("coords is ", coordinates)
 
-            Object.defineProperties($scope, {
-              createAgreed: {
-                enumerable: true,
-                get: function getCreateAgreed() {
-                  return createAgreed;
-                },
-                set: function setCreateAgreed(val) {
-                  return createAgreed = val;
-                }
-              }
-            });
+
             $scope.map = {
               center: {
                 latitude: coordinates.lat,
@@ -108,3 +79,23 @@
     }
   ]);
 })(window.angular, window._);
+
+
+/*
+ $scope.addTime = function(){};
+ $scope.addPlace = function(){};
+ $scope.addThingSummary = function(){};
+ $scope.addThingTaxonomy = function(){};
+
+ $scope.updateTime = function(){};
+ $scope.updatePlace = function(){};
+ $scope.updateThingSummary = function(){};
+ $scope.updateThingTaxonomy = function(){};
+
+ $scope.deleteResource = function(){};
+ $scope.createResource = function(){};
+ $scope.updateResource = function(){};
+ $scope.findResource = function(){};
+
+
+ */

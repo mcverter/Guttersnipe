@@ -7,8 +7,7 @@
 
       return {
         restrict: 'E',
-        templateUrl: templateUrl,
-//          controller: 'ThingsSummaryController'
+        templateUrl: templateUrl
       };
     }]
   );

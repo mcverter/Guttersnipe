@@ -2,38 +2,24 @@
   'use strict';
 
 //Resources service used for communicating with the resources REST endpoints
-  angular.module('resources').factory('Resources', ['$resource',
-    function($resource) {
+  angular.module('resources').factory('Resources',
+    ['$resource', 'Places', 'Times', 'Things',
+      function($resource, Places, Times, Things) {
+
       var emptyResource = {
         method: '',
         notes: '',
-        headline: '',
-        thing: {
-          description: {
-            summary: '',
-            notes: ''
-          },
-          taxonomy: {
-            type: '',
-            subtypes: [],
-            details: []
-          }
-        },
-        place: {
-          coordinates: {
-            lat: '',
-            lng: ''
-          },
-          name: '',
-          address: '',
-          notes: ''
-        },
-        time: {
-          schedules: [],
-          notes: ''
-        }
+        headline: ''
       };
 
+        function getEmptyResource() {
+          var ret = _.cloneDeep(emptyResource);
+          ret.thing = Things.emptyThing,
+          ret.place = Places.emptyPlace,
+          ret.time = Times.emptyTime
+          console.log("ret is ", ret);
+          return ret;
+        }
       function transformSchedules(schedules) {
         _.forEach(schedules, function(sked){
           var startTime = Number(sked.startTime);
@@ -114,6 +100,8 @@
         return data;
       };
 
+        /*
+
       function Resource (data) {
         var self = this;
         self.headline = data.headline || '';
@@ -122,9 +110,9 @@
         self.place = new Place(data.place);
         self.time = new Time(data.time);
         self.thing = new Thing(data.thing);
-      }
+      }*/
 
-      return  $resource(
+      var retval = $resource(
         'resources/:resourceId',
         {
           resourceId: '@_id'
@@ -132,8 +120,8 @@
         {
           query: {
             isArray: true,
-            method: 'GET'
-            ,transformResponse: transformResponseList
+            method: 'GET',
+            transformResponse: transformResponseList
           },
           get: {
             method: 'GET',
@@ -143,6 +131,16 @@
             method: 'PUT'
           }
         });
+
+        Object.defineProperties(retval, {
+          getEmptyResource : {
+            enumerable: true,
+            value: getEmptyResource()
+
+          }
+        });
+
+      return retval;
     }
   ]);
 })(window.angular,  window._);

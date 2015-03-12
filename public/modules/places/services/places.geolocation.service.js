@@ -18,8 +18,10 @@
 (function (angular,google,  _) {
   'use strict';
 
+  console.log('in geolocator');
   angular.module('places').factory('Geolocator',
     function() {
+      console.log('making the geocode object');
       var geocoder = geocoder || new google.maps.Geocoder(),
         geolocatorFactory = Object.create(Object.prototype, {
           getCurrentLocation: {

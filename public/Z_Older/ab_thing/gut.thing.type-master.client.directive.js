@@ -7,7 +7,7 @@
       return {
         restrict: 'E',
         templateUrl: templateUrl,
-        controller: 'ThingsTaxonomyController'
+        // controller: 'ThingsTaxonomyController'
       };
     }]
   );
