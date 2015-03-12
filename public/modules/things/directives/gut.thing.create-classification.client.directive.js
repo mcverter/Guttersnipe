@@ -1,10 +1,10 @@
 (function (angular, _) {
   'use strict';
 
-  angular.module('things').directive('resourceTypeInput',
+  angular.module('things').directive('thingCreateClassification ',
     ['things_templates', 'ResourceTaxonomyService',
       function(templates, ResourceTaxonomy) {
-      var templateUrl = templates.main + 'gut.thing.type-input.client.template.html';
+      var templateUrl = templates.main + 'gut.thing.create-taxonomy.client.template.html';
 
       return {
         restrict: 'E',

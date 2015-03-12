@@ -6,18 +6,11 @@
     ['$resource', 'Places', 'Times', 'Things',
       function($resource, Places, Times, Things) {
 
-      var emptyResource = {
-        method: '',
-        notes: '',
-        headline: ''
-      };
-
         function getEmptyResource() {
-          var ret = _.cloneDeep(emptyResource);
+          var ret = {};
           ret.thing = Things.emptyThing,
           ret.place = Places.emptyPlace,
           ret.time = Times.emptyTime
-          console.log("ret is ", ret);
           return ret;
         }
       function transformSchedules(schedules) {

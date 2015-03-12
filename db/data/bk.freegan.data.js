@@ -2,12 +2,12 @@ var Brooklyn = [
 
 //Perelandra
   {
-    headline: 'Perelandra',
-    method: 'Regular curbside bags, plus cardboard boxes set to the side with most of the produce (what foragers don’t take gets composted).',
     thing: {
       taxonomy: {type: 'food', subtypes: ['dumpster']},
       description: {
-        summary: ' Lots of locals count on finding greens and produce in particular. Fewer go thru the bags, which contain health bread, and often assorted packaged health foods, and small amounts of bulk foods (grains, beans, nuts, coffee) that can be gleaned from the not-quite-emptied heavy brown bags.'
+        summary: ' Lots of locals count on finding greens and produce in particular. Fewer go thru the bags, which contain health bread, and often assorted packaged health foods, and small amounts of bulk foods (grains, beans, nuts, coffee) that can be gleaned from the not-quite-emptied heavy brown bags.',
+        headline: 'Perelandra',
+        method: 'Regular curbside bags, plus cardboard boxes set to the side with most of the produce (what foragers don’t take gets composted).'
       }
     },
     place: {
@@ -29,13 +29,13 @@ var Brooklyn = [
     }
   },
   {
-    headline: 'Trader Joe\'s',
-    method: 'On the south side of Atlantic Avenue near Court St in big dumpsters.',
-    notes: 'Be forewarned, the initial reaction of this store’s management was to have the police ticket dumpster divers for trespass or littering',
     thing: {
       taxonomy: {type: 'food', subtypes: ['dumpster']},
       description: {
-        summary: ' Dumpster divers from all 4 boroughs have been known to make the trip. On some nights TJs puts out upwards of 6 dumpsters, at least half of which are filled top to bottom with quality food. Sometimes the scene gets weirdly competitive, with dumpster divers seeming to forget that the area is packed with other wasteful stores.Lots of locals count on finding greens and produce in particular. Fewer go thru the bags, which contain health bread, and often assorted packaged health foods, and small amounts of bulk foods (grains, beans, nuts, coffee) that can be gleaned from the not-quite-emptied heavy brown bags.'
+        summary: ' Dumpster divers from all 4 boroughs have been known to make the trip. On some nights TJs puts out upwards of 6 dumpsters, at least half of which are filled top to bottom with quality food. Sometimes the scene gets weirdly competitive, with dumpster divers seeming to forget that the area is packed with other wasteful stores.Lots of locals count on finding greens and produce in particular. Fewer go thru the bags, which contain health bread, and often assorted packaged health foods, and small amounts of bulk foods (grains, beans, nuts, coffee) that can be gleaned from the not-quite-emptied heavy brown bags.',
+        headline: 'Trader Joe\'s',
+        method: 'On the south side of Atlantic Avenue near Court St in big dumpsters.',
+        notes: 'Be forewarned, the initial reaction of this store’s management was to have the police ticket dumpster divers for trespass or littering'
       }
     },
     place: {
@@ -67,24 +67,22 @@ var Brooklyn = [
       notes: 'Large black bags out front.'
     },
     time : {
-      time : {
-        schedules : [{recurringDay: 'mon', recurrenceType: 'A', startTime: 2200,duration: 120},
-          {recurringDay: 'tue', recurrenceType: 'A', startTime: 2200,duration: 120},
-          {recurringDay: 'wed', recurrenceType: 'A', startTime: 2200,duration: 120},
-          {recurringDay: 'thu', recurrenceType: 'A', startTime: 2200,duration: 120},
-          {recurringDay: 'fri', recurrenceType: 'A', startTime: 2200,duration: 120},
-          {recurringDay: 'sun', recurrenceType: 'A', startTime: 2200,duration: 120}],
-        notes:''
-      }
+      schedules : [{recurringDay: 'mon', recurrenceType: 'A', startTime: 2200,duration: 120},
+        {recurringDay: 'tue', recurrenceType: 'A', startTime: 2200,duration: 120},
+        {recurringDay: 'wed', recurrenceType: 'A', startTime: 2200,duration: 120},
+        {recurringDay: 'thu', recurrenceType: 'A', startTime: 2200,duration: 120},
+        {recurringDay: 'fri', recurrenceType: 'A', startTime: 2200,duration: 120},
+        {recurringDay: 'sun', recurrenceType: 'A', startTime: 2200,duration: 120}],
+      notes:''
     }
   },
   {
-    headline: 'Garden of Eden Gourmet',
-    method: 'Three dumpsters on the curb plus “compost” mini dumpsters.',
     thing: {
       taxonomy: {type: 'food', subtypes: ['dumpster']},
       description: {
-        summary: 'Messy and hit-or-miss, but can yield a surprising amount of fresh vegetables,  prepared foods, yogurts and so forth. The “compost” bins are well worth digging down a ways, as they’ve yielded lots of whole fruit and veg.'
+        summary: 'Messy and hit-or-miss, but can yield a surprising amount of fresh vegetables,  prepared foods, yogurts and so forth. The “compost” bins are well worth digging down a ways, as they’ve yielded lots of whole fruit and veg.',
+        headline: 'Garden of Eden Gourmet',
+        method: 'Three dumpsters on the curb plus “compost” mini dumpsters.'
       }
     },
     place: {
@@ -92,7 +90,7 @@ var Brooklyn = [
         lat: 40.693922,
         lng: -73.991764
       },
-      address: '180 Montague St #1 Brooklyn, NY 11201 ',
+      address: '180 Montague St #1 Brooklyn, NY 11201 '
     },
     time : {
       schedules : [{recurringDay: 'mon', recurrenceType: 'A', startTime: 2200,duration: 120},
@@ -104,14 +102,14 @@ var Brooklyn = [
     }
   },
   {
-    headline: 'Gristedes',
-    notes: 'Clear garbage bags out front.',
     thing: {
       taxonomy: {
         type: 'food',
         subtypes: ['dumpster']
       },
       description: {
+        headline: 'Gristedes',
+        notes: 'Clear garbage bags out front.',
         summary: 'Routinely hit or miss, but the hits can be great: dozens of eggs, bags of chocolate chips, cheese. '
       }
     },
@@ -120,7 +118,7 @@ var Brooklyn = [
         lat: 40.6975689,
         lng: -73.9926592
       },
-      address: '101 Clark St Brooklyn, NY 11201',
+      address: '101 Clark St Brooklyn, NY 11201'
     },
     time : {
       schedules : [{recurringDay: 'all', recurrenceType: 'A', startTime: 2130,duration: 120}],
@@ -128,11 +126,11 @@ var Brooklyn = [
     }
   },
   {
-    headline: 'Caputo\'s Bakery',
     thing: {
       taxonomy: {type: 'food', subtypes: ['dumpster']},
       description: {
-        summary: 'Italian Bakery.  Excellent bread and cookies. Baker is on site all night long; move fast. Also, vegetarians beware the sausage bread. '
+        summary: 'Italian Bakery.  Excellent bread and cookies. Baker is on site all night long; move fast. Also, vegetarians beware the sausage bread. ',
+        headline: 'Caputo\'s Bakery'
       }
     },
     place: {
@@ -153,10 +151,10 @@ var Brooklyn = [
     }
   },
   {
-    headline: 'Union Market',
     thing: {
       taxonomy: {type: 'food', subtypes: ['dumpster']},
       description: {
+        headline: 'Union Market',
         summary: 'For those on bicycle or who don’t mind a little walk, this is a great alternative to the Trader Joe’s at Atlantic and Court. It’s a high-end supermarket mini-chain that is just far enough from other stores that it gets few dumpster divers. Finds have included loads of packaged and unpackaged bread, produce, dairy products, quarts of prepared soup (generally not vegetarian), fancy desserts, fancy fresh pasta. '
       }
     },
@@ -178,10 +176,10 @@ var Brooklyn = [
     }
   },
   {
-    headline: ' Associated Supermarket',
     thing: {
       taxonomy: {type: 'food', subtypes: ['dumpster']},
       description: {
+        headline: ' Associated Supermarket',
         summary: ' Loads of black bags of fruit and vegetables There’s also generally 1 very heavy bag of raw meat that’s been taken out of the packages. The managers are generally friendly but customers sometimes complain, so try to come after dark and be fairly discreet.'
       }
     },
@@ -190,7 +188,7 @@ var Brooklyn = [
         lat: 40.6253213,
         lng: -73.9618105
       },
-      address: '1413 Avenue J Brooklyn, NY 11230',
+      address: '1413 Avenue J Brooklyn, NY 11230'
     },
     time : {
       schedules : [{recurringDay: 'all', recurrenceType: 'A', startTime: 1900,duration: 120}],
@@ -198,10 +196,10 @@ var Brooklyn = [
     }
   },
   {
-    headline: 'New Banana King',
     thing: {
       taxonomy: {type: 'food', subtypes: ['dumpster']},
       description: {
+        headline: 'New Banana King',
         summary: 'As late at night as you can stand, on E 12th Street, big black plastic bags. This store stays open very late and some of the managers will diligently shoo you away. They throw out huge quantities of produce, seemingly entire cases of stuff not up to their standard. My partner and I have made gallons of cider from a single night’s pickup of apples and pears, for instance. Other typical mass dumps include bananas and tomatoes. Be prepared to can, dry, freeze or ferment. '
       }
     },
@@ -213,14 +211,14 @@ var Brooklyn = [
       address: '1123 Avenue J Brooklyn, NY 11230'
     },
     time : {
-      schedules : [{recurringDay: 'all', recurrenceType: 'A', startTime: 2300,duration: 120}],
+      schedules : [{recurringDay: 'all', recurrenceType: 'A', startTime: 2300,duration: 120}]
     }
   },
   {
-    headline: 'Isaac\'s Bake Shop',
     thing: {
       taxonomy: {type: 'food', subtypes: ['dumpster']},
       description: {
+        headline: 'Isaac\'s Bake Shop',
         summary: 'Bags on the street of bread and pastries, particularly on Friday evening. '
       }
     },

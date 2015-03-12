@@ -73,7 +73,6 @@
               },
               zoom: 16
             }
-            console.log("scoop", $scope);
           });
       };
     }

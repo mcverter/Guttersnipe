@@ -12,18 +12,6 @@ var weekdayEnum = 	   ['all', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
 
 
 var ResourceSchema = new Schema({
-  method: {
-    type: String,
-    required: false
-  },
-  notes:  {
-    type: String,
-    required: false
-  },
-  headline : {
-    type: String,
-    required: true
-  },
   thing: {
     description: {
       summary : {
@@ -33,6 +21,14 @@ var ResourceSchema = new Schema({
       notes : {
         type: String,
         required: false
+      },
+      method: {
+        type: String,
+        required: false
+      },
+      headline : {
+        type: String,
+        required: true
       }
     },
     taxonomy : {

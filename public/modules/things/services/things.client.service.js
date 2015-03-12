@@ -5,14 +5,14 @@
   angular.module('things').factory('Things',
     [
       function() {
-
-        console.log('in thing service');
         var thingFactory;
 
         var emptyThing = {
           description: {
             summary: '',
-            notes: ''
+            notes: '',
+            headline: '',
+            method: ''
           },
           taxonomy: {
             type: '',

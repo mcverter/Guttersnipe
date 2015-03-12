@@ -4,8 +4,6 @@
   angular.module('places').factory('Places',
     ['Geolocator',
     function(Geolocator) {
-      console.log('making the place factory');
-
       var placeFactory,
         emptyPlace = {
           coordinates: {
