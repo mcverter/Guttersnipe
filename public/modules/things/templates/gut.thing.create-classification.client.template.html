@@ -1,0 +1,45 @@
+Thing is {{thing}}
+blah  blah <br />
+isTypeSet {{isTypeSet}}<br />
+Classification is {{masterTaxonomy}}
+
+
+<!--
+Classification is [{"type":"food","subtypes":["Food Not Bombs","Free Communal Meal","Food Donation","Dumpster"]},{"type":"medical","subtypes":["General Medicine (Western) ","Emergency Medicine (Western) ","Mental Health","Holistic","Herbal","Non Western","Health Clinic","Drug Health / Abuse","Sexual Health","Sexual / Physical Abuse","Trans*","Women's"]},{"type":"housing","subtypes":["Existing Squat","Start a Squat","Free Communal House","Shelter","Other Housing"]}]
+-->
+<div ng-if="!isTypeSet">
+    <div>
+        <ng-form>
+            <h3>Choose a resource type:</h3>
+            <ul class="nav nav-pills nav-stacked center ">
+                <li ng-repeat="class in masterTaxonomy">
+                    <resource-taxon ng-click="thing.taxonomy.type=class.type" name="{{class.type}}"></resource-taxon> <br />
+                    <div ng-show="thing.taxonomy.type===class.type">
+
+                        <ul>
+                            <li ng-repeat="subtype in class.subtypes">
+                                <resource-taxon ng-click="setSubtype(class.type)" name="{{subtype}}"></resource-taxon> <br />
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </ng-form>
+    </div>
+</div>
+
+
+<div ng-if="taxonomy.isTypeSet">
+    <div>
+        <h2> The resource type is {{taxonomy.type}} </h2>
+        <a class="btn btn-warning" href="#" role="button" ng-click="unsetType()">Edit</a>
+    </div>
+
+
+    <resource-type-confirmed></resource-type-confirmed>
+    <div ng-switch on="taxonomy.type">
+        <food-details-master ng-switch-when="food"></food-details-master>
+        <medical-details-master ng-switch-when="medical"></medical-details-master>
+        <housing-details-master ng-switch-when="housing"></housing-details-master>
+    </div>
+</div>

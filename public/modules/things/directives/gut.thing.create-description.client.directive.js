@@ -23,8 +23,7 @@
                 return isDescriptionSet;
               }
             }
-          })
-          $scope.isDescriptionSet=false;
+          });
         }
       };
     }]

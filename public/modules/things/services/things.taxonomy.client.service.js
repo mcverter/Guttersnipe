@@ -1,8 +1,8 @@
 (function (angular, _) {
   'use strict';
-  angular.module('resources')
-    .factory('ResourceTaxonomyService', ['$log',
-      function ($log) {
+  angular.module('things')
+    .factory('TaxonomyService', [
+      function () {
 
         var taxonomyFactory = [
           {
