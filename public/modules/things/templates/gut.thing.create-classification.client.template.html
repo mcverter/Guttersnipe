@@ -31,11 +31,16 @@
 
 <div class="BlackOnRed" ng-show="!!thing.taxonomy.type">
     Details <br />
-    <input> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+    <ul>
+        <li ng-repeat="detail in thing.details">{{detail}}</li>
+    </ul>
 
+    <ng-form role="form form-inline" name="DetailForm" novalidate>
+        <input ng-model="detail" id="detail" type="text" class="form-control"  placeholder="Detail about {{thing.description.headline}}" ng-maxlength="128" ng-required="true">
+        <label for="detail">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true" ng-click="addDetail(detail) ; comment=''"></span> </label>
+    </ng-form>
 </div>
-
-
 
 
 

@@ -16,9 +16,9 @@
           },
           taxonomy: {
             type: '',
-            subtypes: [],
-            details: []
-          }
+            subtypes: []
+          },
+          details: []
         };
 
         function Thing(description, taxonomy) {
