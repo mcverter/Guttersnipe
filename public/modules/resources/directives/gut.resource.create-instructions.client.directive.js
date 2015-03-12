@@ -1,7 +1,7 @@
 (function (angular, _) {
   'use strict';
   angular.module('resources')
-    .directive('resourceCreateInstructions', ['resource_templates', function(templates) {
+    .directive('createInstructions', ['resource_templates', function(templates) {
       var linker = function(scope, element, attrs) {},
         controller = function($scope){},
         templateUrl =  templates.main + 'resource-instructions.client.template.html';

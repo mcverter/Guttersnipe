@@ -7,7 +7,7 @@
         <div ng-hide="resource.createAgreed">
             <div class="jumbotron BlackOnRed">
                 <h2> Agree </h2>
-                <resource-create-agreement></resource-create-agreement>
+                <create-agreement></create-agreement>
             </div>
         </div>
         <div ng-show="resource.createAgreed">
@@ -15,22 +15,22 @@
 
                 <div class="jumbotron RedOnBlack">
                     <h2>Learn</h2>
-                    <resource-create-instructions></resource-create-instructions>
+                    <create-instructions></create-instructions>
                 </div>
 
                 <div class="jumbotron BlackOnRed">
                     <h2> Describe </h2>
-                    <thing-create-description thing="resource.thing"></thing-create-description>
+                    <create-description thing="resource.thing"></create-description>
                 </div>
 
                 <div class="jumbotron RedOnBlack">
                     <h2>Classify</h2>
-                    <thing-create-classification thing="resource.thing"></thing-create-classification>
+                    <create-classification thing="resource.thing"></create-classification>
                 </div>
 
                 <div class="jumbotron BlackOnRed">
                     <h2>Map</h2>
-                    <map-master place="resource.place"></map-master>
+                    <create-map place="resource.place"></create-map>
                 </div>
 
                 <div class="jumbotron RedOnBlack">

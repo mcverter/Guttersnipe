@@ -1,7 +1,7 @@
 (function (angular, _) {
   'use strict';
 
-  angular.module('things').directive('thingCreateClassification',
+  angular.module('things').directive('createClassification',
     ['things_templates', 'TaxonomyService',
       function(templates, ResourceTaxonomy) {
         var templateUrl = templates.main + 'gut.thing.create-classification.client.template.html';

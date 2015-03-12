@@ -1,0 +1,35 @@
+<div ng-if="!place.isLocationSet">
+    <div>
+        <ng-form>
+            <div>
+                <div>
+                    <div class="form-group">
+                        <label for="placeDescription">Description</label>
+                        <textarea rows="5" ng-model="place.description" type="text"  id="placeDescription" class="form-control" placeholder="Describe Location" ng-maxlength="500" ng-required="true"></textarea>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="form-group">
+                        <label for="address">                Address of Resource :
+                        </label>
+                        <input id="address" ng-model="place.address" type="text" class="form-control" ng-required="true">
+                    </div>
+
+                    <button class="btn btn-info" ng-click="locateAddress($event)"> Find Address </button>
+                    <leaflet markers="places.markers" center="place.center" defaults="defaults" width="640px" height="480px"></leaflet>
+                </div>
+            </div>
+            <button type="button" class="btn btn-default" ng-disabled="!(place.description)" ng-click="place.isLocationSet=true">OK</button>
+        </ng-form>
+    </div>
+</div>
+<div ng-if="place.isLocationSet">
+    <div>
+        <div>
+            <em> Description </em> {{place.description}} <br>
+            <em> Address </em> {{place.address}} <br>
+            <leaflet markers="place.markers" center="place.center" defaults="defaults" width="640px" height="480px"></leaflet>
+        </div>
+        <a class="btn btn-warning" href="#" role="button" ng-click="place.isLocationSet=false">Edit</a>
+    </div>
+</div>

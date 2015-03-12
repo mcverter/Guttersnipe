@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('things')
-    .directive('thingCreateDescription', ['things_templates', function(templates) {
+    .directive('createDescription', ['things_templates', function(templates) {
       var templateUrl = templates.main + 'gut.thing.create-description.client.template.html';
 
       return {

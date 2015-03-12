@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('times')
-    .directive('scheduleInput',['times_templates', function(templates) {
+    .directive('createSchedule',['times_templates', function(templates) {
       var templateUrl = templates.main + 'gut.time.schedule-input.client.template.html',
         MSEC_TO_30MIN = 60 * 30 * 1000,
         eventSources = [],
