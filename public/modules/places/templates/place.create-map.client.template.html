@@ -9,19 +9,15 @@
                         </label>
                         <input id="address" ng-model="place.address" type="text" class="form-control" ng-required="true" placeholder="Address or Landmark">
                     </div>
-
                     <button class="btn btn-info" ng-click="locateAddress($event)"> Find Address </button>
-
                     <br />
-
-                    Map Marker is {{map.marker.coords}}<br />
-                    Center is {{map.center}} <br />
-                    <ui-gmap-google-map center="map.center" zoom="map.zoom">
-                        <ui-gmap-marker coords="map.marker.coords" idkey="map.marker.id">
+                    <ui-gmap-google-map center="map.center" zoom="map.zoom"  draggable="true" options="options">
+                        <ui-gmap-marker coords="map.center" options="map.marker.options" events="map.marker.events" idkey="map.marker.id">
                         </ui-gmap-marker>
                     </ui-gmap-google-map>
                 </div>
             </div>
+                
                 <div class="form-group">
                     <label for="placeDescription"> Describe Location</label>
                     <input ng-model="place.description" type="text"  id="placeDescription" class="form-control" placeholder="Place Description" ng-maxlength="500" ng-required="true">
