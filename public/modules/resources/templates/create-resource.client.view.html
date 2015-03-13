@@ -4,13 +4,17 @@
     </div>
 
     <div class="col-md-12">
-        <div ng-hide="resource.createAgreed">
+        <div ng-hide="false">
+
+        <!-- div ng-hide="resource.createAgreed" -->
             <div class="jumbotron BlackOnRed">
                 <h2> Agree </h2>
                 <create-agreement></create-agreement>
             </div>
         </div>
-        <div ng-show="resource.createAgreed">
+        <div ng-show="true">
+
+        <!-- div ng-show="resource.createAgreed" -->
             <form name="resourceForm" class="form-horizontal" data-ng-submit="create()" novalidate>
 
                 <div class="jumbotron RedOnBlack">
@@ -29,7 +33,6 @@
                 </div>
 
                 <div class="jumbotron BlackOnRed">
-                    Resource is {{resource}}
                     <h2>Map</h2>
                     <create-map place="resource.place"></create-map>
                 </div>

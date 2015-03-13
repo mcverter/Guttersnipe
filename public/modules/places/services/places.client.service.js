@@ -46,8 +46,6 @@
 
 
         placeFactory = Object.create(Object.prototype, {
-
-
           locateAddress : {
             enumerable: true,
             value: function locateAddress($event, inputAddress) {
@@ -77,6 +75,7 @@
           prospectPark : {
             enumerable: true,
             get: function getProspectPark() {
+              console.log('Prospect Park Get:', prospectPark)
               return prospectPark;
             }
           },
