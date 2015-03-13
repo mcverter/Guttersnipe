@@ -1,3 +1,8 @@
+a{
+    color: purple !important;
+    font-weight: bolder;
+}
+
 body {
     background-color: #be0404;
     /* Margin bottom by footer height */
