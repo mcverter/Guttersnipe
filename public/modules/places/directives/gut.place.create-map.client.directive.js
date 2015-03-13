@@ -8,6 +8,9 @@
 
       return {
         restrict: 'E',
+        scope : {
+          place: '='
+        },
         templateUrl: templateUrl,
         controller: 'PlacesController'
       };

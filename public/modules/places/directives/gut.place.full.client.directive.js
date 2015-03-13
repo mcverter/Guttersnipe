@@ -6,7 +6,10 @@
 
       return {
         restrict: 'E',
-        templateUrl: templateUrl
+        templateUrl: templateUrl,
+        scope : {
+          place: '='
+        }
       };
     }]
   );

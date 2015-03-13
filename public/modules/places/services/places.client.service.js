@@ -5,6 +5,11 @@
     ['Geolocator',
     function(Geolocator) {
       var placeFactory,
+        emptyPlace,
+        prospectPark,
+        london,
+        zoom = 14 ;
+
         emptyPlace = {
           coordinates: {
             lat: '',
