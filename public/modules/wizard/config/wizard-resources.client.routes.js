@@ -2,7 +2,7 @@
   'use strict';
 
 //Setting up route
-  angular.module('wizard').config(['$stateProvider', function($stateProvider) {
+  angular.module('docs').config(['$stateProvider', function($stateProvider) {
     var RESOURCES_DIR = '';
 
     // Resource Creation Form
