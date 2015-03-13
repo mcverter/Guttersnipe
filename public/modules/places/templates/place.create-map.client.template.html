@@ -1,34 +1,42 @@
-Place is {{place}}
-
-
 <div ng-if="!place.isLocationSet">
     <div>
         <ng-form>
             <div>
                 <div>
-                    <div class="form-group">
-                        <label for="placeDescription">Description</label>
-                        <textarea rows="5" ng-model="place.description" type="text"  id="placeDescription" class="form-control" placeholder="Describe Location" ng-maxlength="500" ng-required="true"></textarea>
-                    </div>
-                </div>
                 <div class="text-center">
                     <div class="form-group">
                         <label for="address">                Address of Resource :
                         </label>
-                        <input id="address" ng-model="place.address" type="text" class="form-control" ng-required="true">
+                        <input id="address" ng-model="place.address" type="text" class="form-control" ng-required="true" placeholder="Address or Landmark">
                     </div>
 
                     <button class="btn btn-info" ng-click="locateAddress($event)"> Find Address </button>
 
+                    <br />
 
+                    Map Marker is {{map.marker.coords}}<br />
+                    Center is {{map.center}} <br />
                     <ui-gmap-google-map center="map.center" zoom="map.zoom">
                         <ui-gmap-marker coords="map.marker.coords" idkey="map.marker.id">
                         </ui-gmap-marker>
                     </ui-gmap-google-map>
-
-                                    </div>
+                </div>
             </div>
-            <button type="button" class="btn btn-default" ng-disabled="!(place.description)" ng-click="place.isLocationSet=true">OK</button>
+                <div class="form-group">
+                    <label for="placeDescription"> Describe Location</label>
+                    <input ng-model="place.description" type="text"  id="placeDescription" class="form-control" placeholder="Place Description" ng-maxlength="500" ng-required="true">
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="notes">Notes</label>
+                <input ng-model="place.notes" type="text"  id="notes" class="form-control" placeholder="Additional Notes" ng-maxlength="100" ng-required="true">
+            </div>
+    </div>
+
+
+    <button type="button" class="btn btn-default" ng-disabled="!(place.description)" ng-click="place.isLocationSet=true">OK</button>
         </ng-form>
     </div>
 </div>

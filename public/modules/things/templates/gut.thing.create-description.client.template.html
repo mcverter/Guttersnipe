@@ -1,26 +1,25 @@
 <div>
-
 <!-- INPUT -->
     <div ng-show="!isDescriptionSet">
         <div>
             <ng-form role="form" name="summaryForm" novalidate>
                 <div class="form-group">
                     <label for="headline">Headline</label>
-                    <input id="headline" ng-model="thing.description.headline" type="text" class="form-control"  placeholder="Short explanation" ng-maxlength="128" ng-required="true">
+                    <input id="headline" ng-model="thing.description.headline" type="text" class="form-control"  placeholder="Short explanation" ng-maxlength="100" ng-required="true">
                     <p ng-show="!thing.description.headline" class="help-block">You must provide a headline.</p>
                 </div>
                 <div class="form-group">
                     <label for="description">Summary</label>
-                    <textarea rows="5" ng-model="thing.description.summary" id="description" type="text" class="form-control" placeholder="Describe Resource" ng-maxlength="5000" ng-required="true"></textarea>
+                    <textarea rows="5" ng-model="thing.description.summary" id="description" type="text" class="form-control" placeholder="Resource Description" ng-maxlength="5000" ng-required="true"></textarea>
                 <p ng-show="!thing.description.summary" class="help-block">You must provide a summary.</p>
                 </div>
                 <div class="form-group">
                     <label for="method">Method of Accesss</label>
-                    <textarea rows="3" ng-model="thing.description.method" id="method" type="text" class="form-control" placeholder="Describe Resource" ng-maxlength="500"></textarea>
+                    <input ng-model="thing.description.method" id="method" type="text" class="form-control" placeholder="How do I acquire resource?" ng-maxlength="100">
                 </div>
                 <div class="form-group">
-                    <label for="notes">Additional Notes:</label>
-                    <textarea rows="3" ng-model="thing.description.notes" id="notes" type="text" class="form-control" placeholder="Describe Resource" ng-maxlength="500"></textarea>
+                    <label for="notes">Notes</label>
+                    <input ng-model="thing.description.notes" id="notes" type="text" class="form-control" placeholder="Additional Notes" ng-maxlength="100">
                 </div>
                 <button type="button" class="btn btn-default" ng-disabled="!(thing.description.headline) || !(thing.description.summary)" ng-click="isDescriptionSet=true">OK</button>
             </ng-form>
