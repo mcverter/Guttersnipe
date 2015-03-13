@@ -27,7 +27,11 @@
             <!-- use ng-submit to catch the form submission and use our Angular function -->
             <form  ng-submit="processForm()">
                 <!-- our nested state views will be injected here -->
-                <div ui-view></div>
+                <div ui-view>
+                    <div role="button" class="btn jumbotron">
+                    <a  ui-sref=".front"> <h1> Start </h1> </a>
+                    </div>
+                </div>
 
             </form>
 
