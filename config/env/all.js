@@ -2,7 +2,7 @@
 
 module.exports = {
     app: {
-        title: 'Guttersnipe',
+        title: 'Guttersnipe: Anarchocommunist Resource Sharing',
         description: 'Anarchocommunist resource sharing',
         keywords: 'Kropotkin'
     },
