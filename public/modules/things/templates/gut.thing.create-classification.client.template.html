@@ -21,7 +21,8 @@
     <h2> The resource type is {{thing.taxonomy.type}} </h2>
     <h2> The subtypes are
         <ul>
-            <li ng-repeat="subtype in thing.taxonomy.subtypes">{{subtype}}</li>
+            <li ng-repeat="subtype in thing.taxonomy.subtypes">
+                <subtype value="subtype" /></li>
         </ul>
     </h2>
     <a class="btn btn-warning" href="#" role="button" ng-click="isClassificationSet=true" ng-show="isClassificationSet===false">Classify</a>
@@ -32,7 +33,8 @@
 <div class="BlackOnRed" ng-show="!!thing.taxonomy.type">
     Details <br />
     <ul>
-        <li ng-repeat="detail in thing.details">{{detail}}</li>
+        <li ng-repeat="detail in thing.details">
+            <detail value="detail" /> </li>
     </ul>
 
     <ng-form role="form form-inline" name="DetailForm" novalidate>
