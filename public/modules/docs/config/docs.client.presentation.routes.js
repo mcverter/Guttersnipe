@@ -55,6 +55,18 @@
           url: '/docs/presentation2013/report',
           templateUrl: PRESENTATION_DIR + 'report.html'
         })
+        .state('CCNY.maps', {
+          url: '/docs/presentation2013/maps',
+          templateUrl: PRESENTATION_DIR + 'maps.html'
+        })
+        .state('CCNY.main', {
+          url: '/docs/presentation2013/main',
+          templateUrl: PRESENTATION_DIR + 'main.html'
+        })
+        .state('CCNY.kropotkin_dwelling', {
+          url: '/docs/presentation2013/kropotkin_dwelling',
+          templateUrl: PRESENTATION_DIR + 'kropotkin_dwelling.html'
+        })
         .state('CCNY.result', {
           url: '/docs/presentation2013/result',
           templateUrl: PRESENTATION_DIR + 'result.html'
