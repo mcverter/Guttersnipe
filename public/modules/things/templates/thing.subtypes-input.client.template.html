@@ -1,0 +1,7 @@
+<div class="BlackOnRed" ng-show="thing.taxonomy.type===class.type">
+    <ul>
+        <li ng-repeat="subtype in class.subtypes">
+            <resource-taxon ng-click="toggleSubtype(subtype)" name="{{subtype}}"></resource-taxon> <br />
+        </li>
+    </ul>
+</div>

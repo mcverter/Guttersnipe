@@ -1,0 +1,10 @@
+<div class="BlackOnRed">
+    <h3> Details </h3>
+    <div class=row ng-repeat="detail in thing.details track by $index" ng-if="$index%2==0">
+        <div class="col-xs-3 letter-box panel"
+             ng-repeat="i in [$index,$index+1]"
+             ng-if="thing.details[i]!=null">
+            <detail value="thing.details[i]" />
+        </div>
+    </div>
+</div>
