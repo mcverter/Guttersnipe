@@ -29,13 +29,16 @@
     <a class="btn btn-warning" href="#" role="button" ng-click="isClassificationSet=false"  ng-show="isClassificationSet===true">Edit</a>
 
 </div>
-
-<div class="BlackOnRed" ng-show="!!thing.taxonomy.type">
+<div class="BlackOnRed">
+    <!-- div class="BlackOnRed" ng-show="!!thing.taxonomy.type" -->
     Details <br />
-    <ul>
-        <li ng-repeat="detail in thing.details">
-            <detail value="detail" /> </li>
-    </ul>
+    <div class=row ng-repeat="detail in thing.details track by $index" ng-if="$index%2==0">
+        <div class="col-xs-3 letter-box panel"
+             ng-repeat="i in [$index,$index+1]"
+             ng-if="thing.details[i]!=null">
+            <detail value="thing.details[i]" />
+        </div>
+    </div>
 
     <ng-form role="form form-inline" name="DetailForm" novalidate>
         <input ng-model="detail" id="detail" type="text" class="form-control"  placeholder="Detail about {{thing.description.headline}}" ng-maxlength="128" ng-required="true">
@@ -44,9 +47,10 @@
     </ng-form>
 </div>
 
-
-
 <!--
+
+
+
 <div class=row ng-repeat="letter in taxonomy.model.top[0].eating_arrangement.selections track by $index" ng-if="$index%3==0">
 <div class="col-xs-3 letter-box panel"
 ng-repeat="i in [$index,$index+1,$index+2]"
