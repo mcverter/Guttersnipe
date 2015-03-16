@@ -1,28 +1,72 @@
-<div ng-controller="ThingsController">
-    <div ng-show="!type">
-        <br />
-        <ng-form>
-            <h3>Choose a resource type:</h3>
-            <ul class="nav nav-pills nav-stacked center ">
-                <li ng-repeat="class in taxonomy">
-                    <resource-taxon ng-click="setType(class.type)" name="{{class.type}}"></resource-taxon>
-                </li>
-            </ul>
-        </ng-form>
+<!-- Type Chooser -->
+<div ng-show="!type">
+    <ng-form>
+        <h3>Choose a resource type:</h3>
+        <ul class="nav nav-pills nav-stacked center ">
+            <li ng-repeat="class in taxonomy">
+                <resource-taxon ng-click="setType(class.type)" name="{{class.type}}"></resource-taxon>
+            </li>
+        </ul>
+    </ng-form>
+</div>
+
+<!-- Subtype Panel -->
+<div ng-show="true" class="panel panel-default">
+
+    <div class="panel-heading"><h3>Subtypes</h3></div>
+    <div class="panel-body">
+        <div class="row">
+            <!-- Subtype Inputs -->
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Options</div>
+                    <div class="panel-body">
+                        <subtypes-input  />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subtype Results -->
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Your Selections</div>
+                    <div class="panel-body">
+                        <subtypes-result  />
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 
-    <div ng-show="type">
-        <div>
-            <h2>Subtypes</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <subtypes-input subtypes="choices" addedArray="chosen"
-                                    ng-click="addSubtype()" /></div>
-                <div class="col-md-6">
-                    <subtypes-result subtypes="chosen" removeMethod="removeMethod()" /></div>
+
+</div>
+
+
+<!-- Detail Panel -->
+<div ng-show="true" class="panel panel-default">
+
+    <div class="panel-heading"><h3>Details</h3></div>
+    <div class="panel-body">
+        <div class="row">
+            <!-- Detail Input -->
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Your Details</div>
+                    <div class="panel-body">
+                        <details-input details="choices" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Your Details</div>
+                    <div class="panel-body">
+                        <details-result details="chosen" />
+                    </div>
+                </div>
             </div>
         </div>
-
-        <details-panel details="thing.details"></details-panel>
     </div>
 </div>

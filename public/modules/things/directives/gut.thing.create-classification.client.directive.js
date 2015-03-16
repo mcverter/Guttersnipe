@@ -10,15 +10,17 @@
    *
    * Attributes:
    *
-   * * thing (Object)
-   * * taxonomy (Object)
-   * * type (String)
+   * * thing (Object):  resource.thing
+   * * taxonomy (Object): TaxonomyService
+   * * type (String): resource.thing.type
    *
    * Methods:
-   * * addSubtype(subtype)
    * * setType(type)
+   * * addSubtype(subtype)
+   * * removeSubtype(subtype)
    *
    */
+
     .directive('createClassification',
     ['things_templates', 'TaxonomyService',
       function(templates, ResourceTaxonomy) {
@@ -34,6 +36,21 @@
           controller: function($scope) {
             var type;
             Object.defineProperties($scope, {
+              type : {
+                enumerable:true,
+                get: function() {
+                  return type;
+                }
+              },
+              setType: {
+                enumerable: true,
+                value: function(type) {
+                  console.log('setting type');
+                  $scope.type = type;
+                  $scope.thing.taxonomy.type = type;
+                  $scope.subtypechoices = _.find(ResourceTaxonomy, {type: type}).subtypes;
+                }
+              },
               addSubtype: {
                 enumerable: true,
                 value: function addSubtype(subtype) {
@@ -45,24 +62,15 @@
                   }
                 }
               },
-
-              type : {
-                enumerable:true,
-                set: function(val) {
-                  type = val;
-                },
-                get: function() {
-                  return type;
-                }
-              },
-
-              setType: {
+              removeSubtype: {
                 enumerable: true,
-                value: function(type) {
-                  console.log('setting type');
-                  $scope.type = type;
-                  $scope.thing.taxonomy.type = type;
-                  $scope.subtypechoices = _.find(ResourceTaxonomy, {type: type}).subtypes;
+                value: function addSubtype(subtype) {
+                  console.log('adding subtype', subtype);
+                  var subtypes = $scope.thing.taxonomy.subtypes;
+                  var idx = _.findIndex(subtypes, subtype);
+                  if (idx < 0) {
+                    subtypes.push(subtype);
+                  }
                 }
               }
             });
@@ -70,61 +78,43 @@
         };
       }]
   )
-
+  /**
+   * Subtypes Input
+   */
     .directive('subtypesInput', ['things_templates', function(templates) {
       var templateUrl = templates.main + 'thing.subtypes-input.client.template.html';
 
       return {
         restrict: 'E',
-        templateUrl: templateUrl,
-        scope : {
-          subtypes: '=',
-          addArray: '='
-        },
-        controller: function($scope) {
-        }
+        templateUrl: templateUrl
       }
     }]
   )
 
-    .directive('subtypeChoice', ['things_templates', function(templates) {
-      var templateUrl = templates.main + 'thing.subtype-choice.client.template.html';
-      return {
-        restrict: 'E',
-        templateUrl: templateUrl,
-        scope : {
-          value: '=',
-          addArray: '='
-        },
-        controller: function($scope) {
-        }
-      };
-    }]
-  )
-    .directive('subtypeChosen', ['things_templates', function(templates) {
-      var templateUrl = templates.main + 'thing.subtype-chosen.client.template.html';
-      return {
-        restrict: 'E',
-        templateUrl: templateUrl,
-        scope : {
-          value: '=',
-        }
-      };
-    }]
-  )
+  /**
+   * Subtypes Result
+   */
+
     .directive('subtypesResult', ['things_templates', function(templates) {
       var templateUrl = templates.main + 'thing.subtypes-result.client.template.html';
 
       return {
         restrict: 'E',
-        templateUrl: templateUrl,
-        scope: {
-          subtypes: '='
-        }
+        templateUrl: templateUrl
       }
-    }
-    ])
+    }])
 
+    .directive('subtype', ['things_templates', function(templates) {
+      var templateUrl = templates.main + 'thing.subtype.client.template.html';
+      return {
+        restrict: 'E',
+        templateUrl: templateUrl,
+        scope : {
+          value: '='
+        }
+      };
+    }]
+  )
 })(window.angular,  window._);
 
 
