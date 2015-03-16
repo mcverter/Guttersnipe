@@ -4,48 +4,50 @@
         <h3>Choose a resource type:</h3>
         <ul class="nav nav-pills nav-stacked center ">
             <li ng-repeat="class in taxonomy">
-                <resource-taxon ng-click="setType(class.type)" name="{{class.type}}"></resource-taxon>
+                <resource-taxon name="{{class.type}}"
+                                ng-click="setType(name)" />
             </li>
         </ul>
     </ng-form>
 </div>
 
 <!-- Subtype Panel -->
-<div ng-show="true" class="panel panel-default">
-
+<div ng-show="type" class="panel panel-default">
     <div class="panel-heading"><h3>Subtypes</h3></div>
     <div class="panel-body">
         <div class="row">
             <!-- Subtype Inputs -->
             <div class="col-md-6">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Options</div>
-                    <div class="panel-body">
-                        <subtypes-input  />
-                    </div>
+                    <div class="panel-heading">Available Subtypes</div>
+                    <ul>
+                        <li ng-repeat="subtype in subtypeChoices">
+                            <subtype name="subtype" ng-click=addSubtype(subtype)  />
+                        </li>
+                    </ul>
                 </div>
             </div>
 
             <!-- Subtype Results -->
             <div class="col-md-6">
                 <div class="panel panel-default">
+                    Subtype chosen is {{subtypeChosen}}
+
                     <div class="panel-heading">Your Selections</div>
                     <div class="panel-body">
-                        <subtypes-result  />
+                        <div class=row ng-repeat="subtype in subtypeChosen">
+                            <subtype name="subtype"
+                                     ng-click="removeSubtype(subtype)" />
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
-
-
 </div>
 
-
 <!-- Detail Panel -->
-<div ng-show="true" class="panel panel-default">
-
+<div ng-show="type" class="panel panel-default">
     <div class="panel-heading"><h3>Details</h3></div>
     <div class="panel-body">
         <div class="row">
@@ -54,7 +56,21 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Your Details</div>
                     <div class="panel-body">
-                        <details-input details="choices" />
+
+                        <div>
+                            <ng-form role="form form-inline"
+                                     name="DetailForm" novalidate>
+                                <input ng-model="detail" id="detail"
+                                       type="text" class="form-control"
+                                       placeholder="Add a detail" ng-maxlength="128"
+                                       ng-required="true">
+                                <label for="detail">
+            <span class="glyphicon glyphicon-plus"
+                  aria-hidden="true"
+                  ng-click="addDetail(detail) ; comment=''">
+                                  </span> </label>
+                            </ng-form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -63,10 +79,46 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Your Details</div>
                     <div class="panel-body">
-                        <details-result details="chosen" />
+                        <div class="BlackOnRed">
+                            <h3> Details </h3>
+                            <div class=row ng-repeat="detail in details track by $index" ng-if="$index%2==0">
+                                <div class="col-xs-3 letter-box panel"
+                                     ng-repeat="i in [$index,$index+1]"
+                                     ng-if="details[i]!=null">
+                                    <detail value="details[i]" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+                <div class=row ng-repeat="subtype in subtypeChosen
+                track by $index" ng-if="$index%2==0">
+                    <div class="col-xs-3 letter-box panel"
+                         ng-repeat="i in [$index,$index+1]"
+                         ng-if="subtypes[i]!=null">
+                        <subtype
+                                value="subtypes[i]"
+                                ng-click="removeSubtype()" />
+                    </div>
+                </div>
+                -->

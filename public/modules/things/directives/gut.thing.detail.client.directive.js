@@ -1,7 +1,9 @@
 (function (angular, _) {
   'use strict';
 
-  angular.module('resources').directive('detail', ['things_templates', function(templates) {
+  angular.module('resources')
+    /*
+    .directive('detail', ['things_templates', function(templates) {
       var templateUrl = templates.main + 'thing.detail.client.template.html';
 
       return {
@@ -14,6 +16,7 @@
       };
     }]
   )
+  */
     .directive('detailsInput', ['things_templates', function(templates) {
       var templateUrl = templates.main + 'thing.details-input.client.template.html';
 

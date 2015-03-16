@@ -34,32 +34,68 @@
           },
 
           controller: function($scope) {
-            var type;
+            var type,
+              subtypeChoices = [],
+              subtypeChosen = [];
             Object.defineProperties($scope, {
+              taxonomy: {
+                enumerable:true,
+                get: function() {
+                  return ResourceTaxonomy;
+                }
+              },
               type : {
                 enumerable:true,
                 get: function() {
                   return type;
+                },
+                set: function(val) {
+                  type = val;
                 }
               },
+
+              subtypeChoices : {
+                enumerable:true,
+                get: function() {
+                  return subtypeChoices;
+                },
+                set: function(val) {
+                  subtypeChoices = val;
+                }
+              },
+
+              subtypeChosen : {
+                enumerable:true,
+                get: function() {
+                  return subtypeChosen;
+                },
+                set: function(val) {
+                  subtypeChosen = val;
+                }
+              },
+
               setType: {
                 enumerable: true,
                 value: function(type) {
                   console.log('setting type');
-                  $scope.type = type;
                   $scope.thing.taxonomy.type = type;
-                  $scope.subtypechoices = _.find(ResourceTaxonomy, {type: type}).subtypes;
+                  $scope.type = type;
+                  $scope.subtypeChoices =
+                    _.find(ResourceTaxonomy, {type: type}).subtypes;
                 }
               },
               addSubtype: {
                 enumerable: true,
                 value: function addSubtype(subtype) {
                   console.log('adding subtype', subtype);
-                  var subtypes = $scope.thing.taxonomy.subtypes;
-                  var idx = _.findIndex(subtypes, subtype);
+                  var idx = _.indexOf(subtypeChosen, subtype);
+                  console.log('subtype idx', idx)
                   if (idx < 0) {
-                    subtypes.push(subtype);
+                    subtypeChosen.push(subtype);
                   }
+                  console.log('chosen subtypes are', subtypeChosen)
+
+                  $scope.thing.taxonomy.subtypes = subtypeChosen;
                 }
               },
               removeSubtype: {
@@ -67,7 +103,7 @@
                 value: function addSubtype(subtype) {
                   console.log('adding subtype', subtype);
                   var subtypes = $scope.thing.taxonomy.subtypes;
-                  var idx = _.findIndex(subtypes, subtype);
+                  var idx = _.indexOf(subtypes, subtype);
                   if (idx < 0) {
                     subtypes.push(subtype);
                   }
@@ -78,39 +114,13 @@
         };
       }]
   )
-  /**
-   * Subtypes Input
-   */
-    .directive('subtypesInput', ['things_templates', function(templates) {
-      var templateUrl = templates.main + 'thing.subtypes-input.client.template.html';
-
-      return {
-        restrict: 'E',
-        templateUrl: templateUrl
-      }
-    }]
-  )
-
-  /**
-   * Subtypes Result
-   */
-
-    .directive('subtypesResult', ['things_templates', function(templates) {
-      var templateUrl = templates.main + 'thing.subtypes-result.client.template.html';
-
-      return {
-        restrict: 'E',
-        templateUrl: templateUrl
-      }
-    }])
-
     .directive('subtype', ['things_templates', function(templates) {
       var templateUrl = templates.main + 'thing.subtype.client.template.html';
       return {
         restrict: 'E',
         templateUrl: templateUrl,
         scope : {
-          value: '='
+          name: '='
         }
       };
     }]
@@ -124,7 +134,7 @@
 
  var isClassificationSet = false,
  type = '',
- subtypechoices = [];
+ subtypeChoices = [];
 
  Object.defineProperties($scope, {
  toggleSubtype : {
@@ -162,7 +172,7 @@
  value: function(type) {
  $scope.type = type;
  $scope.thing.taxonomy.type = type;
- $scope.subtypechoices = _.find(ResourceTaxonomy, {type: type}).subtypes;
+ $scope.subtypeChoices = _.find(ResourceTaxonomy, {type: type}).subtypes;
  }
  },
  unsetType: {
