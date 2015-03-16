@@ -15,7 +15,6 @@
           templateUrl: templateUrl,
           controller: function($scope) {
             var coordinates = Places.prospectPark.coordinates;
-            console.log("Place factory PP:", Places.prospectPark)
             $scope.map = {
               center: {
                 latitude: coordinates.lat,

@@ -1,61 +1,28 @@
-<div ng-show="!isClassificationSet">
-    <ng-form>
-        <h3>Choose a resource type:</h3>
-        <ul class="nav nav-pills nav-stacked center ">
-            <li ng-repeat="class in masterTaxonomy">
-                <resource-taxon ng-click="thing.taxonomy.type=class.type" name="{{class.type}}"></resource-taxon> <br />
-                <div class="BlackOnRed" ng-show="thing.taxonomy.type===class.type">
-                    <ul>
-                        <li ng-repeat="subtype in class.subtypes">
-                            <resource-taxon ng-click="toggleSubtype(subtype)" name="{{subtype}}"></resource-taxon> <br />
-                        </li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-    </ng-form>
-</div>
-
-<!-- CONFIRMED -->
-<div class="BlackOnRed">
-    <h2> The resource type is {{thing.taxonomy.type}} </h2>
-    <h2> The subtypes are
-        <ul>
-            <li ng-repeat="subtype in thing.taxonomy.subtypes">
-                <subtype value="subtype" /></li>
-        </ul>
-    </h2>
-    <a class="btn btn-warning" href="#" role="button" ng-click="isClassificationSet=true" ng-show="isClassificationSet===false">Classify</a>
-    <a class="btn btn-warning" href="#" role="button" ng-click="isClassificationSet=false"  ng-show="isClassificationSet===true">Edit</a>
-
-</div>
-<div class="BlackOnRed">
-    <!-- div class="BlackOnRed" ng-show="!!thing.taxonomy.type" -->
-    Details <br />
-    <div class=row ng-repeat="detail in thing.details track by $index" ng-if="$index%2==0">
-        <div class="col-xs-3 letter-box panel"
-             ng-repeat="i in [$index,$index+1]"
-             ng-if="thing.details[i]!=null">
-            <detail value="thing.details[i]" />
-        </div>
+<div ng-controller="ThingsController">
+    <div ng-show="!type">
+        <br />
+        <ng-form>
+            <h3>Choose a resource type:</h3>
+            <ul class="nav nav-pills nav-stacked center ">
+                <li ng-repeat="class in taxonomy">
+                    <resource-taxon ng-click="setType(class.type)" name="{{class.type}}"></resource-taxon>
+                </li>
+            </ul>
+        </ng-form>
     </div>
 
-    <ng-form role="form form-inline" name="DetailForm" novalidate>
-        <input ng-model="detail" id="detail" type="text" class="form-control"  placeholder="Detail about {{thing.description.headline}}" ng-maxlength="128" ng-required="true">
-        <label for="detail">
-            <span class="glyphicon glyphicon-plus" aria-hidden="true" ng-click="addDetail(detail) ; comment=''"></span> </label>
-    </ng-form>
+    <div ng-show="type">
+        <div>
+            <h2>Subtypes</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <subtypes-input subtypes="choices" addedArray="chosen"
+                                    ng-click="addSubtype()" /></div>
+                <div class="col-md-6">
+                    <subtypes-result subtypes="chosen" removeMethod="removeMethod()" /></div>
+            </div>
+        </div>
+
+        <details-panel details="thing.details"></details-panel>
+    </div>
 </div>
-
-<!--
-
-
-
-<div class=row ng-repeat="letter in taxonomy.model.top[0].eating_arrangement.selections track by $index" ng-if="$index%3==0">
-<div class="col-xs-3 letter-box panel"
-ng-repeat="i in [$index,$index+1,$index+2]"
-ng-if="taxonomy.model.top[0].eating_arrangement.selections[i]!=null">
-<resource-taxon name="{{taxonomy.model.top[0].eating_arrangement.selections[i].name}}" ng-click="toggleDetail('eating_arrangement', taxonomy.model.top[0].eating_arrangement.selections[i].name)"></resource-taxon>
-</div>
-</div>
--->

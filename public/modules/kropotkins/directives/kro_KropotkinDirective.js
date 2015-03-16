@@ -17,7 +17,7 @@
               $scope.quote = data;
               console.log($scope.quote);
             }, function(err) {
-              console.err('Could not load quote');
+              console.log('Could not load quote');
             });
           };
 

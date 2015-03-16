@@ -29,7 +29,7 @@
           var self = this;
           if (!coordinates || !coordinates.lat
             || coordinates.lng || !address ) {
-            console.err('Error: Coordinates or address are undefined. Coords', coordinates, ' address ', address);
+            console.error('Error: Coordinates or address are undefined. Coords', coordinates, ' address ', address);
           }
           self.coordinates = coordinates;
           self.address = address;
@@ -75,7 +75,6 @@
           prospectPark : {
             enumerable: true,
             get: function getProspectPark() {
-              console.log('Prospect Park Get:', prospectPark)
               return prospectPark;
             }
           },

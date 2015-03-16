@@ -24,11 +24,12 @@
         geocoder = window.geocoder;
 
       if  (!geocoder) {
-        if (google.maps) {
+
+        if (google && google.maps) {
           geocoder = new google.maps.Geocoder();
         }
         else {
-          console.err('Error:  can not create geocoder.  Google is', google);
+          console.error('Error:  can not create geocoder.  Google is', google);
         }
       }
 
