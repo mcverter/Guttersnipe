@@ -36,7 +36,8 @@
           controller: function($scope) {
             var type,
               subtypeChoices = [],
-              subtypeChosen = [];
+              subtypeChosen = [],
+              details = [];
             Object.defineProperties($scope, {
               taxonomy: {
                 enumerable:true,
@@ -74,6 +75,17 @@
                 }
               },
 
+
+              details : {
+                enumerable:true,
+                get: function() {
+                  return details;
+                },
+                set: function(val) {
+                  details = val;
+                }
+              },
+
               setType: {
                 enumerable: true,
                 value: function(type) {
@@ -100,14 +112,33 @@
               },
               removeSubtype: {
                 enumerable: true,
-                value: function addSubtype(subtype) {
-                  console.log('adding subtype', subtype);
-                  var subtypes = $scope.thing.taxonomy.subtypes;
-                  var idx = _.indexOf(subtypes, subtype);
-                  if (idx < 0) {
-                    subtypes.push(subtype);
+                value: function removeSubtype(subtype) {
+                  var idx= _.indexOf(subtypeChosen, subtype)
+                  if (idx >= 0) {
+                    subtypeChosen.splice(idx, 1);
                   }
+                  $scope.thing.subtypeChosen = subtypeChosen;
                 }
+              },
+              addDetail : {
+                enumerable: true,
+                value: function addDetail(detail) {
+                  if (_.indexOf(details, detail) < 0) {
+                    details.push(detail);
+                  }
+                  $scope.thing.details = details;
+                }
+              },
+              removeDetail : {
+                enumerable: true,
+                value: function removeDetail(detail) {
+                  var idx= _.indexOf(details, detail)
+                  if (idx >= 0) {
+                    details.splice(idx, 1);
+                  }
+                  $scope.thing.details = details;
+                }
+
               }
             });
           }
@@ -126,67 +157,3 @@
     }]
   )
 })(window.angular,  window._);
-
-
-/*
- function ($scope) {
-
-
- var isClassificationSet = false,
- type = '',
- subtypeChoices = [];
-
- Object.defineProperties($scope, {
- toggleSubtype : {
- enumerable: true,
- value: function(subtype) {
-
- var idx = _.findIndex($scope.thing.taxonomy.subtypes, subtype);
- if (idx < 0) {
- $scope.thing.taxonomy.subtypes.push(subtype);
- } else {
- $scope.thing.taxonomy.subtypes.splice(idx, 1);
- }
- }
- },
- type : {
- enumerable:true,
- set: function(val) {
- type = val;
- },
- get: function() {
- return type;
- }
- },
- isClassificationSet : {
- enumerable:true,
- set: function(val) {
- isClassificationSet = val;
- },
- get: function() {
- return isClassificationSet;
- }
- },
- setType: {
- enumerable: true,
- value: function(type) {
- $scope.type = type;
- $scope.thing.taxonomy.type = type;
- $scope.subtypeChoices = _.find(ResourceTaxonomy, {type: type}).subtypes;
- }
- },
- unsetType: {
- enumerable: true,
- value: function(type) {
- }
- },
- addDetail: {
- enumerable: true,
- value: function(details) {
-
- }
- }
-
- })
- }
- */

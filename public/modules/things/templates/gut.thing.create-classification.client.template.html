@@ -22,7 +22,7 @@
                     <div class="panel-heading">Available Subtypes</div>
                     <ul>
                         <li ng-repeat="subtype in subtypeChoices">
-                            <subtype name="subtype" ng-click=addSubtype(subtype)  />
+                            <subtype name="subtype" class="tile-orange" ng-click=addSubtype(subtype)  />
                         </li>
                     </ul>
                 </div>
@@ -31,12 +31,10 @@
             <!-- Subtype Results -->
             <div class="col-md-6">
                 <div class="panel panel-default">
-                    Subtype chosen is {{subtypeChosen}}
-
                     <div class="panel-heading">Your Selections</div>
                     <div class="panel-body">
                         <div class=row ng-repeat="subtype in subtypeChosen">
-                            <subtype name="subtype"
+                            <subtype name="subtype" class="tile-blue"
                                      ng-click="removeSubtype(subtype)" />
                         </div>
                     </div>
@@ -54,7 +52,7 @@
             <!-- Detail Input -->
             <div class="col-md-6">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Your Details</div>
+                    <div class="panel-heading">Add a Detail</div>
                     <div class="panel-body">
 
                         <div>
@@ -79,14 +77,9 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Your Details</div>
                     <div class="panel-body">
-                        <div class="BlackOnRed">
-                            <h3> Details </h3>
-                            <div class=row ng-repeat="detail in details track by $index" ng-if="$index%2==0">
-                                <div class="col-xs-3 letter-box panel"
-                                     ng-repeat="i in [$index,$index+1]"
-                                     ng-if="details[i]!=null">
-                                    <detail value="details[i]" />
-                                </div>
+                            <div class=row ng-repeat="detail in details">
+                                <subtype name="detail" class="tile-purple"
+                                         ng-click="removeDetail(detail)" />
                             </div>
                         </div>
                     </div>

@@ -25,14 +25,6 @@
         templateUrl: templateUrl,
         controller: function ($scope) {
           Object.defineProperties($scope, {
-            addDetail : {
-              enumerable: true,
-              value: function addDetail(details, detail) {
-                if (_.findIndex(details, detail < 0)) {
-                  details.push(detail);
-                }
-              }
-            }
           })
         }
       };
