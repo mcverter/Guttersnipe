@@ -77,6 +77,7 @@
             }
           });
       };
+      console.log('resources scope', $scope);
     }
   ]);
 })(window.angular, window._);
