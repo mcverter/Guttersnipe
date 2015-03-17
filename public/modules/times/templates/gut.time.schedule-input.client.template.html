@@ -12,19 +12,23 @@
             None
         </div>
         <div ng-if="eventSources.length>0">
-            <table class="table-bordered table-striped">
+            <table class="schedule table-bordered table-striped">
+                <thead>
                 <tr>
                     <th>Date</th>
                     <th>Repeats</th>
                     <th>Start Time</th>
                     <th>End Time</th>
                 </tr>
+                </thead>
+                <tbody>
                 <tr ng-repeat="event in eventSources">
                     <td> <div ng-if="!event.repeating"> {{event.start | date: 'longDate' }} </div> </td>
                     <td> <div ng-if="event.repeating"> Every {{event.start | date: 'EEEE' }} </div> </td>
                     <td> {{event.start | date: 'hh:mm a' }}</td>
                     <td> {{event.end | date: 'hh:mm a'}} </td>
                 </tr>
+                </tbody>
             </table>
         </div>
     </div>

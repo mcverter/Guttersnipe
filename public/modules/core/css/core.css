@@ -1,3 +1,21 @@
+
+table, th, td, tr, thead , tbody {
+    border: 1px solid black;
+    text-align: center;
+}
+
+.schedule {
+    color: purple;
+    background-color: #ffff00;
+}
+
+.schedule > thead {
+    color: darkblue;
+    background-color: orange;
+}
+
+
+
 a{
     color: purple !important;
     font-weight: bolder;
