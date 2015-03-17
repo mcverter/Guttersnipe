@@ -72,34 +72,11 @@ Many of our initial design specifications will be taken from the freegan group a
 
 <h2>Practical Constraints</h2>
 <dl>
-<dt>
-1. The project should involve some (basic) computation or processing on the server
-side and a database/data store.
-</dt>
+<dt> Security</dt>
 <dd>
-Yes.  There is plenty of room for processing.
-As stated above, there are quite a number of databases and forms to be set up to account for the various functionalities 
-</dd>
-<dd>
-In addition, we will have to build in a security infrastructure in the project in order to guarantee anonymity of transactions.
-</dd>
-</dl>
-<dl>
-<dt>
-2. The project should be appropriate for 3-6 people. On the developer sides there
-should be significant user and backend functionality for 2-3 full time developers.</dt>
-<dd>
-Yes.  There is plenty of work to go around.
-</dd>
-</dl>
-<dl>
-<dt>
-3. You must not recode basic functionality just to create something to work on if
-you can use a library. 
-</dt>
-<dd>
-Most certainly, the <a href="https://developers.google.com/maps/"> Google Maps API</a> will be used.  In all likelihood, we will use some open source package to do calendaring.
+We will have to build in a security infrastructure in the project in order to guarantee anonymity of transactions.
 </dd>
 <dd>
  <a href="https://www.torproject.org/"> Tor</a>  will be used to anonymize transactions.
 </dd>
+</dl>
