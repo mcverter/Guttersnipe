@@ -1,23 +1,32 @@
-lalalallala
 
 <div class="jumbotron">Schedule for {{headline}}</div>
+
 <div ui-calendar="punctualConfig.calendar" class="span8 calendar" ng-model="eventSources"></div>
 
+<div><hr><br><hr></div>
 
-<div>
-    <h2>Schedule:  </h2>
-    <div ng-if="eventSources.length<1">
-        None
-    </div>
-    <div ng-if="eventSources.length>0">
-        <table>
-            <tr ng-repeat="event in eventSources">
-                <td ng-if="!event.repeating"> <strong> Date: </strong> {{event.start | date: 'longDate' }} </td>
-                <td ng-if="event.repeating"> <strong> Repeats: </strong> Every {{event.start | date: 'EEEE' }} </td>
-                <td> <strong> Start: </strong> {{event.start | date: 'hh:mm a' }}</td>
-                <td> <strong> End: </strong> {{event.end | date: 'hh:mm a'}}</td>
-            </tr>
-        </table>
+<div class="panel panel-default">
+    <div class="panel-heading"><h2>Schedule:</h2></div>
+    <div class="panel-body">
+        <div ng-if="eventSources.length<1">
+            None
+        </div>
+        <div ng-if="eventSources.length>0">
+            <table class="table-bordered table-striped">
+                <tr>
+                    <th>Date</th>
+                    <th>Repeats</th>
+                    <th>Start Time</th>
+                    <th>Duration</th>
+                </tr>
+                <tr ng-repeat="event in eventSources">
+                    <td> <div ng-if="!event.repeating"> {{event.start | date: 'longDate' }} </div> </td>
+                    <td> <div ng-if="event.repeating"> Every {{event.start | date: 'EEEE' }} </div> </td>
+                    <td> {{event.start | date: 'hh:mm a' }}</td>
+                    <td> {{event.end | date: 'hh:mm a'}} </td>
+                </tr>
+            </table>
+        </div>
     </div>
 </div>
 
