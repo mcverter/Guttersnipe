@@ -9,9 +9,11 @@
       $scope.Authentication = Authentication;
       $scope.create =  function()
       {
+        console.log ('creating resource');
         var resource = new Resources({
           resource: this.resource
         });
+        console.log('resource is', resource)
         resource.$save(function (response) {
           $location.path('resources/' + response._id);
 
