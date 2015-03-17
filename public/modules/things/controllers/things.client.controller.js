@@ -13,7 +13,6 @@
           removeSubtype: {
             enumerable: true,
             value: function (subtype) {
-              console.log('removing subtype', subtype);
               var subtypes = $scope.thing.taxonomy.subtypes;
               var idx = _.findIndex(subtypes, subtype);
               if (idx >= 0) {

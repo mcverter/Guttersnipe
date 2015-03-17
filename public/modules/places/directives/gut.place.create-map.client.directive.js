@@ -67,7 +67,6 @@
                         formattedAddress =
                           results[0].formatted_address;
                         $scope.$apply (function() {
-                          console.log('formattedAddress', formattedAddress);
                           $scope.place.address = formattedAddress;
                           $scope.map = {
                             center: {
@@ -85,8 +84,6 @@
                             options: {}
                           };
                         });
-                        console.log('scope is', $scope)
-
                       }
                     });
                 }

@@ -43,15 +43,33 @@
 <div ng-if="place.isLocationSet">
     <div>
         <div>
-            <em> Description </em> {{place.description}} <br>
-            <em> Address </em> {{place.address}} <br>
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3>Address</h3></div>
+                <div class="panel-body">
+                    {{place.address}}
+                </div>
+            </div>
+
             <ui-gmap-google-map center="map.center" zoom="map.zoom">
                 <ui-gmap-marker coords="map.marker.coords" idkey="map.marker.id">
                 </ui-gmap-marker>
             </ui-gmap-google-map>
 
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3>Description</h3></div>
+                <div class="panel-body">
+                    {{place.description}}
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3>Notes</h3></div>
+                <div class="panel-body">
+                    {{place.notes}}
+                </div>
+            </div>
         </div>
-        <a class="btn btn-warning" href="#" role="button"
-           ng-click="place.isLocationSet=false">Edit</a>
+        <button class="btn btn-warning" role="button"
+           ng-click="place.isLocationSet=false">Edit</button>
     </div>
 </div>

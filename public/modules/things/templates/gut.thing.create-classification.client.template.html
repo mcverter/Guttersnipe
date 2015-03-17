@@ -57,46 +57,55 @@
 
 <!-- Detail Panel -->
 <div ng-show="type" class="panel panel-default">
-    <div class="panel-heading"><h3>Details</h3></div>
-    <div class="panel-body">
-        <div class="row">
-            <!-- Detail Input -->
-            <div class="col-md-6">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Add a Detail</div>
-                    <div class="panel-body">
+    <ng-form>
+        <div class="panel-heading"><h3>Details</h3></div>
+        <div class="panel-body">
+            <div class="row">
 
-                        <div>
-                            <ng-form role="form form-inline"
-                                     name="DetailForm" novalidate>
-                                <input ng-model="detail" id="detail"
-                                       type="text" class="form-control"
-                                       placeholder="Add a detail" ng-maxlength="128"
-                                       ng-required="true">
-                                <label for="detail">
+                <!-- Detail Input -->
+                <div ng-hide="areDetailsSet" class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Add a Detail</div>
+                        <div class="panel-body">
+
+                            <div>
+                                <ng-form role="form form-inline"
+                                         name="DetailForm" novalidate>
+                                    <input ng-model="detail" id="detail"
+                                           type="text" class="form-control"
+                                           placeholder="Add a detail" ng-maxlength="128"
+                                           ng-required="true">
+                                    <label for="detail">
             <span class="glyphicon glyphicon-plus"
                   aria-hidden="true"
                   ng-click="addDetail(detail) ; comment=''">
                                   </span> </label>
-                            </ng-form>
+                                </ng-form>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-md-6">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Your Details</div>
-                    <div class="panel-body">
-                        <div class=row ng-repeat="detail in details">
-                            <subtype name="detail" class="tile-purple"
-                                     ng-click="removeDetail(detail)" />
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Your Details</div>
+                        <div class="panel-body">
+                            <div class=row ng-repeat="detail in details">
+                                <subtype name="detail" class="tile-purple"
+                                         ng-click="removeDetail(detail)" />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div ng-show="!areDetailsSet">
+            <button type="button" class="btn btn-lg btn-default" ng-disabled="!type" ng-click="areDetailsSet=true">OK</button>
+        </div>
+        <div ng-show="areDetailsSet">
+            <button type="button" class="btn btn-lg btn-danger" ng-disabled="!type" ng-click="areDetailsSet=false">Edit</button>
+        </div>
+    </ng-form>
 </div>
 </div>
 

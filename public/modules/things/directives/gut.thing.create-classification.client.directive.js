@@ -38,7 +38,8 @@
               subtypeChoices = [],
               subtypeChosen = [],
               details = [],
-              isTaxonomySet=false;
+              isTaxonomySet=false,
+              areDetailsSet=false;
             Object.defineProperties($scope, {
               taxonomy: {
                 enumerable:true,
@@ -53,6 +54,15 @@
                 },
                 set: function(val) {
                   isTaxonomySet = val;
+                }
+              },
+              areDetailsSet: {
+                enumerable:true,
+                get: function() {
+                  return areDetailsSet;
+                },
+                set: function(val) {
+                  areDetailsSet = val;
                 }
               },
               type : {
@@ -99,7 +109,6 @@
               setType: {
                 enumerable: true,
                 value: function(type) {
-                  console.log('setting type');
                   $scope.thing.taxonomy.type = type;
                   $scope.type = type;
                   $scope.subtypeChoices =
@@ -109,7 +118,6 @@
               unsetType: {
                 enumerable: true,
                 value: function(type) {
-                  console.log('unsetting type');
                   $scope.thing.taxonomy.type = '';
                   $scope.type = '';
                   $scope.subtypeChoices = [];
@@ -119,14 +127,10 @@
               addSubtype: {
                 enumerable: true,
                 value: function addSubtype(subtype) {
-                  console.log('adding subtype', subtype);
                   var idx = _.indexOf(subtypeChosen, subtype);
-                  console.log('subtype idx', idx)
                   if (idx < 0) {
                     subtypeChosen.push(subtype);
                   }
-                  console.log('chosen subtypes are', subtypeChosen)
-
                   $scope.thing.taxonomy.subtypes = subtypeChosen;
                 }
               },
