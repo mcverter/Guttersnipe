@@ -37,12 +37,22 @@
             var type,
               subtypeChoices = [],
               subtypeChosen = [],
-              details = [];
+              details = [],
+              isTaxonomySet=false;
             Object.defineProperties($scope, {
               taxonomy: {
                 enumerable:true,
                 get: function() {
                   return ResourceTaxonomy;
+                }
+              },
+              isTaxonomySet: {
+                enumerable:true,
+                get: function() {
+                  return isTaxonomySet;
+                },
+                set: function(val) {
+                  isTaxonomySet = val;
                 }
               },
               type : {
@@ -94,6 +104,16 @@
                   $scope.type = type;
                   $scope.subtypeChoices =
                     _.find(ResourceTaxonomy, {type: type}).subtypes;
+                }
+              },
+              unsetType: {
+                enumerable: true,
+                value: function(type) {
+                  console.log('unsetting type');
+                  $scope.thing.taxonomy.type = '';
+                  $scope.type = '';
+                  $scope.subtypeChoices = [];
+                  $scope.isTaxonomySet = false;
                 }
               },
               addSubtype: {

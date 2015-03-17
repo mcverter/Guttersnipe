@@ -13,36 +13,47 @@
 
 <!-- Subtype Panel -->
 <div ng-show="type" class="panel panel-default">
-    <div class="panel-heading"><h3>Subtypes</h3></div>
-    <div class="panel-body">
-        <div class="row">
-            <!-- Subtype Inputs -->
-            <div class="col-md-6">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Available Subtypes</div>
-                    <ul>
-                        <li ng-repeat="subtype in subtypeChoices">
-                            <subtype name="subtype" class="tile-orange" ng-click=addSubtype(subtype)  />
-                        </li>
-                    </ul>
-                </div>
-            </div>
+    <ng-form>
+        <div class="panel-heading"><h3>Subtypes</h3></div>
+        <div class="panel-body">
+            <div class="row">
 
-            <!-- Subtype Results -->
-            <div class="col-md-6">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Your Selections</div>
-                    <div class="panel-body">
-                        <div class=row ng-repeat="subtype in subtypeChosen">
-                            <subtype name="subtype" class="tile-blue"
-                                     ng-click="removeSubtype(subtype)" />
+                <!-- Subtype Inputs -->
+                <div ng-hide="isTaxonomySet" class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Available Subtypes</div>
+                        <ul>
+                            <li ng-repeat="subtype in subtypeChoices">
+                                <subtype name="subtype" class="tile-orange" ng-click=addSubtype(subtype)  />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Subtype Results -->
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Your Selections</div>
+                        <div class="panel-body">
+                            <div class=row ng-repeat="subtype in subtypeChosen">
+                                <subtype name="subtype" class="tile-blue"
+                                         ng-click="removeSubtype(subtype)" />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div ng-show="!isTaxonomySet">
+            <button type="button" class="btn btn-lg btn-default" ng-disabled="!type" ng-click="isTaxonomySet=true">OK</button>
+        </div>
+        <div ng-show="isTaxonomySet">
+            <button type="button" class="btn btn-lg btn-danger" ng-disabled="!type" ng-click="unsetType()">Edit</button>
+        </div>
+
+    </ng-form>
 </div>
+
 
 <!-- Detail Panel -->
 <div ng-show="type" class="panel panel-default">
@@ -77,16 +88,16 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Your Details</div>
                     <div class="panel-body">
-                            <div class=row ng-repeat="detail in details">
-                                <subtype name="detail" class="tile-purple"
-                                         ng-click="removeDetail(detail)" />
-                            </div>
+                        <div class=row ng-repeat="detail in details">
+                            <subtype name="detail" class="tile-purple"
+                                     ng-click="removeDetail(detail)" />
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 
