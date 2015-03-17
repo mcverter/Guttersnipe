@@ -1,22 +1,18 @@
 <section data-ng-controller="ResourcesController">
-
     <div class="page-header">
         <h1>Create New Resource</h1>
     </div>
 
     <div class="col-md-12">
-        <div ng-if="true">
-
-            <!-- div ng-hide="resource.createAgreed" -->
+        <div ng-hide="resource.createAgreed">
             <div class="jumbotron BlackOnRed">
                 <h2> Agree </h2>
                 <create-agreement></create-agreement>
             </div>
         </div>
 
-        <div ng-show="true">
-            <!-- div ng-show="resource.createAgreed" -->
-            <form name="resourceForm" class="form-horizontal" data-ng-submit="create()" novalidate>
+        <div ng-show="resource.createAgreed">
+            <ng-form name="resourceForm" class="form-horizontal" data-ng-submit="create()" novalidate>
                 <div ng-if="true">
                     <div class="jumbotron RedOnBlack">
                         <h2>Learn</h2>
@@ -47,7 +43,7 @@
                     <create-schedule time="resource.time" />
                 </div>
 
-<!-- Resource is {"thing":{"description":{"summary":"","notes":"","headline":"","method":""},"taxonomy":{"type":"food","subtypes":["Food Not Bombs"]},"details":["foo"],"subtypeChosen":["Food Not Bombs"]},"place":{"coordinates":{"lat":"","lng":""},"name":"","address":"Times Square, Manhattan, NY 10036, USA","notes":"lala","description":"lala","isLocationSet":true},"time":{"schedules":[],"notes":""}} -->
+                <!-- Resource is {"thing":{"description":{"summary":"","notes":"","headline":"","method":""},"taxonomy":{"type":"food","subtypes":["Food Not Bombs"]},"details":["foo"],"subtypeChosen":["Food Not Bombs"]},"place":{"coordinates":{"lat":"","lng":""},"name":"","address":"Times Square, Manhattan, NY 10036, USA","notes":"lala","description":"lala","isLocationSet":true},"time":{"schedules":[],"notes":""}} -->
 
                 <div class="form-group">
                     <input type="submit" value="Create Resource" class="btn btn-default">
@@ -56,8 +52,9 @@
                 <div data-ng-show="error" class="text-danger">
                     <strong data-ng-bind="error"></strong>
                 </div>
-            </form>
+            </ng-form>
         </div>
+    </div>
     </div>
 
 </section>
