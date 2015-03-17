@@ -25,11 +25,8 @@
 
                 <div class="form-group">
                     <label for="placeDescription"> Describe Location</label>
-                    <p ng-show="!place.address" class="help-block">You must describe the location.</p>
-
-
-
                     <input ng-model="place.description" type="text"  id="placeDescription" class="form-control" placeholder="Place Description" ng-maxlength="500" ng-required="true">
+                    <p ng-show="!place.address" class="help-block">You must describe the location.</p>
                 </div>
             </div>
 
