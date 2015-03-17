@@ -5,7 +5,7 @@
     </div>
 
     <div class="col-md-12">
-        <div ng-if="false">
+        <div ng-if="true">
 
             <!-- div ng-hide="resource.createAgreed" -->
             <div class="jumbotron BlackOnRed">
@@ -17,7 +17,7 @@
         <div ng-show="true">
             <!-- div ng-show="resource.createAgreed" -->
             <form name="resourceForm" class="form-horizontal" data-ng-submit="create()" novalidate>
-                <div ng-if="false">
+                <div ng-if="true">
                     <div class="jumbotron RedOnBlack">
                         <h2>Learn</h2>
                         <create-instructions></create-instructions>
@@ -32,7 +32,7 @@
                     </div>
                 </div>
 
-                <div ng-if="false" class="jumbotron RedOnBlack">
+                <div ng-if="true" class="jumbotron RedOnBlack">
                     <h2>Classify</h2>
                     <create-classification thing="resource.thing"></create-classification>
                 </div>
@@ -44,11 +44,13 @@
 
                 <div class="jumbotron RedOnBlack">
                     <h2>Schedule</h2>
-                    <schedule-master time="resource.time"></schedule-master>
+                    <create-schedule time="resource.time" />
                 </div>
+
                 <div class="form-group">
                     <input type="submit" value="Create Resource" class="btn btn-default">
                 </div>
+
                 <div data-ng-show="error" class="text-danger">
                     <strong data-ng-bind="error"></strong>
                 </div>
