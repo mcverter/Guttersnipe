@@ -47,7 +47,6 @@
           locateAddress : {
             enumerable: true,
             value: function locateAddress(inputAddress, map) {
-              console.log('locating input address in service', inputAddress);
               Geolocator.geocoder.geocode( { "address": inputAddress },
                 function(results, status) {
                      if (status == google.maps.GeocoderStatus.OK && results.length > 0) {

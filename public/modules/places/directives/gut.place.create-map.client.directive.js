@@ -16,10 +16,6 @@
               inputAddress,
               formattedAddress;
 
-            $scope.$watch('map', function(newValue) {
-              console.log('waching map.  nv is', newValue);
-            });
-
             var map = {
               center: {
                 latitude: coordinates.lat,
@@ -60,20 +56,19 @@
                 enumerable: true,
                 value: function($event, address) {
                   $event.preventDefault();
-                  console.log('locating address');
                   var foo;
                   var geocoder = new google.maps.Geocoder();
 
                   geocoder.geocode( { "address": address },
                     function(results, status) {
                       var formattedAddress;
-                      console.log('submitted it', results);
-                      console.log('hope it is good');
                       if (status == google.maps.GeocoderStatus.OK && results.length > 0) {
                         var location = results[0].geometry.location;
                         formattedAddress =
                           results[0].formatted_address;
                         $scope.$apply (function() {
+                          console.log('formattedAddress', formattedAddress);
+                          $scope.place.address = formattedAddress;
                           $scope.map = {
                             center: {
                               latitude: results[0].geometry.location.k,
@@ -91,7 +86,6 @@
                           };
                         });
                         console.log('scope is', $scope)
-                        console.log('geocoded the map to ', map)
 
                       }
                     });

@@ -7,12 +7,12 @@
                         <div class="form-group">
                             <label for="address">                Address of Resource :
                             </label>
-                            <input id="address" ng-model="input_address"
+                            <input id="address" ng-model="place.address"
                                    type="text" class="form-control"
                                    ng-required="true" placeholder="Address or Landmark">
 
                             <button class="btn btn-info"
-                                    ng-click="locateAddress($event, input_address)"> Find Address </button>
+                                    ng-click="locateAddress($event, place.address)"> Find Address </button>
                             <br />
                         </div>
                         <ui-gmap-google-map center="map.center" zoom="map.zoom"  draggable="true" options="options">
