@@ -7,6 +7,7 @@
         MSEC_TO_30MIN = 60 * 30 * 1000,
         eventSources = [],
         controller = function($scope, $modal) {
+          $scope.isScheduleSet = false;
           $scope.eventSources = eventSources;
           $scope.punctualConfig = {
             calendar:{
