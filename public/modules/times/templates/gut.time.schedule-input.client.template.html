@@ -17,7 +17,7 @@
                     <th>Date</th>
                     <th>Repeats</th>
                     <th>Start Time</th>
-                    <th>Duration</th>
+                    <th>End Time</th>
                 </tr>
                 <tr ng-repeat="event in eventSources">
                     <td> <div ng-if="!event.repeating"> {{event.start | date: 'longDate' }} </div> </td>
