@@ -3,21 +3,25 @@
         <ng-form>
             <div>
                 <div>
-                <div class="text-center">
-                    <div class="form-group">
-                        <label for="address">                Address of Resource :
-                        </label>
-                        <input id="address" ng-model="place.address" type="text" class="form-control" ng-required="true" placeholder="Address or Landmark">
+                    <div class="text-center">
+                        <div class="form-group">
+                            <label for="address">                Address of Resource :
+                            </label>
+                            <input id="address" ng-model="input_address"
+                                   type="text" class="form-control"
+                                   ng-required="true" placeholder="Address or Landmark">
+
+                            <button class="btn btn-info"
+                                    ng-click="locateAddress($event, input_address)"> Find Address </button>
+                            <br />
+                        </div>
+                        <ui-gmap-google-map center="map.center" zoom="map.zoom"  draggable="true" options="options">
+                            <ui-gmap-marker coords="map.center" options="map.marker.options" events="map.marker.events" idkey="map.marker.id">
+                            </ui-gmap-marker>
+                        </ui-gmap-google-map>
                     </div>
-                    <button class="btn btn-info" ng-click="locateAddress($event)"> Find Address </button>
-                    <br />
-                    <ui-gmap-google-map center="map.center" zoom="map.zoom"  draggable="true" options="options">
-                        <ui-gmap-marker coords="map.center" options="map.marker.options" events="map.marker.events" idkey="map.marker.id">
-                        </ui-gmap-marker>
-                    </ui-gmap-google-map>
                 </div>
-            </div>
-                
+
                 <div class="form-group">
                     <label for="placeDescription"> Describe Location</label>
                     <input ng-model="place.description" type="text"  id="placeDescription" class="form-control" placeholder="Place Description" ng-maxlength="500" ng-required="true">
@@ -33,8 +37,8 @@
 
 
     <button type="button" class="btn btn-default" ng-disabled="!(place.description)" ng-click="place.isLocationSet=true">OK</button>
-        </ng-form>
-    </div>
+    </ng-form>
+</div>
 </div>
 <div ng-if="place.isLocationSet">
     <div>
@@ -47,6 +51,7 @@
             </ui-gmap-google-map>
 
         </div>
-        <a class="btn btn-warning" href="#" role="button" ng-click="place.isLocationSet=false">Edit</a>
+        <a class="btn btn-warning" href="#" role="button"
+           ng-click="place.isLocationSet=false">Edit</a>
     </div>
 </div>

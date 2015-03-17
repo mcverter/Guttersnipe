@@ -35,32 +35,14 @@
 
 
       geolocatorFactory = Object.create(Object.prototype, {
+        geocoder: {
+          enumerable: true,
+          value: geocoder
+        },
         getCurrentLocation: {
           enumerable: true,
           value: function getCurrentLocation() {
             return window.navigator.geolocation;
-          }
-        },
-        locateAddress: {
-          enumerable: true,
-          value: function locateAddress(address) {
-
-            var center, formattedAddress;
-
-            geocoder.geocode(
-              { 'address': address },
-              function (results, status) {
-                if ((status === google.maps.GeocoderStatus.OK) &&
-                  results.length > 0) {
-                  formattedAddress =
-                    results[0].formatted_address;
-                  center = {
-                    lat: results[0].geometry.location.k,
-                    lng: results[0].geometry.location.D
-
-                  };
-                }
-              });
           }
         }
       });

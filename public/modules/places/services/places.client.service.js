@@ -8,8 +8,6 @@
           emptyPlace,
           prospectPark,
           defaultZoom = 14 ;
-/*Map Marker is {"latitude":"40.660204","longitude":"-73.968956"}
- Center is {"latitude":40.65369267709071,"longitude":-73.937799460083} */
         prospectPark = {
           coordinates: {
             lat: '40.660204',
@@ -48,23 +46,17 @@
         placeFactory = Object.create(Object.prototype, {
           locateAddress : {
             enumerable: true,
-            value: function locateAddress($event, inputAddress) {
-              var center, markers;
-              $event.preventDefault();
-              geocoder.geocode( { 'address': inputAddress }, function(results, status) {
-                if (status == google.maps.GeocoderStatus.OK && results.length > 0) {
-                  inputAddress =   results[0].formatted_address;
-                  center = {
-                    lat: results[0].geometry.location.k,
-                    lng: results[0].geometry.location.D,
-                    zoom: 15
-                  };
-                }
-              });
+            value: function locateAddress(inputAddress, map) {
+              console.log('locating input address in service', inputAddress);
+              Geolocator.geocoder.geocode( { "address": inputAddress },
+                function(results, status) {
+                     if (status == google.maps.GeocoderStatus.OK && results.length > 0) {
+                           var location = results[0].geometry.location;
+                           $scope.myMap.panTo(location);
+                       }
+                 });
             }
           },
-
-
 
           defaultZoom: {
             enumerable: true,

@@ -1,10 +1,11 @@
 <section data-ng-controller="ResourcesController">
+
     <div class="page-header">
         <h1>Create New Resource</h1>
     </div>
 
     <div class="col-md-12">
-        <div>
+        <div ng-if="false">
 
             <!-- div ng-hide="resource.createAgreed" -->
             <div class="jumbotron BlackOnRed">
@@ -12,11 +13,11 @@
                 <create-agreement></create-agreement>
             </div>
         </div>
-        <div ng-show="true">
 
+        <div ng-show="true">
             <!-- div ng-show="resource.createAgreed" -->
             <form name="resourceForm" class="form-horizontal" data-ng-submit="create()" novalidate>
-                <div>
+                <div ng-if="false">
                     <div class="jumbotron RedOnBlack">
                         <h2>Learn</h2>
                         <create-instructions></create-instructions>
@@ -30,7 +31,8 @@
                         </create-description>
                     </div>
                 </div>
-                <div class="jumbotron RedOnBlack">
+
+                <div ng-if="false" class="jumbotron RedOnBlack">
                     <h2>Classify</h2>
                     <create-classification thing="resource.thing"></create-classification>
                 </div>
