@@ -12,8 +12,10 @@ var mongoose = require('mongoose'),
  * Create a Resource
  */
 exports.create = function(req, res) {
+    console.log('create resource');
 	var resource = new Resource(req.body);
 	resource.user = req.user;
+
 
 	resource.save(function(err) {
 		if (err) {

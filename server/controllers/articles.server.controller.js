@@ -12,7 +12,7 @@ var mongoose = require('mongoose'),
  * Create a article
  */
 exports.create = function(req, res) {
-  console.log('Creating Article ', req.body)
+  console.log('Creating Article ', req.body);;
 	var article = new Article(req.body);
 	article.user = req.user;
 
@@ -84,7 +84,7 @@ exports.list = function(req, res) {
 			});
 		} else {
 			var json = res.json(articles);
-      console.log('JSON', json)
+      console.log('JSON', json);;
 //      console.log('JSON Model Collection', json.mongooseCollection.model.collection)
 
 		}

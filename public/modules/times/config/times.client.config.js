@@ -1,5 +1,5 @@
 (function (angular, _) {
-  'use strict'
+  'use strict';;
 
   var BASE_DIR = 'modules/times/',
     TEMPLATES_SUBDIR = 'templates/',

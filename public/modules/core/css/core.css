@@ -156,7 +156,7 @@ html {
 }
 .tile h2 {
     margin-top: -20px;
-    margin-left: 0px;
+    margin-left: 0;
 }
 .tile h3,
 .tile h4 {
@@ -197,7 +197,7 @@ html {
     color: #ffffff;
 }
 .tile .tile-content .tile-icon-large {
-    margin-left: 0px;
+    margin-left: 0;
     vertical-align: middle !important;
     text-align: center;
 }

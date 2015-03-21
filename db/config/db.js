@@ -19,4 +19,4 @@ module.exports = {
   Thing: Thing,
   Time: Time,
   Resource: Resource
-}
+};;

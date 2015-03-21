@@ -1,4 +1,4 @@
-<div ng-if="!place.isLocationSet">
+<div ng-if="!isCreatePlaceConfirmed">
     <div>
         <ng-form>
             <div>
@@ -38,11 +38,11 @@
     </div>
 
 
-    <button type="button" class="btn btn-default" ng-disabled="!(place.description)" ng-click="place.isLocationSet=true">OK</button>
+    <button type="button" class="btn btn-default" ng-disabled="!(place.description)" ng-click="isCreatePlaceConfirmed=true">OK</button>
     </ng-form>
 </div>
 </div>
-<div ng-if="place.isLocationSet">
+<div ng-if="isCreatePlaceConfirmed">
     <div>
         <div>
             <div class="panel panel-default">
@@ -72,6 +72,6 @@
             </div>
         </div>
         <button class="btn btn-warning" role="button"
-           ng-click="place.isLocationSet=false">Edit</button>
+           ng-click="isCreatePlaceConfirmed=false">Edit</button>
     </div>
 </div>

@@ -1,7 +1,7 @@
 
 <div class="jumbotron">Schedule for {{headline}}</div>
 
-<div ng-show="!isScheduleSet" ui-calendar="punctualConfig.calendar" class="span8 calendar" ng-model="eventSources"></div>
+<div ng-show="!isCreateTimeConfirmed" ui-calendar="punctualConfig.calendar" class="span8 calendar" ng-model="eventSources"></div>
 
 <div><hr><br><hr></div>
 
@@ -34,6 +34,6 @@
     </div>
 </div>
 
-<button  ng-show="!isScheduleSet" type="button" class="btn btn-default" ng-disabled="eventSources.length<1" ng-click="isScheduleSet=true">OK</button>
+<button  ng-show="!isCreateTimeConfirmed" type="button" class="btn btn-default" ng-disabled="eventSources.length<1" ng-click="isCreateTimeConfirmed=true">OK</button>
 
-<button  ng-show="isScheduleSet" type="button" class="btn btn-default"  ng-click="isScheduleSet=false">Edit</button>
+<button  ng-show="isCreateTimeConfirmed" type="button" class="btn btn-default"  ng-click="isCreateTimeConfirmed=false">Edit</button>

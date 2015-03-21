@@ -137,7 +137,7 @@
               removeSubtype: {
                 enumerable: true,
                 value: function removeSubtype(subtype) {
-                  var idx= _.indexOf(subtypeChosen, subtype)
+                  var idx= _.indexOf(subtypeChosen, subtype);;
                   if (idx >= 0) {
                     subtypeChosen.splice(idx, 1);
                   }
@@ -156,7 +156,7 @@
               removeDetail : {
                 enumerable: true,
                 value: function removeDetail(detail) {
-                  var idx= _.indexOf(details, detail)
+                  var idx= _.indexOf(details, detail);;
                   if (idx >= 0) {
                     details.splice(idx, 1);
                   }

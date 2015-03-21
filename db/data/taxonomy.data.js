@@ -30,4 +30,4 @@ var taxonomy = [
       'Other Housing'
     ]
   }
-]
+];;
