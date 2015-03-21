@@ -128,7 +128,7 @@
                 templateUrl: templateUrl,
                 controller: controller,
                 scope : {
-                    isTimeConfirmed: '='
+                    isCreateTimeConfirmed: '='
                 }
             };
         }]
