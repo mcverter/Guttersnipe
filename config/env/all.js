@@ -32,7 +32,7 @@ module.exports = {
               'public/lib/lodash/dist/lodash.js',
               'public/lib/angular-google-maps/dist/angular-google-maps.js',
               'public/lib/smartmenus/dist/jquery.smartmenus.js',
-              '//maps.googleapis.com/maps/api/js?sensor=false',
+             '//maps.googleapis.com/maps/api/js?sensor=false',
               'public/lib/moment/moment.js',
               'public/lib/fullcalendar/fullcalendar.js',
               'public/lib/angular-ui-calendar/src/calendar.js',

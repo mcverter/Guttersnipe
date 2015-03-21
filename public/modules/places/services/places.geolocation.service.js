@@ -106,12 +106,13 @@
   'use strict';
 
   angular.module('places').factory('Geolocator',
-    function() {
-      var geolocatorFactory,
-        geocoder = window.geocoder;
+    ['uiGmapGoogleMapApi', function(maps) {
+        console.log('Maps', maps);
+      var geolocatorFactory;
+//        var geocoder = new maps.Geocoder();
 
+        var geocoder;
       if  (!geocoder) {
-
         if (google && google.maps) {
           geocoder = new google.maps.Geocoder();
         }
@@ -134,6 +135,6 @@
         }
       });
       return geolocatorFactory;
-    });
+    }]);
 })(window.angular, window.google, window._);
 
