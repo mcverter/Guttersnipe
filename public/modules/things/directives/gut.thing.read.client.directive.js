@@ -12,7 +12,7 @@
   * * thing (Object):  resource.thing
   *
   */
- 
+
 (function (angular, _) {
   'use strict';
 
