@@ -53,15 +53,11 @@
     <div data-ng-include="'/modules/core/templates/footer.client.view.html'"></div>
 
     <!--Embedding The User Object-->
-	<script type="text/javascript">
-        var user = {
-        {
-            user | json | safe
-        };;
-        }
+    <script type="text/javascript">
+        var user = {{ user | json | safe }};
     </script>
 
-	<!--Application JavaScript Files-->
+    <!--Application JavaScript Files-->
 	{% for jsFile in jsFiles %}<script type="text/javascript" src="{{jsFile}}"></script>{% endfor %} 
 
 	{% if process.env.NODE_ENV === 'development' %}
