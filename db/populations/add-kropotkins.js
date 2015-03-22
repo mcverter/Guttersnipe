@@ -1,6 +1,6 @@
-var db = require('./config/db'),
+var db = require('../config/db'),
   _ = require('lodash'),
-  kropotkinData = require ('./data/kropotkin.data.js'),
+  kropotkinData = require ('../data/kropotkin.data.js'),
   bread = kropotkinData.conquestofbread
   ;
 console.log('in add kropotkins');
