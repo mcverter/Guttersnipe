@@ -89,6 +89,8 @@
     angular.module('resources').controller('ResourcesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Resources',
         function($scope, $stateParams, $location, Authentication, Resources) {
             $scope.resource = Resources.getEmptyResource;
+            $scope.resource.eventSources = [];
+
 
             $scope.Authentication = Authentication;
             $scope.create =  function()
