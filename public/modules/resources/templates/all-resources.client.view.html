@@ -1,0 +1,61 @@
+<section data-ng-controller="ResourcesController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Resources</h1>
+    </div>
+    <section data-ng-controller="ResourcesController">
+        <tabset>
+            <tab heading="List" ui-sref="{{tab.state}}" active="tab.active" >List
+                <resources-list></resources-list>
+            </tab>
+            <tab heading="Map" >
+                Map
+                <resources-map></resources-map>
+            </tab>
+            <tab heading="Calendar" >
+                Calendar
+                <resources-calendar></resources-calendar>
+            </tab>
+        </tabset>
+        <div ui-view="tabContent" id="tabContent" class="container admin-content"></div>
+
+    </section>
+
+
+    <section data-ng-controller="ResourcesController">
+        <h2> Filter Resources by </h2>
+        <tabset>
+            <tab heading="Thing" >
+                Thing
+                <thing-find></thing-find>
+
+            </tab>
+            <tab heading="Place" >
+                Place
+                <place-find></place-find>
+            </tab>
+            <tab heading="Time" >
+                Time
+                <time-find></time-find>
+            </tab>
+        </tabset>
+
+    </section>
+
+
+    <div class="alert alert-warning text-center" data-ng-hide="!resources.$resolved || resources.length">
+        No Resources yet, why don't you <a href="/#/resources/create">create one</a>?
+    </div>
+</section>
+
+
+
+<!--
+        <h2>Configuration</h2>
+<tabset>
+    <tab ng-repeat="tab in vm.tabs" heading="{{tab.text}}" ui-sref="{{tab.state}}" active="tab.active"></tab>
+</tabset>
+
+<div ui-view="tabContent" id="tabContent" class="container admin-content"></div>
+
+
+</div>-->
