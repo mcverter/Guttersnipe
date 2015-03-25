@@ -1,4 +1,3 @@
-
 var singleData = {
     "_id":"54fb431401944afce2dfc3aa",
     "headline":"New Banana King",
