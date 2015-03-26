@@ -72,7 +72,9 @@
                         return response.data;
                     });
             }
-            
+
+            function getOneResources() {}
+
 
             function deleteResource(resource) {
                 $log.debug('api.resources.delete');
@@ -80,7 +82,7 @@
                 var request = {
                     withCredentials: true,
                     method: DELETE,
-                    url: resourcesResource().segment(resource).toString()
+                    url: resourcesResource().toString()
                 };
 
                 $log.debug('api.resources.delete request', request);
@@ -119,7 +121,7 @@
                 var request = {
                     withCredentials: true,
                     method: PUT,
-                    url: resourcesResource().segment(resource).toString()
+                    url: resourcesResource().toString()
                 };
 
                 $log.debug('api.resources.put request', request);
