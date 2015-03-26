@@ -129,7 +129,7 @@
 			scope.time = sampleTimePutData;
 
 			// Set PUT response
-			$httpBackend.expectPUT(/times\/([0-9a-fA-F]{24})$/).respond();
+			$httpBackend.expectPUT(/times\/([0-v9a-fA-F]{24})$/).respond();
 
 			// Run controller functionality
 			scope.update();
