@@ -1,3 +1,190 @@
+
+
+(function (angular, _) {
+    'use strict';
+
+    angular.module('places').factory('Places',
+        ['Geolocator',
+            function(Geolocator) {
+
+                var placesService = {
+                    transformServerMap: transformServerMap
+
+                } ;
+
+
+                function populateMapLocations(resources) {
+
+                    function MapEntry(title, coordinates, linkToListing) {
+                        this.title = title;
+                        this.coordinates = coordinates;
+                        this.linkToListing = linkToListing;
+
+                    }
+                    var mapEntries = [],
+                        coordinates,
+                        title,
+                        linkToListing;
+
+                    _.forEach(resources, function(resource) {
+                        mapEntries.push(new MapEntry(
+                            resource.place.coordinates,
+                            resource.thing.description.headline,
+                            linkToListing = resource._id));
+                    })
+                }
+
+                function transformServerSchedules(schedules) {
+                    _.forEach(schedules, function(sked){
+                        var startTime = Number(sked.startTime);
+
+                        if(startTime < 1200 ) {
+                            startTime = startTime + ' AM';
+                        } else {
+                            if (startTime > 1300) {
+                                startTime -= 1200;
+                            }
+                            startTime = startTime + ' PM';
+                        }
+                        sked.startTime = startTime;
+
+                        switch(sked.recurringDay) {
+                            case "all":
+                                sked.recurringDay = "day";
+                                break;
+                            case "mon":
+                                sked.recurringDay = "Monday";
+                                break;
+                            case "tue":
+                                sked.recurringDay = "Tuesday";
+                                break;
+                            case "wed":
+                                sked.recurringDay = "Wednesday";
+                                break;
+                            case "thu":
+                                sked.recurringDay = "Thursday";
+                                break;
+                            case "fri":
+                                sked.recurringDay = "Friday";
+                                break;
+                            case "sat":
+                                sked.recurringDay = "Saturday";
+                                break;
+                            case "sun":
+                                sked.recurringDay = "Sunday";
+                                break;
+                        }
+
+                        switch(sked.recurrenceType) {
+                            case "A":
+                                sked.recurrenceType = "Every";
+                                break;
+                            case "1":
+                                sked.recurrenceType = "First";
+                                break;
+                            case "2":
+                                sked.recurrenceType = "Second";
+                                break;
+                            case "3":
+                                sked.recurrenceType = "Third";
+                                break;
+                            case "4":
+                                sked.recurrenceType = "Fourth";
+                                break;
+                            case "L":
+                                sked.recurrenceType = "Last";
+                                break;
+
+                        }
+                    });
+                }
+
+
+
+                var placeFactory,
+                    emptyPlace,
+                    prospectPark,
+                    defaultZoom = 14 ;
+
+
+
+
+
+                prospectPark = {
+                    coordinates: {
+                        lat: '40.660204',
+                        lng: '-73.968956'},
+                    address: 'Prospect Park Brooklyn, NY 11225'
+                };
+                emptyPlace = {
+                    coordinates: {
+                        lat: '',
+                        lng: ''},
+                    name: '',
+                    address: '',
+                    notes: ''
+                };
+
+                function Place(coordinates, address, name, notes) {
+                    var self = this;
+                    if (!coordinates || !coordinates.lat
+                        || coordinates.lng || !address ) {
+                        console.error('Error: Coordinates or address are undefined. Coords', coordinates, ' address ', address);
+                    }
+                    self.coordinates = coordinates;
+                    self.address = address;
+                    self.name = name;
+                    self.notes = notes;
+                }
+
+
+                Place.prototype = Object.create(Object.prototype, {
+                });
+
+
+
+
+
+                placeFactory = Object.create(Object.prototype, {
+                    locateAddress : {
+                        enumerable: true,
+                        value: function locateAddress(inputAddress, map) {
+                            Geolocator.geocoder.geocode( { "address": inputAddress },
+                                function(results, status) {
+                                    if (status == google.maps.GeocoderStatus.OK && results.length > 0) {
+                                        var location = results[0].geometry.location;
+                                        $scope.myMap.panTo(location);
+                                    }
+                                });
+                        }
+                    },
+
+                    defaultZoom: {
+                        enumerable: true,
+                        get: function getDefaultZoom() {
+                            return defaultZoom;
+                        }
+                    },
+                    prospectPark : {
+                        enumerable: true,
+                        get: function getProspectPark() {
+                            return prospectPark;
+                        }
+                    },
+                    emptyPlace: {
+                        enumerable: true,
+                        get: function getEmptyPlace() {
+                            return _.cloneDeep(emptyPlace);
+                        }
+                    }
+                });
+
+                return placeFactory;
+            }]);
+})(window.angular, window._);
+
+
+
 /**
  * Create Classification Directive
  *
@@ -83,87 +270,3 @@
 
 
  */
-
-
-(function (angular, _) {
-  'use strict';
-
-  angular.module('places').factory('Places',
-    ['Geolocator',
-      function(Geolocator) {
-        var placeFactory,
-          emptyPlace,
-          prospectPark,
-          defaultZoom = 14 ;
-        prospectPark = {
-          coordinates: {
-            lat: '40.660204',
-            lng: '-73.968956'},
-          address: 'Prospect Park Brooklyn, NY 11225'
-        };
-        emptyPlace = {
-          coordinates: {
-            lat: '',
-            lng: ''},
-          name: '',
-          address: '',
-          notes: ''
-        };
-
-        function Place(coordinates, address, name, notes) {
-          var self = this;
-          if (!coordinates || !coordinates.lat
-            || coordinates.lng || !address ) {
-            console.error('Error: Coordinates or address are undefined. Coords', coordinates, ' address ', address);
-          }
-          self.coordinates = coordinates;
-          self.address = address;
-          self.name = name;
-          self.notes = notes;
-        }
-
-
-        Place.prototype = Object.create(Object.prototype, {
-        });
-
-
-
-
-
-        placeFactory = Object.create(Object.prototype, {
-          locateAddress : {
-            enumerable: true,
-            value: function locateAddress(inputAddress, map) {
-              Geolocator.geocoder.geocode( { "address": inputAddress },
-                function(results, status) {
-                     if (status == google.maps.GeocoderStatus.OK && results.length > 0) {
-                           var location = results[0].geometry.location;
-                           $scope.myMap.panTo(location);
-                       }
-                 });
-            }
-          },
-
-          defaultZoom: {
-            enumerable: true,
-            get: function getDefaultZoom() {
-              return defaultZoom;
-            }
-          },
-          prospectPark : {
-            enumerable: true,
-            get: function getProspectPark() {
-              return prospectPark;
-            }
-          },
-          emptyPlace: {
-            enumerable: true,
-            get: function getEmptyPlace() {
-              return _.cloneDeep(emptyPlace);
-            }
-          }
-        });
-
-        return placeFactory;
-      }]);
-})(window.angular, window._);
