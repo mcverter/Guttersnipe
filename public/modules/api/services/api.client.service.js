@@ -13,6 +13,31 @@
                     return apiUri.clone();
                 },
 
+                api = {
+                    users: { 
+                        getAll: getAllUsers,
+                        getOne: getOneUser,
+                        delete: deleteUser,
+                        put: putUser,
+                        post: postUser
+                    },
+                    kropotkins: {
+                        getAll: getAllKropotkins,
+                        getOne: getOneKropotkin,
+                        delete: deleteKropotkin,
+                        put: putKropotkin,
+                        post: postKropotkin
+
+                    },
+                    resources: {
+                        getAll: getAllResources,
+                        getOne: getOneResource,
+                        delete: deleteResource,
+                        put: putResource,
+                        post: postResource
+                    }
+                },
+
                 /**
                  *  The following keys are used to repopulate the
                  *    client-side services/factories after an event
@@ -21,175 +46,99 @@
                 afterLoginEventKey = '$api.afterLogin',
                 afterUpdateLoginEventKey = '$api.updateLogin',
                 afterLogoutEventKey = '$api.afterLogout',
-                afterViewingHistoryUpdateEventKey = '$api.afterViewingHistoryUpdate',
+                afterResourceUpdateEventKey = '$api.afterResourceUpdate',
                 afterFavoritesUpdateEventKey = '$api.afterFavoritesUpdate',
                 afterNavigationUpdateEventKey = '$api.afterNavigationUpdate',
                 afterReportUpdateEventKey = '$api.afterReportUpdate',
-                afterCategoryUpdateEventKey = '$api.afterCategoryUpdate',
-                /**
-                 * api.reports:  A Novantas Report, stored in the Microsoft DB,
-                 *               Maps JasperReports to navigation Links
-                 *               Connects reports.js service with Java Reports and Links
-                 *                 and to SQL Server ui.Reports, ui.Links, ui.LinkHeirarchy
-                 *               Through RESTful calls
-                 * @method onUpdate: Triggered when reports list needs to be refreshed.
-                 *                   Callback in report.js
-                 * @method categorize: Adds Report as a child node to a category in LinkHeirarchy
-                 * @method uncategorize: Removes the LinkHeirarchy relationship with a parent Category
-                 * @method editJSON:  Edits the JSON information stored in ui.Reports
-                 * @method deployReports:  Copies a set of reports to a set of organizations
-                 * @method update:
-                 * @method get:
-                 * @method delete:  Deletes a Report from Database
-                 * @method copy:  Creates a new Report based on Report Template
-                 */
-                api = {
-                    users: {},
-                    kroopotkins: {},
-                    resources: {
-                        getAll: function getAllNavigation() {
-                            $log.debug('api.navigation.getAll');
-
-                            var request = {
-                                withCredentials: true,
-                                method: GET,
-                                url: navigationResource().segment('all').toString()
-                            };
-
-                            $log.debug('api.navigation.getall request', request);
-
-                            return $http(request)
-                                .then(function getNavigationAllSuccess(response) {
-                                    $log.debug('api.navigation.getAll success', response.data);
-                                    return response.data;
-                                },
-                                function getNavigationAllError(response) {
-                                    $log.error('api.navigation.getAll failure', response.data);
-                                    return response.data;
-                                });
-                        },
-
-                        get: function getRoles() {
-                            $log.debug('api.roles.get');
-
-                            var request = {
-                                withCredentials: true,
-                                method: GET,
-                                url: rolesResource().toString()
-                            };
-
-                            $log.debug('api.roles.get request', request);
-
-                            return $http(request)
-                                .then(function getRolesSuccess(response) {
-                                    $log.debug('api.roles.get success', response.data);
-                                    return response.data;
-                                },
-                                function getRolesError(response) {
-                                    $log.error('api.roles.get failure', response.data);
-                                    return response.data;
-                                });
-                        },
-
-                        delete: function deleteRole(role) {
-                            $log.debug('api.roles.delete');
-
-                            var request = {
-                                withCredentials: true,
-                                method: DELETE,
-                                url: rolesResource().segment(role).toString()
-                            };
-
-                            $log.debug('api.roles.delete request', request);
-
-                            return $http(request)
-                                .then(function deleteRoleSuccess(response) {
-                                    $log.debug('api.roles.delete success', response.data);
-                                    return response.data;
-                                },
-                                function deleteRoleError(response) {
-                                    $log.error('api.categories.roles.delete failure', response.data);
-                                    return response.data;
-                                });
-                        },
-
-
-                        post: function postView(viewData) {
-                            $log.debug('api.viewingHistory.post');
-
-                            var request = {
-                                withCredentials: true,
-                                method: POST,
-                                url: viewingHistoryResource().toString(),
-                                data: viewData || {}
-                            };
-
-                            $log.debug('api.viewingHistory.post request', request);
-
-                            return $http(request).then(function afterPostView() {
-                                _.trigger(afterViewingHistoryUpdateEventKey);
-                            });
-                        },
+                afterCategoryUpdateEventKey = '$api.afterCategoryUpdate';
 
 
 
+            function getAllResources() {
+                $log.debug('api.resource.getAll');
 
-                        put: function putRole(role) {
-                            $log.debug('api.roles.put');
-
-                            var request = {
-                                withCredentials: true,
-                                method: PUT,
-                                url: rolesResource().segment(role).toString()
-                            };
-
-                            $log.debug('api.roles.put request', request);
-
-                            return $http(request)
-                                .then(function putRoleSuccess(response) {
-                                    $log.debug('api.roles.put success', response.data);
-                                    return response.data;
-                                },
-                                function putRoleError(response) {
-                                    $log.error('api.roles.put failure', response.data);
-                                    return response.data;
-                                });
-                        },
-
-
-
-                        onUpdate: function onUpdate(handler) {
-                            _.on(afterReportUpdateEventKey, handler);
-                        },
-
-                        categorize: function categorizeReports(uri, name, categories, id) {
-                            $log.debug('api.reports.categorize');
-                            var request = {
-                                withCredentials: true,
-                                method: POST,
-                                url: reportsResource().segment('categories').toString(),
-                                data: {uri: uri, name: name, categories: categories, reportId: id}
-                            };
-
-                            $log.debug('api.reports.categorize request', request);
-
-                            return $http(request)
-                                .then(
-                                function categorizeSuccess(response) {
-                                    $log.debug('api.reports.categorize success', response.data);
-                                    _.trigger(afterNavigationUpdateEventKey);
-                                    _.trigger(afterReportUpdateEventKey);
-                                    return response.data;
-                                },
-                                function categorizeError(response) {
-                                    $log.debug('api.reports.categorize failure', response.data);
-                                    return response.data;
-                                }
-                            );
-                        }
-                    }
+                var request = {
+                    withCredentials: false,
+                    method: GET,
+                    url: resourcesResource().toString()
                 };
 
+                return $http(request)
+                    .then(function getResourcesAllSuccess(response) {
+                        return response.data;
+                    },
+                    function getNavigationAllError(response) {
+                        $log.error('api.navigation.getAll failure', response.data);
+                        return response.data;
+                    });
+            }
+            
+
+            function deleteResource(resource) {
+                $log.debug('api.resources.delete');
+
+                var request = {
+                    withCredentials: true,
+                    method: DELETE,
+                    url: resourcesResource().segment(resource).toString()
+                };
+
+                $log.debug('api.resources.delete request', request);
+
+                return $http(request)
+                    .then(function deleteResourceSuccess(response) {
+                        $log.debug('api.resources.delete success', response.data);
+                        return response.data;
+                    },
+                    function deleteResourceError(response) {
+                        $log.error('api.categories.resources.delete failure', response.data);
+                        return response.data;
+                    });
+            }
+
+
+            function postResource(resourceData) {
+                $log.debug('api.resource.post');
+
+                var request = {
+                    withCredentials: true,
+                    method: POST,
+                    url: resourceResource().toString(),
+                    data: resourceData || {}
+                };
+
+                $log.debug('api.resource.post request', request);
+
+                return $http(request).then(function afterPostResource() {
+                    _.trigger(afterResourceUpdateEventKey);
+                });
+            }
+            function putResource(resource) {
+                $log.debug('api.resources.put');
+
+                var request = {
+                    withCredentials: true,
+                    method: PUT,
+                    url: resourcesResource().segment(resource).toString()
+                };
+
+                $log.debug('api.resources.put request', request);
+
+                return $http(request)
+                    .then(function putResourceSuccess(response) {
+                        $log.debug('api.resources.put success', response.data);
+                        return response.data;
+                    },
+                    function putResourceError(response) {
+                        $log.error('api.resources.put failure', response.data);
+                        return response.data;
+                    });
+            }
+
+
+            function onUpdateResource(handler) {
+                _.on(afterReportUpdateEventKey, handler);
+            }
 
 
         }]);
@@ -235,7 +184,7 @@
  @eventOf type - links a method to the object/service where it is defined
  @eventType emit|broadcast - specifies whether the event is emitted or broadcast
 
- overview - Give an overview of the file/module being documented
+ overresource - Give an overresource of the file/module being documented
  interface - Describe the interface of an object or service, specified by the @name directive. (abstract: use @object or @service instead)
  service - Describe an AngularJS service, such as $compile or $http, for instance.
  object - Describe a well defined object (often exposed as a service)
@@ -253,7 +202,7 @@
  error - only used for minerr documentation
  function - generally used for global functions but sometimes "misused" for a service or method
  property - generally used for properties on services but also used for angular.version
- overview - generally used for modules and ngdocs but also used for ng.$rootElement and angular.mock (should be objects?)
+ overresource - generally used for modules and ngdocs but also used for ng.$rootElement and angular.mock (should be objects?)
  object - generally used for services that are not straight functions
  method - used for methods on services and types (such as angular.Module, etc)
  interface - only used for angular.Module in angular-load.js
@@ -269,7 +218,7 @@
  object - for global objects
  interface - for global interfaces
  type - for constructors
- module - instead of overview for modules
+ module - instead of overresource for modules
  service - instead of object/function for angular services
  serviceProvider - instead of function/object for angular service providers
  directive - as-is (but also include inputTypes, e.g input[checkbox])
