@@ -1,6 +1,6 @@
 
 
-(function (angular, _) {
+(function () {
     'use strict';
 
     angular.module('places').factory('Places',
@@ -181,7 +181,7 @@
 
                 return placeFactory;
             }]);
-})(window.angular, window._);
+})();
 
 
 

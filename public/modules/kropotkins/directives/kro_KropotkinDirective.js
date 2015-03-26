@@ -1,4 +1,4 @@
-(function (angular, _) {
+(function () {
   'use strict';
 
 // Kropotkins controller
@@ -26,4 +26,4 @@
           $scope.reloadQuote =  loadQuote;
         }]
     };
-  }]);})(window.angular, window._);
+  }]);})();

@@ -1,4 +1,4 @@
-(function (angular, _) {
+(function () {
   'use strict';
 
   var template =
@@ -18,4 +18,4 @@
       };
     }
   ]);
-})(window.angular, window._);
+})();

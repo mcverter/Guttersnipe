@@ -1,6 +1,6 @@
 
 
-(function (angular, _) {
+(function () {
   'use strict';
 
   angular.module('times').factory('Times',
@@ -62,7 +62,7 @@
       return timeFactory;
     }
   );
-})(window.angular, window._);
+})();
 
 /**
  * Create Classification Directive

@@ -13,7 +13,7 @@
   *
   */
 
-(function (angular, _) {
+(function () {
   'use strict';
 
   angular.module('resources')
@@ -42,5 +42,5 @@
         }]
     );
 
-})(window.angular, window._);
+})();
 

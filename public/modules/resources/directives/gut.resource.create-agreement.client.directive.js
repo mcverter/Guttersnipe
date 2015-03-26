@@ -1,4 +1,4 @@
-(function (angular, _) { 'use strict';
+(function () { 'use strict';
     angular.module('resources')
         .directive('createAgreement', ['resource_templates', function(templates) {
             var linker = function(scope, element, attrs) {},
@@ -12,4 +12,4 @@
             };
         }]
     );
-})(window.angular,  window._);
+})();

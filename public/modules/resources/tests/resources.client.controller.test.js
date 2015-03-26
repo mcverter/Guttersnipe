@@ -1,4 +1,4 @@
-(function (angular, _) {
+(function () {
   'use strict';
 
 	// Resources Controller Spec
@@ -160,4 +160,4 @@
 			expect(scope.resources.length).toBe(0);
 		}));
 	});
-})(window.angular, window._);
+})();

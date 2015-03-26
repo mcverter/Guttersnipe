@@ -1,4 +1,4 @@
-(function (angular, _) {
+(function () {
   'use strict';
 
 // Setting up route
@@ -78,4 +78,4 @@
           templateUrl: PRESENTATION_DIR + 'fin.html'
         });
     }]);
-})(window.angular, window._);
+})();

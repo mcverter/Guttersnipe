@@ -1,4 +1,4 @@
-(function (angular, _) { 'use strict';
+(function () { 'use strict';
 
 //Menu service used for managing  menus
   angular.module('core').service('Menus', [
@@ -164,4 +164,4 @@
       this.addMenu('topbar');
     }
   ]);
-})(window.angular, window._);
+})();

@@ -52,7 +52,7 @@
 
 
 
-(function (angular, _) {
+(function () {
   'use strict';
 
 //Kropotkins service used to communicate Kropotkins REST endpoints
@@ -64,4 +64,4 @@
       );
     }
   ]);
-})(window.angular, window._);
+})();

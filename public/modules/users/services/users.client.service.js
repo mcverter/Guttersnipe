@@ -51,7 +51,7 @@
  */
 
 
-(function (angular, _) {
+(function () {
   'use strict';
 
 // Users service used for communicating with the users REST endpoint
@@ -64,4 +64,4 @@
       });
     }
   ]);
-})(window.angular, window._);
+})();

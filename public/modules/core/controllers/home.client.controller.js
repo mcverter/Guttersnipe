@@ -1,4 +1,4 @@
-(function (angular, _) {
+(function () {
   'use strict';
 
 
@@ -8,4 +8,4 @@
       $scope.authentication = Authentication;
     }
   ]);
-})(window.angular, window._);
+})();

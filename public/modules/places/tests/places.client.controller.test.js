@@ -1,4 +1,4 @@
-(function (angular, _) {
+(function () {
   'use strict';
   // Places Controller Spec
   describe('Places Controller Tests', function() {
@@ -158,4 +158,5 @@
       // Test array after successful delete
       expect(scope.places.length).toBe(0);
     }));
-  })(window.angular, window._);
+  })
+  })();

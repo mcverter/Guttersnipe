@@ -1,4 +1,4 @@
-(function (angular, _) {
+(function () {
   'use strict';
 
 // Places controller
@@ -7,4 +7,4 @@
       $scope.authentication = Authentication;
     }
   ]);
-})(window.angular, window._);
+})();

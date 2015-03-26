@@ -1,4 +1,4 @@
-(function (angular, _) {
+(function () {
   'use strict';
 
   angular.module('users').controller('PasswordController', ['$scope', '$stateParams', '$http', '$location', 'Authentication',
@@ -43,4 +43,4 @@
       };
     }
   ]);
-})(window.angular, window._);
+})();

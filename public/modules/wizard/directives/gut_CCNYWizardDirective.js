@@ -1,4 +1,4 @@
-(function (angular, _) {
+(function () {
   'use strict';
   angular.module('wizard')
     .directive('gutCcnyWizard', ['wizard_templates', function(templates) {
@@ -13,4 +13,4 @@
       };
     }]
   );
-})(window.angular, window._);
+})();

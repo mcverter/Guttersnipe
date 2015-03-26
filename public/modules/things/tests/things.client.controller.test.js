@@ -1,4 +1,4 @@
-(function (angular, _) { 'use strict';
+(function () { 'use strict';
 
 	// Things Controller Spec
 	describe('Things Controller Tests', function() {
@@ -159,4 +159,4 @@
 			expect(scope.things.length).toBe(0);
 		}));
 	});
-})(window.angular, window._);
+})();

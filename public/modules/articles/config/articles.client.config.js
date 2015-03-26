@@ -1,4 +1,4 @@
-(function (angular, _) {
+(function () {
   'use strict';
 
 // Configuring the Articles module
@@ -10,4 +10,4 @@
       Menus.addSubMenuItem('topbar', 'articles', 'New Article', 'articles/create');
     }
   ]);
-})(window.angular, window._);
+})();

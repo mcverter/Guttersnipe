@@ -85,7 +85,7 @@
  */
 
 
-(function (angular, _) {
+(function () {
   'use strict';
 
   angular.module('things')
@@ -250,4 +250,4 @@
       };
     }]
   )
-})(window.angular,  window._);
+})();

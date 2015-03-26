@@ -1,5 +1,5 @@
 
-(function (angular, _) { 'use strict';
+(function () { 'use strict';
 
     angular.module('resources').controller('ResourcesController', ['$scope', '$stateParams', '$location', 'Authentication', 'Resources',
         function($scope, $stateParams, $location, Authentication, Resources) {
@@ -27,6 +27,24 @@
             $scope.updateThingSummary  = function(){};
             $scope.updateThingTaxonomy  = function(){};
 
+            activate();
+
+
+
+            function getAvengers() {
+                return dataservice.getAvengers().then(function(data) {
+                    vm.avengers = data;
+                    return vm.avengers;
+                });
+            }
+
+
+
+            function activate() {
+                return getAvengers().then(function() {
+                    logger.info('Activated Avengers View');
+                });
+            }
 
 
             function createResource() {
@@ -101,7 +119,7 @@
             };
         }
     ]);
-})(window.angular, window._);
+})();
 
 
 /*

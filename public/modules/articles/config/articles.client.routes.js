@@ -1,4 +1,4 @@
-(function (angular, _) { 'use strict';
+(function () { 'use strict';
 
 // Setting up route
   angular.module('docs').config(['$stateProvider',
@@ -23,4 +23,4 @@
         });
     }
   ]);
-})(window.angular, window._);
+})();

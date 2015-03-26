@@ -88,7 +88,7 @@
 
 
 
-(function (angular, _) {
+(function () {
     'use strict';
 
     angular.module('times')
@@ -223,4 +223,4 @@
             };
         }]
     );
-})(window.angular, window._);
+})();

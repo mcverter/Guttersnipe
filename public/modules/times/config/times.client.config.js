@@ -1,4 +1,4 @@
-(function (angular, _) {
+(function () {
   'use strict';;
 
   var BASE_DIR = 'modules/times/',
@@ -12,4 +12,4 @@
 
   angular.module('times').constant('times_templates', templates);
 
-})(window.angular, window._);
+})();

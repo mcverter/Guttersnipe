@@ -1,4 +1,4 @@
-(function (angular, _) {
+(function () {
 
 'use strict';
 
@@ -14,4 +14,4 @@ angular.module('articles').factory('Articles', ['$resource',
 		});
 	}
 ]);
-})(window.angular,  window._);
+})();

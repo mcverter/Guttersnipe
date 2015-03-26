@@ -84,7 +84,7 @@
 
  */
 
-(function (angular, _) {
+(function () {
     'use strict';
 
     angular.module('places')
@@ -179,6 +179,6 @@
                     }
                 };
             }]);
-})(window.angular, window._);
+})();
 
 

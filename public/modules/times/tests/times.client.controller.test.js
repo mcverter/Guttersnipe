@@ -1,6 +1,5 @@
-function (angular, _) { 'use strict';
-
 (function() {
+    'use strict';
 	// Times Controller Spec
 	describe('Times Controller Tests', function() {
 		// Initialize global variables
@@ -160,4 +159,4 @@ function (angular, _) { 'use strict';
 			expect(scope.times.length).toBe(0);
 		}));
 	});
-}());
+})();

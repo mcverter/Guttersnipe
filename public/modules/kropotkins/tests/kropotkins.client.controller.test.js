@@ -1,4 +1,4 @@
-(function (angular, _) {
+(function () {
   'use strict';
 
 	// Kropotkins Controller Spec
@@ -159,5 +159,5 @@
 			// Test array after successful delete
 			expect(scope.kropotkins.length).toBe(0);
 		}));
-
-}(window.angular, window._));
+    })
+}());

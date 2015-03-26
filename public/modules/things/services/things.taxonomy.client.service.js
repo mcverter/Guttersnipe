@@ -84,7 +84,7 @@
 
  */
 
-(function (angular, _) {
+(function () {
   'use strict';
   angular.module('things')
     .factory('TaxonomyService', [
@@ -127,4 +127,4 @@
         return taxonomyFactory;
       }
     ]);
-})(window.angular, window._);
+})();

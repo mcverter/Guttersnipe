@@ -1,4 +1,4 @@
-(function (angular, _) {
+(function () {
   'use strict';
 
   var BASE_DIR = 'modules/resources/',
@@ -17,4 +17,4 @@
 
   angular.module('resources')
     .constant('resource_templates', templates);
-})(window.angular,  window._);
+})();

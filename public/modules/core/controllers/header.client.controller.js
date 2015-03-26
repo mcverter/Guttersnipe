@@ -1,4 +1,4 @@
-(function (angular, _) {
+(function () {
   'use strict';
 
 angular.module('core').controller('HeaderController', ['$scope', 'Authentication', 'Menus',
@@ -17,4 +17,4 @@ angular.module('core').controller('HeaderController', ['$scope', 'Authentication
 		});
 	}
 ]);
-})(window.angular, window._);
+})();

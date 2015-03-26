@@ -1,4 +1,4 @@
-(function (angular, _) {
+(function () {
   'use strict';
   describe('HomeController', function() {
 		//Initialize global variables
@@ -20,4 +20,4 @@
 			expect(scope.authentication).toBeTruthy();
 		});
 	});
-})(window.angular, window._);
+})();

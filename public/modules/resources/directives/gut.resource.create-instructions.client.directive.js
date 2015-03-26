@@ -1,4 +1,4 @@
-(function (angular, _) {
+(function () {
   'use strict';
   angular.module('resources')
     .directive('createInstructions', ['resource_templates', function(templates) {
@@ -14,4 +14,4 @@
       };
     }]
   );
-})(window.angular,  window._);
+})();

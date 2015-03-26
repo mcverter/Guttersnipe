@@ -1,4 +1,4 @@
-(function (angular, _) {
+(function () {
   'use strict';
 
   angular.module('users').controller('SettingsController', ['$scope', '$http', '$location', 'Users', 'Authentication',
@@ -70,4 +70,4 @@
       };
     }
   ]);
-})(window.angular, window._);
+})();

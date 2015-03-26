@@ -1,4 +1,4 @@
-(function (angular, _) {
+(function () {
   'use strict';
 
   var BASE_DIR = 'modules/wizard/',
@@ -12,4 +12,4 @@
   angular.module('resources')
     .constant('wizard_templates', templates);
 
-})(window.angular, window._);
+})();

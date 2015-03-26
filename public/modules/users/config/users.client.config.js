@@ -1,4 +1,4 @@
-(function (angular, _) {
+(function () {
   'use strict';
 
 // Config HTTP Error Handling
@@ -29,4 +29,4 @@
       ]);
     }
   ]);
-})(window.angular, window._);
+})();

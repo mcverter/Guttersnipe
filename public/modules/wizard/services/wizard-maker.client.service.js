@@ -1,4 +1,4 @@
-(function (angular, _) {
+(function () {
   'use strict';
 
 //Resources service used for communicating with the resources REST endpoints
@@ -102,4 +102,4 @@
       });
 
     }]);
-})(window.angular,  window._);
+})();

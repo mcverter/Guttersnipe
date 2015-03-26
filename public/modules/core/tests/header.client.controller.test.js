@@ -1,4 +1,4 @@
-(function (angular, _) {
+(function () {
   'use strict';
 
 	describe('HeaderController', function() {
@@ -20,5 +20,5 @@
 		it('should expose the authentication service', function() {
 			expect(scope.authentication).toBeTruthy();
 		});
-
-})(window.angular, window._);
+    })
+})();

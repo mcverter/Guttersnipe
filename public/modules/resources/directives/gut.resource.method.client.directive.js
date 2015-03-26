@@ -1,4 +1,4 @@
-(function (angular, _) {
+(function () {
   'use strict';
 
   angular.module('resources').directive('gutResourceMethod', ['resource_templates', function(templates) {
@@ -10,5 +10,5 @@
       };
     }]
   );
-})(window.angular, window._);
+})();
 

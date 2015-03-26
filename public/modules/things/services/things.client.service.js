@@ -85,7 +85,7 @@
  */
 
 
-(function (angular, _) {
+(function () {
   'use strict';
 
   angular.module('things').factory('Things',
@@ -135,5 +135,5 @@
         return thingFactory;
       }]
   );
-})(window.angular, window._);
+})();
 

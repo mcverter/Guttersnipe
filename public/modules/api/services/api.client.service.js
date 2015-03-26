@@ -17,7 +17,7 @@
                         },
                         kropotkins: {
                             getAll: getAllKropotkins,
-                            getOne: getOneKropotkin,
+                            getOne: getOneKropotkin
                         },
                         resources: {
                             getAll: getAllResources,
@@ -342,6 +342,6 @@ users
 
 
             }]);
-})(window.angular, window._);
+})();
 
 

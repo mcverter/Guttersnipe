@@ -1,4 +1,4 @@
-(function (angular, _) {
+(function () {
   'use strict';
 
 // Setting up route
@@ -41,4 +41,4 @@
         })
     }
   ]);
-})(window.angular, window._);
+})();

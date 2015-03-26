@@ -88,7 +88,7 @@
  */
 
 
-(function (angular, _) {
+(function () {
   'use strict';
 
 // Authentication service for user variables
@@ -103,4 +103,4 @@
       return _this._data;
     }
   ]);
-})(window.angular, window._);
+})();
