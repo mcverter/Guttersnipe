@@ -1,0 +1,77 @@
+<div ng-if="!isCreatePlaceConfirmed">
+    <div>
+        <ng-form>
+            <div>
+                <div>
+                    <div class="text-center">
+                        <div class="form-group">
+                            <label for="address">                Address of Resource :
+                            </label>
+                            <input id="address" ng-model="place.address"
+                                   type="text" class="form-control"
+                                   ng-required="true" placeholder="Address or Landmark">
+                            <p ng-show="!place.address" class="help-block">You must specify an address.</p>
+
+                            <button class="btn btn-info"
+                                    ng-click="locateAddress($event, place.address)"> Find Address </button>
+                            <br />
+                        </div>
+                        <ui-gmap-google-map center="map.center" zoom="map.zoom"  draggable="true" options="options">
+                            <ui-gmap-marker coords="map.center" options="map.marker.options" events="map.marker.events" idkey="map.marker.id">
+                            </ui-gmap-marker>
+                        </ui-gmap-google-map>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="placeDescription"> Describe Location</label>
+                    <input ng-model="place.description" type="text"  id="placeDescription" class="form-control" placeholder="Place Description" ng-maxlength="500" ng-required="true">
+                    <p ng-show="!place.description" class="help-block">You must describe the location.</p>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="notes">Notes</label>
+                <input ng-model="place.notes" type="text"  id="notes" class="form-control" placeholder="Additional Notes" ng-maxlength="100" ng-required="true">
+            </div>
+    </div>
+
+
+    <button type="button" class="btn btn-default" ng-disabled="!(place.description)" ng-click="isCreatePlaceConfirmed=true">OK</button>
+    </ng-form>
+</div>
+</div>
+<div ng-if="isCreatePlaceConfirmed">
+    <div>
+        <div>
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3>Address</h3></div>
+                <div class="panel-body">
+                    {{place.address}}
+                </div>
+            </div>
+
+            <ui-gmap-google-map center="map.center" zoom="map.zoom">
+                <ui-gmap-marker coords="map.marker.coords" idkey="map.marker.id">
+                </ui-gmap-marker>
+            </ui-gmap-google-map>
+
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3>Description</h3></div>
+                <div class="panel-body">
+                    {{place.description}}
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3>Notes</h3></div>
+                <div class="panel-body">
+                    {{place.notes}}
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-warning" role="button"
+           ng-click="isCreatePlaceConfirmed=false">Edit</button>
+    </div>
+</div>

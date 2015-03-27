@@ -1,0 +1,17 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Thing</h3>
+    </div>
+    <div class="panel-body">
+        <dl> Type
+            <li>
+                {{thing.taxonomy.type}}
+            </li>
+        </dl>
+        <dl> Subtypes
+            <li ng-repeat="subtype in thing.taxonomy.subtypes">
+                {{subtype}}
+            </li>
+        </dl>
+    </div>
+</div>
