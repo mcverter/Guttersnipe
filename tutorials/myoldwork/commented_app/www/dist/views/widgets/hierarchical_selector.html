@@ -1,0 +1,14 @@
+<div class="sidepanel-control" ng-controller="HierarchicalSelectorCtrl">
+  <div class="label label-default" ng-bind="groupColumn.label"></div>
+  <div class="input-group combo dropdown">
+    <input type="text" ng-model="value" ng-keyup="onKeyUp($event)" ng-keydown="onKeyDown($event)" ng-blur="onBlur()" class="form-control" placeholder="Any Value">
+    <span class="input-group-btn">
+      <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" type="button" ng-click="dropdown()"><i class="fa" ng-class="{caret:!value, 'fa-times':value}"></i></button>
+      <ul class="dropdown-menu" role="menu">
+        <li ng-repeat="val in filteredValues" ng-class="{active:$index==selectedIndex}">
+          <a href="" ng-click="setControlValue($index)" ng-bind="val"></a>
+        </li>
+      </ul>
+    </span>
+  </div>
+</div>

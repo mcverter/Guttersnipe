@@ -1,0 +1,55 @@
+<div class="container nova-home">
+    <div class="row">
+
+        <div class="col-md-7">
+          <div class="nova-widget" ng-show="recentlyViewed">
+            <h3>Recently Viewed</h3>
+            <div class="nova-widget-content">
+              <table class="table table-striped">
+                <thead>
+                    <tr><th>Name</th><th>Last Viewed</th></tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="rv in recentlyViewed">
+                        <td><div class="toc-report-name"><a ng-href="{{rv.uri.toString()}}" ng-bind="rv.link.name"></a></div></td>
+                        <td><div style="min-width: 110px" class="toc-report-desc" ng-bind="rv.time.fromNow()"></div></td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="nova-widget" ng-show="news">
+            <h3>In the News</h3>
+            <div class="nova-widget-content">
+              <div class="nova-news-list">
+                <div class="news-item" ng-repeat="post in news">
+                  <img ng-src="{{post.imageUri.toString()}}">
+                  <h2><a target="_blank" ng-href="{{post.uri.toString()}}" ng-bind="post.title"></a></h2>
+                  <p ng-bind="post.body"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <div class="nova-widget" ng-show="favorites">
+            <h3>Favorites</h3>
+            <div class="nova-widget-content">
+              <table class="table table-striped">
+                <thead>
+                    <tr><th>Name</th></tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="f in favorites">
+                        <td><div class="toc-report-name"><a ng-href="{{f.uri.toString()}}" ng-bind="f.link.name"></a></div></td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+          
+    </div>
+</div>

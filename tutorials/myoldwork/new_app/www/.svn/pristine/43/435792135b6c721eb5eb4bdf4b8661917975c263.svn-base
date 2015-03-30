@@ -1,0 +1,5 @@
+﻿<h1 class="report-name" ng-bind="title"></h1>
+<div style="margin:150px 50px; text-align: center">
+  <span ng-show="isReady">Select parameters and click Apply to view report</span>
+  <span ng-show="!isReady"><img ng-src="images/spinnerLarge.gif" style="margin-right: 10px;"> Please wait...loading report details</span>
+</div>

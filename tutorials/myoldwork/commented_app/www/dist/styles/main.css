@@ -1,0 +1,845 @@
+/* line 7, ../../app/styles/main.sass */
+body {
+  font-family: "Lato", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+
+/* line 12, ../../app/styles/main.sass */
+a:focus {
+  outline: none;
+}
+/* line 14, ../../app/styles/main.sass */
+a::-moz-focus-inner {
+  border: 0;
+}
+
+/* line 17, ../../app/styles/main.sass */
+google-map, google-chart, jasper-embed {
+  display: block;
+  width: auto;
+}
+
+/* line 35, ../../app/styles/main.sass */
+.alert {
+  text-align: center;
+}
+
+/* line 38, ../../app/styles/main.sass */
+.highlight {
+  background-color: yellow;
+}
+
+/* line 41, ../../app/styles/main.sass */
+.nova-header {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  height: 70px;
+  background: url("images/nova-top-left.png") top left no-repeat, url("images/nova-top-right.png") top right no-repeat;
+  background-color: #18416d;
+}
+/* line 49, ../../app/styles/main.sass */
+.nova-header .nova-nav {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+  overflow: visible;
+}
+/* line 60, ../../../../../../tools/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.5/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.nova-header .nova-nav li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/* line 48, ../../../../../../tools/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.5/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.nova-header .nova-nav li:first-child, .nova-header .nova-nav li.first {
+  padding-left: 0;
+}
+/* line 49, ../../../../../../tools/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.5/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.nova-header .nova-nav li:last-child {
+  padding-right: 0;
+}
+/* line 50, ../../../../../../tools/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.5/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.nova-header .nova-nav li.last {
+  padding-right: 0;
+}
+/* line 54, ../../app/styles/main.sass */
+.nova-header a {
+  color: #d8e2f0;
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+/* line 58, ../../app/styles/main.sass */
+.nova-header a:hover {
+  color: white;
+}
+/* line 61, ../../app/styles/main.sass */
+.nova-header .nova-header-top {
+  height: 35px;
+  padding: 10px 15px 0px;
+  overflow: visible;
+}
+/* line 66, ../../app/styles/main.sass */
+.nova-header .nova-header-top .nova-nav {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+  overflow: visible;
+}
+/* line 60, ../../../../../../tools/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.5/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.nova-header .nova-header-top .nova-nav li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+/* line 48, ../../../../../../tools/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.5/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.nova-header .nova-header-top .nova-nav li:first-child, .nova-header .nova-header-top .nova-nav li.first {
+  padding-left: 0;
+}
+/* line 49, ../../../../../../tools/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.5/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.nova-header .nova-header-top .nova-nav li:last-child {
+  padding-right: 0;
+}
+/* line 50, ../../../../../../tools/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.5/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.nova-header .nova-header-top .nova-nav li.last {
+  padding-right: 0;
+}
+/* line 71, ../../app/styles/main.sass */
+.nova-header .nova-header-top .nova-nav ul.dropdown-menu li {
+  width: 100%;
+}
+/* line 73, ../../app/styles/main.sass */
+.nova-header .nova-header-top .nova-logo {
+  float: left;
+  height: 100%;
+  width: 133px;
+  background: url("images/nova-logo.png") top left no-repeat;
+  background-size: 133px;
+}
+/* line 80, ../../app/styles/main.sass */
+.nova-header .nova-header-top .nova-user {
+  float: right;
+  padding-top: 3px;
+}
+/* line 84, ../../app/styles/main.sass */
+.nova-header .nova-header-top .nova-user a {
+  display: block;
+}
+/* line 87, ../../app/styles/main.sass */
+.nova-header .nova-header-bottom {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: url("images/nova-bottom-right.png") bottom right no-repeat;
+  height: 35px;
+  line-height: 35px;
+}
+/* line 95, ../../app/styles/main.sass */
+.nova-header .nova-header-bottom.affix {
+  position: fixed;
+  top: 0;
+  bottom: auto;
+  z-index: 100;
+  background-color: #18416d;
+}
+/* line 102, ../../app/styles/main.sass */
+.nova-header .nova-header-bottom .nova-primary-nav {
+  padding-left: 15px;
+}
+/* line 107, ../../app/styles/main.sass */
+.nova-header .nova-header-bottom .nova-primary-nav li:hover a {
+  color: white;
+}
+/* line 112, ../../app/styles/main.sass */
+.nova-header .nova-header-bottom .nova-primary-nav li a.active:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  border-bottom: 4px solid white;
+  margin-left: -2px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+/* line 124, ../../app/styles/main.sass */
+.nova-header .nova-header-bottom .nova-primary-nav a {
+  position: relative;
+  display: block;
+  padding: 0 0;
+}
+/* line 129, ../../app/styles/main.sass */
+.nova-header .nova-header-bottom .nova-primary-nav a.active {
+  color: #f3cf77;
+}
+
+/* line 132, ../../app/styles/main.sass */
+.nova-infobar {
+  overflow: hidden;
+  *zoom: 1;
+  height: 50px;
+  line-height: 50px;
+  background-color: white;
+  border-bottom: solid 1px #cacaca;
+  padding: 0 15px;
+  width: 100%;
+  overflow: visible;
+}
+/* line 142, ../../app/styles/main.sass */
+.nova-infobar.affix {
+  position: fixed;
+  top: 35px;
+  bottom: auto;
+  z-index: 100;
+}
+/* line 148, ../../app/styles/main.sass */
+.nova-infobar a {
+  color: #3f73b9;
+  text-decoration: none;
+}
+/* line 151, ../../app/styles/main.sass */
+.nova-infobar a:hover, .nova-infobar a:active {
+  color: #13162d;
+}
+/* line 154, ../../app/styles/main.sass */
+.nova-infobar .nova-secondary-nav {
+  float: left;
+  list-style: none;
+  -webkit-padding-start: 0px;
+  margin-bottom: -5px;
+}
+/* line 160, ../../app/styles/main.sass */
+.nova-infobar .nova-secondary-nav > li {
+  padding-right: 15px;
+}
+/* line 163, ../../app/styles/main.sass */
+.nova-infobar .nova-secondary-nav > li > a {
+  padding: 8px 8px 8px 8px;
+  display: inline;
+}
+/* line 171, ../../app/styles/main.sass */
+.nova-infobar .nova-secondary-nav > li .dropdown-menu > .active > a, .nova-infobar .nova-secondary-nav > li .dropdown-menu > .active > a:hover, .nova-infobar .nova-secondary-nav > li .dropdown-menu > .active > a:focus {
+  color: #18416d;
+  text-decoration: none;
+  background-color: #d8e2f0;
+  outline: 0;
+}
+/* line 179, ../../app/styles/main.sass */
+.nova-infobar .nova-secondary-nav .dropdown .caret {
+  color: #d8e2f0;
+}
+/* line 186, ../../app/styles/main.sass */
+.nova-infobar .nova-secondary-nav .breadcrumb {
+  padding: 0 0;
+  margin-bottom: 0;
+  background-color: inherit;
+  border-radius: 0;
+  font-size: 14px;
+  position: relative;
+}
+/* line 194, ../../app/styles/main.sass */
+.nova-infobar .nova-secondary-nav .breadcrumb:last-child > a:after {
+  content: "";
+}
+/* line 198, ../../app/styles/main.sass */
+.nova-infobar .nova-secondary-nav .breadcrumb.active a {
+  font-weight: bold;
+}
+/* line 202, ../../app/styles/main.sass */
+.nova-infobar .nova-secondary-nav .dropdown-menu {
+  top: 41px;
+}
+/* line 205, ../../app/styles/main.sass */
+.nova-infobar .nova-toolbar {
+  float: right;
+}
+/* line 208, ../../app/styles/main.sass */
+.nova-infobar .nova-toolbar .nova-toolbar-buttons {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+  overflow: visible;
+  font-size: 16px;
+}
+/* line 60, ../../../../../../tools/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.5/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.nova-infobar .nova-toolbar .nova-toolbar-buttons li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/* line 48, ../../../../../../tools/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.5/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.nova-infobar .nova-toolbar .nova-toolbar-buttons li:first-child, .nova-infobar .nova-toolbar .nova-toolbar-buttons li.first {
+  padding-left: 0;
+}
+/* line 49, ../../../../../../tools/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.5/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.nova-infobar .nova-toolbar .nova-toolbar-buttons li:last-child {
+  padding-right: 0;
+}
+/* line 50, ../../../../../../tools/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.5/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.nova-infobar .nova-toolbar .nova-toolbar-buttons li.last {
+  padding-right: 0;
+}
+/* line 214, ../../app/styles/main.sass */
+.nova-infobar .nova-toolbar .nova-toolbar-buttons .active .fa {
+  color: #13162d;
+  text-shadow: 0px 0px 8px rgba(82, 168, 236, 0.8);
+}
+/* line 219, ../../app/styles/main.sass */
+.nova-infobar .nova-toolbar .nova-toolbar-buttons .active:hover .fa {
+  text-shadow: 0px 0px 8px rgba(82, 168, 236, 0.8);
+}
+/* line 222, ../../app/styles/main.sass */
+.nova-infobar .nova-toolbar .nova-toolbar-buttons .dropdown-menu {
+  top: 38px;
+  right: 0;
+  left: inherit;
+  min-width: 100px;
+}
+/* line 228, ../../app/styles/main.sass */
+.nova-infobar .nova-toolbar .nova-toolbar-buttons .dropdown-menu li {
+  width: 100%;
+  padding-left: 10px;
+}
+/* line 231, ../../app/styles/main.sass */
+.nova-infobar .nova-toolbar .nova-toolbar-buttons .dropdown-menu li:first-child {
+  padding-left: 10px;
+}
+/* line 234, ../../app/styles/main.sass */
+.nova-infobar .nova-toolbar .nova-toolbar-buttons a.disabled {
+  color: #cccccc;
+}
+/* line 237, ../../app/styles/main.sass */
+.nova-infobar .nova-toolbar .nova-toolbar-buttons li {
+  padding-left: 3px;
+}
+/* line 239, ../../app/styles/main.sass */
+.nova-infobar .nova-toolbar .nova-toolbar-buttons li a {
+  padding: 3px;
+}
+/* line 242, ../../app/styles/main.sass */
+.nova-infobar .nova-toolbar .nova-toolbar-buttons li a:hover .fa {
+  text-shadow: 0px 0px 5px #18416d;
+}
+
+/* line 245, ../../app/styles/main.sass */
+.list-sep:after {
+  font-family: FontAwesome;
+  content: "\f101";
+  color: #cacaca;
+}
+
+/* line 250, ../../app/styles/main.sass */
+.list-sep {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* line 260, ../../app/styles/main.sass */
+.nova-container .nova-report-container {
+  display: table;
+  width: 100%;
+  min-height: 650px;
+}
+/* line 265, ../../app/styles/main.sass */
+.nova-container .nova-report-container .nova-report {
+  display: table-row;
+}
+/* line 268, ../../app/styles/main.sass */
+.nova-container .nova-report-container .nova-report .nova-panel {
+  display: table-cell;
+  vertical-align: top;
+  background-color: #f3f3f3;
+  padding: 5px 0;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+/* line 275, ../../app/styles/main.sass */
+.nova-container .nova-report-container .nova-report .nova-panel.nova-panel-left {
+  border-right: solid 1px #cacaca;
+}
+/* line 278, ../../app/styles/main.sass */
+.nova-container .nova-report-container .nova-report .nova-panel.nova-panel-left .nova-panel-content {
+  width: 300px;
+  margin-top: 10px;
+}
+/* line 282, ../../app/styles/main.sass */
+.nova-container .nova-report-container .nova-report .nova-panel.nova-panel-right {
+  border-left: solid 1px #cacaca;
+}
+/* line 285, ../../app/styles/main.sass */
+.nova-container .nova-report-container .nova-report .nova-panel.nova-panel-right .nova-panel-content {
+  width: 300px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+/* line 290, ../../app/styles/main.sass */
+.nova-container .nova-report-container .nova-report .nova-panel.open {
+  width: 300px;
+}
+/* line 293, ../../app/styles/main.sass */
+.nova-container .nova-report-container .nova-report .nova-panel.open-add-x {
+  -webkit-transition: 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
+  -moz-transition: 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
+  -ms-transition: 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
+  -o-transition: 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
+  transition: 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
+}
+/* line 300, ../../app/styles/main.sass */
+.nova-container .nova-report-container .nova-report .nova-panel.closed {
+  width: 20px;
+}
+/* line 303, ../../app/styles/main.sass */
+.nova-container .nova-report-container .nova-report .nova-panel.closed .nova-panel-content {
+  display: none;
+}
+/* line 306, ../../app/styles/main.sass */
+.nova-container .nova-report-container .nova-report .nova-panel .nova-panel-content {
+  float: left;
+  width: 280px;
+  padding-left: 10px;
+  min-height: 550px;
+  margin-top: 15px;
+}
+/* line 313, ../../app/styles/main.sass */
+.nova-container .nova-report-container .nova-report .nova-panel .nova-widget-heading {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+/* line 319, ../../app/styles/main.sass */
+.nova-container .nova-report-container .nova-report .nova-panel .nova-widget {
+  padding: 10px;
+}
+/* line 322, ../../app/styles/main.sass */
+.nova-container .nova-report-container .nova-report .nova-panel .nova-widget ul.list-group {
+  margin-bottom: 0px;
+}
+/* line 325, ../../app/styles/main.sass */
+.nova-container .nova-report-container .nova-report .nova-panel .nova-panel-toggle {
+  float: right;
+  width: 20px;
+  text-align: center;
+}
+/* line 330, ../../app/styles/main.sass */
+.nova-container .nova-report-container .nova-report .nova-content {
+  position: relative;
+  display: table-cell;
+  vertical-align: top;
+  padding: 0px 0px 0 0px;
+  width: auto;
+  overflow-x: auto;
+}
+/* line 338, ../../app/styles/main.sass */
+.nova-container .nova-report-container .nova-report .nova-content .report-name {
+  position: absolute;
+  top: 12px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+}
+/* line 347, ../../app/styles/main.sass */
+.nova-container .nova-report-container .nova-report .nova-content .report-name.flow {
+  position: relative;
+  padding: 10px;
+  top: 0;
+}
+
+/* line 352, ../../app/styles/main.sass */
+.nova-content {
+  min-height: 650px;
+  clear: both;
+}
+
+/* line 356, ../../app/styles/main.sass */
+.nova-footer {
+  padding-top: 8px;
+  padding-bottom: 10px;
+  border-top: 1px solid #cacaca;
+  text-align: center;
+  font-size: 12px;
+  color: #666666;
+}
+
+/* line 365, ../../app/styles/main.sass */
+.nova-news-list img {
+  float: right;
+  margin-right: 5px;
+  max-width: 75px;
+}
+/* line 370, ../../app/styles/main.sass */
+.nova-news-list h2, .nova-news-list p {
+  overflow: hidden;
+  font-size: 12px;
+}
+/* line 374, ../../app/styles/main.sass */
+.nova-news-list h2 {
+  margin-top: 0;
+  margin-bottom: 3px;
+}
+/* line 378, ../../app/styles/main.sass */
+.nova-news-list .row {
+  margin-bottom: 5px;
+}
+
+/* line 381, ../../app/styles/main.sass */
+.panel-title a {
+  display: block;
+}
+
+/* line 384, ../../app/styles/main.sass */
+.embed {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 388, ../../app/styles/main.sass */
+.nova-toc {
+  margin-top: 0px;
+}
+
+/* line 391, ../../app/styles/main.sass */
+.nova-toc thead {
+  background: #f6f6f6;
+}
+
+/* line 394, ../../app/styles/main.sass */
+.nova-toc th:first-child {
+  padding-left: 15px;
+}
+
+/* line 397, ../../app/styles/main.sass */
+.nova-toc td:first-child {
+  padding-left: 15px;
+}
+
+/* line 400, ../../app/styles/main.sass */
+.nova-page-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* line 404, ../../app/styles/main.sass */
+.nova-toolbar form {
+  margin-top: -2px;
+}
+
+/* line 407, ../../app/styles/main.sass */
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tbody + tbody {
+  border-top: none;
+}
+
+/* line 410, ../../app/styles/main.sass */
+.toc-category-name {
+  font-weight: bold;
+}
+
+/* line 413, ../../app/styles/main.sass */
+.toc-report-name {
+  padding-left: 3em;
+}
+
+/* line 416, ../../app/styles/main.sass */
+.toc-report-name:before {
+  content: "\f080";
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -2em;
+  width: 2em;
+}
+
+/* line 423, ../../app/styles/main.sass */
+.toc-report-desc {
+  margin-right: 15px;
+}
+
+/* line 426, ../../app/styles/main.sass */
+.table-striped tbody > tr:nth-child(odd) > td, .table-striped tbody > tr:nth-child(odd) > th {
+  background-color: inherit;
+}
+
+/* line 429, ../../app/styles/main.sass */
+.table-striped tbody > tr:nth-child(even) > td, .table-striped tbody > tr:nth-child(even) > th {
+  background-color: #f6f6f6;
+}
+
+/* line 432, ../../app/styles/main.sass */
+.caption {
+  text-align: center;
+}
+
+/* line 435, ../../app/styles/main.sass */
+.jasper-control {
+  margin-bottom: 5px;
+}
+
+/* line 438, ../../app/styles/main.sass */
+.dropdown-right {
+  right: 0;
+  left: auto;
+}
+
+/* line 442, ../../app/styles/main.sass */
+.nova-header-top .nova-nav .dropdown-menu li:first-child {
+  padding-left: 5px;
+}
+
+/* line 445, ../../app/styles/main.sass */
+.nova-home {
+  margin-top: 30px;
+  min-height: 575px;
+}
+/* line 449, ../../app/styles/main.sass */
+.nova-home .box {
+  width: 400px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 1px solid silver;
+  border-radius: 8px;
+  padding: 0 15px 15px 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 459, ../../app/styles/main.sass */
+.nova-home .nova-widget {
+  border: 1px solid #cccccc;
+  padding: 0px;
+  margin-bottom: 15px;
+}
+/* line 464, ../../app/styles/main.sass */
+.nova-home .nova-widget h3 {
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #eeeeee;
+  margin: 0;
+  padding: 6px;
+}
+/* line 471, ../../app/styles/main.sass */
+.nova-home .nova-widget .nova-widget-content {
+  padding: 10px 15px;
+}
+/* line 474, ../../app/styles/main.sass */
+.nova-home .nova-widget .nova-widget-content .nova-widget-reports {
+  display: table-row;
+}
+/* line 477, ../../app/styles/main.sass */
+.nova-home .nova-widget .nova-widget-content .nova-widget-report {
+  display: inline-block;
+  width: 50%;
+  padding: 5px;
+}
+/* line 482, ../../app/styles/main.sass */
+.nova-home .nova-widget .nova-widget-content .nova-widget-report img {
+  width: 100%;
+}
+
+/* line 486, ../../app/styles/main.sass */
+h3.heading {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* line 490, ../../app/styles/main.sass */
+.nav-test {
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+/* line 494, ../../app/styles/main.sass */
+.toc-report-name:hover .toc-report-actions {
+  visibility: visible;
+}
+
+/* line 497, ../../app/styles/main.sass */
+.toc-report-actions {
+  visibility: hidden;
+  display: inline;
+  margin-left: 8px;
+}
+
+/* line 502, ../../app/styles/main.sass */
+.toc-report-actions a {
+  margin-right: 4px;
+}
+
+/* line 505, ../../app/styles/main.sass */
+td.toc-report-name-col {
+  min-width: 250px;
+}
+
+/* line 508, ../../app/styles/main.sass */
+.wee {
+  font-size: 0.2px;
+}
+
+/* line 511, ../../app/styles/main.sass */
+.favorite {
+  color: #e3cf7a;
+}
+
+/* line 514, ../../app/styles/main.sass */
+.settings {
+  margin: 30px;
+  min-height: 550px;
+}
+/* line 518, ../../app/styles/main.sass */
+.settings .tab-content {
+  padding-top: 30px;
+}
+
+/* line 524, ../../app/styles/main.sass */
+.related-report-list {
+  list-style: none;
+  padding: 6px 12px;
+  background-color: white;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+/* line 531, ../../app/styles/main.sass */
+.related-report-list li {
+  margin-bottom: 2px;
+}
+
+/* line 535, ../../app/styles/main.sass */
+.ui-slider {
+  background: #660000;
+}
+/* line 538, ../../app/styles/main.sass */
+.ui-slider .ui-slider-range {
+  background: #cc9900;
+  z-index: 0;
+}
+
+/* line 543, ../../app/styles/main.sass */
+.greendiv {
+  float: right;
+  height: 100%;
+  background: #006600;
+  border-radius: 0 4px 4px 0;
+}
+
+/* line 549, ../../app/styles/main.sass */
+.slider-mask {
+  opacity: 0.6;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+/* line 556, ../../app/styles/main.sass */
+.widget-normal {
+  padding: 6px 12px;
+  background-color: white;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+/* line 562, ../../app/styles/main.sass */
+.widget-normal select {
+  width: 100%;
+}
+
+/* line 565, ../../app/styles/main.sass */
+.slider-values {
+  font-size: 12px;
+  margin-top: 15px;
+  margin-left: 5px;
+}
+/* line 570, ../../app/styles/main.sass */
+.slider-values td {
+  padding-bottom: 5px;
+}
+/* line 573, ../../app/styles/main.sass */
+.slider-values input {
+  width: 60px;
+  padding-left: 2px;
+}
+
+/* line 578, ../../app/styles/main.sass */
+.combo .input-group-btn {
+  position: static;
+}
+/* line 580, ../../app/styles/main.sass */
+.combo .dropdown-menu {
+  min-width: 100%;
+}
+
+/* line 584, ../../app/styles/main.sass */
+.sidepanel-control {
+  margin-top: 5px;
+}
+
+/* line 587, ../../app/styles/main.sass */
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -100px;
+  width: 200px;
+  min-height: 40px;
+}
+
+/* line 596, ../../app/styles/main.sass */
+.show-hide {
+  padding: 10px;
+}
+
+/* line 599, ../../app/styles/main.sass */
+.show-hide.ng-hide-add, .show-hide.ng-hide-remove {
+  -webkit-transition: all linear 0.8s;
+  -moz-transition: all linear 0.8s;
+  -o-transition: all linear 0.8s;
+  transition: all linear 0.8s;
+  display: block !important;
+}
+
+/* line 606, ../../app/styles/main.sass */
+.show-hide.ng-hide-add.ng-hide-add-active,
+.show-hide.ng-hide-remove {
+  opacity: 0;
+}
+
+/* line 610, ../../app/styles/main.sass */
+.show-hide.ng-hide-add,
+.show-hide.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1;
+}
+
+/* line 614, ../../app/styles/main.sass */
+.nova-error {
+  color: brown;
+  font-weight: bold;
+}
+
+/* line 618, ../../app/styles/main.sass */
+.outdent {
+  position: fixed;
+  width: 16px;
+  margin-top: 6px;
+  margin-left: 2px;
+}

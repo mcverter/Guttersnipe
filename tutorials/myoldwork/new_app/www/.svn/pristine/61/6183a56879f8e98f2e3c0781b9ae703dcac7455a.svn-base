@@ -1,0 +1,12 @@
+{
+  "name": "www",
+  "version": "0.0.0",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "angular": ">=1.2",
+    "angular-mocks": ">=1.2",
+    "angular-scenario": ">=1.2",
+    "animate.css": ">=2.1"
+  }
+}

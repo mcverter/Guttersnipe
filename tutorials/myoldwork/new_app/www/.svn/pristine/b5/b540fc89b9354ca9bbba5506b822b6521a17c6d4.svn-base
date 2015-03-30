@@ -1,0 +1,236 @@
+(function (angular, app) {
+  'use strict';
+  app.controller('SessionCtrl', ['$scope', '$log', '$routeParams', '$api', '$location', '$config', '$sce', '$nav', '$timeout',
+    function ($scope, $log, $routeParams, $api, $location, $config, $sce, $nav, $timeout) {
+
+      var notifications = {},
+          authErrorMessage,
+    confirmedPassword,
+    newPassword,
+          resetPasswordModal,
+    requestResetPasswordModal;
+       
+      var flashNotification;
+
+      Object.defineProperties($scope, {
+        notifications: {
+          enumerable: true,
+          get: function getNotifications() {
+            return notifications;
+          }
+        },
+
+        flashNotification: {
+          enumerable: true,
+          get: function getFlashNotification() {
+            return flashNotification;
+          }
+        },
+
+        showFlashNotification: {
+          enumerable: true,
+          value: function showFlashNotification(notification, duration) {
+            $log.debug('Flashing notification', notification, duration);
+            flashNotification = notification;
+            
+            $timeout(function(){
+              flashNotification = null;
+            }, duration);
+          }
+        },
+
+        showNotification: {
+          enumerable: true,
+          value: function showNotification(key, notification) {
+            $log.debug('Showing notification', key, notification);
+            notifications[key] = notification;
+          }
+        },
+
+        hideNotification: {
+          enumerable: true,
+          value: function hideNotification(key) {
+            $log.debug('Hiding notification', key, notifications[key]);
+            delete notifications[key];
+          }
+        },
+
+        login: {
+          enumerable: true,
+          value: function login(credential) {
+            var self = this,
+              returnTo = $routeParams.returnTo || '/',
+              username = credential.username,
+              password = credential.password,
+              organization = credential.organization;
+
+            $api.$login(username, password, organization).then(
+              function () {
+                self.hideNotification('auth');
+                $log.debug('Return To', returnTo);
+                $location.search('returnTo', null).path(returnTo || '/');
+              }, 
+              function (reason) {
+                $log.debug('Authentication error, reason:', reason.data);
+                if (reason.data.dataKey!=null && reason.data.dataKey.ldapReason=='CP') {
+                  resetPasswordModal = true;
+                }
+                else if (reason.data.dataKey!=null && reason.data.dataKey.ldapReason=='BK')  {
+                  self.showNotification('auth', { type: 'danger', message: $sce.trustAsHtml('<strong>Authentication error!</strong> Account is blocked. Please reset it by Admin.') });
+                }
+                else {
+                  self.showNotification('auth', { type: 'danger', message: $sce.trustAsHtml('<strong>Authentication error!</strong> Bad credentials, please try again') });
+                }
+              }
+            );
+          }
+        },
+        
+        updateLogin: {
+    enumerable: true,
+    value: function updateLogin(credential, $event) {
+      $event.preventDefault();
+      
+      authErrorMessage = "";
+      
+      var self = this,
+        returnTo = $routeParams.returnTo || '/',
+        username = credential.username,
+        password = credential.password;
+      
+      if (resetPasswordModal)  {
+        if (angular.isUndefined(newPassword) || newPassword === null) {
+    authErrorMessage = "Password is required!";
+    return;               
+        }
+        if (confirmedPassword != newPassword)  {
+    authErrorMessage = "Password does not match!";
+    return;
+        }
+      }
+
+      $api.$updateLogin(username, password, newPassword).then(function () {
+        $log.debug('updateLogin returnto', returnTo);
+        resetPasswordModal = false;
+        self.hideNotification('auth');
+        $location.search('returnTo', null).path(returnTo || '/');
+      }, 
+      function (reason) {
+        $log.debug('Reset password login error, reason:', reason.data);
+        if (reason.data.dataKey!=null && reason.data.dataKey.ldapReason=='CO')  {
+          authErrorMessage = "Password does not meet requirement! (e.g. At least one capital letter and two digits; not in history)";
+        }
+        else {
+          authErrorMessage = "Reset password error!";
+        }
+      });
+    }
+  },
+
+        logout: {
+          enumerable: true,
+          value: function logout($event) {
+            $event.preventDefault();
+
+            $api.$logout();
+            $location.search('returnTo', $location.url()).path('/security/login');
+          }
+        },
+
+        requestResetPasswordModal: {
+    enumerable: true,
+    get: function getRequestResetPasswordModal() {
+      return _.toBoolean(requestResetPasswordModal);
+    }
+        },
+
+        requestResetPassword: {
+    enumerable: true,
+    value: function requestResetPassword(userName, $event) {
+      $event.preventDefault();
+      $api.users.requestReset(userName).then(function(data){
+        requestResetPasswordModal = false;
+      }, function(msg){
+        authErrorMessage = "Error submitting reset request.";
+      });
+    }
+        },
+
+        showRequestResetPasswordModal: {
+    enumerable: true,
+    value: function showRequestResetPasswordModal($event) {
+      $event.preventDefault();
+      requestResetPasswordModal = true;
+    }
+        },
+
+        cancelRequestResetPasswordModal: {
+    enumerable: true,
+    value: function cancelRequestResetPasswordModal($event) {
+      $event.preventDefault();
+      requestResetPasswordModal = false;
+    }
+        },
+
+        resetPasswordModal: {
+    enumerable: true,
+    get: function getResetPasswordModal() {
+      return _.toBoolean(resetPasswordModal);
+    }
+        },
+
+        getLinks: {
+          enumerable: true,
+          value: function getLinks(parent) {
+            return $nav.links[parent]?$nav.links[parent].children:[];
+          }
+        },
+
+        authErrorMessage: {
+    enumerable: true,
+    get: function getErrorMessage() {
+      return authErrorMessage;
+    }
+        },
+        
+        confirmedPassword: {
+    enumerable: true,
+    get: function getConfirmedPassword() {
+      return confirmedPassword;
+    },
+    set: function setConfirmedPassword(value) {
+      confirmedPassword = value;
+    }
+        },
+        
+        newPassword: {
+    enumerable: true,
+    get: function getNewPassword() {
+      return newPassword;
+    },
+    set: function setNewPassword(value) {
+      newPassword = value;
+    }
+        },        
+        
+        cancelResetpasswordModal: {
+    enumerable: true,
+    value: function cancelResetpasswordModal($event) {
+      $event.preventDefault();
+      resetPasswordModal = false;
+    }
+        },
+
+        featureEnabled:{
+          enumerable: true,
+          value: function(feature){
+            if (feature == 'custom_reporting')
+              return $config.features.customReports;
+            
+            return true;
+          }
+        }
+
+      });
+    }]);
+}) (window.angular, window.novantas);
