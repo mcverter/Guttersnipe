@@ -1,20 +1,4 @@
-/**
- * Create Classification Directive
- *
- * SCOPE
- *
- * Attributes:
- *
- * * thing (Object):  resource.thing
- * * taxonomy (Object): TaxonomyService
- * * type (String): resource.thing.type
- *
- * Methods:
- * * setType(type)
- * * addSubtype(subtype)
- * * removeSubtype(subtype)
- *
- */
+
 (function () {
   'use strict';
 

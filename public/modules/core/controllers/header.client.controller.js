@@ -1,20 +1,21 @@
 (function () {
   'use strict';
 
-angular.module('core').controller('HeaderController', ['$scope', 'Authentication', 'Menus',
-	function($scope, Authentication, Menus) {
-		$scope.authentication = Authentication;
-		$scope.isCollapsed = false;
-		$scope.menu = Menus.getMenu('topbar');
+  function HeaderController(Authentication, Menus) {
+    var vm = this;
+    vm.authentication = Authentication;
+    vm.isCollapsed = false;
+    vm.menu = Menus.getMenu('topbar');
 
-		$scope.toggleCollapsibleMenu = function() {
-			$scope.isCollapsed = !$scope.isCollapsed;
-		};
+    vm.toggleCollapsibleMenu = function() {
+      vm.isCollapsed = !vm.isCollapsed;
+    };
 
-		// Collapsing the menu after navigation
-		$scope.$on('$stateChangeSuccess', function() {
-			$scope.isCollapsed = false;
-		});
-	}
-]);
+    // Collapsing the menu after navigation
+    vm.$on('$stateChangeSuccess', function() {
+      vm.isCollapsed = false;
+    });
+  }
+  angular.module('core').controller('HeaderController',
+    ['Authentication', 'Menus', HeaderController]);
 })();

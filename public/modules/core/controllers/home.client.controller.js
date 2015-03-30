@@ -1,11 +1,11 @@
 (function () {
   'use strict';
 
-
-  angular.module('core').controller('HomeController', ['$scope', 'Authentication',
-    function($scope, Authentication) {
+    function HomeController (Authentication) {
+      var vm = this;
       // This provides Authentication context.
-      $scope.authentication = Authentication;
+      this.authentication = Authentication;
     }
-  ]);
+
+  angular.module('core').controller('HomeController', ['$scope', 'Authentication', HomeController]);
 })();

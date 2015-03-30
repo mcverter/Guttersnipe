@@ -1,18 +1,3 @@
- /**
-  * Small Thing Directive:   For List View
-  *
-  * Attributes:
-  * * thing (Object):  resource.thing
-  *
-  * **************************************
-  *
-  * Full Thing Directive:   For Full View
-  *
-  * Attributes:
-  * * thing (Object):  resource.thing
-  *
-  */
-
 (function () {
   'use strict';
 
