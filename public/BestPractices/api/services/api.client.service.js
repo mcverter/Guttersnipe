@@ -11,8 +11,7 @@
           post: postUser
         },
         kropotkins: {
-          getAll: getAllKropotkins,
-          getOne: getOneKropotkin
+          getRandom: getRandomKropotkin
         },
         resources: {
           getAll: getAllResources,
@@ -48,7 +47,7 @@
       afterLoginEventKey = '$api.afterLogin',
       afterUpdateLoginEventKey = '$api.updateLogin',
       afterLogoutEventKey = '$api.afterLogout',
-      afterResourceUpdateEventKey = '$api.afterResourceUpdate'
+      afterResourceUpdateEventKey = '$api.afterResourceUpdate';
 
 
     function getAllResources() {
@@ -62,7 +61,7 @@
 
       return $http(request)
         .then(function getResourcesAllSuccess(response) {
-          $log.info('api.resources.getAll success ', response.data)
+          $log.info('api.resources.getAll success ', response.data);
           return response.data;
         },
         function getResourcesAllError(response) {

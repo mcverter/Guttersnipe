@@ -1,29 +1,28 @@
 (function () {
-  'use strict';
+    'use strict';
 
-// Kropotkins controller
-  angular.module('kropotkins').directive('kropotkinQuote', ['Kropotkins', function(Kropotkins) {
-    var templateUrl =  'modules/kropotkins/templates/kropotkinDirective.view.html';
+    function kropotkinDirective (Kropotkins) {
+        return {
+            restrict: 'E',
+            templateUrl:  'modules/kropotkins/templates/kropotkinDirective.view.html',
+            controller: ['$scope', '$http', '$log',
+                function ($scope, $http, $log) {
+                    var loadQuote = function loadQuote() {
+                        Kropotkins.getRandom(
+                            function(data) {
+                                $scope.quote = data;
+                                console.log($scope.quote);
+                            }, function(err) {
+                                console.log('Could not load quote');
+                            });
+                    };
 
-    return {
-      restrict: 'E',
-      templateUrl: templateUrl,
-      controller: ['$scope', '$http', '$log',
-        function ($scope, $http, $log) {
-          var loadQuote = function loadQuote() {
-            Kropotkins.get({
-              kropotkinId: 'random'
-            } , function(data) {
-              $scope.quote = data;
-              console.log($scope.quote);
-            }, function(err) {
-              console.log('Could not load quote');
-            });
-          };
+                    loadQuote();
 
-          loadQuote();
+                    $scope.reloadQuote =  loadQuote;
+                }]
+        };
+    }
 
-          $scope.reloadQuote =  loadQuote;
-        }]
-    };
-  }]);})();
+    angular.module('kropotkins').directive('kropotkinQuote', ['Kropotkins', kropotkinDirective]);
+})();
