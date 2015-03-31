@@ -8,12 +8,12 @@
             controller: ['$scope', '$http', '$log',
                 function ($scope, $http, $log) {
                     var loadQuote = function loadQuote() {
-                        Kropotkins.getRandom(
-                            function(data) {
+                        Kropotkins.getRandom()
+                            .then(function(data) {
                                 $scope.quote = data;
                                 console.log($scope.quote);
                             }, function(err) {
-                                console.log('Could not load quote');
+                                console.log('Could not load quote', err);
                             });
                     };
 

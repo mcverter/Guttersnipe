@@ -27,7 +27,7 @@ module.exports = {
               'public/lib/angular-sanitize/angular-sanitize.js',
               'public/lib/angular-ui-router/release/angular-ui-router.js',
               'public/lib/angular-ui-utils/ui-utils.js',
-                           'public/lib/angular-bootstrap/ui-bootstrap.js',
+               'public/lib/angular-bootstrap/ui-bootstrap.js',
               'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
               'public/lib/lodash/dist/lodash.js',
               'public/lib/angular-google-maps/dist/angular-google-maps.js',
@@ -36,7 +36,8 @@ module.exports = {
               'public/lib/moment/moment.js',
               'public/lib/fullcalendar/fullcalendar.js',
               'public/lib/angular-ui-calendar/src/calendar.js',
-              'public/lib/angular-wizard/dist/angular-wizard.js'
+              'public/lib/angular-wizard/dist/angular-wizard.js',
+                'public/lib/uri.js/src/URI.js'
             ]
         },
         css: [

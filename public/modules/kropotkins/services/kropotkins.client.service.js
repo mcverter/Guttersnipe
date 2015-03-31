@@ -1,18 +1,19 @@
 (function () {
     'use strict';
 
-    function kropotkinFactory (api) {
+    function kropotkinFactory (Api) {
         var kropotkinFactory = {
             getRandom: getRandomKropotkin
         }
 
 
         function getRandomKropotkin() {
-            api.kropotkins.getRandom();
+            return Api.kropotkins.getRandom();
         }
+
 
         return kropotkinFactory;
         
     }
-    angular.module('kropotkins').factory('Kropotkins', ['api', kropotkinFactory]);
+    angular.module('kropotkins').factory('Kropotkins', ['Api', kropotkinFactory]);
 })();
