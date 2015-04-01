@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    function ResourceReadController(Resources, Authentication) {
+    function ResourceReadController(Resources, Things, Places, Times) {
         var vm = this;
         vm.readOne = readOneResource;
         vm.readList = readListResources;
@@ -15,7 +15,10 @@
         function activate() {
             Resources.getAllResources()
                 .then(function(data) {
+                    data = Times.transformAllTimes(data)
                     vm.resources = data;
+                    vm.map = Places.createMapFromResources(data);
+                    vm.calendar = Times.createCalendarFromResources(data);
                 });
         }
 
@@ -54,6 +57,6 @@
 
     angular.module('resources')
         .controller('ResourcesReadController',
-        ['Resources', ResourceReadController])
+        ['Resources', 'Things', 'Places', 'Times', ResourceReadController])
 
 })()
