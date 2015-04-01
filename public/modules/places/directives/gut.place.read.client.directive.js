@@ -1,17 +1,3 @@
-/**
- * Small Place Directive:   For List View
- *
- * Attributes:
- * * place (Object):  resource.place
- *
- * **************************************
- *
- * Full Place Directive:   For Full View
- *
- * Attributes:
- * * place (Object):  resource.place
- *
- */
 
 (function () {
   'use strict';

@@ -3,8 +3,6 @@
 
     function ResourceReadController(Resources, Authentication) {
         var vm = this;
-
-        vm.activate = activate;
         vm.readOne = readOneResource;
         vm.readList = readListResources;
 
@@ -15,23 +13,26 @@
         activate();
 
         function activate() {
-            vm.resource = Resources.getEmptyResource;
+            Resources.getAllResources()
+                .then(function(data) {
+                    vm.resources = data;
+                });
         }
 
 
         function readListResources() {
-            $scope.resources = Resources.query();
+            vm.resources = Resources.query();
         }
 
         function readOneResource() {
             Resources.get({
                 resourceId: $stateParams.resourceId
             }).$promise.then(function(rsc) {
-                    $scope.resource = rsc;
-                    $scope.options = {scrollwheel: false};
-                    var coordinates = $scope.resource.place.coordinates;
+                    vm.resource = rsc;
+                    vm.options = {scrollwheel: false};
+                    var coordinates = vm.resource.place.coordinates;
 
-                    $scope.map = {
+                    vm.map = {
                         center: {
                             latitude: coordinates.lat,
                             longitude: coordinates.lng

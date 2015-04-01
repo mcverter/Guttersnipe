@@ -2,7 +2,7 @@
 (function () {
     'use strict';
 
-    function resourcesService ($resource, Places, Times, Things) {
+    function resourcesService (Api, Places, Times, Things) {
         var resources = [],
             resourcesService  = {
                 getOneResource: getOneResource,
@@ -13,26 +13,35 @@
                 updateResource: updateResource
             };
 
+        function deleteResource(resource) {
+
+        }
+        function createResource(resource) {
+
+        }
+        
+        function updateResource(resource) {
+
+        }
+
+
 
         function getAllResources() {
-            return $http({
-                method: 'GET',
-                url: 'resources/',
-                transformResponse: transformResponseList
-            })
-                .then(function(response) {
-                    resources = response.data;
-                    return resources;
+            return Api.resources.getAll()
+                .then(function(data){
+                    console.log( "data is ", data);
+                    return data;
                 })
-                .catch(function(response) {
-
-                    return $q.reject('Error retrieving resources. HTTP status: '
-                    + response.status + '.  Got data: ' + response.data);
+                .catch(function(err){
+                    console.log('error in resources.getAllResources', err);
                 })
         }
 
         function getOneResource(resourceId) {
             var rsc = _.find(resources, {id: resourceId});
+            if (!rsc) {
+
+            }
             return rsc;
         }
 
@@ -43,25 +52,12 @@
             ret.time = Times.emptyTime;
             return ret;
         }
-        var transformResponseList = function(data){
-            data = angular.fromJson(data);
-            _.forEach(data, function(rsc){
-                transformSchedules(rsc.time.schedules);
-            });
-            return data;
-        };
-
-        var transformResponseSingle = function(data, headers) {
-            data = angular.fromJson(data);
-            transformSchedules(data.time.schedules);
-            return data;
-        };
 
         return resourcesService;
     }
 
     angular.module('resources').factory('Resources',
-        ['$resource', 'Places', 'Times', 'Things', resourcesService]);
+        ['Api', 'Places', 'Times', 'Things', resourcesService]);
 
 })();
 

@@ -1,11 +1,11 @@
-<section data-ng-controller="ResourcesController" data-ng-init="find()">
+<section data-ng-controller="ResourcesReadController as rsc">
     <div class="page-header">
         <h1>Resources</h1>
     </div>
-    <section data-ng-controller="ResourcesController">
+    <section>
         <tabset>
             <tab heading="List"  >List
-                <resources-list></resources-list>
+                <resources-list resources="rsc.resources"></resources-list>
             </tab>
             <tab heading="Map" >
                 Map
@@ -19,9 +19,7 @@
         <div ui-view="tabContent" id="tabContent" class="container admin-content"></div>
 
     </section>
-
-
-    <section data-ng-controller="ResourcesController">
+    <section>
         <h2> Filter Resources by </h2>
         <tabset>
             <tab heading="Thing" >
@@ -46,16 +44,3 @@
         No Resources yet, why don't you <a href="/#/resources/create">create one</a>?
     </div>
 </section>
-
-
-
-<!--
-        <h2>Configuration</h2>
-<tabset>
-    <tab ng-repeat="tab in vm.tabs" heading="{{tab.text}}" ui-sref="{{tab.state}}" active="tab.active"></tab>
-</tabset>
-
-<div ui-view="tabContent" id="tabContent" class="container admin-content"></div>
-
-
-</div>-->

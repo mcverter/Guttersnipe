@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    function Api ($log, $http, $q) {
+    function apiService ($log, $http, $q) {
         var  apiFactory = {
                 users: {
                     getAll: getAllUsers,
@@ -72,10 +72,10 @@
                 .then(function getResourcesAllSuccess(response) {
                     $log.info('api.resources.getAll success ', response.data);
                     return response.data;
-                },
-                function getResourcesAllError(response) {
-                    $log.error('api.resources.getAll failure', response.status, response.data);
-                    return response.data;
+                })
+                .catch(function getResourcesAllError(error) {
+                    $log.error('api.resources.getAll failure', error);
+                    return error;
                 });
         }
 
@@ -260,29 +260,17 @@
             return $http(request)
                 .then(function getKropotkinsAllSuccess(response) {
                     return response.data;
-                },
-                function getNavigationAllError(response) {
-                    $log.error('api.navigation.getAll failure', response.data);
-                    return response.data;
-                });
+                })
+                .catch(handleApiError(error, 'getRandomKropotkin'));
         }
 
-        /*        var loadQuote = function loadQuote() {
-         Kropotkins.get({
-         kropotkinId: 'random'
-         } , function(data) {
-         $scope.quote = data;
-         console.log($scope.quote);
-         }, function(err) {
-         console.log('Could not load quote');
-         });
-         };
-
-         */
+        function handleApiError(error, errorLocation) {
+            $log.error('Error in ' + errorLocation + ' : ' + error);
+        }
 
         return apiFactory;
     }
 
     angular.module('api')
-        .factory('Api', ['$log', '$http', '$q', Api]);
+        .factory('Api', ['$log', '$http', '$q', apiService]);
 })();

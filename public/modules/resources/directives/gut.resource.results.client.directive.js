@@ -21,7 +21,7 @@
                 restrict: 'E',
                 templateUrl: templateUrl,
                 scope: {
-                    resources : '='
+                    rsc : '='
                 }
 
             };
@@ -35,7 +35,7 @@
                 restrict: 'E',
                 templateUrl: templateUrl,
                 scope: {
-                    resources : '='
+                    rsc : '='
                 }
 
             };

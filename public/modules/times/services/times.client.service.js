@@ -1,151 +1,97 @@
-
-
 (function () {
-  'use strict';
+    'use strict';
 
-  angular.module('times').factory('Times',
-    function() {
-      var timeFactory,
-        weekdayEnum = 	   ['all', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
-        recurrenceTypeEnum = ['A', '1', '2', '3', '4', 'L'];
+        function TimeService() {
+            var timeFactory = {
+                emptyTime: getEmptyTime,
+                transformOneTime: transformSchedulesFromServerToClient,
+                transformAllTimes: transformAllResponseSchedules
+            }
 
-      var emptyTime = {
-          schedules: [],
-          notes: ''
-      };
+            function getEmptyTime() {
+                return {
+                    schedules: [],
+                    notes: ''
+                }
 
-      function Time(schedules, notes) {
-        var self = this;
-        if (!schedules || !schedules.length || schedules.length < 1) {
-          console.error('Error: Schedules is empty');
+            }
+
+            function transformSchedulesFromServerToClient(schedules) {
+                _.forEach(schedules, function(sked){
+                    var startTime = Number(sked.startTime);
+
+                    if(startTime < 1200 ) {
+                        startTime = startTime + ' AM';
+                    } else {
+                        if (startTime > 1300) {
+                            startTime -= 1200;
+                        }
+                        startTime = startTime + ' PM';
+                    }
+                    sked.startTime = startTime;
+
+                    switch(sked.recurringDay) {
+                        case "all":
+                            sked.recurringDay = "day";
+                            break;
+                        case "mon":
+                            sked.recurringDay = "Monday";
+                            break;
+                        case "tue":
+                            sked.recurringDay = "Tuesday";
+                            break;
+                        case "wed":
+                            sked.recurringDay = "Wednesday";
+                            break;
+                        case "thu":
+                            sked.recurringDay = "Thursday";
+                            break;
+                        case "fri":
+                            sked.recurringDay = "Friday";
+                            break;
+                        case "sat":
+                            sked.recurringDay = "Saturday";
+                            break;
+                        case "sun":
+                            sked.recurringDay = "Sunday";
+                            break;
+                    }
+
+                    switch(sked.recurrenceType) {
+                        case "A":
+                            sked.recurrenceType = "Every";
+                            break;
+                        case "1":
+                            sked.recurrenceType = "First";
+                            break;
+                        case "2":
+                            sked.recurrenceType = "Second";
+                            break;
+                        case "3":
+                            sked.recurrenceType = "Third";
+                            break;
+                        case "4":
+                            sked.recurrenceType = "Fourth";
+                            break;
+                        case "L":
+                            sked.recurrenceType = "Last";
+                            break;
+
+                    }
+                });
+            }
+
+            function transformAllResponseSchedules (data) {
+                data = angular.fromJson(data);
+                _.forEach(data, function(rsc){
+                    transformSchedulesFromServerToClient(rsc.time.schedules);
+                });
+                return data;
+            }
+
+            return timeFactory;
         }
-        self.schedules = schedules;
-        self.notes = notes;
-      }
 
-      function Schedule(punctualDate, recurringDOW,
-                        recurrenceType, startTime, duration) {
-        var self = this;
-        if (punctualDate && (recurringDOW || recurrenceType)) {
-          console.error('Error:  should not have both punctual and recurrence data')
-        } else if (punctualDate) {
-          self.punctualDate = punctualDate;
-        } else if (recurringDOW && recurrenceType) {
-          self.recurringDOW = recurringDOW;
-        } else {
-          console.error('Error:  Schedule must have either punctualDate or recurringDOW and recurrenceType')
-        }
-
-        if (!startTime || !duration) {
-          console.error('Error:  Schedule must have time and duration')
-        } else {
-          self.startTime = startTime;
-          self.duration = duration;
-        }
-      }
-
-      function Report(data) {
-        var self = this;
-        self.data = data || {};
-        self.state = {};
-      }
-
-      timeFactory = Object.create(Object.prototype, {
-        emptyTime: {
-          enumerable: true,
-          get: function getEmptyTime() {
-            return _.cloneDeep(emptyTime);
-          }
-        }
-      });
-
-      return timeFactory;
-    }
-  );
+    angular.module('times').factory('Times', TimeService);
 })();
 
-/**
- * Create Classification Directive
- *
- * SCOPE
- *
- * Attributes:
- *
- * * thing (Object):  resource.thing
- * * taxonomy (Object): TaxonomyService
- * * type (String): resource.thing.type
- *
- * Methods:
- * * setType(type)
- * * addSubtype(subtype)
- * * removeSubtype(subtype)
- *
- *
- *
- @name name - the name of the ngdoc document
- @param {type} name description - describes a parameter of a function
- @returns {type} description - describes what a function returns
- @requires - normally indicates that a JavaScript module is required; in an Angular service it is used to describe what other services this service relies on
- @property - describes a property of an object
- @description - used to provide a description of a component in markdown
- @link - specifies a link to a URL or a type in the API reference. NOTE: to link to ng.$rootScope.Scope#$on insert methods_ between # and the actual method name: {@link ng.$rootScope.Scope#methods_$on listen}. Same goes for properties and events.
- @example - specifies an example that will be formatted as a code block
- @deprecated - specifies that the following code is deprecated and should not be used
- @this - specifies what this refers to in the context of a documented function
- @ngdoc - specifies the type of thing being documented. See below for more detail.
- @scope - specifies that the documented directive will create a new scope
- @priority - specifies the documented directive's priority
- @animations - specifies the animations that the documented directive supports
- @restrict - specifies how directives should be shown in the usage section. For example, for [E]lement, [A]ttribute, and [C]lass, use @restrict ECA
- @methodOf type - links a method to the object/service where it is defined
- @propertyOf type - links a property to the object/service where it is defined
- @eventOf type - links a method to the object/service where it is defined
- @eventType emit|broadcast - specifies whether the event is emitted or broadcast
-
- overview - Give an overview of the file/module being documented
- interface - Describe the interface of an object or service, specified by the @name directive. (abstract: use @object or @service instead)
- service - Describe an AngularJS service, such as $compile or $http, for instance.
- object - Describe a well defined object (often exposed as a service)
- function - Describe a function that will be available to other methods (such as a helper function within the ng module)
- method - Describe a method on an object/service
- property - Describe a property on an object/service
- event - Describe an AngularJS event that will propagate through the $scope tree.
- directive - Describe an AngularJS directive
- filter - Describe an AngularJS filter
- inputType - Describe a specific type of AngularJS input directive (such as text, email or checkbox)
- error - Describe a minErr error message
-
- Currently the @ngdoc tag can contain one of the following values:
-
- error - only used for minerr documentation
- function - generally used for global functions but sometimes "misused" for a service or method
- property - generally used for properties on services but also used for angular.version
- overview - generally used for modules and ngdocs but also used for ng.$rootElement and angular.mock (should be objects?)
- object - generally used for services that are not straight functions
- method - used for methods on services and types (such as angular.Module, etc)
- interface - only used for angular.Module in angular-load.js
- service - used only occasionally for some angular services
- directive - used for angular directives
- inputType - used for input element specific directives (such as input[checkbox])
- event - used for events on objects (mostly services)
- filter - used for angular filters (although there may be one or two that use function)
-
- We ought to consolidate to:
-
- function - for global functions
- object - for global objects
- interface - for global interfaces
- type - for constructors
- module - instead of overview for modules
- service - instead of object/function for angular services
- serviceProvider - instead of function/object for angular service providers
- directive - as-is (but also include inputTypes, e.g input[checkbox])
- filter - as-is
- method - as-is
- property - as-is (but change angular.version to object)
- event - as-is
- Anything else is just a descriptive name for the content, such as error, guide, tutorial, etc.
-
-
-
- */
