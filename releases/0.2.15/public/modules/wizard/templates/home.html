@@ -1,0 +1,183 @@
+
+Share
+Tweet
++1
+
+Advertise Here
+
+scotch.io books presents:
+
+MEAN Machine
+
+Learn Node, Angular, Express, and MongoDB from scratch.
+No experience necessary.
+
+LEARN ABOUT THE BOOK
+Today we will be using AngularJS and the great UI Router and the Angular ngAnimate module to create an animated multi-step form. This technique can be used for large forms that you would like to simplify for your users. We can see this technique used in many places on the web. Places like shopping carts, signup forms, onboarding processes, and more have used the multi-step form to ease users through their online forms. Here’s what we will be building:
+angular-ui-router-multi-step-form
+Using UI Router and its ability to have
+
+nested states and different views per state, we will be able to make a multi-step form fairly easily. For a quick understanding of the benefits and how UI Router works, check out our other article: AngularJS Routing Using UI-Router Let’s get down to business and start creating our awesome form!
+
+Setting Up Our Project
+
+We will be using a simple structure for our application. We’ll need a layout file, view files for each part of the form, a stylesheet, and our JavaScript file that will hold all of our Angular code. Here are the files for our application. Go ahead and create these files and we’ll start filling them in as we go.
+
+
+
+- index.html
+- form.html
+- form-profile.html
+- form-interests.html
+- form-payment.html
+- app.js
+- style.css
+
+
+Each of the form-____.html files will be used as nested views inside of the form. These are what will create each section of our form.
+
+Our Layout/Template File index.html
+
+Let’s start our project by creating the main file that will bring all of our resources together into one place. We will use our index.html file as our starting base. Here we will, load all our resources (AngularJS, ngAnimate, UI Router, our script and stylesheet) and place a ui-view so that we know where UI Router should inject our views. We will also be using Bootstrap for quick styling.
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/darkly/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JS -->
+    <!-- load angular, nganimate, and ui-router -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.min.js"></script>
+    <script src="app.js"></script>
+
+</head>
+
+<!-- apply our angular app -->
+<body ng-app="formApp">
+
+<div class="container">
+
+    <!-- views will be injected here -->
+    <div ui-view></div>
+
+</div>
+
+</body>
+</html>
+With all of our files loaded, let’s go into our
+
+app.js to start creating our Angular application and state-based routes. Notice how we applied our Angular app (formApp) to the body of our application.
+
+Building Our Angular App app.js
+
+We will create our application and routes. For larger applications, you’ll want to separate your Angular application, routes, and controllers into their own separate modules, but for our purposes, we’ll place them all together as a happy family in
+
+app.js.
+
+// app.js
+// create our angular app and inject ngAnimate and ui-router
+// =============================================================================
+angular.module('formApp', ['ngAnimate', 'ui.router'])
+
+// configuring our routes
+// =============================================================================
+.config(function($stateProvider, $urlRouterProvider) {
+
+$stateProvider
+
+// route to show our basic form (/form)
+.state('form', {
+url: '/form',
+templateUrl: 'form.html',
+controller: 'formController'
+})
+
+// nested states
+// each of these sections will have their own view
+// url will be nested (/form/profile)
+.state('form.profile', {
+url: '/profile',
+templateUrl: 'form-profile.html'
+})
+
+// url will be /form/interests
+.state('form.interests', {
+url: '/interests',
+templateUrl: 'form-interests.html'
+})
+
+// url will be /form/payment
+.state('form.payment', {
+url: '/payment',
+templateUrl: 'form-payment.html'
+});
+
+// catch all route
+// send users to the form page
+$urlRouterProvider.otherwise('/form/profile');
+})
+
+// our controller for the form
+// =============================================================================
+.controller('formController', function($scope) {
+
+// we will store all of our form data in this object
+$scope.formData = {};
+
+// function to process the form
+$scope.processForm = function() {
+alert('awesome!');
+};
+
+});
+
+We now have our application with
+
+ngAnimate and ui.router injected. We also have our routes created. Notice how we can define a url, view file (templateUrl), and controller for each state. form will be our main state. It will also have child states denoted by the . like in form.profile. The idea behind this is that each nested state will be brought into the main form view as the state of our application changes. We’ll demonstrate this in our next section. We now have to create the view for our form and each of its nested states.
+
+Form Template View form.html
+
+Let’s start by creating our main form.html file. This will be used as a template file for the rest of our form view files just like our index.html was used as the overall template for our entire project. All we have to do is include a ui-view in this file so that the nested states know where to inject their view.
+
+<!-- form.html -->
+<div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+
+        <div id="form-container">
+
+            <div class="page-header text-center">
+                <h2>Let's Be Friends</h2>
+
+                <!-- the links to our nested states using relative paths -->
+                <!-- add the active class if the state matches our ui-sref -->
+                <div id="status-buttons" class="text-center">
+                    <a ui-sref-active="active" ui-sref=".profile"><span>1</span> Profile</a>
+                    <a ui-sref-active="active" ui-sref=".interests"><span>2</span> Interests</a>
+                    <a ui-sref-active="active" ui-sref=".payment"><span>3</span> Payment</a>
+                </div>
+            </div>
+
+            <!-- use ng-submit to catch the form submission and use our Angular function -->
+            <form id="signup-form" ng-submit="processForm()">
+
+                <!-- our nested state views will be injected here -->
+                <div id="form-views" ui-view></div>
+            </form>
+
+        </div>
+
+        <!-- show our formData as it is being typed -->
+    <pre>
+        {{ formData }}
+    </pre>
+
+
+    </div>
+</div>

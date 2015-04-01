@@ -1,0 +1,59 @@
+<section data-ng-controller="ResourcesController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Resources</h1>
+    </div>
+    <div class="list-group">
+        <div data-ng-repeat="resource in resources"  class="list-group-item">
+            <gut-resource-li></gut-resource-li>
+			<small class="list-group-item-text">
+				Created by
+				<span data-ng-bind="resource.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="resource.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="resource.name"></h4>
+        </a>
+    </div>
+    <section data-ng-controller="ResourcesController">
+        <div class="page-header">
+            <h1>Find Resources</h1>
+        </div>
+        <div> SEARCH
+            <div class="col-md-12">
+                <div class="jumbotron BlackOnRed">
+                    <h2> Find by <em>THING</em> </h2>
+                    <thing-find></thing-find>
+                </div>
+                <div class="jumbotron BlackOnRed">
+                    <h2>Find by Place</h2>
+                    <place-find></place-find>
+                </div>
+                <div class="jumbotron RedOnBlack">
+                    <h2>Find by Time</h2>
+                    <time-find></time-find>
+                </div>
+            </div>
+        </div>
+        <div> RESULTS
+            <div class="col-md-12">
+                <div class="jumbotron BlackOnRed">
+                    <h2> List of <em>THINGs</em> </h2>
+                    <thing-results></thing-results>
+                </div>
+                <div class="jumbotron BlackOnRed">
+                    <h2>Map of <em> PLACEs</em></h2>
+                    <place-results></place-results>
+                </div>
+                <div class="jumbotron RedOnBlack">
+                    <h2>Calendar of <em>TIMEs</em></h2>
+                    <time-results></time-results>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="alert alert-warning text-center" data-ng-hide="!resources.$resolved || resources.length">
+    	No Resources yet, why don't you <a href="/#/resources/create">create one</a>?
+    </div>
+</section>
+
+

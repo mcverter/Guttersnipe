@@ -1,0 +1,341 @@
+
+table, th, td, tr, thead , tbody {
+    border: 1px solid black;
+    text-align: center;
+}
+
+.schedule {
+    color: purple;
+    background-color: #ffff00;
+}
+
+.schedule > thead {
+    color: darkblue;
+    background-color: orange;
+}
+
+
+
+a{
+    color: purple !important;
+    font-weight: bolder;
+}
+
+body {
+    background-color: #be0404;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+
+}
+
+.angular-google-map-container {
+    height: 400px;
+    border: 4px #fff solid;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px -1px rgba(0, 0, 0, 1);
+}
+
+.angular-leaflet-map {
+    height: 400px;
+    border: 4px #fff solid;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px -1px rgba(0, 0, 0, 1);
+}
+
+
+gut-video {
+background-color: red;
+}
+.BlackOnRed{
+    background-color: red !important;
+    color: #222222 !important;
+    border: 5px solid rgb(182,183,187);
+}
+
+.BlackOnRed > a {
+    color: black !important;
+    background-color: red !important;
+}
+
+.RedOnBlack{
+    background-color: black !important;
+    color: red !important;
+    border: 5px solid darkred;
+}
+.RedOnBlack > a  {
+    color: red !important;
+    background-color: black !important;
+}
+.RedOnBlack > a:hover {
+    color: #ff1111 !important;
+    background-color: black !important;
+}
+.RedOnBlack > a:active {
+    color: #ff5555 !important;
+    background-color: black !important;
+}
+
+input {
+    padding: 6px 12px 6px 12px;
+    border: 1px solid #665544;
+    color: #ffffff;}
+input.submit:hover {
+    background-color: #665544;}
+input.submit:active {
+    background-color: chocolate;}
+input.text {
+    color: #cccccc;}
+input.text:focus {
+    color: #665544;}
+
+.content {
+	margin-top: 50px;
+}
+.undecorated-link:hover {
+	text-decoration: none;
+}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+	display: none !important;
+}
+.ng-invalid.ng-dirty {
+	border-color: #FA787E;
+}
+.ng-valid.ng-dirty {
+	border-color: #78FA89;
+}
+
+
+/* FOOTER */
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #282828;
+}
+
+.NavColor  {
+    background-color: #282828;
+    color: rgb(256, 11, 11);
+}
+
+
+/*
+ * metro-bootstrap files
+ */
+.tile {
+    display: block;
+    cursor: pointer;
+    -webkit-perspective: 0;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform 0.2s;
+    min-width: 75px;
+    min-height: 75px;
+    text-align: center;
+    background-color: #2e8bcc;
+    border: 4px #ffffff solid;
+    color: #ffffff;
+}
+.tile h1,
+.tile h2,
+.tile h3,
+.tile h4,
+.tile h5,
+.tile h6 {
+    color: #ffffff;
+    -webkit-user-select: none;
+}
+.tile h2 {
+    margin-top: -20px;
+    margin-left: 0px;
+}
+.tile h3,
+.tile h4 {
+    margin-top: -15px;
+}
+.tile h1.tile-text,
+.tile h2.tile-text,
+.tile h3.tile-text,
+.tile h4.tile-text {
+    margin-top: 20px;
+}
+.tile h1 {
+    font-size: 36px;
+}
+.tile h2 {
+    font-size: 30px;
+}
+.tile h3 {
+    font-size: 24px;
+}
+.tile h4 {
+    font-size: 18px;
+}
+.tile a:hover {
+    text-decoration: none;
+}
+.tile img {
+    border: 0;
+}
+.tile:hover {
+    opacity: 1;
+}
+.tile .tile-label {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    font-size: 14px;
+    color: #ffffff;
+}
+.tile .tile-content .tile-icon-large {
+    margin-left: 0px;
+    vertical-align: middle !important;
+    text-align: center;
+}
+.tile .tile-content {
+    padding-top: 20px;
+    line-height: normal;
+    position: relative;
+    width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.tile.tile-blue {
+    background-color: #2e8bcc;
+}
+.tile.tile-green {
+    background-color: #339933;
+}
+.tile.tile-red {
+    background-color: #e51400;
+}
+.tile.tile-yellow {
+    background-color: #ffc40d;
+}
+.tile.tile-orange {
+    background-color: #f39c12;
+}
+.tile.tile-pink {
+    background-color: #e671b8;
+}
+.tile.tile-purple {
+    background-color: #7b4f9d;
+}
+.tile.tile-lime {
+    background-color: #8cbf26;
+}
+.tile.tile-magenta {
+    background-color: #ff0097;
+}
+.tile.tile-teal {
+    background-color: #00aba9;
+}
+.tile.tile-turquoise {
+    background-color: #1abc9c;
+}
+.tile.tile-green-sea {
+    background-color: #16a085;
+}
+.tile.tile-emerald {
+    background-color: #2ecc71;
+}
+.tile.tile-nephritis {
+    background-color: #27ae60;
+}
+.tile.tile-peter-river {
+    background-color: #3498db;
+}
+.tile.tile-belize-hole {
+    background-color: #2980b9;
+}
+.tile.tile-amethyst {
+    background-color: #9b59b6;
+}
+.tile.tile-wisteria {
+    background-color: #8e44ad;
+}
+.tile.tile-wet-asphalt {
+    background-color: #34495e;
+}
+.tile.tile-midnight-blue {
+    background-color: #2c3e50;
+}
+.tile.tile-sun-flower {
+    background-color: #f1c40f;
+}
+.tile.tile-carrot {
+    background-color: #e67e22;
+}
+.tile.tile-pumpkin {
+    background-color: #d35400;
+}
+.tile.tile-alizarin {
+    background-color: #e74c3c;
+}
+.tile.tile-pomegranate {
+    background-color: #c0392b;
+}
+.tile.tile-clouds {
+    background-color: #ecf0f1;
+    color: #34495e;
+}
+.tile.tile-clouds h1,
+.tile.tile-clouds h2,
+.tile.tile-clouds h3,
+.tile.tile-clouds h4,
+.tile.tile-clouds h5,
+.tile.tile-clouds h6 {
+    color: #34495e;
+}
+.tile.tile-clouds .tile-label {
+    color: #34495e;
+}
+.tile.tile-silver {
+    background-color: #bdc3c7;
+}
+.tile.tile-concrete {
+    background-color: #95a5a6;
+}
+.tile.tile-asbestos {
+    background-color: #7f8c8d;
+}
+.tile.tile-info {
+    background-color: #3498db;
+}
+.tile.tile-danger {
+    background-color: #e74c3c;
+}
+.tile.tile-warning {
+    background-color: #f1c40f;
+}
+.tile.tile-success {
+    background-color: #2ecc71;
+}
+a.fa-links {
+    color: #ffffff;
+}
+a.fa-links:hover,
+a.fa-links:focus {
+    color: #ffffff;
+}
+.tile.tile-short {
+    height: 20px;
+    width: 70px;
+}
+.tile.tile-medium {
+    height: 20px;
+    width: 150px;
+}
+.tile.tile-long {
+    height: 20px;
+    width: 310px;
+}

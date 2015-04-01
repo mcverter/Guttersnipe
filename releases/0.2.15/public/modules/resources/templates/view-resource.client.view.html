@@ -1,0 +1,65 @@
+<section data-ng-controller="ResourcesController" data-ng-init="findOne()">
+    <div>
+        <div><gut-resource-headline></gut-resource-headline></div>
+    </div>
+
+    <div>
+        <div><gut-thing-full thing="resource.thing"></gut-thing-full></div>
+        <div><gut-place-full place="resource.place"></gut-place-full></div>
+        <div><gut-time-full time="resource.time"></gut-time-full></div>
+    </div>
+
+    <div><gut-resource-method></gut-resource-method></div>
+    <div><gut-resource-notes></gut-resource-notes></div>
+    <div class="gut-rating jumbotron">
+        <h2>Ratings </h2>
+        <div> Current rating:  8</div>
+        <div> Rate this resource:
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="gut-rating jumbotron">
+        <h2>Comments </h2>
+        <h3>Add a comment</h3> <br />
+        <textarea></textarea> <br />
+
+        <ul>
+            <li> This is great</li>
+            <li> This is really great</li>
+            <li> This is the greatest</li>
+        </ul>
+    </div>
+
+
+    <div class="page-header">
+        <h1 data-ng-bind="resource.name"></h1>
+    </div>
+    <div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == resource.user._id))">
+        <a class="btn btn-primary" href="/#/resources/{{resource._id}}/edit">
+            <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-primary" data-ng-click="remove();">
+            <i class="glyphicon glyphicon-trash"></i>
+        </a>
+    </div>
+    <small>
+        <em class="text-muted">
+            Created on
+            <span data-ng-bind="resource.created | date:'mediumDate'"></span>
+            by
+            <span data-ng-bind="resource.user.displayName"></span>
+        </em>
+    </small>
+</section>

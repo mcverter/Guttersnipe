@@ -1,0 +1,39 @@
+
+<div class="jumbotron">Schedule for {{headline}}</div>
+
+<div ng-show="!isScheduleSet" ui-calendar="punctualConfig.calendar" class="span8 calendar" ng-model="eventSources"></div>
+
+<div><hr><br><hr></div>
+
+<div class="panel panel-default">
+    <div class="panel-heading"><h2>Schedule:</h2></div>
+    <div class="panel-body">
+        <div ng-if="eventSources.length<1">
+            None
+        </div>
+        <div ng-if="eventSources.length>0">
+            <table class="schedule table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Repeats</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="event in eventSources">
+                    <td> <div ng-if="!event.repeating"> {{event.start | date: 'longDate' }} </div> </td>
+                    <td> <div ng-if="event.repeating"> Every {{event.start | date: 'EEEE' }} </div> </td>
+                    <td> {{event.start | date: 'hh:mm a' }}</td>
+                    <td> {{event.end | date: 'hh:mm a'}} </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<button  ng-show="!isScheduleSet" type="button" class="btn btn-default" ng-disabled="eventSources.length<1" ng-click="isScheduleSet=true">OK</button>
+
+<button  ng-show="isScheduleSet" type="button" class="btn btn-default"  ng-click="isScheduleSet=false">Edit</button>
