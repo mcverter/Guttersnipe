@@ -102,7 +102,7 @@
         return placeFactory;
     }
     angular.module('places').factory('Places',
-        ['Geolocator', placeService]);
+        ['Geolocator', placeService(Geolocator)]);
 })();
 
 
