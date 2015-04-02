@@ -3,27 +3,29 @@
     'use strict';
 
     function CreateMapController($scope, Places) {
-        $scope.map = {};
+        $scope.map = getMap;
         $scope.coordinates = Places.prospectPark.coordinates;
         $scope.inputAddress = '';
         $scope.formattedAddress = '';
         $scope.locateAddress = locateAddress;
 
-        $scope.map = {
-            center: {
-                latitude: coordinates.lat,
-                longitude: coordinates.lng
-            },
-            marker: {
-                id: 1,
-                options: {
-                    draggable: false
+        function getMap () {
+            return {
+                center: {
+                    latitude: $scope.coordinates.lat,
+                        longitude: $scope.coordinates.lng
                 },
-                events: {}
-            },
-            zoom: Places.defaultZoom,
-            options: {}
-        };
+                marker: {
+                    id: 1,
+                        options: {
+                        draggable: false
+                    },
+                    events: {}
+                },
+                zoom: Places.defaultZoom,
+                    options: {}
+            };
+        }
 
         function locateAddress ($event, address) {
             $event.preventDefault();
