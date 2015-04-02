@@ -4,11 +4,7 @@
     function ResourceReadController(Resources, Things, Places, Times) {
         var vm = this;
         vm.readOne = readOneResource;
-        vm.readList = readListResources;
-
-        vm.resource = {};
         vm.resources = [];
-
 
         activate();
 
@@ -18,14 +14,11 @@
                     data = Times.transformAllTimes(data)
                     vm.resources = data;
                     vm.map = Places.createMapFromResources(data);
+                console.log('vm map is' , vm.map);
                     vm.calendar = Times.createCalendarFromResources(data);
                 });
         }
 
-
-        function readListResources() {
-            vm.resources = Resources.query();
-        }
 
         function readOneResource() {
             Resources.get({

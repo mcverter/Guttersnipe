@@ -1,18 +1,3 @@
-/**
- * Small Time Directive:   For List View
- *
- * Attributes:
- * * time (Object):  resource.time
- *
- * **************************************
- *
- * Full Time Directive:   For Full View
- *
- * Attributes:
- * * time (Object):  resource.thing
- *
- */
-
 (function () {
     'use strict';
 

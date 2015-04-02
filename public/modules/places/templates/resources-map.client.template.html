@@ -1,8 +1,9 @@
 <section  >
 
+    {{map}}
     <div ng-if="showMap">
-        <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options" bounds="map.bounds">
-            <ui-gmap-markers models="randomMarkers" coords="'self'" icon="'icon'" click="'onClick'">
+        <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options" >
+            <ui-gmap-markers models="map.markers" coords="'self'" icon="'icon'" click="'onClick'">
                 <ui-gmap-windows show="show">
                     <div ng-non-bindable>{{title}}</div>
                 </ui-gmap-windows>
