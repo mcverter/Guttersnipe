@@ -15,6 +15,7 @@
 
       if (idKey == null) {
         idKey = "id";
+
       }
 
       var latitude = lat_min + (Math.random() * lat_range);
