@@ -5,7 +5,7 @@
 
         var placeFactory = {
             locateAddress: locateAddress,
-            defaultZoom: getDefaultZoom,
+            defaultZoom: getSingleZoom,
             prospectPark: getProspectPark,
             emptyPlace : getEmptyPlace,
             createMapFromResources: createMapFromResources
@@ -48,7 +48,7 @@
                     latitude: latAvg,
                     longitude: lngAvg
                 },
-                zoom: 13,
+                zoom: getMultipleZoom,
                 markers: markers,
                 options: {
                     scrollwheel: false
@@ -57,35 +57,12 @@
             return map;
         }
 
-        /**
-         *
-         var longitude = lng_min + (Math.random() * lng_range);
-         var ret = {
-        latitude: latitude,
-        longitude: longitude,
-        title: 'm' + i
-      };
-         ret[idKey] = i;
-         return ret;
-         };
-         $scope.randomMarkers = [];
-         // Get the bounds from the map once it's loaded
-         $scope.$watch(function() {
-      return $scope.map.bounds;
-    }, function(nv, ov) {
-      // Only need to regenerate once
-      if (!ov.southwest && nv.southwest) {
-        var markers = [];
-        for (var i = 0; i < 50; i++) {
-          markers.push(createRandomMarker(i, $scope.map.bounds))
+
+        function getMultipleZoom() {
+            return 10
         }
-        $scope.randomMarkers = markers;
-      }
-    }, true);
-         });
-         * @returns {number}
-         */
-        function getDefaultZoom() {
+
+        function getSingleZoom() {
             return 14;
         }
 
