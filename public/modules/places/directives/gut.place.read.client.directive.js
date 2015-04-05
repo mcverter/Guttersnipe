@@ -28,7 +28,7 @@
 
 
   angular.module('resources')
-      .directive('gutPlaceFull', ['places_templates', FullPlaceDirective])
-      .directive('gutPlaceSmall', ['places_templates', SmallPlaceDirective]);
+      .directive('placeFull', ['places_templates', FullPlaceDirective])
+      .directive('placeSmall', ['places_templates', SmallPlaceDirective]);
 })();
 

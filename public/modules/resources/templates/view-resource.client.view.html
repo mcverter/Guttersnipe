@@ -1,17 +1,17 @@
 <section data-ng-controller="ResourcesReadController" data-ng-init="findOne()">
     <div>
-        <div><gut-resource-headline></gut-resource-headline></div>
+        <div><resource-headline></resource-headline></div>
     </div>
 
     <div>
-        <div><gut-thing-full thing="resource.thing"></gut-thing-full></div>
-        <div><gut-place-full place="resource.place"></gut-place-full></div>
-        <div><gut-time-full time="resource.time"></gut-time-full></div>
+        <div><thing-full thing="resource.thing"></thing-full></div>
+        <div><place-full place="resource.place"></place-full></div>
+        <div><time-full time="resource.time"></time-full></div>
     </div>
 
-    <div><gut-resource-method></gut-resource-method></div>
-    <div><gut-resource-notes></gut-resource-notes></div>
-    <div class="gut-rating jumbotron">
+    <div><resource-method></resource-method></div>
+    <div><resource-notes></resource-notes></div>
+    <div class="rating jumbotron">
         <h2>Ratings </h2>
         <div> Current rating:  8</div>
         <div> Rate this resource:
@@ -30,7 +30,7 @@
         </div>
     </div>
 
-    <div class="gut-rating jumbotron">
+    <div class="rating jumbotron">
         <h2>Comments </h2>
         <h3>Add a comment</h3> <br />
         <textarea></textarea> <br />

@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('resources')
-      .directive('gutThingFull', ['things_templates', function(templates) {
+      .directive('thingFull', ['things_templates', function(templates) {
       var templateUrl = templates.main + 'thing-full.client.template.html';
 
       return {
@@ -14,7 +14,7 @@
       };
     }]
   )
-    .directive('gutThingSmall', ['things_templates', function(templates) {
+    .directive('thingSmall', ['things_templates', function(templates) {
             var templateUrl = templates.main + 'thing-small.client.template.html';
 
             return {

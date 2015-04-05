@@ -1,7 +1,7 @@
 (function () {
   'use strict';
   angular.module('wizard')
-    .directive('gutRscWizard', ['wizard_templates', function(templates) {
+    .directive('rscWizard', ['wizard_templates', function(templates) {
       var linker = function(scope, element, attrs) {},
         controller = function($scope){},
         templateUrl = templates.templateDir + 'rsc_WizardTemplate.html';

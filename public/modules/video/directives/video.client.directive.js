@@ -7,7 +7,7 @@
       '</video>',
     templateUrl = '/modules/video/templates/video.client.template.html';
 
-  angular.module('core').directive('gutVideo', [
+  angular.module('core').directive('video', [
     function () {
       return {
         templateUrl: templateUrl,

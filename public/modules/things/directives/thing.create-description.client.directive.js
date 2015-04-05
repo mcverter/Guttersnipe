@@ -4,7 +4,7 @@
 
   angular.module('things')
     .directive('createDescription', ['things_templates', function(templates) {
-      var templateUrl = templates.main + 'gut.thing.create-description.client.template.html';
+      var templateUrl = templates.main + 'thing.create-description.client.template.html';
 
       return {
         restrict: 'E',

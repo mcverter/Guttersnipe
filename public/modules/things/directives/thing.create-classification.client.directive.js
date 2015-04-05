@@ -72,7 +72,7 @@
     .directive('createClassification',
     ['things_templates',
       function(templates) {
-        var templateUrl = templates.main + 'gut.thing.create-classification.client.template.html';
+        var templateUrl = templates.main + 'thing.create-classification.client.template.html';
 
         return {
           restrict: 'E',

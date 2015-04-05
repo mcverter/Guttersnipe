@@ -5,7 +5,7 @@
 
     angular.module('times')
         .directive('createSchedule',['times_templates', function(templates) {
-            var templateUrl = templates.main + 'gut.time.schedule-input.client.template.html',
+            var templateUrl = templates.main + 'time.schedule-input.client.template.html',
                 MSEC_TO_30MIN = 60 * 30 * 1000,
                 eventSources = [],
                 controller = function($scope, $modal) {
@@ -27,7 +27,7 @@
                                 var repeating = false;
                                 end.setTime(start.getTime()+MSEC_TO_30MIN);
                                 var modalInstance = $modal.open({
-                                    templateUrl: templates.main + 'gut.time.schedule-dialog.client.template.html',
+                                    templateUrl: templates.main + 'time.schedule-dialog.client.template.html',
                                     controller: function($scope, $modalInstance) {
                                         Object.defineProperties($scope, {
                                             start: {
