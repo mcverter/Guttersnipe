@@ -8,7 +8,7 @@
             geolocatorFactory = {
                 geocoder: getGeocoder,
                 getCurrentLocation: getCurrentLocation
-            }
+            };
 
         function getGeocoder() {
             if (geocoder) {

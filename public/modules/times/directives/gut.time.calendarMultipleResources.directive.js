@@ -16,7 +16,7 @@
           center: 'title',
           right: 'today prev,next'
         },
-        defaultView: 'agendaWeek',
+        defaultView: 'agendaWeek'
       }
     };
 

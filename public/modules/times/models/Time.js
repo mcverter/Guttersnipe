@@ -8,4 +8,4 @@
         self.schedules = schedules;
         self.notes = notes;
     }
-})()
+})();

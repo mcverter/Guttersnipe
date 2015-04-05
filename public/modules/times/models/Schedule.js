@@ -20,4 +20,4 @@
             self.duration = duration;
         }
     }
-})()
+})();

@@ -41,4 +41,4 @@
         .controller('ResourcesCreateController',
     ['Resources', 'Authentication', ResourceCreateController])
 
-})()
+})();

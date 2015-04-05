@@ -39,4 +39,4 @@
         .controller('ResourcesUpdateController',
         ['Resources', 'Authentication', ResourcesUpdateController])
 
-})()
+})();

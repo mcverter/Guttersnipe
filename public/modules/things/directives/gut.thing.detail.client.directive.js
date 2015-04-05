@@ -7,12 +7,8 @@
 
       return {
         restrict: 'E',
-        templateUrl: templateUrl,
-        controller: function ($scope) {
-          Object.defineProperties($scope, {
-          })
-        }
-      };
+        templateUrl: templateUrl
+        };
     }]
   )
     .directive('detailsResult', ['things_templates', function(templates) {

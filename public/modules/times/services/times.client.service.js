@@ -7,7 +7,7 @@
             transformOneTime: transformSchedulesFromServerToClient,
             transformAllTimes: transformAllResponseSchedules,
             createCalendarFromResources : createCalendarFromResources
-        }
+        };
 
         function createCalendarFromResources(data) {
 

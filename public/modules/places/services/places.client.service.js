@@ -34,7 +34,7 @@
                     '<a href="' + fullUrl + '">Full Record</a>',
                     id: idx
 
-                }
+                };
                 markers.push(marker);
                 idx++;
             });
@@ -53,7 +53,7 @@
                 options: {
                     scrollwheel: false
                 }
-            }
+            };
             return map;
         }
 
@@ -93,7 +93,7 @@
                         return {
                             coords: results[0].geometry.location,
                             formattedAddress : results[0].formatted_address
-                        }
+                        };
                         //$scope.myMap.panTo(location);
                     }
                 });

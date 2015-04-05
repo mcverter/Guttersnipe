@@ -35,11 +35,9 @@
                 <label for="notes">Notes</label>
                 <input ng-model="place.notes" type="text"  id="notes" class="form-control" placeholder="Additional Notes" ng-maxlength="100" ng-required="true">
             </div>
+            <button type="button" class="btn btn-default" ng-disabled="!(place.description)" ng-click="isCreatePlaceConfirmed=true">OK</button>
+        </ng-form>
     </div>
-
-
-    <button type="button" class="btn btn-default" ng-disabled="!(place.description)" ng-click="isCreatePlaceConfirmed=true">OK</button>
-    </ng-form>
 </div>
 </div>
 <div ng-if="isCreatePlaceConfirmed">
@@ -72,6 +70,6 @@
             </div>
         </div>
         <button class="btn btn-warning" role="button"
-           ng-click="isCreatePlaceConfirmed=false">Edit</button>
+                ng-click="isCreatePlaceConfirmed=false">Edit</button>
     </div>
 </div>

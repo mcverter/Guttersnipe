@@ -122,4 +122,4 @@
             /* event sources array*/
             $scope.eventSources = [$scope.events, $scope.eventSource, $scope.eventsF];
             $scope.eventSources2 = [$scope.calEventsExt, $scope.eventsF, $scope.events];
-        }]);})(window.angular, window._)
+        }]);})(window.angular, window._);

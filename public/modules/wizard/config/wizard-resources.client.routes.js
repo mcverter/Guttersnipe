@@ -34,7 +34,7 @@
       })
       .state('resources_wizard.type', {
         url: '/type',
-        templateUrl: RESOURCES_DIR + 'thing/taxonomy/type/rsc_TypePage.html',
+        templateUrl: RESOURCES_DIR + 'thing/taxonomy/type/rsc_TypePage.html'
       })
       .state('resources_wizard.time', {
         url: '/time',
@@ -43,15 +43,15 @@
       })
       .state('resources_wizard.punctual', {
         url: '/time/punctual',
-        templateUrl: RESOURCES_DIR + 'time/punctual/rsc_PunctualPage.html',
+        templateUrl: RESOURCES_DIR + 'time/punctual/rsc_PunctualPage.html'
       })
       .state('resources_wizard.recurring', {
         url: '/time/recurring',
-        templateUrl: RESOURCES_DIR + 'time/recurring/rsc_WeeklyRecurringPage.html',
+        templateUrl: RESOURCES_DIR + 'time/recurring/rsc_WeeklyRecurringPage.html'
       })
       .state('resources_wizard.seasonal', {
         url: '/time/seasonal',
-        templateUrl: RESOURCES_DIR + 'time/seasonal/rsc_SeasonalPage.html',
+        templateUrl: RESOURCES_DIR + 'time/seasonal/rsc_SeasonalPage.html'
       })
       .state('resources_wizard.confirmation', {
         url: '/confirmation',

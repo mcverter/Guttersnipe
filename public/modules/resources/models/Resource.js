@@ -1,5 +1,5 @@
 (function(){
-    'use strict'
+    'use strict';
 
     function Resource(thing, place, time) {
         this.thing = thing;

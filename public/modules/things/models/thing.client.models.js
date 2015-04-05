@@ -11,5 +11,5 @@
     self.description = description;
     self.taxonomy = taxonomy;
 }
-})()
+})();
 

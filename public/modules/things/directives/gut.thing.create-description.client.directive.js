@@ -13,19 +13,8 @@
           thing: '='
         },
         controller: function ($scope) {
-          var isDescriptionSet = false;
-          Object.defineProperties($scope, {
-            isDescriptionSet : {
-              enumerable:true,
-              set: function(val) {
-                 isDescriptionSet = val;
-              },
-              get: function() {
-                return isDescriptionSet;
-              }
-            }
-          });
-        }
+          $scope.isDescriptionSet = false;
+          }
       };
     }]
   );

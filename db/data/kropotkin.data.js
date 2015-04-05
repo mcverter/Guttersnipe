@@ -885,7 +885,7 @@ var conquestofbread = [
     {paragraph: 'Ceasing to produce for unknown buyers, and looking in its midst for needs and tastes to be satisfied, society will liberally assure the life and ease of each of its members, as well as that moral satisfaction which work give when freely chosen and freely accomplished, and the joy of living without encroaching on the life of others.    '},
     {paragraph: '  Inspired by a new daring--born of the feeling of solidarity--all will march together to the conquest of the high joys of knowledge and artistic creation.    '},
     {paragraph: '  A society thus inspired will fear neither dissensions within nor enemies without. To the coalitions of the past it will oppose a new harmony, the initiative of each and all, the daring which springs from the awakening of a people\'s genius.    '},
-    {paragraph: 'Before such an irresistible force "conspiring kings" will be powerless. Nothing will remain for them but to bow before it, and to harness themselves to the chariot of humanity, rolling towards new horizons opened up by the Social Revolution.    '},
+    {paragraph: 'Before such an irresistible force "conspiring kings" will be powerless. Nothing will remain for them but to bow before it, and to harness themselves to the chariot of humanity, rolling towards new horizons opened up by the Social Revolution.    '}
 ];
 
 

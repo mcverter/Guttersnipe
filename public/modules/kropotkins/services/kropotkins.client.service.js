@@ -4,7 +4,7 @@
     function kropotkinFactory (Api) {
         var kropotkinFactory = {
             getRandom: getRandomKropotkin
-        }
+        };
 
 
         function getRandomKropotkin() {

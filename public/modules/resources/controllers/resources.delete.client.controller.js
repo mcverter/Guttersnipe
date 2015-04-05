@@ -38,4 +38,4 @@
         .controller('ResourcesDeleteController',
         ['Resources', 'Authentication', ResourceDeleteController])
 
-})()
+})();

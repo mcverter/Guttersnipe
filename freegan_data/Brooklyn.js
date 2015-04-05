@@ -21,7 +21,7 @@ var Brooklyn = [
         {day: 'Thursday, March 5', recurrence: 'Every', start: 2045,duration: 120},
         {day: 'Friday, March 6', recurrence: 'Every', start: 2045,duration: 120},
         {day: 'Sunday, March 8', recurrence: 'Every', start: 2045,duration: 120}],
-      notes:'8:45 when all the employees leave the store. Trash is collected between 10:30 p and 12:30a. One source says nothing is out on Saturdays.',
+      notes:'8:45 when all the employees leave the store. Trash is collected between 10:30 p and 12:30a. One source says nothing is out on Saturdays.'
     },
     method: 'Regular curbside bags, plus cardboard boxes set to the side with most of the produce (what foragers don’t take gets composted).'
   },
@@ -500,7 +500,7 @@ var Brooklyn = [
           start: 2230,
           duration: 360
 
-        },
+        }
       ],
       notes:' Trash is usually out by 10:30'
     },
