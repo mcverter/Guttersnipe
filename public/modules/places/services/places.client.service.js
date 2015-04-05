@@ -2,7 +2,7 @@
     'use strict';
 
     function placeService (Geolocator) {
-
+        console.log("geolocator" , Geolocator)
         var placeFactory = {
             locateAddress: locateAddress,
             defaultZoom: getSingleZoom,
@@ -102,7 +102,7 @@
         return placeFactory;
     }
     angular.module('places').factory('Places',
-        ['Geolocator', placeService(Geolocator)]);
+        ['Geolocator', placeService]);
 })();
 
 
