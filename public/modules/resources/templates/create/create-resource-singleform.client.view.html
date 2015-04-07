@@ -1,12 +1,3 @@
-<!-- Resource is {"thing":
-{"description":
-{"summary":"foo","notes":"foo","headline":"foo","method":"foo"},
-"taxonomy":{"type":"food","subtypes":["Free Communal Meal","Food Donation"]},"details":["goo"]},
-"place":{"coordinates":{"lat":"","lng":""},
-"name":"","address":"Times Square, Manhattan, NY 10036, USA",
-"notes":"moo","description":"there in the square"},
-"time":{"schedules":[],"notes":""}} -->
-
 <ng-form name="resourceForm" class="form-horizontal" data-ng-submit="create()" novalidate>
     <div class="jumbotron BlackOnRed">
         <h2> Describe </h2>
@@ -28,13 +19,6 @@
         <create-schedule time="resource.time" confirmations="confirmations"/>
     </div>
 
-    <div>
-        isCreatePlaceConfirmed {{confirmations.isCreatePlaceConfirmed}} <br />
-        isCreateTimeConfirmed  {{confirmations.isCreateTimeConfirmed}} <br />
-        isCreateSummaryConfirmed {{confirmations.isCreateDescriptionConfirmed}} <br />
-        isCreateClassificationConfirmed {{confirmations.isCreateClassificationConfirmed}} <br />
-
-    </div>
     <div class="RedOnBlack">
         <div class="form-group">
             <input type="submit" value="Create Resource" ng-click="create()"

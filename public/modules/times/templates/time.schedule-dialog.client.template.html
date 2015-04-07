@@ -2,6 +2,7 @@
     <button type="button" class="close" ng-click="cancelSchedule($event)">&times;</button>
     <h2 class="modal-title" id="deployModalLabel">Choose Schedule</h2>
 </div>
+
 <div class="modal-body">
     <ng-form id="scheduleForm" name="scheduleForm">
         <div>
@@ -20,26 +21,6 @@
             <timepicker ng-model="gutEvent.end" hour-step=1 minute-step=30></timepicker>
         </div>
     </ng-form>
-
-    <div>
-        <h2>Schedule:  </h2>
-        <div ng-if="eventSources.length<1">
-            None
-        </div>
-        <h4>Event sources are {{eventSources}}</h4>
-        <div ng-if="eventSources.length>0">
-            <ul>
-                <li ng-repeat="e in eventSources">
-                    New Event!!!
-                    <ol>
-                        <ul>Start:  {{e.start}}</ul>
-                        <ul>End:  {{e.end}}</ul>
-                        <ul>Repeating: {{e.end}}</ul>
-                    </ol>
-                </li>
-            </ul>
-        </div>
-    </div>
 </div>
 
 <div class="modal-footer">
