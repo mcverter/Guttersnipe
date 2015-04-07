@@ -21,9 +21,42 @@
                 }).
                 state('createResource', {
                     url: '/resources/create',
-                    templateUrl: 'modules/resources/templates/create-resource.client.view.html'
-                }).
-                state('viewResource', {
+                    templateUrl: 'modules/resources/templates/create/create-resource.client.view.html'
+                })
+                .state('createResource.agreement', {
+                    url: '/agreement',
+                    templateUrl: 'modules/resources/templates/create/create-resource-agreement.client.view.html'
+                })
+                .state('createResource.instructions', {
+                    url: 'resources/create/instructions',
+                    templateUrl: 'modules/resources/templates/create/create-resource-instructions.client.view.html'
+                })
+                .state('createResource.singleForm', {
+                    url: 'resources/create/form',
+                    templateUrl: 'modules/resources/templates/create/create-resource-singleform.client.view.html'
+
+                })
+
+                .state('createResource.description', {
+
+                })
+
+                .state('createResource.classification', {
+
+                })
+
+                .state('createResource.map', {
+
+                })
+
+                .state('createResource.time', {
+
+                })
+
+                 .state('createResource.confirmation', {
+                  })
+
+                .state('viewResource', {
                     url: '/resources/:resourceId',
                     templateUrl: 'modules/resources/templates/view-resource.client.view.html'
                 }).

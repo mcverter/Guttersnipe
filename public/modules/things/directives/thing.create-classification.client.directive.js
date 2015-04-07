@@ -1,14 +1,13 @@
 (function () {
-  'use strict';
+    'use strict';
 
     function ClassifyThingController($scope, ResourceTaxonomy) {
 
         $scope.type = '';
         $scope.subtypeChoices = [];
-        $scope.subtypeChosen = '';
+        $scope.subtypeChosen = [];
         $scope.details = [];
-        $scope.isTaxonomySet=false;
-        $scope.areDetailsSet=false;
+        $scope.areDetailsSet = false;
         $scope.taxonomy = ResourceTaxonomy;
         $scope.setType = setType;
         $scope.unsetType = unsetType;
@@ -25,77 +24,82 @@
                 _.find(ResourceTaxonomy, {type: type}).subtypes;
         }
 
-        function unsetType (type) {
+        function unsetType(type) {
             $scope.thing.taxonomy.type = '';
             $scope.type = '';
             $scope.subtypeChoices = [];
             $scope.isTaxonomySet = false;
+
         }
 
         function addSubtype(subtype) {
-            var idx = _.indexOf(subtypeChosen, subtype);
+            var idx = _.indexOf($scope.subtypeChosen, subtype);
             if (idx < 0) {
-                subtypeChosen.push(subtype);
+                $scope.subtypeChosen.push(subtype);
             }
-            $scope.thing.taxonomy.subtypes = subtypeChosen;
+            $scope.thing.taxonomy.subtypes = $scope.subtypeChosen;
         }
 
         function removeSubtype(subtype) {
-            var idx= _.indexOf(subtypeChosen, subtype);;
-            if (idx >= 0) {
-                subtypeChosen.splice(idx, 1);
+            if (!$scope.confirmations.isCreateClassificationConfirmed) {
+                var idx = _.indexOf($scope.subtypeChosen, subtype);
+                if (idx >= 0) {
+                    $scope.subtypeChosen.splice(idx, 1);
+                }
+                $scope.thing.subtypeChosen = $scope.subtypeChosen;
             }
-            $scope.thing.subtypeChosen = subtypeChosen;
         }
 
         function addDetail(detail) {
-            if (_.indexOf(details, detail) < 0) {
-                details.push(detail);
+            if (_.indexOf($scope.details, detail) < 0) {
+                $scope.details.push(detail);
             }
-            $scope.thing.details = details;
+            $scope.thing.details = $scope.details;
         }
 
         function removeDetail(detail) {
-            var idx= _.indexOf(details, detail);;
-            if (idx >= 0) {
-                details.splice(idx, 1);
+            if (!$scope.confirmations.isCreateClassificationConfirmed) {
+                var idx = _.indexOf($scope.details, detail);
+                if (idx >= 0) {
+                    $scope.details.splice(idx, 1);
+                }
+                $scope.thing.details = $scope.details;
             }
-            $scope.thing.details = details;
         }
     }
 
 
 
-  angular.module('things')
+    angular.module('things')
 
 
-    .directive('createClassification',
-    ['things_templates',
-      function(templates) {
-        var templateUrl = templates.main + 'thing.create-classification.client.template.html';
+        .directive('createClassification',
+        ['things_templates',
+            function(templates) {
+                var templateUrl = templates.main + 'thing.create-classification.client.template.html';
 
-        return {
-          restrict: 'E',
-          templateUrl: templateUrl,
-          scope : {
-            thing: '='
-          },
+                return {
+                    restrict: 'E',
+                    templateUrl: templateUrl,
+                    scope : {
+                        thing: '=',
+                        confirmations: '='
+                    },
 
-          controller: ['$scope', 'TaxonomyService',
-              ClassifyThingController ($scope, TaxonomyService)]
+                    controller: ['$scope', 'TaxonomyService', ClassifyThingController]
 
-        };
-      }]
-  )
-    .directive('subtype', ['things_templates', function(templates) {
-      var templateUrl = templates.main + 'thing.subtype.client.template.html';
-      return {
-        restrict: 'E',
-        templateUrl: templateUrl,
-        scope : {
-          name: '='
-        }
-      };
-    }]
-  )
+                };
+            }]
+    )
+        .directive('subtype', ['things_templates', function(templates) {
+            var templateUrl = templates.main + 'thing.subtype.client.template.html';
+            return {
+                restrict: 'E',
+                templateUrl: templateUrl,
+                scope : {
+                    name: '='
+                }
+            };
+        }]
+    )
 })();

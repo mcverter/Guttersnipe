@@ -1,4 +1,4 @@
-<div ng-if="!isCreatePlaceConfirmed">
+<div ng-if="!confirmations.isCreatePlaceConfirmed">
     <div>
         <ng-form>
             <div>
@@ -35,12 +35,12 @@
                 <label for="notes">Notes</label>
                 <input ng-model="place.notes" type="text"  id="notes" class="form-control" placeholder="Additional Notes" ng-maxlength="100" ng-required="true">
             </div>
-            <button type="button" class="btn btn-default" ng-disabled="!(place.description)" ng-click="isCreatePlaceConfirmed=true">OK</button>
+            <button type="button" class="btn btn-default" ng-disabled="!(place.description)" ng-click="confirmations.isCreatePlaceConfirmed=true">OK</button>
         </ng-form>
     </div>
 </div>
-</div>
-<div ng-if="isCreatePlaceConfirmed">
+
+<div ng-if="confirmations.isCreatePlaceConfirmed">
     <div>
         <div>
             <div class="panel panel-default">
@@ -70,6 +70,6 @@
             </div>
         </div>
         <button class="btn btn-warning" role="button"
-                ng-click="isCreatePlaceConfirmed=false">Edit</button>
+                ng-click="confirmations.isCreatePlaceConfirmed=false">Edit</button>
     </div>
 </div>

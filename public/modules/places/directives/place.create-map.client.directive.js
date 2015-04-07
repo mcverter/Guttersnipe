@@ -29,18 +29,18 @@
 
         function locateAddress ($event, address) {
             $event.preventDefault();
-            var foo;
             var geocoder = new google.maps.Geocoder();
 
             geocoder.geocode( { "address": address },
                 function(results, status) {
                     var formattedAddress;
                     if (status == google.maps.GeocoderStatus.OK && results.length > 0) {
-                        var location = results[0].geometry.location;
                         formattedAddress =
                             results[0].formatted_address;
                         $scope.$apply (function() {
                             $scope.place.address = formattedAddress;
+                            $scope.place.coordinates.lat = results[0].geometry.location.k;
+                            $scope.place.coordinates.lng = results[0].geometry.location.D;
                             $scope.map = {
                                 center: {
                                     latitude: results[0].geometry.location.k,
@@ -72,11 +72,10 @@ angular.module('places')
                 restrict: 'E',
                 scope : {
                     place: '=',
-                    isCreatePlaceConfirmed: '='
+                    confirmations: '='
                 },
                 templateUrl: templateUrl,
-                controller: ['$scope', 'Places',
-                    CreateMapController($scope, Places)]
+                controller: ['$scope', 'Places', CreateMapController]
             };
         }]);
 })();

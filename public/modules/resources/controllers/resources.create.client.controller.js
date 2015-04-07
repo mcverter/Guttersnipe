@@ -1,25 +1,34 @@
+
 (function() {
     'use strict';
 
-    function ResourceCreateController(Resources, Authentication) {
-        var vm = this;
+    function ResourceCreateController($scope, Resources, Authentication) {
+        $scope.activate = activate;
+        $scope.create = createResource;
 
-        vm.activate = activate;
-        vm.create = createResource;
+        $scope.resource = {};
 
-        vm.resource = {};
+        $scope.isCreateFormComplete = isCreateFormComplete;
 
-        vm.isCreateAgreed  = false;
-        vm.isCreateValid = false;
-        vm.isCreatePlaceConfirmed = false;
-        vm.isCreateTimeConfirmed = false;
-        vm.isCreateSummaryConfirmed = false;
-        vm.isCreateClassificationConfirmed = false;
+        $scope.confirmations = {
+            isCreatePlaceConfirmed : false,
+            isCreateTimeConfirmed : false,
+            isCreateDescriptionConfirmed : false,
+            isCreateClassificationConfirmed : false
+        };
 
         activate();
 
         function activate() {
-            vm.resource = Resources.getEmptyResource;
+            $scope.resource = Resources.getEmptyResource();
+            console.log('resource is', $scope.resource);
+        }
+
+        function isCreateFormComplete() {
+            return  $scope.confirmations.isCreatePlaceConfirmed &&
+                $scope.confirmations.isCreateTimeConfirmed &&
+                $scope.confirmations.isCreateDescriptionConfirmed &&
+                $scope.confirmations.isCreateClassificationConfirmed;
         }
 
         function createResource() {
@@ -39,6 +48,6 @@
 
     angular.module('resources')
         .controller('ResourcesCreateController',
-    ['Resources', 'Authentication', ResourceCreateController])
+        ['$scope', 'Resources', 'Authentication', ResourceCreateController])
 
 })();

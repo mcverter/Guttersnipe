@@ -47,9 +47,9 @@
 
         function getEmptyResource() {
             var ret = {};
-            ret.thing = Things.emptyThing;
-            ret.place = Places.emptyPlace;
-            ret.time = Times.emptyTime;
+            ret.thing = Things.emptyThing();
+            ret.place = Places.emptyPlace();
+            ret.time = Times.emptyTime();
             return ret;
         }
 
