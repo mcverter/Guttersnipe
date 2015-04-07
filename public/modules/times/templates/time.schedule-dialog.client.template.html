@@ -8,16 +8,16 @@
             <h3>Recurring Event</h3>
             <div class="checkbox">
                 <label>
-                    <input type="checkbox" ng-model="repeating"> Event Repeats every {{ start | date: 'EEEE'}}
+                    <input type="checkbox" ng-model="gutEventrepeating"> Event Repeats every {{ start | date: 'EEEE'}}
                 </label>
             </div>
         </div>
         <div>
-            <h2>    Event occurs on {{start | date: 'fullDate'}}</h2>
+            <h2>    Event occurs on {{event.start | date: 'fullDate'}}</h2>
             <h4>    Start Time </h4>
-            <timepicker ng-model="start" ng-change="updateEnd(start)" hour-step=1 minute-step=30></timepicker>
+            <timepicker ng-model="gutEvent.start" ng-change="updateEnd(gutEvent.start)" hour-step=1 minute-step=30></timepicker>
             <h4>    End Time </h4>
-            <timepicker ng-model="end" hour-step=1 minute-step=30></timepicker>
+            <timepicker ng-model="gutEvent.end" hour-step=1 minute-step=30></timepicker>
         </div>
     </ng-form>
 
@@ -29,12 +29,12 @@
         <h4>Event sources are {{eventSources}}</h4>
         <div ng-if="eventSources.length>0">
             <ul>
-                <li ng-repeat="event in eventSources">
+                <li ng-repeat="e in eventSources">
                     New Event!!!
                     <ol>
-                        <ul>Start:  {{event.start}}</ul>
-                        <ul>End:  {{event.end}}</ul>
-                        <ul>Repeating: {{event.end}}</ul>
+                        <ul>Start:  {{e.start}}</ul>
+                        <ul>End:  {{e.end}}</ul>
+                        <ul>Repeating: {{e.end}}</ul>
                     </ol>
                 </li>
             </ul>
@@ -44,5 +44,5 @@
 
 <div class="modal-footer">
     <button type="button" class="btn btn-default" ng-click="cancelSchedule($event)">Cancel</button>
-    <button type="button" class="btn btn-primary" ng-disabled="invalidTimes()" ng-click="addSchedule($event, start, end, repeating)">OK</button>
+    <button type="button" class="btn btn-primary" ng-disabled="invalidTimes()" ng-click="addSchedule($event, gutEvent)">OK</button>
 </div>

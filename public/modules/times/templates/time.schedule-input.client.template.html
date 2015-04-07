@@ -1,17 +1,15 @@
 
-<div class="jumbotron">Schedule for {{headline}}</div>
-
-<div ng-show="!confirmations.isCreateTimeConfirmed" ui-calendar="punctualConfig.calendar" class="span8 calendar" ng-model="eventSources"></div>
+<div ng-show="!confirmations.isCreateTimeConfirmed" ui-calendar="punctualConfig.calendar" class="span8 calendar" ng-model="time.schedules"></div>
 
 <div><hr><br><hr></div>
 
 <div class="panel panel-default">
     <div class="panel-heading"><h2>Schedule:</h2></div>
     <div class="panel-body">
-        <div ng-if="eventSources.length<1">
+        <div ng-if="time.schedules.length<1">
             None
         </div>
-        <div ng-if="eventSources.length>0">
+        <div ng-if="time.schedules.length>0">
             <table class="schedule table-bordered table-striped">
                 <thead>
                 <tr>
@@ -22,7 +20,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="event in eventSources">
+                <tr ng-repeat="event in time.schedules">
                     <td> <div ng-if="!event.repeating"> {{event.start | date: 'longDate' }} </div> </td>
                     <td> <div ng-if="event.repeating"> Every {{event.start | date: 'EEEE' }} </div> </td>
                     <td> {{event.start | date: 'hh:mm a' }}</td>
@@ -34,6 +32,6 @@
     </div>
 </div>
 
-<button  ng-show="!confirmations.isCreateTimeConfirmed" type="button" class="btn btn-default" ng-disabled="eventSources.length<1" ng-click="confirmations.isCreateTimeConfirmed=true">OK</button>
+<button  ng-show="!confirmations.isCreateTimeConfirmed" type="button" class="btn btn-default" ng-disabled="time.schedules.length<1" ng-click="confirmations.isCreateTimeConfirmed=true">OK</button>
 
 <button  ng-show="confirmations.isCreateTimeConfirmed" type="button" class="btn btn-default"  ng-click="confirmations.isCreateTimeConfirmed=false">Edit</button>
