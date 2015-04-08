@@ -15,7 +15,7 @@ exports.create = function(req, res) {
     console.log('create resource');
 	var resource = new Resource(req.body);
 	resource.user = req.user;
-
+    console.log("resource", JSON.stringify(resource, null, 2));
 
 	resource.save(function(err) {
 		if (err) {
