@@ -17,9 +17,17 @@
 
         }
         function createResource(resource) {
+            return Api.resources.post(resource)
+                .then(function afterCreateResourceResolved(data){
+                    console.log( "resource created successfully. Data is ", data);
+                    return data;
 
+                })
+                .catch(function(err){
+                    console.log('error in resources.getAllResources', err);
+                })
         }
-        
+
         function updateResource(resource) {
 
         }

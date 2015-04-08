@@ -3,30 +3,40 @@
 
     function apiService ($log, $http, $q) {
         var  apiFactory = {
-                users: {
-                    getAll: getAllUsers,
-                    getOne: getOneUser,
-                    delete: deleteUser,
-                    put: putUser,
-                    post: postUser
-                },
-                kropotkins: {
-                    getRandom: getRandomKropotkin
-                },
-                resources: {
-                    getAll: getAllResources,
-                    getOne: getOneResource,
-                    delete: deleteResource,
-                    put: putResource,
-                    post: postResource
-                }
+            users: {
+                getAll: getAllUsers,
+                getOne: getOneUser,
+                delete: deleteUser,
+                put: putUser,
+                post: postUser,
             },
+            kropotkins: {
+                getRandom: getRandomKropotkin
+            },
+            resources: {
+                getAll: getAllResources,
+                getOne: getOneResource,
+                delete: deleteResource,
+                put: putResource,
+                post: postResource
+            }
+
+        };
+
+        /* Aliases */
+        Object.defineProperties(apiFactory.users, {
+            createUser: postUser,
+            updateUser: putUser
+        });
+
+        Object.defineProperties(apiFactory.resources, {
+            createResource: postResource,
+            updateResource: putResource
+        });
 
 
-            /**
-             *  Top-level uri for all api calls
-             */
-            apiUri = URI('http://localhost:3000/'),
+        /*  URIs for API calls */
+        var apiUri = URI('http://localhost:3000/'),
             apiResource = function apiResource() {
                 return apiUri.clone();
             },
@@ -49,6 +59,7 @@
              *    client-side services/factories after an event
              *    that changes the data available on the server
              */
+
             afterLoginEventKey = '$api.afterLogin',
             afterUpdateLoginEventKey = '$api.updateLogin',
             afterLogoutEventKey = '$api.afterLogout',
@@ -117,7 +128,7 @@
             $log.debug('api.resource.post request', request);
 
             return $http(request).then(function afterPostResource() {
-                _.trigger(afterResourceUpdateEventKey);
+                _.trigger(afterResourceCreateEventKey);
             });
         }
         function putResource(resource) {
@@ -134,6 +145,8 @@
             return $http(request)
                 .then(function putResourceSuccess(response) {
                     $log.debug('api.resources.put success', response.data);
+                    _.trigger(afterResourceUpdatedEventKey);
+
                     return response.data;
                 },
                 function putResourceError(response) {
