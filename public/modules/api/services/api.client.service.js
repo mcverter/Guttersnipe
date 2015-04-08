@@ -9,18 +9,19 @@
                 delete: deleteUser,
                 put: putUser,
                 post: postUser,
-            },
-            kropotkins: {
-                getRandom: getRandomKropotkin
+                onUpdate: onUpdateUser
             },
             resources: {
                 getAll: getAllResources,
                 getOne: getOneResource,
                 delete: deleteResource,
                 put: putResource,
-                post: postResource
+                post: postResource,
+                onUpdate: onUpdateResource
+            },
+            kropotkins: {
+                getRandom: getRandomKropotkin
             }
-
         };
 
         /* Aliases */
@@ -61,15 +62,22 @@
              */
 
             afterLoginEventKey = '$api.afterLogin',
-            afterUpdateLoginEventKey = '$api.updateLogin',
             afterLogoutEventKey = '$api.afterLogout',
+
+            afterUserCreateEventKey = '$api.afterUserCreate',
+            afterUserUpdateEventKey = '$api.afterUserUpdate',
             afterResourceUpdateEventKey = '$api.afterResourceUpdate',
+            afterResourceCreateEventKey = '$api.afterResourceCreate',
+
+
+            /* REST Aliases */
             GET = 'GET',
             DELETE = 'DELETE',
             POST = 'POST',
             PUT = 'PUT';
 
 
+        /* resources */
         function getAllResources() {
             $log.debug('api.resource.getAll');
 
@@ -145,7 +153,7 @@
             return $http(request)
                 .then(function putResourceSuccess(response) {
                     $log.debug('api.resources.put success', response.data);
-                    _.trigger(afterResourceUpdatedEventKey);
+                    _.trigger(afterResourceUpdateEventKey);
 
                     return response.data;
                 },
@@ -157,18 +165,11 @@
 
 
         function onUpdateResource(handler) {
-            _.on(afterReportUpdateEventKey, handler);
+            _.on(afterResourceUpdateEventKey, handler);
         }
 
 
-        /* **********
-
-         users
-
-         */
-
-        function getOneUser() {}
-
+        /* users */
         function getAllUsers() {
             $log.debug('api.user.getAll');
 
@@ -189,7 +190,6 @@
         }
 
         function getOneUser() {}
-
 
         function deleteUser(user) {
             $log.debug('api.users.delete');
@@ -254,13 +254,10 @@
 
 
         function onUpdateUser(handler) {
-            _.on(afterReportUpdateEventKey, handler);
+            _.on(afterUserUpdateEventKey, handler);
         }
 
-        /* **********
-         kropotkins
-         */
-
+        /* kropotkins */
         function getRandomKropotkin() {
             $log.debug('api.kropotkin.getAll');
 
