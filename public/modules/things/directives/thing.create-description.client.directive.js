@@ -12,9 +12,6 @@
                 scope : {
                     confirmations: '=',
                     thing: '='
-                },
-                controller: function($scope) {
-                    console.log('create description scope', $scope);
                 }
             };
         }]
