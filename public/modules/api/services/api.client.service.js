@@ -106,7 +106,7 @@
             var request = {
                 withCredentials: true,
                 method: DELETE,
-                url: resourcesUri
+                url: resourcesResource().toString() 
             };
 
             $log.debug('api.resources.delete request', request);
@@ -129,7 +129,7 @@
             var request = {
                 withCredentials: true,
                 method: POST,
-                url: resourcesUri,
+                url: resourcesResource().toString() ,
                 data: resourceData || {}
             };
 
@@ -145,7 +145,7 @@
             var request = {
                 withCredentials: true,
                 method: PUT,
-                url: resourcesUri
+                url: resourcesResource().toString() 
             };
 
             $log.debug('api.resources.put request', request);
@@ -176,7 +176,7 @@
             var request = {
                 withCredentials: false,
                 method: GET,
-                url: usersUri
+                url: usersResource().toString() 
             };
 
             return $http(request)
@@ -197,7 +197,7 @@
             var request = {
                 withCredentials: true,
                 method: DELETE,
-                url: usersUri
+                url: usersResource().toString() 
             };
 
             $log.debug('api.users.delete request', request);
@@ -220,7 +220,7 @@
             var request = {
                 withCredentials: true,
                 method: POST,
-                url: usersUri,
+                url: usersResource().toString() ,
                 data: userData || {}
             };
 
@@ -236,7 +236,7 @@
             var request = {
                 withCredentials: true,
                 method: PUT,
-                url: usersUri
+                url: usersResource().toString() 
             };
 
             $log.debug('api.users.put request', request);
