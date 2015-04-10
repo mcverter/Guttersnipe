@@ -20,6 +20,10 @@
 
         }
 
+        function transformSchedulesBeforeCreateResource() {
+
+        }
+
         function transformSchedulesFromServerToClient(schedules) {
             _.forEach(schedules, function(sked){
                 var startTime = Number(sked.startTime);

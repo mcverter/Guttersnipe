@@ -1,4 +1,6 @@
 <section data-ng-controller="ResourcesReadController as rsc">
+Resources {{rsc.resources}}
+
     <div class="page-header">
         <h1>Resources</h1>
     </div>
@@ -10,7 +12,7 @@
             <tab heading="Map" ng-click="rsc.showMap=true">
                 <resources-map map="rsc.map" showMap="rsc.showMap"></resources-map>
             </tab>
-            <tab heading="Calendar" ng-click="rsc.showMap=false">
+            <tab heading="Calendar" times="rsc.calendar" ng-click="rsc.showMap=false">
                 <resources-calendar></resources-calendar>
             </tab>
         </tabset>

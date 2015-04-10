@@ -16,8 +16,8 @@
         <div>
             <h2>    Event occurs on {{event.start | date: 'fullDate'}}</h2>
             <h4>    Start Time </h4>
-            <timepicker ng-model="gutEvent.start" ng-change="updateEnd(gutEvent.start)" hour-step=1 minute-step=30></timepicker>
-            <h4>    End Time </h4>
+            <timepicker ng-model="gutEvent.start" hour-step=1 minute-step=30></timepicker>
+            <h4>    Duration </h4>
             <timepicker ng-model="gutEvent.end" hour-step=1 minute-step=30></timepicker>
         </div>
     </ng-form>

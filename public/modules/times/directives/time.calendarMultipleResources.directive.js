@@ -41,6 +41,9 @@
       var templateUrl = templates.main + 'resources-calendar.client.template.html';
 
       return {
+          scope : {
+
+          },
         restrict: 'E',
         templateUrl: templateUrl,
         controller:  CalendarExampleController

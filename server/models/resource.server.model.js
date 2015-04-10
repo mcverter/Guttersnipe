@@ -69,23 +69,16 @@ var ResourceSchema = new Schema({
     time: {
         schedules : [
             {
-                punctualDate: {
-                    type: Date
-                },
-                recurringDay : {
-                    type: String,
-                    enum: weekdayEnum
-                },
                 recurrenceType: {
                     type: String,
                     enum: recurrenceTypeEnum
                 },
                 startTime : {
-                    type: Number,
+                    type: Date,
                     required: true
                 },
-                duration : {
-                    type: Number,
+                endTime : {
+                    type: Date,
                     required: true
                 }
             }
