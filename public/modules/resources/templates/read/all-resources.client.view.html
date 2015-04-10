@@ -4,15 +4,13 @@
     </div>
     <section>
         <tabset>
-            <tab heading="List">
+            <tab heading="List" ng-click="rsc.showMap=false">
                 <resources-list resources="rsc.resources"></resources-list>
             </tab>
-            <tab heading="Map" >
-                Map
-                <resources-map map="rsc.map"></resources-map>
+            <tab heading="Map" ng-click="rsc.showMap=true">
+                <resources-map map="rsc.map" showMap="rsc.showMap"></resources-map>
             </tab>
-            <tab heading="Calendar" >
-                Calendar
+            <tab heading="Calendar" ng-click="rsc.showMap=false">
                 <resources-calendar></resources-calendar>
             </tab>
         </tabset>

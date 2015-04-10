@@ -1,6 +1,9 @@
 <section>
+    <div ng-if="showCalendar">
     Evemt sources is {{eventSources}}
-    <div ui-calendar="punctualConfig.calendar" class="span8 calendar" ng-model="eventSources"></div>
+    <div ui-calendar="uiConfig.calendar" ng-model="eventSources" class="span8 calendar"></div>
     <br>
     resources is {{resources}}
+    </div>
+    <button ng-click="showCalendar=true"> Show Map</button>
 </section>

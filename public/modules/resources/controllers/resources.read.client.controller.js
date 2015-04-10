@@ -5,6 +5,7 @@
         var vm = this;
         vm.readOne = readOneResource;
         vm.resources = [];
+        vm.showMap = false;
 
         activate();
 

@@ -8,16 +8,16 @@
             $stateProvider.
                 state('allResources', {
                     url: '/resources',
-                    templateUrl: 'modules/resources/templates/all-resources.client.view.html'
+                    templateUrl: 'modules/resources/templates/read/all-resources.client.view.html'
                 })
                 .state('resourcesListed', {
-                    templateUrl: 'modules/resources/templates/resources-listed.client.view.html'
+                    templateUrl: 'modules/resources/templates/read/resources-listed.client.view.html'
                 })
                 .state('resourcesMapped', {
-                    templateUrl: 'modules/resources/templates/resources-mapped.client.view.html'
+                    templateUrl: 'modules/resources/templates/read/resources-mapped.client.view.html'
                 })
                 .state('resourcesCalendared', {
-                    templateUrl: 'modules/resources/templates/resources-calendared.client.view.html'
+                    templateUrl: 'modules/resources/templates/read/resources-calendared.client.view.html'
                 }).
                 state('createResource', {
                     url: '/resources/create',

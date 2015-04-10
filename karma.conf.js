@@ -1,12 +1,10 @@
 'use strict';
 
-console.log('in karma')
 /**
  * Module dependencies.
  */
 var applicationConfiguration = require('./config/config');
 
-console.log('in karma');
 // Karma configuration
 module.exports = function(config) {
     config.set({
@@ -48,6 +46,6 @@ module.exports = function(config) {
 
         // Continuous Integration mode
         // If true, it capture browsers, run tests and exit
-        singleRun: false
+        singleRun: true
     });
 };

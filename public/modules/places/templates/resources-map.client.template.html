@@ -1,6 +1,4 @@
 <section  >
-
-    {{map}}
     <div ng-if="showMap">
         <ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options" >
             <ui-gmap-markers models="map.markers" coords="'self'" icon="'icon'" click="'onClick'">
@@ -9,10 +7,7 @@
                 </ui-gmap-windows>
             </ui-gmap-markers>
         </ui-gmap-google-map>
-    <!-- create-map></create-map -->
     <br>
     </div>
     <button ng-click="showMap=true"> Show Map</button>
-    resources is {{resources}}
-
 </section>

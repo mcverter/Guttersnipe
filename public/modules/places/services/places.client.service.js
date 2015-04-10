@@ -48,7 +48,7 @@
                     latitude: latAvg,
                     longitude: lngAvg
                 },
-                zoom: getMultipleZoom,
+                zoom: getMultipleZoom(),
                 markers: markers,
                 options: {
                     scrollwheel: false
