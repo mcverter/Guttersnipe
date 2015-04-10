@@ -126,11 +126,12 @@
         function postResource(resourceData) {
             $log.debug('api.resource.post');
 
+            console.log('resource data is ', resourceData);
             var request = {
                 withCredentials: true,
                 method: POST,
                 url: resourcesResource().toString() ,
-                data: resourceData || {}
+                data: {resource: resourceData}
             };
 
             $log.debug('api.resource.post request', request);

@@ -33,8 +33,12 @@
 
         function createResource() {
             Resources.createResource($scope.resource)
-                .then()
-                .catch();
+                .then(function(data) {
+                    console.log('Returned data', data)
+                })
+                .catch(function(err) {
+                    console.err('got error', err);
+                });
             
 /*
             var resource = new Resources({
