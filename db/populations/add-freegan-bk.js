@@ -1,7 +1,7 @@
 var db = require('../config/db'),
   mongoose = db.mongoose,
   _ = require('lodash'),
-  bkFreeganData = require ('../data/bk.freegan.data.js'),
+  bkFreeganData = require ('../data/bk.freegan.data_newModel.js'),
   resources = bkFreeganData.resources;
 
 var Resource = mongoose.model('Resource');

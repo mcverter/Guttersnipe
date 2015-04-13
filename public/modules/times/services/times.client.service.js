@@ -6,7 +6,8 @@
             emptyTime: getEmptyTime,
             transformOneTime: transformSchedulesFromServerToClient,
             transformAllTimes: transformAllResponseSchedules,
-            createCalendarFromResources : createCalendarFromResources
+            createCalendarFromResources : createCalendarFromResources,
+            transformBeforeCreate: transformSchedulesBeforeCreateResource
         };
 
         function createCalendarFromResources(data) {
@@ -20,8 +21,19 @@
 
         }
 
-        function transformSchedulesBeforeCreateResource() {
+        function transformSchedulesBeforeCreateResource(time) {
+            var scheds = []
+            _.forEach(time.schedules, function(schedule) {
+                scheds.push({
+                    start: schedule.start,
+                    end: schedule.end,
+                    recurrenceType: schedule.recurrenceType
+                })
 
+            });
+            time.schedules = scheds;
+            console.log('transformed schedule is ', time);
+            console.log('hello world');
         }
 
         function transformSchedulesFromServerToClient(schedules) {

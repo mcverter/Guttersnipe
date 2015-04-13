@@ -136,3 +136,7 @@ thing:
         notes: 'mook',
         headline: 'foop',
         method: 'glarp' } } }
+
+
+var fumm = {"thing":{"description":{"summary":"mitchell","notes":"mitchell","headline":"mitchell","method":"mitchell"},"taxonomy":{"type":"food","subtypes":["Dumpster"]},"details":["foo"]},"place":{"coordinates":{"lat":40.758895,"lng":-73.98513100000002},"name":"","address":"Times Square, Manhattan, NY 10036, USA","notes":"","description":"moo"},"time":{"schedules":[{"start":"2015-04-13T17:00:00.000Z","end":"2015-04-13T17:30:00.000Z"},{"start":"2015-04-16T17:00:00.000Z","end":"2015-04-16T17:30:00.000Z"}],"notes":""}}
+var bumm = {"thing":{"description":{"summary":"It's just a cafe for stuff and stuff","notes":"nothing really","headline":"cafe madeline","method":"go to the walk for a bit"},"taxonomy":{"type":"food","subtypes":["Food Not Bombs"]},"details":[]},"place":{"coordinates":{"lat":40.758895,"lng":-73.98513100000002},"name":"","address":"Times Square, Manhattan, NY 10036, USA","notes":"","description":"times square is times square"},"time":{"schedules":[{"start":"2015-04-13T16:00:00.000Z","end":"2015-04-13T16:30:00.000Z"},{"start":"2015-04-17T15:30:00.000Z","end":"2015-04-17T16:00:00.000Z"}],"notes":"forlorn"}}

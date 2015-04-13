@@ -70,7 +70,7 @@
             afterResourceCreateEventKey = '$api.afterResourceCreate',
 
 
-            /* REST Aliases */
+        /* REST Aliases */
             GET = 'GET',
             DELETE = 'DELETE',
             POST = 'POST',
@@ -106,7 +106,7 @@
             var request = {
                 withCredentials: true,
                 method: DELETE,
-                url: resourcesResource().toString() 
+                url: resourcesResource().toString()
             };
 
             $log.debug('api.resources.delete request', request);
@@ -137,8 +137,12 @@
             $log.debug('api.resource.post request', request);
 
             return $http(request).then(function afterPostResource() {
-                _.trigger(afterResourceCreateEventKey);
-            });
+                    console.log('api.resource.post success')
+                  //  _.trigger(afterResourceCreateEventKey);
+                },
+                function afterPostError(err) {
+                    $log.error('api.resources.post failure', err);
+                });
         }
         function putResource(resource) {
             $log.debug('api.resources.put');
@@ -146,7 +150,7 @@
             var request = {
                 withCredentials: true,
                 method: PUT,
-                url: resourcesResource().toString() 
+                url: resourcesResource().toString()
             };
 
             $log.debug('api.resources.put request', request);
@@ -177,7 +181,7 @@
             var request = {
                 withCredentials: false,
                 method: GET,
-                url: usersResource().toString() 
+                url: usersResource().toString()
             };
 
             return $http(request)
@@ -198,7 +202,7 @@
             var request = {
                 withCredentials: true,
                 method: DELETE,
-                url: usersResource().toString() 
+                url: usersResource().toString()
             };
 
             $log.debug('api.users.delete request', request);
@@ -237,7 +241,7 @@
             var request = {
                 withCredentials: true,
                 method: PUT,
-                url: usersResource().toString() 
+                url: usersResource().toString()
             };
 
             $log.debug('api.users.put request', request);

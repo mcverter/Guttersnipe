@@ -39,20 +39,6 @@
                 .catch(function(err) {
                     console.err('got error', err);
                 });
-            
-/*
-            var resource = new Resources({
-                resource: this.resource
-            });
-            resource.$save(function (response) {
-                $location.path('resources/' + response._id);
-
-                $scope.resource = {};
-            }, function (errorResponse) {
-                $scope.error = errorResponse.data.message;
-            });
-
-  */
         }
 
     }

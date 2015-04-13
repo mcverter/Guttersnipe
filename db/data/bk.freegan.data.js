@@ -1,5 +1,8 @@
 var Brooklyn = [
+//     "updated":"2015-03-07T18:27:32.065Z",
 
+// April 12 = Sunday
+    // April 13 = Monday
 //Perelandra
   {
     thing: {

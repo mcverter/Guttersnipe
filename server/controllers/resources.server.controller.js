@@ -19,18 +19,15 @@ exports.create = function(req, res) {
 
 	resource.save(function(err) {
 		if (err) {
-            console.log("error ", errorHandler.getErrorMessage(err));
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)
 			});
 		} else {
-            console.log("resource ", res.jsonp(resource));
-
 			res.jsonp(resource);
 		}
 	});
 };
-
+git 
 /**
  * Show the current Resource
  */

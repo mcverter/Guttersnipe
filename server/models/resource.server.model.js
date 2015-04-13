@@ -7,8 +7,7 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 // node add-freegan-bk.js 
-var weekdayEnum = 	   ['all', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
-    recurrenceTypeEnum = ['A', '1', '2', '3', '4', 'L'];
+var recurrenceTypeEnum = ['A', '1', '2', '3', '4', 'L'];
 
 
 var ResourceSchema = new Schema({
@@ -73,11 +72,11 @@ var ResourceSchema = new Schema({
                     type: String,
                     enum: recurrenceTypeEnum
                 },
-                startTime : {
+                start : {
                     type: Date,
                     required: true
                 },
-                endTime : {
+                end : {
                     type: Date,
                     required: true
                 }
