@@ -1,6 +1,5 @@
 <div>
     <!-- INPUT -->
-    {{confirmations}}
     <div ng-show="!confirmations.isCreateDescriptionConfirmed">
         <div>
             <ng-form role="form" name="summaryForm" novalidate>
@@ -22,7 +21,7 @@
                     <label for="notes">Notes</label>
                     <input ng-model="thing.description.notes" id="notes" type="text" class="form-control" placeholder="Additional Notes" ng-maxlength="100">
                 </div>
-                <button type="button" class="btn btn-default" ng-disabled="!(thing.description.headline) || !(thing.description.summary)" ng-click="confirmations.isCreateDescriptionConfirmed=true">OK</button>
+                <button type="button" class="btn btn-default" ng-disabled="!(thing.description.headline) || !(thing.description.summary)" ng-click="confirmations.isCreateDescriptionConfirmed=true">Confirm Description</button>
             </ng-form>
         </div>
     </div>
@@ -42,7 +41,7 @@
             <div ng-show="!!thing.description.notes">
                 <h2> Notes: </h2> {{thing.description.notes}}
             </div>
-            <button type="button" class="btn btn-warning" ng-click="confirmations.isCreateDescriptionConfirmed=false">Edit</button>
+            <button type="button" class="btn btn-warning" ng-click="confirmations.isCreateDescriptionConfirmed=false">Edit Description</button>
         </div>
     </div>
 </div>

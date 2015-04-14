@@ -5,7 +5,13 @@
     <div class="panel-body">
         <ul>
             <li ng-repeat="schedule in time.schedules">
-                {{schedule.recurrenceType}} {{schedule.recurringDay}} at {{schedule.startTime}} for {{schedule.duration}} minutes
+                <div ng-if="schedule.recurrenceType">
+                    Every {{schedule.start | date : 'EEEE'}}  from  {{schedule.start | date: 'shortTime'}}
+                    to {{schedule.end  | date : 'EEEE'}}  from  {{schedule.end | date: 'shortTime'}}
+                </div>
+                <div ng-if="!schedule.recurrenceType">
+                    From {{schedule.start | date: 'medium'}} to {{schedule.end | date: 'medium'}}
+                </div>
             </li>
         </ul>
     </div>

@@ -27,7 +27,6 @@ exports.create = function(req, res) {
 		}
 	});
 };
-git 
 /**
  * Show the current Resource
  */

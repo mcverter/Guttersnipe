@@ -12,7 +12,7 @@
         function activate() {
             Resources.getAllResources()
                 .then(function(data) {
-                    data = Times.transformAllTimes(data);
+//                    data = Times.transformAllTimes(data);
                     vm.resources = data;
                     vm.map = Places.createMapFromResources(data);
                 console.log('vm map is' , vm.map);

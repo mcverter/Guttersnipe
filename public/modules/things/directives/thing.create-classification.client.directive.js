@@ -29,23 +29,20 @@
             $scope.type = '';
             $scope.subtypeChoices = [];
             $scope.isTaxonomySet = false;
-
         }
 
         function addSubtype(subtype) {
-            var idx = _.indexOf($scope.subtypeChosen, subtype);
-            if (idx < 0) {
-                $scope.subtypeChosen.push(subtype);
-            }
+            var idx = _.indexOf($scope.subtypeChoices, subtype);
+            $scope.subtypeChoices.splice(idx, 1);
+            $scope.subtypeChosen.push(subtype);
             $scope.thing.taxonomy.subtypes = $scope.subtypeChosen;
         }
 
         function removeSubtype(subtype) {
             if (!$scope.confirmations.isCreateClassificationConfirmed) {
                 var idx = _.indexOf($scope.subtypeChosen, subtype);
-                if (idx >= 0) {
-                    $scope.subtypeChosen.splice(idx, 1);
-                }
+                $scope.subtypeChosen.splice(idx, 1);
+                $scope.subtypeChoices.push(subtype);
                 $scope.thing.subtypeChosen = $scope.subtypeChosen;
             }
         }
@@ -54,6 +51,7 @@
             if (_.indexOf($scope.details, detail) < 0) {
                 $scope.details.push(detail);
             }
+            $scope.detail = '';
             $scope.thing.details = $scope.details;
         }
 

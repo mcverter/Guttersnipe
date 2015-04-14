@@ -8,6 +8,7 @@
         $scope.inputAddress = '';
         $scope.formattedAddress = '';
         $scope.locateAddress = locateAddress;
+        $scope.showMap = false;
 
         function getMap () {
             return {
@@ -29,6 +30,7 @@
 
         function locateAddress ($event, address) {
             $event.preventDefault();
+            $scope.showMap = true;
             var geocoder = new google.maps.Geocoder();
 
             geocoder.geocode( { "address": address },

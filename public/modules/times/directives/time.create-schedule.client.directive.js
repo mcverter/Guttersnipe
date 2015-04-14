@@ -24,6 +24,7 @@
 
                 function addSchedule(e, gutEvent) {
                     e.preventDefault();
+                    gutEvent.title = 'Event';
                     eventSources.push(gutEvent);
                     $modalInstance.dismiss('added');
                 }
@@ -107,7 +108,8 @@
                 controller: CreateScheduleController,
                 scope : {
                     confirmations: '=',
-                    time: '='
+                    time: '=',
+                    headline: '='
                 }
             };
         }]

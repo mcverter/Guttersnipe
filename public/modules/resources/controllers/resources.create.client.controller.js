@@ -2,13 +2,13 @@
 (function() {
     'use strict';
 
-    function ResourceCreateController($scope, Resources, Authentication) {
+    function ResourceCreateController($scope, Resources, $location, $anchorScroll, Authentication) {
         $scope.activate = activate;
         $scope.create = createResource;
 
         $scope.resource = {};
 
-        $scope.isCreateFormConfirmed = isCreateFormConfirmed;
+        $scope.scrollTo = scrollTo;
 
         $scope.confirmations = {
             isCreatePlaceConfirmed : false,
@@ -31,14 +31,28 @@
                 $scope.confirmations.isCreateClassificationConfirmed;
         }
 
+        function scrollTo(id) {
+            $location.hash(id);
+            $anchorScroll();
+        }
+
         function createResource() {
-            Resources.createResource($scope.resource)
-                .then(function(data) {
-                    console.log('Returned data', data)
-                })
-                .catch(function(err) {
-                    console.err('got error', err);
-                });
+
+            if (isCreateFormConfirmed()) {
+                Resources.createResource($scope.resource)
+                    .then(function (data) {
+                        console.log('Returned data', data)
+                    })
+                    .catch(function (err) {
+                        console.err('got error', err);
+                    });
+            }
+            else {
+                $scope.showPlaceConfirmError =  ! $scope.confirmations.isCreatePlaceConfirmed;
+                $scope.showTimeConfirmError =   ! $scope.confirmations.isCreateTimeConfirmed;
+                $scope.showDescriptionConfirmError =  ! $scope.confirmations.isCreateDescriptionConfirmed;
+                $scope.showClassificationConfirmError =  ! $scope.confirmations.isCreateClassificationConfirmed;
+            }
         }
 
     }
@@ -51,6 +65,6 @@
 
     angular.module('resources')
         .controller('ResourcesCreateController',
-        ['$scope', 'Resources', 'Authentication', ResourceCreateController])
+        ['$scope', 'Resources', '$location', '$anchorScroll', 'Authentication', ResourceCreateController])
 
 })();

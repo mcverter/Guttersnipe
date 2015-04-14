@@ -58,7 +58,7 @@
 
                 .state('viewResource', {
                     url: '/resources/:resourceId',
-                    templateUrl: 'modules/resources/templates/view-resource.client.view.html'
+                    templateUrl: 'modules/resources/templates/read/view-resource.client.view.html'
                 }).
                 state('findResource', {
                     url: '/resources/find',
