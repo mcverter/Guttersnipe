@@ -18,6 +18,7 @@
                     <th>Repeats</th>
                     <th>Start Time</th>
                     <th>End Time</th>
+                    <th>Delete</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -26,6 +27,7 @@
                     <td> <div ng-if="event.repeating"> Every {{event.start | date: 'EEEE' }} </div> </td>
                     <td> {{event.start | date: 'hh:mm a' }}</td>
                     <td> {{event.end | date: 'hh:mm a'}} </td>
+                    <td class="alert"> <span  ng-click="removeSchedule(event)" class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
                 </tr>
                 </tbody>
             </table>

@@ -2,7 +2,7 @@ var Brooklyn = [
 //     "updated":"2015-03-07T18:27:32.065Z",
 
 // April 12 = Sunday   "2015-04-13T18:27:00"
-    // April 13 = Monday
+  // April 13 = Monday
 //Perelandra
   {
     thing: {
@@ -22,12 +22,8 @@ var Brooklyn = [
       notes: 'Remsen St across from Borough Hall, between Court and Clinton Sts, Brooklyn'
     },
     time : {
-      schedules : [ {recurrenceType: 'A', start: "2015-04-12T20:45:00", end: "2015-04-12T23:59:59"},
-          {recurrenceType: 'A', start: "2015-04-13T20:45:00", end: "2015-04-13T23:59:59"},
-        {recurrenceType: 'A', start: "2015-04-14T20:45:00", end: "2015-04-14T23:59:59"},
-        {recurrenceType: 'A', start: "2015-04-15T20:45:00", end: "2015-04-15T23:59:59"},
-        {recurrenceType: 'A', start: "2015-04-16T20:45:00", end: "2015-04-16T23:59:59"},
-        {recurrenceType: 'A', start: "2015-04-17T20:45:00", end: "2015-04-17T23:59:59"}],
+      schedules : [ {recurrenceType: 'A', start: "2015-04-13T04:45:00", end: "2015-04-13T06:59:59"}
+      ],
       notes:'8:45 when all the employees leave the store. Trash is collected between 10:30 p and 12:30a. One source says nothing is out on Saturdays.'
     }
   },
@@ -49,7 +45,7 @@ var Brooklyn = [
       address: '  130 Court St  Brooklyn, NY 11201',
       notes: 'On the south side of Atlantic Avenue near Court St in big dumpsters.'
     },
-    time : {schedule: [{recurrenceType: 'E', start: "2015-04-12T24:00:00", end: "2015-04-13T03:00:00"}],
+    time : {schedule: [{recurrenceType: 'E', start: "2015-04-12T6:00:00", end: "2015-04-13T09:00:00"}],
       notes: 'time. *When:* Lately (fall 2012), usually not until about midnight; sometimes earlier.'
     }
   },
@@ -70,12 +66,9 @@ var Brooklyn = [
       notes: 'Large black bags out front.'
     },
     time : {
-      schedules : [{recurrenceType: 'A', start: "2015-04-12T22:00:00", end: "2015-04-12T23:59:59"},
-          {recurrenceType: 'A', start: "2015-04-13T22:00:00", end: "2015-04-13T23:59:59"},
-          {recurrenceType: 'A', start: "2015-04-14T22:00:00", end: "2015-04-14T23:59:59"},
-          {recurrenceType: 'A', start: "2015-04-15T22:00:00", end: "2015-04-15T23:59:59"},
-          {recurrenceType: 'A', start: "2015-04-16T22:00:00", end: "2015-04-16T23:59:59"},
-          {recurrenceType: 'A', start: "2015-04-17T22:00:00", end: "2015-04-17T23:59:59"}],
+      schedules : [{recurrenceType: 'A', start: "2015-04-13T04:00:00", end: "2015-04-13T06:59:59"},
+        {recurrenceType: 'A', start: "2015-04-14T04:00:00", end: "2015-04-14T06:59:59"}
+      ],
       notes:''
     }
   }

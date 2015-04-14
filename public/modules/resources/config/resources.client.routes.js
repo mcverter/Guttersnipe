@@ -34,7 +34,6 @@
                 .state('createResource.singleForm', {
                     url: 'resources/create/form',
                     templateUrl: 'modules/resources/templates/create/create-resource-singleform.client.view.html'
-
                 })
 
                 .state('createResource.description', {

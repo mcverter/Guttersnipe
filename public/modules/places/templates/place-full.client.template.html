@@ -4,10 +4,9 @@
     </div>
     <div class="panel-body">
         <em>Address: </em>    {{place.address}} <br />
-        {{place.coordinates}}
         <ui-gmap-google-map center="map.center" zoom="map.zoom">
-            <ui-gmap-marker coords="map.marker.coords" idkey="map.marker.id">
-            </ui-gmap-marker>
+            <ui-gmap-marker coords="map.marker.coords"
+                            idkey="map.marker.id"></ui-gmap-marker>
         </ui-gmap-google-map>
         <em>Notes: </em>  {{place.notes}}
     </div>

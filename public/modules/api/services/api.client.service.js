@@ -98,7 +98,27 @@
                 });
         }
 
-        function getOneResource() {}
+        function getOneResource(resourceId) {
+          $log.debug('api.resource.getOne');
+
+          var request = {
+            withCredentials: false,
+            method: GET,
+            url: resourcesResource().segment(resourceId).toString()
+          };
+
+          $log.debug('api.resource.request', request);
+
+          return $http(request)
+            .then(function getResourcesOneSuccess(response) {
+              $log.info('api.resources.getOne success ', response.data);
+              return response.data;
+            })
+            .catch(function getResourcesOneError(error) {
+              $log.error('api.resources.getOne failure', error);
+              return error;
+            });
+        }
 
         function deleteResource(resource) {
             $log.debug('api.resources.delete');

@@ -2,7 +2,7 @@
 (function () {
     'use strict';
 
-    function resourcesService (Api, Places, Times, Things) {
+    function resourcesService ($q, Api, Places, Times, Things) {
         var resources = [],
             resourcesService  = {
                 getOneResource: getOneResource,
@@ -43,6 +43,7 @@
             return Api.resources.getAll()
                 .then(function(data){
                     console.log( "data is ", data);
+                    resources = data;
                     return data;
                 })
                 .catch(function(err){
@@ -51,11 +52,30 @@
         }
 
         function getOneResource(resourceId) {
-            var rsc = _.find(resources, {id: resourceId});
-            if (!rsc) {
+          var rsc = _.find(resources, {_id: resourceId});
+          if (rsc) {
+            var deferred = $q.defer();
+            deferred.resolve(rsc);
+            return deferred.promise;
+          }
+          else {
+            return Api.resources.getOne(resourceId)
+              .then(function (data) {
+                console.log("data is ", data);
+                return data;
+              })
+              .catch(function (err) {
+                console.log('error in resources.getAllResources', err);
+              })
+          }
 
-            }
-            return rsc;
+
+      /*
+        var rsc = _.find(resources, {id: resourceId});
+        if (!rsc) {
+        }
+        return rsc;
+        */
         }
 
         function getEmptyResource() {
@@ -70,7 +90,7 @@
     }
 
     angular.module('resources').factory('Resources',
-        ['Api', 'Places', 'Times', 'Things', resourcesService]);
+        ['$q', 'Api', 'Places', 'Times', 'Things', resourcesService]);
 
 })();
 

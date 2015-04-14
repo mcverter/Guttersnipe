@@ -9,7 +9,8 @@
             restrict: 'E',
             templateUrl: templateUrl,
             scope : {
-                place: '='
+                place: '=',
+              map: '='
             }
         };
     }

@@ -2,28 +2,29 @@
     <button type="button" class="close" ng-click="cancelSchedule($event)">&times;</button>
     <h2 class="modal-title" id="deployModalLabel">Choose Schedule</h2>
 </div>
-
 <div class="modal-body">
     <ng-form id="scheduleForm" name="scheduleForm">
         <div>
-            <h3>Recurring Event</h3>
             <div class="checkbox">
-                <label>
-                    <input type="checkbox" ng-model="gutEventrepeating"> Event Repeats every {{ start | date: 'EEEE'}}
-                </label>
+                <h3>  <label>
+                    <input type="checkbox" ng-model="event.repeating">  Repeating Event
+                </label> </h3>
             </div>
         </div>
         <div>
-            <h2>    Event occurs on {{event.start | date: 'fullDate'}}</h2>
+            <h2>    Event occurs
+                <span ng-hide="event.repeating"> on {{event.start | date: 'fullDate'}} </span>
+                <span ng-show="event.repeating"> every {{ event.start | date: 'EEEE'}}</span>
+            </h2>
             <h4>    Start Time </h4>
-            <timepicker ng-model="gutEvent.start" hour-step=1 minute-step=30></timepicker>
+            <timepicker ng-model="event.start" hour-step=1 minute-step=30></timepicker>
             <h4>    Duration </h4>
-            <timepicker ng-model="gutEvent.end" hour-step=1 minute-step=30></timepicker>
+            <timepicker ng-model="event.end" hour-step=1 minute-step=30></timepicker>
         </div>
     </ng-form>
 </div>
 
 <div class="modal-footer">
     <button type="button" class="btn btn-default" ng-click="cancelSchedule($event)">Cancel</button>
-    <button type="button" class="btn btn-primary" ng-disabled="invalidTimes()" ng-click="addSchedule($event, gutEvent)">OK</button>
+    <button type="button" class="btn btn-primary" ng-disabled="invalidTimes()" ng-click="addSchedule($event, event)">OK</button>
 </div>

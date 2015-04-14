@@ -8,6 +8,7 @@ var mongoose = require('mongoose'),
 
 mongoose.connect(db);
 
+mongoose.set('debug', true);
 
 module.exports = {
   mongoose: mongoose,

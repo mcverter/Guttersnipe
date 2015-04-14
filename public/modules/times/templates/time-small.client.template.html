@@ -6,15 +6,14 @@
         <ul>
             <li ng-repeat="schedule in time.schedules">
                 <div ng-if="schedule.recurrenceType">
-                    start: {{schedule.start}} <br />
-                    end: {{schedule.end}} <br />
-                    Every {{schedule.start | date : 'EEEE'}}  from  {{schedule.start | date: 'shortTime'}}
-                    to {{schedule.end  | date : 'EEEE'}}  from  {{schedule.end | date: 'shortTime'}}
+                    Every {{schedule.start | date : 'EEEE'}} <br />
+                    From   {{schedule.start | date : 'EEEE'}}, {{schedule.start | date: 'shortTime'}} <br />
+                    To {{schedule.end  | date : 'EEEE'}}, {{schedule.end | date: 'shortTime'}}
                 </div>
                 <div ng-if="!schedule.recurrenceType">
-                    start: {{schedule.start}} <br />
-                    end: {{schedule.end}} <br />
-                    From {{schedule.start | date: 'medium'}} to {{schedule.end | date: 'medium'}}
+                    On {{schedule.start | date: 'longDate'}} <br />
+                    From   {{schedule.start | date: 'short'}} <br />
+                    To {{schedule.end | date: 'short'}}
                 </div>
             </li>
         </ul>

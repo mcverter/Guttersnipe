@@ -8,7 +8,7 @@
             var templateUrl = templates.main + 'time.schedule-input.client.template.html',
                 MSEC_TO_30MIN = 60 * 30 * 1000,
                 eventSources = [],
-                gutEvent = {};
+                event = {};
 
 
 
@@ -16,17 +16,23 @@
                 $scope.addSchedule = addSchedule;
                 $scope.ok = okSchedule;
                 $scope.cancelSchedule = cancelSchedule;
-                $scope.gutEvent = gutEvent;
+                $scope.event = event;
 
                 function okSchedule() {
                     $modalInstance.close($scope.selected.item);
                 }
 
-                function addSchedule(e, gutEvent) {
-                    e.preventDefault();
-                    gutEvent.title = 'Event';
-                    eventSources.push(gutEvent);
+                function addSchedule(e, event) {
+                  e.preventDefault();
+                  var idx = _.findIndex(eventSources, event);
+                  if (idx === -1) {
+                    event.title = 'Event';
+                    eventSources.push(event);
                     $modalInstance.dismiss('added');
+                  }
+                  else {
+                    $modalInstance.dismiss('already added');
+                  }
                 }
 
                 function cancelSchedule (event) {
@@ -38,6 +44,7 @@
             function CreateScheduleController($scope, $modal) {
                 $scope.calendarSources = [eventSources];
                 $scope.time.schedules = eventSources;
+                $scope.removeSchedule = removeSchedule;
                 $scope.punctualConfig = {
                     calendar: {
                         height: 450,
@@ -52,13 +59,13 @@
                             var modalInstance,
                                 end = new Date(start.getTime() + MSEC_TO_30MIN);
 
-                            gutEvent = {
+                            event = {
                                 repeating: false,
                                 id: 1,
                                 allDay: false
                             };
 
-                            Object.defineProperties(gutEvent, {
+                            Object.defineProperties(event, {
                                 start : {
                                     enumerable: true,
                                     get: function () {
@@ -101,6 +108,10 @@
                         }
                     }
                 }
+              function removeSchedule(sked) {
+                var idx = _.findIndex(eventSources, sked);
+                eventSources.splice(idx, 1);
+              }
             }
             return {
                 restrict: 'E',
