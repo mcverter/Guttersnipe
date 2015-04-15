@@ -2,6 +2,7 @@
     <div class="page-header">
         <h1>Resources</h1>
     </div>
+    Calendar is {{rsc.calendar}}
     <section>
         <tabset>
             <tab heading="List" ng-click="rsc.showMap=false">
@@ -10,8 +11,9 @@
             <tab heading="Map" ng-click="rsc.showMap=true">
                 <resources-map map="rsc.map" showMap="rsc.showMap"></resources-map>
             </tab>
-            <tab heading="Calendar" times="rsc.calendar" ng-click="rsc.showMap=false">
-                <resources-calendar></resources-calendar>
+
+            <tab heading="Calendar"  ng-click="rsc.showMap=false">
+                <resources-calendar calendar="rsc.calendar"></resources-calendar>
             </tab>
         </tabset>
         <div ui-view="tabContent" id="tabContent" class="container admin-content"></div>

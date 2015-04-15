@@ -6,8 +6,9 @@
     var d = date.getDate();
     var m = date.getMonth();
     var y = date.getFullYear();
+    var MS_PER_DAY = 86400000;
 
-
+    console.log('calendar example is ', $scope.calendar);
     /* event source that contains custom events on the scope */
     $scope.events = [
       {title: 'All Day Event',start: new Date(y, m, 1)},
@@ -30,8 +31,26 @@
       }
     };
 
+    function eventFunction(start, end, timezone, callback) {
+      console.log('event function.  start: ', start, ' end ', end);
+
+      var e = {},
+        events = [];
+
+      for(var date = start; date <= end; date.setTime( date.getTime() + MS_PER_DAY )){
+        _.forEach($scope.calendar.repeating[date.getDay()], function(event){
+          console.log('the event is', event, 'the day is', date);
+          var eventStart = new Date(event.start);
+          e.start = date.getTime() + eventStart.getTime() - eventStart.getDay().getTime();
+          e.end = e.start + event.duration;
+          e.title = '<a href="' + event.id + '">' + event.headline + "</a>";
+          events.push(e)
+        })
+      }
+      callback(events);
+    }
     /* event sources array*/
-    $scope.eventSources = [$scope.events];
+    $scope.eventSources = [$scope.events, eventFunction];
     console.log('event sources', $scope.eventSources);
   }
 
@@ -42,7 +61,7 @@
 
       return {
           scope : {
-
+            calendar: '='
           },
         restrict: 'E',
         templateUrl: templateUrl,

@@ -10,8 +10,40 @@
             transformBeforeCreate: transformSchedulesBeforeCreateResource
         };
 
-        function createCalendarFromResources(data) {
+        function createCalendarFromResources(resources) {
+          var dailies = [ [], [], [],  [],  [],  [],   [] ]
 
+          var nonRepeating = {};
+
+          _.forEach(resources, function(rsc){
+            var headline = rsc.thing.description.headline;
+            var id = rsc._id;
+            _.forEach(rsc.time.schedules, function(sked){
+              if (sked.recurrenceType) {
+                var startDT = new Date(sked.start);
+                var endDT = new Date(sked.end);
+                var day = startDT.getDay();
+                var start = startDT.getTime();
+                var duration = endDT.getTime() - startDT.getTime();
+                dailies[day].push({headline: headline, id: id, start: start, duration: duration});
+              }
+              else {
+                var startDT = new Date(sked.start);
+                var endDT = new Date(sked.end);
+                var date = startDT.getDate();
+                var start = startDT.getTime();
+                var duration = endDT.getTime() - startDT.getTime();
+                if (nonRepeating.date) {
+                  nonRepeating[date].push({headline: headline, id: id, start: start, duration: duration})
+                }
+                else {
+                  nonRepeating.date = [{headline: headline, id: id, start: start, duration: duration}]
+                }
+              }
+            })
+          })
+
+          return {repeating: dailies, nonRepeating: nonRepeating};
         }
         function getEmptyTime() {
             return {
