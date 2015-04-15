@@ -2,15 +2,12 @@
 (function () {
     'use strict';
 
-
     angular.module('times')
         .directive('createSchedule',['times_templates', function(templates) {
             var templateUrl = templates.main + 'time.schedule-input.client.template.html',
                 MSEC_TO_30MIN = 60 * 30 * 1000,
                 eventSources = [],
                 event = {};
-
-
 
             function ScheduleModalController ($scope, $modalInstance) {
                 $scope.addSchedule = addSchedule;
@@ -45,7 +42,7 @@
                 $scope.calendarSources = [eventSources];
                 $scope.time.schedules = eventSources;
                 $scope.removeSchedule = removeSchedule;
-                $scope.punctualConfig = {
+                $scope.uiConfig = {
                     calendar: {
                         height: 450,
                         editable: true,

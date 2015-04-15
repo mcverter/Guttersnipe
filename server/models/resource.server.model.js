@@ -69,7 +69,7 @@ var ResourceSchema = new Schema({
         schedules : [
             {
                 recurrenceType: {
-                    type: String,
+                    type: Boolean,
                     enum: recurrenceTypeEnum
                 },
                 start : {
