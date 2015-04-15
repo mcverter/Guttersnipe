@@ -9,12 +9,14 @@
 
         activate();
 
+//        roadrunneratwast: in your controller:  mainview.dirval = []; $http.foo(…).then(function(response) { angular.copy(response.data, mainview.dirval); })
         function activate() {
+            vm.calendar = {repeating: [], nonRepeating: []};
             Resources.getAllResources()
                 .then(function(data) {
                     vm.resources = data;
                     vm.map = Places.createMapFromResources(data);
-                    vm.calendar = Times.createCalendarFromResources(data);
+                   vm.calendar = Times.createCalendarFromResources(data);
                 });
         }
 

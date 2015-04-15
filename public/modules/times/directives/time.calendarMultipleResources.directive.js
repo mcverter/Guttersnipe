@@ -9,14 +9,6 @@
     var MS_PER_DAY = 86400000;
 
     console.log('calendar example is ', $scope.calendar);
-    /* event source that contains custom events on the scope */
-    $scope.events = [
-      {title: 'All Day Event',start: new Date(y, m, 1)},
-      {title: 'Long Event',start: new Date(y, m, d - 5),end: new Date(y, m, d - 2)},
-      {id: 999,title: 'Repeating Event',start: new Date(y, m, d - 3, 16, 0),allDay: false},
-      {id: 999,title: 'Repeating Event',start: new Date(y, m, d + 4, 16, 0),allDay: false},
-      {title: 'Birthday Party',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false},
-    ];
 
     /* config object */
     $scope.uiConfig = {
@@ -31,26 +23,45 @@
       }
     };
 
-    function eventFunction(start, end, timezone, callback) {
-      console.log('event function.  start: ', start, ' end ', end);
+      $scope.events = [
+          {title: 'All Day Event',start: new Date(y, m, 1)},
+          {title: 'Long Event',start: new Date(y, m, d - 5),end: new Date(y, m, d - 2)},
+          {id: 999,title: 'Repeating Event',start: new Date(y, m, d - 3, 16, 0),allDay: false},
+          {id: 999,title: 'Repeating Event',start: new Date(y, m, d + 4, 16, 0),allDay: false},
+          {title: 'Birthday Party',start: new Date(y, m, d + 1, 19, 0),end: new Date(y, m, d + 1, 22, 30),allDay: false},
+          {title: 'Click for Google',start: new Date(y, m, 28),end: new Date(y, m, 29),url: 'http://google.com/'}
+      ];
 
-      var e = {},
-        events = [];
+    $scope.eventFunction = function eventFunction(start, end, timezone, callback) {
+      var events = [];
 
+
+
+
+        console.log('start', start, 'end', end, 'timezone', timezone, 'callback', callback);
       for(var date = start; date <= end; date.setTime( date.getTime() + MS_PER_DAY )){
-        _.forEach($scope.calendar.repeating[date.getDay()], function(event){
-          console.log('the event is', event, 'the day is', date);
-          var eventStart = new Date(event.start);
-          e.start = date.getTime() + eventStart.getTime() - eventStart.getDay().getTime();
-          e.end = e.start + event.duration;
-          e.title = '<a href="' + event.id + '">' + event.headline + "</a>";
-          events.push(e)
+        _.forEach($scope.calendar.repeating[date.getDay()], function(repeater){
+          var repeaterStart = date.getTime() +
+              repeater.start - new Date(repeater.start).setHours(0,0,0,0);  // just the time;
+           events.push({
+              _id: repeater.id,
+              start:  new Date(repeaterStart),
+              end: new Date(repeaterStart + repeater.duration),
+              title: repeater.headline,
+              url: '#/resources/' + repeater.id
+          })
         })
+//          events = $scope.events;
       }
-      callback(events);
+        if (callback) {
+            callback(events.concat($scope.calendar.nonRepeating));
+        } else {
+            callback = timezone;                                    // not sure why the timezone function is null
+            callback(events.concat($scope.calendar.nonRepeating));  // shouldn't need to concat here
+        }
     }
     /* event sources array*/
-    $scope.eventSources = [$scope.events, eventFunction];
+    $scope.eventSources = [$scope.eventFunction];
     console.log('event sources', $scope.eventSources);
   }
 
