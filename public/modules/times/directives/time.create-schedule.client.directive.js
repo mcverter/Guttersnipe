@@ -9,6 +9,35 @@
         eventSources = [],
         event = {};
 
+      function ScheduleModalController ($scope, $modalInstance) {
+        $scope.addSchedule = addSchedule;
+        $scope.ok = okSchedule;
+        $scope.cancelSchedule = cancelSchedule;
+        $scope.event = event;
+
+        function okSchedule() {
+          $modalInstance.close($scope.selected.item);
+        }
+
+        function addSchedule(e, event) {
+          e.preventDefault();
+          var idx = _.findIndex(eventSources, event);
+          if (idx === -1) {
+            event.title = 'Event';
+            eventSources.push(event);
+            $modalInstance.dismiss('added');
+          }
+          else {
+            $modalInstance.dismiss('already added');
+          }
+        }
+
+        function cancelSchedule (event) {
+          event.preventDefault();
+          $modalInstance.dismiss('cancel');
+        }
+      }
+
       function CreateScheduleController($scope, $modal) {
         eventSources = [];
         event = {};
