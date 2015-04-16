@@ -3,7 +3,7 @@
         <h3 class="panel-title">Time</h3>
     </div>
     <div class="panel-body">
-        <ul>
+        <ul> <h3>Schedules</h3>
             <li ng-repeat="schedule in time.schedules">
                 <div ng-if="schedule.recurrenceType">
                     Every {{schedule.start | date : 'EEEE'}}  from  {{schedule.start | date: 'shortTime'}}
@@ -14,5 +14,9 @@
                 </div>
             </li>
         </ul>
+        <div ng-show="time.notes">
+            <h3 >Notes: </h3>
+            <blockquote> {{time.notes}}</blockquote>
+        </div>
     </div>
 </div>

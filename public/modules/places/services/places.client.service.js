@@ -30,7 +30,7 @@
                 marker = {
                     latitude: resource.place.coordinates.lat,
                     longitude: resource.place.coordinates.lng,
-                    title: resource.headline + '<br> \n' +
+                    title: resource.thing.description.headline + '<br> \n' +
                     '<a href="' + fullUrl + '">Full Record</a>',
                     id: idx
 

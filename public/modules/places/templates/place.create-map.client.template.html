@@ -24,12 +24,6 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="placeDescription"> Describe Location</label>
-                    <input ng-model="place.description" type="text"  id="placeDescription" class="form-control" placeholder="Place Description" ng-maxlength="500" ng-required="true">
-                    <p ng-show="!place.description" class="help-block">You must describe the location.</p>
-                </div>
             </div>
 
 
@@ -37,7 +31,7 @@
                 <label for="notes">Notes</label>
                 <input ng-model="place.notes" type="text"  id="notes" class="form-control" placeholder="Additional Notes" ng-maxlength="100" ng-required="true">
             </div>
-            <button type="button" class="btn btn-default" ng-disabled="!(place.description)" ng-click="confirmations.isCreatePlaceConfirmed=true">Confirm Map</button>
+            <button type="button" class="btn btn-default" ng-disabled="!showMap" ng-click="confirmations.isCreatePlaceConfirmed=true">Confirm Map</button>
         </ng-form>
     </div>
 </div>

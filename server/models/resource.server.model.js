@@ -6,10 +6,6 @@
 var mongoose = require('mongoose'),
   Schema = mongoose.Schema;
 
-// node add-freegan-bk.js 
-var recurrenceTypeEnum = ['A', '1', '2', '3', '4', 'L'];
-
-
 var ResourceSchema = new Schema({
   rating: {
     type: Number
@@ -72,23 +68,16 @@ var ResourceSchema = new Schema({
         required: true
       }
     },
-    description : {
-      type: String,
-      required: false
-    },
     notes : {
       type: String,
       required: false
     }
   },
-
-
   time: {
     schedules : [
       {
         recurrenceType: {
-          type: Boolean,
-          enum: recurrenceTypeEnum
+          type: Boolean
         },
         start : {
           type: Date,
@@ -105,18 +94,14 @@ var ResourceSchema = new Schema({
       required: false
     }
   },
-
-
   created: {
     type: Date,
     default: Date.now
   },
-
   updated: {
     type: Date,
     default: Date.now
   },
-
   createdBy: {
     type: Schema.ObjectId,
     ref: 'User'
