@@ -37,7 +37,7 @@
 
 
         /*  URIs for API calls */
-        var apiUri = URI('http://localhost:3000/'),
+        var apiUri = URI(''),
             apiResource = function apiResource() {
                 return apiUri.clone();
             },
