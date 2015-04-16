@@ -2,7 +2,6 @@
     'use strict';
 
     function ClassifyThingController($scope, ResourceTaxonomy) {
-
         $scope.type = '';
         $scope.subtypeChoices = [];
         $scope.subtypeChosen = [];
@@ -21,7 +20,7 @@
             $scope.thing.taxonomy.type = type;
             $scope.type = type;
             $scope.subtypeChoices =
-                _.find(ResourceTaxonomy, {type: type}).subtypes;
+                angular.copy(_.find(ResourceTaxonomy, {type: type}).subtypes);
         }
 
         function unsetType(type) {
@@ -69,8 +68,6 @@
 
 
     angular.module('things')
-
-
         .directive('createClassification',
         ['things_templates',
             function(templates) {
@@ -85,7 +82,6 @@
                     },
 
                     controller: ['$scope', 'TaxonomyService', ClassifyThingController]
-
                 };
             }]
     )
