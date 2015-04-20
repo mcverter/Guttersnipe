@@ -74,8 +74,7 @@ exports.delete = function(req, res) {
  * List of Resources
  */
 exports.list = function(req, res) {
-  var resources = Resource.find();
-	Resource.find().sort('-created').populate('user', 'displayName').exec(function(err, resources) {
+	Resource.find().sort('-created').populate('createdBy', 'username').exec(function(err, resources) {
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)

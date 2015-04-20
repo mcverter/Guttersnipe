@@ -7,6 +7,7 @@
     $scope.create = createResource;
     $scope.resource = {};
     $scope.scrollTo = scrollTo;
+      $scope.authentication = Authentication;
     $scope.confirmations = {
       isCreatePlaceConfirmed : false,
       isCreateTimeConfirmed : false,
@@ -34,6 +35,7 @@
 
     function createResource() {
       if (isCreateFormConfirmed()) {
+        $scope.resource.createdBy = $scope.authentication.user._id;
         Resources.createResource($scope.resource)
           .then(function (data) {
             console.log('Returned data', data);
