@@ -1,4 +1,6 @@
 <section data-ng-controller="ResourcesReadOneController as rsc" data-ng-init="findOne()">
+Resource is {{rsc.resource._id}} <br />
+User is {{rsc.authentication.user._id}}
     <div>
         <div><resource-headline headline="rsc.resource.thing.description.headline"></resource-headline></div>
     </div>
@@ -20,16 +22,23 @@
         </div>
     </div>
 
-    <div class="rating jumbotron">
-        <h2>Comments </h2>
-        <h3>Add a comment</h3> <br />
-        <textarea></textarea> <br />
 
-        <ul>
-            <li> This is great</li>
-            <li> This is really great</li>
-            <li> This is the greatest</li>
-        </ul>
+    <div class="rating jumbotron">
+        <div>
+            <ul>
+                <li ng-repeat="comment in comments">
+                    <blockquote> {{comment.text}}</blockquote>
+                    by {{comment.author}} on {{comment.date}}
+                </li>
+            </ul>
+            <ng-form>
+                <div> Add Comment
+                    <textarea ng-model="comment"></textarea>
+                    <button class="btn btn-default" ng-disabled="!comment"
+                            ng-click="rsc.addComment(comment)">Add</button>
+                </div>
+            </ng-form>
+        </div>
     </div>
 
 

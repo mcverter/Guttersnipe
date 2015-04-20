@@ -10,9 +10,20 @@
         getEmptyResource : getEmptyResource,
         deleteResource: deleteResource,
         createResource: createResource,
-        updateResource: updateResource
+        updateResource: updateResource,
+          addComment: addComment,
+          addRating: addRating
       };
 
+      function addComment(resourceId, userId, text) {
+          console.log('about to add comment');
+          Api.resources.addComment(resourceId, userId, text);
+
+      }
+      function addRating(resourceId, value) {
+          console.log('about to add rating');
+          Api.resources.addRating(resourceId, value);
+      }
     function createResource(resource) {
       Times.transformBeforeCreate(resource.time);
       return Api.resources.post(resource)

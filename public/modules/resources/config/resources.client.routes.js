@@ -28,11 +28,11 @@
                     templateUrl: 'modules/resources/templates/create/create-resource-agreement.client.view.html'
                 })
                 .state('createResource.instructions', {
-                    url: 'resources/create/instructions',
+                    url: '/instructions',
                     templateUrl: 'modules/resources/templates/create/create-resource-instructions.client.view.html'
                 })
                 .state('createResource.singleForm', {
-                    url: 'resources/create/form',
+                    url: '/form',
                     templateUrl: 'modules/resources/templates/create/create-resource-singleform.client.view.html'
                 })
 

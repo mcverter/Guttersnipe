@@ -25,7 +25,7 @@
             // Set top bar menu items
             Menus.addMenuItem('topbar', 'Resources', 'resources', 'dropdown', '/resources(/create)?');
             Menus.addSubMenuItem('topbar', 'resources', 'List Resources', 'resources');
-            Menus.addSubMenuItem('topbar', 'resources', 'New Resource', 'resources/create');
+            Menus.addSubMenuItem('topbar', 'resources', 'New Resource', 'resources/create/agreement');
         }
     ]);
 

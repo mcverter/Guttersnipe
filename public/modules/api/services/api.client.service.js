@@ -17,7 +17,9 @@
                 delete: deleteResource,
                 put: putResource,
                 post: postResource,
-                onUpdate: onUpdateResource
+                onUpdate: onUpdateResource,
+                addComment: addCommentToResource,
+                addRating: addRatingToResource
             },
             kropotkins: {
                 getRandom: getRandomKropotkin
@@ -189,6 +191,56 @@
         }
 
 
+        function addRatingToResource(resourceId, value) {
+            $log.debug('api.resources.put');
+
+            var request = {
+                withCredentials: true,
+                method: POST,
+                url: resourcesResource().segment(resourceId).segment('rate'),
+                data: {value: value}
+            };
+
+            $log.debug('api.resources.rate request', request);
+
+            return $http(request)
+                .then(function rateResourceSuccess(response) {
+                    $log.debug('api.resources.put success', response.data);
+
+                    return response.data;
+                },
+                function rateResourceError(response) {
+                    $log.error('api.resources.put failure', response.data);
+
+                    return response.data;
+                });
+
+        }
+
+        function addCommentToResource(resourceId, userId, text) {
+            $log.debug('api.resources.put');
+
+            var request = {
+                withCredentials: true,
+                method: PUT,
+                url: resourcesResource().segment(resourceId).segment('comment'),
+                data: {user: userId, text: text}
+            };
+
+            $log.debug('api.resources.rate request', request);
+
+            return $http(request)
+                .then(function rateResourceSuccess(response) {
+                    $log.debug('api.resources.put success', response.data);
+
+                    return response.data;
+                },
+                function rateResourceError(response) {
+                    $log.error('api.resources.put failure', response.data);
+
+                    return response.data;
+                });
+        }
         function onUpdateResource(handler) {
             _.on(afterResourceUpdateEventKey, handler);
         }
