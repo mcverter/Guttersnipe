@@ -3,7 +3,10 @@
     // api service test
 
     describe('API Service', function() {
-        beforeEach(function() {});
+      var $apiService;
+
+      beforeEach(module('api'))
+      beforeEach(function() {});
         describe ('should expose Server Kropotkins that ', function(){
             it (' allows any user to Read a random Kropotkin', function() {})
 
