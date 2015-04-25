@@ -7,7 +7,7 @@
     $scope.create = createResource;
     $scope.resource = {};
     $scope.scrollTo = scrollTo;
-      $scope.authentication = Authentication;
+    $scope.authentication = Authentication;
     $scope.confirmations = {
       isCreatePlaceConfirmed : false,
       isCreateTimeConfirmed : false,

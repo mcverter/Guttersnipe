@@ -6,7 +6,6 @@
 
         vm.activate = activate;
         vm.delete = deleteResource;
-
         vm.resource = {};
 
         activate();

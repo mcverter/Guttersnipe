@@ -1,35 +1,35 @@
 (function() {
   'use strict';
 
-  function ResourceReadOneController($stateParams, Resources, Things, Places, Times, Authentication) {
-    var vm = this;
-    vm.resource = [];
-    vm.showMap = false;
-    vm.rating = 0;
-    vm.maxRating = 10;
-      vm.authentication = Authentication;
-    vm.addComment = addComment;
-      vm.addRating = addRating;
+  function ResourceReadOneController($scope, $stateParams, Resources, Authentication) {
+    $scope.resource = [];
+    $scope.showMap = false;
+    $scope.rating = 0;
+    $scope.maxRating = 10;
+    $scope.authentication = Authentication;
+    $scope.addComment = addComment;
+    $scope.addRating = addRating;
 
     activate();
 
-      function addComment(text){
-          console.log('adding comment')
-          Resources.addComment(vm.resource._id, vm.authentication.user._id, text);
-      }
+    function addComment(text){
+      console.log('adding comment')
+      Resources.addComment($scope.resource._id, $scope.authentication.user._id, text);
+    }
 
-      function addRating(value) {
-          Resources.addRating(vm.resource._id, value);
-      }
+    function addRating(value) {
+      Resources.addRating($scope.resource._id, value);
+    }
 
     function activate() {
       Resources.getOneResource($stateParams.resourceId)
         .then(function(rsc) {
-          vm.resource = rsc;
-          vm.options = {scrollwheel: false};
-          var coordinates = vm.resource.place.coordinates;
+          $scope.resource = rsc;
+          console.log('resource', $scope.resource);
+          $scope.options = {scrollwheel: false};
+          var coordinates = $scope.resource.place.coordinates;
 
-          vm.map = {
+          $scope.map = {
             center: {
               latitude: coordinates.lat,
               longitude: coordinates.lng
@@ -51,6 +51,6 @@
 
   angular.module('resources')
     .controller('ResourcesReadOneController',
-    ['$stateParams', 'Resources', 'Things', 'Places', 'Times', 'Authentication', ResourceReadOneController])
+    ['$scope', '$stateParams', 'Resources', 'Authentication', ResourceReadOneController])
 
 })();

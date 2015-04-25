@@ -2,17 +2,17 @@
 
     describe('resourcesController', function () {
 
-        var $controllerConstructor,
+        var $controllerProvider,
             scope;
 
         beforeEach(module('resources'));
         beforeEach(inject(function($controller, $rootScope){
-            $controllerConstructor = $controller;
+            $controllerProvider = $controller;
             scope = $rootScope.$new();
         }));
 
         it('should have some resources', function() {
-            var ctrl = $controllerConstructor(
+            var ctrl = $controllerProvider(
                 'resourcesController', {
                     $scope: scope
                 });
