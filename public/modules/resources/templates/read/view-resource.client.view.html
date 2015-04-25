@@ -1,13 +1,12 @@
-<section data-ng-controller="ResourcesReadOneController as rsc" data-ng-init="findOne()">
-Resource is {{rsc.resource._id}} <br />
-User is {{rsc.authentication.user._id}}
+<section data-ng-controller="ResourcesReadOneController" data-ng-init="findOne()">
+Resource {{resource}}
     <div>
-        <div><resource-headline headline="rsc.resource.thing.description.headline"></resource-headline></div>
+        <div><resource-headline headline="resource.thing.description.headline"></resource-headline></div>
     </div>
     <div>
-        <div><thing-full thing="rsc.resource.thing"></thing-full></div>
-        <div><place-full place="rsc.resource.place"  map="rsc.map"></place-full></div>
-        <div><time-full time="rsc.resource.time"></time-full></div>
+        <div><thing-full thing="resource.thing"></thing-full></div>
+        <div><place-full place="resource.place"  map="map"></place-full></div>
+        <div><time-full time="resource.time"></time-full></div>
     </div>
 
     <div><resource-method></resource-method></div>
@@ -17,7 +16,7 @@ User is {{rsc.authentication.user._id}}
         <div> Current rating:  8</div>
 
         <div> Rate this resource:
-            <rating ng-model="rsc.rating" max="rsc.maxRating"
+            <rating ng-model="rating" max="maxRating"
                     readonly="false"></rating>
         </div>
     </div>
@@ -35,7 +34,7 @@ User is {{rsc.authentication.user._id}}
                 <div> Add Comment
                     <textarea ng-model="comment"></textarea>
                     <button class="btn btn-default" ng-disabled="!comment"
-                            ng-click="rsc.addComment(comment)">Add</button>
+                            ng-click="addComment(comment)">Add</button>
                 </div>
             </ng-form>
         </div>
@@ -56,9 +55,9 @@ User is {{rsc.authentication.user._id}}
     <small>
         <em class="text-muted">
             Created on
-            <span data-ng-bind="rsc.resource.created | date:'mediumDate'"></span>
+            <span data-ng-bind="resource.created | date:'mediumDate'"></span>
             by
-            <span data-ng-bind="rsc.resource.createdBy.username"></span>
+            <span data-ng-bind="resource.createdBy.username"></span>
         </em>
     </small>
 </section>
