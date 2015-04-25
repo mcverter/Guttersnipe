@@ -60,7 +60,6 @@
       else {
         return Api.resources.getOne(resourceId)
           .then(function (data) {
-            console.log("data is ", data);
             return data;
           })
           .catch(function (err) {
