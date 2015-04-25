@@ -26,7 +26,7 @@ module.exports = {
         'public/lib/angular-sanitize/angular-sanitize.min.js',
         'public/lib/angular-ui-router/release/angular-ui-router.min.js',
         'public/lib/angular-ui-utils/ui-utils.min.js',
-        //'public/lib/angular-bootstrap/ui-bootstrap.min.js',
+        'public/lib/angular-bootstrap/ui-bootstrap.min.js',
         'public/lib/angular-bootstrap/ui-bootstrap-tpls.min.js',
         'public/lib/lodash/dist/lodash.min.js',
         'public/lib/angular-google-maps/dist/angular-google-maps.min.js',
@@ -53,7 +53,7 @@ module.exports = {
     ],
     tests: [
       'public/lib/angular-mocks/angular-mocks.js',
-      'public/modules/*/tests/*.js'
+      'public/modules/resources/tests/*.js'
     ]
   }
 };

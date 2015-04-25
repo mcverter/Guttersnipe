@@ -5,6 +5,8 @@
  */
 var applicationConfiguration = require('./config/config');
 
+console.log('foo');
+console.log(applicationConfiguration.assets.tests);
 // Karma configuration
 module.exports = function(config) {
     config.set({
@@ -39,7 +41,7 @@ module.exports = function(config) {
         // - Safari (only Mac)
         // - PhantomJS
         // - IE (only Windows)
-        browsers: ['Firefox'],
+        browsers: ['Chrome'],
 
         // If browser does not capture in given timeout [ms], kill it
         captureTimeout: 60000,
