@@ -13,7 +13,6 @@
     activate();
 
     function addComment(text){
-      console.log('adding comment')
       Resources.addComment($scope.resource._id, $scope.authentication.user._id, text);
     }
 
@@ -25,7 +24,6 @@
       Resources.getOneResource($stateParams.resourceId)
         .then(function(rsc) {
           $scope.resource = rsc;
-          console.log('resource', $scope.resource);
           $scope.options = {scrollwheel: false};
           var coordinates = $scope.resource.place.coordinates;
 
@@ -44,6 +42,8 @@
             },
             zoom: 16
           }
+
+               console.log('scope', $scope);
         });
     }
 

@@ -78,14 +78,14 @@ exports.list = function(req, res) {
         .populate('createdBy', 'username')
         .populate('comments.author', 'username')
         .exec(function(err, resources) {
-        if (err) {
-            return res.status(400).send({
-                message: errorHandler.getErrorMessage(err)
-            });
-        } else {
-            res.jsonp(resources);
-        }
-    });
+            if (err) {
+                return res.status(400).send({
+                    message: errorHandler.getErrorMessage(err)
+                });
+            } else {
+                res.jsonp(resources);
+            }
+        });
 };
 
 /**
@@ -96,11 +96,11 @@ exports.resourceByID = function(req, res, next, id) {
         .populate('createdBy', 'username')
         .populate('comments.author', 'username')
         .exec(function(err, resource) {
-        if (err) return next(err);
-        if (! resource) return next(new Error('Failed to load Resource ' + id));
-        req.resource = resource ;
-        next();
-    });
+            if (err) return next(err);
+            if (! resource) return next(new Error('Failed to load Resource ' + id));
+            req.resource = resource ;
+            next();
+        });
 };
 
 /**
@@ -121,7 +121,7 @@ exports.addComment = function(req, res, next) {
 
     // find by some conditions and update
     Resource.findByIdAndUpdate(
-         req.params.resourceId,
+        req.params.resourceId,
         {$push: {comments: {comment:req.body.text, author: req.body.user}}},
         {safe: true, upsert: true},
         function(err, resource) {
@@ -136,25 +136,28 @@ exports.addComment = function(req, res, next) {
 
         }
     );
-
-    /*    var resource = Resource({id: req.params.resourceId});
-     resource.comments.push({comment:req.body.text, user: req.body.user});
-
-     resource.save(function(err) {
-     if (err) {
-     console.log("air her", err)
-
-     return res.status(400).send({
-     message: errorHandler.getErrorMessage(err)
-     });
-     } else {
-     console.log("successfulllllly svaed")
-     res.jsonp(resource);
-     }
-     });
-     */
 };
 
 exports.addRating = function(req, res, next) {
     console.log('adding rating');
+    // find by some conditions and update
+    Resource.findByIdAndUpdate(
+        req.params.resourceId,
+        {$inc: {totalRating: req.body.value}},
+        {$inc: {ratingCount: 1}},
+        {safe: true, upsert: true},
+        function(err, resource) {
+            if (err) {
+                console.log('comment error: ', err);
+                return res.status(400).send({
+                    message: errorHandler.getErrorMessage(err)
+                });
+            } else {
+                res.jsonp(resource);
+            }
+
+        }
+    );
+
+
 }
