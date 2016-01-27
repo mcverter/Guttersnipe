@@ -52,6 +52,8 @@ module.exports = {
 
     ],
     tests: [
+      'public/lib/sinon/lib/sinon.js',
+      'public/lib/sinon/lib/sinon/stub.js',
       'public/lib/angular-mocks/angular-mocks.js',
       'public/modules/resources/tests/*.js'
     ]
