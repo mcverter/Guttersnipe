@@ -1,0 +1,10 @@
+<div ng-controller="PickTwoMultiSelectorCtrl">
+  <div class="jasper-control">
+    <select class="form-control" ng-model="primaryValue" ng-options="option.value as option.label for option in primaryOptions">
+    </select>
+  </div>
+  
+  <div class="label label-default">Comparison {{control.label}}</div>
+  <select class="form-control" ng-model="comparisonValue"  ng-options="option.value as option.label for option in comparisonOptions">
+  </select>
+</div>

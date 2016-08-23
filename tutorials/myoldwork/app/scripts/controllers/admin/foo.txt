@@ -1,7 +1,0 @@
-9 +0000] "GET /v1/jasper/reports/all HTTP/1.1" 200 3024 196 196
-DEBUG [2014-08-14 20:44:55,399] com.novantas.foundation.api.resources.ReportsResource: In Rename Category. Request = RenameCategoryRequest{path=analytics/reports/ServicePerformance/toberemoved, name=to be removedddddddd}
-DEBUG [2014-08-14 20:44:55,430] com.novantas.foundation.api.resources.ReportsResource: In Rename Category. row = LinkRow{LinkID=analytics/reports/ServicePerformance/toberemoved, Json={"path": "analytics/reports/ServicePerformance/toberemoved", "activePattern": "analytics/reports/ServicePerformance/toberemoved", "name": "to be removed"}, OrderModifier=0.0}
-DEBUG [2014-08-14 20:44:55,430] com.novantas.foundation.api.resources.ReportsResource: In Rename Category. before json replace json = {"path": "analytics/reports/ServicePerformance/toberemoved", "activePattern": "analytics/reports/ServicePerformance/toberemoved", "name": "to be removed"}
-DEBUG [2014-08-14 20:44:55,435] com.novantas.foundation.api.resources.ReportsResource: In Rename Category. After Json replace = {"name":"to be removedddddddd","path":"analytics/reports/ServicePerformance/toberemoved","activePattern":"analytics/reports/ServicePerformance/toberemoved"}
-0:0:0:0:0:0:0:1 - - [14/Aug/2014:20:44:55 +0000] "POST /v1/categories/rename HTTP/1.1" 204 0 63 63
-DEBUG [2014-08-14 20:44:55,451] com.nova

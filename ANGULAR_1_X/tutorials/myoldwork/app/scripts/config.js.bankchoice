@@ -1,0 +1,43 @@
+(function (angular) {
+
+  'use strict';
+
+  angular.module('app-config', ['debug'])
+    .constant('$config', {
+      apiHost: '$bankchoice_apiHost',
+      jasper: {
+        host: '$bankchoice_jasperHost'
+      },
+      features: {
+        customReports: false
+      },
+      googleMaps: {
+        version: '3',
+        parameters: {
+          'other_params': {
+            sensor: false,
+            language: 'en'
+          }
+        }
+      },
+      googleVisualization: {
+        version: '1',
+        parameters: {}
+      },
+      appKey: 'nova'
+    })
+    .run(['$log', '$debug', '$config',
+      function ($log, $debug, $config) {
+        $debug.$config = $config;
+      }])
+    .config(['$provide', '$logProvider',
+      function ($provide, $logProvider) {
+        $provide.decorator('$sniffer', function ($delegate) {
+          $delegate.history = false;
+          return $delegate;
+        });
+
+        $logProvider.debugEnabled($bankchoice_debugEnabled);
+      }]);
+
+})(window.angular);

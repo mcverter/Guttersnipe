@@ -1,0 +1,8 @@
+﻿<div class="nova-panel" ng-class="{'open': open, 'closed': !open}">
+    <div class="nova-panel-toggle">
+        <a href="" ng-click="togglePanel($event)">
+            <i class="fa" ng-class="{'fa-chevron-left': open, 'fa-chevron-right': !open}"></i>
+        </a>
+    </div>
+    <div class="nova-widgets" ng-show="open" ng-transclude></div>
+</div>

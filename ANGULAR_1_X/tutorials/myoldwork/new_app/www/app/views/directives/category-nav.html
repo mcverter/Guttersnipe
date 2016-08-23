@@ -1,0 +1,8 @@
+<ul class="nova-secondary-nav nav-pills nav">
+    <li class="dropdown" ng-repeat="child in categoryLink.children" ng-class="{active: child.active}" ng-show="child.children.length > 0">
+        <a data-toggle="dropdown" ng-href="{{child.path}}"><span ng-bind="child.name"></span><span class="caret"></span><span class="wee">&nbsp;</span></a>
+        <ul class="dropdown-menu" role="menu">
+            <li ng-class="{active: grandchild.active}" ng-repeat="grandchild in child.children"><a role="menuitem" tabindex="-1" ng-href="{{grandchild.path}}" ng-bind="grandchild.name"></a></li>
+        </ul>
+    </li>
+</ul>

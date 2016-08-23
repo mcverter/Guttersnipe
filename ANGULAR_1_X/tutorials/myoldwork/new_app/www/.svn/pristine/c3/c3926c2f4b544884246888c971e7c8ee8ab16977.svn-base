@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<!-- 
+        Novantas autobuild script 1.0
+        Bli - Aug 2014.
+		
+		PROJECT: Stratascape API WWW content token replacement
+	
+-->
+	
+	
+<project name="buildDev" default="pre-build" basedir=".">
+	
+	<property file="buildDev.properties" /> 
+	
+	<target name="pre-build">
+		
+		<echo message="Replace Salesscape conig.js tokens by values from buildDev.properties"/>
+		<replace file="./app/scripts/config.js" token="$salesscape_apiHost" value="${salesscape_apiHost}"/>
+		<replace file="./app/scripts/config.js" token="$salesscape_jasperHost" value="${salesscape_jasperHost}"/>
+		<replace file="./app/scripts/config.js" token="$salesscape_debugEnabled" value="${salesscape_debugEnabled}"/>
+
+		<echo message="Replace BankChoice config.js tokens by values from buildDev.properties"/>
+		<replace file="./app/scripts/config.js" token="$bankchoice_apiHost" value="${bankchoice_apiHost}"/>
+		<replace file="./app/scripts/config.js" token="$bankchoice_jasperHost" value="${bankchoice_jasperHost}"/>
+		<replace file="./app/scripts/config.js" token="$bankchoice_debugEnabled" value="${bankchoice_debugEnabled}"/>
+		
+		
+	</target>
+
+</project>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
+<head>
+    <title>Expenses</title>
+
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 4em 0 0 1em;
+        }
+    </style>
+</head>
+<body>
+<div ng-include="'app/layout/topNav.html'"></div>
+
+<div>
+    <div ng-view></div>
+</div>
+
+
+<!--vendor files-->
+<script src="scripts/angular.js"></script>
+<script src="scripts/angular-route.js"></script>
+
+<!--My files-->
+<script src="app/Expense/expense.js"></script>
+<script src="app/Expense/expenseItem.js"></script>
+
+
+
+</body>
+</html>

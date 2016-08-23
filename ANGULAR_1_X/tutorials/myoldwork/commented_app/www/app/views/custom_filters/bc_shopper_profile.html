@@ -1,0 +1,41 @@
+<div ng-controller="BCShopperProfileSelectorCtrl" class="widget-normal">
+  <div style="height:10px;" ng-show="!allValue"></div>
+
+  <div class="radio" ng-show="allValue">
+    <label>
+      <input type="radio" ng-model="selectedProfile" name="profile" id="profile" value="all"> All
+      <help topic="shopper_profile_all" position="right" show="true" class="pull-right">
+    </label>
+  </div>  
+
+  <div class="radio" ng-show="preferenceOptions.length">
+    <label>
+      <input type="radio" ng-model="selectedProfile" name="profile" id="profile" value="preference"> Preference Profile
+      <help topic="shopper_profile_preference" position="right" show="true" class="pull-right">
+    </label>
+    <select class="form-control" ng-model="preferenceValue" ng-disabled="selectedProfile!='preference'">
+      <option ng-repeat="option in preferenceOptions" value="{{option.value}}" ng-selected="{{option.selected}}" ng-bind="option.label"></option>
+    </select>
+  </div>  
+  
+  <div class="radio" ng-show="behaviorOptions.length">
+    <label>
+      <input type="radio" ng-model="selectedProfile" name="profile" id="profile" value="behavior"> Behavior Profile
+      <help topic="shopper_profile_behavior" position="right" show="true" class="pull-right">
+    </label>
+    <select class="form-control" ng-model="behaviorValue" ng-disabled="selectedProfile!='behavior'">
+      <option ng-repeat="option in behaviorOptions" value="{{option.value}}" ng-selected="{{option.selected}}" ng-bind="option.label"></option>
+    </select>
+  </div>  
+
+  <div class="radio" ng-show="choiceOptions.length">
+    <label>
+      <input type="radio" ng-model="selectedProfile" name="profile" id="profile" value="choice"> Choice Profile
+      <help topic="shopper_profile_choice" position="right" show="true" class="pull-right">
+      <span style="float:right;padding-top:3px;" class="fa fa-question-circle" data-toggle="tooltip" data-placement="right" title=""></span>
+    </label>
+    <select class="form-control" ng-model="choiceValue" ng-disabled="selectedProfile!='choice'">
+      <option ng-repeat="option in choiceOptions" value="{{option.value}}" ng-selected="{{option.selected}}" ng-bind="option.label"></option>
+    </select>
+  </div>  
+</div>

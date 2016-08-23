@@ -1,0 +1,30 @@
+<div class="container settings">
+  <div class="nova-content">
+    <div class="form-group">
+      <label for="name">Select User</label>
+      <select class="form-control" ng-change="userChanged()"
+          ng-model="selectedUser"
+          ng-options="u.name for u in users">
+      </select>
+    </div>
+
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#roles" data-toggle="tab">Roles</a></li>
+      <li><a href="#branches" data-toggle="tab">Branches</a></li>
+      <li><a href="#reports" data-toggle="tab">Reports</a></li>
+    </ul>
+    
+    <div class="tab-content">
+      <div class="tab-pane active" id="roles">Roles
+        <select ng-model="selectedRoles" multiple ng-options="role.name for role in roles" class="form-control" ng-change="rolesChanged()"></select>
+      </div>
+      <div class="tab-pane" id="branches">
+        <ul>
+          <li ng-repeat="node in branches" ng-include="'views/treeItem.html'"></li>
+        </ul>
+      </div>
+      <div class="tab-pane" id="reports">Report list</div>
+    </div>    
+
+  </div>
+</div>

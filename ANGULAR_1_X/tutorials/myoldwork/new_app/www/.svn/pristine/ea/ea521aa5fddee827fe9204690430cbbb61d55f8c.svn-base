@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+
+<!-- 
+        Novantas autobuild script 1.0
+        Bli - June 2014.
+		
+		PROJECT: Salesscape WWW content pre-build
+
+		input parameters:
+			- useContext     -> (salesscape, bankchoice)
+			- buildNum       -> build number
+    -->
+	
+	
+<project name="salesscape-www" default="pre-build" basedir=".">
+	
+	<target name="pre-build">
+		
+		<echo>Pre-build the war file</echo>
+		<echo message="Product Context: ${useContext}"/>
+		<echo message="BuildVersion: ${buildNum}"/>
+
+		<echo message="config.js.${useContext} to config.js"/>
+		<copy file="./app/scripts/config.js.${useContext}" tofile="./app/scripts/config.js" overwrite="true"/> 
+			
+		<echo message="${useContext}-logo.png to nova-logo.png"/>
+		<copy file="./app/styles/images/${useContext}-logo.png" tofile="./app/styles/images/nova-logo.png" overwrite="true"/> 
+
+		<echo message="Copying index.html.${useContext}.xml to index.html"/>
+		<copy file="./app/index.html.${useContext}" tofile="./app/index.html" overwrite="true"/> 
+		
+		<echo message="Set the build number"/>
+		<replace file="./app/index.html" token="Copyright 2014 Novantas" value="Copyright 2014 Novantas; build ${buildNum}"/>
+		
+		<echo message="Disable debugging"/>
+		<replace file="./app/scripts/config.js" token="$logProvider.debugEnabled(true)" value="$logProvider.debugEnabled(false)"/>		
+		
+	</target>
+
+</project>

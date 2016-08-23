@@ -1,0 +1,3 @@
+<select class="form-control" ng-model="control.value">
+    <option ng-repeat="option in control.state.options" value="{{option.value}}" ng-selected="{{option.selected}}" ng-bind="option.label"></option>
+</select>
