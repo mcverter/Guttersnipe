@@ -1,0 +1,309 @@
+￼Software Requirement Specifications (1.0)
+Date Version 10/17/2012 0.1 10/18/2012 0.3
+Revision History
+Description Draft
+Draft
+1.0 Release
+Author Mitchell Verter
+Mitchell Verter Mitchell Verter
+10/19/2012 1.0
+Name
+Mitchell Verter Jorge Yau Shamrat Basnet
+Lovepreet Singh
+First Row Movies Founders
+Role Project Manager, coder
+Chief Technology Officer, coder Front-end Programmer, coder
+Back-end Programmer, coder
+Table of Contents
+1. Introduction 4 1.1.Purpose 4 1.2.Scope 4 1.3.Acronyms and Abbreviations 5 1.4.References 5 1.5.Summary 5
+2. Overview 6 2.1.Use-Case 6 2.1.1. Diagrams 6 2.1.2. Descriptions 7 2.2.Assumptions and Dependencies 8
+3. Specific Requirements 9 3.1.Collaboration Diagrams 9 3.1.1. User 9
+3.1.2. Guest 14 3.1.3. Registered User 17 3.1.4. Customer 20 3.1.5. Admin 24
+3.2.ECS System State Diagram 28 3.3.ER Class Diagram 29 3.4.Supplementary Software Requirements 30
+4. Supporting Information 31 4.1.Appendix A: User-Interface Prototypes 32
+Software Requirements Specification
+1. Introduction 1.1. Purpose
+First Row Movies (FRW) promises to be the premiere community for purchasing and sharing movies over the web.
+This Document will detail the features of First Row Movies, and will serve as a guide to developers and as a legal document for prospective clients.
+1.2. Scope. 1.2.1.
+1.2.2.
+1.2.3.
+1.2.4.
+1.2.5.
+1.2.6. 1.2.7.
+User: This is the base class for all users of the system. All users of the System can search through all the movies, browse each movie, read comments and complain about inappropriate comments,
+Guest User: The Guest User class inherits all the functionality of User. In addition, the Guest User has the capacity to register to become a user, to login as a user, and to retrieve a lost username.
+Registered User: Registered User is an abstract base class that inherits all the functionality of User. In addition, the Registered user can watch a movie, reset a password, and logout from the system.
+Customer User: Customer User inherits all the functionality of Registered User. In addition, the Customer User can rate movies, comment on movies, view a shopping cart, and checkout movies.
+Admin User: Admin User inherits all the functionality of Registered User. In addition, the Admin User can erase comments, warn users, suspend users, and delete users.
+Movie: Each movie is categorized according to its genre, director, actors, and date.
+By keeping track of each user’s history of movie purchases and by comparing the user’s interests with other users with similar interests, First Row Movies will be able to recommend new purchases to customers.
+1.3. AcronymsandAbbreviations
+1.3.1. FRM: First Row Movies
+1.3.2. U: User
+1.3.3. GU: Guest User
+1.3.4. RU: Registered User
+1.3.5. CU: Customer User
+1.3.6. AU: Admin User
+1.3.7. SRS: Software Requirements Specification
+1.3.8. GUI: Graphical User Interface.
+1.3.9. FSM: Finite State Machine.
+1.3.10. DB: Database.
+1.3.11. ERCD: Entity-Relation Class Diagram.
+1.4. References
+Appendix A: User Interface Prototypes
+1.5. Summary
+The rest of this SRS is organized as follows:
+1.5.1. 1.5.2.
+Section 2: Gives the overall description of FRW. It contains the Use-Case diagram and descriptions for FRW. Section 2 also contains the assumptions and dependencies of the system.
+Section 3: Gives specific software requirements and functionalities in the form of Mini Use- Case diagrams along with accompanying Collaboration diagrams, Finite State Machine of the system, and ER Class diagram of the system. This section also contains supplementary software requirements of the systems.
+Appendix: The appendix contains user interface prototypes for the system.
+2. Overview
+2.1.1 User Case Diagram
+￼
+2.1.2 Use Case Descriptions
+A)User (U)
+1) Read Abstract: Any U may read the abstract (summary, id, title, stars,
+director, year, etc) of a movie.
+2) Read Comments: Any U may read the comments made about a movie. 3) Complain: Any U may complain about a comment deemed to be
+inappropriate. Flagged comments will sent to AU for review.
+4) Browse: Any U may browse a search result.
+5) Search: Any U may search for movies using any combination of search
+vectors (id, title, starts, director, year, etc.) B) Guest User (GU)
+1) Login: Any GU can login to the system, which transforms GU into a CU or AU .
+2) Register: Any GU may register to become a CU.
+3) Retrieve Username: Any CU who has forgotten her/his user name may
+request (as GU) that user information will be emailed to her/him. C) Registered User (RU)
+1) Logout: Any RU (CU or AU) may log out of her or his account.
+2) Watch Movie: Any RU (CU or AU) may watch movies online.
+3) Reset Password: Any RU (CU or AU) may reset her or his password
+from the Account Settings page. D)Customer User (CU)
+1) Rate: Any CU may give a rating to a movie (0.0 to 5.0, 0.5 increment.) Ratings will be evaluated according to user’s history with Item and added to ratings DB.
+2) Comment: Any CU may comment upon a movie.
+3) Checkout: Any CU may checkout selected items for purchase.
+4) View Cart: Any CU may review the items selected for purchase and
+deselect any of them. E) Admin User (AU)
+1) Suspend User: Any AU may suspend any CU.
+2) Erase Comment: Any AU may erase comment flagged for deletion. 3) Warn: Any AU may send warnings to customer.
+Delete User: Any AU may delete customer from system.
+2.2 Assumptions and Dependencies
+a. The client can run on any contemporary web browser that supports standard HTML, CSS 2.0, JavaScript, and PHP 5.0. It should run well on any contemporary web browser, including the latest versions of Internet Explorer, Firefox, Chrome, Safari, and Opera..
+b. The server must run a PHP 5.0 processing daemon and a MySQL database. Any LAMP/WAMP setup should suffice, as will any other server (IIS, etc) with PHP and mySQL modules installed.
+3. Specific Requirements
+3.1 Collaboration Diagrams
+3.1.1 Shared Collaboration Diagrams
+￼Figure A1: Search
+￼Figure A2: Browse
+￼Figure A3: View Movie Info
+3.1.2 Guest User Collaboration Diagrams
+￼B1: Register
+￼Figure B2: Login
+3.1.3 Regular User Collaboration Diagrams
+￼C1: Watch Movie
+￼Figure C2: Rate
+￼Figure C3: Comment
+￼Figure C4: Complain
+￼Figure C5: Add to Cart
+￼Figure C6: View Cart
+￼Figure C7: Checkout
+￼Figure C8: Logout
+3.1.4 Admin User Collaboration Diagrams
+￼D1: Erase Comment
+￼Figure D2: Ignore Complaint
+￼Figure D3: Warn User
+￼Figure D4: Logout
+Guest User Class
+￼(extends the User Class)
+Attributes:
+***  private $userID;
+***  private $username;
+***  private $accountType; ***  private $userEmail;
+Functions:
+***  public function login($userID, $userPassword)
+// This allows a guest user to log in to the system and become a registered user or admin user
+***  public function register()
+// This allows a guest user to become a registered user
+***  public function complainComment($commentID)
+// This allows a guest user to send a complaint about a comment identified by commentID
+RegisteredUser Class
+￼￼￼(extends the User Class)
+Attributes:
+***  private $userID;
+***  private $username; ***  private $userEmail;
+Functions:
+***  public function getID()
+// This returns the id of the registered user
+***  public function getUsername()
+// This returns the username of the registered user
+***  public function getEmail()
+// This returns the email address of the registered user
+***  public function complainComment($commentID)
+// This allows a registered user to send a complaint about a comment identified by commentID
+***  public function login($userID, $userPassword)
+// This allows a registered user to send a complaint about a comment identified by commentID
+***  public function rateMovie($userID, $movieID, $rating)
+// This allows a registered user to give a rating to a movie.
+***  public function submitComment($userID, $movieID, $commentText)
+// This allows a registered user to post a comment to the movie page identified by movieID
+Movie Class
+￼Attributes:
+***  private $movieID;
+***  private $movieName;
+***  private $movieYear;
+***  private $movieSummary;
+***  private $movieGenre;
+***  private $movieDirector;
+***  private $movieStars;
+***  private $movieRuntime;
+***  private $movieImageLocation; ***  private $movieLocation;
+***  private $movieRating;
+***  private $moviePrice;
+Functions:
+***  function __construct($movieID) // Constructor for the Movie class
+***  public function playMovie($userID, $movieID)
+// Verifies that user has purchased the movie, plays movie in movieLocation
+***  public function browse()
+// Displays all information about movie
+***  public function getMovieId() // Returns movie id
+***  public function getMovieName() // Returns movie name
+***  public function getMovieYear() // Returns movie year
+***  public function getMovieSummary() // Returns movie summary
+***  public function getMovieGenre() // Returns movie genre
+***  public function getMovieDirector() // Returns movie director
+***  public function getMovieStars() // Returns movie stars
+***  public function getMovieRuntime() // Returns movie runtime
+***  public function getMovieImageLocation() // Returns file location of movie poster
+***  public function getMovieLocation() // Returns location of movie file
+***  public function watchMovie() // plays the movie
+***  public function getPrice() // Returns movie price
+Movie Class
+￼Attributes:
+***  private $movieID;
+***  private $movieName;
+***  private $movieYear;
+***  private $movieSummary;
+***  private $movieGenre;
+***  private $movieDirector;
+***  private $movieStars;
+***  private $movieRuntime;
+***  private $movieImageLocation; ***  private $movieLocation;
+***  private $movieRating;
+***  private $moviePrice;
+Functions:
+***  function __construct($movieID) // Constructor for the Movie class
+***  public function playMovie($userID, $movieID)
+// Verifies that user has purchased the movie, plays movie in movieLocation
+***  public function browse()
+// Displays all information about movie
+***  public function getMovieId() // Returns movie id
+***  public function getMovieName() // Returns movie name
+***  public function getMovieYear() // Returns movie year
+***  public function getMovieSummary() // Returns movie summary
+***  public function getMovieGenre() // Returns movie genre
+***  public function getMovieDirector() // Returns movie director
+***  public function getMovieStars() // Returns movie stars
+***  public function getMovieRuntime() // Returns movie runtime
+***  public function getMovieImageLocation() // Returns file location of movie poster
+***  public function getMovieLocation() // Returns location of movie file
+***  public function watchMovie() // plays the movie
+***  public function getPrice() // Returns movie price
+Cart Class
+￼Attributes:
+***  private $totalPrice;
+***  private $checkoutCart = array();
+Functions:
+***  public function getAmountItems()
+// Returns the length of $checkoutCart
+***  public int getCurrentTotal()
+// Returns the current total price of items in the cart
+***  public function removeFromCart($movie) // Removes a movie from the checkout cart
+***  public int checkout($userID, $allMovieIDs)
+// Executes purchase of all movies by the user.
+Comment Class
+￼Attributes:
+private $commentID; private $commentText; private $userName; private $timestamp;
+Functions:
+***  function __construct($commentID, $commentText, $userName, $timestamp) // Constructor for the Comment class
+***  public int getCommentID() *** 
+// Returns the ID of the comment
+***  public function getCommentText() // Gets the text of the comment
+***  public function getUserName()
+// Gets the name of the commenter
+***  public function getTimestamp() // Gets the date of the commenter
+Complaint Class
+￼Attributes:
+***  private $complaintID; ***  private $commentID; ***  private $reason;
+Functions:
+***  function __construct($complaintID, $commentID, $reason) // Constructor for the Complaint class
+***  public function getComplaintID() // Returns the complaint ID
+***  public int getCommentID()
+// Returns the ID of the comment being flagged
+***  public function getReason()
+// Gets the reason for the complaint
+Cart Class
+￼Attributes:
+***  private $totalPrice;
+***  private $checkoutCart = array();
+Functions:
+***  public function getAmountItems()
+// Returns the length of $checkoutCart
+***  public int getCurrentTotal()
+// Returns the current total price of items in the cart
+***  public function removeFromCart($movie) // Removes a movie from the checkout cart
+***  public int getCurrentTotal($userID, $allMovieIDs) // Executes purchase of all movies by the user.
+Rating Class
+￼Attributes:
+***  private $movieID; ***  private $average ; ***  private $oneStars; ***  private $twoStars; ***  private $threeStars; ***  private $fourStars; ***  private $fiveStars;
+Functions:
+***  function __construct($movieID) // Constructor for the Rating class
+***  public function getAverage () // Returns the average rating
+***  public int getOnes()
+// Returns the number of one star ratings
+***  public int getTwos()
+// Returns the number of two star ratings
+***  public int getThrees()
+// Returns the number of three star ratings
+***  public int getFours()
+// Returns the number of four star ratings
+***  public int getFives()
+// Returns the number of five star ratings
+￼
+￼Figure : Complaints.php
+￼Figure :
+￼Figure : register.php
+￼Figure : firstLogin.php
+￼Figure: ViewMovieInfo.php
+￼Figure : browse.php
+* Add functionality to current Classes
+(
+U,
+GU, RU, AU, Movie, Cart
+)
+* Create new Object Classes
+(
+Player,
+Comment,
+Session?
+All Database Returns Need Object Wrapper
+)
+* Create new Logic Classes
+(
+SearchManager, BrowseManager, MovieViewManager, LoginManager, RegisterManager, MovieRatingsInterface, MovieProcessor, CommentManager, CartManager, CheckoutManager, PasswordControl, LogoutControl, CommentControl, FlaggedCommentsManager, WarningSystem, DeleteManager
+)
+Create new GUI Classes
+(
+SearchGUI,
+BrowseGUI, ViewMovieGUI, LoginGUI, MainCustomerPage, MainAdminPage, RegisterGUI, RegistrationSuccessGUI, MoviesBought, MoviePlayerInterface, CommentGUI, ViewCartGUI,
+CartGUI, CheckoutGUI, ConfirmationGUI, ResetPasswordGUI, GuestPage, FlaggedCommentsGUI, ComplaintInterface, ComplaintsInterface, DeleteUserGUI
+)
+Create Database Tables
+(
+MOVIES,
+R_USERS, RATINGS, PURCHASES, COMMENTS, COMPLAINTS
+)
+Create Screen Shots
+(
+SearchGUI,
+BrowseGUI, ViewMovieGUI, LoginGUI, MainCustomerPage, MainAdminPage, RegisterGUI, RegistrationSuccessGUI, MoviesBought, MoviePlayerInterface, CommentGUI, ViewCartGUI,
+CartGUI, CheckoutGUI, ConfirmationGUI, ResetPasswordGUI, GuestPage, FlaggedCommentsGUI, ComplaintInterface, ComplaintsInterface, DeleteUserGUI
+)
