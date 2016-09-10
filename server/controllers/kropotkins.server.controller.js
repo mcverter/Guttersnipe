@@ -39,6 +39,7 @@ exports.read = function(req, res) {
 exports.update = function(req, res) {
 	var kropotkin = req.kropotkin ;
 
+	console.info("in the exports function");
 	kropotkin = _.extend(kropotkin , req.body);
 
 	kropotkin.save(function(err) {
@@ -89,6 +90,7 @@ exports.list = function(req, res) {
  */
 exports.kropotkinByID = function(req, res, next, id) {
   console.log("id " + id);
+	console.info("In kropotkinByID");
   if (id === "random") {
     Kropotkin.random (function(err, kropotkin) {
       if (err) return next(err);
