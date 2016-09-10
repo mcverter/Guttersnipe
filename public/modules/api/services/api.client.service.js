@@ -296,7 +296,11 @@
                 .then(function getKropotkinsAllSuccess(response) {
                     return response.data;
                 })
-                .catch(handleApiError(error, 'getRandomKropotkin'));
+                .catch(function getResourcesAllError(error) {
+                    $log.error('api.kropotkin.getAll failure', error);
+                    return error;
+                });
+            //handleApiError(error, 'getRandomKropotkin'));
         }
 
         function handleApiError(error, errorLocation) {
