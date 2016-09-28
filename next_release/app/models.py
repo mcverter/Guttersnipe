@@ -1,81 +1,110 @@
 from app import db
 
+# A Single User has a single Profile and a single Schedule
+# and has a Mailbox with multiple messages
 class Guttersnipe(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     profile = db.Column(db.Integer, db.ForeignKey('profile.id'))
-    schedule = db.Column(db.Integer, db.ForeignKey('profile.id'))
+    schedule = db.Column(db.Integer, db.ForeignKey('schedule.id'))
     is_admin = db.Column(db.Boolean)
-    created = db.Column(db.DateTime)
-    expiration = db.Column(db.DateTime)
+    created_on = db.Column(db.DateTime)
+    expiration_date = db.Column(db.DateTime)
 
 
-
+# Profile is a Component of Guttersnipe.  1-to-1 relationship
 class Profile(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), index=True, unique=True)
     email = db.Column(db.String(20), unique=True)
     full_name = db.Column(db.String(20), unique=True)
-    password= db.Column(db.String(20), unique=True)
+    password = db.Column(db.String(20), unique=True)
     additional_info = db.Column(db.String(20), unique=True)
 
     def __repr__(self):
         return '<User %r>' % (self.nickname)
 
+# Schedule is a Component of Guttersnipe.  1-to-1 relationship
 class Schedule (db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    calendar: sCalendar_VEVENT
+    calendar = sCalendar_VEVENT
     notes = db.Column(db.String(20))
 
-
-
-
-class Shareable(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    comments = db.relationship('Post', backref='author', lazy='dynamic')
-    thing_id = db.Column(db.Integer, db.ForeignKey('thing.id'))
-    space_id = db.Column(db.Integer, db.ForeignKey('space.id'))
-    time_id = db.Column(db.Integer, db.ForeignKey('time.id'))
-    number_ratings = db.Column(db.Integer)
-    id = db.Column(db.Integer, primary_key=True)
-	total_ratings = db.Column(db.Integer)
-
-    def __repr__(self):
-        return '<User %r>' % (self.nickname)
-
-class Thing(db.Model):
-    type = ENUM
-    subtypes = String []
-    descriptionHow = db.Column(db.String(140))
-    descriptionWhat = db.Column(db.String(140))
-    tags = StringArray []
-
-class Place(db.Model):
-    longditude = db.Column(db.Double)
-    latitude = db.Column(db.Double)
-    canonical_address = db.Column(db.String(140))
-    alternate_names = String[]
-    notes = db.Column(db.String(2054))
-
-class Time(db.Model):
-    calendar = sCalendar_VEVENT
-    notes = db.Column(db.String(2054))
-
-class TagTable(db.Model):
-    tag = db.Column(db.String(140))
-
-
-class BlockUser(db.Model):
-    blocker = db.relationship('Guttersnipe')
-    blocked = db.relationship('Guttersnipe')
-
+# User has Mailbox of Messages.
 class Messages(db.Model):
-    calendar: iCalendar
+    calendar = sCalendar_VEVENT
     text = db.Column(db.String(2054))
     sender = db.Column(db.Integer, db.ForeignKey('guttersnipe.id'))
     recipient = db.Column (db.Integer, db.ForeignKey('guttersnipe.id'))
     sent =  db.Column(db.DateTime)
 
+# User can block another user
+class BlockUser(db.Model):
+    blocker = db.relationship('Guttersnipe')
+    blocked = db.relationship('Guttersnipe')
+
+
+
+
+####################
+## Business Objects
+####################
+
+# A Shareable is a composite of a Time, a Space, and a Thing
+# It can have ratings
+# Users can comment upon it
+class Shareable(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    thing_id = db.Column(db.Integer, db.ForeignKey('thing.id'))
+    space_id = db.Column(db.Integer, db.ForeignKey('space.id'))
+    time_id = db.Column(db.Integer, db.ForeignKey('time.id'))
+
+    #comments
+    comments = db.relationship('Post', backref='author', lazy='dynamic')
+
+    #ratings
+    number_ratings = db.Column(db.Integer)
+    total_ratings = db.Column(db.Integer)
+
+    def __repr__(self):
+        return '<User %r>' % (self.nickname)
+
+
+# Thing is a Component of Shareable.  1-to-1 relationship
+class Thing(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    type = db.Column(Enum("Food", "Shelter", "Medical", "Travel"))
+    subtypes = String []                                # Not a good choice.  Rethink this
+    descriptionHow = db.Column(db.String(140))
+    descriptionWhat = db.Column(db.String(140))
+
+# Space is a Component of Shareable.  1-to-1 relationship
+class Place(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    longditude = db.Column(db.Double)
+    latitude = db.Column(db.Double)
+    canonical_address = db.Column(db.String(560))
+    alternate_names = db.Column(db.ARRAY(db.String(560)))                          # String array works here.  Replace with correct data structure
+    notes = db.Column(db.String(2054))
+
+# Space is a Component of Shareable.  1-to-1 relationship
+class Time(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    calendar = sCalendar_VEVENT                         #sCalendar_VEVENT will be defined soon ...
+    notes = db.Column(db.String(2054))
+
+
+# Shareables can be tagged with attributes
+class Tag(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    tag = db.Column(db.String(140))
+
+class ShareableTagJoinTable(db.Model):
+    tag_id = db.Column(db.Integer, db.ForeignKey('tag.id'))
+    shareable_id = db.Column(db.Integer, db.ForeignKey('shareable.id'))
+
+#Users can comment on Shareables
 class Comment (db.Model):
+    id = db.Column(db.Integer, primary_key=True)
     author = db.Column(db.Integer, db.ForeignKey('guttersnipe.id'))
     shareable = db.Column(db.Integer, db.ForeignKey('guttersnipe.id'))
     text  = db.Column(db.String(2054))
