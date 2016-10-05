@@ -73,9 +73,16 @@ class Shareable(db.Model):
 class Thing(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     type = db.Column(Enum("Food", "Shelter", "Medical", "Travel"))
-    subtypes = String []                                # Not a good choice.  Rethink this
     descriptionHow = db.Column(db.String(140))
     descriptionWhat = db.Column(db.String(140))
+
+
+class SubTypes(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    type_id = Type
+    subtype = db.String(64)
+
+
 
 # Space is a Component of Shareable.  1-to-1 relationship
 class Place(db.Model):
@@ -98,9 +105,14 @@ class Tag(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     tag = db.Column(db.String(140))
 
-class ShareableTagJoinTable(db.Model):
+class Thing_Tag_JoinTable(db.Model):
     tag_id = db.Column(db.Integer, db.ForeignKey('tag.id'))
     shareable_id = db.Column(db.Integer, db.ForeignKey('shareable.id'))
+
+class Thing_Subtype_JoinTable(db.Model):
+    subtype_id = db.Column(db.Integer, db.ForeignKey('subtype.id'))
+    shareable_id = db.Column(db.Integer, db.ForeignKey('shareable.id'))
+
 
 #Users can comment on Shareables
 class Comment (db.Model):
