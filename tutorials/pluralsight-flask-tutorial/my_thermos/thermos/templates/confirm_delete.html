@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}
+Thermos -- Delete bookmark
+{%  endblock %}
+
+{% block content %}
+    <section>
+        <h1 style="clear:both">Confirm Delete</h1>
+
+        {% include "bookmark.html" %}
+
+
+        <form action="" method="post">
+            <span style="color:red" >Are you sure you want to delete this bookmark?</span>
+            <br><br>
+            <a href="{{ url_for('bookmarks.user', username=current_user.username) }}">
+                <button type="button">No, take me out of here</button>
+            </a>
+            <button type="submit">Yes, delete it</button>
+        </form>
+    </section>
+{% endblock %}
+
+{% block sidebar %}
+{% endblock %}

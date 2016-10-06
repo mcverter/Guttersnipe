@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% import "paginate_macros.html" as paginate %}
+
+{% block title %}
+Thermos -- Bookmarks tagged {{ tag }}
+{%  endblock %}
+
+{% block content %}
+    <article>
+        <header>
+            <h1>Bookmarks tagged {{ tag }}</h1>
+
+
+            {{ paginate.render_pagination(pagination, 'tag', name=tag.name) }}
+
+            {% if bookmarks|length > 0 %}
+                {% include "bookmark_list.html" %}
+            {% else %}
+                There are no bookmarks with this tag.
+            {% endif %}
+
+            {{ paginate.render_pagination(pagination, 'tag', name=tag.name) }}
+        </header>
+
+    </article>
+{% endblock %}

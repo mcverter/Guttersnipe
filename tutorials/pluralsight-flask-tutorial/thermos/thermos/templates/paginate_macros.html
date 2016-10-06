@@ -1,0 +1,23 @@
+{% macro render_pagination(pagination, endpoint) %}
+  {% if pagination.pages > 1 %}
+      <div class=pagination>
+      {% if pagination.has_prev %}
+        <a href="{{ url_for(endpoint, page=pagination.prev_num, **kwargs) }}">previous</a>
+      {% endif %}
+      {%- for page in pagination.iter_pages() %}
+        {% if page %}
+          {% if page != pagination.page %}
+            <a href="{{ url_for(endpoint, page=page, **kwargs) }}">{{ page }}</a>
+          {% else %}
+            <strong>{{ page }}</strong>
+          {% endif %}
+        {% else %}
+          <span class=ellipsis>…</span>
+        {% endif %}
+      {%- endfor %}
+      {% if pagination.has_next %}
+        <a href="{{ url_for(endpoint, page=pagination.next_num, **kwargs) }}">next</a>
+      {% endif %}
+      </div>
+  {% endif %}
+{% endmacro %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}
+Thermos -- Welcome
+{%  endblock %}
+
+{% block content %}
+    <article>
+        <header>
+            <h1>Welcome</h1>
+            <p>Thermos is a simple social bookmarking site. Or actually, it is a demo for the <a href="http://www.pluralsight.com">Pluralsight</a> course titled <em>Flask Fundamentals</em>.</p>
+            <p>Don't have an account? Create one by <a href="{{ url_for('auth.signup') }}">Signing up</a></p>
+        </header>
+
+        <section>
+            <h2>Recently added</h2>
+            {% if new_bookmarks.count() > 0 %}
+                {% with bookmarks=new_bookmarks %}
+                    {% include "bookmark_list.html" %}
+                {% endwith %}
+            {% else %}
+                No bookmarks have been added yet.
+            {% endif %}
+        </section>
+    </article>
+{% endblock %}

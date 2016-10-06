@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        {% block styles %}
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.min.css') }}">
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        {% endblock %}
+
+        <script src="{{ url_for('static', filename='js/vendor/modernizr-2.6.2-respond-1.1.0.min.js') }}"></script>
+    </head>
+    <body>
+
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <a href="{{ url_for('main.index') }}"><h1 class="title">Thermos</h1></a>
+                <nav>
+                    <ul>
+                        <li><a href="{{ url_for('bookmarks.add') }}">Add URL</a></li>
+                        {% if current_user.is_authenticated() %}
+                            <li><a href="{{ url_for('bookmarks.user', username=current_user.username) }}">
+                                My Links</a></li>
+                            <li><a href="{{ url_for('auth.logout') }}">Sign out</a></li>
+                        {% else %}
+                            <li><a href="{{ url_for('auth.signup') }}">Sign up</a></li>
+                            <li><a href="{{ url_for('auth.login') }}">Sign in</a></li>
+                        {% endif %}
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+                <article class="flashes">
+                    {% with messages = get_flashed_messages() %}
+                      {% if messages %}
+                        <ul>
+                        {% for message in messages %}
+                          <li>{{ message }}</li>
+                        {% endfor %}
+                        </ul>
+                      {% endif %}
+                    {% endwith %}
+                </article>
+
+                {%  block content %}
+                {%  endblock %}
+
+                {% block sidebar %}
+                    <aside>
+                        <h3>Tags</h3>
+                            {% for t in all_tags() %}
+                                <a href="{{ url_for('bookmarks.tag', name=t) }}">{{ t }}</a>
+                            {% endfor %}
+                    </aside>
+                {% endblock %}
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper">
+                <p>Thermos by <a href="http://www.rjekker.nl">Reindert-Jan Ekker</a> for <a href="http://www.pluralsight.com">Pluralsight</a></p>
+            </footer>
+        </div>
+
+        {{ moment.include_jquery() }}
+        {{ moment.include_moment() }}
+
+        {% block scripts %}
+        {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% from "form_macros.html" import render_field %}
+
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/select2.css') }}">
+{% endblock %}
+
+{% block title %}
+Thermos -- {{ title }}
+{%  endblock %}
+
+{% block content %}
+    <section>
+        <h1>{{ title }}</h1>
+        <form action="" method="post">
+            {{form.hidden_tag()}}
+            <table>
+                {{ render_field(form.url, size=50) }}
+                {{ render_field(form.description, size=50) }}
+                {{ render_field(form.tags, size=50, id="tags") }}
+                <tr class="submit">
+                    <td></td>
+                    <td><button type="submit">Submit</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </section>
+{% endblock %}
+
+{% block sidebar %}
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/vendor/select2.min.js') }}"></script>
+<script>
+$(document).ready(function(){
+    var _tags = {{ all_tags()|map(attribute='name')|list|tojson|safe }};
+    $('#tags').select2({tags: _tags, tokenSeparators: [",", " "]});
+});
+</script>
+{% endblock %}

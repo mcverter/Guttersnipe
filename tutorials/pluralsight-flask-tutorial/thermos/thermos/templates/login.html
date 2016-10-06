@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% from "form_macros.html" import render_field %}
+
+{% block title %}
+Thermos -- Login
+{%  endblock %}
+
+{% block content %}
+    <section>
+        <h1 style="clear: both">Please login</h1>
+        <form action="" method="post">
+            {{form.hidden_tag()}}
+            <table>
+                {{ render_field(form.username, size=50) }}
+                {{ render_field(form.password, size=50) }}
+                {{ render_field(form.remember_me) }}
+                {{ render_field(form.submit) }}
+            </table>
+        </form>
+    </section>
+{% endblock %}
+
+{% block sidebar %}
+{% endblock %}
