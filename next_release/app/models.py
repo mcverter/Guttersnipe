@@ -1,8 +1,19 @@
 from app import db
+from flask_restful import Resource, Api, fields, marshal_with, \
+    reqparse, abort
+
+parser = reqparse.RequestParser()
+TODOS = {
+    'todo1': {'task': 'build an API'},
+    'todo2': {'task': '?????'},
+    'todo3': {'task': 'profit!'},
+}
+
+
 
 # A Single User has a single Profile and a single Schedule
 # and has a Mailbox with multiple messages
-class Guttersnipe(db.Model):
+class Guttersnipe(db.Model, Resource):
     id = db.Column(db.Integer, primary_key=True)
     profile = db.Column(db.Integer, db.ForeignKey('profile.id'))
     schedule = db.Column(db.Integer, db.ForeignKey('schedule.id'))
@@ -10,9 +21,26 @@ class Guttersnipe(db.Model):
     created_on = db.Column(db.DateTime)
     expiration_date = db.Column(db.DateTime)
 
+    def get(self, todo_id):
+        #abort_if_todo_doesnt_exist(todo_id)
+        return TODOS[todo_id]
+
+    def delete(self, todo_id):
+        #abort_if_todo_doesnt_exist(todo_id)
+        del TODOS[todo_id]
+        return '', 204
+
+    def put(self, todo_id):
+        args = parser.parse_args()
+        task = {'task': args['task']}
+        TODOS[todo_id] = task
+        return task, 201
+
+
+
 
 # Profile is a Component of Guttersnipe.  1-to-1 relationship
-class Profile(db.Model):
+class Profile(db.Model, Resource):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), index=True, unique=True)
     email = db.Column(db.String(20), unique=True)
@@ -20,109 +48,86 @@ class Profile(db.Model):
     password = db.Column(db.String(20), unique=True)
     additional_info = db.Column(db.String(20), unique=True)
 
+    def get(self, todo_id):
+        #abort_if_todo_doesnt_exist(todo_id)
+        return TODOS[todo_id]
+
+    def delete(self, todo_id):
+        #abort_if_todo_doesnt_exist(todo_id)
+        del TODOS[todo_id]
+        return '', 204
+
+    def put(self, todo_id):
+        args = parser.parse_args()
+        task = {'task': args['task']}
+        TODOS[todo_id] = task
+        return task, 201
+
+
     def __repr__(self):
         return '<User %r>' % (self.nickname)
 
 # Schedule is a Component of Guttersnipe.  1-to-1 relationship
-class Schedule (db.Model):
+class Schedule (db.Model, Resource):
     id = db.Column(db.Integer, primary_key=True)
-    calendar = sCalendar_VEVENT
+    calendar = db.Column(db.DateTime) #sCalendar_VEVENT
     notes = db.Column(db.String(20))
 
+
+    def get(self, todo_id):
+        #abort_if_todo_doesnt_exist(todo_id)
+        return TODOS[todo_id]
+
+    def delete(self, todo_id):
+        #abort_if_todo_doesnt_exist(todo_id)
+        del TODOS[todo_id]
+        return '', 204
+
+    def put(self, todo_id):
+        args = parser.parse_args()
+        task = {'task': args['task']}
+        TODOS[todo_id] = task
+        return task, 201
+
+
 # User has Mailbox of Messages.
-class Messages(db.Model):
-    calendar = sCalendar_VEVENT
+class Messages(db.Model, Resource):
+    calendar = db.Column(db.DateTime) #sCalendar_VEVENT
     text = db.Column(db.String(2054))
     sender = db.Column(db.Integer, db.ForeignKey('guttersnipe.id'))
     recipient = db.Column (db.Integer, db.ForeignKey('guttersnipe.id'))
     sent =  db.Column(db.DateTime)
 
-# User can block another user
-class BlockUser(db.Model):
-    blocker = db.relationship('Guttersnipe')
-    blocked = db.relationship('Guttersnipe')
+    def get(self, todo_id):
+        #abort_if_todo_doesnt_exist(todo_id)
+        return TODOS[todo_id]
 
+    def delete(self, todo_id):
+        #abort_if_todo_doesnt_exist(todo_id)
+        del TODOS[todo_id]
+        return '', 204
 
+    def put(self, todo_id):
+        args = parser.parse_args()
+        task = {'task': args['task']}
+        TODOS[todo_id] = task
+        return task, 201
 
+class TodoList:
+    def get(self):
+        return TODOS
 
-####################
-## Business Objects
-####################
+    def post(self):
+        args = parser.parse_args()
+        todo_id = int(max(TODOS.keys()).lstrip('todo')) + 1
+        todo_id = 'todo%i' % todo_id
+        TODOS[todo_id] = {'task': args['task']}
+        return TODOS[todo_id], 201
 
-# A Shareable is a composite of a Time, a Space, and a Thing
-# It can have ratings
-# Users can comment upon it
-class Shareable(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    thing_id = db.Column(db.Integer, db.ForeignKey('thing.id'))
-    space_id = db.Column(db.Integer, db.ForeignKey('space.id'))
-    time_id = db.Column(db.Integer, db.ForeignKey('time.id'))
-
-    #comments
-    comments = db.relationship('Post', backref='author', lazy='dynamic')
-
-    #ratings
-    number_ratings = db.Column(db.Integer)
-    total_ratings = db.Column(db.Integer)
-
-    def __repr__(self):
-        return '<User %r>' % (self.nickname)
-
-
-# Thing is a Component of Shareable.  1-to-1 relationship
-class Thing(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    type = db.Column(Enum("Food", "Shelter", "Medical", "Travel"))
-    descriptionHow = db.Column(db.String(140))
-    descriptionWhat = db.Column(db.String(140))
-
-
-class SubTypes(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    type_id = Type
-    subtype = db.String(64)
-
-
-
-# Space is a Component of Shareable.  1-to-1 relationship
-class Place(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    longditude = db.Column(db.Double)
-    latitude = db.Column(db.Double)
-    canonical_address = db.Column(db.String(560))
-    alternate_names = db.Column(db.ARRAY(db.String(560)))                          # String array works here.  Replace with correct data structure
-    notes = db.Column(db.String(2054))
-
-# Space is a Component of Shareable.  1-to-1 relationship
-class Time(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    calendar = sCalendar_VEVENT                         #sCalendar_VEVENT will be defined soon ...
-    notes = db.Column(db.String(2054))
-
-
-# Shareables can be tagged with attributes
-class Tag(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    tag = db.Column(db.String(140))
-
-class Thing_Tag_JoinTable(db.Model):
-    tag_id = db.Column(db.Integer, db.ForeignKey('tag.id'))
-    shareable_id = db.Column(db.Integer, db.ForeignKey('shareable.id'))
-
-class Thing_Subtype_JoinTable(db.Model):
-    subtype_id = db.Column(db.Integer, db.ForeignKey('subtype.id'))
-    shareable_id = db.Column(db.Integer, db.ForeignKey('shareable.id'))
-
-
-#Users can comment on Shareables
-class Comment (db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    author = db.Column(db.Integer, db.ForeignKey('guttersnipe.id'))
-    shareable = db.Column(db.Integer, db.ForeignKey('guttersnipe.id'))
-    text  = db.Column(db.String(2054))
-    created  =  db.Column(db.DateTime)
 
 '''
+# User can block another user
+class BlockUser(db.Model):
 -- One table for each event.  An event may have multiple rRules.
 Create Table [vEvent]
     (vEventID Integer Identity(1, 1) Not Null
