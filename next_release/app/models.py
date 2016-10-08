@@ -14,9 +14,9 @@ TODOS = {
 # A Single User has a single Profile and a single Schedule
 # and has a Mailbox with multiple messages
 class Guttersnipe(db.Model, Resource):
-    id = db.Column(db.Integer, primary_key=True)
-    profile = db.Column(db.Integer, db.ForeignKey('profile.id'))
-    schedule = db.Column(db.Integer, db.ForeignKey('schedule.id'))
+    id = db.Column(db.db.Integer, primary_key=True)
+    profile = db.Column(db.db.Integer, db.ForeignKey('profile.id'))
+    schedule = db.Column(db.db.Integer, db.ForeignKey('schedule.id'))
     is_admin = db.Column(db.Boolean)
     created_on = db.Column(db.DateTime)
     expiration_date = db.Column(db.DateTime)
@@ -41,7 +41,7 @@ class Guttersnipe(db.Model, Resource):
 
 # Profile is a Component of Guttersnipe.  1-to-1 relationship
 class Profile(db.Model, Resource):
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.db.Integer, primary_key=True)
     username = db.Column(db.String(64), index=True, unique=True)
     email = db.Column(db.String(20), unique=True)
     full_name = db.Column(db.String(20), unique=True)
@@ -69,7 +69,7 @@ class Profile(db.Model, Resource):
 
 # Schedule is a Component of Guttersnipe.  1-to-1 relationship
 class Schedule (db.Model, Resource):
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.db.Integer, primary_key=True)
     calendar = db.Column(db.DateTime) #sCalendar_VEVENT
     notes = db.Column(db.String(20))
 
@@ -94,8 +94,8 @@ class Schedule (db.Model, Resource):
 class Messages(db.Model, Resource):
     calendar = db.Column(db.DateTime) #sCalendar_VEVENT
     text = db.Column(db.String(2054))
-    sender = db.Column(db.Integer, db.ForeignKey('guttersnipe.id'))
-    recipient = db.Column (db.Integer, db.ForeignKey('guttersnipe.id'))
+    sender = db.Column(db.db.Integer, db.ForeignKey('guttersnipe.id'))
+    recipient = db.Column (db.db.Integer, db.ForeignKey('guttersnipe.id'))
     sent =  db.Column(db.DateTime)
 
     def get(self, todo_id):
@@ -124,60 +124,99 @@ class TodoList:
         TODOS[todo_id] = {'task': args['task']}
         return TODOS[todo_id], 201
 
-
-'''
 # User can block another user
-class BlockUser(db.Model):
+#class BlockUser(db.Model):
+blockUserTable = db.Table(
+    'followers',
+    db.Column('blocker_id', db.db.Integer, db.ForeignKey('guttersnipe.id')),
+    db.Column('blocked_id', db.db.Integer, db.ForeignKey('guttersnipe.id')))
+
+class Vevent(db.Model):
+    id = db.Column(db.db.Integer, primary_key=True)
+    title = db.String(200)
+    
+class Rrules(db.Model):
+    id = db.Column(db.db.Integer, primary_key=True)
+    vevent_id = db.Column('vevent_id', db.db.Integer, db.ForeignKey('vevent.id'))
+    created = db.Column(db.db.DateTime)
+    description = db.Column(db.String(max))
+    dtStart = db.Column(db.DateTime)
+    dtEnd = db.Column(db.DateTime)
+    duration = db.Column(db.String(20))
+    geoLat = db.Column(db.Float)
+    geoLng = db.Column(db.Float)
+    lastModified = db.Column(db.DateTime)
+    location = db.Column(db.String(max))
+    organizerCN = db.Column(db.String(50))
+    organizerMailTo = db.Column(db.String(100))
+    seq = db.Column(db.Integer)
+    status = db.Column(db.String(9))
+    summary = db.Column(db.String(75))
+    transparent = db.Column(db.Boolean)
+    freq = db.Column(db.String(8))
+    until = db.Column(db.DateTime)
+    count = db.Column(db.Integer)
+    interval = db.Column(db.Integer)
+    bySecond = db.Column(db.String(170))
+    byMinute = db.Column(db.String(170))
+    byHour = db.Column(db.String(61))
+    byDay = db.Column(db.String(35))
+    byMonthDay = db.Column(db.String(200))
+    byYearDay = db.Column(db.String(3078))
+    byWeekNo = db.Column(db.String(353))
+    byMonth = db.Column(db.String(29))
+    wkSt = db.Column(db.String(2))
+    
+'''
 -- One table for each event.  An event may have multiple rRules.
 Create Table [vEvent]
-    (vEventID Integer Identity(1, 1) Not Null
-     Constraint [vEvent.pk]
-     Primary Key
+    (vEventID db.Integer Identity(1, 1)
+     Constraint [vEvent.pk = db.Column(Primary Key
      Clustered
-    ,title nVarChar(200) Not Null);
+    ,title db.String(200));
 
 -- One table for rRules.
 -- My application does NOT support the "bySetPos" rule, so that is not included.
 Create Table [rRule]
-    (rRuleID Integer Identity(1, 1) Not Null
+    (rRuleID db.Integer Identity(1, 1)
      Constraint [rRule.pk]
      Primary Key
      Clustered
-    ,vEventID Integer Not Null
+    ,vEventID db.Integer
      Constraint [fk.vEvent.rRules]
      Foreign Key
      References [vEvent] (vEventID)
      On Update Cascade
      On Delete Cascade
-    ,[class]            varChar(  12) Not Null Default('public')
-    ,[created]         DateTime       Not Null Default(getUTCDate())
-    ,[description]     nVarChar(max)      Null
-    ,[dtStart]         DateTime       Not Null
-    ,[dtEnd]           DateTime           Null
-    ,[duration]         varChar(  20)     Null
-    ,[geoLat]          Float              Null
-    ,[geoLng]          Float              Null
-    ,[lastModified]    DateTime       Not Null Default(getUTCDate())
-    ,[location]        nVarChar(max)      Null
-    ,[organizerCN]     nVarChar(  50)     Null
-    ,[organizerMailTo] nVarChar( 100)     Null
-    ,[seq]             Integer        Not Null Default(0)
-    ,[status]           varChar(   9) Not Null Default('confirmed')
-    ,[summary]         nVarChar(  75)     Null
-    ,[transparent]     Bit            Not Null Default(0)
-    ,[freq]             varChar(   8) Not Null Default('daily')
-    ,[until]           DateTime           Null
-    ,[count]           Integer            Null
-    ,[interval]        Integer        Not Null Default(1)
-    ,[bySecond]         varChar( 170)     Null
-    ,[byMinute]         varChar( 170)     Null
-    ,[byHour]           varChar(  61)     Null
-    ,[byDay]            varChar(  35)     Null
-    ,[byMonthDay]       varChar( 200)     Null
-    ,[byYearDay]        varChar(3078)     Null
-    ,[byWeekNo]         varChar( 353)     Null
-    ,[byMonth]          varChar(  29)     Null
-    ,[wkSt]             Char   (   2)     Null Default('mo'));
+    class]            db.String(12))
+    created]         DateTime)
+    description]     db.String(max)
+    dtStart]         DateTime
+    dtEnd]           DateTime
+    duration]         db.String(20))
+    geoLat]          db.Float)
+    geoLng]          db.Float)
+    lastModified]    DateTime)
+    location]        db.String(max)
+    organizerCN]     db.String(50))
+    organizerMailTo] db.String(100))
+    seq]             db.Integer)
+    status]           db.String(9))
+    summary]         db.String(75))
+    transparent]     Bit)
+    freq]             db.String(8))
+    until]           DateTime
+    count]           db.Integer
+    interval]        db.Integer)
+    bySecond]         db.String(170))
+    byMinute]         db.String(170))
+    byHour]           db.String(61))
+    byDay]            db.String(35))
+    byMonthDay]       db.String(200))
+    byYearDay]        db.String(3078))
+    byWeekNo]         db.String(353))
+    byMonth]          db.String(29))
+    wkSt]             Char   (   2))
 
 -- Class must be one of "Confidential", "Private", or "Public"
 Alter Table [rRule]
@@ -187,12 +226,12 @@ Check ([class] In ('confidential', 'private', 'public'));
 -- Start date must come before End date
 Alter Table [rRule]
 Add Constraint [rRule.ck.dtStart]
-Check ([dtEnd] Is Null Or [dtStart] <= [dtEnd]);
+Check ([dtEnd] Is Or [dtStart] <= [dtEnd]);
 
 -- dtEnd and duration may not both be present
 Alter Table [rRule]
 Add Constraint [rRule.ck.duration]
-Check (Not ([dtEnd] Is Not Null And [duration] Is Not Null));
+Check (Not ([dtEnd] Is And [duration] Is));
 
 -- Check valid values for [freq]. Note that 'single' is NOT in the RFC;
 -- it is an optimization for my particular iCalendar calculation engine.
@@ -213,8 +252,8 @@ Check ([freq] In
 -- If there is a latitude, there must be a longitude, and vice versa.
 Alter Table [rRule]
 Add Constraint [rRule.ck.geo]
-Check (([geoLat] Is Null And [geoLng] Is Null)
-       Or ([geoLat] Is Not Null And [geoLng] Is Not Null));
+Check (([geoLat] Is And [geoLng] Is)
+       Or ([geoLat] Is And [geoLng] Is));
 
 -- Interval must be positive.
 Alter Table [rRule]
@@ -229,7 +268,7 @@ Check ([status] In ('cancelled', 'confirmed', 'tentative'));
 -- Until and Count may not coexist in the same rule.
 Alter Table [rRule]
 Add Constraint [rRule.ck.until and count]
-Check (Not ([until] Is Not Null And [count] Is Not Null));
+Check (Not ([until] Is And [count] Is));
 
 
 -- One table for exceptions to rRules.  In my application, this covers both
@@ -243,17 +282,17 @@ Check (Not ([until] Is Not Null And [count] Is Not Null));
 -- valid iCalendar file--even if I can't import an iCalendar file that makes
 -- use of recurring rules for exceptions to recurring rules.
 Create Table [exDate]
-    (exDateID Integer Identity(1, 1) Not Null
+    (exDateID db.Integer Identity(1, 1)
      Constraint [exDate.pk]
      Primary Key
      Clustered
-    ,rRuleID Integer Not Null
+    ,rRuleID db.Integer
      Constraint [fk.rRule.exDates]
      Foreign Key
      References [rRule] (rRuleID)
      On Update Cascade
      On Delete Cascade
-    ,[date] DateTime Not Null
-    ,[type] varChar(6) Not Null);  -- Type = "exDate" or "rDate" for me; YMMV.
+    date] DateTime
+    type] db.String(6));  -- Type = "exDate" or "rDate" for me; YMMV.
     '''
 
