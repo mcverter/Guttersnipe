@@ -1,5 +1,5 @@
 __author__ = 'mitchell'
-from app import db
+from next_release.app import db
 from flask_restful import Resource, Api, fields, marshal_with, \
     reqparse, abort
 from sqlalchemy import CheckConstraint

@@ -1,7 +1,7 @@
 __author__ = 'mitchell_verter'
 
 from flask import render_template
-from app import app
+from next_release.app import app
 
 @app.route('/')
 @app.route('/index')

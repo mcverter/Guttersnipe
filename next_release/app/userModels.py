@@ -1,8 +1,8 @@
-from app import db
+from next_release.app import db
 from flask_restful import Resource, Api, fields, marshal_with, \
     reqparse, abort
 from sqlalchemy import CheckConstraint
-import icalendarModels
+#from next_release.app import icalendarModels
 
 parser = reqparse.RequestParser()
 TODOS = {
