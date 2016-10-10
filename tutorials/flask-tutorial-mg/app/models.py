@@ -103,3 +103,25 @@ class Post(db.Model):
         return '<Post %r>' % (self.body)
 if enable_search:
     whooshalchemy.whoosh_index(app, Post)
+
+
+
+'''
+        3
+down vote
+accepted
+I solved it by following:
+
+from sqlalchemy.dialects.postgresql import ARRAY, array
+
+class Post(db.Model):
+    __tablename__ = 'post'
+
+    id = db.Column(db.Integer, primary_key=True)
+    tags = db.Column(ARRAY(db.Text), nullable=False, default=db.cast(array([], type_=db.Text), ARRAY(db.Text)))
+    __table_args__ = (db.Index('ix_post_tags', tags, postgresql_using="gin"), )
+And query simply by
+
+db.session.query(Post).filter(Post.tags.contains([tag])
+Have to keep the array type to Text and not String otherwise some error happens
+'''
