@@ -8,7 +8,7 @@ from config import SQLALCHEMY_MIGRATE_REPO
 
 
 
-ver =     api.version_control(SQLALCHEMY_DATABASE_URI, SQLALCHEMY_MIGRATE_REPO)
+ver =  api.version_control(SQLALCHEMY_DATABASE_URI, SQLALCHEMY_MIGRATE_REPO)
 
 migration = SQLALCHEMY_MIGRATE_REPO + ('/versions/%03d_migration.py' (ver + 1))
 tmp_module = imp.new_module('old_model')
