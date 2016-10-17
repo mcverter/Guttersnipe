@@ -58,7 +58,9 @@ class Thing(db.Model):
     __table_args__ = (db.Index('ix_shareable_subtype', tags, postgresql_using="gin"),)
 
 
-#  roadrunneratwast: the normalized approach would be  things(id,type, primary key(id), unique(id,type)) thing_subtypes(thing_id,type,subtype, foreign key (thing_id,type) references things(id,type), foreign key (type,subtype) references subtypes(type,subtype))
+#  roadrunneratwast: the normalized approach would be
+# things(id,type, primary key(id), unique(id,type))
+# thing_subtypes(thing_id,type,subtype, foreign key (thing_id,type) references things(id,type), foreign key (type,subtype) references subtypes(type,subtype))
 
 # Shareables can be tagged with attributes
 class Tag(db.Model):
