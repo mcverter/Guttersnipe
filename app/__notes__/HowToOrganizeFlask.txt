@@ -1,6 +1,6 @@
 https://exploreflask.com/en/latest/organizing.html
 http://flask.pocoo.org/docs/0.11/patterns/packages/
-https://github.com/pallets/flask/wiki/Large-app-how-to
+https://github.com/pallets/q/wiki/Large-app-how-to
 https://www.digitalocean.com/community/tutorials/how-to-structure-large-flask-applications
 https://flask-migrate.readthedocs.io/en/latest/
 https://github.com/nickjj/build-a-saas-app-with-flask
