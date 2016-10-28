@@ -1,0 +1,47 @@
+{
+  "name": "angularjs-toaster",
+  "version": "0.4.15",
+  "description": "AngularJS Toaster is a customized version of toastr non-blocking notification javascript library",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Jiri Kavulak"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jirikavi/AngularJS-Toaster.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "angular": ">1.2.6",
+    "angular-animate": "~1.2.8"
+  },
+  "gitHead": "0df383ea17b7225ce86a6470e65e430961ca8ab3",
+  "bugs": {
+    "url": "https://github.com/jirikavi/AngularJS-Toaster/issues"
+  },
+  "homepage": "https://github.com/jirikavi/AngularJS-Toaster#readme",
+  "_id": "angularjs-toaster@0.4.15",
+  "_shasum": "12a581488a68f551af29e1bb6f01dfbc4bd7bb99",
+  "_from": "angularjs-toaster@*",
+  "_npmVersion": "2.9.0",
+  "_nodeVersion": "2.0.1",
+  "_npmUser": {
+    "name": "maxdow",
+    "email": "marmax@gmail.com"
+  },
+  "dist": {
+    "shasum": "12a581488a68f551af29e1bb6f01dfbc4bd7bb99",
+    "tarball": "http://registry.npmjs.org/angularjs-toaster/-/angularjs-toaster-0.4.15.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "maxdow",
+      "email": "marmax@gmail.com"
+    }
+  ],
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/angularjs-toaster/-/angularjs-toaster-0.4.15.tgz"
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+  <html data-ng-app="myApp">
+  <head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title ng-bind="$state.current.title + ' | Flask-Scaffold'"> </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <!-- <link rel="shortcut icon" href="static/images/" /> -->
+    <base href="/"/>
+     <!--  FONT
+  末末末末末末末末末末末末末末末末末末末末末末末末末 -->
+  <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  末末末末末末末末末末末末末末末末末末末末末末末末末 -->
+  <link rel="stylesheet" href="static/css/normalize.css">
+  <link rel="stylesheet" href="static/css/skeleton.css">
+  <link rel="stylesheet" href="static/css/my.css">
+  <link rel="stylesheet" href="static/css/new.css">
+  <link rel="stylesheet" type="text/css" href="static/node_modules/angular-grid/dist/angular-grid.css">
+    <link rel="stylesheet" type="text/css" href="static/node_modules/angular-grid/dist/theme-fresh.css">
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/0.4.15/toaster.min.css" rel="stylesheet" />
+     <link rel="stylesheet" href="//cdn.jsdelivr.net/flexboxgrid/6.3.0/flexboxgrid.min.css" type="text/css" >
+
+   <!-- JS 末末末末末末末末末末末末末末末末末末末末末末末末末 -->
+    <script src="static/node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="static/js/app.js"></script>
+    <script type="text/javascript" src="static/js/login.js"></script>
+                     <!-- Controllers -->
+        <script type="text/javascript" src="roles/controllers.js"></script>
+    <script type="text/javascript" src="users/controllers.js"></script>
+   <script type="text/javascript" src="static/node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+     <script type="text/javascript" src="static/node_modules/angular-resource/angular-resource.min.js"></script>
+    <script type="text/javascript" src="static/node_modules/angularjs-toaster/toaster.min.js"></script>
+    <script type="text/javascript" src="static/node_modules/satellizer/satellizer.js"></script>
+    <script type="text/javascript" src="static/node_modules/angular-animate/angular-animate.min.js"></script>    
+    <script src="static/node_modules/angular-google-analytics/dist/angular-google-analytics.js"></script>
+    <script src="static/node_modules/angular-grid/dist/angular-grid.js"></script>
+  </head>
+<body  ng-controller="LogoutCtrl">
+    <header  ng-if="isAuthenticated()">
+        <button style="float:right"class="button-primary" ng-click="logout()">Logout</button>
+    </header>
+
+    <!-- Nav and Main Content Start -->
+    <div id='main'>
+
+        <!-- Nav Start -->
+        <nav ng-if="isAuthenticated()">
+            <div>
+                <ul>
+                    <li><a ui-sref="home" ui-sref-active="current">Home</a></li>
+                    <li ng-init="roles_click='false'">
+                       <a ui-sref="roles" id="roles_menu" ng-click="roles_click=!roles_click">Roles</a>
+                       <ul ng-hide="roles_click">
+                            <li><a ui-sref="roles.list" id="roles_list" ui-sref-active="current">List</a></li>
+                            <li><a ui-sref="roles.new" id="roles_new" ui-sref-active="current">New</a></li>
+                       </ul>
+                    </li>
+                    <li ng-init="users_click='false'">
+                        <a ui-sref="users"  id="users_menu" ng-click="users_click=!users_click">Users</a>
+                        <ul  ng-hide="users_click">
+                            <li><a ui-sref="users.list" id="users_list" ui-sref-active="current">List</a></li>
+                            <li><a ui-sref="users.new" id="users_new" ui-sref-active="current">New</a></li>
+                       </ul>
+                    </li>
+
+                                          <!-- menu -->
+                 </div>
+            </nav>
+
+        <!-- Nav End-->
+
+        <!-- Main content Start -->
+        <article>
+
+            <toaster-container></toaster-container>
+            <div class="ui-view-container" ui-view >
+            </div>
+        </article>
+        <!-- Main content End -->
+
+    </div>
+  <!--  <footer ng-if="isAuthenticated()">copyright  <a href="http://techarena51.com">  Techarena51.com </a></footer> -->
+
+
+  </body>
+</html>
