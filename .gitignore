@@ -3,6 +3,7 @@
 *.pyc
 #*
 node_modules
+.idea/
 .idea
 lib
 Previous
@@ -17,4 +18,4 @@ meanjs
 *.sfap0
 0.2.1
 vendor
-
+workspace.xml
