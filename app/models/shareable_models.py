@@ -8,6 +8,10 @@ from icalendar_models import Vevent
 from sqlalchemy.dialects.postgresql import ARRAY, array
 import geoalchemy2
 
+from marshmallow_jsonapi import Schema, fields
+from marshmallow import validate
+
+
 ####################
 # Business Objects
 ####################
