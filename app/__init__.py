@@ -11,6 +11,10 @@ app.config.from_object('config')
 db = SQLAlchemy(app)
 
 
-import models.user_models
-import models.icalendar_models
-import models.shareable_models
+from models.user_models import Guttersnipe, Profile, Schedule, Messages, blockUserTable
+from models.icalendar_models import Vevent, Rrules
+from models.shareable_models import  Shareable, Thing, Space, Time, \
+    Tag, thingTagJoinTable, ShareableType, \
+    Comment
+
+#     thing_Subtype_JoinTable,

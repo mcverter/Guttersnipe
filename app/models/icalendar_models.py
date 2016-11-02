@@ -1,4 +1,4 @@
-from next_release.app import db
+from app import db
 from sqlalchemy import CheckConstraint
 import datetime
 

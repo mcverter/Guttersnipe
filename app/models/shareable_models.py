@@ -3,8 +3,8 @@ from app import db
 from flask_restful import Resource, Api, fields, marshal_with, \
     reqparse, abort
 from sqlalchemy import CheckConstraint, Enum
-import userModels
-from icalendarModels import Vevent
+from user_models import Guttersnipe
+from icalendar_models import Vevent
 from sqlalchemy.dialects.postgresql import ARRAY, array
 import geoalchemy2
 
@@ -60,28 +60,31 @@ class Tag(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     tag = db.Column(db.String(140))
 
-class Thing_Tag_JoinTable(db.Model):
-    tag_id = db.Column(db.Integer, db.ForeignKey('tag.id'))
-    shareable_id = db.Column(db.Integer, db.ForeignKey('shareable.id'))
+thingTagJoinTable = db.Table (
+    'thing_tag_join',
+    db.Column('tag_id', db.Integer, db.ForeignKey('tag.id')),
+    db.Column('thing_id', db.Integer, db.ForeignKey('shareable.id')))
 
-class Thing_Subtype_JoinTable(db.Model):
-    subtype_id = db.Column(db.Integer, db.ForeignKey('subtype.id'))
-    shareable_id = db.Column(db.Integer, db.ForeignKey('shareable.id'))
-
+'''
+thing_Subtype_JoinTable = db.Table(
+    'thing_subtype_join',
+    db.Column('subtype_id', db.Integer, db.ForeignKey('subtype.id')),
+    db.Column('shareable_id', db.Integer, db.ForeignKey('shareable.id')))
+'''
 
 # Space is a Component of Shareable.  1-to-1 relationship
-class Place(db.Model):
+class Space(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    longditude = db.Column(db.Double)
-    latitude = db.Column(db.Double)
+    longditude = db.Column(db.Float)
+    latitude = db.Column(db.Float)
     canonical_address = db.Column(db.String(560))
-    alternate_names = db.Column(db.ARRAY(db.Text))
+    alternate_names = db.Column(ARRAY(db.Text))
     notes = db.Column(db.String(2054))
 
 # Space is a Component of Shareable.  1-to-1 relationship
 class Time(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    calendar = db.Column(Vevent)
+    calendar = db.Column(db.Integer, db.ForeignKey('vevent.id'))
     notes = db.Column(db.String(2054))
 
 #Users can comment on Shareables
