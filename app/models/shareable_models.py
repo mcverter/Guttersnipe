@@ -7,6 +7,7 @@ from user_models import Guttersnipe
 from icalendar_models import Vevent
 from sqlalchemy.dialects.postgresql import ARRAY, array
 import geoalchemy2
+from crud_base_model import CRUD_Base
 
 from marshmallow_jsonapi import Schema, fields
 from marshmallow import validate
@@ -19,7 +20,7 @@ from marshmallow import validate
 # A Shareable is a composite of a Time, a Space, and a Thing
 # It can have ratings
 # Users can comment upon it
-class Shareable(db.Model):
+class Shareable(db.Model, CRUD_Base):
     id = db.Column(db.Integer, primary_key=True)
     thing_id = db.Column(db.Integer, db.ForeignKey('thing.id'))
     space_id = db.Column(db.Integer, db.ForeignKey('space.id'))
@@ -34,6 +35,9 @@ class Shareable(db.Model):
 
     def __repr__(self):
         return '<Shareable %r>' % (self.id)
+
+class ShareableSchema(Schema):
+    pass
 
 class ShareableType(Enum):
     food = "Food"
