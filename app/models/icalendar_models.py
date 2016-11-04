@@ -1,11 +1,19 @@
 from app import db
 from sqlalchemy import CheckConstraint
 import datetime
+from marshmallow_jsonapi import Schema, fields
+from marshmallow import validate
+
 
 
 class Vevent(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.String(200)
+
+class VeventSchema(Schema):
+    id = fields.Integer
+
+
     
 class Rrules(db.Model):
     id = db.Column(db.Integer, primary_key=True)

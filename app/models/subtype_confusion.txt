@@ -1,0 +1,199 @@
+#  roadrunneratwast: the normalized approach would be
+# things(id,type, primary key(id), unique(id,type))
+# thing_subtypes(thing_id,type,subtype, foreign key (thing_id,type) references things(id,type), foreign key (type,subtype) references subtypes(type,subtype))
+#####
+#  WHY AM I HAVING SUCH A HARD TIME WITH THIS???
+#####
+
+#class SubTypes(db.Model):
+#    type = ShareableType
+#    subtype = db.String(64)
+
+#class Thing_Subtypes(db.Model):
+#    thing_id = db.Column(db.Integer, db.ForeignKey('thing.id'))
+#    type = db.Column(ShareableType, db.ForeignKey('thing.type'))
+#    subtype = db(db.Text)
+
+# Not quite right but getting there ...
+#    subtypes = db.Column(ARRAY(db.Text), nullable=False, default=db.cast(array([], type_=db.Text), ARRAY(db.Text)))
+#   ,db.Index('ix_shareable_tags', tags, postgresql_using="gin"))
+
+#  roadrunneratwast: the normalized approach would bethings(id,type, primary key(id), unique(id,type)) thing_subtypes(thing_id,type,subtype, foreign key (thing_id,type) references things(id,type), foreign key (type,subtype) references subtypes(type,subtype))
+
+#   <roadrunneratwast> okelly dokely
+# <StuckMojo> yeah, but he left out the subtype table, like is said, so 3 tables total
+#  * irq1 (~Thunderbi@bip13.neoplus.adsl.tpnet.pl) has joined #postgresql
+#  <StuckMojo> subtypes, things, thing_subtypes
+#  <roadrunneratwast> ok
+#  <roadrunneratwast> so a join table
+#  <StuckMojo> really the "subtypes" table could be called types
+#  <StuckMojo> since it defines both types, and subtypes
+#  <roadrunneratwast> oh ok
+#  <StuckMojo> it's a table that is a list of the possible combinations of type, subtype
+#  <StuckMojo> and it is used to constrain what can go into thing_subtypes
+#  things have a type. thing_subtypes says what subtypes that thing is. the FK to subtypes enforces that a thing of a certain type cannot define itself to be a subtype that is not allowed. get it?
+#  <StuckMojo> it works because of the overlap of the compound FKs in thing_subtypes
+#  <StuckMojo> they overlap on type
+# <StuckMojo> one is the thing_id, and type, pointing back to a thing
+#  <StuckMojo> the other is the type, subtype, pointing to the list of allowed type, subtype combinations
+#  <StuckMojo> see how it works?
+#  <StuckMojo> so a thing of a given type cannot declare a subtype that is not allowed for that type
+#  <StuckMojo> by virtue of that overlap
+'''
+
+;  question about SUBTYPES => A Thing has subtypes.  It can have multiple subtypes.  But these subtypes can only be the child of the given type.  Do I need to place a a constraint on the Thing Table to ensure that this happens?
+
+; for example a THING could be have TYPE=“CAR” and SUBTYPES=“SEDAN, 4-DOOR, VOLVO”  or it could be TYPE=“ANIMAL” and SUBTYPES=“DOG, HAIRLESS” but it wouldn’t make sense to have a CAR that is a DOG.
+
+Create Table THING (
+    id int primary key,
+   name text,
+   type  text references types(type),
+   subtypes text[ ] references subtypes(subtype)
+)
+
+; There are only 4 types .  They are simple strings.  I was instructed to not use ENUMS
+
+Create Table TYPE (
+     type  text,
+ )
+
+Create Table TYPE (
+    type  text references type(type) primary key,
+    subtype text primary key
+ )
+
+
+
+
+ <YS> roadrunneratwast: There are 2 "type" tables in your paste, the second one was intended to be "subtype", right? BTW, why you don't have NOT NULL on type there?
+ <roadrunneratwast> yeah.  the second one is subtypes table
+ <roadrunneratwast> the sql is sloppy
+ <roadrunneratwast> it is actually a quick transliteration from python
+ <roadrunneratwast> these are written in python
+ * ur5us (~ur5us@118-93-193-203.dsl.dyn.ihug.co.nz) has joined #postgresql
+ <roadrunneratwast> but my question is how to model the constraint to prevent a THING which is both TYPE=CAR and SUBTYPE=DOG
+ <roadrunneratwast> to give a THING a list of SUBTYPE strings that must correspond to the TYPE string
+ <roadrunneratwast> so my tables could very well be wrongly conceived.  but that is the question i am after.  and i assume this is pretty common.  it's how to model a 2-level taxonomy
+ <roadrunneratwast> note that a THING does not necessarily have to have a subtype
+ <roadrunneratwast> although.  maybe it should always?
+ * rodneyehrhardt has quit (Read error: Connection reset by peer)
+ <YS> roadrunneratwast: "List of subtype strings" is a bad idea in RDBMS, you'll likely suffer for that. Anyway, have you got a subtype that is a child of 2 different types?
+ <janos_> if your type-to-subtype mappings are pretty gerrymandered, you may have to have a table laying out what can go with what
+ <roadrunneratwast> no suffering.  i am a buddhist
+ <roadrunneratwast> no. it's going to be pretty strict.  i just want to enforce the taxonomy
+ * davidfetter_ge has been known to charge what amount to dukkha fees
+ <janos_> strict can still be gerrymandered
+ <roadrunneratwast> a DOG is a subtype of ANIMAL and not a subtype of VEHICLE
+ <janos_> in fact those tend to be pretty strict
+ <janos_> strict, not necessarily logical
+ <roadrunneratwast> i just want to provide the user with the ability to categorize data
+ <roadrunneratwast> tags is one way
+ <janos_> sure
+ <roadrunneratwast> but those will be user defined
+ * evnmar (~MongooseW@12.104.179.154) has joined #postgresql
+ <roadrunneratwast> i also want system-defined types and subtypes
+ <roadrunneratwast> system-defined taxonomy
+ * DylanJ has quit (Ping timeout: 256 seconds)
+ <roadrunneratwast> and i am confused about how to model that
+ <janos_> but it sounds like someone is going to have to maintain the taxonomy and what's allowed
+ <roadrunneratwast> right
+ <roadrunneratwast> the admin maintains that
+ <janos_> verus somethign purely logic-defined
+ <roadrunneratwast> not the end user
+ <janos_> ok
+ <roadrunneratwast> the end user can add tags
+ * DylanJ (~dylan@unaffiliated/dylanj) has joined #postgresql
+ <roadrunneratwast> not taxonomy
+ * zjlin (~zjlin@220-134-162-141.HINET-IP.hinet.net) has left #postgresql ("WeeChat 1.5")
+ * zjlin (~zjlin@220-134-162-141.HINET-IP.hinet.net) has joined #postgresql
+ <janos_> [type table] [1:M types-to-subtypes] [subtype table] would be one way. or if subtypes are really jsut types too.. that can all go in the types table
+ <roadrunneratwast> i mean.  at bottom they are all just strings
+ <janos_> so a [type table] and a [1:M or M:M type-to-type table]
+ * chasin has quit (Ping timeout: 268 seconds)
+ <roadrunneratwast> [type table] and [1:M type=to=subtype table]
+ <janos_> then they can all be in the types table with some differentiator for the sake of what the admin interface needs in order to grab ahold of the data
+ <roadrunneratwast> right?
+ <roadrunneratwast> sure.  we worry about UI tomorrow
+ <janos_> yeah that could certainly work
+ <roadrunneratwast> ok
+ <roadrunneratwast> but then what about the THING model
+ <janos_> each with some unique id. now as for storing the thing's realtion...
+ <roadrunneratwast> it has a foreign key reference to the TYPE model
+ * sssilver (~sssilver@wsip-68-107-209-203.tu.ph.cox.net) has joined #postgresql
+ <roadrunneratwast> and an array of FK references to the SUBTYPE model
+ <janos_> do you store just the resulting subtype id not worrying about the tree above it? ;)
+ <roadrunneratwast> or no
+ <janos_> if an object can be more than one subtype, i would normalize to a table
+ <janos_> 1:M obect-to-subtype
+ <roadrunneratwast> ok
+ * jonez (~jam@unaffiliated/jonez) has joined #postgresql
+ <roadrunneratwast> but then how do we constrain the type-to-subtype relation
+ <roadrunneratwast> as we give the object subtypes?
+ <breinbaas> ?? ugly duckling
+ <pg_docbot> Nothing found
+ <janos_> constraint in the interface is easy. as far as true db constraints...
+ <davidfetter_ge> are you talking about a constraint that guarantees a tree?
+ <davidfetter_ge> hi breinbaas :)
+ * orospakr has quit (Quit: My MacBook Pro has gone to sleep. ZZZzzz…)
+ <roadrunneratwast> yeah. it is just a 2-level taxonomy
+ * dodobrain (~dodobrain@unaffiliated/freakabcd) has joined #postgresql
+ <roadrunneratwast> TYPE and SUBTYPE
+ <breinbaas> hey davidfetter_ge (are you in Tallinn?)
+ <roadrunneratwast> THING must have one TYPE and may have Multiple SUBTYPES but SUBTYPES must be correspond to TYPE
+ <janos_> the 1:M type-to-subtype combos could have an id and that id is what you're storing against the object if you're sure the taxonomy will only ever be 2-level
+ <janos_> otherwise that's dangerous
+ <tang0> hi all, is .findbyId() a postgresql command? i cant find anything about it online
+ <davidfetter_ge> breinbaas, i might be able to get to pgcon next year. that little replication project had some pretty major scope creep. still digging out from under it as far as non-life-critical travel
+ <roadrunneratwast> yes.  i am sure that is as far as it will go.  2 types.  my word is law
+ <janos_> roadrunneratwast, so basically you're storing a tree id with the object (or multiple)
+ <janos_> so A,B = id of 1 and A,C = id of 2. and you're storing the 1 and 2 in the 1:M table for the object
+ <janos_> guaranteeing that tree
+ * dobber (~dobber@95.111.70.117) has joined #postgresql
+ <roadrunneratwast> ok
+ <janos_> that would be one way
+ <YS> tang0: No.
+ <roadrunneratwast> and what does the column look like in postgres
+ <janos_> the A,B and A,C being defined by the admin
+ <roadrunneratwast> right
+ <roadrunneratwast> admin is the law
+ <janos_> able with columns like (just rough example) -
+ <janos_> id, type_id (fk), subtype_id (fk)
+ * banditron has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+ * orospakr (~orospakr@207.236.193.2) has joined #postgresql
+ <roadrunneratwast> ok. so it needs an array of subtype_id. i can do that
+ <roadrunneratwast> but then how do i enforce the relationship between subtype and type
+ <janos_> and that id is what is referenced in the onject relation - object_id, tree_id where tree_id is that previous tables's id
+ * feivel has quit (Ping timeout: 250 seconds)
+ <janos_> no array needed
+ <janos_> i'd normalize
+ <roadrunneratwast> you mean a join table?
+ <janos_> yep
+ <roadrunneratwast> what does normalize mean
+ <roadrunneratwast> ok
+ * andywww has quit (Quit: andywww)
+ <roadrunneratwast> ok
+ * Ozd (~ozd@unaffiliated/ozd) has joined #postgresql
+ <janos_> so you have a [object] table, your [tree] table from above and a 1:M [object_tree] table
+ <roadrunneratwast> how do i make sure that all columns have the same type_id
+ <janos_> others may have other suggestions, but that's a straight-forward way
+ * wsieroci has quit (Read error: Connection reset by peer)
+ <tang0> @YS, thanks for the reply :)
+ <roadrunneratwast> ok
+ <roadrunneratwast> thanks
+ <roadrunneratwast> thanks
+ <YS> tang0: You're welcome. ;)
+ * skyx (~skyx__@92.63.21.222) has joined #postgresql
+ <janos_> fk's will constrain nicely
+ * wsieroci (~wsieroci@095160155252.dynamic-ww-12.vectranet.pl) has joined #postgresql
+ <roadrunneratwast> ok
+ <roadrunneratwast> thanks
+ * darkbit has quit (Ping timeout: 260 seconds)
+ <janos_> roadrunneratwast, roughly - create table object_tree (id serial primary key, object_id int not null references object(id), tree_id not null references tree(id));
+ <janos_> very rough
+ <roadrunneratwast> ok
+ <roadrunneratwast> thanks
+ <janos_> bbiab, gotta get my youngest
+ <janos_> busstop time
+
+ '''

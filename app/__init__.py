@@ -14,7 +14,7 @@ db = SQLAlchemy(app)
 from models.user_models import Guttersnipe, Profile, Schedule, Messages, blockUserTable
 from models.icalendar_models import Vevent, Rrules
 from models.shareable_models import  Shareable, Thing, Space, Time, \
-    Tag, thingTagJoinTable, ShareableType, \
+    Type, Subtype, \
     Comment
 
 #     thing_Subtype_JoinTable,

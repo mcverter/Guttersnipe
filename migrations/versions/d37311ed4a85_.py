@@ -1,13 +1,13 @@
 """empty message
 
-Revision ID: 1a98a3dadb28
+Revision ID: d37311ed4a85
 Revises: None
-Create Date: 2016-11-02 12:44:08.376099
+Create Date: 2016-11-04 15:51:59.697819
 
 """
 
 # revision identifiers, used by Alembic.
-revision = '1a98a3dadb28'
+revision = 'd37311ed4a85'
 down_revision = None
 
 from alembic import op
@@ -32,11 +32,19 @@ def upgrade():
     op.create_index(op.f('ix_profile_username'), 'profile', ['username'], unique=True)
     op.create_table('space',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('longditude', sa.Float(), nullable=True),
-    sa.Column('latitude', sa.Float(), nullable=True),
-    sa.Column('canonical_address', sa.String(length=560), nullable=True),
+    sa.Column('longitude', sa.Float(), nullable=False),
+    sa.Column('latitude', sa.Float(), nullable=False),
+    sa.Column('canonical_address', sa.Text(), nullable=False),
     sa.Column('alternate_names', postgresql.ARRAY(Text()), nullable=True),
-    sa.Column('notes', sa.String(length=2054), nullable=True),
+    sa.Column('notes', sa.Text(), nullable=True),
+    sa.PrimaryKeyConstraint('id')
+    )
+    op.create_table('type',
+    sa.Column('type', sa.Text(), nullable=False),
+    sa.PrimaryKeyConstraint('type')
+    )
+    op.create_table('vevent',
+    sa.Column('id', sa.Integer(), nullable=False),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_table('schedule',
@@ -45,25 +53,34 @@ def upgrade():
     sa.Column('notes', sa.String(length=20), nullable=True),
     sa.PrimaryKeyConstraint('id')
     )
-    op.create_table('vevent',
-    sa.Column('id', sa.Integer(), nullable=False),
-    sa.PrimaryKeyConstraint('id')
-    )
-    op.create_table('tag',
-    sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('tag', sa.String(length=140), nullable=True),
-    sa.PrimaryKeyConstraint('id')
-    )
     op.create_table('thing',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('descriptionHow', sa.String(length=140), nullable=True),
-    sa.Column('descriptionWhat', sa.String(length=140), nullable=True),
+    sa.Column('description_how', sa.String(length=140), nullable=True),
+    sa.Column('description_what', sa.String(length=140), nullable=True),
     sa.Column('tags', postgresql.ARRAY(Text()), nullable=False),
-    sa.Column('type', app.models.shareable_models.ShareableType(), nullable=True),
-    sa.Column('subtypes', postgresql.ARRAY(Text()), nullable=False),
+    sa.Column('type', sa.String(), nullable=False),
+    sa.ForeignKeyConstraint(['type'], ['type.type'], ),
     sa.PrimaryKeyConstraint('id')
     )
-    op.create_index('ix_shareable_subtype', 'thing', ['tags'], unique=False, postgresql_using='gin')
+    op.create_index('ix_shareable_tags', 'thing', ['tags'], unique=False, postgresql_using='gin')
+    op.create_table('subtype',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('type', sa.String(), nullable=True),
+    sa.Column('subtype', sa.String(), nullable=True),
+    sa.ForeignKeyConstraint(['type'], ['type.type'], ),
+    sa.PrimaryKeyConstraint('id')
+    )
+    op.create_table('guttersnipe',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('profile', sa.Integer(), nullable=True),
+    sa.Column('schedule', sa.Integer(), nullable=True),
+    sa.Column('is_admin', sa.Boolean(), nullable=True),
+    sa.Column('created_on', sa.DateTime(), nullable=True),
+    sa.Column('expiration_date', sa.DateTime(), nullable=True),
+    sa.ForeignKeyConstraint(['profile'], ['profile.id'], ),
+    sa.ForeignKeyConstraint(['schedule'], ['schedule.id'], ),
+    sa.PrimaryKeyConstraint('id')
+    )
     op.create_table('rrules',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('vevent_id', sa.Integer(), nullable=False),
@@ -102,19 +119,8 @@ def upgrade():
     op.create_table('time',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('calendar', sa.Integer(), nullable=True),
-    sa.Column('notes', sa.String(length=2054), nullable=True),
+    sa.Column('notes', sa.Text(), nullable=True),
     sa.ForeignKeyConstraint(['calendar'], ['vevent.id'], ),
-    sa.PrimaryKeyConstraint('id')
-    )
-    op.create_table('guttersnipe',
-    sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('profile', sa.Integer(), nullable=True),
-    sa.Column('schedule', sa.Integer(), nullable=True),
-    sa.Column('is_admin', sa.Boolean(), nullable=True),
-    sa.Column('created_on', sa.DateTime(), nullable=True),
-    sa.Column('expiration_date', sa.DateTime(), nullable=True),
-    sa.ForeignKeyConstraint(['profile'], ['profile.id'], ),
-    sa.ForeignKeyConstraint(['schedule'], ['schedule.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_table('messages',
@@ -128,12 +134,6 @@ def upgrade():
     sa.ForeignKeyConstraint(['sender'], ['guttersnipe.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
-    op.create_table('followers',
-    sa.Column('blocker_id', sa.Integer(), nullable=True),
-    sa.Column('blocked_id', sa.Integer(), nullable=True),
-    sa.ForeignKeyConstraint(['blocked_id'], ['guttersnipe.id'], ),
-    sa.ForeignKeyConstraint(['blocker_id'], ['guttersnipe.id'], )
-    )
     op.create_table('comment',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('author', sa.Integer(), nullable=True),
@@ -146,40 +146,47 @@ def upgrade():
     )
     op.create_table('shareable',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('thing_id', sa.Integer(), nullable=True),
-    sa.Column('space_id', sa.Integer(), nullable=True),
-    sa.Column('time_id', sa.Integer(), nullable=True),
-    sa.Column('number_ratings', sa.Integer(), nullable=True),
-    sa.Column('total_ratings', sa.Integer(), nullable=True),
+    sa.Column('thing_id', sa.Integer(), nullable=False),
+    sa.Column('space_id', sa.Integer(), nullable=False),
+    sa.Column('time_id', sa.Integer(), nullable=False),
+    sa.Column('number_ratings', sa.Integer(), nullable=False),
+    sa.Column('total_ratings', sa.Integer(), nullable=False),
     sa.ForeignKeyConstraint(['space_id'], ['space.id'], ),
     sa.ForeignKeyConstraint(['thing_id'], ['thing.id'], ),
     sa.ForeignKeyConstraint(['time_id'], ['time.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
-    op.create_table('thing_tag_join',
-    sa.Column('tag_id', sa.Integer(), nullable=True),
-    sa.Column('thing_id', sa.Integer(), nullable=True),
-    sa.ForeignKeyConstraint(['tag_id'], ['tag.id'], ),
-    sa.ForeignKeyConstraint(['thing_id'], ['shareable.id'], )
+    op.create_table('followers',
+    sa.Column('blocker_id', sa.Integer(), nullable=True),
+    sa.Column('blocked_id', sa.Integer(), nullable=True),
+    sa.ForeignKeyConstraint(['blocked_id'], ['guttersnipe.id'], ),
+    sa.ForeignKeyConstraint(['blocker_id'], ['guttersnipe.id'], )
+    )
+    op.create_table('thing_subtype_join',
+    sa.Column('subtype_id', sa.Integer(), nullable=True),
+    sa.Column('shareable_id', sa.Integer(), nullable=True),
+    sa.ForeignKeyConstraint(['shareable_id'], ['shareable.id'], ),
+    sa.ForeignKeyConstraint(['subtype_id'], ['subtype.id'], )
     )
     ### end Alembic commands ###
 
 
 def downgrade():
     ### commands auto generated by Alembic - please adjust! ###
-    op.drop_table('thing_tag_join')
+    op.drop_table('thing_subtype_join')
+    op.drop_table('followers')
     op.drop_table('shareable')
     op.drop_table('comment')
-    op.drop_table('followers')
     op.drop_table('messages')
-    op.drop_table('guttersnipe')
     op.drop_table('time')
     op.drop_table('rrules')
-    op.drop_index('ix_shareable_subtype', table_name='thing')
+    op.drop_table('guttersnipe')
+    op.drop_table('subtype')
+    op.drop_index('ix_shareable_tags', table_name='thing')
     op.drop_table('thing')
-    op.drop_table('tag')
-    op.drop_table('vevent')
     op.drop_table('schedule')
+    op.drop_table('vevent')
+    op.drop_table('type')
     op.drop_table('space')
     op.drop_index(op.f('ix_profile_username'), table_name='profile')
     op.drop_table('profile')
