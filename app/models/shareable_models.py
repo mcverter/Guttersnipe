@@ -4,6 +4,7 @@ from sqlalchemy.dialects.postgresql import ARRAY, array
 import geoalchemy2
 from user_models import Guttersnipe
 from icalendar_models import Vevent, VeventSchema
+from crud_base_model import CRUD_Base
 from marshmallow_jsonapi import Schema, fields
 from marshmallow import validate
 
@@ -14,7 +15,7 @@ from marshmallow import validate
 # A Shareable is a composite of a Time, a Space, and a Thing
 # It can have ratings
 # Users can comment upon it
-class Shareable(db.Model):
+class Shareable(db.Model, CRUD_Base):
     id = db.Column(db.Integer, primary_key=True)
     thing_id = db.Column(db.Integer, db.ForeignKey('thing.id'), nullable=False)
     space_id = db.Column(db.Integer, db.ForeignKey('space.id'), nullable=False)
@@ -170,4 +171,4 @@ class ShareableSchema(Schema):
  <roadrunneratwast> which function is being referred to?
  * Oatmeal has quit (Quit: Suzie says, "TTFNs!")
  <roadrunneratwast> i am just doing a db migration
- '''
+'''
