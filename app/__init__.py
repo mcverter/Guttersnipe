@@ -10,10 +10,9 @@ app.config.from_object('config')
 # app.config.from_pyfile('config.py')
 db = SQLAlchemy(app)
 
-
-from models.user_models import Guttersnipe, Profile, Schedule, Messages, blockUserTable
-from models.icalendar_models import Vevent, Rrules
-from models.shareable_models import  Shareable, Thing, Space, Time, \
+from app.models.user_models import Guttersnipe, Profile, Schedule, Messages, blockUserTable
+from app.models.icalendar_models import Vevent, Rrules
+from app.models.shareable_models import  Shareable, Thing, Space, Time, \
     Type, Subtype, \
     Comment
 

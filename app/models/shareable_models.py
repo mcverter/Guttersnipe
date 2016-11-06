@@ -2,9 +2,9 @@ from app import db
 from sqlalchemy import CheckConstraint, Enum
 from sqlalchemy.dialects.postgresql import ARRAY, array
 import geoalchemy2
-from user_models import Guttersnipe
-from icalendar_models import Vevent, VeventSchema
-from crud_base_model import CRUD_Base
+from app.models.user_models import Guttersnipe
+from app.models.icalendar_models import Vevent, VeventSchema
+from app.models.crud_base_model import CRUD_Base
 from marshmallow_jsonapi import Schema, fields
 from marshmallow import validate
 
@@ -48,7 +48,6 @@ class Thing(db.Model):
 
     # Thing can have system-defined type and subtypes
     # subtypes are defined by JOIN table below
-
     type = db.Column(db.String, db.ForeignKey('type.type'), nullable=False)
     comments = db.relationship('Post', backref='author', lazy='dynamic')
 
@@ -60,7 +59,7 @@ class Type(db.Model):
 class Subtype(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     type = db.Column(db.String, db.ForeignKey('type.type')) #, primary_key=True)
-    subtype = db.Column(db.String) # , primary_key=True)
+    subtype = db.Column(db.String) #, primary_key=True)
 
 '''
 Question about SUBTYPES =>
@@ -76,7 +75,7 @@ but it wouldn't make sense to have a CAR that is a DOG.
 Is this a legitimate way to model the subtype relationship?  Will it be constrained by this schema?
 '''
 
-thing_Subtype_JoinTable = db.Table(
+thing_subtype_join = db.Table(
     'thing_subtype_join',
     db.Column('subtype_id', db.Integer, db.ForeignKey('subtype.id')),
     db.Column('shareable_id', db.Integer, db.ForeignKey('shareable.id')))
@@ -94,8 +93,6 @@ class Space(db.Model):
     canonical_address = db.Column(db.Text, nullable=False)
     alternate_names = db.Column(ARRAY(db.Text))
     notes = db.Column(db.Text)
-
-
 
 # Space is a Component of Shareable.  1-to-1 relationship
 class Time(db.Model):
