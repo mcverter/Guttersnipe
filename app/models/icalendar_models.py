@@ -15,7 +15,7 @@ class VeventSchema(Schema):
 
 
     
-class Rrules(db.Model):
+class Rrule(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     vevent_id = db.Column('vevent_id', db.Integer, db.ForeignKey('vevent.id'),
                           nullable=False)

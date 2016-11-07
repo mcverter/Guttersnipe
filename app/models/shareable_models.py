@@ -34,49 +34,6 @@ class Shareable(db.Model, CRUD_Base):
 '''
  <roadrunneratwast> hi pythonathons!!!  Can I get some feedback on a little bit of sql alchemy.  I am trying to model a THING.  a THING must have a single TYPE and may have multiple SUBTYPES.  I have developed a join table for subtypes.  I would like to have a constraint on the join table that guarantees the correspondence between types and subtypes. Also:  I want marshmallow to be able to serialize out the results of the join table.
 '''
-
-
-# Thing is a Component of Shareable.  1-to-1 relationship
-class Thing(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    description_how = db.Column(db.String(140))
-    description_what = db.Column(db.String(140))
-
-    # Thing can have user-defined tags
-    tags = db.Column(ARRAY(db.Text), nullable=False, default=db.cast(array([], type_=db.Text), ARRAY(db.Text)))
-    __table_args__ = (db.Index('ix_shareable_tags', tags, postgresql_using="gin"),)
-
-    # Thing can have system-defined type and subtypes
-    # subtypes are defined by JOIN table below
-    type = db.Column(db.String, db.ForeignKey('type.type'), nullable=False)
-    comments = db.relationship('Post', backref='author', lazy='dynamic')
-    subtypes = db.relationship()
-'''
-association_table = Table('association', Base.metadata,
-    Column('left_id', Integer, ForeignKey('left.id')),
-    Column('right_id', Integer, ForeignKey('right.id'))
-)
-
-class Parent(Base):
-    __tablename__ = 'left'
-    id = Column(Integer, primary_key=True)
-    children = relationship("Child",
-                    secondary=association_table)
-
-class Child(Base):
-    __tablename__ = 'right'
-    id = Column(Integer, primary_key=True)
-'''
-
-class Type(db.Model):
-    type = db.Column(db.Text, primary_key=True)
-
-# Would be nice to have a composite PK
-class Subtype(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    type = db.Column(db.String, db.ForeignKey('type.type')) #, primary_key=True)
-    subtype = db.Column(db.String) #, primary_key=True)
-
 '''
 Question about SUBTYPES =>
 ========================
@@ -91,10 +48,39 @@ but it wouldn't make sense to have a CAR that is a DOG.
 Is this a legitimate way to model the subtype relationship?  Will it be constrained by this schema?
 '''
 
+
+# Thing is a Component of Shareable.  1-to-1 relationship
+class Thing(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    description_how = db.Column(db.String(140))
+    description_what = db.Column(db.String(140))
+
+    # Thing can have user-defined tags
+    tags = db.Column(ARRAY(db.Text), nullable=False, default=db.cast(array([], type_=db.Text), ARRAY(db.Text)))
+    __table_args__ = (db.Index('ix_shareable_tags', tags, postgresql_using="gin"),)
+
+    # Thing can have system-defined primary_type and subtypes
+    # subtypes are defined by JOIN table below
+    main_type = db.Column(db.String, db.ForeignKey('main_type.type'), nullable=False)
+    subtypes = db.relationship('SubType', secondary=thing_subtype,
+        backref=db.backref('thing', lazy='dynamic'))
+
+class Main_Type(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.Text, primary_key=True)
+
+class Subtype(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String)
+    main_type = db.Column(db.String, db.ForeignKey('main_type.id'))
+
+
 thing_subtype_join = db.Table(
     'thing_subtype_join',
     db.Column('subtype_id', db.Integer, db.ForeignKey('subtype.id')),
-    db.Column('shareable_id', db.Integer, db.ForeignKey('shareable.id')))
+    db.Column('thing_id', db.Integer, db.ForeignKey('thing.id')))
+
+
 # Would be nice to have composite FK
 #   db.ForeignKey('subtype.type', 'subtype.subtype')),
 # Would be nice to have this constraint
