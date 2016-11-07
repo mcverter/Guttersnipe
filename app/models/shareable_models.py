@@ -50,7 +50,23 @@ class Thing(db.Model):
     # subtypes are defined by JOIN table below
     type = db.Column(db.String, db.ForeignKey('type.type'), nullable=False)
     comments = db.relationship('Post', backref='author', lazy='dynamic')
+    subtypes = db.relationship()
+'''
+association_table = Table('association', Base.metadata,
+    Column('left_id', Integer, ForeignKey('left.id')),
+    Column('right_id', Integer, ForeignKey('right.id'))
+)
 
+class Parent(Base):
+    __tablename__ = 'left'
+    id = Column(Integer, primary_key=True)
+    children = relationship("Child",
+                    secondary=association_table)
+
+class Child(Base):
+    __tablename__ = 'right'
+    id = Column(Integer, primary_key=True)
+'''
 
 class Type(db.Model):
     type = db.Column(db.Text, primary_key=True)
