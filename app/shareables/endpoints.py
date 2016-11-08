@@ -1,6 +1,6 @@
-__author__ = 'mitchell_verter'
+__author__ = 'mitchell'
 
-
+'''
 from app import db
 from models.shareable_models import  Shareable, Thing, Space, Time, \
     Tag, thingTagJoinTable, ShareableType, \
@@ -64,3 +64,4 @@ class TodoListResource(Resource):
         session.add(todo)
         session.commit()
         return todo, 201
+'''
