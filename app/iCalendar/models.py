@@ -9,7 +9,13 @@ class Vevent(db.Model):
     tz_id = db.Column(db.String) # Time Zone
 
     rrule = db.Column('rrule_id',  db.Integer, db.ForeignKey('rrule.id'))
-    
+
+# Start date must come before End date
+    CheckConstraint('dtEnd is NULL OR dtStart <= dtEnd',
+                    name='Valid: Time Period')
+
+
+
 class Rrule(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     duration = db.Column(db.String(20)) # length of event
@@ -27,25 +33,17 @@ class Rrule(db.Model):
     wkSt = db.Column(db.String(2), default='mo')
 
 # Valid Values
-    CheckConstraint(freq in ('yearly', 'monthly', 'weekly', 'daily'
-    ,'hourly', 'minutely', 'secondly', 'single'),
+    CheckConstraint(freq in ('yearly', 'monthly', 'weekly', 'daily',
+                             'hourly', 'minutely', 'secondly', 'single'),
                     name='Valid: Frequency Value')
     CheckConstraint(interval > 0,
                     name='Valid: Positive Interval')
 
     CheckConstraint(wkSt in ('mo', 'tu', 'we', 'th', 'fr', 'sa', 'su'))
 
-# Start date must come before End date
-    CheckConstraint('dtEnd is NULL OR dtStart <= dtEnd',
-                    name='Valid: Time Period')
-
 # Until and Count may not coexist in the same rule.
     CheckConstraint(not (until is not None and count is not None),
                     name='Valid: Not Both Until and Count')
-
-#dtEnd and duration may not both be present
-    CheckConstraint('NOT(dtEnd is NOT NULL AND duration is NOT NULL)',
-                    name='Valid: Not Both dtEnd and Duration')
 
 
 
