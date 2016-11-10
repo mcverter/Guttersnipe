@@ -16,4 +16,4 @@ from app.shareables.models import Shareable, \
     Thing, Space, Time, \
     MainType, Subtype, Comment
 
-#     thing_Subtype_JoinTable,
+# thing_Subtype_JoinTable,
