@@ -3,7 +3,7 @@ from sqlalchemy.ext.associationproxy import association_proxy
 from sqlalchemy.dialects.postgresql import ARRAY, array
 import geoalchemy2
 from app.users.models import Guttersnipe
-from app.iCalendar.models import Vevent
+from app.schedules.models import Schedule
 from app.base.models import CRUD_Base
 
 
@@ -50,7 +50,7 @@ class Thing(db.Model):
     # subtypes are defined by JOIN table below
     main_type_id = db.Column(db.Integer, db.ForeignKey('main_type.id'), nullable=False)
     main_type = db.relationship(MainType)
-    subtypes_relation = db.relationship('SubType', secondary=thing_subtype_join,
+    subtypes_relation = db.relationship('SubType', secondary=thing_subtype_association,
         backref=db.backref('thing', lazy='dynamic'))
     subtypes = association_proxy(subtypes_relation, 'name')
 
@@ -73,8 +73,8 @@ class Subtype(db.Model):
     main_type = db.relationship(MainType)
 
 # Many-to-Many relationship between Things and Subtypes
-thing_subtype_join = db.Table(
-    'thing_subtype_join',
+thing_subtype_association = db.Table(
+    'thing_subtype_association',
     db.Column('subtype_id', db.Integer, db.ForeignKey('subtype.id')),
     db.Column('thing_id', db.Integer, db.ForeignKey('thing.id')))
 
@@ -94,7 +94,7 @@ class Space(db.Model):
 # One Thing to One or More Shareables
 class Time(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    calendar = db.Column(db.Integer, db.ForeignKey('vevent.id'))
+    calendar = db.Column(db.Integer, db.ForeignKey('Schedule.id'))
     notes = db.Column(db.Text)
 
 

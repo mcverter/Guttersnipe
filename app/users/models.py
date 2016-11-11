@@ -4,6 +4,8 @@ from flask_restful import Resource, Api, fields as restful_fields, \
 from sqlalchemy import CheckConstraint
 from marshmallow_jsonapi import Schema, fields as schema_fields
 from marshmallow import validate
+from app.schedules.models import Schedule
+
 '''
 parser = reqparse.RequestParser()
 TODOS = {
@@ -75,7 +77,7 @@ class Profile(db.Model):
 # Schedule is a Component of Guttersnipe.  1-to-1 relationship
 class Schedule (db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    calendar = db.Column(db.DateTime) #sCalendar_VEVENT
+    calendar = db.Column(db.Integer, db.ForeignKey('Schedule.id'))
     notes = db.Column(db.String(20))
 
 '''
@@ -99,7 +101,7 @@ class Schedule (db.Model):
 # User has Mailbox of Messages.
 class Messages(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    calendar = db.Column(db.DateTime) #sCalendar_VEVENT
+    calendar = db.Column(db.Integer, db.ForeignKey('Schedule.id'))
     text = db.Column(db.String(2054))
     sender = db.Column(db.Integer, db.ForeignKey('guttersnipe.id'))
     recipient = db.Column (db.Integer, db.ForeignKey('guttersnipe.id'))
