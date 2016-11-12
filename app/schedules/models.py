@@ -1,4 +1,4 @@
-'''
+"""
 The following file represents Guttersnipe's implementation
 of the iCalendar RFC
 https://tools.ietf.org/html/rfc5545
@@ -24,7 +24,7 @@ Schedules are collections of Events.
     * The last Tuesday of every month from 200-400 PM
     * Every year on May Day all day long
 
-'''
+"""
 
 from app import db
 from sqlalchemy import CheckConstraint
@@ -57,6 +57,8 @@ class RecurrenceRule(db.Model):
 
     # Frequency Type
     freq = db.Column(db.String(8), nullable=False, default='weekly') # type of recurrence
+
+    # Calendar-Based Rules
     byDay = db.Column(db.String(35))   # List of Day of the Week
                                         # "mo,tu,we" for weekly
                                         # "+2MO, -1MO" = second monday, last monday for yearly or monthly
@@ -72,7 +74,7 @@ class RecurrenceRule(db.Model):
                                             # Only for yearly
     byMonth = db.Column(db.String(29))   # Month of year.
 
-    # Sequence Modifications
+    # Sequence-Based Rules
     until = db.Column(db.DateTime)   # last day of occurence
     count = db.Column(db.Integer)    # number of occurences
     interval = db.Column(db.Integer, nullable=False, default=1) # interval between recurrences
@@ -80,10 +82,12 @@ class RecurrenceRule(db.Model):
 
 
 # Valid Values
-    CheckConstraint(freq in ('yearly', 'monthly', 'weekly', 'daily',
-                             'hourly', 'minutely', 'secondly', 'single'),
+    CheckConstraint(freq in ('yearly', 'monthly', 'weekly', 'daily', 'single'),
                     name='Valid: Frequency Value')
     CheckConstraint(interval > 0, name='Valid: Positive Interval')
+    CheckConstraint(byDay is not None and freq in ('daily', 'yearly', 'monthly'))
+    CheckConstraint(byWeekNo is not None and freq in ('yearly', 'monthly'))
+    CheckConstraint(byYearDay is not None and freq in ('yearly'))
 
 # Until and Count may not coexist in the same rule.
     CheckConstraint(not (until is not None and count is not None),
