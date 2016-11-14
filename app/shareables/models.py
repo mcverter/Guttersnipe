@@ -31,8 +31,8 @@ class Shareable(db.Model, CRUD_Base):
     comments = db.relationship('Comment', backref="Shareable", cascade="all, delete-orphan", lazy='dynamic')
 
     # ratings
-    number_ratings = db.Column(db.Integer, nullable=False)
-    total_ratings = db.Column(db.Integer, nullable=False)
+    number_ratings = db.Column(db.Integer, nullable=False, default=0)
+    total_ratings = db.Column(db.Integer, nullable=False, default=0)
 
     def __repr__(self):
         return '<Shareable %r>' % (self.id)
