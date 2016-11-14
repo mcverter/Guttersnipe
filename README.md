@@ -1,4 +1,4 @@
-[Guttersnipe Website Proof-of-Concept](http://guttersnipe.org)
+[Guttersnipe Website Proof-of-Concept](http://guttersnipe.org)<br />
 [Technical Specification](https://github.com/mcverter/Guttersnipe/blob/next_release/Documentation/GuttersnipeSpecsPagemaker.pdf)
 
 
