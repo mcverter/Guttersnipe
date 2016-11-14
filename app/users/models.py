@@ -19,6 +19,7 @@ TODOS = {
 # A Single User has a single Profile and a single Calendar
 # and has a Mailbox with multiple messages
 class Guttersnipe(db.Model):
+    __tablename__ = 'guttersnipe'
     id = db.Column(db.Integer, primary_key=True)
     profile = db.Column(db.Integer, db.ForeignKey('profile.id'))
     schedule = db.Column(db.Integer, db.ForeignKey('schedule.id'))
@@ -46,6 +47,7 @@ class Guttersnipe(db.Model):
 
 # Profile is a Component of Guttersnipe.  1-to-1 relationship
 class Profile(db.Model):
+    __tablename__ = 'profile'
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), index=True, unique=True)
     email = db.Column(db.String(20), unique=True)
@@ -74,10 +76,11 @@ class Profile(db.Model):
         return '<User %r>' % (self.nickname)
 '''
 
-# Calendar is a Component of Guttersnipe.  1-to-1 relationship
+# Schedule is a Component of Guttersnipe.  1-to-1 relationship
 class Schedule (db.Model):
+    __tablename__ = 'schedule'
     id = db.Column(db.Integer, primary_key=True)
-    calendar = db.Column(db.Integer, db.ForeignKey('Calendar.id'))
+    calendar = db.Column(db.Integer, db.ForeignKey('calendar.id'))
     notes = db.Column(db.String(20))
 
 '''
@@ -99,9 +102,10 @@ class Schedule (db.Model):
 '''
 
 # User has Mailbox of Messages.
-class Messages(db.Model):
+class Message(db.Model):
+    __tablename__ = 'message'
     id = db.Column(db.Integer, primary_key=True)
-    calendar = db.Column(db.Integer, db.ForeignKey('Calendar.id'))
+    calendar = db.Column(db.Integer, db.ForeignKey('calendar.id'))
     text = db.Column(db.String(2054))
     sender = db.Column(db.Integer, db.ForeignKey('guttersnipe.id'))
     recipient = db.Column (db.Integer, db.ForeignKey('guttersnipe.id'))

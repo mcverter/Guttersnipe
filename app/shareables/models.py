@@ -15,6 +15,8 @@ from app.base.models import CRUD_Base
 # It can have ratings
 # Users can comment upon it
 class Shareable(db.Model, CRUD_Base):
+    __tablename__ = 'shareable'
+
     id = db.Column(db.Integer, primary_key=True)
 
     thing_id = db.Column(db.Integer, db.ForeignKey('thing.id'), nullable=False)
@@ -39,6 +41,8 @@ class Shareable(db.Model, CRUD_Base):
 # Thing is a Component of Shareable.
 # One Thing to 1 ... Many Shareables
 class Thing(db.Model):
+    __tablename__ = 'thing'
+
     id = db.Column(db.Integer, primary_key=True)
     description_how = db.Column(db.String(140))
     description_what = db.Column(db.String(140))
@@ -53,17 +57,19 @@ class Thing(db.Model):
     main_type = db.relationship('MainType')
     subtypes_relation = db.relationship('SubType', secondary='thing_subtype_association',
         backref=db.backref('thing', lazy='dynamic'))
-    subtypes = association_proxy(subtypes_relation, 'name')
+    subtypes = association_proxy('subtypes_relation', 'name')
 
 # A Thing must have a MainType
 # One MainType for Zero or More Things
 class MainType(db.Model):
+    __tablename__ = 'main_type'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.Text, primary_key=True)
 
 # Type and Subtype form a 2-level Taxonomy
 # {T=Car, S=Volvo}, {T=Car. S=Sedan}, {T=Animal, S=Horse}, {T=Animal, S=Female}
 class Subtype(db.Model):
+    __tablename__ = 'subtype'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String)
     main_type_id = db.Column(db.Integer, db.ForeignKey('main_type.id'))
@@ -79,6 +85,7 @@ thing_subtype_association = db.Table(
 # A Space May Be Reused for Many Shareables
 # One Thing to One or More Shareables
 class Space(db.Model):
+    __tablename__ = 'space'
     id = db.Column(db.Integer, primary_key=True)
     longitude = db.Column(db.Float, nullable=False)
     latitude = db.Column(db.Float, nullable=False)
@@ -90,8 +97,9 @@ class Space(db.Model):
 # A Space May Be Reused for Many Shareables
 # One Thing to One or More Shareables
 class Time(db.Model):
+    __tablename__ = 'time'
     id = db.Column(db.Integer, primary_key=True)
-    calendar = db.Column(db.Integer, db.ForeignKey('Calendar.id'))
+    calendar = db.Column(db.Integer, db.ForeignKey('calendar.id'))
     notes = db.Column(db.Text)
 
 
@@ -99,6 +107,7 @@ class Time(db.Model):
 # One Shareable for Zero or More Comments
 # One User for Zero or More Comments
 class Comment (db.Model):
+    __tablename__ = 'comment'
     id = db.Column(db.Integer, primary_key=True)
     author_id = db.Column(db.Integer, db.ForeignKey('guttersnipe.id'))
     shareable_id = db.Column(db.Integer, db.ForeignKey('shareable.id'))

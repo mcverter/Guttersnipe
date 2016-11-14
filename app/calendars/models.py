@@ -36,23 +36,15 @@ calendar_event_association = db.Table(
     db.Column('event_id', db.Integer, db.ForeignKey('event.id')))
 
 class Calendar(db.Model):
+    __tablename__ = 'calendar'
     id = db.Column(db.Integer, primary_key=True)
     subtypes_relation = db.relationship('Event', secondary=calendar_event_association,
                                         backref=db.backref('calendar', lazy='dynamic'))
 
 
-class Event(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    dt_start = db.Column(db.DateTime)  # start time
-    dt_end = db.Column(db.DateTime) # end time
-    tz_id = db.Column(db.String) # Time Zone
-
-    recurrence_rule = db.Column('RecurrenceRule_id',  db.Integer, db.ForeignKey('RecurrenceRule.id'))
-
-# Start date must come before End date
-    CheckConstraint('dtEnd is NULL OR dtStart <= dtEnd', name='Valid: Time Period')
-
 class RecurrenceRule(db.Model):
+    __tablename__ = 'recurrence_rule'
+
     id = db.Column(db.Integer, primary_key=True)
 
     # Frequency Type
@@ -95,3 +87,15 @@ class RecurrenceRule(db.Model):
 
 
 
+
+class Event(db.Model):
+    __tablename__ = 'event'
+    id = db.Column(db.Integer, primary_key=True)
+    dt_start = db.Column(db.DateTime)  # start time
+    dt_end = db.Column(db.DateTime) # end time
+    tz_id = db.Column(db.String) # Time Zone
+
+    recurrence_rule_id = db.Column(db.Integer, db.ForeignKey('recurrence_rule.id'))
+
+# Start date must come before End date
+    CheckConstraint('dtEnd is NULL OR dtStart <= dtEnd', name='Valid: Time Period')
