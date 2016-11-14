@@ -1,6 +1,6 @@
 from marshmallow_jsonapi import Schema, fields
 from marshmallow import validate
-from app.schedules.schemas import VeventSchema
+from app.calendars.schemas import VeventSchema
 
 
 class ShareableSchema(Schema):
@@ -36,7 +36,7 @@ class SpaceSchema(Schema):
 class TimeSchema(Schema):
     id = fields.Integer
     notes = fields.String
-    calendar = fields.Nested(ScheduleSchema)
+    calendar = fields.Nested(CalendarSchema)
 
 class CommentSchema(Schema):
     id = fields.Integer

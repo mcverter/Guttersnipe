@@ -11,7 +11,7 @@ app.config.from_object('config')
 db = SQLAlchemy(app)
 
 from app.users.models import Guttersnipe, Profile, Schedule, Messages, blockUserTable
-from app.schedules.models import Event, RecurrenceRule
+from app.calendars.models import Event, RecurrenceRule
 from app.shareables.models import Shareable, \
     Thing, Space, Time, \
     MainType, Subtype, Comment

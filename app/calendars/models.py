@@ -30,16 +30,16 @@ from app import db
 from sqlalchemy import CheckConstraint
 from sqlalchemy.ext.associationproxy import association_proxy
 
-
-class Schedule(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    subtypes_relation = db.relationship('Event', secondary=schedule_event_association,
-                                        backref=db.backref('Schedule', lazy='dynamic'))
-
-schedule_event_association = db.Table(
-    'schedule_event_association',
-    db.Column('schedule_id', db.Integer, db.ForeignKey('schedule.id')),
+calendar_event_association = db.Table(
+    'calendar_event_association',
+    db.Column('calendar_id', db.Integer, db.ForeignKey('calendar.id')),
     db.Column('event_id', db.Integer, db.ForeignKey('event.id')))
+
+class Calendar(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    subtypes_relation = db.relationship('Event', secondary=calendar_event_association,
+                                        backref=db.backref('calendar', lazy='dynamic'))
+
 
 class Event(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -87,7 +87,7 @@ class RecurrenceRule(db.Model):
     CheckConstraint(interval > 0, name='Valid: Positive Interval')
     CheckConstraint(byDay is not None and freq in ('daily', 'yearly', 'monthly'))
     CheckConstraint(byWeekNo is not None and freq in ('yearly', 'monthly'))
-    CheckConstraint(byYearDay is not None and freq in ('yearly'))
+    CheckConstraint(byYearDay is not None and freq == 'yearly')
 
 # Until and Count may not coexist in the same rule.
     CheckConstraint(not (until is not None and count is not None),
