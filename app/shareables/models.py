@@ -16,9 +16,9 @@ from app.base.models import CRUD_Base
 # Users can comment upon it
 class Shareable(db.Model, CRUD_Base):
     __tablename__ = 'shareable'
-
     id = db.Column(db.Integer, primary_key=True)
 
+    summary = db.Column(db.Text)
     thing_id = db.Column(db.Integer, db.ForeignKey('thing.id'), nullable=False)
     space_id = db.Column(db.Integer, db.ForeignKey('space.id'), nullable=False)
     time_id = db.Column(db.Integer, db.ForeignKey('time.id'), nullable=False)

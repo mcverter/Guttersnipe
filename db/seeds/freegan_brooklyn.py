@@ -6,26 +6,51 @@ from app.shareables.models import Shareable, \
     Thing, Space, Time, \
     MainType, Subtype, Comment
 
+
+def defineTypes():
+    food = MainType("Foo")
+    return (food)
+
+(food_type) = defineTypes()
+
+def defineSubtypes():
+    dumpster = Subtype("dumpster", food_type)
+    return (dumpster)
+
+(dumpster_subtype) = defineSubtypes()
+
+def defineSchedules():
+    every_day_but_sat_845_to_midnight = ''
+    return (every_day_but_sat_845_to_midnight)
+    pass
+every_day_but_sat_845_to_midnight = defineSubtypes()
 def addPerelandra():
+    headline = "Perelandra"
+    summary = "Lots of locals count on finding greens and produce in particular. Fewer go thru the bags, which contain health bread, and often assorted packaged health foods, and small amounts of bulk foods (grains, beans, nuts, coffee) that can be gleaned from the not-quite-emptied heavy brown bags."
     # thing
-    description_how = None
+    description_what = "Regular curbside bags, plus cardboard boxes set to the side with most of the produce (what foragers don’t take gets composted)."
     description_what = None
 
     # Thing can have user-defined tags
     tags = None
-    __table_args__ = None
 
     # Thing can have system-defined primary_type and subtypes
     # subtypes are defined by JOIN table below
-    main_type_id = None
-    main_type = None
-    subtypes_relation = None
-    subtypes = None
+    main_type = food_type
+    subtypes = dumpster_subtype
+    thing_notes = None
 
     # space
+    longitude = -73.991377
+    latitude = 40.693483
+    canonical_address = "175 Remsen St Brooklyn, NY 11201"
+    alternate_names = None
+    space_notes = "Remsen St across from Borough Hall, between Court and Clinton Sts, Brooklyn"
+
     # time
-# Every Day But Saturday, 2045 until 11PM
-    pass
+    calendar = every_day_but_sat_845_to_midnight
+    time_notes = "8:45 when all the employees leave the store. Trash is collected between 10:30 p and 12:30a. One source says nothing is out on Saturdays"
+
 
 def addTraderJoes():
     # thing
