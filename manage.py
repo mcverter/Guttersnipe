@@ -41,7 +41,7 @@ def seed():
 
     for seed_file in os.listdir(seed_path):
         if seed_file[-3:] == ".py":
-            importlib.import_module("app.db.seeds" + seed_file[0:-3])
+            importlib.import_module("db.seeds." + seed_file[0:-3])
 
 if __name__ == '__main__':
     manager.run()
