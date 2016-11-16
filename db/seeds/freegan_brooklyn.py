@@ -94,3 +94,9 @@ def addIsaacs():
     # space
     # time
     pass
+
+def seed():
+    print ("seeding")
+
+if __name__ == '__main__':
+    seed()
