@@ -4,6 +4,7 @@ from flask_script import Manager, Shell
 from flask.ext.migrate import Migrate, MigrateCommand
 import os
 import importlib
+import pdb
 
 from app import app, db
 
@@ -44,6 +45,7 @@ def seed():
 
     for seed_file in os.listdir(seed_path):
         if seed_file[-3:] == ".py":
+            print (seed_file)
             importlib.import_module("db.seeds." + seed_file[0:-3])
 
 if __name__ == '__main__':

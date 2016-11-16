@@ -7,11 +7,9 @@ from app.calendars.models import Calendar
 from app.base.models import CRUD_Base
 import datetime
 
-
 ####################
 # Business Objects
 ####################
-
 # A Shareable is a composite of a Time, a Space, and a Thing
 # It can have ratings
 # Users can comment upon it
@@ -74,7 +72,7 @@ class Thing(db.Model):
     # subtypes are defined by JOIN table below
     main_type_id = db.Column(db.Integer, db.ForeignKey('main_type.id'), nullable=False)
     main_type = db.relationship('MainType')
-    subtypes_relation = db.relationship('SubType', secondary='thing_subtype_association',
+    subtypes_relation = db.relationship('Subtype', secondary='thing_subtype_association',
         backref=db.backref('thing', lazy='dynamic'))
     subtypes = association_proxy('subtypes_relation', 'name')
 
@@ -85,7 +83,7 @@ class Thing(db.Model):
         self.main_type = main_type
 
         # hope this will successfully pass a string array
-        self.subtypes = subtypes
+        # self.subtypes = ["none"] # subtypes
         self.tags = tags
 
     def __repr__(self):
@@ -102,7 +100,7 @@ class MainType(db.Model):
         self.name = name
 
     def __repr__(self):
-        return '<MainType %r>' % (self.id)
+        return '<MainType %r>' % (self.name)
 
 
 # Type and Subtype form a 2-level Taxonomy
