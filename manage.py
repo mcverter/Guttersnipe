@@ -33,6 +33,9 @@ def seed():
 
 if __name__ == '__main__':
     seed()
+
+
+do people have good solutions for seeding the database with data?  migrations only add tables, not data.  I have developed the following solution, but don't love it  https://github.com/mcverter/Guttersnipe/blob/next_release/manage.py
 '''
 @manager.command
 def seed():

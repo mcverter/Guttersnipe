@@ -96,6 +96,15 @@ class Event(db.Model):
     tz_id = db.Column(db.String) # Time Zone
 
     recurrence_rule_id = db.Column(db.Integer, db.ForeignKey('recurrence_rule.id'))
+    recurrence_rule = db.relationship(RecurrenceRule)
+
 
 # Start date must come before End date
     CheckConstraint('dtEnd is NULL OR dtStart <= dtEnd', name='Valid: Time Period')
+
+    def __init__(self, dt_start, dt_end, tz_id, recurrence_rule):
+        self.dt_start = dt_start
+        self.dt_end = dt_end
+        self.tz_id = tz_id
+        self.recurrence_rule = recurrence_rule
+

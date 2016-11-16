@@ -5,9 +5,11 @@ from app.users.models import Guttersnipe, Profile, Schedule, Message, blockUserT
 from app.shareables.models import Shareable, \
     Thing, Space, Time, \
     MainType, Subtype, Comment
+import pdb
 
 
 def defineTypes():
+    pdb.set_trace()
     food = MainType("Foo")
     return (food)
 
