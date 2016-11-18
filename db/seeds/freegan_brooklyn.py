@@ -33,7 +33,7 @@ def definePerelandraThing(main_type, subtype):
                              description_what=description_what, \
                              tags=None, \
                              main_type = main_type, \
-                             subtypes=None)
+                             subtypes=subtypes)
     perelandra_thing.subtypes = subtypes
     return perelandra_thing
 

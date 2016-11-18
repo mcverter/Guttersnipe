@@ -83,7 +83,7 @@ class Thing(db.Model):
         self.main_type = main_type
 
         # hope this will successfully pass a string array
-        # self.subtypes = ["none"] # subtypes
+        self.subtypes =  subtypes
         self.tags = tags
 
     def __repr__(self):
