@@ -112,7 +112,7 @@ class Event(db.Model):
     CheckConstraint('dtEnd is NULL OR dtStart <= dtEnd', name='Valid: Time Period')
 
     def __init__(self, dt_start, dt_end, tz_id, recurrence_rule):
-        self.dt_start =  (dt_start)
+        self.dt_start = dt_start
         self.dt_end = dt_end
         self.tz_id = tz_id
         self.recurrence_rule = recurrence_rule
