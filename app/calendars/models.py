@@ -29,17 +29,9 @@ Schedules are collections of Events.
 from app import db
 from sqlalchemy import CheckConstraint
 from sqlalchemy.ext.associationproxy import association_proxy
+import datetime
 
-calendar_event_association = db.Table(
-    'calendar_event_association',
-    db.Column('calendar_id', db.Integer, db.ForeignKey('calendar.id')),
-    db.Column('event_id', db.Integer, db.ForeignKey('event.id')))
 
-class Calendar(db.Model):
-    __tablename__ = 'calendar'
-    id = db.Column(db.Integer, primary_key=True)
-    subtypes_relation = db.relationship('Event', secondary=calendar_event_association,
-                                        backref=db.backref('calendar', lazy='dynamic'))
 
 
 class RecurrenceRule(db.Model):
@@ -70,7 +62,7 @@ class RecurrenceRule(db.Model):
     until = db.Column(db.DateTime)   # last day of occurence
     count = db.Column(db.Integer)    # number of occurences
     interval = db.Column(db.Integer, nullable=False, default=1) # interval between recurrences
-    bysetpos = db.Column(db.String()) # Specifies specific instances of recurrence
+    bySetPos = db.Column(db.String()) # Specifies specific instances of recurrence
 
 
 # Valid Values
@@ -85,6 +77,23 @@ class RecurrenceRule(db.Model):
     CheckConstraint(not (until is not None and count is not None),
                     name='Valid: Not Both Until and Count')
 
+    def __init__(self, freq,
+                 byDay=None, byMonthDay=None, byYearDay=None, byWeekNo=None, byMonth=None,
+                 until=None, count=None, interval=None, bySetPos=None
+                 ):
+        self.freq = freq
+        self.byDay = byDay
+        self.byMonthDay = byMonthDay
+        self.byYearDay = byYearDay
+        self.byWeekNo = byWeekNo
+        self.byMonth = byMonth
+        self.until = until
+        self.count = count
+        self.interval = interval
+        self.bySetPos = bySetPos
+
+    def __repr__(self):
+        return '<Recurrence Rule %r>' % (self.id)
 
 
 
@@ -103,8 +112,29 @@ class Event(db.Model):
     CheckConstraint('dtEnd is NULL OR dtStart <= dtEnd', name='Valid: Time Period')
 
     def __init__(self, dt_start, dt_end, tz_id, recurrence_rule):
-        self.dt_start = dt_start
+        self.dt_start =  (dt_start)
         self.dt_end = dt_end
         self.tz_id = tz_id
         self.recurrence_rule = recurrence_rule
+
+
+calendar_event_association = db.Table(
+    'calendar_event_association',
+    db.Column('calendar_id', db.Integer, db.ForeignKey('calendar.id')),
+    db.Column('event_id', db.Integer, db.ForeignKey('event.id')))
+
+class Calendar(db.Model):
+    __tablename__ = 'calendar'
+    id = db.Column(db.Integer, primary_key=True)
+    event_relation = db.relationship('Event',
+            secondary=calendar_event_association,
+            backref=db.backref('calendar', lazy='dynamic'))
+
+    def __init__(self, events=[]):
+        self.event_relation.extend(events)
+        pass
+
+    def __repr__(self):
+        return '<Calendar %r>' % (self.id)
+
 

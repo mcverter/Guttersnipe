@@ -38,8 +38,9 @@ class Shareable(db.Model, CRUD_Base):
 
     created_on = db.Column(db.DateTime)
 
-    def __init__(self, summary, headline, notes, \
-                 thing, space, time, comments, \
+    def __init__(self, thing, space, time,
+                 summary="", headline="", notes="",
+                 comments=[],
                  number_ratings=0, total_ratings=0):
         self.summary = summary
         self.headline = headline
@@ -61,12 +62,6 @@ class Thing(db.Model):
     __tablename__ = 'thing'
 
     id = db.Column(db.Integer, primary_key=True)
-    description_how = db.Column(db.String(140))
-    description_what = db.Column(db.String(140))
-
-    # Thing can have user-defined tags
-    tags = db.Column(ARRAY(db.Text), nullable=False, default=db.cast(array([], type_=db.Text), ARRAY(db.Text)))
-    __table_args__ = (db.Index('ix_shareable_tags', tags, postgresql_using="gin"),)
 
     # Thing can have system-defined primary_type and subtypes
     # subtypes are defined by JOIN table below
@@ -76,15 +71,28 @@ class Thing(db.Model):
         backref=db.backref('thing', lazy='dynamic'))
     subtypes = association_proxy('subtypes_relation', 'name')
 
-    def __init__(self, description_how, description_what, tags, main_type, subtypes):
+    description_how = db.Column(db.String(140))
+    description_what = db.Column(db.String(140))
+
+    # Thing can have user-defined tags
+    tags = db.Column(ARRAY(db.Text), default=db.cast(array([], type_=db.Text), ARRAY(db.Text)))
+    __table_args__ = (db.Index('ix_shareable_tags', tags, postgresql_using="gin"),)
+
+    notes = db.Column(db.Text)
+
+
+    def __init__(self, main_type,
+                 subtypes=[],
+                 description_how="", description_what="",
+                 tags=[], notes=""):
         self.description_how = description_how
         self.description_what = description_what
 
         self.main_type = main_type
 
-        # hope this will successfully pass a string array
-        self.subtypes =  subtypes
+        self.subtypes_relation.extend(subtypes)
         self.tags = tags
+        self.notes = notes
 
     def __repr__(self):
         return '<Thing %r>' % (self.id)
@@ -137,7 +145,9 @@ class Space(db.Model):
     alternate_names = db.Column(ARRAY(db.Text))
     notes = db.Column(db.Text)
 
-    def __init__(self, longitude, latitude, canonical_address, alternate_names, notes):
+    def __init__(self, longitude, latitude,
+                 canonical_address="",
+                 alternate_names=[], notes=""):
         self.longitude = longitude
         self.latitude = latitude
         self.canonical_address = canonical_address
@@ -158,7 +168,7 @@ class Time(db.Model):
 
     notes = db.Column(db.Text)
 
-    def __init__(self, notes, calendar):
+    def __init__(self, calendar, notes=""):
         self.calendar = calendar
         self.notes = notes
 

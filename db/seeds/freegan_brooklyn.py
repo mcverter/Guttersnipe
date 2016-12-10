@@ -5,7 +5,9 @@ from app.users.models import Guttersnipe, Profile, Schedule, Message, blockUserT
 from app.shareables.models import Shareable, \
     Thing, Space, Time, \
     MainType, Subtype, Comment
+from app.calendars.models import Event, Calendar, RecurrenceRule
 import pdb
+from datetime import datetime
 
 print ("yay")
 def defineFoodType():
@@ -29,13 +31,40 @@ def definePerelandraThing(main_type, subtype):
     main_type = main_type
     subtypes = [subtype]
     thing_notes = None
-    perelandra_thing = Thing(description_how=description_how,
-                             description_what=description_what, \
-                             tags=None, \
-                             main_type = main_type, \
-                             subtypes=subtypes)
-    perelandra_thing.subtypes = subtypes
+    return Thing(main_type = main_type,
+                             subtypes=subtypes,
+                             description_how=description_how,
+                             description_what=description_what,
+                             tags=None,
+                             notes=None)
     return perelandra_thing
+
+def definePerelandraSpace():
+     longitude = 40.693483
+     latitude = -73.991377
+     canonical_address = '175 Remsen St    Brooklyn, NY 11201'
+     notes = 'Remsen St across from Borough Hall, between Court and Clinton Sts, Brooklyn'
+
+     perelandra_space = Space(longitude = longitude,
+                              latitude = latitude,
+                              canonical_address = canonical_address,
+                              alternate_names= None,
+                              notes = None
+     )
+
+def definePerelandaTime():
+    freq = 'weekly'
+    byDay =  'mo,tu,we,th,fr,su'
+    perelandraRecurrence = RecurrenceRule(freq=freq, byDay=byDay)
+    dt_start = datetime.strptime('Dec 11 2016 8:45PM',  '%b %d %Y %I:%M%p')
+    dt_end = datetime.strptime('Dec 11 2016 12:00AM',  '%b %d %Y %I:%M%p')
+    tz_id ='America/New_York'
+    perelandraEvent = Event(dt_start=dt_start, dt_end=dt_end,
+                            tz_id=tz_id, recurrence_rule=perelandraRecurrence)
+    perelandraCalendar = Calendar(events=[perelandraEvent])
+    notes = "8:45 when all the employees leave the store. Trash is collected between 10:30 p and 12:30a. One source says nothing is out on Saturdays"
+
+    return Time(calendar=perelandraCalendar, notes=notes)
 
 
 
@@ -47,72 +76,25 @@ def defineSchedules():
 #every_day_but_sat_845_to_midnight = defineSubtypes()
 
 
-def addPerelandra():
+def definePerelandraShareable(thing, space, time):
     headline = "Perelandra"
     summary = "Lots of locals count on finding greens and produce in particular. Fewer go thru the bags, which contain health bread, and often assorted packaged health foods, and small amounts of bulk foods (grains, beans, nuts, coffee) that can be gleaned from the not-quite-emptied heavy brown bags."
     notes = None
 
-    # thing
+    return Shareable(thing=thing, space=space, time=time,
+                     summary=summary, headline=headline, notes=notes)
 
-    # space
-    longitude = -73.991377
-    latitude = 40.693483
-    canonical_address = "175 Remsen St Brooklyn, NY 11201"
-    alternate_names = None
-    space_notes = "Remsen St across from Borough Hall, between Court and Clinton Sts, Brooklyn"
-
-    # time
-    calendar = every_day_but_sat_845_to_midnight
-    time_notes = "8:45 when all the employees leave the store. Trash is collected between 10:30 p and 12:30a. One source says nothing is out on Saturdays"
-
-
-def addTraderJoes():
-    # thing
-    # space
-    # time
-    pass
-
-def addLaBagel():
-    # thing
-    # space
-    # time
-    pass
-
-
-def addGardenOfEden():
-    # thing
-    # space
-    # time
-    pass
-
-def addGristedes():
-    # thing
-    # space
-    # time
-    pass
-
-def addCaputos():
-    # thing
-    # space
-    # time
-    pass
-
-def addNewBanana():
-    # thing
-    # space
-    # time
-    pass
-
-def addIsaacs():
-    # thing
-    # space
-    # time
-    pass
 
 def seed():
     food_type = defineFoodType()
     dumpster_subtype = defineDumpsterSubtype (main_type=food_type)
     perelandra_thing = definePerelandraThing(main_type=food_type, subtype=dumpster_subtype)
+    perelandra_time = definePerelandaTime()
+    pereleandra_space = definePerelandraSpace()
+    definePerelandraShareable(thing=perelandra_thing,
+                              time=perelandra_time,
+                              space=pereleandra_space)
+
     moo = 1+1
 
 seed()
