@@ -68,10 +68,6 @@ def definePerelandaTime():
 
 
 
-def defineSchedules():
-    every_day_but_sat_845_to_midnight = ''
-    return (every_day_but_sat_845_to_midnight)
-    pass
 
 #every_day_but_sat_845_to_midnight = defineSubtypes()
 

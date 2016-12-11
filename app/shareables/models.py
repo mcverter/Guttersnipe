@@ -13,6 +13,8 @@ import datetime
 # A Shareable is a composite of a Time, a Space, and a Thing
 # It can have ratings
 # Users can comment upon it
+
+
 class Shareable(db.Model, CRUD_Base):
     __tablename__ = 'shareable'
     id = db.Column(db.Integer, primary_key=True)
@@ -53,7 +55,7 @@ class Shareable(db.Model, CRUD_Base):
         self.total_ratings = total_ratings
 
     def __repr__(self):
-        return '<Shareable %r>' % (self.id)
+        return '<Shareable %r>' % self.id
 
 
 # Thing is a Component of Shareable.
@@ -68,7 +70,7 @@ class Thing(db.Model):
     main_type_id = db.Column(db.Integer, db.ForeignKey('main_type.id'), nullable=False)
     main_type = db.relationship('MainType')
     subtypes_relation = db.relationship('Subtype', secondary='thing_subtype_association',
-        backref=db.backref('thing', lazy='dynamic'))
+                                        backref=db.backref('thing', lazy='dynamic'))
     subtypes = association_proxy('subtypes_relation', 'name')
 
     description_how = db.Column(db.String(140))
@@ -79,7 +81,6 @@ class Thing(db.Model):
     __table_args__ = (db.Index('ix_shareable_tags', tags, postgresql_using="gin"),)
 
     notes = db.Column(db.Text)
-
 
     def __init__(self, main_type,
                  subtypes=[],
@@ -95,10 +96,12 @@ class Thing(db.Model):
         self.notes = notes
 
     def __repr__(self):
-        return '<Thing %r>' % (self.id)
+        return '<Thing %r>' % self.id
 
 # A Thing must have a MainType
 # One MainType for Zero or More Things
+
+
 class MainType(db.Model):
     __tablename__ = 'main_type'
     id = db.Column(db.Integer, primary_key=True)
@@ -108,7 +111,7 @@ class MainType(db.Model):
         self.name = name
 
     def __repr__(self):
-        return '<MainType %r>' % (self.name)
+        return '<MainType %r>' % self.name
 
 
 # Type and Subtype form a 2-level Taxonomy
@@ -120,12 +123,12 @@ class Subtype(db.Model):
     main_type_id = db.Column(db.Integer, db.ForeignKey('main_type.id'))
     main_type = db.relationship(MainType)
 
-    def __init__ (self, main_type, name):
+    def __init__(self, main_type, name):
         self.main_type = main_type
         self.name = name
 
     def __repr__(self):
-        return '<Subtype %r>' % (self.id)
+        return '<Subtype %r>' % self.id
 
 # Many-to-Many relationship between Things and Subtypes
 thing_subtype_association = db.Table(
@@ -136,6 +139,8 @@ thing_subtype_association = db.Table(
 # Space is a Component of Shareable.
 # A Space May Be Reused for Many Shareables
 # One Thing to One or More Shareables
+
+
 class Space(db.Model):
     __tablename__ = 'space'
     id = db.Column(db.Integer, primary_key=True)
@@ -155,11 +160,13 @@ class Space(db.Model):
         self.notes = notes
 
     def __repr__(self):
-        return '<Space %r>' % (self.id)
+        return '<Space %r>' % self.id
 
 # Space is a Component of Shareable.  1-to-1 relationship
 # A Space May Be Reused for Many Shareables
 # One Thing to One or More Shareables
+
+
 class Time(db.Model):
     __tablename__ = 'time'
     id = db.Column(db.Integer, primary_key=True)
@@ -173,11 +180,13 @@ class Time(db.Model):
         self.notes = notes
 
     def __repr__(self):
-        return '<Time %r>' % (self.id)
+        return '<Time %r>' % self.id
 
 # Users can comment on Shareables
 # One Shareable for Zero or More Comments
 # One User for Zero or More Comments
+
+
 class Comment (db.Model):
     __tablename__ = 'comment'
     id = db.Column(db.Integer, primary_key=True)
@@ -200,10 +209,11 @@ class Comment (db.Model):
             created_on = datetime.utcnow()
 
     def __repr__(self):
-        return '<Comment %r>' % (self.id)
+        return '<Comment %r>' % self.id
 
 
 '''
  * dheerajchand
        expert on geopython
 '''
+
