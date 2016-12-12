@@ -8,14 +8,17 @@ from app.shareables.models import Shareable, \
 from app.calendars.models import Event, Calendar, RecurrenceRule
 import pdb
 from datetime import datetime
+from app import db
 
 print ("yay")
 def defineFoodType():
     food = MainType(name="Food")
+    db.session.add(food)
     return food
 
 def defineDumpsterSubtype(main_type):
     dumpster = Subtype(name="dumpster", main_type=main_type)
+    db.session.add(dumpster)
     return dumpster
 
 def definePerelandraThing(main_type, subtype):
@@ -31,12 +34,14 @@ def definePerelandraThing(main_type, subtype):
     main_type = main_type
     subtypes = [subtype]
     thing_notes = None
-    return Thing(main_type = main_type,
+    perelandra_thing = Thing(
+        main_type = main_type,
                              subtypes=subtypes,
                              description_how=description_how,
                              description_what=description_what,
                              tags=None,
                              notes=None)
+    db.session.add(perelandra_thing)
     return perelandra_thing
 
 def definePerelandraSpace():
@@ -51,6 +56,8 @@ def definePerelandraSpace():
                               alternate_names= None,
                               notes = None
      )
+     db.session.add(perelandra_space)
+     return perelandra_space
 
 def definePerelandaTime():
     freq = 'weekly'
@@ -64,7 +71,13 @@ def definePerelandaTime():
     perelandraCalendar = Calendar(events=[perelandraEvent])
     notes = "8:45 when all the employees leave the store. Trash is collected between 10:30 p and 12:30a. One source says nothing is out on Saturdays"
 
-    return Time(calendar=perelandraCalendar, notes=notes)
+    db.session.add(perelandraCalendar)
+    db.session.add(perelandraEvent)
+    db.session.add(perelandraRecurrence)
+
+    perelandra_time = Time(calendar=perelandraCalendar, notes=notes)
+    db.session.add(perelandra_time)
+    return perelandra_time
 
 
 
@@ -77,8 +90,10 @@ def definePerelandraShareable(thing, space, time):
     summary = "Lots of locals count on finding greens and produce in particular. Fewer go thru the bags, which contain health bread, and often assorted packaged health foods, and small amounts of bulk foods (grains, beans, nuts, coffee) that can be gleaned from the not-quite-emptied heavy brown bags."
     notes = None
 
-    return Shareable(thing=thing, space=space, time=time,
+    perelandra_shareable = Shareable(thing=thing, space=space, time=time,
                      summary=summary, headline=headline, notes=notes)
+    db.session.add(perelandra_shareable)
+    return perelandra_shareable
 
 
 def seed():
@@ -90,7 +105,7 @@ def seed():
     definePerelandraShareable(thing=perelandra_thing,
                               time=perelandra_time,
                               space=pereleandra_space)
+    db.session.commit()
 
-    moo = 1+1
 
 seed()
