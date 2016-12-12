@@ -4,7 +4,7 @@ from app.shareables.models import Shareable, Thing, Space, \
     Time, MainType, Subtype, Comment
 from datetime import datetime
 from app import db
-
+from sqlalchemy.sql import operators
 
 def create_many_shareables_from_json_string(json_string):
     py_array = json.loads(json_string)
@@ -75,7 +75,7 @@ def create_shareable_from_json_object(py_dict):
 #        Thing.subtypes == subtypes_entity_array,
         Thing.description_how == description_how,
         Thing.description_what == description_what,
-        Thing.tags == tags,
+#        Thing.tags == tags,
         Thing.notes == thing_notes).first()
     if thing_entity is None:
         my_thing = Thing(
@@ -92,7 +92,7 @@ def create_shareable_from_json_object(py_dict):
 #            Thing.subtypes == subtypes_entity_array,
             Thing.description_how == description_how,
             Thing.description_what == description_what,
-            Thing.tags == tags,
+#            Thing.tags == tags,
             Thing.notes == thing_notes).first()
 
     # space
@@ -160,10 +160,10 @@ def create_shareable_from_json_object(py_dict):
                 RecurrenceRule.byMonth == byMonth,
                 RecurrenceRule.until == until,
                 RecurrenceRule.count == count,
-                RecurrenceRule.interval == interval,
+#                RecurrenceRule.interval == interval,
                 RecurrenceRule .bySetPos == bySetPos).first()
 
-            if recurrence_rule is None:
+            if recurrence_rule_entity is None:
                 my_recurrence_rule = RecurrenceRule(
                     freq=freq,
                     byDay=byDay,
@@ -187,7 +187,7 @@ def create_shareable_from_json_object(py_dict):
                     RecurrenceRule.byMonth == byMonth,
                     RecurrenceRule.until == until,
                     RecurrenceRule.count == count,
-                    RecurrenceRule.interval == interval,
+#                    RecurrenceRule.interval == interval,
                     RecurrenceRule .bySetPos == bySetPos).first()
 
             event_entity = db.session.query(Event).filter(
@@ -233,7 +233,7 @@ def create_shareable_from_json_object(py_dict):
     shareable_entity = db.session.query(Shareable.id).filter(
         Shareable.thing == thing_entity,
         Shareable.space == space_entity,
-        Shareable.time == time_entity,
+#        Shareable.time == time_entity,
         Shareable.summary == summary,
         Shareable.headline == headline,
         Shareable.number_ratings == number_ratings,
