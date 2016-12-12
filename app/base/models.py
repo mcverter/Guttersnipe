@@ -2,6 +2,7 @@ __author__ = 'mitchell_verter'
 
 from app import db
 
+
 class CRUD_Base():
     def add(self, resource):
         db.session.add(resource)

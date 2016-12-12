@@ -14,6 +14,7 @@ class ShareableSchema(Schema):
     number_ratings = fields.Integer
     total_ratings = fields.Integer
 
+
 class ThingSchema(Schema):
     id = fields.Integer
     descriptionHow = fields.String
@@ -22,8 +23,10 @@ class ThingSchema(Schema):
     main_type = fields.Nested(MainTypeSchema)
     subtypes = fields.String(many=True)
 
+
 class MainTypeSchema(Schema):
     name = fields.String
+
 
 class SpaceSchema(Schema):
     id = fields.Integer
@@ -33,10 +36,12 @@ class SpaceSchema(Schema):
     notes = fields.String
     alternate_names = fields.String(many=True)
 
+
 class TimeSchema(Schema):
     id = fields.Integer
     notes = fields.String
     calendar = fields.Nested(CalendarSchema)
+
 
 class CommentSchema(Schema):
     id = fields.Integer

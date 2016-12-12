@@ -108,8 +108,8 @@ class Message(db.Model):
     calendar = db.Column(db.Integer, db.ForeignKey('calendar.id'))
     text = db.Column(db.String(2054))
     sender = db.Column(db.Integer, db.ForeignKey('guttersnipe.id'))
-    recipient = db.Column (db.Integer, db.ForeignKey('guttersnipe.id'))
-    sent =  db.Column(db.DateTime)
+    recipient = db.Column(db.Integer, db.ForeignKey('guttersnipe.id'))
+    sent = db.Column(db.DateTime)
 
 '''
     def get(self, todo_id):
@@ -133,9 +133,6 @@ blockUserTable = db.Table(
     'followers',
     db.Column('blocker_id', db.Integer, db.ForeignKey('guttersnipe.id')),
     db.Column('blocked_id', db.Integer, db.ForeignKey('guttersnipe.id')))
-
-
-
 
 '''
 class TodoList:

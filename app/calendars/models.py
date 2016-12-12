@@ -28,10 +28,6 @@ Schedules are collections of Events.
 
 from app import db
 from sqlalchemy import CheckConstraint
-from sqlalchemy.ext.associationproxy import association_proxy
-import datetime
-
-
 
 
 class RecurrenceRule(db.Model):
@@ -40,29 +36,36 @@ class RecurrenceRule(db.Model):
     id = db.Column(db.Integer, primary_key=True)
 
     # Frequency Type
-    freq = db.Column(db.String(8), nullable=False, default='weekly') # type of recurrence
+    freq = db.Column(db.String(8), nullable=False, default='weekly')  # type of recurrence
 
     # Calendar-Based Rules
-    byDay = db.Column(db.String(35))   # List of Day of the Week
-                                        # "mo,tu,we" for weekly
-                                        # "+2MO, -1MO" = second monday, last monday for yearly or monthly
-    byMonthDay = db.Column(db.String(200)) # List of Day of the Month
-                                            # +1,-1"
-                                            # Only for Monthly or Yearly
-    byYearDay = db.Column(db.String(3078)) # List Day of the Year
-                                            #"+1, -1"
-                                            # Only for yearly
-                                            # Take care with leap years
-    byWeekNo = db.Column(db.String(353)) # Which week of Month
-                                            # "+5, -3" for fifth and third-to-last
-                                            # Only for yearly
-    byMonth = db.Column(db.String(29))   # Month of year.
+
+    # List of Day of the Week
+    # "mo,tu,we" for weekly
+    # "+2MO, -1MO" = second monday, last monday for yearly or monthly
+    byDay = db.Column(db.String(35))
+
+    # List of Day of the Month eg: "+1,-1"
+    # Only for Monthly or Yearly"""
+    byMonthDay = db.Column(db.String(200))
+
+    # List Day of the Year eg: "+1, -1"
+    # Only for yearly
+    #  Take care with leap years
+    byYearDay = db.Column(db.String(3078))
+
+    # Which week of Year "+5, -3" for fifth and third-to-last
+    #  Only for yearly
+    byWeekNo = db.Column(db.String(353))
+
+    # Month of year
+    byMonth = db.Column(db.String(29))
 
     # Sequence-Based Rules
     until = db.Column(db.DateTime)   # last day of occurence
     count = db.Column(db.Integer)    # number of occurences
-    interval = db.Column(db.Integer, nullable=False, default=1) # interval between recurrences
-    bySetPos = db.Column(db.String()) # Specifies specific instances of recurrence
+    interval = db.Column(db.Integer, nullable=False, default=1)  # interval between recurrences
+    bySetPos = db.Column(db.String())  # Specifies specific instances of recurrence
 
 
 # Valid Values
@@ -93,16 +96,15 @@ class RecurrenceRule(db.Model):
         self.bySetPos = bySetPos
 
     def __repr__(self):
-        return '<Recurrence Rule %r>' % (self.id)
-
+        return '<Recurrence Rule %r>' % self.id
 
 
 class Event(db.Model):
     __tablename__ = 'event'
     id = db.Column(db.Integer, primary_key=True)
     dt_start = db.Column(db.DateTime)  # start time
-    dt_end = db.Column(db.DateTime) # end time
-    tz_id = db.Column(db.String) # Time Zone
+    dt_end = db.Column(db.DateTime)  # end time
+    tz_id = db.Column(db.String)  # Time Zone
 
     recurrence_rule_id = db.Column(db.Integer, db.ForeignKey('recurrence_rule.id'))
     recurrence_rule = db.relationship(RecurrenceRule)
@@ -126,15 +128,16 @@ calendar_event_association = db.Table(
 class Calendar(db.Model):
     __tablename__ = 'calendar'
     id = db.Column(db.Integer, primary_key=True)
-    event_relation = db.relationship('Event',
-            secondary=calendar_event_association,
-            backref=db.backref('calendar', lazy='dynamic'))
+    event_relation = db.relationship(
+        'Event',
+        secondary=calendar_event_association,
+        backref=db.backref('calendar', lazy='dynamic'))
 
     def __init__(self, events=[]):
         self.event_relation.extend(events)
         pass
 
     def __repr__(self):
-        return '<Calendar %r>' % (self.id)
+        return '<Calendar %r>' % self.id
 
 

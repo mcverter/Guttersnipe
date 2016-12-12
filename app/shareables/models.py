@@ -5,7 +5,7 @@ import geoalchemy2
 from app.users.models import Guttersnipe
 from app.calendars.models import Calendar
 from app.base.models import CRUD_Base
-import datetime
+from datetime import datetime
 
 ####################
 # Business Objects
@@ -43,16 +43,20 @@ class Shareable(db.Model, CRUD_Base):
     def __init__(self, thing, space, time,
                  summary="", headline="", notes="",
                  comments=[],
-                 number_ratings=0, total_ratings=0):
+                 number_ratings=0, total_ratings=0,
+                 created_on=None):
         self.summary = summary
         self.headline = headline
         self.notes = notes
         self.thing = thing
         self.space = space
         self.time = time
-        self.comments = comments
+        if comments is not None:
+            self.comments = comments
         self.number_ratings = number_ratings
         self.total_ratings = total_ratings
+        if created_on is None:
+            self.created_on = datetime.utcnow()
 
     def __repr__(self):
         return '<Shareable %r>' % self.id
@@ -105,7 +109,7 @@ class Thing(db.Model):
 class MainType(db.Model):
     __tablename__ = 'main_type'
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.Text, primary_key=True)
+    name = db.Column(db.Text, unique=True)
 
     def __init__(self, name):
         self.name = name
@@ -206,7 +210,7 @@ class Comment (db.Model):
         self.text = text
 
         if created_on is None:
-            created_on = datetime.utcnow()
+            self.created_on = datetime.utcnow()
 
     def __repr__(self):
         return '<Comment %r>' % self.id
