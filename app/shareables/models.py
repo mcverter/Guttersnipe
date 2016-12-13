@@ -132,7 +132,7 @@ class Subtype(db.Model):
         self.name = name
 
     def __repr__(self):
-        return '<Subtype %r>' % self.id
+        return '<Subtype %r>' % self.name
 
 # Many-to-Many relationship between Things and Subtypes
 thing_subtype_association = db.Table(

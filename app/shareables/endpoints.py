@@ -1,12 +1,44 @@
 __author__ = 'mitchell'
 
+from app import db, api
+from app.shareables.models import Shareable
+
+from flask.ext.restful import Resource, Api
+from app.shareables.schemas import ShareableSchema
+
+ShareableSerializer = ShareableSchema()
+
+class ShareableEndpoint(Resource):
+    def get(self, id):
+        shareable = db.session.query_property\
+            (Shareable).filter(Shareable.id == id).first()
+        if shareable is None:
+            data = 400
+        else:
+            data = ShareableSerializer.dump(shareable).data
+
+
+class ShareableListEndpoint(Resource):
+    def get(self):
+        print("hoo haa")
+        shareables = db.session.query(Shareable).all()
+        results = ShareableSerializer.dump(shareables, many=True).data
+
+class UserAPI(Resource):
+    def get(self, id):
+        print ('foo')
+
+    def put(self, id):
+        pass
+
+    def delete(self, id):
+        pass
+
+api.add_resource(UserAPI, '/users/<int:id>', endpoint = 'user')
+
+api.add_resource(ShareableListEndpoint, '/shareables', endpoint = 'shareables')
+
 '''
-from app import db
-from models.shareable_models import  Shareable, Thing, Space, Time, \
-    Tag, thingTagJoinTable, ShareableType, \
-    Comment
-
-
 from flask.ext.restful import reqparse
 from flask.ext.restful import abort
 from flask.ext.restful import Resource
@@ -64,4 +96,6 @@ class TodoListResource(Resource):
         session.add(todo)
         session.commit()
         return todo, 201
-'''
+
+        '''
+
