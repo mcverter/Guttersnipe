@@ -1,5 +1,4 @@
 __author__ = 'mitchell'
-
 from app import db, api
 from app.shareables.models import Shareable
 
@@ -17,12 +16,15 @@ class ShareableEndpoint(Resource):
         else:
             data = ShareableSerializer.dump(shareable).data
 
+import pdb
 
 class ShareableListEndpoint(Resource):
     def get(self):
         print("hoo haa")
+        pdb.set_trace()
         shareables = db.session.query(Shareable).all()
         results = ShareableSerializer.dump(shareables, many=True).data
+        return results
 
 class UserAPI(Resource):
     def get(self, id):
