@@ -3,7 +3,7 @@ from marshmallow import validate
 
 
 class CalendarSchema(Schema):
-    events = fields.Nested('EventSchema', many=True)
+    event_relation = fields.Nested('EventSchema', many=True)
 
 class EventSchema(Schema):
     dt_start = fields.DateTime()

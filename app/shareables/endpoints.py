@@ -21,7 +21,6 @@ import pdb
 class ShareableListEndpoint(Resource):
     def get(self):
         print("hoo haa")
-        pdb.set_trace()
         shareables = db.session.query(Shareable).all()
         results = ShareableSerializer.dump(shareables, many=True).data
         return results

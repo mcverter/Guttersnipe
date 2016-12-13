@@ -5,9 +5,6 @@ from app.shareables.models import Shareable, Thing, Space, \
 from datetime import datetime
 from app import db
 from sqlalchemy.sql import operators
-from app.shareables.endpoints import ShareableSerializer
-
-ShareableSerializer.dump(db.session.query(Shareable).all(), many=True).data
 
 def create_many_shareables_from_json_string(json_string):
     py_array = json.loads(json_string)

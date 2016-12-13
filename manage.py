@@ -5,7 +5,6 @@ from flask.ext.migrate import Migrate, MigrateCommand
 import os
 import importlib
 from app.shareables.create_shareable_from_json import create_many_shareables_from_json_string
-
 import pdb
 
 from app import app, db

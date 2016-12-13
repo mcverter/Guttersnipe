@@ -11,17 +11,10 @@ class ShareableSchema(Schema):
     number_ratings = fields.Integer()
     total_ratings = fields.Integer()
     space = fields.Nested('SpaceSchema')
+    comments = fields.Nested('CommentSchema', many=True)
+    thing = fields.Nested('ThingSchema')
+    time = fields.Nested('TimeSchema')
 
-    class Meta:
-        fields = ("id", "headline", "notes", "number_ratings", "total_ratings",
-                  "space", "summary", "thing")
-                #  "time",  "comments")
-
-'''
-thing = fields.Nested('ThingSchema')
-time = fields.Nested('TimeSchema')
-comments = fields.Nested('CommentSchema', many=True)
-'''
 
 
 class ThingSchema(Schema):
@@ -33,15 +26,8 @@ class ThingSchema(Schema):
     main_type = fields.Nested('MainTypeSchema')
     subtypes = fields.String(many=True)
 
-    class Meta:
-        fields = ('id', 'descriptionHow', 'descriptionWhat', 'notes', 'tags', 'main_type', 'subtypes')
-
 class MainTypeSchema(Schema):
     name = fields.String()
-
-    class Meta:
-        fields = ["name"]
-
 
 class SpaceSchema(Schema):
     id = fields.Integer()
@@ -51,25 +37,13 @@ class SpaceSchema(Schema):
     notes = fields.String()
     alternate_names = fields.String(many=True)
 
-    class Meta:
-        fields = ("id", "longitude", "latitude", "canonical_address", "notes", "alternate_names")
-
-
 class TimeSchema(Schema):
     id = fields.Integer()
     notes = fields.String()
     calendar = fields.Nested(CalendarSchema)
-
-    class Meta:
-        fields = ("id", "notes", "calendar")
-
 
 class CommentSchema(Schema):
     id = fields.Integer()
     author = fields.String()
     text = fields.String()
     created = fields.DateTime()
-
-    class Meta:
-        fields = ("id", "author", "text", "created")
-

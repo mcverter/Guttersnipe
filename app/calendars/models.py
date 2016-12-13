@@ -1,4 +1,14 @@
 """
+class Parent(Base):
+    __tablename__ = 'parent'
+    id = Column(Integer, primary_key=True)
+    children = relationship("Child")
+
+class Child(Base):
+    __tablename__ = 'child'
+    id = Column(Integer, primary_key=True)
+    parent_id = Column(Integer, ForeignKey('parent.id'))
+
 The following file represents Guttersnipe's implementation
 of the iCalendar RFC
 https://tools.ietf.org/html/rfc5545
@@ -109,6 +119,10 @@ class Event(db.Model):
     recurrence_rule_id = db.Column(db.Integer, db.ForeignKey('recurrence_rule.id'))
     recurrence_rule = db.relationship(RecurrenceRule)
 
+    calendar_id = db.Column(db.Integer, db.ForeignKey('calendar.id'))
+
+
+
 
 # Start date must come before End date
     CheckConstraint('dtEnd is NULL OR dtStart <= dtEnd', name='Valid: Time Period')
@@ -128,13 +142,16 @@ calendar_event_association = db.Table(
 class Calendar(db.Model):
     __tablename__ = 'calendar'
     id = db.Column(db.Integer, primary_key=True)
+    events = db.relationship("Event")
+
+    '''
     event_relation = db.relationship(
         'Event',
         secondary=calendar_event_association,
         backref=db.backref('calendar', lazy='dynamic'))
-
+    '''
     def __init__(self, events=[]):
-        self.event_relation.extend(events)
+        self.events.extend(events)
         pass
 
     def __repr__(self):
