@@ -115,12 +115,10 @@ class Event(db.Model):
     dt_start = db.Column(db.DateTime)  # start time
     dt_end = db.Column(db.DateTime)  # end time
     tz_id = db.Column(db.String)  # Time Zone
+    calendar_id = db.Column(db.Integer, db.ForeignKey('calendar.id'))
 
     recurrence_rule_id = db.Column(db.Integer, db.ForeignKey('recurrence_rule.id'))
     recurrence_rule = db.relationship(RecurrenceRule)
-
-    calendar_id = db.Column(db.Integer, db.ForeignKey('calendar.id'))
-
 
 
 
@@ -142,19 +140,10 @@ calendar_event_association = db.Table(
 class Calendar(db.Model):
     __tablename__ = 'calendar'
     id = db.Column(db.Integer, primary_key=True)
-    events = db.relationship("Event")
+    events = db.relationship('Event')
 
-    '''
-    event_relation = db.relationship(
-        'Event',
-        secondary=calendar_event_association,
-        backref=db.backref('calendar', lazy='dynamic'))
-    '''
-    def __init__(self, events=[]):
+    def __init__(self, events=None):
         self.events.extend(events)
-        pass
 
     def __repr__(self):
         return '<Calendar %r>' % self.id
-
-

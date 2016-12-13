@@ -1,9 +1,10 @@
-from marshmallow_jsonapi import Schema, fields
-from marshmallow import validate
+# from marshmallow_jsonapi import Schema, fields
+from marshmallow import validate, Schema, fields
+from app.calendars.models import Event
 
 
 class CalendarSchema(Schema):
-    event_relation = fields.Nested('EventSchema', many=True)
+    events = fields.Nested('EventSchema', many=True)
 
 class EventSchema(Schema):
     dt_start = fields.DateTime()

@@ -16,8 +16,6 @@ class ShareableEndpoint(Resource):
         else:
             data = ShareableSerializer.dump(shareable).data
 
-import pdb
-
 class ShareableListEndpoint(Resource):
     def get(self):
         print("hoo haa")

@@ -16,7 +16,6 @@ def create_shareable_from_json_string(json_string):
     py_dict = json.loads(json_string)
     create_shareable_from_json_object(py_dict)
 
-
 def create_shareable_from_json_object(py_dict):
     headline = py_dict.get("headline")
     summary = py_dict.get("summary")
@@ -209,19 +208,18 @@ def create_shareable_from_json_object(py_dict):
 
             event_entities_array.append(event_entity)
 
-        calendar_entity = None
-            # db.session.query(Calendar).filter(
-            # Calendar.event_relation == event_entities_array).first()
+        calendar_entity = db.session.query(Calendar).filter\
+            (Calendar.events.contains(event_entity)).first()
 
         if calendar_entity is None:
             my_calendar = Calendar(events=event_entities_array)
             db.session.add(my_calendar)
             db.session.commit()
-#            calendar_entity = db.session.query(Calendar).filter(
-#                Calendar.event_relation == event_entities_array).first()
+            calendar_entity = db.session.query(Calendar).filter\
+            (Calendar.events.contains(event_entity)).first()
 
     time_entity = db.session.query(Time.id).filter(
-        Time.calendar == my_calendar).first()
+        Time.calendar == calendar_entity).first()
 
     if time_entity is None:
         my_time = Time(calendar=calendar_entity, notes=time_notes)
