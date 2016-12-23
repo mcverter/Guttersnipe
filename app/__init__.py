@@ -1,6 +1,6 @@
 __author__ = 'mitchell_verter'
 
-from flask import Flask
+from flask import Flask, render_template
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.restful import Api
 
@@ -21,4 +21,5 @@ from app.shareables.endpoints import ShareableEndpoint
 
 @app.route('/')
 def index():
-    return "Hello World"
+    print ("hello")
+    return render_template("index.html", user="moo")
