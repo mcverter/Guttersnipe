@@ -1,6 +1,4 @@
-'use strict';
 import 'babel-polyfill';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Index from './pages/Index';
@@ -29,9 +27,11 @@ const createStoreWithMiddleware = applyMiddleware(
 const store = createStoreWithMiddleware(reducers);
 
 ReactDOM.render(
+  <div> foo
   <Provider store={store}>
     <Index />
-  </Provider>,
+  </Provider>
+    </div>,
   document.getElementById('root')
 );
 
