@@ -13,7 +13,7 @@ var TEMPLATES_PATH = 'server/templates';
 config = update(config, {
   bail: { $set: true },
 
-  entry: { $set: ['./app/static/src/js/entry'] },
+  entry: { $set: ['./client/entry'] },
 
   debug: { $set: false },
 
