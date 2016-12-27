@@ -3,18 +3,24 @@
  */
 import React, {PropTypes} from 'react';
 
-const Comment = (props) => (
+const Comment = ({comment, author, date}) => (
     <div>
-        <p> props.comment </p>
-        <p><h4> by </h4> props.author</p>
-        <p>props.date</p>
+        <p> {comment} </p>
+        <p><h4> by </h4> {author}</p>
+        <p>{date}</p>
     </div>
-)
+);
 
-const CommentList = (props) => (
+const CommentList = (comments) => (
     <div>
-        {props.map(comment =>
-            <Comment comment=comment />
+        {comments.map(comment =>
+            <Comment comment={comment} />
         )}
     </div>
-)
+);
+
+Comment.propTypes = {
+    comment: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    date: PropTypes.date.isRequired
+};

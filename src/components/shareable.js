@@ -1,69 +1,38 @@
-
 import React, {PropTypes} from 'react';
 
-const Shareable = (props) => (
-/*    const rating = ;
-*/
+const Shareable =
+    ({headline, summary, number_ratings, total_rating,
+     thing, space, time, notes, comments}) => (
     <div>
         <ShareableHeading
-            headline=props.headline
-            summary=props.summary
-            rating = {props.number_ratings ?
-                props.total_ratings / props.number_ratings : 0}
+            headline={headline}
+            summary={summary}
+            rating = {number_ratings ?
+                total_rating / number_ratings : 0}
             />
         <Thing
-            thing=props.thing />
+            thing={thing} />
         <Space
-            space=props.space />
+            space={space} />
         <Time
-            time=props.time />
+            time={time} />
         <SummaryNotes
-            notes=props.notes />
+            notes={notes} />
         <CommentList
-            comments=props.comments />
+            comments={comments} />
     </div>
+);
 
-)
+Shareable.propTypes = {
+    headline: PropTypes.string.isRequired,
+    summary: PropTypes.string.isRequired,
+    number_ratings: PropTypes.number,
+    total_rating: PropTypes.number,
+    thing: PropTypes.object.isRequired,
+    space: PropTypes.object.isRequired,
+    time: PropTypes.object.isRequired,
+    notes:PropTypes.string,
+    comments: PropTypes.arrayOf(PropTypes.object)
+};
 
-
-/*
- [
- {
- "headline" : "",
- "summary"  : "",
- "notes"    : "",
- "space"    : {
- "longitude" : "",
- "latitude": "",
- "canonical_address": "",
- "alternate_names": [
- ],
- "notes": ""
- },
- "time"    : {
- "notes" : "",
- "calendar" : {
- "events": [
- {
- "dt_start": "",
- "dt_end": "",
- "tz_id": "",
- "recurrence_rule" : {
- "freq": "",
- "byDay": "",
- "byMonthDay": "",
- "byYearDay": "",
- "byWeekNo": "",
- "byMonth": "",
- "until": "",
- "count": "",
- "interval": "",
- "bySetPos": ""
- }
- }
- ]
- }
- }
- }
- ]
- */
+export default Shareable;
