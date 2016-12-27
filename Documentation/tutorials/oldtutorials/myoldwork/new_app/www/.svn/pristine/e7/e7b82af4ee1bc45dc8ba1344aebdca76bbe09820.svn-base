@@ -1,6 +1,0 @@
-node_modules
-dist
-.sass-cache
-app/bower_components
-.idea
-dev-config.js
