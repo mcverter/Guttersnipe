@@ -2,7 +2,7 @@ import * as actionTypes from '../actionTypes/shareables';
 import { get, post, del } from '../utils/api';
 
 export function addShareable() {
-  return async dispatch => {
+  return async ({dispatch}) => {
     dispatch({
       type: actionTypes.ADD_SHAREABLE
     });

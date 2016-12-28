@@ -1,6 +1,3 @@
-/**
- * Created by mitchell_verter on 12/23/16.
- */
 import React, {PropTypes} from 'react';
 
 const Comment = ({comment, author, date}) => (
@@ -14,7 +11,7 @@ const Comment = ({comment, author, date}) => (
 const CommentList = (comments) => (
     <div>
         {comments.map(comment =>
-            <Comment comment={comment} />
+            <Comment key={comment.id} comment={comment} />
         )}
     </div>
 );
@@ -24,3 +21,5 @@ Comment.propTypes = {
     author: PropTypes.string.isRequired,
     date: PropTypes.date.isRequired
 };
+
+export default CommentList;

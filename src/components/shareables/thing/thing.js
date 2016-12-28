@@ -1,4 +1,3 @@
-
 import React, {PropTypes} from 'react';
 
 const Thing = ({description_how, description_what, notes,
@@ -25,3 +24,5 @@ Thing.propTypes = {
     notes: PropTypes.string,
     tags: PropTypes.arrayOf(PropTypes.string)
 };
+
+export default Thing;

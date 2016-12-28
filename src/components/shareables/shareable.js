@@ -1,4 +1,8 @@
 import React, {PropTypes} from 'react';
+import {Time} from './time/time.js';
+import {Space} from './space/space.js';
+import {Thing} from './thing/thing.js'
+import {CommentList} from './comment';
 
 const Shareable =
     ({headline, summary, number_ratings, total_rating,
