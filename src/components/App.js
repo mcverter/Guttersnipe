@@ -1,12 +1,12 @@
 import React, {PropTypes} from 'react';
 
-const App = ({}) => (
+const App = () => (
     <div>
         This will have the App
     </div>
 );
 
-Space.propTypes = {
+App.propTypes = {
 };
 
 export default App;

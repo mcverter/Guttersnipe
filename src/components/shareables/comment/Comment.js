@@ -8,13 +8,6 @@ const Comment = ({comment, author, date}) => (
     </div>
 );
 
-const CommentList = (comments) => (
-    <div>
-        {comments.map(comment =>
-            <Comment key={comment.id} comment={comment} />
-        )}
-    </div>
-);
 
 Comment.propTypes = {
     comment: PropTypes.string.isRequired,
@@ -22,4 +15,4 @@ Comment.propTypes = {
     date: PropTypes.date.isRequired
 };
 
-export default CommentList;
+export default Comment;

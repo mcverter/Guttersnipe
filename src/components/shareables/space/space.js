@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 
-const Space = ({}) => (
+const Space = () => (
     <div>
         This will have the space
     </div>

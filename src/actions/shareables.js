@@ -1,67 +1,40 @@
-import * as actionTypes from '../actionTypes/shareables';
-import { get, post, del } from '../utils/api';
+/*import * as types from './actionTypes';
+import courseApi from '../api/mockCourseApi';
+import {beginAjaxCall, ajaxCallError} from './ajaxStatusActions';
 
-export function addShareable() {
-  return async ({dispatch}) => {
-    dispatch({
-      type: actionTypes.ADD_SHAREABLE
-    });
-
-    try {
-      const result = await post('/api/shareables');
-
-      dispatch({
-        type: actionTypes.ADD_SHAREABLE_SUCCESS,
-        shareable: result
-      });
-    } catch(e) {
-      dispatch({
-        type: actionTypes.ADD_SHAREABLE_ERROR
-      });
-    }
-  }
+export function loadCoursesSuccess(courses) {
+  return { type: types.LOAD_COURSES_SUCCESS, courses};
 }
 
-export function requestShareables() {
-  return async dispatch => {
-    dispatch({
-      type: actionTypes.REQUEST_SHAREABLES
-    });
-
-    try {
-      const result = await get('/api/shareables');
-
-      dispatch({
-        type: actionTypes.REQUEST_SHAREABLES_SUCCESS,
-        shareables: result
-      });
-    } catch(e) {
-      dispatch({
-        type: actionTypes.REQUEST_SHAREABLES_ERROR
-      });
-    }
-  }
+export function createCourseSuccess(course) {
+  return {type: types.CREATE_COURSE_SUCCESS, course};
 }
 
-export function deleteShareable(shareableId) {
-  return async dispatch => {
-    dispatch({
-      type: actionTypes.DELETE_SHAREABLE,
-      shareableId
-    });
-
-    try {
-      await del(`/api/shareables/${shareableId}`);
-
-      dispatch({
-        type: actionTypes.DELETE_SHAREABLE_SUCCESS,
-        shareableId
-      });
-    } catch(e) {
-      dispatch({
-        type: actionTypes.DELETE_SHAREABLE_ERROR,
-        shareableId
-      });
-    }
-  }
+export function updateCourseSuccess(course) {
+  return {type: types.UPDATE_COURSE_SUCCESS, course};
 }
+
+export function loadCourses() {
+  return function(dispatch) {
+    dispatch(beginAjaxCall());
+    return courseApi.getAllCourses().then(courses => {
+      dispatch(loadCoursesSuccess(courses));
+    }).catch(error => {
+      throw(error);
+    });
+  };
+}
+
+export function saveCourse(course) {
+  return function (dispatch, getState) {
+    dispatch(beginAjaxCall());
+    return courseApi.saveCourse(course).then(course => {
+      course.id ? dispatch(updateCourseSuccess(course)) :
+        dispatch(createCourseSuccess(course));
+    }).catch(error => {
+      dispatch(ajaxCallError(error));
+      throw(error);
+    });
+  };
+}
+*/

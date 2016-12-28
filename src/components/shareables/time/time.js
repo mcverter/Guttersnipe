@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 
-const Time = ({}) => (
+const Time = () => (
     <div>
         This will have the time
     </div>
