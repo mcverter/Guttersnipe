@@ -142,7 +142,7 @@ calendar_event_association = db.Table(
 class Calendar(db.Model):
     __tablename__ = 'calendar'
     id = db.Column(db.Integer, primary_key=True)
-    events = db.relationship("Event")
+    events = db.relationship("Event", backref="calendar")
 
     '''
     event_relation = db.relationship(

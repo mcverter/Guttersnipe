@@ -3,13 +3,13 @@ from marshmallow import validate
 
 
 class CalendarSchema(Schema):
-    event_relation = fields.Nested('EventSchema', many=True)
+    events = fields.Nested('EventSchema', many=True)
 
 class EventSchema(Schema):
     dt_start = fields.DateTime()
     dt_end = fields.DateTime()
     tz_id = fields.String()
-    recurrence_rule = fields.Nested('RecurrenceRuleSchema')
+#    recurrence_rule = fields.Nested('RecurrenceRuleSchema')
 
 class RecurrenceRuleSchema(Schema):
     freq = fields.String()
