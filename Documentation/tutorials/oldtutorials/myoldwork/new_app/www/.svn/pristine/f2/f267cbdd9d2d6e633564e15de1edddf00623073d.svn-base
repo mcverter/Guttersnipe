@@ -1,3 +1,0 @@
-﻿<div ng-controller="HeatMapCtrl">
-<google-map id="nova-map" initialize="initializeMap(fn)"></google-map>
-</div>
