@@ -1,12 +1,12 @@
 import React, {PropTypes} from 'react';
 
-const Space = () => (
+const SpaceFull = () => (
     <div>
         This will have the space
     </div>
 );
 
-Space.propTypes = {
+SpaceFull.propTypes = {
 };
 
-export default Space;
+export default SpaceFull;

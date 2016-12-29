@@ -1,10 +1,10 @@
 import React, {PropTypes} from 'react';
-import Time from './time/Time';
-import Space from './space/Space';
-import Thing from './thing/Thing';
+import Time from './time/TimeFull';
+import Space from './space/SpaceFull';
+import Thing from './thing/ThingFull';
 import CommentList from './comment/CommentList';
 
-const Shareable =
+const ShareableFull =
     ({headline, summary, number_ratings, total_rating,
      thing, space, time, notes, comments}) => (
     <div>
@@ -32,7 +32,7 @@ const Shareable =
     </div>
 );
 
-Shareable.propTypes = {
+ShareableFull.propTypes = {
     headline: PropTypes.string.isRequired,
     summary: PropTypes.string.isRequired,
     number_ratings: PropTypes.number,
@@ -44,4 +44,4 @@ Shareable.propTypes = {
     comments: PropTypes.arrayOf(PropTypes.object)
 };
 
-export default Shareable;
+export default ShareableFull;

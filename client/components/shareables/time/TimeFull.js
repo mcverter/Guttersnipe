@@ -1,12 +1,12 @@
 import React, {PropTypes} from 'react';
 
-const Time = () => (
+const TimeFull = () => (
     <div>
         This will have the time
     </div>
 );
 
-Time.propTypes = {
+TimeFull.propTypes = {
 };
 
-export default Time;
+export default TimeFull;

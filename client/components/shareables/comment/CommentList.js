@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import Comment from './Comment';
+import Comment from './CommentFull';
 
 const CommentList = (comments) => (
     <div>

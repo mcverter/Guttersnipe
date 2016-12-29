@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 
-const Thing = ({description_how, description_what, notes,
+const ThingFull = ({description_how, description_what, notes,
     main_type, subtype, tags}) => (
     <div>
         <Description
@@ -16,7 +16,7 @@ const Thing = ({description_how, description_what, notes,
     </div>
 );
 
-Thing.propTypes = {
+ThingFull.propTypes = {
     main_type: PropTypes.string.isRequired,
     subtype: PropTypes.arrayOf(PropTypes.string).isRequired,
     description_how: PropTypes.string,
@@ -25,4 +25,4 @@ Thing.propTypes = {
     tags: PropTypes.arrayOf(PropTypes.string)
 };
 
-export default Thing;
+export default ThingFull;
