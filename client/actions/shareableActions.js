@@ -17,7 +17,6 @@ export function updateShareableSuccess(shareable) {
 export function loadShareables() {
   return function(dispatch) {
     dispatch(beginAjaxCall());
-    console.log('all shareables is', shareableApi.getAllShareables())
     return shareableApi.getAllShareables().then(shareables => {
       dispatch(loadShareablesSuccess(shareables));
     }).catch(error => {

@@ -1,0 +1,71 @@
+
+
+> react-slingshot@5.0.0 lint C:\ComputerScience_WINDOWS\01_Projects\01_Guttersnipe
+> esw webpack.config.* client tools --color "--watch"
+
+C:\ComputerScience_WINDOWS\01_Projects\01_Guttersnipe\client\components\shareables\comment\CommentFull.js (0/3
+)
+  !  3:23  'comment' is missing in props validation  react/prop-types
+  !  3:32  'author' is missing in props validation   react/prop-types
+  !  3:40  'date' is missing in props validation     react/prop-types
+
+
+C:\ComputerScience_WINDOWS\01_Projects\01_Guttersnipe\client\components\shareables\space\SpaceFull.js (0/4)
+  !  13:21  'space' is missing in props validation  react/prop-types
+  !  14:5   Unexpected console statement            no-console
+  !  18:5   Unexpected console statement            no-console
+  !  24:25  Unexpected usage of singlequote         jsx-quotes
+
+C:\ComputerScience_WINDOWS\01_Projects\01_Guttersnipe\client\components\shareables\time\TimeFull.js (2/16)
+  !  11:9   Unexpected 'debugger' statement            no-debugger
+  !  13:14  'time' is missing in props validation      react/prop-types
+  !  13:20  'headline' is missing in props validation  react/prop-types
+  !  15:34  'month' is missing in props validation     react/prop-types
+  !  22:46  Missing semicolon                          semi
+  ?  24:73  'title' is not defined                     no-undef
+  !  24:80  Missing semicolon                          semi
+  !  45:15  Missing semicolon                          semi
+  !  46:10  Missing semicolon                          semi
+  !  55:10  Missing semicolon                          semi
+  !  70:52  Missing semicolon                          semi
+  !  77:79  'headline' is missing in props validation  react/prop-types
+  !  77:88  Missing semicolon                          semi
+  !  85:9   Unexpected 'debugger' statement            no-debugger
+  !  85:17  Missing semicolon                          semi
+  !  90:21  JSX props should not use arrow functions   react/jsx-no-bind
+  ?  90:41  'NavigateChanged' is not defined           no-undef
+  !  93:10  Missing semicolon                          semi
+
+C:\ComputerScience_WINDOWS\01_Projects\01_Guttersnipe\client\index.js (0/4)
+  !  12:50  Missing semicolon             semi
+  !  13:22  Missing semicolon             semi
+  !  14:75  Missing semicolon             semi
+  !  17:1   Unexpected console statement  no-console
+
+C:\ComputerScience_WINDOWS\01_Projects\01_Guttersnipe\client\routes.js (0/1)
+  !  4:8  Using exported name 'ShareablePage' as identifier for default export  import/no-named-as-default
+
+? 2 errors ! 33 warnings (7:23:17 PM)
+
+  [▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬]
+
+  108 passing (419ms)
+
+[BS] Access URLs:
+ ----------------------------
+ Local: http://localhost:3000
+ ----------------------------
+    UI: http://localhost:3001
+ ----------------------------
+[BS] Serving files from: src
+[BS] Watching files...
+webpack: wait until bundle finished: /__webpack_hmr
+webpack: wait until bundle finished: /index.html
+webpack built d5b7900c16280e3e61fe in 21499ms
+Child html-webpack-plugin for "index.html":
+
+webpack: bundle is now VALID.
+^C^CTerminate batch job (Y/N)? ^^^^CCCCTerminate batch job (Y/N)? Terminate batch job (Y/N)? Terminate batch j
+ob (Y/N)? ^CTerminate batch job (Y/N)? Terminate batch job (Y/N)? Terminate batch job (Y/N)? ^C^CTerminate bat
+ch job (Y/N)? Terminate batch job (Y/N)? Terminate batch job (Y/N)? ^^^^^^^^^C^CCCCCCCCC^^^^^^^C^CC^CCCCCC^CY
+

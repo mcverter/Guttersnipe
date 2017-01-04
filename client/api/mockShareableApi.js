@@ -6,7 +6,8 @@ import v4 from 'uuid';
 // All calls return promises.
 const shareables = [
   {
-    "headline" : "Trader Joe's",
+    "id" : 1,
+      "headline" : "Trader Joe's",
     "summary"  : " Dumpster divers from all 4 boroughs have been known to make the trip. On some nights TJs puts out upwards of 6 dumpsters, at least half of which are filled top to bottom with quality food. Sometimes the scene gets weirdly competitive, with dumpster divers seeming to forget that the area is packed with other wasteful stores.Lots of locals count on finding greens and produce in particular. Fewer go thru the bags, which contain health bread, and often assorted packaged health foods, and small amounts of bulk foods (grains, beans, nuts, coffee) that can be gleaned from the not-quite-emptied heavy brown bags.",
     "thing"    : {
       "description_how" : "On the south side of Atlantic Avenue near Court St in big dumpsters.",
@@ -23,17 +24,20 @@ const shareables = [
       "canonical_address": " 130 Court St  Brooklyn, NY 11201",
       "notes": "On the south side of Atlantic Avenue near Court St in big dumpsters."
     },
+//      To parse a date as UTC, append a Z - e.g.: new Date('2011-04-11T10:20:30Z').
+
+
     "time"    : {
       "notes": "Lately (fall 2012), usually not until about midnight; sometimes earlier.",
       "calendar": {
         "events": [
           {
-            "dt_start": "Dec 12 2016 12:00PM",
-            "dt_end": "Dec 12 2016 2:00AM",
+            "dt_start": "2016-12-11T23:59:00",
+            "dt_end": "2016-12-12T02:00:00",
             "tz_id": "America/New_York",
             "recurrence_rule": {
               "freq": "weekly",
-              "byDay": "su,mo,tu,we,th,fr,sa"
+              "byDay": "su,mo"
             }
           }
         ]
@@ -41,6 +45,8 @@ const shareables = [
     }
   },
   {
+          "id" : 2,
+
     "headline": "La Bagel Delight",
     "summary": "Plenty of fresh, soft and delicious bagels of all varieties. Some sweets like scones and croissants, and a few sandwiches too",
     "thing": {
@@ -59,12 +65,12 @@ const shareables = [
       "calendar": {
         "events": [
           {
-            "dt_start": "Dec 11 2016 10:00PM",
-            "dt_end": "Dec 12 2016 2:00AM",
+                          "dt_start": "2016-12-11T22:00:00",
+            "dt_end": "2016-12-12T02:00:00",
             "tz_id": "America/New_York",
             "recurrence_rule": {
               "freq": "weekly",
-              "byDay": "su,mo,tu,we,th,fr"
+              "byDay": "tu"
             }
           }
         ]
@@ -72,6 +78,8 @@ const shareables = [
     }
   },
    {
+           "id" : 3,
+
     "headline" : "Garden of Eden Gourmet",
     "summary"  : "Messy and hit-or-miss, but can yield a surprising amount of fresh vegetables,  prepared foods, yogurts and so forth. The “compost” bins are well worth digging down a ways, as they’ve yielded lots of whole fruit and veg.",
     "thing"    : {
@@ -90,12 +98,12 @@ const shareables = [
       "calendar" : {
         "events": [
           {
-            "dt_start": "Dec 11 2016 10:00PM",
-            "dt_end": "Dec 12 2016 12:00AM",
+                          "dt_start": "2016-12-11T22:00:00",
+            "dt_end": "2016-12-12T00:00:00",
             "tz_id": "America/New_York",
             "recurrence_rule" : {
               "freq": "weekly",
-              "byDay": "su,mo,tu,we,th,fr,sa"
+              "byDay": "sa"
             }
           }
         ]

@@ -1,19 +1,10 @@
-// Set up your root reducer here...
- import { combineReducers } from 'redux';
- export default combineReducers;
-
-
-/**
- import {combineReducers} from 'redux';
-import courses from './courseReducer';
-import authors from './authorReducer';
+import {combineReducers} from 'redux';
+import shareables from './shareableReducer.js';
 import ajaxCallsInProgress from './ajaxStatusReducer';
 
 const rootReducer = combineReducers({
-  courses,
-  authors,
+  shareables,
   ajaxCallsInProgress
 });
 
 export default rootReducer;
- */

@@ -8,6 +8,12 @@ import routes from './routes';
 import {loadShareables} from './actions/shareableActions';
 import App from './components/App';
 const store = configureStore();
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/leaflet/dist/leaflet.css'
+import './styles.css'
+import '../node_modules/react-big-calendar/lib/css/react-big-calendar.css'
+
+
 console.log(store);
 store.dispatch(loadShareables());
 
