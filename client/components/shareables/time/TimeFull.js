@@ -20,13 +20,14 @@ class TimeFull extends Component {
                 duration: (moment(event.dt_end) - moment(event.dt_start)),
                 rule: this.makeRrule(event)});
         } else {
-            fixedDates.push({start: event.start, end: event.end, title: headline})
+            fixedDates.push({start: event.start, end: event.end, title: headline});
         }
         this.state = {
             currentMonth,
             fixedDates, 
             recurringDateRules
         };
+        this.onNavigate = this.onNavigate.bind(this);
     }
 
     makeRrule(event) {
@@ -68,8 +69,8 @@ class TimeFull extends Component {
         let {currentMonth, recurringDateRules} = this.state;
         const rule_wrapping = recurringDateRules[0];
         const rule = rule_wrapping.rule;
-        let som = moment(currentMonth).startOf('month').toDate();
-        let eom = moment(currentMonth).endOf('month').toDate();
+        let som = moment(currentMonth).startOf('month').subtract(7, 'days').toDate();
+        let eom = moment(currentMonth).endOf('month').add(7, 'days').toDate();
         let rules = rule.between(som, eom);
         return rules.map(r => {
             let end_date = new Date(r.getTime() + rule_wrapping.duration);
@@ -78,6 +79,13 @@ class TimeFull extends Component {
         });
     }
 
+    onNavigate(date) {
+        this.setState({
+            currentMonth: date
+        });
+    }
+
+
     render() {
         let recurringEvents = this.calculateRecurringEvents();
         let all_events = this.state.fixedDates.concat(recurringEvents);
@@ -85,7 +93,7 @@ class TimeFull extends Component {
             <div style={{height: "400px"}}> Hello world
                 <BigCalendar className="calendar" timeslots={4}
                     events={all_events}
-                    onNavigate={date => NavigateChanged(date)}
+                    onNavigate={this.onNavigate}
                 />
             </div>
         );

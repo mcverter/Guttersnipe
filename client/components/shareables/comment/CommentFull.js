@@ -10,10 +10,9 @@ const CommentFull = ({comment, author, date}) => (
 
 
 CommentFull.propTypes = {
-/*    comment: PropTypes.string.isRequired,
+    comment: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
     date: PropTypes.date.isRequired
-    */
 };
 
 export default CommentFull;
