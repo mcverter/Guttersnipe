@@ -11,7 +11,6 @@ L.Icon.Default.mergeOptions({
 });
 */
 const SpaceFull = ({space}) => {
-    console.log('Space', space);
     const {longitude, latitude, canonical_address,
         alternate_names, notes} =  space;
     const position = [latitude, longitude];

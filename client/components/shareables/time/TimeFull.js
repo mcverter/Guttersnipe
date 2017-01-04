@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {PropTypes, Component} from 'react';
 import BigCalendar from 'react-big-calendar';
 import moment from 'moment';
 import RRule from 'rrule';
@@ -8,7 +8,6 @@ BigCalendar.momentLocalizer(moment); // or globalizeLocalizer
 
 class TimeFull extends Component {
     constructor(props) {
-        debugger;
         super(props);
         let {time, headline} = props;
         let events = time.calendar.events;
@@ -19,9 +18,9 @@ class TimeFull extends Component {
         if (event.recurrence_rule) {
             recurringDateRules.push({
                 duration: (moment(event.dt_end) - moment(event.dt_start)),
-                rule: this.makeRrule(event)})
+                rule: this.makeRrule(event)});
         } else {
-            fixedDates.push({start: event.start, end: event.end, title: title})
+            fixedDates.push({start: event.start, end: event.end, title: headline})
         }
         this.state = {
             currentMonth,
@@ -42,8 +41,8 @@ class TimeFull extends Component {
                     case 'fr': return RRule.FR;
                     case 'sa': return RRule.SA;
                 }
-            })
-        }
+            });
+        };
 
         const freqToRRule = (freq) => {
             switch (freq) {
@@ -52,7 +51,7 @@ class TimeFull extends Component {
                 case 'weekly': return RRule.WEEKLY;
                 case 'daily': return RRule.DAILY;
             }
-        }
+        };
 
         return new RRule({
                 freq: freqToRRule(event.recurrence_rule.freq),
@@ -67,14 +66,14 @@ class TimeFull extends Component {
 
     calculateRecurringEvents() {
         let {currentMonth, recurringDateRules} = this.state;
-        const rule_wrapping = recurringDateRules[0]
+        const rule_wrapping = recurringDateRules[0];
         const rule = rule_wrapping.rule;
         let som = moment(currentMonth).startOf('month').toDate();
         let eom = moment(currentMonth).endOf('month').toDate();
         let rules = rule.between(som, eom);
         return rules.map(r => {
             let end_date = new Date(r.getTime() + rule_wrapping.duration);
-            let schedule_object = {start: r, end: end_date, title: this.props.headline}
+            let schedule_object = {start: r, end: end_date, title: this.props.headline};
             return schedule_object;
         });
     }
@@ -82,7 +81,6 @@ class TimeFull extends Component {
     render() {
         let recurringEvents = this.calculateRecurringEvents();
         let all_events = this.state.fixedDates.concat(recurringEvents);
-        debugger
         return (
             <div style={{height: "400px"}}> Hello world
                 <BigCalendar className="calendar" timeslots={4}
@@ -90,9 +88,13 @@ class TimeFull extends Component {
                     onNavigate={date => NavigateChanged(date)}
                 />
             </div>
-        )
-
+        );
     }
 }
+TimeFull.propTypes = {
+    headline: PropTypes.string.isRequired,
+    time: PropTypes.object.isRequired,
+    month: PropTypes.string
+};
 
 export default TimeFull;
