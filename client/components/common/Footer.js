@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 
-export default Footer = (user) => {
+ const Footer = (user) => {
     return (
         <div> Footer is footer </div>
     )
@@ -8,6 +8,8 @@ export default Footer = (user) => {
 Footer.propTypes = {
     user: PropTypes.object
 }
+
+export default Footer;
 
 /*
 <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">

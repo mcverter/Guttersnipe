@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 
-export default Header = (user) => {
+const Header = (user) => {
     return (
         <div> Header is Header </div>
     )
@@ -8,6 +8,8 @@ export default Header = (user) => {
 Header.propTypes = {
     user: PropTypes.object
 }
+
+export default Header;
 
 /*
         <div class="container NavColor" data-ng-controller="HeaderController">
