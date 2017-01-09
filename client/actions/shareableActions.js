@@ -1,28 +1,41 @@
-
-import 'whatwg-fetch'
-export const FETCH_SHAREABLE_V2_S = 'FETCH_SHAREABLE_V2_S';
-export const CREATE_SHAREABLE_V2_ = 'CREATE_SHAREABLE_V2_';
-export const FETCH_SHAREABLE_V2_ = 'FETCH_SHAREABLE_V2_';
-export const DELETE_SHAREABLE_V2_ = 'DELETE_SHAREABLE_V2_';
+import {SHAREABLES_ALL_REQUEST, SHAREABLES_ALL_REQUEST_SUCCESS,
+    SHAREABLES_ALL_REQUEST_ERROR} from './actionTypes'
 
 const ROOT_URL = 'http://localhost:5000';
 
-export function fetchShareable_v2_s() {
-  const request = fetch.get(`${ROOT_URL}/shareables`);
-
-  return {
-    type: FETCH_SHAREABLE_V2_S,
-    payload: request
-  };
+export function fetchAllShareables() {
+  return dispatch => {
+    dispatch(requestAllShareables())
+    return fetch(`${ROOT_URL}/shareables`)
+      .then(response => response.json())
+      .then(json => dispatch(receiveAllShareables(json)))
+  }
 }
-/*
-export function createShareable(props) {
-  const request = axios.post(`${ROOT_URL}/posts${API_KEY}`, props);
 
-  return {
-    type: CREATE_Shareable,
-    payload: request
-  };
+function requestAllShareables() {
+    return {
+        type: SHAREABLES_ALL_REQUEST
+    }
+}
+
+
+function receiveAllShareables(json) {
+    return {
+        type: SHAREABLES_ALL_REQUEST_SUCCESS,
+        shareables: json
+    }
+}
+
+
+const fetchPosts = reddit => dispatch => {
+  dispatch(requestPosts(reddit))
+  return fetch(`https://www.reddit.com/r/${reddit}.json`)
+    .then(response => response.json())
+    .then(json => dispatch(receivePosts(reddit, json)))
+}
+
+
+/*
 }
 
 export function fetchShareable(id) {
@@ -44,7 +57,7 @@ export function deleteShareable(id) {
 }
 
 
-*/
+
 
 // CORY-HOUSE INSPIRED.
 import shareableApi from '../api/mockShareableApi';
@@ -67,7 +80,7 @@ export function updateShareableSuccess(shareable) {
 
 export function loadShareables() {
   return function(dispatch) {
-      fetchShareable_v2_s();
+      fetchShareables();
     dispatch(beginAjaxCall());
     return shareableApi.getAllShareables().then(shareables => {
       dispatch(loadShareablesSuccess(shareables));
@@ -90,3 +103,4 @@ export function saveShareable(shareable) {
   };
 }
 
+*/

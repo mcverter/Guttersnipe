@@ -1,4 +1,7 @@
 """
+
+ "error": "(raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely) (IntegrityError) new row for relation \"recurrence_rule\" violates check constraint \"recurrence_rule_freq_check\"\nDETAIL:  Failing row contains (2, weekly, mo, null, null, null, null, null, null, 1, null).\n 'INSERT INTO recurrence_rule (freq, \"byDay\", \"byMonthDay\", \"byYearDay\", \"byWeekNo\", \"byMonth\", until, count, interval, \"bySetPos\") VALUES (%(freq)s, %(byDay)s, %(byMonthDay)s, %(byYearDay)s, %(byWeekNo)s, %(byMonth)s, %(until)s, %(count)s, %(interval)s, %(bySetPos)s) RETURNING recurrence_rule.id' {'count': None, 'bySetPos': None, 'byDay': u'mo', 'byYearDay': None, 'byWeekNo': None, 'byMonth': None, 'interval': 1, 'byMonthDay': None, 'freq': u'weekly', 'until': None}"
+}
 class Parent(Base):
     __tablename__ = 'parent'
     id = Column(Integer, primary_key=True)
@@ -79,16 +82,16 @@ class RecurrenceRule(db.Model):
 
 
 # Valid Values
-    CheckConstraint(freq in ('yearly', 'monthly', 'weekly', 'daily', 'single'),
-                    name='Valid: Frequency Value')
-    CheckConstraint(interval > 0, name='Valid: Positive Interval')
-    CheckConstraint(byDay is not None and freq in ('daily', 'yearly', 'monthly'))
-    CheckConstraint(byWeekNo is not None and freq in ('yearly', 'monthly'))
-    CheckConstraint(byYearDay is not None and freq == 'yearly')
+#    CheckConstraint(freq in ('yearly', 'monthly', 'weekly', 'daily', 'single'),
+#                    name='Valid: Frequency Value')
+#    CheckConstraint(interval > 0, name='Valid: Positive Interval')
+#    CheckConstraint(byDay is not None and freq in ('daily', 'yearly', 'monthly'))
+#    CheckConstraint(byWeekNo is not None and freq in ('yearly', 'monthly'))
+#    CheckConstraint(byYearDay is not None and freq == 'yearly')
 
 # Until and Count may not coexist in the same rule.
-    CheckConstraint(not (until is not None and count is not None),
-                    name='Valid: Not Both Until and Count')
+#    CheckConstraint(not (until is not None and count is not None),
+#                    name='Valid: Not Both Until and Count')
 
     def __init__(self, freq,
                  byDay=None, byMonthDay=None, byYearDay=None, byWeekNo=None, byMonth=None,

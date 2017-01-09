@@ -1,18 +1,23 @@
 import React, {PropTypes} from 'react';
 
-const ThingFull = ({description_how, description_what, notes,
-    main_type, subtypes, tags}) => (
-    <div>
+const ThingFull = ({thing}) => {
+    let {description_how, description_what, notes,
+    main_type, subtypes, tags} = thing;
+    console.log("HEllo World");
+    return (
+        <div>
 
-                <div>{description_how}</div>
+            <div>{description_how}</div>
             <div>{description_what} </div>
-        <div>{main_type}</div>
-        <div>{subtypes}</div>
-        <div>{tags} </div>
-        <div>{notes}</div>
+            <div>{main_type.name}</div>
+            <div>{subtypes}</div>
+            <div>{tags} </div>
+            <div>{notes}</div>
 
-    </div>
-);
+        </div>
+    );
+}
+
 
 ThingFull.propTypes = {
     main_type: PropTypes.string.isRequired,

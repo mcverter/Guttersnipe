@@ -10,7 +10,7 @@ class EventSchema(Schema):
     dt_start = fields.DateTime()
     dt_end = fields.DateTime()
     tz_id = fields.String()
-#    recurrence_rule = fields.Nested('RecurrenceRuleSchema')
+    recurrence_rule = fields.Nested('RecurrenceRuleSchema')
 
 class RecurrenceRuleSchema(Schema):
     freq = fields.String()

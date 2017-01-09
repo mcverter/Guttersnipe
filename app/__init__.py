@@ -3,6 +3,7 @@ __author__ = 'mitchell_verter'
 from flask import Flask, render_template
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.restful import Api
+from flask_cors import CORS, cross_origin
 
 
 app = Flask(__name__,
@@ -10,6 +11,7 @@ app = Flask(__name__,
 app.config.from_object('config')
 db = SQLAlchemy(app)
 api = Api(app)
+CORS(app)
 
 from app.calendars.models import Event, RecurrenceRule
 from app.users.models import Guttersnipe, Profile, Schedule, Message, blockUserTable

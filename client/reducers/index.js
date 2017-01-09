@@ -1,10 +1,8 @@
 import {combineReducers} from 'redux';
-import shareables from './shareableReducer.js';
-import ajaxCallsInProgress from './ajaxStatusReducer';
+import shareables from './shareableReducer';
 
 const rootReducer = combineReducers({
-  shareables,
-  ajaxCallsInProgress
+  shareables
 });
 
 export default rootReducer;

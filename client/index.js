@@ -7,16 +7,15 @@ import { Router, browserHistory } from 'react-router';
 import App from './components/App';
 import configureStore from './store/configureStore';
 import routes from './routes';
-import {loadShareables} from './actions/shareableActions';
+import {fetchAllShareables} from './actions/shareableActions';
 
 import './styles.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/leaflet/dist/leaflet.css';
 import '../node_modules/react-big-calendar/lib/css/react-big-calendar.css';
 
-
 const store = configureStore();
-store.dispatch(loadShareables());
+store.dispatch(fetchAllShareables());
 
 render(
   <Provider store={store}>
