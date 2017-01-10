@@ -19,7 +19,6 @@ class ShareableListPage extends React.Component {
     }
 
     render() {
-        debugger;
         const {shareables} = this.props;
         const {isFetchingShareables, shareableFetchError,
             items, selectedShareable} = shareables;
