@@ -1,5 +1,7 @@
 import {SHAREABLES_ALL_REQUEST, SHAREABLES_ALL_REQUEST_SUCCESS,
-    SHAREABLES_ALL_REQUEST_ERROR} from '../actions/actionTypes'
+    SHAREABLES_ALL_REQUEST_ERROR, SHAREABLE_SINGLE_REQUEST,
+    SHAREABLE_SINGLE_REQUEST_SUCCESS, SHAREABLE_SINGLE_REQUEST_ERROR}
+    from '../actions/actionTypes'
 //import * as types from '../actions/shareableActions';
 import initialState from './initialState';
 
@@ -10,6 +12,11 @@ export default function shareables(shareables = initialState.shareables, action=
                 isFetchingShareables: true,
                 shareableFetchError: false
             })
+        case SHAREABLE_SINGLE_REQUEST:
+        case SHAREABLE_SINGLE_REQUEST_SUCCESS:
+        case SHAREABLE_SINGLE_REQUEST_ERROR:
+            return shareables
+
         case 'SHAREABLES_ALL_REQUEST_SUCCESS':
             return Object.assign({}, ...shareables, {
                 isFetchingShareables: false,

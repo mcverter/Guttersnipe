@@ -2,27 +2,28 @@ import React, {PropTypes} from 'react';
 import TimeLI from './time/TimeLI';
 import SpaceLI from './space/SpaceLI';
 import ThingLI from './thing/ThingLI';
+import {Link} from 'react-router';
 
 const ShareableLI =
     ({shareable}) => {
-        let {headline,
+        let {headline, id,
              number_ratings, total_rating,
-             thing, space, time,
-             notes, comments} = shareable;
+             thing, space, time} = shareable;
         return (
-            <tr id={key}>
+            <tr key={id}>
                 <td>{headline}</td>
-                <td><ThingLI={thing} /></td>
-                <td><TimeLI={thing} /></td>
-                <td><SpaceLI={thing} /></td>
-                <td> Rating: </td>
-                <Link >Full Record</Link>
+                <td><ThingLI thing={thing} /></td>
+                <td><SpaceLI space={space} /></td>
+                <td><TimeLI time={time} /></td>
+                <td> Rating:
+                {number_ratings && <span>{total_rating/number_ratings}</span>}
+                </td>
+                <Link to={"shareable/" + id}>Full Record</Link>
             </tr>
         );
     };
 
-ShareableFull.propTypes = {
+ShareableLI.propTypes = {
     shareable: PropTypes.object.isRequired
- ;
-
+}
 export default ShareableLI;

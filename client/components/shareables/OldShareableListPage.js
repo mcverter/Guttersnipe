@@ -5,7 +5,7 @@ import * as shareableActions from '../../actions/shareableActions';
 import Shareable from './ShareableFull';
 import {browserHistory} from 'react-router';
 
-class ShareableRealListPage extends React.Component {
+class OldShareableListPage extends React.Component {
     constructor(props, context) {
         super(props, context);
     }
@@ -19,7 +19,6 @@ class ShareableRealListPage extends React.Component {
     }
 
     render() {
-        debugger;
         const {shareables} = this.props;
         const {isFetchingShareables, shareableFetchError,
             items, selectedShareable} = shareables;
@@ -30,18 +29,16 @@ class ShareableRealListPage extends React.Component {
 
         return (
             <div>
-                <h1> Shareables </h1>
-                <h2> Sort by  Distance Type Name </h2>
       {items.map(shareable=>(
-          <ShareableLI key={shareable.id} shareable={shareable} />
+          <Shareable key={shareable.id} shareable={shareable} />
       ))}
-
-</div>
+                <h1>Shareables</h1>
+            </div>
         );
     }
 }
 
-ShareableRealListPage.propTypes = {
+OldShareableListPage.propTypes = {
     shareables: PropTypes.object.isRequired,
     actions: PropTypes.object.isRequired
 };
@@ -58,4 +55,4 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ShareableRealListPage);
+export default connect(mapStateToProps, mapDispatchToProps)(OldShareableListPage);

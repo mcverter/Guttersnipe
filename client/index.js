@@ -15,7 +15,7 @@ import '../node_modules/leaflet/dist/leaflet.css';
 import '../node_modules/react-big-calendar/lib/css/react-big-calendar.css';
 
 const store = configureStore();
-store.dispatch(fetchAllShareables());
+// store.dispatch(fetchAllShareables());
 
 render(
   <Provider store={store}>

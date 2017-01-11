@@ -2,7 +2,12 @@ import {SHAREABLES_ALL_REQUEST, SHAREABLES_ALL_REQUEST_SUCCESS,
     SHAREABLES_ALL_REQUEST_ERROR} from './actionTypes';
 
 const ROOT_URL = 'http://localhost:5000';
-
+export function fetchOneShareable(idx) {
+    console.log("fetch shareable called with ", idx);
+    return {
+        type: SHAREABLES_ALL_REQUEST
+    };
+}
 export function fetchAllShareables() {
   return dispatch => {
     dispatch(requestAllShareables())

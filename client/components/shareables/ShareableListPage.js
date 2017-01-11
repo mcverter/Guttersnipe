@@ -2,8 +2,10 @@ import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as shareableActions from '../../actions/shareableActions';
-import Shareable from './ShareableFull';
+import ShareableLI from './ShareableLI';
 import {browserHistory} from 'react-router';
+import {fetchAllShareables} from '../../actions/shareableActions';
+
 
 class ShareableListPage extends React.Component {
     constructor(props, context) {
@@ -12,6 +14,7 @@ class ShareableListPage extends React.Component {
 
     componentWillMount() {
         console.log("about to mount");
+        this.props.fetchAllShareables();
     }
 
     courseRow(course, index) {
@@ -29,11 +32,13 @@ class ShareableListPage extends React.Component {
 
         return (
             <div>
+                <h1> Shareables </h1>
+                <h2> Sort by  Distance Type Name </h2>
       {items.map(shareable=>(
-          <Shareable key={shareable.id} shareable={shareable} />
+          <ShareableLI key={shareable.id} shareable={shareable} />
       ))}
-                <h1>Shareables</h1>
-            </div>
+
+</div>
         );
     }
 }
@@ -55,4 +60,4 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ShareableListPage);
+export default connect(mapStateToProps, {fetchAllShareables})(ShareableListPage);

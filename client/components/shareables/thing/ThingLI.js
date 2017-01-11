@@ -18,14 +18,8 @@ const ThingLI = ({thing}) => {
 }
 
 
-ThingFull.propTypes = {
-    main_type: PropTypes.object.isRequired,
-    subtypes: PropTypes.arrayOf(PropTypes.string).isRequired,
-    description_how: PropTypes.string,
-    description_what: PropTypes.string,
-    notes: PropTypes.string,
-    tags: PropTypes.arrayOf(PropTypes.string)
+ThingLI.propTypes = {
 };
 
-export default ThingFull;
+export default ThingLI;
 
