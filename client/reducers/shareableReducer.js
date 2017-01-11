@@ -1,36 +1,55 @@
-import {SHAREABLES_ALL_REQUEST, SHAREABLES_ALL_REQUEST_SUCCESS,
-    SHAREABLES_ALL_REQUEST_ERROR, SHAREABLE_SINGLE_REQUEST,
-    SHAREABLE_SINGLE_REQUEST_SUCCESS, SHAREABLE_SINGLE_REQUEST_ERROR}
-    from '../actions/actionTypes'
+import * as types from '../actions/actionTypes'
 //import * as types from '../actions/shareableActions';
 import initialState from './initialState';
 
 export default function shareables(shareables = initialState.shareables, action={}) {
     switch(action.type) {
-        case 'SHAREABLES_ALL_REQUEST':
-            return Object.assign({}, ...shareables, {
+        case types.SHAREABLES_ALL_REQUEST:
+            return Object.assign({}, shareables, {
                 isFetchingShareables: true,
                 shareableFetchError: false
             })
-        case SHAREABLE_SINGLE_REQUEST:
-        case SHAREABLE_SINGLE_REQUEST_SUCCESS:
-        case SHAREABLE_SINGLE_REQUEST_ERROR:
-            return shareables
+        case types.SHAREABLES_SET_CURRENT:
+            return Object.assign({}, shareables, {
+                selectedIndex: action.selectedIndex,
+                isFetchingShareables: false,
+                shareableFetchError: false
+            })
 
-        case 'SHAREABLES_ALL_REQUEST_SUCCESS':
+        case types.SHAREABLE_SINGLE_REQUEST:
+            return Object.assign({}, shareables, {
+                isFetchingShareables: true,
+                shareableFetchError: false
+            })
+
+        case types.SHAREABLE_SINGLE_REQUEST_SUCCESS:
+            return Object.assign({}, shareables, {
+                isFetchingShareables: false,
+                shareableFetchError: false,
+                items: shareables.items.concat(action.shareables),
+                selectedIndex: action.shareables.id
+            })
+
+
+        case types.SHAREABLE_SINGLE_REQUEST_ERROR:
+              return Object.assign({}, shareables, {
+                isFetchingShareables: false,
+                shareableFetchError: true
+            })
+
+        case types.SHAREABLES_ALL_REQUEST_SUCCESS:
             return Object.assign({}, ...shareables, {
                 isFetchingShareables: false,
                 shareableFetchError: false,
                 items: action.shareables
             })
-        case 'SHAREABLES_ALL_REQUEST_ERROR':
-              return Object.assign({}, ...shareables, {
+        case types.SHAREABLES_ALL_REQUEST_ERROR:
+              return Object.assign({}, shareables, {
                 isFetchingShareables: false,
                 shareableFetchError: true
             })
         default:
             return shareables
-
     }
 }
 

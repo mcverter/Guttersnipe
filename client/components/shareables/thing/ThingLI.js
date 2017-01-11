@@ -2,7 +2,6 @@ import React, {PropTypes} from 'react';
 
 const ThingLI = ({thing}) => {
     let {main_type, subtypes, tags} = thing;
-    console.log("HEllo World");
     return (
         <td>
             <dl>

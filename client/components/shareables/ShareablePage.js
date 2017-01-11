@@ -2,46 +2,51 @@ import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as shareableActions from '../../actions/shareableActions';
-import ShareableLI from './ShareableLI';
+import ShareableFull from './ShareableFull';
 import {browserHistory} from 'react-router';
-import {fetchOneShareable} from '../../actions/shareableActions';
+import {fetchSingleShareableIfNeeded} from '../../actions/shareableActions';
 
 
-class ShareableListPage extends React.Component {
+class ShareablePage extends React.Component {
     constructor(props, context) {
         super(props, context);
     }
 
     componentWillMount() {
-        console.log("about to mount");
-        this.props.fetchOneShareable(this.props.params.id);
+        this.props.fetchSingleShareableIfNeeded(this.props.params.id);
     }
 
     render() {
-        let selectedShareableIdx = this.props.params.id
-        const {shareable} = this.props;
-        if (!shareable) {
-            return <div>Loading... {selectedShareableIdx}
-            </div>;
+        if (!this.props.shareableItems || this.props.selectedIndex < 1) {
+            return <div>Loading...</div>;
         }
 
-       /*         const {isFetchingShareables, shareableFetchError,
-            items, selectedShareable} = shareables;
-         if (isFetchingShareables || !items || items.length < 1)
-        console.log("Shareables", shareables);
-*/
-        return (
+        const shareable = _.find(this.props.shareableItems,
+            {id: this.props.selectedIndex})
+
+        if (!shareable) {
+            return <div>Loading...</div>;
+        }
+
+
+                if (this.props.isFetchingShareables) {
+            return <div>Loading...</div>;
+        }
+
+       return (
             <ShareableFull shareable={shareable} />
         );
     }
 }
 
-ShareableListPage.propTypes = {
+ShareablePage.propTypes = {
 };
 
 function mapStateToProps(state, ownProps) {
     return {
-        selectedShareableIdx: state.selectedShareableIdx
+        shareableItems: state.shareables.items,
+        selectedIndex: state.shareables.selectedIndex,
+        isFetchingShareables: state.shareables.isFetchingShareables
     };
 }
 
@@ -51,6 +56,6 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-export default connect(mapStateToProps, {fetchOneShareable})(ShareableListPage);
+export default connect(mapStateToProps, {fetchSingleShareableIfNeeded})(ShareablePage);
 
 

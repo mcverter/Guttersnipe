@@ -1,13 +1,8 @@
-import {SHAREABLES_ALL_REQUEST, SHAREABLES_ALL_REQUEST_SUCCESS,
-    SHAREABLES_ALL_REQUEST_ERROR} from './actionTypes';
+import * as types from './actionTypes';
+import _ from 'lodash';
 
 const ROOT_URL = 'http://localhost:5000';
-export function fetchOneShareable(idx) {
-    console.log("fetch shareable called with ", idx);
-    return {
-        type: SHAREABLES_ALL_REQUEST
-    };
-}
+
 export function fetchAllShareables() {
   return dispatch => {
     dispatch(requestAllShareables())
@@ -19,14 +14,66 @@ export function fetchAllShareables() {
 
 function requestAllShareables() {
     return {
-        type: SHAREABLES_ALL_REQUEST
+        type: types.SHAREABLES_ALL_REQUEST
+    };
+}
+
+function requestSingleShareable() {
+    return {
+        type: types.SHAREABLE_SINGLE_REQUEST
     };
 }
 
 
-function receiveAllShareables(json) {
+function receiveSingleShareable(json) {
     return {
-        type: SHAREABLES_ALL_REQUEST_SUCCESS,
+        type: types.SHAREABLE_SINGLE_REQUEST_SUCCESS,
         shareables: json
     };
+}
+
+function receiveAllShareables(json) {
+    return {
+        type: types.SHAREABLES_ALL_REQUEST_SUCCESS,
+        shareables: json
+    };
+}
+
+function shouldFetchSingleShareable(state, id) {
+    if(!state.shareables || !state.shareables.items) {
+        return false
+    }
+    const shareable = _.find(state.shareables.items, {id: parseInt(id)})
+    if (!shareable) {
+        return true
+    } else {
+        return false
+    }
+}
+
+function setCurrentShareable(id) {
+    return {
+        type: types.SHAREABLES_SET_CURRENT,
+        selectedIndex: parseInt(id)
+    };
+}
+export function fetchSingleShareableIfNeeded(id) {
+        return (dispatch, getState) => {
+        if (shouldFetchSingleShareable(getState(), id)){
+            return dispatch(fetchSingleShareable(id))
+        } else {
+            return dispatch(setCurrentShareable(id));
+        }
+    }
+}
+
+function fetchSingleShareable(id) {
+    return function (dispatch) {
+        dispatch(requestSingleShareable(id))
+
+        return fetch(`${ROOT_URL}/shareable/${id}`)
+            .then(response=>response.json())
+            .then(json=>
+                dispatch(receiveSingleShareable(json)))
+    }
 }

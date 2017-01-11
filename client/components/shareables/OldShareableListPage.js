@@ -10,10 +10,6 @@ class OldShareableListPage extends React.Component {
         super(props, context);
     }
 
-    componentWillMount() {
-        console.log("about to mount");
-    }
-
     courseRow(course, index) {
         return <div key={index}>{course.title}</div>;
     }
@@ -22,7 +18,6 @@ class OldShareableListPage extends React.Component {
         const {shareables} = this.props;
         const {isFetchingShareables, shareableFetchError,
             items, selectedShareable} = shareables;
-        console.log("Shareables", shareables);
         if (isFetchingShareables || !items || items.length < 1) {
             return <div>Loading...</div>;
         }

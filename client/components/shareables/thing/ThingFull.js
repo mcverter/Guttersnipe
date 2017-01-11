@@ -3,7 +3,6 @@ import React, {PropTypes} from 'react';
 const ThingFull = ({thing}) => {
     let {description_how, description_what, notes,
     main_type, subtypes, tags} = thing;
-    console.log("HEllo World");
     return (
         <div>
 

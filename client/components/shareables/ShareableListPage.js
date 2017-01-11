@@ -13,7 +13,6 @@ class ShareableListPage extends React.Component {
     }
 
     componentWillMount() {
-        console.log("about to mount");
         this.props.fetchAllShareables();
     }
 
@@ -24,8 +23,7 @@ class ShareableListPage extends React.Component {
     render() {
         const {shareables} = this.props;
         const {isFetchingShareables, shareableFetchError,
-            items, selectedShareable} = shareables;
-        console.log("Shareables", shareables);
+            items, selectedIndex} = shareables;
         if (isFetchingShareables || !items || items.length < 1) {
             return <div>Loading...</div>;
         }

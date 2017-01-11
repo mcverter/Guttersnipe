@@ -3,7 +3,7 @@ const initialState = {
         isFetchingShareables: false,
         shareableFetchError: false,
         items: [],
-        selectedShareable: -1
+        selectedIndex: -1
     }
 };
 
