@@ -21,11 +21,11 @@ const ShareableCreate =
             {number_ratings ?
             total_rating / number_ratings : 0}
                 </div>
-                <Thing
+                <ThingCreate
                     thing={thing} />
-                <Space
+                <SpaceCreate
                     space={space} />
-                <Time
+                <TimeCreate
                     time={time} headline={headline} />
                 <div>
             {notes}

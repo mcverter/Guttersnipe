@@ -11,6 +11,7 @@ const SpaceLI = ({space}) => {
 };
 
 SpaceLI.propTypes = {
+    space: PropTypes.object
 };
 
 export default SpaceLI;

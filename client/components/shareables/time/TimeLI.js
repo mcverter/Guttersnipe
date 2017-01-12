@@ -13,7 +13,7 @@ class TimeLI extends Component {
                 days: this.getDaysFromRule(event.recurrence_rule.byDay),
                 start: (new Date(event.dt_start)).toLocaleTimeString(),
                 end: (new Date(event.dt_end)).toLocaleTimeString()
-            })
+            });
         } else {
             fixedDates.push({start: event.start, end: event.end});
         }
@@ -45,7 +45,7 @@ class TimeLI extends Component {
             {fixedDates && fixedDates.length >0 &&
                 <ul>
                     {fixedDates.map((date) => {
-                    return <li> Start: {date.start} End: {date.end} </li>
+                    return <li key={date.start}> Start: {date.start} End: {date.end} </li>;
                     })}
                 </ul>
                 }
@@ -53,9 +53,8 @@ class TimeLI extends Component {
             {recurringDates && recurringDates.length >0 &&
                 <ul>
                     {recurringDates.map((date) => {
-                    return                     <li> Start Time: {date.start} End Time: {date.end} <br />
-                        Every {date.days}</li>
-
+                    return   (                  <li key={date.start}> Start Time: {date.start} End Time: {date.end} <br />
+                        Every {date.days}</li>);
                     })}
                  </ul>
                 }
@@ -65,6 +64,7 @@ class TimeLI extends Component {
     }
 }
 TimeLI.propTypes = {
+    time: PropTypes.object.isRequired
 };
 
 export default TimeLI;

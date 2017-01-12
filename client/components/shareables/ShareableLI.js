@@ -25,5 +25,6 @@ const ShareableLI =
 
 ShareableLI.propTypes = {
     shareable: PropTypes.object.isRequired
-}
+};
+
 export default ShareableLI;

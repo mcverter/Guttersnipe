@@ -10,21 +10,20 @@ class Footer extends Component {
 
         render() {
             return (
-            <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-                <div class="container NavColor">
-                    <div class="navbar-header">
-                    </div>
-                    <ul class="nav navbar-nav navbar-right sm">
-                        <li><Link to="faq" class="navbar-brand ">FAQ</Link></li>
-                        <li><Link to="documentation"  class="navbar-brand ">Docs</Link></li>
-                        <li><Link to="illlegal"  class="navbar-brand ">L@W</Link></li>
+            <div className="navbar navbar-default navbar-fixed-bottom" role="navigation">
+                <div className="container NavColor">
+                    <div className="navbar-header" />
+                    <ul className="nav navbar-nav navbar-right sm">
+                        <li><Link to="faq" className="navbar-brand ">FAQ</Link></li>
+                        <li><Link to="documentation"  className="navbar-brand ">Docs</Link></li>
+                        <li><Link to="illlegal"  className="navbar-brand ">L@W</Link></li>
                         <li>
-                            <Link to="contact"  class="navbar-brand ">
-                            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></Link></li>
+                            <Link to="contact"  className="navbar-brand ">
+                            <span className="glyphicon glyphicon-envelope" aria-hidden="true" /></Link></li>
                     </ul>
                 </div>
             </div>
-            )
+            );
         }
 }
 

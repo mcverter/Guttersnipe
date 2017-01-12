@@ -1,5 +1,4 @@
-import * as types from '../actions/actionTypes'
-//import * as types from '../actions/shareableActions';
+import * as types from '../actions/actionTypes';
 import initialState from './initialState';
 
 export default function shareables(shareables = initialState.shareables, action={}) {
@@ -8,19 +7,19 @@ export default function shareables(shareables = initialState.shareables, action=
             return Object.assign({}, shareables, {
                 isFetchingShareables: true,
                 shareableFetchError: false
-            })
+            });
         case types.SHAREABLES_SET_CURRENT:
             return Object.assign({}, shareables, {
                 selectedIndex: action.selectedIndex,
                 isFetchingShareables: false,
                 shareableFetchError: false
-            })
+            });
 
         case types.SHAREABLE_SINGLE_REQUEST:
             return Object.assign({}, shareables, {
                 isFetchingShareables: true,
                 shareableFetchError: false
-            })
+            });
 
         case types.SHAREABLE_SINGLE_REQUEST_SUCCESS:
             return Object.assign({}, shareables, {
@@ -28,28 +27,30 @@ export default function shareables(shareables = initialState.shareables, action=
                 shareableFetchError: false,
                 items: shareables.items.concat(action.shareables),
                 selectedIndex: action.shareables.id
-            })
+            });
 
 
         case types.SHAREABLE_SINGLE_REQUEST_ERROR:
               return Object.assign({}, shareables, {
                 isFetchingShareables: false,
                 shareableFetchError: true
-            })
+            });
 
         case types.SHAREABLES_ALL_REQUEST_SUCCESS:
             return Object.assign({}, ...shareables, {
                 isFetchingShareables: false,
                 shareableFetchError: false,
                 items: action.shareables
-            })
+            });
+
         case types.SHAREABLES_ALL_REQUEST_ERROR:
               return Object.assign({}, shareables, {
                 isFetchingShareables: false,
                 shareableFetchError: true
-            })
+            });
+
         default:
-            return shareables
+            return shareables;
     }
 }
 

@@ -15,30 +15,18 @@ const ThingFull = ({thing}) => {
 
         </div>
     );
-}
+};
 
 
 ThingFull.propTypes = {
-    main_type: PropTypes.string.isRequired,
+    thing: PropTypes.object.isRequired
+/*    main_type: PropTypes.string.isRequired,
     subtypes: PropTypes.arrayOf(PropTypes.string).isRequired,
     description_how: PropTypes.string,
     description_what: PropTypes.string,
     notes: PropTypes.string,
     tags: PropTypes.arrayOf(PropTypes.string)
+    */
 };
 
 export default ThingFull;
-
-/*
-        <Description
-            how={description_how}
-            what={description_what} />
-        <Taxonomy
-            type={main_type}
-            subtypes={subtypes }/>
-        <Tags
-            tags={tags} />
-        <ThingNotes
-            notes={notes} />
-
- */

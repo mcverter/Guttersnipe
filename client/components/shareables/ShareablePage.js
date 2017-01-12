@@ -1,11 +1,10 @@
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import * as shareableActions from '../../actions/shareableActions';
 import ShareableFull from './ShareableFull';
 import {browserHistory} from 'react-router';
 import {fetchSingleShareableIfNeeded} from '../../actions/shareableActions';
-
+import _ from 'lodash';
 
 class ShareablePage extends React.Component {
     constructor(props, context) {
@@ -22,7 +21,7 @@ class ShareablePage extends React.Component {
         }
 
         const shareable = _.find(this.props.shareableItems,
-            {id: this.props.selectedIndex})
+            {id: this.props.selectedIndex});
 
         if (!shareable) {
             return <div>Loading...</div>;
@@ -40,6 +39,11 @@ class ShareablePage extends React.Component {
 }
 
 ShareablePage.propTypes = {
+    fetchSingleShareableIfNeeded: PropTypes.func.isRequired,
+    params: PropTypes.object,
+    shareableItems: PropTypes.array,
+    selectedIndex: PropTypes.number,
+    isFetchingShareables: PropTypes.boolean
 };
 
 function mapStateToProps(state, ownProps) {
@@ -47,12 +51,6 @@ function mapStateToProps(state, ownProps) {
         shareableItems: state.shareables.items,
         selectedIndex: state.shareables.selectedIndex,
         isFetchingShareables: state.shareables.isFetchingShareables
-    };
-}
-
-function mapDispatchToProps(dispatch) {
-    return {
-        actions: bindActionCreators(shareableActions, dispatch)
     };
 }
 

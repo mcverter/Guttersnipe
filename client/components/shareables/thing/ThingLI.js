@@ -14,10 +14,11 @@ const ThingLI = ({thing}) => {
             </dl>
         </td>
     );
-}
+};
 
 
 ThingLI.propTypes = {
+    thing: PropTypes.object.isRequired
 };
 
 export default ThingLI;

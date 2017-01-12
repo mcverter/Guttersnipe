@@ -5,7 +5,7 @@ const ROOT_URL = 'http://localhost:5000';
 
 export function fetchAllShareables() {
   return dispatch => {
-    dispatch(requestAllShareables())
+    dispatch(requestAllShareables());
     return fetch(`${ROOT_URL}/shareables`)
       .then(response => response.json())
       .then(json => dispatch(receiveAllShareables(json)));
@@ -41,13 +41,13 @@ function receiveAllShareables(json) {
 
 function shouldFetchSingleShareable(state, id) {
     if(!state.shareables || !state.shareables.items) {
-        return false
+        return false;
     }
-    const shareable = _.find(state.shareables.items, {id: parseInt(id)})
+    const shareable = _.find(state.shareables.items, {id: parseInt(id)});
     if (!shareable) {
-        return true
+        return true;
     } else {
-        return false
+        return false;
     }
 }
 
@@ -60,20 +60,20 @@ function setCurrentShareable(id) {
 export function fetchSingleShareableIfNeeded(id) {
         return (dispatch, getState) => {
         if (shouldFetchSingleShareable(getState(), id)){
-            return dispatch(fetchSingleShareable(id))
+            return dispatch(fetchSingleShareable(id));
         } else {
             return dispatch(setCurrentShareable(id));
         }
-    }
+    };
 }
 
 function fetchSingleShareable(id) {
     return function (dispatch) {
-        dispatch(requestSingleShareable(id))
+        dispatch(requestSingleShareable(id));
 
         return fetch(`${ROOT_URL}/shareable/${id}`)
             .then(response=>response.json())
             .then(json=>
-                dispatch(receiveSingleShareable(json)))
-    }
+                dispatch(receiveSingleShareable(json)));
+    };
 }

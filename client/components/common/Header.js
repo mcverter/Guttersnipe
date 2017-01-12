@@ -11,21 +11,21 @@ class Header extends Component {
 
     render() {
         return (
-            <div class="container NavColor">
-                <div class="navbar-header">
-                    <button class="navbar-toggle" type="button" >
-                        <span class="sr-only">Toggle navigation</span>
+            <div className="container NavColor">
+                <div className="navbar-header">
+                    <button className="navbar-toggle" type="button" >
+                        <span className="sr-only">Toggle navigation</span>
                     </button>
-                    <Link to="/" class="navbar-brand">Guttersnipe</Link>
+                    <Link to="/" className="navbar-brand">Guttersnipe</Link>
                 </div>
-                <nav class="collapse navbar-collapse" collapse="!isCollapsed" role="navigation">
-                    <ul class="nav navbar-nav navbar-right" >
+                <nav className="collapse navbar-collapse" collapse="!isCollapsed" role="navigation">
+                    <ul className="nav navbar-nav navbar-right" >
                         <li> Sign In </li>
                         <li> Sign Out</li>
                     </ul>
                 </nav>
             </div>
-        )
+        );
     }
 }
 
