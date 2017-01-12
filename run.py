@@ -1,4 +1,4 @@
 #!../../flask-tut-env/bin/python
 
-from app import app
+from server import app
 app.run(debug=True)

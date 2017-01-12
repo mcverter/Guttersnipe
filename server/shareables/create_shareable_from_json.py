@@ -1,9 +1,9 @@
 import json
-from app.calendars.models import Event, Calendar, RecurrenceRule
-from app.shareables.models import Shareable, Thing, Space, \
+from server.calendars.models import Event, Calendar, RecurrenceRule
+from server.shareables.models import Shareable, Thing, Space, \
     Time, MainType, Subtype, Comment
 from datetime import datetime
-from app import db
+from server import db
 from sqlalchemy.sql import operators
 
 def create_many_shareables_from_json_string(json_string):

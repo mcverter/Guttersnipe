@@ -1,6 +1,6 @@
 __author__ = 'mitchell_verter'
 
-from app import db
+from server import db
 
 
 class CRUD_Base():

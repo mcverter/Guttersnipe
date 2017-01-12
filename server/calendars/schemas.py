@@ -1,6 +1,6 @@
 # from marshmallow_jsonapi import Schema, fields
 from marshmallow import validate, Schema, fields
-from app.calendars.models import Event
+from server.calendars.models import Event
 
 
 class CalendarSchema(Schema):

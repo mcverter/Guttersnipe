@@ -1,4 +1,4 @@
-from app.kropotkins.models import Kropotkin
+from server.kropotkins.models import Kropotkin
 from marshmallow_jsonapi import Schema, fields
 from marshmallow import validate
 

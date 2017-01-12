@@ -1,10 +1,10 @@
-from app import db
+from server import db
 from sqlalchemy.ext.associationproxy import association_proxy
 from sqlalchemy.dialects.postgresql import ARRAY, array
 import geoalchemy2
-from app.users.models import Guttersnipe
-from app.calendars.models import Calendar
-from app.base.models import CRUD_Base
+from server.users.models import Guttersnipe
+from server.calendars.models import Calendar
+from server.base.models import CRUD_Base
 from datetime import datetime
 
 ####################

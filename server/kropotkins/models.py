@@ -1,4 +1,4 @@
-from app import db
+from server import db
 
 
 class Kropotkin (db.Model):

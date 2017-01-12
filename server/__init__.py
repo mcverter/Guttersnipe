@@ -13,13 +13,13 @@ db = SQLAlchemy(app)
 api = Api(app)
 CORS(app)
 
-from app.calendars.models import Event, RecurrenceRule
-from app.users.models import Guttersnipe, Profile, Schedule, Message, blockUserTable
-from app.shareables.models import Shareable, \
+from server.calendars.models import Event, RecurrenceRule
+from server.users.models import Guttersnipe, Profile, Schedule, Message, blockUserTable
+from server.shareables.models import Shareable, \
     Thing, Space, Time, \
     MainType, Subtype, Comment
 
-from app.shareables.endpoints import ShareableEndpoint
+from server.shareables.endpoints import ShareableEndpoint
 
 @app.route('/')
 def index():

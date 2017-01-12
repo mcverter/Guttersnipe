@@ -1,14 +1,14 @@
 __author__ = None
 
-from app.calendars.models import Event, RecurrenceRule
-from app.users.models import Guttersnipe, Profile, Schedule, Message, blockUserTable
-from app.shareables.models import Shareable, \
+from server.calendars.models import Event, RecurrenceRule
+from server.users.models import Guttersnipe, Profile, Schedule, Message, blockUserTable
+from server.shareables.models import Shareable, \
     Thing, Space, Time, \
     MainType, Subtype, Comment
-from app.calendars.models import Event, Calendar, RecurrenceRule
+from server.calendars.models import Event, Calendar, RecurrenceRule
 import pdb
 from datetime import datetime
-from app import db
+from server import db
 
 print ("yay")
 def defineFoodType():

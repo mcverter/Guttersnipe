@@ -1,10 +1,10 @@
-from app import db
+from server import db
 from flask_restful import Resource, Api, fields as restful_fields, \
     marshal_with, reqparse, abort
 from sqlalchemy import CheckConstraint
 from marshmallow_jsonapi import Schema, fields as schema_fields
 from marshmallow import validate
-from app.calendars.models import Calendar
+from server.calendars.models import Calendar
 
 '''
 parser = reqparse.RequestParser()

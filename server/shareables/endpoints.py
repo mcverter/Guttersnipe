@@ -1,9 +1,9 @@
 __author__ = 'mitchell'
-from app import db, api
-from app.shareables.models import Shareable
+from server import db, api
+from server.shareables.models import Shareable
 from flask import Blueprint, request, jsonify, make_response
 from flask.ext.restful import Resource, Api, abort
-from app.shareables.schemas import ShareableSchema, ThingSchema, TimeSchema, SpaceSchema
+from server.shareables.schemas import ShareableSchema, ThingSchema, TimeSchema, SpaceSchema
 import json
 
 from sqlalchemy.exc import SQLAlchemyError
@@ -95,11 +95,11 @@ class ShareableListEndpoint(Resource):
                 resp.status_code = 403
                 return resp
 
-from app.calendars.models import Event, Calendar, RecurrenceRule
-from app.shareables.models import Shareable, Thing, Space, \
+from server.calendars.models import Event, Calendar, RecurrenceRule
+from server.shareables.models import Shareable, Thing, Space, \
     Time, MainType, Subtype
 from datetime import datetime
-from app import db
+from server import db
 
 def create_shareable_from_json_object(py_dict):
     headline = py_dict.get("headline")

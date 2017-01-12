@@ -1,6 +1,6 @@
 #from marshmallow_jsonapi import Schema, fields
 from marshmallow import validate, Schema, fields
-from app.calendars.schemas import CalendarSchema
+from server.calendars.schemas import CalendarSchema
 
 class ShareableSchema(Schema):
     id = fields.Integer()

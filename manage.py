@@ -4,10 +4,10 @@ from flask_script import Manager, Shell
 from flask.ext.migrate import Migrate, MigrateCommand
 import os
 import importlib
-from app.shareables.create_shareable_from_json import create_many_shareables_from_json_string
+from server.shareables.create_shareable_from_json import create_many_shareables_from_json_string
 import pdb
 
-from app import app, db
+from server import app, db
 
 def make_shell_context():
     return dict(app=app, db=db)

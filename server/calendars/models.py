@@ -39,7 +39,7 @@ Schedules are collections of Events.
 
 """
 
-from app import db
+from server import db
 from sqlalchemy import CheckConstraint
 
 
