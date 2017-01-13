@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 import validate from './validateCreateShareableWizard'
@@ -9,7 +8,7 @@ const ShareableCreateStart = (props) => {
     return (
         <form onSubmit={handleSubmit}>
             <Field name="headline" type="text" component={renderField} label="Headline"/>
-            <Field name="Summary" type="text" component={renderField} label="Summary"/>
+            <Field name="summary" type="text" component={renderField} label="Summary"/>
             <div>
                 <button type="submit" className="next">Next</button>
             </div>

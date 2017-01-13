@@ -4,12 +4,12 @@ import _ from 'lodash';
 const ROOT_URL = 'http://localhost:5000';
 
 export function fetchAllShareables() {
-  return dispatch => {
-    dispatch(requestAllShareables());
-    return fetch(`${ROOT_URL}/shareables`)
-      .then(response => response.json())
-      .then(json => dispatch(receiveAllShareables(json)));
-  };
+    return dispatch => {
+        dispatch(requestAllShareables());
+        return fetch(`${ROOT_URL}/shareables`)
+            .then(response => response.json())
+            .then(json => dispatch(receiveAllShareables(json)));
+    };
 }
 
 function requestAllShareables() {
@@ -58,7 +58,7 @@ function setCurrentShareable(id) {
     };
 }
 export function fetchSingleShareableIfNeeded(id) {
-        return (dispatch, getState) => {
+    return (dispatch, getState) => {
         if (shouldFetchSingleShareable(getState(), id)){
             return dispatch(fetchSingleShareable(id));
         } else {
@@ -76,4 +76,11 @@ function fetchSingleShareable(id) {
             .then(json=>
                 dispatch(receiveSingleShareable(json)));
     };
+}
+
+
+
+export function createShareable(data) {
+    debugger;
+    fetch(`${ROOT_URL}/shareables`, { method: 'POST', body: JSON.stringify(data) });
 }

@@ -75,11 +75,10 @@ class ShareableListEndpoint(Resource):
 
 
     def post(self):
-#        raw_dict = request.get_json(force=True)
-        raw_dict = request.get_json() or json.loads(request.data)
+        raw_dict = request.get_json() or json.loads(request.data) \
+            if isinstance(request.data, str) else json.loads(request.data.decode('utf-8'))
         try:
             shareable = create_shareable_from_json_object(raw_dict)
-#            db.session.add(shareable)
             query = Shareable.query.get(shareable.id)
             results = ShareableSerializer.dump(query).data
             return results, 201

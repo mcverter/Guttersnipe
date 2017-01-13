@@ -8,7 +8,7 @@ const ShareableCreateEnd = (props) => {
     const { handleSubmit } = props
     return (
         <form onSubmit={handleSubmit}>
-            <Field name="shareableNotes" type="text" component={renderField} label="Additional Notes"/>
+            <Field name="shareable_notes" type="text" component={renderField} label="Additional Notes"/>
             <div>
                 <button type="submit" className="next">Next</button>
             </div>
