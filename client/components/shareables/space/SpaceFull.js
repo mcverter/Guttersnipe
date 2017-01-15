@@ -6,6 +6,7 @@ const SpaceFull = ({space}) => {
     const {longitude, latitude, canonical_address,
         alternate_names, notes} =  space;
     const position = [latitude, longitude];
+    L.control.geocoder('mapzen-a2w6xkx ').addTo(map);
 
     return (
         <div>

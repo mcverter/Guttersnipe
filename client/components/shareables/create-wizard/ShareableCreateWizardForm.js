@@ -1,10 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 
 import ShareableCreateStart from './ShareableCreateStart.js';
-import ShareableCreateThing from './ShareableCreateThing.js';
-import ShareableCreateSpace from './ShareableCreateSpace.js';
-import ShareableCreateTime from './ShareableCreateTime.js';
-import ShareableCreateEnd from './ShareableCreateEnd.js';
+import ShareableCreateThing from '../thing/ThingCreate';
+import ShareableCreateSpace from '../space/SpaceCreate';
+import ShareableCreateTime from '../time/TimeCreate';
+import ShareableCreateEnd from './ShareableCreateEnd';
 
 class ShareableCreateWizardForm extends Component {
     constructor(props) {

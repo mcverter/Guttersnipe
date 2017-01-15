@@ -12,6 +12,7 @@ import {fetchAllShareables} from './actions/shareableActions';
 import './styles.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/leaflet/dist/leaflet.css';
+import '../node_modules/leaflet-geocoder-mapzen/dist/leaflet-geocoder-mapzen.css';
 import '../node_modules/react-big-calendar/lib/css/react-big-calendar.css';
 
 const store = configureStore();
