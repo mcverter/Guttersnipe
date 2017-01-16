@@ -3,7 +3,7 @@ import React, { Component, PropTypes } from 'react';
 import ShareableCreateStart from './ShareableCreateStart.js';
 import ShareableCreateThing from '../thing/ThingCreate';
 import ShareableCreateSpace from '../space/SpaceCreate';
-import ShareableCreateTime from '../time/TimeCreate';
+import TimeCreate from '../time/TimeCreate';
 import ShareableCreateEnd from './ShareableCreateEnd';
 
 class ShareableCreateWizardForm extends Component {
@@ -30,10 +30,10 @@ class ShareableCreateWizardForm extends Component {
         const {page} = this.state
         return (
             <div>
-                {page === 1 && <ShareableCreateStart onSubmit={this.nextPage}/>}
+                {page === 4 && <ShareableCreateStart onSubmit={this.nextPage}/>}
                 {page === 2 && <ShareableCreateThing previousPage={this.previousPage} onSubmit={this.nextPage}/>}
                 {page === 3 && <ShareableCreateSpace onSubmit={this.nextPage}/>}
-                {page === 4 && <ShareableCreateTime previousPage={this.previousPage} onSubmit={this.nextPage}/>}
+                {page === 1 && <TimeCreate previousPage={this.previousPage} onSubmit={this.nextPage}/>}
                 {page === 5 && <ShareableCreateEnd previousPage={this.previousPage} onSubmit={onSubmit}/>}
             </div>
         )

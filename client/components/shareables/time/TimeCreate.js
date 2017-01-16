@@ -5,36 +5,46 @@ import renderField from '../create-wizard/renderField'
 import BigCalendar from 'react-big-calendar';
 import moment from 'moment';
 import {Component} from 'react';
-import AddDateModal from './AddDateModal';
+import AddDateModal from './AddDateModal'
 
 BigCalendar.momentLocalizer(moment); // or globalizeLocalizer
+const customStyles = {
+    content : {
+        top                   : '50%',
+        left                  : '50%',
+        right                 : 'auto',
+        bottom                : 'auto',
+        marginRight           : '-50%',
+        transform             : 'translate(-50%, -50%)'
+    }
+};
 
 
-class ShareableCreateTime extends Component {
+class TimeCreate extends Component {
     constructor(props) {
         super(props);
         this.handleSubmit = props.handleSubmit
         this.eventList = [];
         this.addDate = this.addDate.bind(this);
+        this.state = {modalIsOpen: false};
+        this.closeModal = this.closeModal.bind(this);
+        this.afterOpenModal = this.afterOpenModal.bind(this);
+        this.openModal = this.openModal.bind(this);
     }
 
-    getInitialState() {
-        return {modalIsOpen: false};
-    }
-
-    openModal() {
-        this.setState({modalIsOpen: true});
+    openModal(timeSlot) {
+        this.setState({
+            modalIsOpen: true,
+            timeSlot: timeSlot});
     }
 
     afterOpenModal() {
-        // references are now sync'd and can be accessed.
-        this.refs.subtitle.style.color = '#f00';
+        console.log("after modal open")
     }
 
     closeModal() {
-        this.setState({modalIsOpen: false});
+         this.setState({modalIsOpen: false});
     }
-
     /*
      function(
      slotInfo: object {
@@ -44,14 +54,18 @@ class ShareableCreateTime extends Component {
      }
      )
      */
+
     addDate(slotInfo) {
         console.log("clicked a slot", slotInfo);
-        this.openModal();
+        this.openModal(slotInfo);
     }
 
     render() {
-        debugger;
+        console.log('gonna render');
+
         return (
+
+
             <form onSubmit={this.handleSubmit}>
                 <div style={{height: "400px"}}>
                     <BigCalendar events={this.eventList}
@@ -66,13 +80,17 @@ class ShareableCreateTime extends Component {
                 <div>
                     <button type="submit" className="next">Next</button>
                 </div>
-
+                after open modal {this.afterOpenModal}
                 <AddDateModal
                     isOpen={this.state.modalIsOpen}
                     onAfterOpen={this.afterOpenModal}
-                    onRequestClose={this.closeModal}
-                    style={customStyles}
-                    contentLabel="Example Modal" />
+                    closeModal={this.closeModal}
+                    customStyles={customStyles}
+                    contentLabel="Example Modal"
+                    timeSlot={this.state.timeSlot}
+                />
+
+
             </form>
         )
     }
@@ -82,4 +100,7 @@ export default reduxForm({
     destroyOnUnmount: false,        // <------ preserve form data
     forceUnregisterOnUnmount: true,  // <------ unregister fields on unmount
     validate
-})(ShareableCreateTime)
+})(TimeCreate)
+
+/**
+ */

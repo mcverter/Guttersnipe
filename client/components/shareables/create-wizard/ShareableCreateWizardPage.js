@@ -5,7 +5,7 @@ import {createShareable} from '../../../actions/shareableActions.js';
 
 class ShareableCreateWizardPage extends Component {
     handleSubmit (values) {
-        debugger;
+
         values = {
             headline: 'example',
             summary: 'this is a dummy example',

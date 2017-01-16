@@ -81,6 +81,6 @@ function fetchSingleShareable(id) {
 
 
 export function createShareable(data) {
-    debugger;
+
     fetch(`${ROOT_URL}/shareables`, { method: 'POST', body: JSON.stringify(data) });
 }
