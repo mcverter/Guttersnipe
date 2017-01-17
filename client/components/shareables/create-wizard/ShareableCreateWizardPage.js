@@ -5,7 +5,6 @@ import {createShareable} from '../../../actions/shareableActions.js';
 
 class ShareableCreateWizardPage extends Component {
     handleSubmit (values) {
-
         values = {
             headline: 'example',
             summary: 'this is a dummy example',
@@ -25,7 +24,7 @@ class ShareableCreateWizardPage extends Component {
             dt_end: '2016-12-09T20:00:00',
             days_of_week: 'mo',
             time_notes: 'I noted the time'
-        }
+        };
         const data = {
             'headline' : values.headline,
             'summary'  : values.summary,
@@ -62,12 +61,11 @@ class ShareableCreateWizardPage extends Component {
         };
         // Do something with the form values
         console.log('form values', values);
-        console.log('data object', data)
+        console.log('data object', data);
         createShareable(data);
     }
 
     render() {
-//        this.handleSubmit = this.handleSubmit.bind(this);
         return (
             <ShareableCreateWizardForm onSubmit={this.handleSubmit} />
         );

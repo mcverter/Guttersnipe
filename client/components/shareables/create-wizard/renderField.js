@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {PropTypes} from 'react';
 
 const renderField = ({ input, label, type, meta: { touched, error } }) => (
   <div>
@@ -10,4 +10,11 @@ const renderField = ({ input, label, type, meta: { touched, error } }) => (
   </div>
 );
 
-export default renderField
+renderField.propTypes = {
+     input: PropTypes.object,
+    label:PropTypes.string,
+    type: PropTypes.string,
+    meta: PropTypes.object
+};
+
+export default renderField;

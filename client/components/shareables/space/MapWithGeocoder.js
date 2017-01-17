@@ -1,14 +1,8 @@
-/**
- * Created by mitchell on 1/13/2017.
- */
-
-import React from 'react'
+import React, {Component} from 'react';
 import L from 'leaflet';
 import 'leaflet-geocoder-mapzen';
 
-
-
-export default class MapWithGeocoder extends React.Component {
+export default class MapWithGeocoder extends Component {
     constructor(props) {
         super(props);
     }
@@ -22,10 +16,9 @@ export default class MapWithGeocoder extends React.Component {
         };
         L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
         L.control.geocoder('mapzen-a2w6xkx', geoCoderOptions).addTo(map);
-
     }
+
     render() {
-        return <div ref={(el) => { this.el = el }} />
+        return <div ref={(el) => { this.el = el }} />;
     }
 }
-

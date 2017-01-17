@@ -61,10 +61,6 @@ class TimeFull extends Component {
         });
     }
 
-    NavigateChanged(date) {
-
-    }
-
     calculateRecurringEvents() {
         let {currentMonth, recurringDateRules} = this.state;
         const rule_wrapping = recurringDateRules[0];

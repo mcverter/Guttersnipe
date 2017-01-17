@@ -1,11 +1,10 @@
+import React, {PropTypes} from 'react';
+import { Field, reduxForm } from 'redux-form';
+import validate from '../create-wizard/validateCreateShareableWizard';
+import renderField from '../create-wizard/renderField';
 
-import React from 'react'
-import { Field, reduxForm } from 'redux-form'
-import validate from '../create-wizard/validateCreateShareableWizard'
-import renderField from '../create-wizard/renderField'
-
-const ShareableCreateThing = (props) => {
-    const { handleSubmit } = props
+const ThingCreate = (props) => {
+    const { handleSubmit } = props;
     return (
         <form onSubmit={handleSubmit}>
             <Field name="description_what" type="text" component={renderField} label="What is the shareable resource"/>
@@ -18,12 +17,16 @@ const ShareableCreateThing = (props) => {
                 <button type="submit" className="next">Next</button>
             </div>
         </form>
-    )
-}
+    );
+};
+
+ThingCreate.propTypes = {
+    handleSubmit: PropTypes.func
+};
 
 export default reduxForm({
     form: 'wizard',                 // <------ same form name
     destroyOnUnmount: false,        // <------ preserve form data
     forceUnregisterOnUnmount: true,  // <------ unregister fields on unmount
     validate
-})(ShareableCreateThing)
+})(ThingCreate);
