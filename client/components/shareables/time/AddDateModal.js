@@ -3,7 +3,7 @@ import ReactModal from 'react-modal';
 import TimePicker from 'react-bootstrap-time-picker';
 
 const AddDateModal = (props) => {
-    return (
+        return (
         <ReactModal
             contentLabel={props.contentLabel}
             isOpen={props.isOpen}
@@ -14,7 +14,7 @@ const AddDateModal = (props) => {
                 <button type="button" className="close" onClick={props.closeModal}>&times;</button>
                 <h2 className="modal-title" id="deployModalLabel">Choose Schedule</h2>
             </div>
-            <form onSubmit={props.handleDateSelection}>
+            <form>
                 <div className="modal-body">
 
                     Event occurs: {props.repeating ? `Every ${props.day}` : props.date}
@@ -32,9 +32,11 @@ const AddDateModal = (props) => {
                                     </option>))}
                     </select>
                 </div>
-                <div className="modal-body">
-                    <button onClick={props.handleDateSelection}> OK </button>
-                    <button onClick={props.closeModal}> Cancel </button>
+                <div className="modal-footer">
+                    <div onClick={props.handleDateSelection}> ok</div>
+                              <div onClick={props.closeModal}>close</div>
+
+
                 </div>
             </form>
         </ReactModal>
@@ -43,19 +45,18 @@ const AddDateModal = (props) => {
 };
 
 AddDateModal.propTypes = {
-    'customStyles': PropTypes.object,
-    'isOpen': PropTypes.bool,
-    'repeating': PropTypes.bool,
-    'contentLabel': PropTypes.string,
-    'start': PropTypes.string,
-    'day': PropTypes.string,
-    'date': PropTypes.string,
-    'handleRepeatToggle': PropTypes.func,
-    'handleStartTimeChange': PropTypes.func,
-    'handleDurationChange': PropTypes.func,
-    'handleDateSelection': PropTypes.func,
-    'closeModal': PropTypes.func,
-
+    customStyles: PropTypes.object,
+    isOpen: PropTypes.bool,
+    repeating: PropTypes.bool,
+    contentLabel: PropTypes.string,
+    start: PropTypes.string,
+    day: PropTypes.string,
+    date: PropTypes.string,
+    handleRepeatToggle: PropTypes.func,
+    handleStartTimeChange: PropTypes.func,
+    handleDurationChange: PropTypes.func,
+    handleDateSelection: PropTypes.func,
+    closeModal: PropTypes.func
 };
 
 

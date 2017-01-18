@@ -7,11 +7,12 @@ BigCalendar.momentLocalizer(moment); // or globalizeLocalizer
 
 const EventCalendarView = ({headline, viewMonth,
         fixedEvents, recurringEventGenerators,
-        handleSelectSlot, handleNavigation}) => {
-
-        const transformToRRule = (recurringGenerator) => {
-            const daysToRRule = (days) => {
-                return days.split(',').map(day => {
+        handleSelectSlot, handleNavigation,
+        selectable}) => {
+        console.log('fixed events', fixedEvents)
+                const transformToRRule = (recurringGenerator) => {
+                        const daysToRRule = (days) => {
+                                return days.split(',').map(day => {
                     switch (day) {
                         case 'su':
                             return RRule.SU;
@@ -52,12 +53,12 @@ const EventCalendarView = ({headline, viewMonth,
         }
 
         const calculateRecurringEvents = () => {
-            return recurringEventGenerators.reduce((accumulator, eventGenerator) => {
+                        return recurringEventGenerators.reduce((accumulator, eventGenerator) => {
                 return accumulator.concat(transformToRRule(eventGenerator).between(
                     moment(viewMonth).startOf('month').subtract(7, 'days').toDate(),
                     moment(viewMonth).endOf('month').add(7, 'days').toDate()
                 ).map(occurance => {
-                        return {
+                                                return {
                             start: occurance, title: headline,
                             end: new Date(occurance.getTime() +
                                     new Date(eventGenerator.dt_end).getTime() -
@@ -79,6 +80,7 @@ const EventCalendarView = ({headline, viewMonth,
             )
         }
 
+
         return (
             <div style={{height: "400px"}}>
                 <BigCalendar className="calendar"
@@ -87,6 +89,7 @@ const EventCalendarView = ({headline, viewMonth,
                         calculateRecurringEvents(recurringEventGenerators))}
                     onNavigate ={handleNavigation}
                     onSelectSlot={handleSelectSlot}
+                    selectable={selectable}
                 />
             </div>
         );

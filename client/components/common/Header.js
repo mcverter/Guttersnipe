@@ -18,7 +18,7 @@ class Header extends Component {
                     </button>
                     <Link to="/" className="navbar-brand">Guttersnipe</Link>
                 </div>
-                <nav className="collapse navbar-collapse" collapse="!isCollapsed" role="navigation">
+                <nav className="collapse navbar-collapse" role="navigation">
                     <ul className="nav navbar-nav navbar-right" >
                         <li> Sign In </li>
                         <li> Sign Out</li>

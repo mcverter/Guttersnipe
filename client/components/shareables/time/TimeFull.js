@@ -4,7 +4,7 @@ import moment from 'moment';
 import RRule from 'rrule';
 import EventCalendarNavigable from './EventCalendarNavigable'
 
-BigCalendar.momentLocalizer(moment); // or globalizeLocalizer
+BigCalendar.momentLocalizer(moment); // oFr globalizeLocalizer
 
 const TimeFull = (props) => (
     <EventCalendarNavigable

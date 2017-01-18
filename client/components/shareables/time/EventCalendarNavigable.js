@@ -17,6 +17,7 @@ class EventCalendarNavigable extends Component {
     }
 
     render() {
+
         return (
             <EventCalendarView
                 headline={this.props.headline}
@@ -25,6 +26,8 @@ class EventCalendarNavigable extends Component {
                 recurringEventGenerators={this.props.recurringEventGenerators}
                 handleSelectSlot={this.props.handleSelectSlot}
                 handleNavigation={this.handleNavigation}
+
+                selectable={this.props.selectable}
             />
         );
     }
