@@ -43,7 +43,7 @@ ShareablePage.propTypes = {
     params: PropTypes.object,
     shareableItems: PropTypes.array,
     selectedIndex: PropTypes.number,
-    isFetchingShareables: PropTypes.boolean
+    isFetchingShareables: PropTypes.bool
 };
 
 function mapStateToProps(state, ownProps) {
