@@ -85,13 +85,14 @@ class TimeCreate extends Component {
                 left: 0,
                 right: 0,
                 bottom: 0,
-                backgroundColor: 'rgba(255, 255, 255, 0.75)'
+                backgroundColor: 'rgba(255, 255, 255, 0.75)',
+                zIndex: 100
+
             },
             content: {
                 backgroundColor: 'rgba(255, 255, 255, 0.75)',
                 opacity: 0.9,
 
-                zIndex: 100,
                 top: '50%',
                 left: '50%',
                 right: 'auto',

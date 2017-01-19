@@ -11,7 +11,9 @@ const SpaceCreate = (props) => {
     let position= [-73.99255, 40.689613];
     return (
         <form onSubmit={handleSubmit}>
-            <MapWithGeocoder />
+            <MapWithGeocoder
+
+            />
             <Field name="longitude" type="text" component={renderField} label="Longitude"/>
             <Field name="latitude" type="text" component={renderField} label="Latitude"/>
             <Field name="canonical_address" type="text" component={renderField} label="Canonical Address"/>

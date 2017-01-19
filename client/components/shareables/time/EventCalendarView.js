@@ -13,34 +13,23 @@ const EventCalendarView = ({headline, viewMonth,
                         const daysToRRule = (days) => {
                                 return days.split(',').map(day => {
                     switch (day) {
-                        case 'su':
-                            return RRule.SU;
-                        case 'mo':
-                            return RRule.MO;
-                        case 'tu':
-                            return RRule.TU;
-                        case 'we':
-                            return RRule.WE;
-                        case 'th':
-                            return RRule.TH;
-                        case 'fr':
-                            return RRule.FR;
-                        case 'sa':
-                            return RRule.SA;
+                        case 'su':  return RRule.SU;
+                        case 'mo':  return RRule.MO;
+                        case 'tu':  return RRule.TU;
+                        case 'we':  return RRule.WE;
+                        case 'th':  return RRule.TH;
+                        case 'fr':  return RRule.FR;
+                        case 'sa':  return RRule.SA;
                     }
                 });
             };
 
             const freqToRRule = (freq) => {
                 switch (freq) {
-                    case 'yearly':
-                        return RRule.YEARLY;
-                    case 'monthly':
-                        return RRule.MONTHLY;
-                    case 'weekly':
-                        return RRule.WEEKLY;
-                    case 'daily':
-                        return RRule.DAILY;
+                    case 'yearly':  return RRule.YEARLY;
+                    case 'monthly':  return RRule.MONTHLY;
+                    case 'weekly':  return RRule.WEEKLY;
+                    case 'daily':  return RRule.DAILY;
                 }
             };
 
