@@ -24,7 +24,6 @@ class TimeCreate extends Component {
             modalDay: '',
             modalRepeating: false,
 
-            calendarView: 'month',
             fixedCalendarEvents: [],
             recurringCalendarEvents: []
         };
@@ -34,7 +33,6 @@ class TimeCreate extends Component {
 
         // calendar
         this.handleCalendarSelectSlot = this.handleCalendarSelectSlot.bind(this);
-        this.handleCalendarViewChange = this.handleCalendarViewChange.bind(this);
 
         // modal form
         this.closeModal = this.closeModal.bind(this);
@@ -44,7 +42,6 @@ class TimeCreate extends Component {
         this.handleModalSubmit = this.handleModalSubmit.bind(this);
         this.handleModalRepeatToggle = this.handleModalRepeatToggle.bind(this);
     }
-
 
     handleCalendarSelectSlot(slotInfo) {
         if (slotInfo) {
@@ -56,17 +53,13 @@ class TimeCreate extends Component {
         }
     }
 
-    handleCalendarViewChange(view) {
-        console.log('view changed', view);
-    }
-
     openModal(timeSlot) {
         const startDate = moment(timeSlot.start);
         this.setState({
             modalIsOpen: true,
             modalStartTime: startDate.format('HH:mm') === '00:00'
                 ? '18:00' : startDate.format('HH:mm'),
-            modalDuration: '',
+            modalDuration: 30,
             modalDate: startDate.format('MMMM DD, YYYY'),
             modalDay: startDate.format('dddd')
         });
@@ -75,7 +68,6 @@ class TimeCreate extends Component {
     closeModal() {
         this.setState({modalIsOpen: false});
     }
-
 
     customModalStyles() {
         return {
@@ -109,10 +101,10 @@ class TimeCreate extends Component {
                 recurringCalendarEvents: this.state.recurringCalendarEvents.concat(
                     {
                         dt_start: moment(this.state.modalDate + " " +
-                            this.state.modalStartTime, "MMMM DD, YYYY HH:mm")
+                        this.state.modalStartTime, "MMMM DD, YYYY HH:mm")
                             .format(),
                         dt_end: moment(this.state.modalDate + " " +
-                            this.state.modalStartTime, "MMMM DD, YYYY HH:mm")
+                        this.state.modalStartTime, "MMMM DD, YYYY HH:mm")
                             .add(this.state.modalDuration, 'm').format(),
                         tz_id: 'America/New_York',
                         recurrence_rule: {
@@ -159,7 +151,6 @@ class TimeCreate extends Component {
     }
 
     render() {
-
         return (
             <form onSubmit={this.handleSubmit}>
                 <EventCalendarNavigable
@@ -169,8 +160,6 @@ class TimeCreate extends Component {
                     viewMonth={new Date()}
                     handleSelectSlot={this.handleCalendarSelectSlot}
                     selectable={true}
-                    calendarView={this.state.calendarView}
-                    handleCalendarViewChange={this.handleCalendarViewChange}
                 />
 
                 <Field name="time_notes" type="text" component={renderField} label="Additional Notes"/>
@@ -202,7 +191,6 @@ TimeCreate.propTypes = {
     handleSubmit: PropTypes.func,
     headline: PropTypes.string
 };
-
 
 export default reduxForm({
     form: 'wizard',
