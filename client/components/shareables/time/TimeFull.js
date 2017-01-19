@@ -1,10 +1,5 @@
 import React, {PropTypes, Component} from 'react';
-import BigCalendar from 'react-big-calendar';
-import moment from 'moment';
-import RRule from 'rrule';
-import EventCalendarNavigable from './EventCalendarNavigable'
-
-BigCalendar.momentLocalizer(moment); // oFr globalizeLocalizer
+import EventCalendarNavigable from './EventCalendarNavigable';
 
 const TimeFull = (props) => (
     <EventCalendarNavigable
@@ -14,7 +9,6 @@ const TimeFull = (props) => (
         viewMonth={new Date()}
     />
 );
-
 
 TimeFull.propTypes = {
     headline: PropTypes.string.isRequired,

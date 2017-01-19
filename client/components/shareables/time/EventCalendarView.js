@@ -8,8 +8,7 @@ BigCalendar.momentLocalizer(moment); // or globalizeLocalizer
 const EventCalendarView = ({headline, viewMonth,
         fixedEvents, recurringEventGenerators,
         handleSelectSlot, handleNavigation,
-        selectable}) => {
-        console.log('fixed events', fixedEvents)
+        selectable, calendarView, handleCalendarViewChange}) => {
                 const transformToRRule = (recurringGenerator) => {
                         const daysToRRule = (days) => {
                                 return days.split(',').map(day => {
@@ -50,7 +49,7 @@ const EventCalendarView = ({headline, viewMonth,
                 dtstart: new Date(recurringGenerator.dt_start),
                 byweekday: daysToRRule(recurringGenerator.recurrence_rule.byDay)
             });
-        }
+        };
 
         const calculateRecurringEvents = () => {
                         return recurringEventGenerators.reduce((accumulator, eventGenerator) => {
@@ -63,7 +62,7 @@ const EventCalendarView = ({headline, viewMonth,
                             end: new Date(occurance.getTime() +
                                     new Date(eventGenerator.dt_end).getTime() -
                                     new Date(eventGenerator.dt_start).getTime())
-                        }
+                        };
                     }));
             }, []);
         };
@@ -72,14 +71,13 @@ const EventCalendarView = ({headline, viewMonth,
         {
             return fixedEventGenerators.map(fixed => {
                     return {
-                        start: fixed.start,
-                        end: fixed.end,
-                        title: headline
+                        start: new Date(fixed.dt_start),
+                        end: new Date(fixed.dt_end),
+                        title: fixed.headline
                     }
                 }
-            )
-        }
-
+            );
+        };
 
         return (
             <div style={{height: "400px"}}>
@@ -90,7 +88,7 @@ const EventCalendarView = ({headline, viewMonth,
                     onNavigate ={handleNavigation}
                     onSelectSlot={handleSelectSlot}
                     selectable={selectable}
-                />
+                    />
             </div>
         );
     }
@@ -104,7 +102,12 @@ EventCalendarView.propTypes = {
     recurringEventGenerators: PropTypes.array.isRequired,
     viewMonth: PropTypes.object,
     handleNavigation: PropTypes.func.isRequired,
-    handleSelectSlot: PropTypes.func
+    handleSelectSlot: PropTypes.func,
+    handleCalendarViewChange: PropTypes.func,
+    view: PropTypes.string,
+    calendarView: PropTypes.string,
+    handleCalendarViewChange: PropTypes.func,
+    selectable: PropTypes.func
 };
 
 export default EventCalendarView;

@@ -14,7 +14,7 @@ const AddDateModal = (props) => {
                 <button type="button" className="close" onClick={props.closeModal}>&times;</button>
                 <h2 className="modal-title" id="deployModalLabel">Choose Schedule</h2>
             </div>
-            <form>
+            <div>
                 <div className="modal-body">
 
                     Event occurs: {props.repeating ? `Every ${props.day}` : props.date}
@@ -33,12 +33,12 @@ const AddDateModal = (props) => {
                     </select>
                 </div>
                 <div className="modal-footer">
-                    <div onClick={props.handleDateSelection}> ok</div>
-                              <div onClick={props.closeModal}>close</div>
+                    <button onClick={props.handleDateSelection}> ok</button>
+                              <button onClick={props.closeModal}>close</button>
 
 
                 </div>
-            </form>
+            </div>
         </ReactModal>
     );
 

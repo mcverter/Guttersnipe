@@ -22,7 +22,7 @@ class TimeCreate extends Component {
             modalDuration: '',
             modalDate: '',
             modalDay: '',
-            modalRepeating: '',
+            modalRepeating: false,
 
             calendarView: 'month',
             fixedCalendarEvents: [],
@@ -50,24 +50,22 @@ class TimeCreate extends Component {
         if (slotInfo) {
             this.openModal(slotInfo);
             this.setState({
-                calendarView: 'day',
+//                calendarView: 'day',
                 startDate: slotInfo.start
             });
-
         }
     }
-
 
     handleCalendarViewChange(view) {
         console.log('view changed', view);
     }
 
-    openModal (timeSlot) {
+    openModal(timeSlot) {
         const startDate = moment(timeSlot.start);
         this.setState({
             modalIsOpen: true,
             modalStartTime: startDate.format('HH:mm') === '00:00'
-                ?  '18:00': startDate.format('HH:mm'),
+                ? '18:00' : startDate.format('HH:mm'),
             modalDuration: '',
             modalDate: startDate.format('MMMM DD, YYYY'),
             modalDay: startDate.format('dddd')
@@ -81,55 +79,60 @@ class TimeCreate extends Component {
 
     customModalStyles() {
         return {
-            overlay : {
-                position          : 'fixed',
-                top               : 0,
-                left              : 0,
-                right             : 0,
-                bottom            : 0,
-                backgroundColor   : 'rgba(255, 255, 255, 0.75)'
+            overlay: {
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                backgroundColor: 'rgba(255, 255, 255, 0.75)'
             },
-            content : {
-                top                   : '50%',
-                left                  : '50%',
-                right                 : 'auto',
-                bottom                : 'auto',
-                marginRight           : '-50%',
-                transform             : 'translate(-50%, -50%)'
-            }};
+            content: {
+                backgroundColor: 'rgba(255, 255, 255, 0.75)',
+                opacity: 0.9,
+
+                zIndex: 100,
+                top: '50%',
+                left: '50%',
+                right: 'auto',
+                bottom: 'auto',
+                marginRight: '-50%',
+                transform: 'translate(-50%, -50%)'
+            }
+        };
     }
 
     handleModalSubmit(event) {
-        console.log('event', event);
-        console.log('submitted time');
-
         if (this.state.modalRepeating) {
             this.setState({
-                recurringCalendarEvents:
-                    this.state.recurringCalendarEvents.concat(
-                        {
-                    dt_start: moment(
-                        this.state.modalDate + " " + this.state.modalStartTime).format(),
-                    dt_end: moment(moment(this.state.modalDate + " " +
-                        this.state.modalStartTime).add(this.state.modalDuration, 'm')).format(),
-                            tz_id: 'America/New_York',
-                            recurrence_rule: {
-                                freq: 'weekly',
-                                byDay: this.state.modalDay.substring(0,2).toLowerCase()
-                            }
+                recurringCalendarEvents: this.state.recurringCalendarEvents.concat(
+                    {
+                        dt_start: moment(this.state.modalDate + " " +
+                            this.state.modalStartTime, "MMMM DD, YYYY HH:mm")
+                            .format(),
+                        dt_end: moment(this.state.modalDate + " " +
+                            this.state.modalStartTime, "MMMM DD, YYYY HH:mm")
+                            .add(this.state.modalDuration, 'm').format(),
+                        tz_id: 'America/New_York',
+                        recurrence_rule: {
+                            freq: 'weekly',
+                            byDay: this.state.modalDay.substring(0, 2).toLowerCase()
                         }
-                    )
-            })
+                    }
+                )
+            });
         } else {
             this.setState({
-                fixedCalendarEvents:  this.state.fixedCalendarEvents.concat({
-                    start: moment(
-                        this.state.modalDate + " " + this.state.modalStartTime).format(),
-                    end: moment(moment(this.state.modalDate + " " +
-                        this.state.modalStartTime).add(this.state.modalDuration, 'm')).format(),
-                    title: this.props.headline
+                fixedCalendarEvents: this.state.fixedCalendarEvents.concat({
+                    dt_start: moment(
+                        this.state.modalDate + " " + this.state.modalStartTime, "MMMM DD, YYYY HH:mm")
+                        .format(),
+                    dt_end: moment(this.state.modalDate + " " +
+                    this.state.modalStartTime, "MMMM DD, YYYY HH:mm")
+                        .add(this.state.modalDuration, 'm').format(),
+                    headline: this.props.headline
                 })
-            })
+            });
         }
         this.closeModal();
     }
@@ -137,8 +140,8 @@ class TimeCreate extends Component {
     handleModalStartTimeChange(value) {
         this.setState({
             modalStartTime: value % 3600 ?
-                `${(value-1800)/3600}:30` :
-                `${(value)/3600}`
+                `${(value - 1800) / 3600}:30` :
+                `${(value) / 3600}`
         });
     }
 
@@ -165,6 +168,8 @@ class TimeCreate extends Component {
                     viewMonth={new Date()}
                     handleSelectSlot={this.handleCalendarSelectSlot}
                     selectable={true}
+                    calendarView={this.state.calendarView}
+                    handleCalendarViewChange={this.handleCalendarViewChange}
                 />
 
                 <Field name="time_notes" type="text" component={renderField} label="Additional Notes"/>
@@ -175,7 +180,7 @@ class TimeCreate extends Component {
                 <AddDateModal
                     isOpen={this.state.modalIsOpen}
                     closeModal={this.closeModal}
-                    customStyles={this.customModalStyles}
+                    customStyles={this.customModalStyles()}
                     contentLabel="Example Modal"
                     start={this.state.modalStartTime}
                     date = {this.state.modalDate}
@@ -193,7 +198,8 @@ class TimeCreate extends Component {
 }
 
 TimeCreate.propTypes = {
-    handleSubmit: PropTypes.func
+    handleSubmit: PropTypes.func,
+    headline: PropTypes.string
 };
 
 
