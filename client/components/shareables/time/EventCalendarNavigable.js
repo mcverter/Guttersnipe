@@ -18,6 +18,7 @@ class EventCalendarNavigable extends Component {
 
     render() {
         return (
+
             <EventCalendarView
                 headline={this.props.headline}
                 viewMonth={this.state.viewMonth}
@@ -37,7 +38,7 @@ EventCalendarNavigable.propTypes = {
     recurringEventGenerators: PropTypes.array.isRequired,
     viewMonth: PropTypes.object,
     handleSelectSlot: PropTypes.func,
-    selectable: PropTypes.func
+    selectable: PropTypes.bool
 };
 
 export default EventCalendarNavigable;

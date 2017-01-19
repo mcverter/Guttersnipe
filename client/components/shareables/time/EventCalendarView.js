@@ -89,7 +89,7 @@ EventCalendarView.propTypes = {
     viewMonth: PropTypes.object,
     handleNavigation: PropTypes.func.isRequired,
     handleSelectSlot: PropTypes.func,
-    selectable: PropTypes.func
+    selectable: PropTypes.bool
 };
 
 export default EventCalendarView;
