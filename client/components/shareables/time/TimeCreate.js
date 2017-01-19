@@ -9,7 +9,6 @@ import renderField from '../create-wizard/renderField';
 // Add Date Modal
 import AddDateModal from './AddDateModal';
 import EventCalendarNavigable from './EventCalendarNavigable';
-import EventCalendarInputField from './EventCalendarInputField'
 import moment from 'moment';
 
 class TimeCreate extends Component {
