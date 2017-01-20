@@ -22,8 +22,7 @@ class EventCalendarNavigable extends Component {
             <EventCalendarView
                 headline={this.props.headline}
                 viewMonth={this.state.viewMonth}
-                fixedEvents={this.props.fixedEvents}
-                recurringEventGenerators={this.props.recurringEventGenerators}
+                calendarEvents={this.props.calendarEvents}
                 handleSelectSlot={this.props.handleSelectSlot}
                 handleNavigation={this.handleNavigation}
                 selectable={this.props.selectable}
@@ -34,8 +33,7 @@ class EventCalendarNavigable extends Component {
 
 EventCalendarNavigable.propTypes = {
     headline: PropTypes.string.isRequired,
-    fixedEvents: PropTypes.array.isRequired,
-    recurringEventGenerators: PropTypes.array.isRequired,
+    calendarEvents: PropTypes.array.isRequired,
     viewMonth: PropTypes.object,
     handleSelectSlot: PropTypes.func,
     selectable: PropTypes.bool

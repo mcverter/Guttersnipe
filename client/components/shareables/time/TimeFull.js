@@ -4,8 +4,7 @@ import EventCalendarNavigable from './EventCalendarNavigable';
 const TimeFull = (props) => (
     <EventCalendarNavigable
         headline={props.headline}
-        fixedEvents={props.time.calendar.events.filter(e => !e.recurrence_rule)}
-        recurringEventGenerators={props.time.calendar.events.filter(e => e.recurrence_rule)}
+        calendarEvents={props.time.calendar.events}
         viewMonth={new Date()}
     />
 );
