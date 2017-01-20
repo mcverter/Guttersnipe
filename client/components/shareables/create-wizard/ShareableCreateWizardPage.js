@@ -5,6 +5,9 @@ import {createShareable} from '../../../actions/shareableActions.js';
 
 class ShareableCreateWizardPage extends Component {
     handleSubmit (values) {
+        // Do something with the form values
+        console.log('form values', values);
+
         values = {
             headline: 'example',
             summary: 'this is a dummy example',
@@ -59,8 +62,6 @@ class ShareableCreateWizardPage extends Component {
                 }
             }
         };
-        // Do something with the form values
-        console.log('form values', values);
         console.log('data object', data);
         createShareable(data);
     }
@@ -82,3 +83,40 @@ function mapStateToProps(state, ownProps) {
 export default connect(mapStateToProps, {createShareable})(ShareableCreateWizardPage);
 
 
+/*
+1.	description_how:"wojoij"
+2.	description_what:"aow"
+3.	event_chooser:Array[3]
+    1.	0:Object
+        1.	dt_end:"2017-01-02T22:00:00-05:00"
+        2.	dt_start:"2017-01-02T18:00:00-05:00"
+        3.	headline:"foo"
+        4.	__proto__:Object
+    2.	1:Object
+    3.	2:Object
+        1.	dt_end:"2017-01-04T11:30:00-05:00"
+        2.	dt_start:"2017-01-04T09:30:00-05:00"
+        3.	recurrence_rule:Object
+            1.	byDay:"we"
+            2.	freq:"weekly"
+            3.	__proto__:Object
+        4.	tz_id:"America/New_York"
+    5.	__proto__:Object
+    4.	length:3
+    5.	__proto__:Array[0]
+4.	headline:"hello world"
+5.	location_chooser:Object
+    1.	canonicalAddress:"201 A 6 Avenue, Brooklyn, New York, NY, USA"
+    2.	latitude:40.675659
+    3.	longitude:-73.977636
+    4.	__proto__:Object
+6.	shareable_notes:"no more notes"
+7.	space_notes:"no more"
+8.	subtypes:"hae"
+9.	summary:"goodbye world"
+10.	tags:"death"
+11.	thing_notes:"meth"
+12.	type:"lov"
+13.	__proto__:Object
+
+ */

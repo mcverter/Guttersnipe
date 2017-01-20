@@ -163,10 +163,7 @@ class CalendarInputField extends Component {
 
 CalendarInputField.propTypes = {
     headline: PropTypes.string.isRequired,
-    input:  PropTypes.shape({
-        value: PropTypes.array,
-        onChange: PropTypes.func.isRequired
-    }).isRequired
+    input:  PropTypes.object
 };
 
 
