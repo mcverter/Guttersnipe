@@ -15,14 +15,9 @@ class CalendarInputField extends Component {
             modalDate: '',
             modalDay: '',
             modalRepeating: false,
-
-            fixedCalendarEvents: [],
-            recurringCalendarEvents: []
         };
 
-        props.input.value={
-            fixedCalendarEvents: [],
-            recurringCalendarEvents: []}
+        props.input.value=[]
         // calendar
         this.handleCalendarSelectSlot = this.handleCalendarSelectSlot.bind(this);
 
@@ -88,10 +83,8 @@ class CalendarInputField extends Component {
     handleModalSubmit(event) {
         debugger;
         if (this.state.modalRepeating) {
-            this.props.input.onChange({
-                fixedCalendarEvents : this.props.input.value.fixedCalendarEvents,
-                recurringCalendarEvents:
-                this.props.input.recurringCalendarEvents.concat(
+            this.props.input.onChange(
+                this.props.input.value.concat(
                     {
                         dt_start: moment(this.state.modalDate + " " +
                         this.state.modalStartTime, "MMMM DD, YYYY HH:mm")
@@ -103,13 +96,10 @@ class CalendarInputField extends Component {
                         recurrence_rule: {
                             freq: 'weekly',
                             byDay: this.state.modalDay.substring(0, 2).toLowerCase()
-                        }
-                    }
-                )})}
+                        }}))}
          else {
-            this.props.input.onChange({
-               recurringCalendarEvents: this.props.input.value.fixedCalendarEvents,
-                fixedCalendarEvents: this.props.input.value.fixedCalendarEvents.concat({
+            this.props.input.onChange(
+                this.props.input.value.concat({
                     dt_start: moment(
                         this.state.modalDate + " " + this.state.modalStartTime, "MMMM DD, YYYY HH:mm")
                         .format(),
@@ -117,9 +107,7 @@ class CalendarInputField extends Component {
                     this.state.modalStartTime, "MMMM DD, YYYY HH:mm")
                         .add(this.state.modalDuration, 'm').format(),
                     headline: this.props.headline
-                })
-            })
-        }
+                }))}
         debugger;
         this.closeModal();
     }
@@ -145,14 +133,11 @@ class CalendarInputField extends Component {
     }
 
     render() {
-        debugger;
         return (
             <div>
                 <EventCalendarNavigable
                     headline={this.props.headline}
-                    fixedEvents={this.props.input.value.fixedCalendarEvents}
-                    recurringEventGenerators={this.props.input.value.recurringCalendarEvents}
-                    events={this.props.input.value}
+                    calendarEvents={this.props.input.value}
                     viewMonth={new Date()}
                     handleSelectSlot={this.handleCalendarSelectSlot}
                     selectable={true}
