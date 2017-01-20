@@ -3,12 +3,11 @@ import ReactModal from 'react-modal';
 import TimePicker from 'react-bootstrap-time-picker';
 
 const AddDateModal = (props) => {
-        return (
+    return (
         <ReactModal
             contentLabel={props.contentLabel}
             isOpen={props.isOpen}
-            style={props.customStyles}
-        >
+            style={props.customStyles} >
 
             <div className="modal-header">
                 <button type="button" className="close" onClick={props.closeModal}>&times;</button>
@@ -16,7 +15,6 @@ const AddDateModal = (props) => {
             </div>
             <div>
                 <div className="modal-body">
-
                     Event occurs: {props.repeating ? `Every ${props.day}` : props.date}
                     <br />
                     Repeating Event:
@@ -34,9 +32,7 @@ const AddDateModal = (props) => {
                 </div>
                 <div className="modal-footer">
                     <button onClick={props.handleDateSelection}> ok</button>
-                              <button onClick={props.closeModal}>close</button>
-
-
+                    <button onClick={props.closeModal}>close</button>
                 </div>
             </div>
         </ReactModal>

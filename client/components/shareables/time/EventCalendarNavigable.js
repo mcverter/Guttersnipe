@@ -18,7 +18,6 @@ class EventCalendarNavigable extends Component {
 
     render() {
         return (
-
             <EventCalendarView
                 headline={this.props.headline}
                 viewMonth={this.state.viewMonth}

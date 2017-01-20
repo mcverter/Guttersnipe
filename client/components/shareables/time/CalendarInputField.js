@@ -7,7 +7,6 @@ import moment from 'moment';
 class CalendarInputField extends Component {
     constructor(props) {
         super(props);
-        console.log(props);
         this.state = {
             modalIsOpen: false,
             modalStartTime: '',
@@ -17,7 +16,8 @@ class CalendarInputField extends Component {
             modalRepeating: false,
         };
 
-        props.input.value=[]
+        props.input.value=[];
+
         // calendar
         this.handleCalendarSelectSlot = this.handleCalendarSelectSlot.bind(this);
 
@@ -81,7 +81,6 @@ class CalendarInputField extends Component {
     }
 
     handleModalSubmit(event) {
-        debugger;
         if (this.state.modalRepeating) {
             this.props.input.onChange(
                 this.props.input.value.concat(
@@ -108,7 +107,6 @@ class CalendarInputField extends Component {
                         .add(this.state.modalDuration, 'm').format(),
                     headline: this.props.headline
                 }))}
-        debugger;
         this.closeModal();
     }
 
@@ -164,7 +162,16 @@ class CalendarInputField extends Component {
 }
 
 CalendarInputField.propTypes = {
-    headline: PropTypes.string
+    headline: PropTypes.string.isRequired,
+    input:  PropTypes.shape({
+        value: PropTypes.array,
+        onChange: PropTypes.func.isRequired
+    }).isRequired
 };
+
+
+
+
+
 
 export default CalendarInputField;

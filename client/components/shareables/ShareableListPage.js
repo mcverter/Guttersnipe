@@ -7,8 +7,8 @@ import {fetchAllShareables} from '../../actions/shareableActions';
 
 
 class ShareableListPage extends React.Component {
-    constructor(props, context) {
-        super(props, context);
+    constructor(props) {
+        super(props);
     }
 
     componentWillMount() {
@@ -31,18 +31,20 @@ class ShareableListPage extends React.Component {
             <div>
                 <h1> Shareables </h1>
                 <h2> Sort by  Distance Type Name </h2>
-      {items.map(shareable=>(
-          <ShareableLI key={shareable.id} shareable={shareable} />
-      ))}
-
-</div>
+                <table>
+                    <tbody>
+                  {items.map(shareable=>(
+                      <ShareableLI key={shareable.id} shareable={shareable} />
+                  ))}
+                     </tbody>
+                </table>
+            </div>
         );
     }
 }
 
 ShareableListPage.propTypes = {
     shareables: PropTypes.object.isRequired,
-    actions: PropTypes.object.isRequired,
     fetchAllShareables: PropTypes.func.isRequired
 
 };
