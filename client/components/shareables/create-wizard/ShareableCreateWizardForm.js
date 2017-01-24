@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import ShareableCreateStart from './ShareableCreateStart.js';
-import ShareableCreateThing from '../thing/ThingCreate';
-import ShareableCreateSpace from '../space/SpaceCreate';
+import ThingCreate from '../thing/ThingCreate';
+import SpaceCreate from '../space/SpaceCreate';
 import TimeCreate from '../time/TimeCreate';
 import ShareableCreateEnd from './ShareableCreateEnd';
 
@@ -29,8 +29,8 @@ class ShareableCreateWizardForm extends Component {
         return (
             <div>
                 {page === 1 && <ShareableCreateStart onSubmit={this.nextPage}/>}
-                {page === 2 && <ShareableCreateThing previousPage={this.previousPage} onSubmit={this.nextPage}/>}
-                {page === 3 && <ShareableCreateSpace onSubmit={this.nextPage}/>}
+                {page === 2 && <ThingCreate previousPage={this.previousPage} onSubmit={this.nextPage}/>}
+                {page === 3 && <SpaceCreate onSubmit={this.nextPage}/>}
                 {page === 4 && <TimeCreate headline="foo" previousPage={this.previousPage} onSubmit={this.nextPage}/>}
                 {page === 5 && <ShareableCreateEnd previousPage={this.previousPage} onSubmit={onSubmit}/>}
             </div>

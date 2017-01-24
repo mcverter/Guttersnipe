@@ -47,7 +47,6 @@ class ThingCreate extends Component {
 
         }
 
-        this.getSubtypes = this.getSubtypes.bind(this);
         this.handleTypesChange = this.handleTypesChange.bind(this);
     }
     handleTypesChange(value, formChangeFn) {
@@ -61,7 +60,7 @@ class ThingCreate extends Component {
             <form onSubmit={this.props.handleSubmit}>
                 <Field name="description_what" type="text" component={renderField} label="What is the shareable resource"/>
                 <Field name="description_how" type="text" component={renderField} label="How do you acquire it?"/>
-                <Field name="types"
+                <Field name="type"
                     component={props =>
                         <Select
                             value={props.input.value}

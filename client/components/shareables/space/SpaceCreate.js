@@ -11,10 +11,11 @@ const SpaceCreate = (props) => {
     let position= [-73.99255, 40.689613];
     return (
         <form onSubmit={handleSubmit}>
-            <Field name="location_chooser" component={MapWithGeocoderInput} />
+            <Field name="space_creator" component={MapWithGeocoderInput} />
             <Field name="space_notes" type="text" component={renderField} label="Additional Notes"/>
             <div>
                 <button type="submit" className="next">Next</button>
+                <button onClick="" className="prev">Prev</button>
             </div>
         </form>
     );

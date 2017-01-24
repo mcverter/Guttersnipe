@@ -102,6 +102,7 @@ class CalendarInputField extends Component {
                     dt_start: moment(
                         this.state.modalDate + " " + this.state.modalStartTime, "MMMM DD, YYYY HH:mm")
                         .format(),
+                    tz_id: 'America/New_York',
                     dt_end: moment(this.state.modalDate + " " +
                     this.state.modalStartTime, "MMMM DD, YYYY HH:mm")
                         .add(this.state.modalDuration, 'm').format(),
