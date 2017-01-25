@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import ReactModal from 'react-modal';
 import TimePicker from 'react-bootstrap-time-picker';
-
+import Button from 'react-bootstrap/lib/Button';
 const AddDateModal = (props) => {
     return (
         <ReactModal
@@ -10,7 +10,7 @@ const AddDateModal = (props) => {
             style={props.customStyles} >
 
             <div className="modal-header">
-                <button type="button" className="close" onClick={props.closeModal}>&times;</button>
+                <Button type="button" className="close" onClick={props.closeModal}>&times;</Button>
                 <h2 className="modal-title" id="deployModalLabel">Choose Schedule</h2>
             </div>
             <div>
@@ -31,8 +31,8 @@ const AddDateModal = (props) => {
                     </select>
                 </div>
                 <div className="modal-footer">
-                    <button onClick={props.handleDateSelection}> ok</button>
-                    <button onClick={props.closeModal}>close</button>
+                    <Button onClick={props.handleDateSelection}> ok</Button>
+                    <Button onClick={props.closeModal}>close</Button>
                 </div>
             </div>
         </ReactModal>

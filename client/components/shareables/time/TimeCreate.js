@@ -1,16 +1,19 @@
 import React, {PropTypes} from 'react';
-import { Field, reduxForm } from 'redux-form';
+import {FormSection, Field, reduxForm } from 'redux-form';
 
 // Redux-Form
-import validate from '../create-wizard/validateCreateShareableWizard';
-import renderField from '../create-wizard/renderField';
+import validate, {required} from '../create-wizard/validateCreateShareableWizard';
+import {renderTextField} from '../create-wizard/renderField';
 import CalendarInputField from './CalendarInputField';
 
-const TimeCreate = ({handleSubmit, headline}) => (
+const TimeCreate = ({handleSubmit, previousPage, headline}) => (
     <form onSubmit={handleSubmit}>
-        <Field name="time_creator" component={CalendarInputField} props={{headline: headline}} />
-        <Field name="time_notes" type="text" component={renderField} label="Additional Notes"/>
+        <FormSection name="time">
+            <Field validate={required} name="calendar" component={CalendarInputField} props={{headline: headline}} />
+            <Field name="notes" type="text" component={renderField} label="Additional Notes"/>
+        </FormSection>
         <div>
+            <button type="button" className="previous" onClick={previousPage}>Previous</button>
             <button type="submit" className="next">Next</button>
         </div>
     </form>

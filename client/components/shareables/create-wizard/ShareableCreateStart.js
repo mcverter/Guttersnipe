@@ -1,16 +1,20 @@
 import React, {PropTypes} from 'react';
 import { Field, reduxForm } from 'redux-form';
-import validate from './validateCreateShareableWizard';
-import renderField from './renderField';
+import validate, {required} from './validateCreateShareableWizard';
+import renderField, {renderBSTextField} from './renderField';
+import Button from 'react-bootstrap/lib/Button';
+
 
 const ShareableCreateStart = (props) => {
     const { handleSubmit } = props;
     return (
+        
         <form onSubmit={handleSubmit}>
-            <Field name="headline" type="text" component={renderField} label="Headline"/>
-            <Field name="summary" type="text" component={renderField} label="Summary"/>
+
+            <Field name="headline" type="text" component={renderBSTextField} validate={required} label="Headline"/>
+            <Field name="summary" type="textarea" component={renderBSTextField}  validate={required} label="Summary"/>
             <div>
-                <button type="submit" className="next">Next</button>
+                <Button type="submit" className="next">Next</Button>
             </div>
         </form>
     );
