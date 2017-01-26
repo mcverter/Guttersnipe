@@ -1,26 +1,22 @@
+# npm
+node_modules
+
+#temp files
 *~
 ~*
-debug.log
+\#*
+
+#error files
+*debug.log
 errors.txt
+
+# JetBrains
 *.xml
-*.pyc
-#*
-npm-debug.log*
-node_modules
-z_slingshot_src/
-.idea/
 .idea
-lib
-Previous
-Tutorial
-arshaw
-bootstrap_tutorial
-W9
-bootstrap_tutorial.pdf
-meanjs
-*.wlmp
-*.sfk
-*.sfap0
-0.2.1
-vendor
-workspace.xml
+
+# Python Compiled
+*.pyc
+npm-debug.log*
+
+# Personal Study
+z_slingshot_src/
