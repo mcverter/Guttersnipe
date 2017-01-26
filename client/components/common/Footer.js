@@ -1,34 +1,31 @@
 import React, {PropTypes, Component} from 'react';
-import {DropdownButton} from 'react-bootstrap';
 import {Link} from 'react-router';
-class Footer extends Component {
-    constructor(props, context) {
 
-        super(props, context);
-            let {user} = props;
-        }
+import Navbar from 'react-bootstrap/lib/Navbar';
+import Nav from 'react-bootstrap/lib/Nav';
+import NavItem from 'react-bootstrap/lib/NavItem';
 
-        render() {
-            return (
-            <div className="navbar navbar-default navbar-fixed-bottom" role="navigation">
-                <div className="container NavColor">
-                    <div className="navbar-header" />
-                    <ul className="nav navbar-nav navbar-right sm">
-                        <li><Link to="faq" className="navbar-brand ">FAQ</Link></li>
-                        <li><Link to="documentation"  className="navbar-brand ">Docs</Link></li>
-                        <li><Link to="illlegal"  className="navbar-brand ">L@W</Link></li>
-                        <li>
-                            <Link to="contact"  className="navbar-brand ">
-                            <span className="glyphicon glyphicon-envelope" aria-hidden="true" /></Link></li>
-                    </ul>
-                </div>
-            </div>
-            );
-        }
-}
+const Footer = (props) => (
+  <Navbar className="gs-navbar">
+    <Nav justified="true"  role="navigation"
+         bsStyle="tabs" activeKey="1">
+      <NavItem eventKey="1" href="/home" title="FAQ">
+        <Link to="faq" className="navbar-brand ">FAQ</Link></NavItem>
+      <NavItem eventKey="1" href="/home" title="FAQ">
+        <Link to="documentation"  className="navbar-brand ">Docs</Link></NavItem>
+      <NavItem eventKey="1" href="/home" title="FAQ">
+        <Link to="illlegal"  className="navbar-brand ">L@W</Link></NavItem>
+      <NavItem eventKey="1" href="/home" title="FAQ">
+        <Link to="contact"  className="navbar-brand ">
+          <span className="glyphicon glyphicon-envelope" aria-hidden="true" /></Link>
+      </NavItem>
+    </Nav>
+  </Navbar>
+);
+
 
 Footer.propTypes = {
-    user: PropTypes.object
+  user: PropTypes.object
 };
 
 export default Footer;
