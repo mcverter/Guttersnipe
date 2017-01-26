@@ -73,13 +73,9 @@ class ThingCreate extends Component {
         return (
             <form onSubmit={this.props.handleSubmit}>
                 <FormSection name="thing">
-                    <FormGroup>
-                    <Field validate={required} name="description_what" type="text" component={renderBSTextField} label="What is the shareable resource"/>
-                   </FormGroup>
-                   <FormGroup>
-                    <Field validate={required} name="description_how" type="text" component={renderBSTextField} label="How do you acquire it?"/>
-                    </FormGroup>
-                    <FormGroup>
+                    <Field validate={required} name="description_what" type="text" component={RenderBSTextField} label="What is the shareable resource"/>
+                    <Field validate={required} name="description_how" type="text" component={RenderBSTextField} label="How do you acquire it?"/>
+
                     <Field name="type"
                         validate={required}
                         component={props =>
@@ -95,9 +91,7 @@ class ThingCreate extends Component {
                             />
                             }
                     />
-                    </FormGroup>
 
-                    <FormGroup>
                     <label>Select Zero or More Subtypes</label>
                     <Field name="subtypes"
                         component={props =>
@@ -109,12 +103,11 @@ class ThingCreate extends Component {
                                 placeholder="Select Zero or More Subtypes"
                                 multi={true}
                                 simpleValue
+                                label="subtypes"
                             />
                             }
                     />
-                    </FormGroup>
 
-<FormGroup>
                     <Field name="tags"
                         component={props =>
                             <RenderCreatableField
@@ -130,11 +123,7 @@ class ThingCreate extends Component {
                             />
                             }
                     />
-                    </FormGroup>
-
-<FormGroup>
-                    <Field name="notes" type="text" component={renderBSTextField} label="Additional Notes"/>
-           </FormGroup>
+                    <Field name="notes" type="text" component={RenderBSTextField} label="Additional Notes"/>
                 </FormSection>
                 <div>
                     <button type="button" className="previous" onClick={this.props.previousPage}>Previous</button>

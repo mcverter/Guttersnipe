@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
 import { Field, reduxForm, FormSection } from 'redux-form';
 import validate, {required} from '../create-wizard/validateCreateShareableWizard';
-import {renderTextField} from '../create-wizard/renderField';
+import {RenderBSTextField} from '../create-wizard/renderField';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import L from 'leaflet';
 import MapWithGeocoderInput from './MapWithGeocoderInput';
@@ -13,7 +13,7 @@ const SpaceCreate = ({ handleSubmit, previousPage, pos }) => {
         <form onSubmit={handleSubmit}>
             <FormSection name="space">
                 <Field name="map" validate={required} component={MapWithGeocoderInput} />
-                <Field name="notes" type="text" component={renderTextField} label="Additional Notes"/>
+                <Field name="notes" type="text" component={RenderBSTextField} label="Additional Notes"/>
             </FormSection>
 
             <div>
