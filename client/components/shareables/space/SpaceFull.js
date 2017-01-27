@@ -1,10 +1,11 @@
 import React, {PropTypes} from 'react';
-import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
-import L from 'leaflet';
 
-const SpaceFull = ({space}) => {
-    const {longitude, latitude, canonical_address,
-        alternate_names, notes} =  space;
+import L from 'leaflet';
+import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
+
+
+const SpaceFull = ({space: {longitude, latitude,
+  canonical_address,  alternate_names, notes}}) =>  {
     const position = [latitude, longitude];
 
     return (
@@ -31,23 +32,3 @@ SpaceFull.propTypes = {
 };
 
 export default SpaceFull;
-
-/*
- "space"    : {
- "longitude" : "",
- "latitude": "",
- "canonical_address": "",
- "alternate_names": [
- ],
- "notes": ""
- },
-
- <Marker position={position}>
- <Popup>
- <span>A pretty CSS3 popup.
- <br/>
- Easily customizable.</span>
- </Popup>
- </Marker>
-
- */

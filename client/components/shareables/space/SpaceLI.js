@@ -4,9 +4,7 @@ const SpaceLI = ({space}) => {
     const {canonical_address} = space;
 
     return (
-        <div>
-        {canonical_address}
-        </div>
+        <div> {canonical_address}</div>
     );
 };
 

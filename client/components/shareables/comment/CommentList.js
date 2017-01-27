@@ -2,15 +2,15 @@ import React, {PropTypes} from 'react';
 import Comment from './CommentFull';
 
 const CommentList = (comments) => (
-    <div>
-        {comments.map(comment =>
-            <Comment key={comment.id} comment={comment} />
-        )}
-    </div>
+  <div>
+    {comments.map(comment =>
+      <Comment key={comment.id} comment={comment} />
+    )}
+  </div>
 );
 
 CommentList.propTypes = {
-    comments: PropTypes.arrayOf(PropTypes.object)
+  comments: PropTypes.arrayOf(PropTypes.object)
 };
 
 export default CommentList;

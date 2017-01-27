@@ -21,7 +21,7 @@ const Header = (props) => {
       </Nav>
     </Navbar>
   );
-}
+};
 
 Header.propTypes = {
   user: PropTypes.object

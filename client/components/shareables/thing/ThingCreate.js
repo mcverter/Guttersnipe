@@ -1,43 +1,15 @@
 import React, {PropTypes, Component} from 'react';
-import { Field, reduxForm, FormSection } from 'redux-form';
+
+import { Field, reduxForm } from 'redux-form';
 import validate, {required} from '../create-wizard/validateCreateShareableWizard';
+
 import {RenderCreatableField, RenderBSTextField, RenderSelectField} from '../create-wizard/renderField';
-import 'react-select/dist/react-select.css';
 import _ from 'lodash';
 import Button from 'react-bootstrap/lib/Button';
-import FormGroup from 'react-bootstrap/lib/FormGroup';
 
 
-const types_and_subtypes = [
-  {
-    value: "food",
-    label: "food",
-    subtypes: [
-      {value: "dumpster", label: "dumpster"},
-      {value: "food not bombs", label: "food not bombs"},
-      {value: "face", label: "face"}]
-  }, {
-    value: "housing" ,
-    label: "housing" ,
-    subtypes: [
-      {value: "squat", label: "squat"},
-      {value: "punk house", label: "punk house"}
-
-    ]
-  }, {
-    value: "medical",
-    label: "medical",
-    subtypes: [
-      {value: "needle exchange", label: "needle exchange"},
-      {value: "hiv", label: "hiv"}]
-  }];
-
-const tags = [
-  {value: 'abc', label: 'abc'},
-  {value: 'def', label: 'def'},
-  {value: 'ghi', label: 'ghi'},
-  {value: 'klm', label: 'klm'},
-]
+// temporary
+import {tags, types_and_subtypes} from './TagsAndTypes';
 
 class ThingCreate extends Component {
   constructor(props) {
@@ -46,29 +18,18 @@ class ThingCreate extends Component {
       tags: tags,
       types: types_and_subtypes,
       subtypes: _.find(types_and_subtypes, {value: "food"}).subtypes
-    }
+    };
 
     this.handleTypesChange = this.handleTypesChange.bind(this);
   }
+
   handleTypesChange(value, formChangeFn) {
     formChangeFn(value);
     this.setState({
       subtypes: _.find(types_and_subtypes, {value: value}).subtypes
     })
   }
-  /*
-   component={props =>
-   <Select
-   value={props.input.value}
-   onChange={(value)=> this.handleTypesChange
-   (value, props.input.onChange)}
-   onBlur={() => props.input.onBlur(props.input.value)}
-   options={this.state.types}
-   placeholder="Select a Type"
-   simpleValue
-   label="Types"
-   />
-   */
+
   render() {
     return (
       <form onSubmit={this.props.handleSubmit}>
@@ -86,12 +47,8 @@ class ThingCreate extends Component {
                    options={this.state.types}
                    placeholder="Select a Type"
                    simpleValue
-                   label="Types"
-                 />
-               }
-        />
+                   label="Types" /> } />
 
-        <label>Select Zero or More Subtypes</label>
         <Field name="thing_subtypes"
                component={props =>
                  <RenderSelectField
@@ -103,10 +60,7 @@ class ThingCreate extends Component {
                    placeholder="Select Zero or More Subtypes"
                    multi={true}
                    simpleValue
-                   label="subtypes"
-                 />
-               }
-        />
+                   label="subtypes" /> } />
 
         <Field name="thing_tags"
                component={props =>
@@ -118,16 +72,13 @@ class ThingCreate extends Component {
                    placeholder="Select or Create Zero or More Tags"
                    simpleValue
                    multi={true}
-                   label="Select or Create Zero or More Tags"
+                   label="Select or Create Zero or More Tags" /> } />
 
-                 />
-               }
-
-        />
         <Field name="thing_notes" type="text" component={RenderBSTextField} label="Additional Notes"/>
+
         <div>
-          <button type="button" className="previous" onClick={this.props.previousPage}>Previous</button>
-          <button type="submit" className="next">Next</button>
+          <Button type="button" className="previous" onClick={this.props.previousPage}>Previous</Button>
+          <Button type="submit" className="next">Next</Button>
         </div>
       </form>
     );
@@ -145,22 +96,3 @@ export default reduxForm({
   validate
 })(ThingCreate);
 
-
-/*
- <Field name="thing_tag_select" component={Select} props={{
- name:"tag-select",
- options : this.state.tags,
- multi: true,
- value:{input.value},
- onChange:{input.onChange},
- onBlur:{() => input.onBlur(input.value)}
- }}/>
- <Field name="thing_subtype_select" component={Select} props={{
- name:"subtype-select",
- options : this.state.subtypes,
- multi: true,
- value:{input.value},
- onChange:{input.onChange},
- onBlur:{() => input.onBlur(input.value)}
- }}/>
- */

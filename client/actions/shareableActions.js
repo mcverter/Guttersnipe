@@ -1,5 +1,4 @@
 import * as types from './actionTypes';
-import _ from 'lodash';
 
 const ROOT_URL = 'http://localhost:5000';
 
@@ -40,15 +39,11 @@ function receiveAllShareables(json) {
 }
 
 function shouldFetchSingleShareable(state, id) {
-    if(!state.shareables || !state.shareables.items) {
+    if(!state.shareables || !state.shareables.items ||
+      _.find(state.shareables.items, {id: parseInt(id)})) {
         return false;
     }
-    const shareable = _.find(state.shareables.items, {id: parseInt(id)});
-    if (!shareable) {
-        return true;
-    } else {
-        return false;
-    }
+    return true
 }
 
 function setCurrentShareable(id) {
@@ -81,6 +76,5 @@ function fetchSingleShareable(id) {
 
 
 export function createShareable(data) {
-
     fetch(`${ROOT_URL}/shareables`, { method: 'POST', body: JSON.stringify(data) });
 }

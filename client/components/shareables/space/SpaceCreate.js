@@ -1,37 +1,35 @@
 import React, {PropTypes} from 'react';
-import { Field, reduxForm, FormSection } from 'redux-form';
+
+import { Field, reduxForm } from 'redux-form';
 import validate, {required} from '../create-wizard/validateCreateShareableWizard';
-import {RenderBSTextField} from '../create-wizard/renderField';
-import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
-import L from 'leaflet';
+
 import MapWithGeocoderInput from './MapWithGeocoderInput';
 
-const SpaceCreate = ({ handleSubmit, previousPage, pos }) => {
-    let position = pos || [-73.99255, 40.689613];
-    return (
-        <div> Create a Map for your resource
-        <form onSubmit={handleSubmit}>
-            <FormSection name="space">
-                <Field name="map" validate={required} component={MapWithGeocoderInput} />
-                <Field name="notes" type="text" component={RenderBSTextField} label="Additional Notes"/>
-            </FormSection>
+import {RenderBSTextField} from '../create-wizard/renderField';
+import Button from 'react-bootstrap/lib/Button';
 
-            <div>
-               <button type="button" className="previous" onClick={previousPage}>Previous</button>
-               <button type="submit" className="next">Next</button>
-            </div>
-        </form>
-        </div>
-    );
-};
+
+const SpaceCreate = ({ handleSubmit, previousPage, currentPostion }) => (
+  <div> Create a Map for your resource
+    <form onSubmit={handleSubmit}>
+      <Field name="space_map" validate={required} component={MapWithGeocoderInput} currentPosition={currentPostion}/>
+      <Field name="space_notes" type="text" component={RenderBSTextField} label="Additional Notes"/>
+
+      <div>
+        <Button type="button" className="previous" onClick={previousPage}>Previous</Button>
+        <Button type="submit" className="next">Next</Button>
+      </div>
+    </form>
+  </div>
+);
 
 SpaceCreate.propTypes = {
-    handleSubmit: PropTypes.func
+  handleSubmit: PropTypes.func.isRequired
 };
 
 export default reduxForm({
-    form: 'wizard',
-    destroyOnUnmount: false,
-    forceUnregisterOnUnmount: true,
-    validate
+  form: 'wizard',
+  destroyOnUnmount: false,
+  forceUnregisterOnUnmount: true,
+  validate
 })(SpaceCreate);

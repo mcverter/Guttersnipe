@@ -1,4 +1,4 @@
-import React, {PropTypes, Component} from 'react';
+import React, {PropTypes} from 'react';
 import {Link} from 'react-router';
 
 import Navbar from 'react-bootstrap/lib/Navbar';

@@ -24,8 +24,7 @@ class EventCalendarNavigable extends Component {
                 calendarEvents={this.props.calendarEvents}
                 handleSelectSlot={this.props.handleSelectSlot}
                 handleNavigation={this.handleNavigation}
-                selectable={this.props.selectable}
-            />
+                selectable={this.props.selectable} />
         );
     }
 }

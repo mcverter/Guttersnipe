@@ -1,8 +1,9 @@
 import React, {Component, PropTypes} from 'react';
 
+import moment from 'moment';
+
 import AddDateModal from './AddDateModal';
 import EventCalendarNavigable from './EventCalendarNavigable';
-import moment from 'moment';
 
 class CalendarInputField extends Component {
     constructor(props) {
@@ -139,8 +140,7 @@ class CalendarInputField extends Component {
                     calendarEvents={this.props.input.value}
                     viewMonth={new Date()}
                     handleSelectSlot={this.handleCalendarSelectSlot}
-                    selectable={true}
-                />
+                    selectable={true} />
 
                 <AddDateModal
                     isOpen={this.state.modalIsOpen}
@@ -155,8 +155,7 @@ class CalendarInputField extends Component {
                     handleRepeatToggle={this.handleModalRepeatToggle}
                     handleStartTimeChange={this.handleModalStartTimeChange}
                     handleDurationChange={this.handleModalDurationChange}
-                    handleDateSelection = {this.handleModalSubmit}
-                />
+                    handleDateSelection = {this.handleModalSubmit} />
             </div>
         );
     }
@@ -166,10 +165,5 @@ CalendarInputField.propTypes = {
     headline: PropTypes.string.isRequired,
     input:  PropTypes.object
 };
-
-
-
-
-
 
 export default CalendarInputField;
