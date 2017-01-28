@@ -22,6 +22,7 @@ const ShareableLI = ( { shareable: { headline, id,
 );
 
 ShareableLI.propTypes = {
+  shareable: PropTypes.object
 };
 
 export default ShareableLI;

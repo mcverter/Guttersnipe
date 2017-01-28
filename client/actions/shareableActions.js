@@ -1,4 +1,5 @@
 import * as types from './actionTypes';
+import _ from 'lodash';
 
 const ROOT_URL = 'http://localhost:5000';
 
@@ -43,7 +44,7 @@ function shouldFetchSingleShareable(state, id) {
       _.find(state.shareables.items, {id: parseInt(id)})) {
         return false;
     }
-    return true
+    return true;
 }
 
 function setCurrentShareable(id) {

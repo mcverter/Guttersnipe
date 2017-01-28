@@ -27,7 +27,7 @@ class ThingCreate extends Component {
     formChangeFn(value);
     this.setState({
       subtypes: _.find(types_and_subtypes, {value: value}).subtypes
-    })
+    });
   }
 
   render() {
@@ -47,7 +47,7 @@ class ThingCreate extends Component {
                    options={this.state.types}
                    placeholder="Select a Type"
                    simpleValue
-                   label="Types" /> } />
+                   label="Types" />} />
 
         <Field name="thing_subtypes"
                component={props =>
@@ -60,11 +60,12 @@ class ThingCreate extends Component {
                    placeholder="Select Zero or More Subtypes"
                    multi={true}
                    simpleValue
-                   label="subtypes" /> } />
+                   label="subtypes" />} />
 
         <Field name="thing_tags"
                component={props =>
                  <RenderCreatableField
+                   meta={props.meta}
                    value={props.input.value}
                    onChange={props.input.onChange}
                    onBlur={() => props.input.onBlur(props.input.value)}
@@ -72,7 +73,7 @@ class ThingCreate extends Component {
                    placeholder="Select or Create Zero or More Tags"
                    simpleValue
                    multi={true}
-                   label="Select or Create Zero or More Tags" /> } />
+                   label="Select or Create Zero or More Tags" />} />
 
         <Field name="thing_notes" type="text" component={RenderBSTextField} label="Additional Notes"/>
 

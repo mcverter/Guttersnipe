@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React, {PropTypes, Component} from 'react';
 
 import moment from 'moment';
 import RRule from 'rrule';
@@ -9,6 +9,9 @@ BigCalendar.momentLocalizer(moment); // or globalizeLocalizer
 const EventCalendarView = ({headline, viewMonth,
   handleSelectSlot, handleNavigation,
   selectable, calendarEvents}) => {
+
+  console.log('calendar events in const', calendarEvents);
+
   const transformToRRule = (recurringGenerator) => {
     const daysToRRule = (days) => {
       return days.split(',').map(day => {
@@ -40,6 +43,35 @@ const EventCalendarView = ({headline, viewMonth,
     });
   };
 
+  const calculateAllEvents = () => {
+    console.log('calendar events', calendarEvents);
+
+    const ev = calendarEvents.reduce((accumulator, event) => {
+      if (event.recurrence_rule) {
+        return accumulator.concat(transformToRRule(event).between(
+          moment(viewMonth).startOf('month').subtract(7, 'days').toDate(),
+          moment(viewMonth).endOf('month').add(7, 'days').toDate()
+        ).map(occurance => {
+          return {
+            title: headline,
+            start: occurance,
+            end: new Date(occurance.getTime() +
+              new Date(event.dt_end).getTime() -
+              new Date(event.dt_start).getTime())
+          };
+        }));
+      } else {
+        return accumulator.concat({
+          start: new Date(event.dt_start),
+          end: new Date(event.dt_end),
+          title: headline
+        });
+      }
+    }, []);
+    console.log('calculated events', ev);
+    return ev;
+  };
+/*
   const calculateRecurringEvents = () => {
     return calendarEvents.filter(e => e.recurrence_rule)
       .reduce((accumulator, eventGenerator) => {
@@ -58,6 +90,8 @@ const EventCalendarView = ({headline, viewMonth,
   };
 
   const calculatefixedEvents = () => {
+    console.log('calendarEvents is ', calendarEvents);
+    debugger;
     return calendarEvents.filter(e => ! e.recurrence_rule)
       .map(fixed => { return {
           start: new Date(fixed.dt_start),
@@ -66,14 +100,14 @@ const EventCalendarView = ({headline, viewMonth,
         }; }
       );
   };
+*/
 
   return (
     <div style={{height: "400px"}}>
       <BigCalendar
         className="calendar"
         timeslots={4}
-        events={calculatefixedEvents().
-        concat(calculateRecurringEvents())}
+        events={calculateAllEvents()}
         onNavigate ={handleNavigation}
         onSelectSlot={handleSelectSlot}
         selectable={selectable} />

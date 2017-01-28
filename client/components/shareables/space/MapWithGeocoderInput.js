@@ -31,11 +31,15 @@ export default class MapWithGeocoder extends Component {
                 latitude: data.latlng.lat,
                 longitude: data.latlng.lng,
                 canonicalAddress: data.feature.properties.label
-            })
-        }))
+            });
+        }));
     }
 
     render() {
-        return <div ref={(el) => { this.el = el }} />;
+        return <div ref={(el) => { this.el = el }} /> ;
     }
 }
+
+MapWithGeocoder.propTypes = {
+  input: PropTypes.object
+};

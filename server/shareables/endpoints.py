@@ -212,6 +212,7 @@ def create_shareable_from_json_object(py_dict):
         event_entities_array = []
         for e in events:
             dt_start = e.get("dt_start")
+
             dt_start = datetime.strptime(dt_start,  '%Y-%m-%dT%H:%M:%S')
             dt_end = e.get("dt_end")
             if dt_end is not None:
@@ -219,70 +220,85 @@ def create_shareable_from_json_object(py_dict):
             tz_id = e.get("tz_id")
 
             recurrence_rule = e.get("recurrence_rule")
-            freq = recurrence_rule.get("freq")
-            byDay = recurrence_rule.get("byDay")
-            byMonthDay = recurrence_rule.get("byMonthDay")
-            byYearDay = recurrence_rule.get("byYearDay")
-            byWeekNo = recurrence_rule.get("byWeekNo")
-            byMonth = recurrence_rule.get("byMonth")
-            until = recurrence_rule.get("until")
-            count = recurrence_rule.get("count")
-            interval = recurrence_rule.get("interval")
-            bySetPos = recurrence_rule.get("bySetPos")
+            if recurrence_rule:
+              freq = recurrence_rule.get("freq")
+              byDay = recurrence_rule.get("byDay")
+              byMonthDay = recurrence_rule.get("byMonthDay")
+              byYearDay = recurrence_rule.get("byYearDay")
+              byWeekNo = recurrence_rule.get("byWeekNo")
+              byMonth = recurrence_rule.get("byMonth")
+              until = recurrence_rule.get("until")
+              count = recurrence_rule.get("count")
+              interval = recurrence_rule.get("interval")
+              bySetPos = recurrence_rule.get("bySetPos")
 
-            recurrence_rule_entity = db.session.query(RecurrenceRule).filter(
-                RecurrenceRule.freq == freq,
-                RecurrenceRule.byDay == byDay,
-                RecurrenceRule.byMonthDay == byMonthDay,
-                RecurrenceRule.byYearDay == byYearDay,
-                RecurrenceRule.byWeekNo == byWeekNo,
-                RecurrenceRule.byMonth == byMonth,
-                RecurrenceRule.until == until,
-                RecurrenceRule.count == count,
-#                RecurrenceRule.interval == interval,
-                RecurrenceRule .bySetPos == bySetPos).first()
+              recurrence_rule_entity = db.session.query(RecurrenceRule).filter(
+                  RecurrenceRule.freq == freq,
+                  RecurrenceRule.byDay == byDay,
+                  RecurrenceRule.byMonthDay == byMonthDay,
+                  RecurrenceRule.byYearDay == byYearDay,
+                  RecurrenceRule.byWeekNo == byWeekNo,
+                  RecurrenceRule.byMonth == byMonth,
+                  RecurrenceRule.until == until,
+                  RecurrenceRule.count == count,
+  #                RecurrenceRule.interval == interval,
+                  RecurrenceRule .bySetPos == bySetPos).first()
 
-            if recurrence_rule_entity is None:
-                my_recurrence_rule = RecurrenceRule(
-                    freq=freq,
-                    byDay=byDay,
-                    byMonthDay=byMonthDay,
-                    byYearDay=byYearDay,
-                    byWeekNo=byWeekNo,
-                    byMonth=byMonth,
-                    until=until,
-                    count=count,
-                    interval=interval,
-                    bySetPos=bySetPos
-                )
-                db.session.add(my_recurrence_rule)
-                recurrence_rule_entity = db.session.query(RecurrenceRule).filter(
-                    RecurrenceRule.freq == freq,
-                    RecurrenceRule.byDay == byDay,
-                    RecurrenceRule.byMonthDay == byMonthDay,
-                    RecurrenceRule.byYearDay == byYearDay,
-                    RecurrenceRule.byWeekNo == byWeekNo,
-                    RecurrenceRule.byMonth == byMonth,
-                    RecurrenceRule.until == until,
-                    RecurrenceRule.count == count,
-#                    RecurrenceRule.interval == interval,
-                    RecurrenceRule .bySetPos == bySetPos).first()
+              if recurrence_rule_entity is None:
+                  my_recurrence_rule = RecurrenceRule(
+                      freq=freq,
+                      byDay=byDay,
+                      byMonthDay=byMonthDay,
+                      byYearDay=byYearDay,
+                      byWeekNo=byWeekNo,
+                      byMonth=byMonth,
+                      until=until,
+                      count=count,
+                      interval=interval,
+                      bySetPos=bySetPos
+                  )
+                  db.session.add(my_recurrence_rule)
+                  recurrence_rule_entity = db.session.query(RecurrenceRule).filter(
+                      RecurrenceRule.freq == freq,
+                      RecurrenceRule.byDay == byDay,
+                      RecurrenceRule.byMonthDay == byMonthDay,
+                      RecurrenceRule.byYearDay == byYearDay,
+                      RecurrenceRule.byWeekNo == byWeekNo,
+                      RecurrenceRule.byMonth == byMonth,
+                      RecurrenceRule.until == until,
+                      RecurrenceRule.count == count,
+  #                    RecurrenceRule.interval == interval,
+                      RecurrenceRule .bySetPos == bySetPos).first()
 
-            event_entity = db.session.query(Event).filter(
+              event_entity = db.session.query(Event).filter(
+                  Event.dt_start == dt_start,
+                  Event.dt_end == dt_end,
+                  Event.tz_id == tz_id,
+                  Event.recurrence_rule == recurrence_rule_entity).first()
+
+              if event_entity is None:
+                  my_ev = Event(dt_start=dt_start, dt_end=dt_end,
+                                tz_id=tz_id, recurrence_rule=recurrence_rule_entity)
+                  db.session.add(my_ev)
+                  event_entity = db.session.query(Event).filter(
+                      Event.dt_start == dt_start,
+                      Event.dt_end == dt_end,
+                      Event.tz_id == tz_id,
+                    Event.recurrence_rule == recurrence_rule_entity).first()
+            else:
+              event_entity = db.session.query(Event).filter(
                 Event.dt_start == dt_start,
                 Event.dt_end == dt_end,
-                Event.tz_id == tz_id,
-                Event.recurrence_rule == recurrence_rule_entity).first()
+                Event.tz_id == tz_id).first()
 
-            if event_entity is None:
+              if event_entity is None:
                 my_ev = Event(dt_start=dt_start, dt_end=dt_end,
-                              tz_id=tz_id, recurrence_rule=recurrence_rule_entity)
+                              tz_id=tz_id)
                 db.session.add(my_ev)
                 event_entity = db.session.query(Event).filter(
-                    Event.dt_start == dt_start,
-                    Event.dt_end == dt_end,
-                    Event.tz_id == tz_id,
-                    Event.recurrence_rule == recurrence_rule_entity).first()
+                  Event.dt_start == dt_start,
+                  Event.dt_end == dt_end,
+                  Event.tz_id == tz_id).first()
 
             event_entities_array.append(event_entity)
 

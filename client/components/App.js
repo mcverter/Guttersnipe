@@ -5,7 +5,7 @@ import Header from './common/Header';
 const App = (props) => (
   <div className="container-fluid">
     <Header />
-    {this.props.children}
+    {props.children}
     <Footer />
   </div>
 );

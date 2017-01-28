@@ -3,16 +3,16 @@ export const required = value => value ? undefined : 'Required';
  const validateCreateShareableWizard = values => {
      const errors = {};
      if (!values.headline) {
-         errors.headline = 'Required'
+         errors.headline = 'Required';
      }
      if (!values.summary) {
-         errors.summary = 'Required'
+         errors.summary = 'Required';
      }
    if (!values.summary) {
-     errors.summary = 'Required'
+     errors.summary = 'Required';
    }
    if(!values.thing_type) {
-       errors.thing_type = 'Required'
+       errors.thing_type = 'Required';
    }
  };
 

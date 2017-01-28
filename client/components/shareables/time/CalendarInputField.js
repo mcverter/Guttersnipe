@@ -88,10 +88,10 @@ class CalendarInputField extends Component {
                     {
                         dt_start: moment(this.state.modalDate + " " +
                         this.state.modalStartTime, "MMMM DD, YYYY HH:mm")
-                            .format(),
+                            .format('YYYY-MM-DDTHH:mm:ss'),
                         dt_end: moment(this.state.modalDate + " " +
                         this.state.modalStartTime, "MMMM DD, YYYY HH:mm")
-                            .add(this.state.modalDuration, 'm').format(),
+                            .add(this.state.modalDuration, 'm').format('YYYY-MM-DDTHH:mm:ss'),
                         tz_id: 'America/New_York',
                         recurrence_rule: {
                             freq: 'weekly',
@@ -102,11 +102,11 @@ class CalendarInputField extends Component {
                 this.props.input.value.concat({
                     dt_start: moment(
                         this.state.modalDate + " " + this.state.modalStartTime, "MMMM DD, YYYY HH:mm")
-                        .format(),
+                        .format('YYYY-MM-DDTHH:mm:ss'),
                     tz_id: 'America/New_York',
                     dt_end: moment(this.state.modalDate + " " +
                     this.state.modalStartTime, "MMMM DD, YYYY HH:mm")
-                        .add(this.state.modalDuration, 'm').format(),
+                        .add(this.state.modalDuration, 'm').format('YYYY-MM-DDTHH:mm:ss'),
                     headline: this.props.headline
                 }))}
         this.closeModal();

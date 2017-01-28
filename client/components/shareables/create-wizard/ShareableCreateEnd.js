@@ -6,12 +6,14 @@ import validate from './validateCreateShareableWizard';
 import {RenderBSTextField} from './renderField';
 import Button from 'react-bootstrap/lib/Button';
 
-const ShareableCreateEnd = ({handleSubmit}) => (
+const ShareableCreateEnd = ({handleSubmit, previousPage}) => (
   <form onSubmit={handleSubmit}>
     <Field name="shareable_notes" type="text" component={RenderBSTextField} label="Additional Notes"/>
     <div>
-      <Button type="submit" className="next">Next</Button>
+      <Button type="button" className="previous" onClick={previousPage}>Previous</Button>
+      <Button type="button" className="next" onClick={handleSubmit}>Create New Shareable</Button>
     </div>
+
   </form>
 );
 

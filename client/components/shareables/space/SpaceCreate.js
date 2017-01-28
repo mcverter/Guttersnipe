@@ -3,16 +3,14 @@ import React, {PropTypes} from 'react';
 import { Field, reduxForm } from 'redux-form';
 import validate, {required} from '../create-wizard/validateCreateShareableWizard';
 
-import MapWithGeocoderInput from './MapWithGeocoderInput';
-
-import {RenderBSTextField} from '../create-wizard/renderField';
+import {RenderBSTextField, RenderMapField} from '../create-wizard/renderField';
 import Button from 'react-bootstrap/lib/Button';
 
 
-const SpaceCreate = ({ handleSubmit, previousPage, currentPostion }) => (
+const SpaceCreate = ({ handleSubmit, previousPage, currentPosition }) => (
   <div> Create a Map for your resource
     <form onSubmit={handleSubmit}>
-      <Field name="space_map" validate={required} component={MapWithGeocoderInput} currentPosition={currentPostion}/>
+      <Field name="space_map" validate={required} component={RenderMapField} label="Location of Shareable" currentPosition={currentPosition} />
       <Field name="space_notes" type="text" component={RenderBSTextField} label="Additional Notes"/>
 
       <div>

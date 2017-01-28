@@ -5,40 +5,37 @@ import {createShareable} from "../../../actions/shareableActions.js";
 
 const ShareableCreateWizardPage = () => {
   const handleSubmit = (values) => {
-    console.log('form values', values);
-    debugger;
-
     const data = {
       'headline' : values.headline,
       'summary'  : values.summary,
+      'notes'    : values.shareable_notes,
       'thing'    : {
-        'description_how' : values.description_how,
-        'description_what' : values.description_what,
+        'description_how' : values.thing_description_how,
+        'description_what' : values.thing_description_what,
         'main_type': values.thing_type,
         'subtypes': values.thing_subtypes.split(','),
         'notes': values.thing_notes,
         'tags': values.thing_tags.split(',')
       },
       'space'    : {
-        'longitude' : values.space_creator.longitude,
-        'latitude':  values.space_creator.latitude,
-        'canonical_address':  values.space_creator.canonical_address,
-        'alternate_addresses': values.alternate_addresses,
+        'longitude' : values.space_map.longitude,
+        'latitude':  values.space_map.latitude,
+        'canonical_address':  values.space_map.canonicalAddress,
+        'alternate_addresses': values.space_map.alternate_addresses,
         'notes': values.space_notes
       },
       'time'    : {
         'notes': values.time_notes,
         'calendar': {
-          'events': values.time_creator
+          'events': values.time_calendar
         }
       }
     };
-    console.log('data object', data);
     createShareable(data);
   };
 
   return (
-    <ShareableCreateWizardForm onSubmit={handleSubmit} />
+    <ShareableCreateWizardForm handleSubmit={handleSubmit} />
   );
 };
 

@@ -33,14 +33,14 @@ class ShareableCreateWizardForm extends Component {
         {page === 2 && <ThingCreate previousPage={this.previousPage} onSubmit={this.nextPage}/>}
         {page === 3 && <SpaceCreate previousPage={this.previousPage} onSubmit={this.nextPage}/>}
         {page === 4 && <TimeCreate headline="foo" previousPage={this.previousPage} onSubmit={this.nextPage}/>}
-        {page === 5 && <ShareableCreateEnd previousPage={this.previousPage} onSubmit={this.props.onSubmit}/>}
+        {page === 5 && <ShareableCreateEnd previousPage={this.previousPage} onSubmit={this.props.handleSubmit}/>}
       </div>
     );
   }
 }
 
 ShareableCreateWizardForm.propTypes = {
-  handleSubmit: PropTypes.func
+  handleSubmit: PropTypes.func,
 };
 
 
