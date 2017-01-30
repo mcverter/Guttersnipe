@@ -1,0 +1,23 @@
+h1 
+{
+    font-size:76px;
+    font-family:"Futura";
+    font-weight:bold;
+   text-decoration: line-through;
+}
+ul 
+{
+   font-size:36px;
+    font-family:"Verdana";
+     text-decoration: italic;
+   text-align:justify
+}
+ body.RedOnBlack { color:red; background-color:black;} 
+ body.BlackOnRed { color:black; background-color:red;} 
+ body.RedOnBlackSlide { color:red; background-color:black;text-align:center;} 
+ body.BlackOnRedSlide { color:black; background-color:red;text-align:center;} 
+div.navigation
+{
+   font-size:48px;
+    font-family:"Helvetica";
+}
