@@ -9,7 +9,7 @@ import HelpBlock from 'react-bootstrap/lib/HelpBlock';
 /**
  * Created by mitchell on 1/29/17.
  */
-const RenderHTMLInput = ( { input, label, type, meta: { touched, error } } ) =>  (
+const ReduxFormHTMLInput = ( { input, label, type, meta: { touched, error } } ) =>  (
   <FormGroup validationState={touched && error ? 'error' : null}>
     <ControlLabel>{label}</ControlLabel>
     <FormControl {...input} placeholder={label} type={type}  />
@@ -18,5 +18,5 @@ const RenderHTMLInput = ( { input, label, type, meta: { touched, error } } ) => 
   </FormGroup>
 );
 
-export default RenderHTMLInput;
+export default ReduxFormHTMLInput;
 

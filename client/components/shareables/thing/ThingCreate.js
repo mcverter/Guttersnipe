@@ -3,9 +3,11 @@ import React, {PropTypes, Component} from 'react';
 import { Field, reduxForm } from 'redux-form';
 import validate, {required} from '../create-wizard/validateCreateShareableWizard';
 
-import {RenderCreatableField, RenderBSTextField, RenderSelectField} from '../create-wizard/renderField';
+import ReduxFormHTMLInput from '../../reduxFormInputs/ReduxFormHTMLInput';
+import ReduxFormComponentField from '../../reduxFormInputs/ReduxFormComponentInput';
 import _ from 'lodash';
 import Button from 'react-bootstrap/lib/Button';
+import Select, {Creatable} from 'react-select';
 
 
 // temporary
@@ -33,49 +35,55 @@ class ThingCreate extends Component {
   render() {
     return (
       <form onSubmit={this.props.handleSubmit}>
-        <Field validate={required} name="thing_description_what" type="text" component={RenderBSTextField} label="What is the shareable resource"/>
-        <Field validate={required} name="thing_description_how" type="text" component={RenderBSTextField} label="How do you acquire it?"/>
+        <Field validate={required} name="thing_description_what" type="text" component={ReduxFormHTMLInput} label="What is the shareable resource"/>
+        <Field validate={required} name="thing_description_how" type="text" component={ReduxFormHTMLInput} label="How do you acquire it?"/>
 
         <Field name="thing_type"
                validate={required}
                component={props =>
-                 <RenderSelectField
+                 <ReduxFormComponentField
                    meta={props.meta}
-                   value={props.input.value}
-                   onChange={(value)=> this.handleTypesChange(value, props.input.onChange)}
-                   onBlur={() => props.input.onBlur(props.input.value)}
-                   options={this.state.types}
-                   placeholder="Select a Type"
-                   simpleValue
-                   label="Types" />} />
+                   label="Types">
+                   <Select
+                     value={props.input.value}
+                     onChange={(value)=> this.handleTypesChange(value, props.input.onChange)}
+                     onBlur={() => props.input.onBlur(props.input.value)}
+                     options={this.state.types}
+                     placeholder="Select a Type"
+                     simpleValue/>
+                </ReduxFormComponentField>} />
 
         <Field name="thing_subtypes"
                component={props =>
-                 <RenderSelectField
+                 <ReduxFormComponentField
                    meta={props.meta}
+                 label="subtypes">
+                 <Select
                    value={props.input.value}
                    onChange={props.input.onChange}
                    onBlur={() => props.input.onBlur(props.input.value)}
                    options={this.state.subtypes}
                    placeholder="Select Zero or More Subtypes"
                    multi={true}
-                   simpleValue
-                   label="subtypes" />} />
+                   simpleValue />
+                 </ReduxFormComponentField>} />
 
         <Field name="thing_tags"
                component={props =>
-                 <RenderCreatableField
+                 <ReduxFormComponentField
                    meta={props.meta}
+                   label="Select or Create Zero or More Tags" >
+                   <Creatable
                    value={props.input.value}
                    onChange={props.input.onChange}
                    onBlur={() => props.input.onBlur(props.input.value)}
                    options={this.state.tags}
                    placeholder="Select or Create Zero or More Tags"
                    simpleValue
-                   multi={true}
-                   label="Select or Create Zero or More Tags" />} />
+                   multi={true} />
+                 </ReduxFormComponentField>}/>
 
-        <Field name="thing_notes" type="text" component={RenderBSTextField} label="Additional Notes"/>
+        <Field name="thing_notes" type="text" component={ReduxFormHTMLInput} label="Additional Notes"/>
 
         <div>
           <Button type="button" className="previous" onClick={this.props.previousPage}>Previous</Button>
