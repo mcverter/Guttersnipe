@@ -1,1 +1,1 @@
-web: gunicorn server:app
+web: npm run dist && npm run gunicorn
