@@ -23,21 +23,19 @@ ShareableSerializer = ShareableSchema()
 SpaceSerializer = SpaceSchema()
 MainTypeSerializer = MainTypeSchema()
 
-class TypesEndpoint:
-  subtypes = Subtype.query.all()
-  types_and_subtypes = {}
-  for sub in subtypes:
-    subname = sub.name
-    typename = sub.main_type.name
-    if typename not in types_and_subtypes:
-      types_and_subtypes[typename] = []
-#    types_and_subtypes[typename].extend[subname]
+class ShareableCategorizationEndpoint(Resource):
+  def get(self):
+    subtypes = Subtype.query.all()
+#    tags =
+    types_and_subtypes = {}
+    for sub in subtypes:
+      subname = sub.name
+      typename = sub.main_type.name
+      if typename not in types_and_subtypes:
+        types_and_subtypes[typename] = []
+      types_and_subtypes[typename].extend([subname])
+    return types_and_subtypes;
 
-
-class SubtypesEndpoint(Resource):
-  pass
-class TagsEndpoint(Resource):
-  pass
 
 class ShareableEndpoint(Resource):
     def get(self, id):
@@ -369,6 +367,7 @@ def create_shareable_from_json_object(py_dict):
 
 api.add_resource(ShareableListEndpoint, '/api/shareables', endpoint = 'shareables')
 api.add_resource(ShareableEndpoint, '/api/shareable/<int:id>', endpoint = 'shareable')
+api.add_resource(ShareableCategorizationEndpoint, '/api/shareables/categorization', endpoint = 'categorization')
 
 '''
                 ShareableSerializer.validate(raw_dict)

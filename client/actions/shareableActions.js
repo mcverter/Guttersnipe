@@ -79,3 +79,20 @@ function fetchSingleShareable(id) {
 export function createShareable(data) {
     fetch(`${ROOT_URL}/api/shareables`, { method: 'POST', body: JSON.stringify(data) });
 }
+
+
+export function fetchShareableCategorizations() {
+    return dispatch => {
+        dispatch( {type: types.SHAREABLE_CATEGORIZATION_REQUEST});
+        return fetch(`${ROOT_URL}/api/shareables/categorization`)
+            .then(response => response.json())
+            .then(json => dispatch(receiveShareableCategorization(json)));
+    };
+}
+
+function receiveShareableCategorization(json) {
+    return {
+        type: types.SHAREABLE_CATEGORIZATIONS_SUCCESS,
+        categorizationMeta: json
+    };
+}

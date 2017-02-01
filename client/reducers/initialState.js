@@ -3,7 +3,8 @@ const initialState = {
         isFetchingShareables: false,
         shareableFetchError: false,
         items: [],
-        selectedIndex: -1
+        selectedIndex: -1,
+      categorizationMeta: {}
     }
 };
 

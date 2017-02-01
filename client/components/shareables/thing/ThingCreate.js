@@ -8,31 +8,58 @@ import ReduxFormComponentField from '../../reduxFormInputs/ReduxFormComponentInp
 import _ from 'lodash';
 import Button from 'react-bootstrap/lib/Button';
 import Select, {Creatable} from 'react-select';
-
+import {fetchShareableCategorizations} from '../../../actions/shareableActions';
+import {connect} from 'react-redux';
 
 // temporary
-import {tags, types_and_subtypes} from './TagsAndTypes';
+import {tags} from './TagsAndTypes';
 
 class ThingCreate extends Component {
   constructor(props) {
     super(props);
     this.state = {
       tags: tags,
-      types: types_and_subtypes,
-      subtypes: _.find(types_and_subtypes, {value: "food"}).subtypes
+      types: undefined,
+      subtypes: undefined
     };
+    this.categorizationMetaToSelectOptions(props.categorizationMeta)
 
     this.handleTypesChange = this.handleTypesChange.bind(this);
   }
 
+  componentWillMount() {
+    this.props.fetchShareableCategorizations()
+  }
+
+  categorizationMetaToSelectOptions(categorizationMeta) {
+    if (!categorizationMeta || ! _.keys(categorizationMeta).length){
+      return;
+    }
+    this.setState({
+      types: _.keys(categorizationMeta).reduce((accumulator, typeKey) => {
+      return accumulator.concat({
+        value: typeKey, label: typeKey,
+        subtypes: categorizationMeta[typeKey].map(subKey => {
+          return {value: subKey,  label: subKey};
+        })
+      })
+    }, [])});
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.categorizationMetaToSelectOptions(nextProps.categorizationMeta)
+  }
+
+
   handleTypesChange(value, formChangeFn) {
     formChangeFn(value);
     this.setState({
-      subtypes: _.find(types_and_subtypes, {value: value}).subtypes
+      subtypes: _.find(this.state.types, {value: value}).subtypes
     });
   }
 
   render() {
+    if (this.state.types === undefined) {return <div>Loading</div>;}
     return (
       <form onSubmit={this.props.handleSubmit}>
         <Field validate={required} name="thing_description_what" type="text" component={ReduxFormHTMLInput} label="What is the shareable resource"/>
@@ -51,21 +78,21 @@ class ThingCreate extends Component {
                      options={this.state.types}
                      placeholder="Select a Type"
                      simpleValue/>
-                </ReduxFormComponentField>} />
+                 </ReduxFormComponentField>} />
 
         <Field name="thing_subtypes"
                component={props =>
                  <ReduxFormComponentField
                    meta={props.meta}
-                 label="subtypes">
-                 <Select
-                   value={props.input.value}
-                   onChange={props.input.onChange}
-                   onBlur={() => props.input.onBlur(props.input.value)}
-                   options={this.state.subtypes}
-                   placeholder="Select Zero or More Subtypes"
-                   multi={true}
-                   simpleValue />
+                   label="subtypes">
+                   <Select
+                     value={props.input.value}
+                     onChange={props.input.onChange}
+                     onBlur={() => props.input.onBlur(props.input.value)}
+                     options={this.state.subtypes}
+                     placeholder="Select Zero or More Subtypes"
+                     multi={true}
+                     simpleValue />
                  </ReduxFormComponentField>} />
 
         <Field name="thing_tags"
@@ -74,13 +101,13 @@ class ThingCreate extends Component {
                    meta={props.meta}
                    label="Select or Create Zero or More Tags" >
                    <Creatable
-                   value={props.input.value}
-                   onChange={props.input.onChange}
-                   onBlur={() => props.input.onBlur(props.input.value)}
-                   options={this.state.tags}
-                   placeholder="Select or Create Zero or More Tags"
-                   simpleValue
-                   multi={true} />
+                     value={props.input.value}
+                     onChange={props.input.onChange}
+                     onBlur={() => props.input.onBlur(props.input.value)}
+                     options={this.state.tags}
+                     placeholder="Select or Create Zero or More Tags"
+                     simpleValue
+                     multi={true} />
                  </ReduxFormComponentField>}/>
 
         <Field name="thing_notes" type="text" component={ReduxFormHTMLInput} label="Additional Notes"/>
@@ -94,14 +121,21 @@ class ThingCreate extends Component {
   }
 }
 
+function mapStateToProps(state) {
+  return {
+    categorizationMeta: state.shareables.categorizationMeta
+  }
+}
+
+
 ThingCreate.propTypes = {
   handleSubmit: PropTypes.func
 };
 
-export default reduxForm({
+export default connect(mapStateToProps, {fetchShareableCategorizations})(reduxForm({
   form: 'wizard',                 // <------ same form name
   destroyOnUnmount: false,        // <------ preserve form data
   forceUnregisterOnUnmount: true,  // <------ unregister fields on unmount
   validate
-})(ThingCreate);
+})(ThingCreate));
 
