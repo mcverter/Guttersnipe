@@ -11,14 +11,11 @@ import Select, {Creatable} from 'react-select';
 import {fetchShareableCategorizations} from '../../../actions/shareableActions';
 import {connect} from 'react-redux';
 
-// temporary
-import {tags} from './TagsAndTypes';
-
 class ThingCreate extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tags: tags,
+      tags: undefined,
       types: undefined,
       subtypes: undefined
     };
@@ -36,6 +33,9 @@ class ThingCreate extends Component {
       return;
     }
     this.setState({
+      tags: categorizationMeta.tags.map(tag =>{
+        return  {value: tag,  label: tag};
+      }),
       types: _.keys(categorizationMeta).reduce((accumulator, typeKey) => {
       return accumulator.concat({
         value: typeKey, label: typeKey,

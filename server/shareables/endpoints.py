@@ -8,7 +8,7 @@ from server.shareables.schemas import\
 import json
 from server.calendars.models import Event, Calendar, RecurrenceRule
 from server.shareables.models import Shareable, Thing, Space, \
-    Time, MainType, Subtype
+    Time, MainType, Subtype, Tag
 from datetime import datetime
 from server import db
 
@@ -26,7 +26,6 @@ MainTypeSerializer = MainTypeSchema()
 class ShareableCategorizationEndpoint(Resource):
   def get(self):
     subtypes = Subtype.query.all()
-#    tags =
     types_and_subtypes = {}
     for sub in subtypes:
       subname = sub.name
@@ -34,6 +33,7 @@ class ShareableCategorizationEndpoint(Resource):
       if typename not in types_and_subtypes:
         types_and_subtypes[typename] = []
       types_and_subtypes[typename].extend([subname])
+    types_and_subtypes["tags"] = [tag.name for tag in Tag.query.all()]
     return types_and_subtypes;
 
 
