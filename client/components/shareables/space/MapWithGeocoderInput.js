@@ -7,9 +7,10 @@ export default class MapWithGeocoder extends Component {
     constructor(props) {
         super(props);
         this.Geocoder = {};
+        debugger;
         props.input.value={
-            latitude: props.latitude || 40.7259,
-            longitude: props.longitude || -73.9805,
+            latitude: props.latitude || 40.689613,
+            longitude: props.longitude || -73.99243,
             canonical_address: ''
         };
 

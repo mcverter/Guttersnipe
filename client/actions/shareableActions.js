@@ -6,7 +6,7 @@ const ROOT_URL = 'http://localhost:5000';
 export function fetchAllShareables() {
     return dispatch => {
         dispatch(requestAllShareables());
-        return fetch(`${ROOT_URL}/shareables`)
+        return fetch(`${ROOT_URL}/api/shareables`)
             .then(response => response.json())
             .then(json => dispatch(receiveAllShareables(json)));
     };
@@ -67,7 +67,7 @@ function fetchSingleShareable(id) {
     return function (dispatch) {
         dispatch(requestSingleShareable(id));
 
-        return fetch(`${ROOT_URL}/shareable/${id}`)
+        return fetch(`${ROOT_URL}/api/shareable/${id}`)
             .then(response=>response.json())
             .then(json=>
                 dispatch(receiveSingleShareable(json)));
@@ -77,5 +77,5 @@ function fetchSingleShareable(id) {
 
 
 export function createShareable(data) {
-    fetch(`${ROOT_URL}/shareables`, { method: 'POST', body: JSON.stringify(data) });
+    fetch(`${ROOT_URL}/api/shareables`, { method: 'POST', body: JSON.stringify(data) });
 }

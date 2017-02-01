@@ -17,7 +17,7 @@ const ShareableLI = ( { shareable: { headline, id,
     <td> Rating:
       {number_ratings && <span>{total_rating/number_ratings}</span>}
     </td>
-    <td> <Link to={"shareable/" + id}>Full Record</Link> </td>
+    <td> <Link to={"/shareable/" + id}>Full Record</Link> </td>
   </tr>
 );
 

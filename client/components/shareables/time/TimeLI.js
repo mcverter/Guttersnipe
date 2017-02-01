@@ -42,12 +42,13 @@ class TimeLI extends Component {
 
     render() {
         let {recurringDates, fixedDates} = this.state;
+        let key=1;
         return (
             <div>
             {fixedDates && fixedDates.length >0 &&
                 <ul>
                     {fixedDates.map((date) => {
-                    return <li key={date.start}> Start: {date.start} End: {date.end} </li>;
+                    return <li key={key++}> Start: {date.start} End: {date.end} </li>;
                     })}
                 </ul>
                 }
@@ -55,7 +56,8 @@ class TimeLI extends Component {
             {recurringDates && recurringDates.length >0 &&
                 <ul>
                     {recurringDates.map((date) => {
-                    return   (                  <li key={date.start}> Start Time: {date.start} End Time: {date.end} <br />
+                    return   (
+                      <li key={key++}> Start Time: {date.start} End Time: {date.end} <br />
                         Every {date.days}</li>);
                     })}
                  </ul>
