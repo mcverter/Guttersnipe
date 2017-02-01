@@ -1,13 +1,13 @@
 __author__ = 'mitchell_verter'
 
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.restful import Api
 from flask_cors import CORS, cross_origin
 
 
-app = Flask(__name__,
-            static_url_path='/public')
+app = Flask(__name__, static_url_path='/static')
+
 app.config.from_object('config')
 db = SQLAlchemy(app)
 api = Api(app)
@@ -20,6 +20,12 @@ from server.shareables.models import Shareable, \
     MainType, Subtype, Comment
 
 from server.shareables.endpoints import ShareableEndpoint
+
+@app.route('/static/<path:path>')
+def send_static(path):
+    return send_from_directory('/static', path)
+
+
 
 @app.route('/')
 def index():

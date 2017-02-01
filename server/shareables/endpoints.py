@@ -3,8 +3,15 @@ from server import db, api
 from server.shareables.models import Shareable
 from flask import Blueprint, request, jsonify, make_response
 from flask.ext.restful import Resource, Api, abort
-from server.shareables.schemas import ShareableSchema, ThingSchema, TimeSchema, SpaceSchema
+from server.shareables.schemas import\
+  ShareableSchema, ThingSchema, TimeSchema, SpaceSchema, MainTypeSchema
 import json
+from server.calendars.models import Event, Calendar, RecurrenceRule
+from server.shareables.models import Shareable, Thing, Space, \
+    Time, MainType, Subtype
+from datetime import datetime
+from server import db
+
 
 from sqlalchemy.exc import SQLAlchemyError
 from marshmallow import ValidationError
@@ -14,6 +21,23 @@ ThingSerializer = ThingSchema()
 TimeSerializer = TimeSchema()
 ShareableSerializer = ShareableSchema()
 SpaceSerializer = SpaceSchema()
+MainTypeSerializer = MainTypeSchema()
+
+class TypesEndpoint:
+  subtypes = Subtype.query.all()
+  types_and_subtypes = {}
+  for sub in subtypes:
+    subname = sub.name
+    typename = sub.main_type.name
+    if typename not in types_and_subtypes:
+      types_and_subtypes[typename] = []
+#    types_and_subtypes[typename].extend[subname]
+
+
+class SubtypesEndpoint(Resource):
+  pass
+class TagsEndpoint(Resource):
+  pass
 
 class ShareableEndpoint(Resource):
     def get(self, id):
@@ -94,11 +118,6 @@ class ShareableListEndpoint(Resource):
                 resp.status_code = 403
                 return resp
 
-from server.calendars.models import Event, Calendar, RecurrenceRule
-from server.shareables.models import Shareable, Thing, Space, \
-    Time, MainType, Subtype
-from datetime import datetime
-from server import db
 
 def create_shareable_from_json_object(py_dict):
     headline = py_dict.get("headline")
@@ -348,8 +367,8 @@ def create_shareable_from_json_object(py_dict):
         return my_shareable
 
 
-api.add_resource(ShareableListEndpoint, '/shareables', endpoint = 'shareables')
-api.add_resource(ShareableEndpoint, '/shareable/<int:id>', endpoint = 'shareable')
+api.add_resource(ShareableListEndpoint, '/api/shareables', endpoint = 'shareables')
+api.add_resource(ShareableEndpoint, '/api/shareable/<int:id>', endpoint = 'shareable')
 
 '''
                 ShareableSerializer.validate(raw_dict)

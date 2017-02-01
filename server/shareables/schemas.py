@@ -29,6 +29,8 @@ class ThingSchema(Schema):
 class MainTypeSchema(Schema):
     name = fields.String()
 
+
+
 class SpaceSchema(Schema):
     id = fields.Integer()
     longitude = fields.Float()
