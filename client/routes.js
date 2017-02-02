@@ -6,7 +6,7 @@ import ShareableListPage from './components/shareables/ShareableListPage';
 import ShareableCreateWizardPage from './components/shareables/create-wizard/ShareableCreateWizardPage';
 import ShareableEditPage from './components/shareables/ShareableEditPage';
 import DocumentationRoutes from './components/docs/routes.js'
-
+import AuthRoutes from './components/auth/routes';
 export default (
   <Route path="/" component={App}>
     <IndexRoute component={ShareableListPage} />
@@ -15,5 +15,6 @@ export default (
     <Route path="shareables/create" component={ShareableCreateWizardPage} />
     <Route path="editshareable/:id" component={ShareableEditPage} />
     {DocumentationRoutes}
+    {AuthRoutes}
   </Route>
 );

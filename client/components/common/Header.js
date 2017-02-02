@@ -1,36 +1,62 @@
-import React, {PropTypes} from 'react';
-import {Link} from 'react-router';
-
-import Navbar from 'react-bootstrap/lib/Navbar';
-import MenuItem from 'react-bootstrap/lib/MenuItem';
-import NavDropdown from 'react-bootstrap/lib/NavDropdown';
+import React, {Component, PropTypes} from 'react';
+import { connect } from 'react-redux';
 
 
 import Nav from 'react-bootstrap/lib/Nav';
 import NavItem from 'react-bootstrap/lib/NavItem';
+import Navbar from 'react-bootstrap/lib/Navbar';
+import NavDropdown from 'react-bootstrap/lib/NavDropdown';
+import { LinkContainer } from 'react-router-bootstrap';
 
 
-const Header = (props) => {
-  const {user} = props;
+class Header extends Component {
+  constructor(props) {
+    super(props);
+  }
 
-  return (
-    <Navbar className="gs-navbar">
-      <Navbar.Header>
-        <Navbar.Brand>
-          <Link to="/" className="navbar-brand">Guttersnipe</Link>
-        </Navbar.Brand>
-      </Navbar.Header>
-      <Nav pullRight>
-        <NavDropdown eventKey={3} title="Signin" id="basic nav-dropdown">
-          <MenuItem eventKey={1} title="Sign In">Sign In</MenuItem>
+  renderAuthLinks() {
+    if (this.props.authenticated) {
+      return (
+        <LinkContainer to="/auth/signout" className="navbar-brand ">
+          <NavItem eventKey={3} title="Sign Out">Sign Out</NavItem>
+        </LinkContainer>
+      )
+    } else {
+      return (
+        <NavDropdown title="Signin" id="basic nav-dropdown">
+          <LinkContainer to="/auth/signin" className="navbar-brand ">
+            <NavItem eventKey={1} title="Sign Up">Sign In</NavItem>
+          </LinkContainer>
+          <LinkContainer to="/auth/signup" className="navbar-brand ">
+            <NavItem eventKey={2} title="Sign Up">Sign Up</NavItem>
+          </LinkContainer>
         </NavDropdown>
-      </Nav>
-    </Navbar>
-  );
-};
+      )
+    }
+  }
 
-Header.propTypes = {
-  user: PropTypes.object
-};
+  render() {
+    return (
+      <Navbar className="gs-navbar">
+        <Navbar.Header>
+          <Navbar.Brand>
+            <LinkContainer to="/" className="navbar-brand ">
+              <NavItem eventKey={5} title="Home Page">Guttersnipe</NavItem>
+            </LinkContainer>
+          </Navbar.Brand>
+        </Navbar.Header>
+        <Nav pullRight>
+          {this.renderAuthLinks()}
+        </Nav>
+      </Navbar>
+    );
+  }
+}
+
+function mapStateToProps(state) {
+  return {
+    authenticated: state.auth.authenticated
+  };
+}
 
 export default Header;

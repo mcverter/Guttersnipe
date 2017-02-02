@@ -12,7 +12,7 @@ import Mission from './mission';
 import App from '../App';
 
 export default (
-    <Route path="/docs" component="App">
+    <Route path="/docs" component={App}>
         <Route path="about" component={About} />
         <Route path="contact" component={Contact} />
         <Route path="documentation" component={Documentation} />

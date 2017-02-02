@@ -8,7 +8,7 @@ import ReduxFormComponentField from '../../reduxFormInputs/ReduxFormComponentFie
 import _ from 'lodash';
 import Button from 'react-bootstrap/lib/Button';
 import Select, {Creatable} from 'react-select';
-import {fetchShareableCategorizations} from '../../../actions/shareableActions';
+import {fetchShareableCategorizations} from '../../../actions/shareables/shareableActions';
 import {connect} from 'react-redux';
 
 class ThingCreate extends Component {

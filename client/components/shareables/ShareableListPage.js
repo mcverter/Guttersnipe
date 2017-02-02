@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
 
 import {connect} from 'react-redux';
-import {fetchAllShareables} from '../../actions/shareableActions';
+import {fetchAllShareables} from '../../actions/shareables/shareableActions';
 
 import ShareableLI from './ShareableLI';
 

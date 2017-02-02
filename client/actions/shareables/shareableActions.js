@@ -1,12 +1,11 @@
-import * as types from './actionTypes';
+import * as types from './shareableActionTypes';
 import _ from 'lodash';
-
-const ROOT_URL = 'http://localhost:5000';
+import {SERVER_URL} from '../../config'
 
 export function fetchAllShareables() {
     return dispatch => {
         dispatch(requestAllShareables());
-        return fetch(`${ROOT_URL}/api/shareables`)
+        return fetch(`${SERVER_URL}/api/shareables`)
             .then(response => response.json())
             .then(json => dispatch(receiveAllShareables(json)));
     };
@@ -67,7 +66,7 @@ function fetchSingleShareable(id) {
     return function (dispatch) {
         dispatch(requestSingleShareable(id));
 
-        return fetch(`${ROOT_URL}/api/shareable/${id}`)
+        return fetch(`${SERVER_URL}/api/shareable/${id}`)
             .then(response=>response.json())
             .then(json=>
                 dispatch(receiveSingleShareable(json)));
@@ -77,14 +76,14 @@ function fetchSingleShareable(id) {
 
 
 export function createShareable(data) {
-    fetch(`${ROOT_URL}/api/shareables`, { method: 'POST', body: JSON.stringify(data) });
+    fetch(`${SERVER_URL}/api/shareables`, { method: 'POST', body: JSON.stringify(data) });
 }
 
 
 export function fetchShareableCategorizations() {
     return dispatch => {
         dispatch( {type: types.SHAREABLE_CATEGORIZATION_REQUEST});
-        return fetch(`${ROOT_URL}/api/shareables/categorization`)
+        return fetch(`${SERVER_URL}/api/shareables/categorization`)
             .then(response => response.json())
             .then(json => dispatch(receiveShareableCategorization(json)));
     };

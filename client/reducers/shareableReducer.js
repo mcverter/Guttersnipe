@@ -1,4 +1,4 @@
-import * as types from '../actions/actionTypes';
+import * as types from '../actions/shareables/shareableActionTypes';
 import initialState from './initialState';
 
 export default function shareables(shareables = initialState.shareables, action={}) {
