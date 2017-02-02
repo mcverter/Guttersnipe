@@ -9,10 +9,10 @@ import Documentation from './documentation';
 import FAQ from './faq';
 import Illlegal from './illlegal';
 import Mission from './mission';
-import App from '../App';
 
 export default (
-    <Route path="/docs" component={App}>
+    <Route path="/docs">
+        <IndexRoute component={Mission} />
         <Route path="about" component={About} />
         <Route path="contact" component={Contact} />
         <Route path="documentation" component={Documentation} />

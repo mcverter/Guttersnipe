@@ -1,3 +1,5 @@
-/**
- * Created by mitchell on 1/4/2017.
- */
+import React from 'react';
+
+export default (
+  <div> Hello World</div>
+);
