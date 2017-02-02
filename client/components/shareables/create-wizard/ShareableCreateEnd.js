@@ -18,7 +18,8 @@ const ShareableCreateEnd = ({handleSubmit, previousPage}) => (
 );
 
 ShareableCreateEnd.propTypes = {
-  handleSubmit: PropTypes.func
+  handleSubmit: PropTypes.func,
+  previousPage: PropTypes.func
 };
 
 export default reduxForm({

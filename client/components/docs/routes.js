@@ -4,7 +4,7 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 import About from './about';
-import Contact from './contact'
+import Contact from './contact';
 import Documentation from './documentation';
 import FAQ from './faq';
 import Illlegal from './illlegal';

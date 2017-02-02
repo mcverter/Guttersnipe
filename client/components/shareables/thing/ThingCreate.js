@@ -4,7 +4,7 @@ import { Field, reduxForm } from 'redux-form';
 import validate, {required} from '../create-wizard/validateCreateShareableWizard';
 
 import ReduxFormHTMLInput from '../../reduxFormInputs/ReduxFormHTMLInput';
-import ReduxFormComponentField from '../../reduxFormInputs/ReduxFormComponentInput';
+import ReduxFormComponentField from '../../reduxFormInputs/ReduxFormComponentField';
 import _ from 'lodash';
 import Button from 'react-bootstrap/lib/Button';
 import Select, {Creatable} from 'react-select';

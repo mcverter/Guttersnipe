@@ -5,7 +5,7 @@ import { Field, reduxForm } from 'redux-form';
 import validate, {required} from '../create-wizard/validateCreateShareableWizard';
 
 import ReduxFormHTMLInput from '../../reduxFormInputs/ReduxFormHTMLInput';
-import ReduxFormComponentField from '../../reduxFormInputs/ReduxFormComponentInput';
+import ReduxFormComponentField from '../../reduxFormInputs/ReduxFormComponentField';
 
 import CalendarInputField from './CalendarInputField';
 import Button from 'react-bootstrap/lib/Button';

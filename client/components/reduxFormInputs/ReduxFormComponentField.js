@@ -13,7 +13,7 @@ export const ReduxFormComponentField = (props) => {
         {props.children}
       <HelpBlock>{error}</HelpBlock>
     </FormGroup>
-  )
+  );
 };
 
 ReduxFormComponentField.propTypes = {
@@ -25,6 +25,3 @@ ReduxFormComponentField.propTypes = {
 
 export default ReduxFormComponentField;
 
-/*
- (12:30:15 PM) samsch: roadrunneratwast, Since you are passing the full props to the wrapped components, your generic function can render everything but instead of either of the selected components, render {this.props.children}. Then you can create two new functions which render just the single generic (passing app props), and one of the components as a child.
- */

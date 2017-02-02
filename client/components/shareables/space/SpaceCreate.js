@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 
 import { Field, reduxForm } from 'redux-form';
 import validate, {required} from '../create-wizard/validateCreateShareableWizard';
-import ReduxFormComponentField from '../../reduxFormInputs/ReduxFormComponentInput';
+import ReduxFormComponentField from '../../reduxFormInputs/ReduxFormComponentField';
 import MapWithGeocoderInput from './MapWithGeocoderInput';
 
 import ReduxFormHTMLInput from '../../reduxFormInputs/ReduxFormHTMLInput';
@@ -36,7 +36,10 @@ const SpaceCreate = ({ handleSubmit, previousPage, currentPosition }) => (
 );
 
 SpaceCreate.propTypes = {
-  handleSubmit: PropTypes.func.isRequired
+  handleSubmit: PropTypes.func.isRequired,
+  previousPage: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
+  meta: PropTypes.object,
 };
 
 export default reduxForm({
