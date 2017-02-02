@@ -5,7 +5,11 @@ const initialState = {
         items: [],
         selectedIndex: -1,
       categorizationMeta: {}
-    }
+    },
+  auth : {
+      authenticated: true,
+    error: ''
+  }
 };
 
 export default initialState;

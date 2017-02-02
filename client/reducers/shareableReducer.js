@@ -1,7 +1,8 @@
 import * as types from '../actions/shareables/shareableActionTypes';
 import initialState from './initialState';
 
-export default function shareables(shareables = initialState.shareables, action={}) {
+export default function shareables(
+  shareables = initialState.shareables, action={}) {
   switch(action.type) {
     case types.SHAREABLE_CATEGORIZATIONS_SUCCESS:
       const foo = Object.assign({}, shareables, {
