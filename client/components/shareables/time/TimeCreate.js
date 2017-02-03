@@ -34,6 +34,8 @@ const TimeCreate = ({handleSubmit, previousPage, headline}) => (
 );
 
 TimeCreate.propTypes = {
+  previousPage: PropTypes.func,
+  onChange: PropTypes.func,
   handleSubmit: PropTypes.func,
   headline: PropTypes.string
 };

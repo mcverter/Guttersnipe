@@ -4,13 +4,11 @@ import moment from 'moment';
 import RRule from 'rrule';
 import BigCalendar from 'react-big-calendar';
 
-BigCalendar.momentLocalizer(moment); // or globalizeLocalizer
+BigCalendar.momentLocalizer(moment);
 
 const EventCalendarView = ({headline, viewMonth,
   handleSelectSlot, handleNavigation,
   selectable, calendarEvents}) => {
-
-  console.log('calendar events in const', calendarEvents);
 
   const transformToRRule = (recurringGenerator) => {
     const daysToRRule = (days) => {
@@ -44,8 +42,6 @@ const EventCalendarView = ({headline, viewMonth,
   };
 
   const calculateAllEvents = () => {
-    console.log('calendar events', calendarEvents);
-
     const ev = calendarEvents.reduce((accumulator, event) => {
       if (event.recurrence_rule) {
         return accumulator.concat(transformToRRule(event).between(
@@ -68,39 +64,8 @@ const EventCalendarView = ({headline, viewMonth,
         });
       }
     }, []);
-    console.log('calculated events', ev);
     return ev;
   };
-/*
-  const calculateRecurringEvents = () => {
-    return calendarEvents.filter(e => e.recurrence_rule)
-      .reduce((accumulator, eventGenerator) => {
-        return accumulator.concat(transformToRRule(eventGenerator).between(
-          moment(viewMonth).startOf('month').subtract(7, 'days').toDate(),
-          moment(viewMonth).endOf('month').add(7, 'days').toDate()
-        ).map(occurance => {
-          return {
-            start: occurance, title: headline,
-            end: new Date(occurance.getTime() +
-              new Date(eventGenerator.dt_end).getTime() -
-              new Date(eventGenerator.dt_start).getTime())
-          };
-        }));
-      }, []);
-  };
-
-  const calculatefixedEvents = () => {
-    console.log('calendarEvents is ', calendarEvents);
-    debugger;
-    return calendarEvents.filter(e => ! e.recurrence_rule)
-      .map(fixed => { return {
-          start: new Date(fixed.dt_start),
-          end: new Date(fixed.dt_end),
-          title: fixed.headline
-        }; }
-      );
-  };
-*/
 
   return (
     <div style={{height: "400px"}}>

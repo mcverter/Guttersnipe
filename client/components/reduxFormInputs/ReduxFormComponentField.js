@@ -5,7 +5,7 @@ import ControlLabel from 'react-bootstrap/lib/ControlLabel';
 import HelpBlock from 'react-bootstrap/lib/HelpBlock';
 
 
-export const ReduxFormComponentField = (props) => {
+const ReduxFormComponentField = (props) => {
   const {label, meta: {touched, error}} = props;
   return (
     <FormGroup validationState={touched && error ? 'error' : null}>

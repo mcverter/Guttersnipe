@@ -19,13 +19,17 @@ class ThingCreate extends Component {
       types: undefined,
       subtypes: undefined
     };
-    this.categorizationMetaToSelectOptions(props.categorizationMeta)
+    this.categorizationMetaToSelectOptions(props.categorizationMeta);
 
     this.handleTypesChange = this.handleTypesChange.bind(this);
   }
 
   componentWillMount() {
-    this.props.fetchShareableCategorizations()
+    this.props.fetchShareableCategorizations();
+  }
+
+    componentWillReceiveProps(nextProps) {
+    this.categorizationMetaToSelectOptions(nextProps.categorizationMeta)
   }
 
   categorizationMetaToSelectOptions(categorizationMeta) {
@@ -45,11 +49,6 @@ class ThingCreate extends Component {
       })
     }, [])});
   }
-
-  componentWillReceiveProps(nextProps) {
-    this.categorizationMetaToSelectOptions(nextProps.categorizationMeta)
-  }
-
 
   handleTypesChange(value, formChangeFn) {
     formChangeFn(value);
@@ -124,12 +123,15 @@ class ThingCreate extends Component {
 function mapStateToProps(state) {
   return {
     categorizationMeta: state.shareables.categorizationMeta
-  }
+  };
 }
 
 
 ThingCreate.propTypes = {
-  handleSubmit: PropTypes.func
+  handleSubmit: PropTypes.func,
+  categorizationMeta: PropTypes.object,
+  fetchShareableCategorizations: PropTypes.func,
+  previousPage: PropTypes.func
 };
 
 export default connect(mapStateToProps, {fetchShareableCategorizations})(reduxForm({

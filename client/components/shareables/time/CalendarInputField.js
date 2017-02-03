@@ -140,7 +140,7 @@ class CalendarInputField extends Component {
                     calendarEvents={this.props.input.value}
                     viewMonth={new Date()}
                     handleSelectSlot={this.handleCalendarSelectSlot}
-                    selectable={true} />
+                    selectable />
 
                 <AddDateModal
                     isOpen={this.state.modalIsOpen}
