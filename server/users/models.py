@@ -6,15 +6,17 @@ from marshmallow_jsonapi import Schema, fields as schema_fields
 from marshmallow import validate
 from server.calendars.models import Calendar
 
-'''
-parser = reqparse.RequestParser()
-TODOS = {
-    'todo1': {'task': 'build an API'},
-    'todo2': {'task': '?????'},
-    'todo3': {'task': 'profit!'},
-}
 
-'''
+class User(db.Model):
+  __tablename__ = 'user'
+  id = db.Column(db.Integer, primary_key=True)
+  username = db.Column(db.String)
+  password = db.Column(db.String)
+
+  def __init__(self, username, password):
+    self.username = username
+    self.password = password
+
 
 # A Single User has a single Profile and a single Calendar
 # and has a Mailbox with multiple messages
@@ -26,23 +28,6 @@ class Guttersnipe(db.Model):
     is_admin = db.Column(db.Boolean)
     created_on = db.Column(db.DateTime)
     expiration_date = db.Column(db.DateTime)
-'''
-    def get(self, todo_id):
-        #abort_if_todo_doesnt_exist(todo_id)
-        return TODOS[todo_id]
-
-    def delete(self, todo_id):
-        #abort_if_todo_doesnt_exist(todo_id)
-        del TODOS[todo_id]
-        return '', 204
-
-    def put(self, todo_id):
-        args = parser.parse_args()
-        task = {'task': args['task']}
-        TODOS[todo_id] = task
-        return task, 201
-
-'''
 
 
 # Profile is a Component of Guttersnipe.  1-to-1 relationship
@@ -55,26 +40,6 @@ class Profile(db.Model):
     password = db.Column(db.String(20), unique=True)
     additional_info = db.Column(db.String(20), unique=True)
 
-'''
-    def get(self, todo_id):
-        #abort_if_todo_doesnt_exist(todo_id)
-        return TODOS[todo_id]
-
-    def delete(self, todo_id):
-        #abort_if_todo_doesnt_exist(todo_id)
-        del TODOS[todo_id]
-        return '', 204
-
-    def put(self, todo_id):
-        args = parser.parse_args()
-        task = {'task': args['task']}
-        TODOS[todo_id] = task
-        return task, 201
-
-
-    def __repr__(self):
-        return '<User %r>' % (self.nickname)
-'''
 
 # Schedule is a Component of Guttersnipe.  1-to-1 relationship
 class Schedule (db.Model):
@@ -83,23 +48,6 @@ class Schedule (db.Model):
     calendar = db.Column(db.Integer, db.ForeignKey('calendar.id'))
     notes = db.Column(db.String(20))
 
-'''
-    def get(self, todo_id):
-        #abort_if_todo_doesnt_exist(todo_id)
-        return TODOS[todo_id]
-
-    def delete(self, todo_id):
-        #abort_if_todo_doesnt_exist(todo_id)
-        del TODOS[todo_id]
-        return '', 204
-
-    def put(self, todo_id):
-        args = parser.parse_args()
-        task = {'task': args['task']}
-        TODOS[todo_id] = task
-        return task, 201
-
-'''
 
 # User has Mailbox of Messages.
 class Message(db.Model):
@@ -111,43 +59,10 @@ class Message(db.Model):
     recipient = db.Column(db.Integer, db.ForeignKey('guttersnipe.id'))
     sent = db.Column(db.DateTime)
 
-'''
-    def get(self, todo_id):
-        #abort_if_todo_doesnt_exist(todo_id)
-        return TODOS[todo_id]
 
-    def delete(self, todo_id):
-        #abort_if_todo_doesnt_exist(todo_id)
-        del TODOS[todo_id]
-        return '', 204
-
-    def put(self, todo_id):
-        args = parser.parse_args()
-        task = {'task': args['task']}
-        TODOS[todo_id] = task
-        return task, 201
-'''
 # User can block another user
 #class BlockUser(db.Model):
 blockUserTable = db.Table(
     'followers',
     db.Column('blocker_id', db.Integer, db.ForeignKey('guttersnipe.id')),
     db.Column('blocked_id', db.Integer, db.ForeignKey('guttersnipe.id')))
-
-'''
-class TodoList:
-    def get(self):
-        return TODOS
-
-    def post(self):
-        args = parser.parse_args()
-        todo_id = int(max(TODOS.keys()).lstrip('todo')) + 1
-        todo_id = 'todo%i' % todo_id
-        TODOS[todo_id] = {'task': args['task']}
-        return TODOS[todo_id], 201
-'''
-
-
-
-
-
