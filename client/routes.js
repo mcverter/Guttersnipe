@@ -15,8 +15,3 @@ export default (
     {ShareableRoutes}
   </Route>
 );
-
-/*
-
-
- */
