@@ -1,6 +1,6 @@
 __author__ = 'mitchell_verter'
 
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, render_template, send_from_directory, redirect, make_response
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.restful import Api
 from flask_cors import CORS, cross_origin
@@ -20,6 +20,8 @@ from server.users.models import Guttersnipe, Profile, Schedule, Message, blockUs
 from server.shareables.models import Shareable, \
     Thing, Space, Time, \
     MainType, Subtype, Comment
+
+
 
 from server.shareables.endpoints import ShareableEndpoint
 
@@ -55,6 +57,17 @@ app.config['SECRET_KEY'] = "foobar"
 
 jwt = JWT(app, authenticate, identity)
 
+
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def catch_all(path):
+  return render_template('index.html')
+
+
+from server.shareables.endpoints import ShareableEndpoint
+
+if __name__ == '__main__':
+    app.run()
 
 '''
 
