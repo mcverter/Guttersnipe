@@ -20,7 +20,7 @@ class Header extends Component {
         <LinkContainer to="/auth/signout" className="navbar-brand ">
           <NavItem eventKey={3} title="Sign Out">Sign Out</NavItem>
         </LinkContainer>
-      )
+      );
     } else {
       return (
         <NavDropdown title="Signin" id="basic nav-dropdown">
@@ -31,7 +31,7 @@ class Header extends Component {
             <NavItem eventKey={2} title="Sign Up">Sign Up</NavItem>
           </LinkContainer>
         </NavDropdown>
-      )
+      );
     }
   }
 
@@ -58,5 +58,10 @@ function mapStateToProps(state) {
     authenticated: state.auth.authenticated
   };
 }
+
+Header.propTypes = {
+  authenticated: PropTypes.bool
+};
+
 
 export default Header;

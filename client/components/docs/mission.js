@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default (
+const Mission = (props) => (
   <div>
 
-    <div class="text-center BlackOnRed">
+    <div className="text-center BlackOnRed">
       <h1>
         !!!!!!!!!! <br />
         !!  FOR  !! <br />
@@ -14,9 +14,9 @@ export default (
     </div>
     <br /> <hr /><br />
 
-    <kropotkin-quote></kropotkin-quote>
-
     <br /><hr /><br />
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/PX5ecQls1ac" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/PX5ecQls1ac" frameBorder="0" />
   </div>
 );
+
+export default Mission;

@@ -4,9 +4,10 @@
 
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
-import ShareableListPage from './ShareableListPage'
+import ShareableListPage from './ShareableListPage';
 import ShareablePage from './ShareablePage';
-
+import ShareableCreateWizardPage from './ShareableCreateWizardPage';
+import ShareableEditPage from './ShareableEditPage';
 
 
 export default (

@@ -1,13 +1,15 @@
 import React, {Component, PropTypes} from 'react';
-import {reduxForm} from 'redux-form';
-import ReduxFormHTMLInput from '../../reduxFormInputs/ReduxFormHTMLInput';
+import {Field, reduxForm} from 'redux-form';
+
+import ReduxFormHTMLInput from '../../components/reduxFormInputs/ReduxFormHTMLInput';
 import Button from 'react-bootstrap/lib/Button';
+import {connect} from 'react-redux';
 
 import {signInUser} from '../../actions/auth/authActions';
 
 class Signin extends Component {
   handleSubmit({email, password}) {
-    this.props.signInUser({email, password})
+    this.props.signInUser({email, password});
   }
 
 
@@ -25,7 +27,7 @@ class Signin extends Component {
 
   render () {
     return (
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={this.handleSubmit}>
         <Field name="email" type="text" component={ReduxFormHTMLInput} label="Email"/>
         <Field name="password" type="password" component={ReduxFormHTMLInput} label="Password"/>
         <div>
@@ -34,12 +36,12 @@ class Signin extends Component {
       {this.renderAlert()}
 
       </form>
-    )
+    );
   }
 }
 
 function mapStateToProps(state) {
-  return {errorMessage: state.auth.error}
+  return {errorMessage: state.auth.error};
 }
 
 function validate(formProps) {
@@ -47,7 +49,10 @@ function validate(formProps) {
     return errors;
 }
 
-
+Signin.propTypes = {
+  signInUser: PropTypes.func,
+  errorMessage: PropTypes.string
+};
 
 export default connect(mapStateToProps, signInUser)(
   reduxForm({
@@ -55,4 +60,4 @@ export default connect(mapStateToProps, signInUser)(
     destroyOnUnmount: false,        // <------ preserve form data
     forceUnregisterOnUnmount: true,  // <------ unregister fields on unmount
     validate
-  })(Signin))
+  })(Signin));

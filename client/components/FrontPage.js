@@ -1,5 +1,7 @@
 import React from 'react';
 
-export default (
+const FrontPage = (props) => (
   <div> Hello World</div>
 );
+
+export default FrontPage;

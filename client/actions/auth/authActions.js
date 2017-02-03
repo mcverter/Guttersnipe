@@ -1,6 +1,6 @@
 import {AUTH_USER, AUTH_ERROR, UNAUTH_USER} from './authActionTypes';
 import {SERVER_URL} from '../../config';
-import {browserHistory} from 'react-router'
+import {browserHistory} from 'react-router';
 
 export function signInUser({email, password}) {
   return function(dispatch) {
@@ -9,13 +9,13 @@ export function signInUser({email, password}) {
       .then(response => {
         dispatch({type: AUTH_USER});
         localStorage.setItem('token', response.data.token);
-        browserHistory.push('/welcomeUser')
+        browserHistory.push('/welcomeUser');
       })
       .catch(response => {
-        const errMsg =  response && response.data ? response.data.error : ''
-        dispatch (authError('Could not login ' + errMsg))
-      })
-  }
+        const errMsg =  response && response.data ? response.data.error : '';
+        dispatch (authError('Could not login ' + errMsg));
+      });
+  };
 }
 
 export function signUpUser({email, password}) {
@@ -25,17 +25,17 @@ export function signUpUser({email, password}) {
       .then(response => {
         dispatch({type: AUTH_USER});
         localStorage.setItem('token', response.data.token);
-        browserHistory.push('/welcomeUser')
+        browserHistory.push('/welcomeUser');
       })
       .catch(response => {
-        const errMsg =  response && response.data ? response.data.error : ''
-        dispatch (authError('Could not login ' + errMsg))
-      })
-  }
+        const errMsg =  response && response.data ? response.data.error : '';
+        dispatch (authError('Could not login ' + errMsg));
+      });
+  };
 }
 
 export function authError(errorMsg) {
-  return {type: AUTH_ERROR, action: errorMsg}
+  return {type: AUTH_ERROR, action: errorMsg};
 }
 
 

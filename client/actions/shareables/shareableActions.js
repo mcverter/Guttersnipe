@@ -1,6 +1,6 @@
 import * as types from './shareableActionTypes';
 import _ from 'lodash';
-import {SERVER_URL} from '../../config'
+import {SERVER_URL} from '../../config';
 
 export function fetchAllShareables() {
     return dispatch => {

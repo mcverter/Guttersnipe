@@ -3,9 +3,9 @@
  */
 import React from 'react';
 
-export default (
+const FAQ = (props) => (
   <div>
-    <div class="RedOnBlack jumbotron">
+    <div className="RedOnBlack jumbotron">
 
       <h1>PROPOSAL: GUTTERSNIPE FAQ</h1>
       <ol>
@@ -119,3 +119,4 @@ export default (
 
 );
 
+export default FAQ;

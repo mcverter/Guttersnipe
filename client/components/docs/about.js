@@ -1,23 +1,23 @@
 import React from 'react';
 
-export default(
+const About = (props) => (
   <div>
-    <div class="BlackOnRed jumbotron text-center">
-      <div class="RedOnBlack">
+    <div className="BlackOnRed jumbotron text-center">
+      <div className="RedOnBlack">
         <img src="modules/core/img/brand/RoadrunnerAtWaste.jpg" /> <br />
       </div>
-      <div class="RedOnBlack">
+      <div className="RedOnBlack">
         <h2>by</h2>
         <h1>roadrunner [at] waste [dot] org</h1>
       </div>
-      <div class="RedOnBlack">
+      <div className="RedOnBlack">
         <img src="modules/core/img/brand/alien.jpg" /> <br />
       </div>
     </div>
 
     <br /><hr /><br />
 
-    <div class="RedOnBlack jumbotron">
+    <div className="RedOnBlack jumbotron">
       <ul> <h2> Consultants </h2>
         <li> David Emanuel </li>
         <li> <a target="_guttersnipe_popup"  href="http://picturethehomeless.org"> Picture The Homeless </a> </li>
@@ -27,4 +27,6 @@ export default(
 
     <br /><hr /><br />
   </div>
-)
+);
+
+export default About;

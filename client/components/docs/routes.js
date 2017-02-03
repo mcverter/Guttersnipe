@@ -11,13 +11,13 @@ import Illlegal from './illlegal';
 import Mission from './mission';
 
 export default (
-    <Route path="/docs">
-        <IndexRoute component={Mission} />
-        <Route path="about" component={About} />
-        <Route path="contact" component={Contact} />
-        <Route path="documentation" component={Documentation} />
-        <Route path="faq" component={FAQ} />
-        <Route path="mission" component={Mission} />
-        <Route path="illlegal" component={Illlegal} />
-    </Route>
+  <Route path="/docs">
+    <IndexRoute component={Mission} />
+    <Route path="about" component={About} />
+    <Route path="contact" component={Contact} />
+    <Route path="documentation" component={Documentation} />
+    <Route path="faq" component={FAQ} />
+    <Route path="mission" component={Mission} />
+    <Route path="illlegal" component={Illlegal} />
+  </Route>
 );

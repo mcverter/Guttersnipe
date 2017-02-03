@@ -2,7 +2,9 @@ import {
   AUTH_USER,
   AUTH_ERROR,
   UNAUTH_USER
-} from '../actions/auth/authActionTypes'
+} from '../actions/auth/authActionTypes';
+import initialState from './initialState';
+
 
 export default function auth(
   auth=initialState.auth, action={}) {
@@ -13,5 +15,7 @@ export default function auth(
       return {...auth, authenticated: true};
     case UNAUTH_USER:
       return {...auth, authenticated: false}
+    default:
+      return auth;
   }
 }
