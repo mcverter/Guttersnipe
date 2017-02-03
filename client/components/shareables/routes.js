@@ -11,10 +11,10 @@ import ShareableEditPage from './ShareableEditPage';
 
 
 export default (
-  <Route path="/shareables">
+  <Route path="shareables">
     <IndexRoute component={ShareableListPage} />
-    <Route path="/create" component={ShareableCreateWizardPage} />
-    <Route path="/shareable/:id" component={ShareablePage} />
-    <Route path="/shareable/:id/edit" component={ShareableEditPage} />
+    <Route path="create" component={ShareableCreateWizardPage} />
+    <Route path="shareable/:id" component={ShareablePage} />
+    <Route path="shareable/:id/edit" component={ShareableEditPage} />
   </Route>
 );

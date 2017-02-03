@@ -11,7 +11,7 @@ import Illlegal from './illlegal';
 import Mission from './mission';
 
 export default (
-  <Route path="/docs">
+  <Route path="docs">
     <IndexRoute component={Mission} />
     <Route path="about" component={About} />
     <Route path="contact" component={Contact} />
