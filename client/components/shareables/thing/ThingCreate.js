@@ -1,6 +1,6 @@
 import React, {PropTypes, Component} from 'react';
 
-import { Field, reduxForm } from 'redux-form';
+import { Field, reduxForm , formValueSelector} from 'redux-form';
 import validate, {required} from '../create-wizard/validateCreateShareableWizard';
 
 import ReduxFormHTMLInput from '../../reduxFormInputs/ReduxFormHTMLInput';
@@ -14,6 +14,7 @@ import {connect} from 'react-redux';
 class ThingCreate extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       tags: undefined,
       types: undefined,
@@ -61,6 +62,7 @@ class ThingCreate extends Component {
     if (this.state.types === undefined) {return <div>Loading</div>;}
     return (
       <form onSubmit={this.props.handleSubmit}>
+        <h2> Describe and Categorize {this.props.headline} </h2>
         <Field validate={required} name="thing_description_what" type="text" component={ReduxFormHTMLInput} label="What is the shareable resource"/>
         <Field validate={required} name="thing_description_how" type="text" component={ReduxFormHTMLInput} label="How do you acquire it?"/>
 
@@ -134,10 +136,23 @@ ThingCreate.propTypes = {
   previousPage: PropTypes.func
 };
 
+const selector = formValueSelector('wizard') // <-- same as form name
+ThingCreate = connect(
+  state => {
+    // can select values individually
+    const headline = selector(state, 'headline')
+    return {
+      headline
+    }
+  }
+)(ThingCreate);
+
+
 export default connect(mapStateToProps, {fetchShareableCategorizations})(reduxForm({
   form: 'wizard',                 // <------ same form name
   destroyOnUnmount: false,        // <------ preserve form data
   forceUnregisterOnUnmount: true,  // <------ unregister fields on unmount
   validate
 })(ThingCreate));
+
 

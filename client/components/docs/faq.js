@@ -1,6 +1,3 @@
-/**
- * Created by mitchell on 1/30/17.
- */
 import React from 'react';
 
 const FAQ = (props) => (

@@ -6,9 +6,6 @@ import ControlLabel from 'react-bootstrap/lib/ControlLabel';
 import HelpBlock from 'react-bootstrap/lib/HelpBlock';
 
 
-/**
- * Created by mitchell on 1/29/17.
- */
 const ReduxFormHTMLInput = ( { input, label, type, meta: { touched, error } } ) =>  (
   <FormGroup validationState={touched && error ? 'error' : null}>
     <ControlLabel>{label}</ControlLabel>

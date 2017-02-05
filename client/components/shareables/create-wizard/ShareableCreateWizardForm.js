@@ -32,7 +32,7 @@ class ShareableCreateWizardForm extends Component {
         {page === 1 && <ShareableCreateStart onSubmit={this.nextPage}/>}
         {page === 2 && <ThingCreate previousPage={this.previousPage} onSubmit={this.nextPage}/>}
         {page === 4 && <SpaceCreate previousPage={this.previousPage} onSubmit={this.nextPage}/>}
-        {page === 3 && <TimeCreate headline="foo" previousPage={this.previousPage} onSubmit={this.nextPage}/>}
+        {page === 3 && <TimeCreate previousPage={this.previousPage} onSubmit={this.nextPage}/>}
         {page === 5 && <ShareableCreateEnd previousPage={this.previousPage} onSubmit={this.props.handleSubmit}/>}
       </div>
     );

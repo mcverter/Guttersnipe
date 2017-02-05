@@ -1,7 +1,3 @@
-/**
- * Created by mitchell on 2/2/17.
- */
-
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 import ShareableListPage from './ShareableListPage';

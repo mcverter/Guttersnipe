@@ -1,11 +1,11 @@
-__author__ = 'mitchell_verter'
 
-from flask import Flask, render_template, send_from_directory, redirect, make_response
+from flask import jsonify, Flask, request, render_template, send_from_directory, redirect, make_response
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.restful import Api
-from flask_cors import CORS, cross_origin
-from flask_jwt import JWT, jwt_required, current_identity
-from werkzeug.security import safe_str_cmp
+from flask_cors import CORS
+from flask_jwt_extended import JWTManager, jwt_required,\
+    create_access_token, get_jwt_identity
+from flask_bcrypt import Bcrypt
 
 
 app = Flask(__name__, static_url_path='/static')
@@ -14,14 +14,13 @@ app.config.from_object('config')
 db = SQLAlchemy(app)
 api = Api(app)
 CORS(app)
+bcrypt = Bcrypt(app)
 
 from server.calendars.models import Event, RecurrenceRule
-from server.users.models import Guttersnipe, Profile, Schedule, Message, blockUserTable
+from server.users.models import User, Guttersnipe, Profile, Schedule, Message, blockUserTable
 from server.shareables.models import Shareable, \
     Thing, Space, Time, \
     MainType, Subtype, Comment
-
-
 
 from server.shareables.endpoints import ShareableEndpoint
 
@@ -29,33 +28,46 @@ from server.shareables.endpoints import ShareableEndpoint
 def send_static(path):
     return send_from_directory('/static', path)
 
-
-
 @app.route('/')
 def index():
     print ("hello")
     return render_template("index.html", user="moo")
 
-
-from server.users.models import User
-
-def authenticate(username, password):
-  print("Authenticating")
-  u = User.query.filter_by(username=username).first()
-  if u and safe_str_cmp(u.password.encode('utf-8'), password.encode('utf-8')):
-    return u
-  return 401
-
-def identity(payload):
-  print("Identifiying")
-  u_id = payload['identity']
-  u = User.query.filter_by(id=u_id).first()
-  return u
-
-
 app.config['SECRET_KEY'] = "foobar"
 
-jwt = JWT(app, authenticate, identity)
+from server.shareables.endpoints import ShareableEndpoint
+
+if __name__ == '__main__':
+    app.run()
+
+# Setup the Flask-JWT-Extended extension
+jwt = JWTManager(app)
+
+
+# Provide a method to create access tokens. The create_access_token()
+# function is used to actually generate the token
+@app.route('/api/signin', methods=['POST'])
+def login():
+    username = request.json.get('username', None)
+    password = request.json.get('password', None)
+    u = User.query.filter_by(username=username).first()
+
+    if User.get_user_with_username_and_password(username, password) is None:
+        return jsonify({"msg": "Bad username or password"}), 401
+
+    # Identity can be any data that is json serializable
+    ret = {'access_token': create_access_token(identity=username)}
+    return jsonify(ret), 200
+
+
+# Protect a view with jwt_required, which requires a valid access token
+# in the request to access.
+@app.route('/protected', methods=['GET'])
+@jwt_required
+def protected():
+    # Access the identity of the current user with get_jwt_identity
+    current_user = get_jwt_identity()
+    return jsonify({'hello_from': current_user}), 200
 
 
 @app.route('/', defaults={'path': ''})
@@ -63,28 +75,5 @@ jwt = JWT(app, authenticate, identity)
 def catch_all(path):
   return render_template('index.html')
 
-
-from server.shareables.endpoints import ShareableEndpoint
-
 if __name__ == '__main__':
-    app.run()
-
-'''
-
-
-app = Flask(__name__)
-app.debug = True
-app.config['SECRET_KEY'] = 'super-secret'
-
-jwt = JWT(app, authenticate, identity)
-
-@app.route('/protected')
-@jwt_required()
-def protected():
-    return '%s' % current_identity
-
-if __name__ == '__main__':
-    app.run()
-
-
-'''
+    app.run(debug=True)

@@ -1,6 +1,3 @@
-/**
- * Created by mitchell on 1/30/17.
- */
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 import About from './about';

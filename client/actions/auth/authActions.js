@@ -4,14 +4,28 @@ import {browserHistory} from 'react-router';
 
 export function signInUser({email, password}) {
   return function(dispatch) {
-    fetch(`${SERVER_URL}/api/auth/signin`,
-      {method: 'POST', body: {email, password}})
+    const headers = new Headers();
+    headers.append('Content-type', 'application/json')
+    const myInit = {
+      method: 'POST',
+      mode: 'cors',
+               headers: headers,
+      body:JSON.stringify({
+          username: 'user1',
+          password: 'password'
+        })
+    }
+    const myRequest = new Request(`${SERVER_URL}/api/signin`, myInit);
+
+   fetch(myRequest)
       .then(response => {
+        debugger;
         dispatch({type: AUTH_USER});
         localStorage.setItem('token', response.data.token);
-        browserHistory.push('/welcomeUser');
+        //browserHistory.push('/welcomeUser');
       })
       .catch(response => {
+        debugger;
         const errMsg =  response && response.data ? response.data.error : '';
         dispatch (authError('Could not login ' + errMsg));
       });

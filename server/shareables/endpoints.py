@@ -1,4 +1,3 @@
-__author__ = 'mitchell'
 from server import db, api
 from server.shareables.models import Shareable
 from flask import Blueprint, request, jsonify, make_response

@@ -1,7 +1,7 @@
-import React, {PropTypes} from 'react';
+import React, {PropTypes, Component} from 'react';
 
 // Redux-Form
-import { Field, reduxForm } from 'redux-form';
+import { Field, reduxForm, formValueSelector} from 'redux-form';
 import validate, {required} from '../create-wizard/validateCreateShareableWizard';
 
 import ReduxFormHTMLInput from '../../reduxFormInputs/ReduxFormHTMLInput';
@@ -9,29 +9,37 @@ import ReduxFormComponentField from '../../reduxFormInputs/ReduxFormComponentFie
 
 import CalendarInputField from './CalendarInputField';
 import Button from 'react-bootstrap/lib/Button';
+import {connect} from 'react-redux';
 
 
-const TimeCreate = ({handleSubmit, previousPage, headline}) => (
-  <form onSubmit={handleSubmit}>
-    <Field name="time_calendar"
-           validate={required}
-           component={props =>
-             <ReduxFormComponentField
-               meta={props.meta}
-               label="Schedule of Shareable" >
-               <CalendarInputField
-                 headline={headline}
-                 input={props.input}
-                 onChange={props.onChange} />
-             </ReduxFormComponentField>} />
 
-    <Field name="time_notes" type="text" component={ReduxFormHTMLInput} label="Additional Notes"/>
-    <div>
-      <Button type="button" className="previous" onClick={previousPage}>Previous</Button>
-      <Button type="submit" className="next">Next</Button>
-    </div>
-  </form>
-);
+class TimeCreate extends Component {
+  render() {
+    debugger;
+    return(
+      <form onSubmit={this.props.handleSubmit}>
+        <h2> Create a Schedule for {this.props.headline} </h2>
+        <Field name="time_calendar"
+               validate={required}
+               component={props =>
+                 <ReduxFormComponentField
+                   meta={props.meta}
+                   label="Schedule of Shareable" >
+                   <CalendarInputField
+                     headline={props.headline}
+                     input={props.input}
+                     onChange={props.onChange} />
+                 </ReduxFormComponentField>} />
+
+        <Field name="time_notes" type="text" component={ReduxFormHTMLInput} label="Additional Notes"/>
+        <div>
+          <Button type="button" className="previous" onClick={this.props.previousPage}>Previous</Button>
+          <Button type="submit" className="next">Next</Button>
+        </div>
+      </form>
+    );
+  }
+}
 
 TimeCreate.propTypes = {
   previousPage: PropTypes.func,
@@ -39,6 +47,19 @@ TimeCreate.propTypes = {
   handleSubmit: PropTypes.func,
   headline: PropTypes.string
 };
+
+
+const selector = formValueSelector('wizard') // <-- same as form name
+TimeCreate = connect(
+  state => {
+    // can select values individually
+    const headline = selector(state, 'headline')
+    return {
+      headline
+    }
+  }
+)(TimeCreate);
+
 
 export default reduxForm({
   form: 'wizard',

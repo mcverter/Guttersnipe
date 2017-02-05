@@ -8,7 +8,11 @@ import {connect} from 'react-redux';
 import {signInUser} from '../../actions/auth/authActions';
 
 class Signin extends Component {
-  handleSubmit({email, password}) {
+  constructor(props) {
+    super(props);
+    this.handleFormSubmit = this.handleFormSubmit.bind(this);
+  }
+  handleFormSubmit({email, password}) {
     this.props.signInUser({email, password});
   }
 
@@ -24,20 +28,28 @@ class Signin extends Component {
   }
 
 
-
   render () {
+    const {handleSubmit} = this.props;
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={handleSubmit(this.handleFormSubmit)}>
         <Field name="email" type="text" component={ReduxFormHTMLInput} label="Email"/>
         <Field name="password" type="password" component={ReduxFormHTMLInput} label="Password"/>
         <div>
-          <Button type="submit" className="next">Sign In</Button>
+          <Button type="submit">Sign In</Button>
         </div>
       {this.renderAlert()}
 
       </form>
     );
   }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    signInUser: (username, password) => {
+      dispatch(signInUser(username, password))
+    }
+  };
 }
 
 function mapStateToProps(state) {
@@ -54,7 +66,7 @@ Signin.propTypes = {
   errorMessage: PropTypes.string
 };
 
-export default connect(mapStateToProps, signInUser)(
+export default connect(mapStateToProps, mapDispatchToProps)(
   reduxForm({
     form: 'signin',
     destroyOnUnmount: false,        // <------ preserve form data

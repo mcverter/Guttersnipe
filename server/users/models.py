@@ -1,4 +1,4 @@
-from server import db
+from server import db, bcrypt
 from flask_restful import Resource, Api, fields as restful_fields, \
     marshal_with, reqparse, abort
 from sqlalchemy import CheckConstraint
@@ -6,16 +6,27 @@ from marshmallow_jsonapi import Schema, fields as schema_fields
 from marshmallow import validate
 from server.calendars.models import Calendar
 
-
 class User(db.Model):
-  __tablename__ = 'user'
-  id = db.Column(db.Integer, primary_key=True)
-  username = db.Column(db.String)
-  password = db.Column(db.String)
+  id = db.Column(db.Integer(), primary_key=True)
+  username = db.Column(db.String(255), unique=True)
+  password = db.Column(db.String(255))
 
   def __init__(self, username, password):
     self.username = username
-    self.password = password
+    self.active = True
+    self.password = User.hashed_password(password)
+
+  @staticmethod
+  def hashed_password(password):
+    return bcrypt.generate_password_hash(password)
+
+  @staticmethod
+  def get_user_with_username_and_password(username, password):
+    user = User.query.filter_by(username=username).first()
+    if user and bcrypt.check_password_hash(user.password, password):
+      return user
+    else:
+      return None
 
 
 # A Single User has a single Profile and a single Calendar
