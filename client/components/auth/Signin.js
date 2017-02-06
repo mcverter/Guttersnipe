@@ -47,10 +47,10 @@ class Signin extends Component {
 const mapDispatchToProps = (dispatch) => {
   return {
     signInUser: (username, password) => {
-      dispatch(signInUser(username, password))
+      dispatch(signInUser(username, password));
     }
   };
-}
+};
 
 function mapStateToProps(state) {
   return {errorMessage: state.auth.error};
@@ -62,8 +62,9 @@ function validate(formProps) {
 }
 
 Signin.propTypes = {
-  signInUser: PropTypes.func,
-  errorMessage: PropTypes.string
+  signInUser: PropTypes.func.isRequired,
+  errorMessage: PropTypes.string,
+  handleSubmit: PropTypes.func.isRequired
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(

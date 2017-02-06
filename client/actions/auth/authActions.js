@@ -5,7 +5,7 @@ import {browserHistory} from 'react-router';
 export function signInUser({email, password}) {
   return function(dispatch) {
     const headers = new Headers();
-    headers.append('Content-type', 'application/json')
+    headers.append('Content-type', 'application/json');
     const myInit = {
       method: 'POST',
       mode: 'cors',
@@ -14,18 +14,16 @@ export function signInUser({email, password}) {
           username: 'user1',
           password: 'password'
         })
-    }
+    };
     const myRequest = new Request(`${SERVER_URL}/api/signin`, myInit);
 
    fetch(myRequest)
       .then(response => {
-        debugger;
         dispatch({type: AUTH_USER});
         localStorage.setItem('token', response.data.token);
         //browserHistory.push('/welcomeUser');
       })
       .catch(response => {
-        debugger;
         const errMsg =  response && response.data ? response.data.error : '';
         dispatch (authError('Could not login ' + errMsg));
       });

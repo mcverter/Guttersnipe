@@ -15,7 +15,7 @@ class AllShareablesPage extends Component {
         <Tab eventKey={2} title="Map"><AllShareablesMapPage/></Tab>
         <Tab eventKey={3} title="Calendar">Tab 3 content</Tab>
       </Tabs>
-    )
+    );
   }
 }
 

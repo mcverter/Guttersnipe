@@ -32,7 +32,7 @@ class ShareableListPage extends React.Component {
         <h2> Sort by  Distance Type Name </h2>
         <h2>View Map</h2>
         <h2> View Calendar </h2>
-        <Table striped={true} bordered={true}>
+        <Table striped bordered>
           <thead>
           <th>Headline</th>
           <th>Thing</th>

@@ -32,7 +32,7 @@ class ShareableListPage extends React.Component {
         </div>
         </Popup>
       </Marker>
-    )
+    );
   }
 
   render() {
@@ -40,7 +40,7 @@ class ShareableListPage extends React.Component {
       shareables: { isFetchingShareables,shareableFetchError, items}}  = this.props;
 
 
-    if (isFetchingShareables || !items || items.length < 1) {
+    if (isFetchingShareables || shareableFetchError || !items || items.length < 1) {
       return <div>Loading...</div>;
     }
 

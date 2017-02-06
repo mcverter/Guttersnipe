@@ -3,7 +3,7 @@ import { Route, IndexRoute } from 'react-router';
 import ShareablePage from './ShareablePage';
 import ShareableCreateWizardPage from './ShareableCreateWizardPage';
 import ShareableEditPage from './ShareableEditPage';
-import AllShareablesPage from './AllShareablesPage'
+import AllShareablesPage from './AllShareablesPage';
 
 
 export default (
