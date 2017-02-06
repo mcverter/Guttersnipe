@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {fetchAllShareables} from '../../actions/shareables/shareableActions';
 
 import ShareableLI from './ShareableLI';
+import Table from 'react-bootstrap/lib/Table';
 
 
 
@@ -29,13 +30,23 @@ class ShareableListPage extends React.Component {
       <div>
         <h1> Shareables </h1>
         <h2> Sort by  Distance Type Name </h2>
-        <table>
+        <h2>View Map</h2>
+        <h2> View Calendar </h2>
+        <Table striped={true} bordered={true}>
+          <thead>
+          <th>Headline</th>
+          <th>Thing</th>
+          <th>Space</th>
+          <th>Time</th>
+          <th>Rating</th>
+          <th>Full Record</th>
+          </thead>
           <tbody>
           {items.map(shareable=>(
             <ShareableLI key={shareable.id} shareable={shareable} />
           ))}
           </tbody>
-        </table>
+        </Table>
       </div>
     );
   }

@@ -28,15 +28,16 @@ class TimeLI extends Component {
     getDaysFromRule(days) {
             return days.split(',').map(day => {
                 switch (day) {
-                    case 'su': return "Sunday";
-                    case 'mo': return "Monday";
-                    case 'tu': return "Tuesday";
-                    case 'we': return "Wednesday";
-                    case 'th': return "Thursday";
-                    case 'fr': return "Friday";
-                    case 'sa': return "Saturday";
+                    case 'su': return "Su, ";
+                    case 'mo': return "Mo, ";
+                    case 'tu': return "Tu, ";
+                    case 'we': return "We, ";
+                    case 'th': return "Th, ";
+                    case 'fr': return "Fr, ";
+                    case 'sa': return "Sa, ";
                 }
             });
+
     }
 
 
