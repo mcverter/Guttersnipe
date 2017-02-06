@@ -45,7 +45,6 @@ def create_shareable_from_json_object(py_dict):
     if main_type_entity is None:
         my_main_type = MainType(main_type_val)
         db.session.add(my_main_type)
-        db.session.commit()
         main_type_entity = db.session.query(MainType).filter(
             MainType.name == main_type_val).first()
 
@@ -61,7 +60,6 @@ def create_shareable_from_json_object(py_dict):
                 my_subtype = Subtype(
                     main_type=main_type_entity, name=s)
                 db.session.add(my_subtype)
-                db.session.commit()
                 subtype_entity = db.session.query(Subtype).filter(
                     Subtype.main_type == main_type_entity,
                     Subtype.name == s).first()
@@ -85,7 +83,6 @@ def create_shareable_from_json_object(py_dict):
             tags=tags,
             notes=thing_notes)
         db.session.add(my_thing)
-        db.session.commit()
         thing_entity = db.session.query(Thing).filter(
             Thing.main_type == main_type_entity,
 #            Thing.subtypes == subtypes_entity_array,
@@ -115,7 +112,6 @@ def create_shareable_from_json_object(py_dict):
             alternate_names=alternate_names,
             notes=space_notes)
         db.session.add(my_space)
-        db.session.commit()
         space_entity = db.session.query(Space).filter(
             Space.longitude == longitude,
             Space.latitude == latitude,
@@ -132,79 +128,93 @@ def create_shareable_from_json_object(py_dict):
         event_entities_array = []
         for e in events:
             dt_start = e.get("dt_start")
-            dt_start = datetime.strptime(dt_start,  '%b %d %Y %I:%M%p')
+
+            dt_start = datetime.strptime(dt_start,  '%Y-%m-%dT%H:%M:%S')
             dt_end = e.get("dt_end")
             if dt_end is not None:
-                dt_end = datetime.strptime(dt_end,  '%b %d %Y %I:%M%p')
+                dt_end = datetime.strptime(dt_end,  '%Y-%m-%dT%H:%M:%S')
             tz_id = e.get("tz_id")
 
             recurrence_rule = e.get("recurrence_rule")
-            freq = recurrence_rule.get("freq")
-            byDay = recurrence_rule.get("byDay")
-            byMonthDay = recurrence_rule.get("byMonthDay")
-            byYearDay = recurrence_rule.get("byYearDay")
-            byWeekNo = recurrence_rule.get("byWeekNo")
-            byMonth = recurrence_rule.get("byMonth")
-            until = recurrence_rule.get("until")
-            count = recurrence_rule.get("count")
-            interval = recurrence_rule.get("interval")
-            bySetPos = recurrence_rule.get("bySetPos")
+            if recurrence_rule:
+              freq = recurrence_rule.get("freq")
+              byDay = recurrence_rule.get("byDay")
+              byMonthDay = recurrence_rule.get("byMonthDay")
+              byYearDay = recurrence_rule.get("byYearDay")
+              byWeekNo = recurrence_rule.get("byWeekNo")
+              byMonth = recurrence_rule.get("byMonth")
+              until = recurrence_rule.get("until")
+              count = recurrence_rule.get("count")
+              interval = recurrence_rule.get("interval")
+              bySetPos = recurrence_rule.get("bySetPos")
 
-            recurrence_rule_entity = db.session.query(RecurrenceRule).filter(
-                RecurrenceRule.freq == freq,
-                RecurrenceRule.byDay == byDay,
-                RecurrenceRule.byMonthDay == byMonthDay,
-                RecurrenceRule.byYearDay == byYearDay,
-                RecurrenceRule.byWeekNo == byWeekNo,
-                RecurrenceRule.byMonth == byMonth,
-                RecurrenceRule.until == until,
-                RecurrenceRule.count == count,
-#                RecurrenceRule.interval == interval,
-                RecurrenceRule .bySetPos == bySetPos).first()
+              recurrence_rule_entity = db.session.query(RecurrenceRule).filter(
+                  RecurrenceRule.freq == freq,
+                  RecurrenceRule.byDay == byDay,
+                  RecurrenceRule.byMonthDay == byMonthDay,
+                  RecurrenceRule.byYearDay == byYearDay,
+                  RecurrenceRule.byWeekNo == byWeekNo,
+                  RecurrenceRule.byMonth == byMonth,
+                  RecurrenceRule.until == until,
+                  RecurrenceRule.count == count,
+  #                RecurrenceRule.interval == interval,
+                  RecurrenceRule .bySetPos == bySetPos).first()
 
-            if recurrence_rule_entity is None:
-                my_recurrence_rule = RecurrenceRule(
-                    freq=freq,
-                    byDay=byDay,
-                    byMonthDay=byMonthDay,
-                    byYearDay=byYearDay,
-                    byWeekNo=byWeekNo,
-                    byMonth=byMonth,
-                    until=until,
-                    count=count,
-                    interval=interval,
-                    bySetPos=bySetPos
-                )
-                db.session.add(my_recurrence_rule)
-                db.session.commit()
-                recurrence_rule_entity = db.session.query(RecurrenceRule).filter(
-                    RecurrenceRule.freq == freq,
-                    RecurrenceRule.byDay == byDay,
-                    RecurrenceRule.byMonthDay == byMonthDay,
-                    RecurrenceRule.byYearDay == byYearDay,
-                    RecurrenceRule.byWeekNo == byWeekNo,
-                    RecurrenceRule.byMonth == byMonth,
-                    RecurrenceRule.until == until,
-                    RecurrenceRule.count == count,
-#                    RecurrenceRule.interval == interval,
-                    RecurrenceRule .bySetPos == bySetPos).first()
+              if recurrence_rule_entity is None:
+                  my_recurrence_rule = RecurrenceRule(
+                      freq=freq,
+                      byDay=byDay,
+                      byMonthDay=byMonthDay,
+                      byYearDay=byYearDay,
+                      byWeekNo=byWeekNo,
+                      byMonth=byMonth,
+                      until=until,
+                      count=count,
+                      interval=interval,
+                      bySetPos=bySetPos
+                  )
+                  db.session.add(my_recurrence_rule)
+                  recurrence_rule_entity = db.session.query(RecurrenceRule).filter(
+                      RecurrenceRule.freq == freq,
+                      RecurrenceRule.byDay == byDay,
+                      RecurrenceRule.byMonthDay == byMonthDay,
+                      RecurrenceRule.byYearDay == byYearDay,
+                      RecurrenceRule.byWeekNo == byWeekNo,
+                      RecurrenceRule.byMonth == byMonth,
+                      RecurrenceRule.until == until,
+                      RecurrenceRule.count == count,
+  #                    RecurrenceRule.interval == interval,
+                      RecurrenceRule .bySetPos == bySetPos).first()
 
-            event_entity = db.session.query(Event).filter(
+              event_entity = db.session.query(Event).filter(
+                  Event.dt_start == dt_start,
+                  Event.dt_end == dt_end,
+                  Event.tz_id == tz_id,
+                  Event.recurrence_rule == recurrence_rule_entity).first()
+
+              if event_entity is None:
+                  my_ev = Event(dt_start=dt_start, dt_end=dt_end,
+                                tz_id=tz_id, recurrence_rule=recurrence_rule_entity)
+                  db.session.add(my_ev)
+                  event_entity = db.session.query(Event).filter(
+                      Event.dt_start == dt_start,
+                      Event.dt_end == dt_end,
+                      Event.tz_id == tz_id,
+                    Event.recurrence_rule == recurrence_rule_entity).first()
+            else:
+              event_entity = db.session.query(Event).filter(
                 Event.dt_start == dt_start,
                 Event.dt_end == dt_end,
-                Event.tz_id == tz_id,
-                Event.recurrence_rule == recurrence_rule_entity).first()
+                Event.tz_id == tz_id).first()
 
-            if event_entity is None:
+              if event_entity is None:
                 my_ev = Event(dt_start=dt_start, dt_end=dt_end,
-                              tz_id=tz_id, recurrence_rule=recurrence_rule_entity)
+                              tz_id=tz_id)
                 db.session.add(my_ev)
-                db.session.commit()
                 event_entity = db.session.query(Event).filter(
-                    Event.dt_start == dt_start,
-                    Event.dt_end == dt_end,
-                    Event.tz_id == tz_id,
-                    Event.recurrence_rule == recurrence_rule_entity).first()
+                  Event.dt_start == dt_start,
+                  Event.dt_end == dt_end,
+                  Event.tz_id == tz_id).first()
 
             event_entities_array.append(event_entity)
 
@@ -214,7 +224,6 @@ def create_shareable_from_json_object(py_dict):
         if calendar_entity is None:
             my_calendar = Calendar(events=event_entities_array)
             db.session.add(my_calendar)
-            db.session.commit()
             calendar_entity = db.session.query(Calendar).filter\
             (Calendar.events.contains(event_entity)).first()
 
@@ -224,7 +233,6 @@ def create_shareable_from_json_object(py_dict):
     if time_entity is None:
         my_time = Time(calendar=calendar_entity, notes=time_notes)
         db.session.add(my_time)
-        db.session.commit()
         time_entity = db.session.query(Time).filter(
             Time.calendar == calendar_entity).first()
 
@@ -234,13 +242,11 @@ def create_shareable_from_json_object(py_dict):
 #        Shareable.time == time_entity,
         Shareable.summary == summary,
         Shareable.headline == headline,
-        Shareable.number_ratings == number_ratings,
-        Shareable.total_ratings == total_ratings,
         Shareable.comments == comments,
         Shareable.notes == shareable_notes,
         ).first()
 
-    if True:
+    if shareable_entity is None:
         my_shareable = Shareable(
             thing=thing_entity,
             space=space_entity,
@@ -253,4 +259,4 @@ def create_shareable_from_json_object(py_dict):
             notes=shareable_notes)
         db.session.add(my_shareable)
         db.session.commit()
-
+        return my_shareable

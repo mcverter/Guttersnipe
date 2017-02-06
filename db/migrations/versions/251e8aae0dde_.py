@@ -1,13 +1,13 @@
 """empty message
 
-Revision ID: 2406fb45e03e
+Revision ID: 251e8aae0dde
 Revises: None
-Create Date: 2017-01-27 13:33:21.057714
+Create Date: 2017-02-05 20:29:48.815269
 
 """
 
 # revision identifiers, used by Alembic.
-revision = '2406fb45e03e'
+revision = '251e8aae0dde'
 down_revision = None
 
 from alembic import op
@@ -63,6 +63,19 @@ def upgrade():
     sa.Column('notes', sa.Text(), nullable=True),
     sa.PrimaryKeyConstraint('id')
     )
+    op.create_table('tag',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('name', sa.Text(), nullable=True),
+    sa.PrimaryKeyConstraint('id'),
+    sa.UniqueConstraint('name')
+    )
+    op.create_table('user',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('username', sa.String(length=255), nullable=True),
+    sa.Column('password', sa.String(length=255), nullable=True),
+    sa.PrimaryKeyConstraint('id'),
+    sa.UniqueConstraint('username')
+    )
     op.create_table('event',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('dt_start', sa.DateTime(), nullable=True),
@@ -93,12 +106,10 @@ def upgrade():
     sa.Column('main_type_id', sa.Integer(), nullable=False),
     sa.Column('description_how', sa.String(length=140), nullable=True),
     sa.Column('description_what', sa.String(length=140), nullable=True),
-    sa.Column('tags', postgresql.ARRAY(sa.Text()), nullable=True),
     sa.Column('notes', sa.Text(), nullable=True),
     sa.ForeignKeyConstraint(['main_type_id'], ['main_type.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
-    op.create_index('ix_shareable_tags', 'thing', ['tags'], unique=False, postgresql_using='gin')
     op.create_table('time',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('calendar_id', sa.Integer(), nullable=True),
@@ -145,6 +156,12 @@ def upgrade():
     sa.ForeignKeyConstraint(['subtype_id'], ['subtype.id'], ),
     sa.ForeignKeyConstraint(['thing_id'], ['thing.id'], )
     )
+    op.create_table('thing_tag_association',
+    sa.Column('thing_id', sa.Integer(), nullable=True),
+    sa.Column('tag_id', sa.Integer(), nullable=True),
+    sa.ForeignKeyConstraint(['tag_id'], ['tag.id'], ),
+    sa.ForeignKeyConstraint(['thing_id'], ['thing.id'], )
+    )
     op.create_table('comment',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('author_id', sa.Integer(), nullable=True),
@@ -181,16 +198,18 @@ def downgrade():
     op.drop_table('message')
     op.drop_table('followers')
     op.drop_table('comment')
+    op.drop_table('thing_tag_association')
     op.drop_table('thing_subtype_association')
     op.drop_table('shareable')
     op.drop_table('guttersnipe')
     op.drop_table('calendar_event_association')
     op.drop_table('time')
-    op.drop_index('ix_shareable_tags', table_name='thing')
     op.drop_table('thing')
     op.drop_table('subtype')
     op.drop_table('schedule')
     op.drop_table('event')
+    op.drop_table('user')
+    op.drop_table('tag')
     op.drop_table('space')
     op.drop_table('recurrence_rule')
     op.drop_index(op.f('ix_profile_username'), table_name='profile')

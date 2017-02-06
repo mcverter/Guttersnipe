@@ -22,8 +22,8 @@
       "calendar": {
         "events": [
           {
-            "dt_start": "Dec 12 2016 12:00PM",
-            "dt_end": "Dec 12 2016 2:00AM",
+            "dt_start": "2016-12-12T00:00:00",
+            "dt_end": "2016-12-12T02:00:00",
             "tz_id": "America/New_York",
             "recurrence_rule": {
               "freq": "weekly",
@@ -53,8 +53,8 @@
       "calendar": {
         "events": [
           {
-            "dt_start": "Dec 11 2016 10:00PM",
-            "dt_end": "Dec 12 2016 2:00AM",
+            "dt_start": "2016-11-12T22:00:00",
+            "dt_end": "2016-12-12T22:02:00",
             "tz_id": "America/New_York",
             "recurrence_rule": {
               "freq": "weekly",
@@ -76,20 +76,213 @@
       ]
     },
     "space"    : {
-      "longitude" : "40.693922",
-      "latitude": "-73.991764",
+      "latitude" : "40.693922",
+      "longitude": "-73.991764",
       "canonical_address": "180 Montague St #1 Brooklyn, NY 11201"
     },
     "time"    : {
       "calendar" : {
         "events": [
           {
-            "dt_start": "Dec 11 2016 10:00PM",
-            "dt_end": "Dec 12 2016 12:00AM",
+            "dt_start": "2016-12-12T22:00:00",
+            "dt_end": "2016-12-13T00:00:00",
             "tz_id": "America/New_York",
             "recurrence_rule" : {
               "freq": "weekly",
               "byDay": "su,mo,tu,we,th,fr,sa"
+            }
+          }
+        ]
+      }
+    }
+  },
+     {
+    "headline" : "Perelandra",
+    "summary"  : "Lots of locals count on finding greens and produce in particular. Fewer go thru the bags, which contain health bread, and often assorted packaged health foods, and small amounts of bulk foods (grains, beans, nuts, coffee) that can be gleaned from the not-quite-emptied heavy brown bags.",
+    "thing"    : {
+      "description_how" : "Regular curbside bags, plus cardboard boxes set to the side with most of the produce (what foragers don’t take gets composted).",
+      "main_type": "food",
+      "subtypes": [
+        "dumpster"
+      ]
+    },
+    "space"    : {
+      "latitude" : "40.693483",
+      "longitude": "-73.991377",
+      "canonical_address": "175 Remsen St    Brooklyn, NY 11201",
+      "notes": "Remsen St across from Borough Hall, between Court and Clinton Sts, Brooklyn"
+    },
+    "time"    : {
+            "notes":"8:45 when all the employees leave the store. Trash is collected between 10:30 p and 12:30a. One source says nothing is out on Saturdays.",
+
+      "calendar" : {
+        "events": [
+          {
+            "dt_start": "2016-12-12T20:45:00",
+            "dt_end": "2016-12-13T03:00:00",
+            "tz_id": "America/New_York",
+            "recurrence_rule" : {
+              "freq": "weekly",
+              "byDay": "su,mo,tu,we,th,fr"
+            }
+          }
+        ]
+      }
+    }
+  },
+     {
+    "headline" : "Gristedes",
+    "summary"  : "Routinely hit or miss, but the hits can be great: dozens of eggs, bags of chocolate chips, cheese.",
+    "thing"    : {
+      "description_how" : "Clear garbage bags out front.",
+      "main_type": "food",
+      "subtypes": [
+        "dumpster"
+      ]
+    },
+    "space"    : {
+      "latitude" : "40.6975689",
+      "longitude": "-73.9926592",
+      "canonical_address": "101 Clark St Brooklyn, NY 11201"
+    },
+    "time"    : {
+            "notes":"After 9:30p",
+
+      "calendar" : {
+        "events": [
+          {
+            "dt_start": "2016-12-12T21:30:00",
+            "dt_end": "2016-12-13T00:00:00",
+            "tz_id": "America/New_York",
+            "recurrence_rule" : {
+              "freq": "weekly",
+              "byDay": "su,mo,tu,we,th,fr,sa"
+            }
+          }
+        ]
+      }
+    }
+  },
+   {
+    "headline" : "Union Market",
+    "summary"  : "For those on bicycle or who don’t mind a little walk, this is a great alternative to the Trader Joe’s at Atlantic and Court. It’s a high-end supermarket mini-chain that is just far enough from other stores that it gets few dumpster divers. Finds have included loads of packaged and unpackaged bread, produce, dairy products, quarts of prepared soup (generally not vegetarian), fancy desserts, fancy fresh pasta.  ",
+     "description_how": "Black plastic garbage bags on the curb.",
+    "thing"    : {
+      "main_type": "food",
+      "subtypes": [
+        "dumpster"
+      ]
+    },
+    "space"    : {
+      "latitude" : "40.684389",
+      "longitude": "-73.995308",
+      "canonical_address": "288 Court St Brooklyn, NY 11231"
+    },
+    "time"    : {
+      "calendar" : {
+        "events": [
+          {
+            "dt_start": "2016-12-12T21:00:00",
+            "dt_end": "2016-12-13T00:00:00",
+            "tz_id": "America/New_York",
+            "recurrence_rule" : {
+              "freq": "weekly",
+              "byDay": "su,mo,tu,we,th,fr"
+            }
+          }
+        ]
+      }
+    }
+  },
+   {
+    "headline" : "Associated Supermarket",
+    "summary"  : " Loads of black bags of fruit and vegetables There’s also generally 1 very heavy bag of raw meat that’s been taken out of the packages. The managers are generally friendly but customers sometimes complain, so try to come after dark and be fairly discreet.",
+    "thing"    : {
+      "main_type": "food",
+      "subtypes": [
+        "dumpster"
+      ]
+    },
+    "space"    : {
+      "latitude" : "40.6253213",
+      "longitude": "-73.9618105",
+      "canonical_address": "1413 Avenue J Brooklyn, NY 11230"
+    },
+    "time"    : {
+      "calendar" : {
+        "notes": "As early as 7pm, but later means less hassle.",
+        "events": [
+          {
+            "dt_start": "2016-12-12T19:00:00",
+            "dt_end": "2016-12-13T00:00:00",
+            "tz_id": "America/New_York",
+            "recurrence_rule" : {
+              "freq": "weekly",
+              "byDay": "su,mo,tu,we,th,fr"
+            }
+          }
+        ]
+      }
+    }
+  },
+   {
+    "headline" : "New Banana King",
+    "summary"  : "As late at night as you can stand, on E 12th Street, big black plastic bags. This store stays open very late and some of the managers will diligently shoo you away. They throw out huge quantities of produce, seemingly entire cases of stuff not up to their standard. My partner and I have made gallons of cider from a single night’s pickup of apples and pears, for instance. Other typical mass dumps include bananas and tomatoes. Be prepared to can, dry, freeze or ferment. ",
+    "thing"    : {
+      "main_type": "food",
+      "subtypes": [
+        "dumpster"
+      ]
+    },
+    "space"    : {
+      "latitude" : "40.625042",
+      "longitude": "-73.964342",
+      "canonical_address": "1123 Avenue J Brooklyn, NY 11230"
+    },
+    "time"    : {
+      "calendar" : {
+        "events": [
+          {
+            "dt_start": "2016-12-12T21:00:00",
+            "dt_end": "2016-12-13T02:00:00",
+            "tz_id": "America/New_York",
+            "recurrence_rule" : {
+              "freq": "weekly",
+              "byDay": "su,mo,tu,we,th,fr,sa"
+            }
+          }
+        ]
+      }
+    }
+  },
+
+
+
+
+     {
+    "headline" : "Isaac's Bake Shop",
+    "summary"  : " Bags on the street of bread and pastries, particularly on Friday evening.",
+    "thing"    : {
+      "main_type": "food",
+      "subtypes": [
+        "dumpster"
+      ]
+    },
+    "space"    : {
+      "latitude" : "40.62539",
+      "longitude": "-73.961645",
+      "canonical_address": "1419 Avenue J Brooklyn, NY 11230"
+    },
+    "time"    : {
+      "calendar" : {
+        "events": [
+          {
+            "dt_start": "2016-12-12T21:00:00",
+            "dt_end": "2016-12-13T00:00:00",
+            "tz_id": "America/New_York",
+            "recurrence_rule" : {
+              "freq": "weekly",
+              "byDay": "fr"
             }
           }
         ]

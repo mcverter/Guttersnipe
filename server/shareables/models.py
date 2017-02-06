@@ -94,13 +94,15 @@ class Thing(db.Model):
                subtypes=[],
                description_how="", description_what="",
                tags=[], notes=""):
+    if tags is None:
+      tags=[]
     self.description_how = description_how
     self.description_what = description_what
 
     self.main_type = main_type
 
     self.subtypes_relation.extend(subtypes)
-    self.tags = tags
+    self.tag_relation.extend(tags)
     self.notes = notes
 
   def __repr__(self):
