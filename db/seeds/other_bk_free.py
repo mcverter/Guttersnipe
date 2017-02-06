@@ -1,4 +1,3 @@
-__author__ = 'mitchell'
 
 
 def addTraderJoes():

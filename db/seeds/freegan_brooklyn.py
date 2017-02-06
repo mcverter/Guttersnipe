@@ -1,4 +1,3 @@
-__author__ = None
 
 from server.calendars.models import Event, RecurrenceRule
 from server.users.models import Guttersnipe, Profile, Schedule, Message, blockUserTable

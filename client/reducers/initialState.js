@@ -9,6 +9,9 @@ const initialState = {
   auth : {
       authenticated: true,
     error: ''
+  },
+  kropotkin: {
+      quote: ''
   }
 };
 

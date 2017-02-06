@@ -1,4 +1,3 @@
-__author__ = 'mitchell_verter'
 
 from flask_script import Manager, Shell
 from flask.ext.migrate import Migrate, MigrateCommand
@@ -6,8 +5,10 @@ import os
 import importlib
 from server.shareables.create_shareable_from_json import create_many_shareables_from_json_string
 import pdb
+from flask import url_for
 
 from server import app, db
+import urllib
 
 def make_shell_context():
     return dict(app=app, db=db)
@@ -25,6 +26,24 @@ def seed():
     filename = os.path.join(curr_dir, "db", "seeds", "brooklyn.data.json")
     json = (open(filename, "r", encoding="UTF-8")).read()
     create_many_shareables_from_json_string(json)
+
+
+@manager.command
+def list_routes():
+  output = []
+  for rule in app.url_map.iter_rules():
+
+    options = {}
+    for arg in rule.arguments:
+      options[arg] = "[{0}]".format(arg)
+
+    methods = ','.join(rule.methods)
+    url = url_for(rule.endpoint, **options)
+    line = urllib.parse.unquote("{:50s} {:20s} {}".format(rule.endpoint, methods, url))
+    output.append(line)
+
+  for line in sorted(output):
+    print (line)
 
 if __name__ == '__main__':
     manager.run()
