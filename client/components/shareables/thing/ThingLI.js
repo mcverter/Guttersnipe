@@ -4,18 +4,16 @@ import Button from 'react-bootstrap/lib/Button';
 
 class ThingLI extends Component {
 
-  renderArrayedLabels(attributes, label, style) {
-    if (attributes && attributes.length) {
-      attributes = JSON.parse(attributes.replace(/'/g, '"'));  // workaround
+  renderArrayedLabels(categories, label, style) {
+    if (categories && categories.length) {
+      categories = JSON.parse(categories.replace(/'/g, '"'));  // workaround
       return (
         <div>
           <h3>{label}</h3>
-          {attributes.map((attr)=>{
-            console.log("attr is ", attr);
-            return <Button bsStyle={style} key={attr}>{attr}</Button>})}
+          {categories.map((cat)=>{
+            return <Button bsStyle={style} key={cat}>{cat}</Button>})}
         </div>
       )}}
-
 
 
   renderMainType(main_type) {
@@ -27,22 +25,17 @@ class ThingLI extends Component {
     )
   }
 
-
   renderSubtypes(subtypes) {
     return this.renderArrayedLabels(subtypes, "SubTypes", "info")
   }
+
   renderTags(tags) {
     return this.renderArrayedLabels(tags, "Tags", "warning")
   }
 
-
-
-
-
   render() {
     const {thing: {main_type, subtypes, tags}} = this.props;
     const boo = this.renderSubtypes(subtypes);
-    console.log('boo', boo);
     return (
       <div>
         {this.renderMainType(main_type)}
@@ -52,6 +45,7 @@ class ThingLI extends Component {
     );
   }
 }
+
 ThingLI.propTypes = {
   thing: PropTypes.object.isRequired
 };
