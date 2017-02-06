@@ -4,7 +4,6 @@ from sqlalchemy.dialects.postgresql import ARRAY, array
 import geoalchemy2
 from server.users.models import Guttersnipe
 from server.calendars.models import Calendar
-from server.base.models import CRUD_Base
 from datetime import datetime
 
 ####################
@@ -15,7 +14,7 @@ from datetime import datetime
 # Users can comment upon it
 
 
-class Shareable(db.Model, CRUD_Base):
+class Shareable(db.Model):
   __tablename__ = 'shareable'
   id = db.Column(db.Integer, primary_key=True)
 
