@@ -1,5 +1,6 @@
 import React, {PropTypes, Component} from 'react';
 import EventCalendarView from './EventCalendarView';
+import {calculateAllEventsWithHeadlines} from './utils/calendarTransformations'
 
 class EventCalendarNavigable extends Component {
     constructor(props) {
@@ -19,9 +20,9 @@ class EventCalendarNavigable extends Component {
     render() {
         return (
             <EventCalendarView
-                headline={this.props.headline}
-                viewMonth={this.state.viewMonth}
-                calendarEvents={this.props.calendarEvents}
+                events={calculateAllEventsWithHeadlines
+                  (this.props.calendarEventsWithHeadlines,
+                    this.state.viewMonth)}
                 handleSelectSlot={this.props.handleSelectSlot}
                 handleNavigation={this.handleNavigation}
                 selectable={this.props.selectable} />
@@ -30,11 +31,15 @@ class EventCalendarNavigable extends Component {
 }
 
 EventCalendarNavigable.propTypes = {
-    headline: PropTypes.string.isRequired,
-    calendarEvents: PropTypes.array.isRequired,
+    calendarEventsWithHeadlines: PropTypes.object.isRequired,
     viewMonth: PropTypes.object,
     handleSelectSlot: PropTypes.func,
     selectable: PropTypes.bool
 };
 
 export default EventCalendarNavigable;
+
+/*
+headline: PropTypes.string.isRequired,
+    calendarEvents: PropTypes.array.isRequired,
+ */

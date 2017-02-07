@@ -3,10 +3,16 @@ import EventCalendarNavigable from './EventCalendarNavigable';
 
 const TimeFull = (props) => (
     <EventCalendarNavigable
-        headline={props.headline}
-        calendarEvents={props.time.calendar.events}
+      calendarEventsWithHeadlines={{
+        headline:props.headline,
+        calendarEvents: props.time.calendar.events
+      }}
         viewMonth={new Date()} />
 );
+
+/*        headline={props.headline}
+        calendarEvents={props.time.calendar.events}
+*/
 
 TimeFull.propTypes = {
     headline: PropTypes.string.isRequired,

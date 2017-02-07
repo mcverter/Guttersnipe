@@ -16,7 +16,7 @@ class SpaceCreate extends Component {
     return (
       <div> Create a Map for your {this.props.headline}
         <form onSubmit={this.props.handleSubmit}>
-          <Field name="time_calendar"
+          <Field name="space_map"
                  validate={required}
                  component={props =>
                    <ReduxFormComponentField
@@ -24,8 +24,7 @@ class SpaceCreate extends Component {
                      label="Location of Shareable">
                      <MapWithGeocoderInput
                        currentPosition={props.currentPosition}
-                       input={props.input}
-                       onChange={props.onChange}
+                       inp={props.input}
                      />
                    </ReduxFormComponentField>}/>
 

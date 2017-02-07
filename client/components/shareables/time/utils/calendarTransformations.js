@@ -33,7 +33,6 @@ const transformToRRule = (recurringGenerator) => {
   });
 };
 
-
 export const calculateAllEvents = (calendarEvents, viewMonth, headline) => {
   const ev = calendarEvents.reduce((accumulator, event) => {
     if (event.recurrence_rule) {
@@ -58,4 +57,16 @@ export const calculateAllEvents = (calendarEvents, viewMonth, headline) => {
     }
   }, []);
   return ev;
+};
+
+
+
+export const calculateAllEventsWithHeadlines = (calendarEventsWithHeadlines, viewMonth) => {
+  return calculateAllEvents(calendarEventsWithHeadlines.calendarEvents, viewMonth, calendarEventsWithHeadlines.headline);
+};
+
+export const calculateShareableScheduleArray = (shareableScheduleArray, viewMonth) => {
+  return shareableScheduleArray.map(
+    schedule =>  calculateAllEvents(schedule, viewMonth)
+  )
 };

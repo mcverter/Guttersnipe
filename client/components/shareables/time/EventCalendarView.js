@@ -7,7 +7,7 @@ BigCalendar.momentLocalizer(moment);
 
 const EventCalendarView = ({headline, viewMonth,
   handleSelectSlot, handleNavigation,
-  selectable, calendarEvents}) => {
+  selectable, events}) => {
 
 
 
@@ -16,7 +16,7 @@ const EventCalendarView = ({headline, viewMonth,
       <BigCalendar
         className="calendar"
         timeslots={4}
-        events={calculateAllEvents(calendarEvents, viewMonth, headline)}
+        events={events}
         onNavigate ={handleNavigation}
         onSelectSlot={handleSelectSlot}
         selectable={selectable} />
@@ -25,9 +25,7 @@ const EventCalendarView = ({headline, viewMonth,
 };
 
 EventCalendarView.propTypes = {
-  headline: PropTypes.string.isRequired,
-  calendarEvents: PropTypes.array.isRequired,
-  viewMonth: PropTypes.object,
+  events: PropTypes.array.isRequired,
   handleNavigation: PropTypes.func.isRequired,
   handleSelectSlot: PropTypes.func,
   selectable: PropTypes.bool

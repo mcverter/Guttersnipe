@@ -26,9 +26,9 @@ class TimeCreate extends Component {
                    meta={props.meta}
                    label="Schedule of Shareable" >
                    <CalendarInputField
-                     headline={props.headline}
-                     input={props.input}
-                     onChange={props.onChange} />
+                     headline={this.props.headline}
+                     inp={props.input}
+                   />
                  </ReduxFormComponentField>} />
 
         <Field name="time_notes" type="text" component={ReduxFormHTMLInput} label="Additional Notes"/>

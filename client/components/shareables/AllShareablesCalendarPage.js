@@ -16,26 +16,6 @@ class ShareableListPage extends React.Component {
     this.props.fetchAllShareables();
   }
 
-  calculateCenter(shareables) {
-    return [40.693922, -73.991764];
-  }
-
-  renderMarker(shareable) {
-    const position = [shareable.space.latitude,
-      shareable.space.longitude];
-    const headline = shareable.headline;
-    const id = shareable.id;
-    return(
-      <Marker key={`marker${id}`} position={position}>
-        <Popup key={`popup${id}`}>
-          <h2> {headline}</h2>
-          <Link to={"/shareables/shareable/" + id}> Full Record </Link>
-        </Popup>
-      </Marker>
-    )
-
-  }
-
   render() {
     const {
       shareables: {
@@ -49,31 +29,8 @@ class ShareableListPage extends React.Component {
       return <div>Loading...</div>;
     }
 
-    const position = this.calculateCenter(items);
-
-     const markers = [
-    [51.505, -0.09],
-    [51.605, -0.09],
-    [51.705, -0.09],
-    [51.805, -0.09],
-  ].map((position, i) => (
-    <Marker key={`marker${ i }`} position={position}>
-      <Popup>
-        <span>A pretty CSS3 popup. <br/> Easily customizable.</span>
-      </Popup>
-    </Marker>
-  ));
-
     return (
       <div>
-        <Map center={[51.505, -0.09]} zoom={13}>
-          <TileLayer
-            url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
-            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          />
-          {markers}
-          {items.map(shareable => this.renderMarker(shareable))}
-        </Map>
       </div>
     )
   }
