@@ -23,6 +23,7 @@ from server.shareables.models import Shareable, \
     MainType, Subtype, Comment
 
 from server.shareables.endpoints import ShareableEndpoint
+import server.auth.endpoints
 
 @app.route('/static/<path:path>')
 def send_static(path):
@@ -35,29 +36,11 @@ def index():
 
 app.config['SECRET_KEY'] = "foobar"
 
-from server.shareables.endpoints import ShareableEndpoint
-
 if __name__ == '__main__':
     app.run()
 
 # Setup the Flask-JWT-Extended extension
 jwt = JWTManager(app)
-
-
-# Provide a method to create access tokens. The create_access_token()
-# function is used to actually generate the token
-@app.route('/api/signin', methods=['POST'])
-def login():
-    username = request.json.get('username', None)
-    password = request.json.get('password', None)
-    u = User.query.filter_by(username=username).first()
-
-    if User.get_user_with_username_and_password(username, password) is None:
-        return jsonify({"msg": "Bad username or password"}), 401
-
-    # Identity can be any data that is json serializable
-    ret = {'access_token': create_access_token(identity=username)}
-    return jsonify(ret), 200
 
 
 # Protect a view with jwt_required, which requires a valid access token

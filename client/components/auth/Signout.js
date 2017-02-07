@@ -16,5 +16,12 @@ Signout.propTypes = {
   signOutUser: PropTypes.func
 };
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    signOutUser: () => {
+      dispatch(signOutUser());
+    }
+  };
+};
 
-export default connect(null, signOutUser)(Signout);
+export default connect(null, mapDispatchToProps)(Signout);

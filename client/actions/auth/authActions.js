@@ -9,22 +9,29 @@ export function signInUser({email, password}) {
     const myInit = {
       method: 'POST',
       mode: 'cors',
-               headers: headers,
+      headers: headers,
       body:JSON.stringify({
-          username: 'user1',
-          password: 'password'
-        })
+        username: email,
+        password: password
+      })
     };
     const myRequest = new Request(`${SERVER_URL}/api/signin`, myInit);
 
-   fetch(myRequest)
+    fetch(myRequest)
       .then(response => {
-        dispatch({type: AUTH_USER});
-        localStorage.setItem('token', response.data.token);
-        //browserHistory.push('/welcomeUser');
+        response.json().then(function(data) {
+          console.log(data);
+          localStorage.setItem('token', data.access_token);
+          dispatch({type: AUTH_USER});
+          browserHistory.push('/welcome');
+        })
+          .catch(response => {
+            const errMsg =  response && response.data ? response.data.error : response;
+            dispatch (authError('Could not login ' + errMsg));
+          })
       })
       .catch(response => {
-        const errMsg =  response && response.data ? response.data.error : '';
+        const errMsg =  response && response.data ? response.data.error : response;
         dispatch (authError('Could not login ' + errMsg));
       });
   };
@@ -32,12 +39,31 @@ export function signInUser({email, password}) {
 
 export function signUpUser({email, password}) {
   return function(dispatch) {
-    fetch(`${SERVER_URL}/api/auth/signup`,
-      {method: 'POST', body: {email, password}})
+    const headers = new Headers();
+    headers.append('Content-type', 'application/json');
+    const myInit = {
+      method: 'POST',
+      mode: 'cors',
+      headers: headers,
+      body:JSON.stringify({
+        username: email,
+        password: password
+      })
+    };
+    const myRequest = new Request(`${SERVER_URL}/api/signup`, myInit);
+    debugger;
+    fetch(myRequest)
       .then(response => {
-        dispatch({type: AUTH_USER});
-        localStorage.setItem('token', response.data.token);
-        browserHistory.push('/welcomeUser');
+        response.json().then(function(data) {
+          console.log(data);
+          localStorage.setItem('token', data.access_token);
+          dispatch({type: AUTH_USER});
+          browserHistory.push('/welcome');
+        })
+          .catch(response => {
+            const errMsg =  response && response.data ? response.data.error : response;
+            dispatch (authError('Could not login ' + errMsg));
+          })
       })
       .catch(response => {
         const errMsg =  response && response.data ? response.data.error : '';

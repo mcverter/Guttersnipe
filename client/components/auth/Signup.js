@@ -5,11 +5,15 @@ import {reduxForm, Field} from 'redux-form';
 import ReduxFormHTMLInput from '../../components/reduxFormInputs/ReduxFormHTMLInput';
 import Button from 'react-bootstrap/lib/Button';
 import {connect} from 'react-redux';
-
 import {signUpUser} from '../../actions/auth/authActions';
 
 class Signup extends Component {
-  handleSubmit({email, password}) {
+  constructor(props) {
+    super(props);
+    this.handleFormSubmit = this.handleFormSubmit.bind(this)
+  }
+  handleFormSubmit({email, password}) {
+    debugger;
     this.props.signUpUser({email, password});
   }
 
@@ -24,15 +28,16 @@ class Signup extends Component {
   }
 
   render () {
+    const {handleSubmit} = this.props;
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={handleSubmit(this.handleFormSubmit)}>
         <Field name="email" type="text" component={ReduxFormHTMLInput} label="Email"/>
         <Field name="password" type="password" component={ReduxFormHTMLInput} label="Password"/>
         <Field name="confirmPassword" type="password" component={ReduxFormHTMLInput} label="Confirm Password"/>
-        {this.renderAlert()}
         <div>
-          <Button type="submit" className="next">Sign Up</Button>
+          <Button type="submit" >Sign Up</Button>
         </div>
+        {this.renderAlert()}
       </form>
     );
   }
@@ -41,6 +46,14 @@ class Signup extends Component {
 function mapStateToProps(state) {
   return {errorMessage: state.auth.error};
 }
+const mapDispatchToProps = (dispatch) => {
+  return {
+    signUpUser: (username, password) => {
+      dispatch(signUpUser(username, password));
+    }
+  };
+};
+
 
 function validate(formProps) {
     const errors = {};
@@ -53,7 +66,8 @@ Signup.propTypes = {
 };
 
 
-export default connect(mapStateToProps, signUpUser)(
+
+export default connect(mapStateToProps, mapDispatchToProps)(
   reduxForm({
     form: 'signup',
     destroyOnUnmount: false,        // <------ preserve form data
