@@ -34,7 +34,7 @@ const transformToRRule = (recurringGenerator) => {
 };
 
 export const calculateAllEvents = (calendarEvents, viewMonth, headline) => {
-  const ev = calendarEvents.reduce((accumulator, event) => {
+  return calendarEvents.reduce((accumulator, event) => {
     if (event.recurrence_rule) {
       return accumulator.concat(transformToRRule(event).between(
         moment(viewMonth).startOf('month').subtract(7, 'days').toDate(),
@@ -56,21 +56,17 @@ export const calculateAllEvents = (calendarEvents, viewMonth, headline) => {
       });
     }
   }, []);
-  return ev;
 };
 
 
 
 export const calculateAllEventsWithHeadlines = (calendarEventsWithHeadlines, viewMonth) => {
-  debugger;
   return calculateAllEvents(calendarEventsWithHeadlines.calendarEvents, viewMonth, calendarEventsWithHeadlines.headline);
 };
 
 export const calculateShareableScheduleArray = (shareableScheduleArray, viewMonth) => {
-  debugger;
-  const foo= shareableScheduleArray.reduce(
-    (accumulator, schedule) =>  accumulator.concat(calculateAllEvents(schedule, viewMonth)), []
-  )
-  console.log(foo)
-  return foo;
+  return shareableScheduleArray.reduce(
+    (accumulator, schedule) =>  accumulator.concat(
+      calculateAllEventsWithHeadlines(schedule, viewMonth)), []
+  );
 };

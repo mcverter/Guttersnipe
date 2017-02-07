@@ -1,6 +1,6 @@
 import React, {PropTypes, Component} from 'react';
 import EventCalendarView from './EventCalendarView';
-import {calculateAllEventsWithHeadlines} from './utils/calendarTransformations'
+import {calculateAllEventsWithHeadlines, calculateShareableScheduleArray} from './utils/calendarTransformations'
 
 class EventCalendarNavigable extends Component {
     constructor(props) {
@@ -18,11 +18,10 @@ class EventCalendarNavigable extends Component {
     }
 
     render() {
-      debugger;
-        return (
+              return (
             <EventCalendarView
-                events={calculateAllEventsWithHeadlines
-                  (this.props.calendarEventsWithHeadlines, this.state.viewMonth)}
+                events={calculateShareableScheduleArray
+                  (this.props.arrayOfCalendarEventsWithHeadlines, this.state.viewMonth)}
                 handleSelectSlot={this.props.handleSelectSlot}
                 handleNavigation={this.handleNavigation}
                 selectable={this.props.selectable} />

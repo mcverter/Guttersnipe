@@ -3,10 +3,10 @@ import EventCalendarNavigable from './EventCalendarNavigable';
 
 const TimeFull = (props) => (
     <EventCalendarNavigable
-      calendarEventsWithHeadlines={{
+      arrayOfCalendarEventsWithHeadlines={[{
         headline:props.headline,
         calendarEvents: props.time.calendar.events
-      }}
+      }]}
         viewMonth={new Date()} />
 );
 

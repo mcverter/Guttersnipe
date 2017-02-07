@@ -7,8 +7,7 @@ import EventCalendarNavigable from './EventCalendarNavigable';
 
 class CalendarInputField extends Component {
   constructor(props) {
-    debugger;
-    super(props);
+        super(props);
     this.state = {
       modalIsOpen: false,
       modalStartTime: '',
@@ -141,10 +140,10 @@ class CalendarInputField extends Component {
     return (
       <div>
         <EventCalendarNavigable
-          calendarEventsWithHeadlines={{
+          arrayOfCalendarEventsWithHeadlines={[{
             headline: this.props.headline,
             calendarEvents: this.props.inp.value
-          }}
+          }]}
           viewMonth={new Date()}
           handleSelectSlot={this.handleCalendarSelectSlot}
           selectable />
