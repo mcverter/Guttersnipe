@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import {fetchAllShareables} from '../../actions/shareables/shareableActions';
 import {Link} from 'react-router';
 
-class ShareableListPage extends React.Component {
+class AllShareablesMapPage extends React.Component {
   constructor(props) {
     super(props);
     this.calculateCenter = this.calculateCenter.bind(this);
@@ -59,7 +59,7 @@ class ShareableListPage extends React.Component {
     )
   }
 }
-ShareableListPage.propTypes = {
+AllShareablesMapPage.propTypes = {
   shareables: PropTypes.object.isRequired,
   fetchAllShareables: PropTypes.func.isRequired
 };
@@ -70,4 +70,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, {fetchAllShareables})(ShareableListPage);
+export default connect(mapStateToProps, {fetchAllShareables})(AllShareablesMapPage);

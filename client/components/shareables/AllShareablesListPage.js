@@ -8,7 +8,7 @@ import Table from 'react-bootstrap/lib/Table';
 
 
 
-class ShareableListPage extends React.Component {
+class AllShareablesListPage extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -52,7 +52,7 @@ class ShareableListPage extends React.Component {
   }
 }
 
-ShareableListPage.propTypes = {
+AllShareablesListPage.propTypes = {
   shareables: PropTypes.object.isRequired,
   fetchAllShareables: PropTypes.func.isRequired
 };
@@ -63,4 +63,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, {fetchAllShareables})(ShareableListPage);
+export default connect(mapStateToProps, {fetchAllShareables})(AllShareablesListPage);

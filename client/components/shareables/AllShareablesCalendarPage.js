@@ -5,11 +5,9 @@ import {connect} from 'react-redux';
 import {fetchAllShareables} from '../../actions/shareables/shareableActions';
 import {Link} from 'react-router';
 
-class ShareableListPage extends React.Component {
+class AllShareablesCalendarPage extends React.Component {
   constructor(props) {
     super(props);
-    this.calculateCenter = this.calculateCenter.bind(this);
-    this.renderMarker = this.renderMarker.bind(this);
   }
 
   componentWillMount() {
@@ -30,8 +28,12 @@ class ShareableListPage extends React.Component {
     }
 
     return (
-      <div>
-      </div>
+    <EventCalendarNavigable
+      calendarEventsWithHeadlines={{
+        headline:props.headline,
+        calendarEvents: props.time.calendar.events
+      }}
+        viewMonth={new Date()} />
     )
   }
 }
@@ -47,7 +49,7 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, {fetchAllShareables})(ShareableListPage);
+export default connect(mapStateToProps, {fetchAllShareables})(AllShareablesCalendarPage);
 
 /*
 import React, {PropTypes, Component} from 'react';
