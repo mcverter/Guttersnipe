@@ -5,16 +5,26 @@ from sqlalchemy import CheckConstraint
 from marshmallow_jsonapi import Schema, fields as schema_fields
 from marshmallow import validate
 from server.calendars.models import Calendar
+from datetime import datetime
 
 class User(db.Model):
   id = db.Column(db.Integer(), primary_key=True)
   username = db.Column(db.String(255), unique=True)
   password = db.Column(db.String(255))
+  profile = db.Column(db.Integer, db.ForeignKey('profile.id'))
+  schedule = db.Column(db.Integer, db.ForeignKey('schedule.id'))
+  is_admin = db.Column(db.Boolean)
+  created_on = db.Column(db.DateTime)
+  expiration_date = db.Column(db.DateTime)
 
   def __init__(self, username, password):
     self.username = username
     self.active = True
     self.password = User.hashed_password(password)
+    self.created_on =  datetime.utcnow()
+    self.is_admin = True
+    self.expiration_date = None
+    self.schedule = None
 
   @staticmethod
   def hashed_password(password):
