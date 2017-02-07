@@ -62,11 +62,15 @@ export const calculateAllEvents = (calendarEvents, viewMonth, headline) => {
 
 
 export const calculateAllEventsWithHeadlines = (calendarEventsWithHeadlines, viewMonth) => {
+  debugger;
   return calculateAllEvents(calendarEventsWithHeadlines.calendarEvents, viewMonth, calendarEventsWithHeadlines.headline);
 };
 
 export const calculateShareableScheduleArray = (shareableScheduleArray, viewMonth) => {
-  return shareableScheduleArray.map(
-    schedule =>  calculateAllEvents(schedule, viewMonth)
+  debugger;
+  const foo= shareableScheduleArray.reduce(
+    (accumulator, schedule) =>  accumulator.concat(calculateAllEvents(schedule, viewMonth)), []
   )
+  console.log(foo)
+  return foo;
 };

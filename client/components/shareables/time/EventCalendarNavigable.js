@@ -18,11 +18,11 @@ class EventCalendarNavigable extends Component {
     }
 
     render() {
+      debugger;
         return (
             <EventCalendarView
                 events={calculateAllEventsWithHeadlines
-                  (this.props.calendarEventsWithHeadlines,
-                    this.state.viewMonth)}
+                  (this.props.calendarEventsWithHeadlines, this.state.viewMonth)}
                 handleSelectSlot={this.props.handleSelectSlot}
                 handleNavigation={this.handleNavigation}
                 selectable={this.props.selectable} />
@@ -31,15 +31,11 @@ class EventCalendarNavigable extends Component {
 }
 
 EventCalendarNavigable.propTypes = {
-    calendarEventsWithHeadlines: PropTypes.object.isRequired,
+//    headline: PropTypes.string.isRequired,
+//    calendarEvents: PropTypes.array.isRequired,
     viewMonth: PropTypes.object,
     handleSelectSlot: PropTypes.func,
     selectable: PropTypes.bool
 };
 
 export default EventCalendarNavigable;
-
-/*
-headline: PropTypes.string.isRequired,
-    calendarEvents: PropTypes.array.isRequired,
- */
