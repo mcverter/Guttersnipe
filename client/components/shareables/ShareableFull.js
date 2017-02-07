@@ -7,21 +7,25 @@ import Thing from './thing/ThingFull';
 import CommentList from './comment/CommentList';
 
 const ShareableFull = ( { shareable:{headline, summary,
-  number_ratings, total_rating, thing, space, time, notes, comments} } ) => (
-  <div>
-    <div className="jumbotron"> {headline} </div>
-    <div> {summary} </div>
-    <div> {number_ratings ? total_rating / number_ratings : 0} </div>
-    <Thing thing={thing} />
-    <Space space={space} />
-    <Time time={time} headline={headline} />
-    <div> {notes} </div>
-  </div>
-);
+  number_ratings, total_rating, thing, space, time, notes, comments} } ) => {
+  debugger;
+  return (
+    <div>
+      <div className="jumbotron"> {headline} </div>
+      {summary && <div><h3>Summary</h3>{summary} </div>}
+      {number_ratings ? <div><h3>Rating</h3> {total_rating/number_ratings} </div>:''}
+      <Thing thing={thing} headline={headline}/>
+      <Space space={space} headline={headline}/>
+      <Time time={time} headline={headline}/>
+      {notes && <div><h3>Notes:</h3> {notes} </div>}
+    </div>);
+};
 
 ShareableFull.propTypes = {
   shareable: PropTypes.object.isRequired
   /*
+        {number_ratings && <div><h3>Rating</h3> total_rating/number_ratings </div>}
+
    headline: PropTypes.string.isRequired,
    summary: PropTypes.string.isRequired,
    number_ratings: PropTypes.number,

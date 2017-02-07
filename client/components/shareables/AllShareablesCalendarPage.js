@@ -26,7 +26,6 @@ class AllShareablesCalendarPage extends React.Component {
     if (isFetchingShareables || !items || items.length < 1) {
       return <div>Loading...</div>;
     }
-    debugger;
 
     const allEvents = items.map((item)=>
       ({calendarEvents: item.time.calendar.events, headline: item.headline}));

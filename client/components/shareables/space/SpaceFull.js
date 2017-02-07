@@ -10,6 +10,7 @@ const SpaceFull = ({space: {longitude, latitude,
 
     return (
         <div>
+          <h2> Map </h2>
             <Map center={position} zoom={13}>
                 <TileLayer
                     url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
@@ -17,9 +18,7 @@ const SpaceFull = ({space: {longitude, latitude,
                 />
                 <Marker position={position}>
                     <Popup>
-                        <span>A pretty CSS3 popup.
-                            <br/>
-                            Easily customizable.</span>
+                        <span>Location</span>
                     </Popup>
                 </Marker>
             </Map>
