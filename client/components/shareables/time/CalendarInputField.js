@@ -7,7 +7,7 @@ import EventCalendarNavigable from './EventCalendarNavigable';
 
 class CalendarInputField extends Component {
   constructor(props) {
-        super(props);
+    super(props);
     this.state = {
       modalIsOpen: false,
       modalStartTime: '',
@@ -16,8 +16,6 @@ class CalendarInputField extends Component {
       modalDay: '',
       modalRepeating: false,
     };
-
-    props.inp.value=[];
 
     // calendar
     this.handleCalendarSelectSlot = this.handleCalendarSelectSlot.bind(this);

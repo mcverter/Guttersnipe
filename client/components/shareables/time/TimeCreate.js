@@ -63,6 +63,7 @@ TimeCreate = connect(
 export default reduxForm({
   form: 'wizard',
   destroyOnUnmount: false,
+  initialValues: {time_calendar: []},
   forceUnregisterOnUnmount: true,
   validate
 })(TimeCreate);
