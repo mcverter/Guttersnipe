@@ -7,7 +7,7 @@ const initialState = {
       categorizationMeta: {}
     },
   auth : {
-      authenticated: true,
+      authenticated: false,
     error: ''
   },
   kropotkin: {
