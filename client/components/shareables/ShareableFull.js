@@ -8,7 +8,6 @@ import CommentList from './comment/CommentList';
 
 const ShareableFull = ( { shareable:{headline, summary,
   number_ratings, total_rating, thing, space, time, notes, comments} } ) => {
-  debugger;
   return (
     <div>
       <div className="jumbotron"> {headline} </div>

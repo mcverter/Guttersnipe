@@ -4,7 +4,6 @@ import {renderMainType, renderTags, renderSubtypes} from './utils/transformThing
 
 const ThingFull = ({headline, thing: {description_how, description_what, notes,
   main_type, subtypes, tags} })=> {
-  debugger;
   return (
     <div>
       <h2> Description of {headline}</h2>
