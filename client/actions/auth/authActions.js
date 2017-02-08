@@ -19,17 +19,29 @@ export function signInUser({email, password}) {
 
     fetch(myRequest)
       .then(response => {
-        response.json().then(function(data) {
-          console.log(data);
-          localStorage.setItem('token', data.access_token);
-          dispatch({type: AUTH_USER});
-          browserHistory.push('/welcome');
-        })
-          .catch(response => {
-            const errMsg =  response && response.data ? response.data.error : response;
-            dispatch (authError('Could not login ' + errMsg));
+        if (response.status === 200) {
+          response.json().then(function (data) {
+            console.log(data);
+            localStorage.setItem('token', data.access_token);
+            dispatch({type: AUTH_USER});
+            browserHistory.push('/welcome');
           })
+        }
+        else {
+          const status = response.status;
+          const statusText = response.statusText;
+          response.json().then(function (data) {
+            dispatch(authError
+            ('Could not login ' + status + " " + statusText + ": " + data.msg));
+          })
+            .catch(() => {
+              dispatch(authError
+              ('Could not login ' + status + " " + statusText));
+
+            })
+        }
       })
+
       .catch(response => {
         const errMsg =  response && response.data ? response.data.error : response;
         dispatch (authError('Could not login ' + errMsg));
@@ -51,19 +63,28 @@ export function signUpUser({email, password}) {
       })
     };
     const myRequest = new Request(`${SERVER_URL}/api/signup`, myInit);
-    debugger;
     fetch(myRequest)
       .then(response => {
-        response.json().then(function(data) {
-          console.log(data);
-          localStorage.setItem('token', data.access_token);
-          dispatch({type: AUTH_USER});
-          browserHistory.push('/welcome');
-        })
-          .catch(response => {
-            const errMsg =  response && response.data ? response.data.error : response;
-            dispatch (authError('Could not login ' + errMsg));
+        if (response.status === 200) {
+          response.json().then(function (data) {
+            console.log(data);
+            localStorage.setItem('token', data.access_token);
+            dispatch({type: AUTH_USER});
+            browserHistory.push('/welcome');
           })
+        }
+        else {
+          const status = response.status;
+          const statusText = response.statusText;
+          response.json().then(function (data) {
+            dispatch(authError
+            ('Could not signup ' + status + " " + statusText + ": " + data.msg));
+          })
+            .catch(() => {
+              dispatch(authError
+              ('Could not sign up ' + status + " " + statusText));
+            })
+        }
       })
       .catch(response => {
         const errMsg =  response && response.data ? response.data.error : '';

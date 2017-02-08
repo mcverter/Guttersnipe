@@ -13,7 +13,6 @@ class Signup extends Component {
     this.handleFormSubmit = this.handleFormSubmit.bind(this)
   }
   handleFormSubmit({email, password}) {
-    debugger;
     this.props.signUpUser({email, password});
   }
 
