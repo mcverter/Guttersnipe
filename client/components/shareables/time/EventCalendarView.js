@@ -10,7 +10,6 @@ const EventCalendarView = ({headline, viewMonth,
   selectable, events}) => {
 
 
-
   return (
     <div style={{height: "400px"}}>
       <BigCalendar
