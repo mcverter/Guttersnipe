@@ -16,7 +16,7 @@ class CalendarInputField extends Component {
       modalDay: '',
       modalRepeating: false,
     };
-
+    
     // calendar
     this.handleCalendarSelectSlot = this.handleCalendarSelectSlot.bind(this);
 

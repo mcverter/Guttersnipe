@@ -25,5 +25,6 @@ export default reduxForm({
   form: 'wizard',                 // <------ same form name
   destroyOnUnmount: false,        // <------ preserve form data
   forceUnregisterOnUnmount: true,  // <------ unregister fields on unmount
-  validate
+  validate,
+  initialValues: {time_calendar: []},
 })(ShareableCreateStart);

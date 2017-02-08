@@ -47,7 +47,6 @@ TimeCreate.propTypes = {
   headline: PropTypes.string
 };
 
-
 const selector = formValueSelector('wizard') // <-- same as form name
 TimeCreate = connect(
   state => {
@@ -63,7 +62,8 @@ TimeCreate = connect(
 export default reduxForm({
   form: 'wizard',
   destroyOnUnmount: false,
-  initialValues: {time_calendar: []},
   forceUnregisterOnUnmount: true,
   validate
 })(TimeCreate);
+
+
