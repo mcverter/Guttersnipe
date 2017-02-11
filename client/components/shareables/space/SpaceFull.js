@@ -4,9 +4,10 @@ import L from 'leaflet';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 
 
-const SpaceFull = ({space: {longitude, latitude,
-  canonical_address,  alternate_names, notes}}) =>  {
-    const position = [latitude, longitude];
+const SpaceFull = ({space,
+  canonical_address,  alternate_names, notes}) =>  {
+    const {latitude, longitude} = JSON.parse(space.position);
+    const position = [longitude, latitude];
 
     return (
         <div>

@@ -3,7 +3,8 @@ from server.shareables.models import Shareable
 from flask import Blueprint, request, jsonify, make_response
 from flask.ext.restful import Resource, Api, abort
 from server.shareables.schemas import\
-  ShareableSchema, ThingSchema, TimeSchema, SpaceSchema, MainTypeSchema
+  ShareableSchema
+  #, ThingSchema, TimeSchema, SpaceSchema, MainTypeSchema
 import json
 from server.calendars.models import Event, Calendar, RecurrenceRule
 from server.shareables.models import Shareable, Thing, Space, \
@@ -16,11 +17,11 @@ from sqlalchemy.exc import SQLAlchemyError
 from marshmallow import ValidationError
 
 #shareables = Blueprint('shareables', __name__)
-ThingSerializer = ThingSchema()
-TimeSerializer = TimeSchema()
+#ThingSerializer = ThingSchema()
+#TimeSerializer = TimeSchema()
 ShareableSerializer = ShareableSchema()
-SpaceSerializer = SpaceSchema()
-MainTypeSerializer = MainTypeSchema()
+#SpaceSerializer = SpaceSchema()
+#MainTypeSerializer = MainTypeSchema()
 
 class ShareableCategorizationEndpoint(Resource):
   def get(self):

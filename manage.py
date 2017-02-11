@@ -26,7 +26,7 @@ def seed():
     curr_dir = os.path.dirname(os.path.realpath(__file__))
     filename = os.path.join(curr_dir, "db", "seeds", "brooklyn.data.json")
     json = (open(filename, "r", encoding="UTF-8")).read()
-    seed_types_and_subtypes_and_tags()
+#    seed_types_and_subtypes_and_tags()
     create_many_shareables_from_json_string(json)
 
 

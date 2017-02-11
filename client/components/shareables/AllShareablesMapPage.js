@@ -22,9 +22,12 @@ class AllShareablesMapPage extends React.Component {
 
 
   renderMarker(shareable) {
-    const {id, headline, space: {latitude, longitude}} = shareable;
+    const {id, headline, space} = shareable;
+    const {latitude, longitude} = JSON.parse(space.position);
+    const position = [longitude, latitude];
+
     return(
-      <Marker key={`marker${id}`} position={[latitude, longitude]}>
+      <Marker key={`marker${id}`} position={position}>
         <Popup key={`popup${id}`}>
         <div>
           <h3> {headline}</h3>
@@ -35,9 +38,12 @@ class AllShareablesMapPage extends React.Component {
     );
   }
   componentWillReceiveProps(nextProps) {
-    console.log(nextProps);
+    console.log('next props', nextProps);
 
-    if (nextProps.isActiveView) {
+    if (nextProps.isActiveView && this.map) {
+      console.log('resizing');
+
+      debugger;
       this.map.leafletElement.invalidateSize(false);
     }
   }

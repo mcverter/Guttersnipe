@@ -31,8 +31,7 @@ types_and_subtypes = {
 }
 def seed_types_and_subtypes_and_tags():
   for typename in types_and_subtypes:
-    if (typename != 'food'):
-      type = defineType(typename)
+    type = defineType(typename)
     for subtypename in types_and_subtypes[typename]:
       defineSubtype(type, subtypename)
 
