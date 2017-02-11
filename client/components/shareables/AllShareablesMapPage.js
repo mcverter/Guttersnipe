@@ -34,6 +34,13 @@ class AllShareablesMapPage extends React.Component {
       </Marker>
     );
   }
+  componentWillReceiveProps(nextProps) {
+    console.log(nextProps);
+
+    if (nextProps.isActiveView) {
+      this.map.leafletElement.invalidateSize(false);
+    }
+  }
 
   render() {
     const {
@@ -48,7 +55,8 @@ class AllShareablesMapPage extends React.Component {
 
     return (
       <div>
-        <Map center={position} zoom={13}>
+        <Map ref={(map) => { this.map = map; }}
+             center={position} zoom={13}>
           <TileLayer
             url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

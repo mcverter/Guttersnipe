@@ -8,13 +8,32 @@ import AllShareablesCalendarPage from './AllShareablesCalendarPage'
 
 
 class AllShareablesPage extends Component {
+  constructor(props) {
+    super(props)
+    this.setMapAsActiveView = this.setMapAsActiveView.bind(this);
+    this.unsetMapAsActiveView = this.unsetMapAsActiveView.bind(this);
+
+    this.state = ({
+      mapIsActiveView: false
+    })
+  }
+
+  setMapAsActiveView() {
+    this.setState({mapIsActiveView: true});
+  }
+
+
+  unsetMapAsActiveView() {
+    this.setState({mapIsActiveView: false});
+  }
+
 
   render() {
     return (
       <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
-        <Tab eventKey={1} title="List"><AllShareablesListPage/></Tab>
-        <Tab eventKey={2} title="Map"><AllShareablesMapPage/></Tab>
-        <Tab eventKey={3} title="Calendar"><AllShareablesCalendarPage/></Tab>
+        <Tab eventKey={1} onEnter={this.unsetMapAsActiveView}  title="List"><AllShareablesListPage/></Tab>
+        <Tab eventKey={2} onEnter={this.setMapAsActiveView} title="Map"><AllShareablesMapPage isActiveView={this.state.mapIsActiveView} /></Tab>
+        <Tab eventKey={3} onEnter={this.unsetMapAsActiveView} title="Calendar"><AllShareablesCalendarPage/></Tab>
       </Tabs>
     );
   }
