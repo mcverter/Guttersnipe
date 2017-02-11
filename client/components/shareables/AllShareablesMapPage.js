@@ -13,7 +13,7 @@ class AllShareablesMapPage extends React.Component {
   }
 
   componentWillMount() {
-    this.props.fetchAllShareables();
+//    this.props.fetchAllShareables();
   }
 
   calculateCenter(shareables) {

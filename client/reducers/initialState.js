@@ -12,6 +12,9 @@ const initialState = {
   },
   kropotkin: {
       quote: ''
+  },
+  browserEnv: {
+      location: {}
   }
 };
 

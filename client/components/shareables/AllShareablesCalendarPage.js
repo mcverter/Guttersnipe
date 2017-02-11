@@ -12,7 +12,7 @@ class AllShareablesCalendarPage extends React.Component {
   }
 
   componentWillMount() {
-    this.props.fetchAllShareables();
+//    this.props.fetchAllShareables();
   }
 
   render() {
