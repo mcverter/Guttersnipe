@@ -5,7 +5,7 @@ import geoalchemy2
 from server.users.models import Guttersnipe
 from server.calendars.models import Calendar
 from datetime import datetime
-
+from geoalchemy2 import Geometry
 ####################
 # Business Objects
 ####################
@@ -170,17 +170,17 @@ thing_subtype_association = db.Table(
 class Space(db.Model):
   __tablename__ = 'space'
   id = db.Column(db.Integer, primary_key=True)
-  longitude = db.Column(db.Float, nullable=False)
-  latitude = db.Column(db.Float, nullable=False)
+#  longitude = db.Column(db.Float, nullable=False)
+#  latitude = db.Column(db.Float, nullable=False)
+  position = db.Column (Geometry('POINT', srid=7483))
   canonical_address = db.Column(db.Text, nullable=False)
   alternate_names = db.Column(ARRAY(db.Text))
   notes = db.Column(db.Text)
 
-  def __init__(self, longitude, latitude,
+  def __init__(self, position,
                canonical_address="",
                alternate_names=[], notes=""):
-    self.longitude = longitude
-    self.latitude = latitude
+    self.position = position
     self.canonical_address = canonical_address
     self.alternate_names = alternate_names
     self.notes = notes

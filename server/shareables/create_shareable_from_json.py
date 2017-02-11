@@ -4,7 +4,8 @@ from server.shareables.models import Shareable, Thing, Space, \
     Time, MainType, Subtype, Comment
 from datetime import datetime
 from server import db
-from sqlalchemy.sql import operators
+from sqlalchemy.sql import operators, func
+from geoalchemy2 import Geometry
 
 def create_many_shareables_from_json_string(json_string):
     py_array = json.loads(json_string)
@@ -93,30 +94,28 @@ def create_shareable_from_json_object(py_dict):
 
     # space
     space = py_dict.get("space")
-    longitude = float(space.get("longitude"))
-    latitude = float(space.get("latitude"))
+    longitude = space.get("longitude")
+    latitude = space.get("latitude")
     canonical_address = space.get("canonical_address")
     alternate_names = space.get("alternate_names")   # string list
     space_notes = space.get("notes")
 
     space_entity = db.session.query(Space).filter(
-        Space.longitude == longitude,
-        Space.latitude == latitude,
+        func.ST_Equals(Space.position, 'SRID=7483;POINT(' + longitude + " " + latitude + ")",  srid=7483),
         Space.canonical_address == canonical_address,
         Space.alternate_names == alternate_names).first()
     if space_entity is None:
         my_space = Space(
-            longitude=longitude,
-            latitude=latitude,
+            position='SRID=7483;POINT(' + longitude + " " + latitude + ")",
             canonical_address=canonical_address,
             alternate_names=alternate_names,
             notes=space_notes)
         db.session.add(my_space)
         space_entity = db.session.query(Space).filter(
-            Space.longitude == longitude,
-            Space.latitude == latitude,
+            func.ST_Equals(Space.position, 'SRID=7483;POINT(' + longitude + " " + latitude + ")"),
             Space.canonical_address == canonical_address,
             Space.alternate_names == alternate_names).first()
+
 
     # time
     time = py_dict.get("time")
