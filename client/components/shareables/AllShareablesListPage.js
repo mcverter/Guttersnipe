@@ -34,12 +34,14 @@ class AllShareablesListPage extends React.Component {
         <h2> View Calendar </h2>
         <Table striped bordered>
           <thead>
-          <th>Headline</th>
-          <th>Thing</th>
-          <th>Space</th>
-          <th>Time</th>
-          <th>Rating</th>
-          <th>Full Record</th>
+          <tr>
+            <th>Headline</th>
+            <th>Thing</th>
+            <th>Space</th>
+            <th>Time</th>
+            <th>Rating</th>
+            <th>Full Record</th>
+          </tr>
           </thead>
           <tbody>
           {items.map(shareable=>(
