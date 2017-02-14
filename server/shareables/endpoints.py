@@ -29,6 +29,7 @@ class ShareableSearchEndpoint(Resource):
   def post(self, id ):
     search_params = request.get_json() or json.loads(request.data) \
       if isinstance(request.data, str) else json.loads(request.data.decode('utf-8'))
+    '''
     (time_params, thing_pararameters, space_params) = search_params
     (tag_param, type_param, subtype_param) = search_params
     (radius_param, position_param) = space_params
@@ -37,6 +38,7 @@ class ShareableSearchEndpoint(Resource):
       .filter(Shareable.thing.filter(type=type_param, subtype in subtype_param))\
       .filter(Shareable.space.filter('position', position_param, radius_param))\
       .filter(Shareable.time.filter('event'))
+    '''
 
 
 class ShareableEndpoint(Resource):

@@ -4,11 +4,13 @@ import ShareablePage from './ShareablePage';
 import ShareableCreateWizardPage from './ShareableCreateWizardPage';
 import ShareableEditPage from './ShareableEditPage';
 import AllShareablesPage from './AllShareablesPage';
-
+import ShareablesSearchPage from './ShareablesSearchPage';
 
 export default (
   <Route path="shareables">
     <IndexRoute component={AllShareablesPage} />
+        <Route path="search" component={ShareablesSearchPage} />
+
     <Route path="create" component={ShareableCreateWizardPage} />
     <Route path="shareable/:id" component={ShareablePage} />
     <Route path="shareable/:id/edit" component={ShareableEditPage} />

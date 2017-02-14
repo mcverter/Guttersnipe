@@ -6,9 +6,9 @@ import AllShareablesListPage from './AllShareablesListPage';
 import AllShareablesMapPage from './AllShareablesMapPage';
 import AllShareablesCalendarPage from './AllShareablesCalendarPage'
 import { connect } from 'react-redux'
-import {STORE_BROWSER_LOCATION} from '../../actions/browserEnv/browserEnvActionTypes';
-import {setBrowserLocation} from '../../actions/browserEnv/browserEnvActions';
-import {fetchAllShareables} from '../../actions/shareables/shareableActions';
+import {STORE_BROWSER_LOCATION} from '../../../actions/browserEnv/browserEnvActionTypes';
+import {setBrowserLocation} from '../../../actions/browserEnv/browserEnvActions';
+import {fetchAllShareables} from '../../../actions/shareables/shareableActions';
 
 
 class AllShareablesPage extends Component {

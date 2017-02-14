@@ -2,9 +2,9 @@ import React, {PropTypes} from 'react';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 
 import {connect} from 'react-redux';
-import {fetchAllShareables} from '../../actions/shareables/shareableActions';
+import {fetchAllShareables} from '../../../actions/shareables/shareableActions';
 import {Link} from 'react-router';
-import EventCalendarNavigable from './time/EventCalendarNavigable'
+import EventCalendarNavigable from '../../shareables/time/EventCalendarNavigable'
 
 class AllShareablesCalendarPage extends React.Component {
   constructor(props) {

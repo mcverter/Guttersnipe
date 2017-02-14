@@ -1,0 +1,48 @@
+<ng-form name="resourceForm" class="form-horizontal" data-ng-submit="create()" novalidate>
+    <a name="description"></a>
+    <div class="jumbotron BlackOnRed">
+        <h2> Describe </h2>
+        <create-description thing="resource.thing" confirmations="confirmations" />
+    </div>
+
+    <a name="classification"></a>
+    <div class="jumbotron RedOnBlack">
+        <h2>Classify</h2>
+        <create-classification thing="resource.thing"  confirmations="confirmations"/>
+    </div>
+
+    <a name="map"></a>
+    <div class="jumbotron BlackOnRed">
+        <h2>Map</h2>
+        <create-map place="resource.place"  confirmations="confirmations"/>
+    </div>
+
+    <a name="schedule"></a>
+    <div class="jumbotron RedOnBlack">
+        <h2>Schedule</h2>
+        <create-schedule time="resource.time" confirmations="confirmations" headline="resource.thing.description.headline"/>
+    </div>
+
+    <div class="RedOnBlack">
+        <div class="form-group">
+            <input type="submit" value="Create Resource" ng-click="create()"
+                    class="btn btn-default btn-block">
+        </div>
+    </div>
+
+    <div class="alert alert-danger" ng-show="showDescriptionConfirmError && ! confirmations.isCreateDescriptionConfirmed">
+        You must first complete and confirm the Description. Click <a href="" ng-click="scrollTo('description')"> here</a> to fix.
+    </div>
+    <div class="alert alert-danger" ng-show="showClassificationConfirmError && ! confirmations.isCreateClassificationConfirmed">
+        You must first complete and confirm the Classification. Click <a href="" ng-click="scrollTo('classification')"> here</a> to fix.
+    </div>
+    <div class="alert alert-danger"  ng-show="showPlaceConfirmError && ! confirmations.isCreatePlaceConfirmed">
+        You must first complete and confirm the Mapping.  Click <a href="" ng-click="scrollTo('map')"> here</a> to fix.
+    </div>
+    <div class="alert alert-danger"  ng-show="showTimeConfirmError && ! confirmations.isCreateTimeConfirmed">
+        You must first complete and confirm the Scheduling. Click <a href="" ng-click="scrollTo('schedule')"> here</a> to fix.
+    </div>
+    <div data-ng-show="error" class="text-danger">
+        <strong data-ng-bind="error"></strong>
+    </div>
+</ng-form>

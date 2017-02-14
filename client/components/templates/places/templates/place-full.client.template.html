@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Place</h3>
+    </div>
+    <div class="panel-body">
+        <h3>Address: </h3>
+        <blockquote> {{place.address}} </blockquote>
+        <br />
+        <ui-gmap-google-map center="map.center" zoom="map.zoom">
+            <ui-gmap-marker coords="map.marker.coords"
+                            idkey="map.marker.id"></ui-gmap-marker>
+        </ui-gmap-google-map>
+        <div ng-show="place.notes">
+            <h3>Notes: </h3>
+            <blockquote> {{place.notes}}</blockquote>
+        </div>
+    </div>
+</div>
