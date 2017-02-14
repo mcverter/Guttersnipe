@@ -1,21 +1,21 @@
 import React, {PropTypes, Component} from "react";
 import {Link} from "react-router";
-import Tabs from "react-bootstrap/lib/Tabs";
-import Tab from "react-bootstrap/lib/Tab";
 import { connect } from 'react-redux'
-import {setBrowserLocation} from '../../actions/browserEnv/browserEnvActions';
-import {fetchAllShareables} from '../../actions/shareables/shareableActions';
 import { DatePicker }from 'react-bootstrap-date-picker'
 class TimeSearchPanel extends Component {
   constructor(props) {
+    super(props);
+    this.state = {
+      value: new Date().toISOString()
+    }
   }
-
+  /*
   getInitialState(){
     var value = new Date().toISOString();
     return {
       value: value
     }
-  }
+  }*/
   handleChange() {
     this.setState({
       value: value, // ISO String, ex: "2016-11-19T12:00:00.000Z"
