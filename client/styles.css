@@ -65,6 +65,13 @@ body {
 
 }
 
+.entireDisplay {
+    background-color: #be0404;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+
+}
+
 video {
 background-color: red;
 }

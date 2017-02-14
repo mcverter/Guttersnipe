@@ -3,8 +3,8 @@ import Footer from './common/Footer';
 import Header from './common/Header';
 
 const App = (props) => (
-  <div className="container-fluid">
-    <Header />
+  <div className="container-fluid entireDisplay">
+    <Header  />
     {props.children}
     <Footer />
   </div>
