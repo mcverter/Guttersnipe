@@ -7,7 +7,7 @@ from server.shareables.create_shareable_from_json import create_many_shareables_
 import pdb
 from flask import url_for
 from db.seeds.TypesAndSubtypesAndTags import seed_types_and_subtypes_and_tags
-
+from db.seeds.kropotkinsSeed import seed_kropotkins
 from server import app, db
 import urllib
 
@@ -28,6 +28,7 @@ def seed():
     json = (open(filename, "r", encoding="UTF-8")).read()
 #    seed_types_and_subtypes_and_tags()
     create_many_shareables_from_json_string(json)
+    seed_kropotkins()
 
 
 @manager.command

@@ -24,6 +24,8 @@ from server.shareables.models import Shareable, \
 
 from server.shareables.endpoints import ShareableEndpoint
 import server.auth.endpoints
+from server.kropotkins.models import Kropotkin
+from server.kropotkins.endpoints import KropotkinEndpoint
 
 @app.route('/static/<path:path>')
 def send_static(path):
@@ -31,7 +33,6 @@ def send_static(path):
 
 @app.route('/')
 def index():
-    print ("hello")
     return render_template("index.html", user="moo")
 
 app.config['SECRET_KEY'] = "foobar"

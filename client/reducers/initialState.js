@@ -11,7 +11,9 @@ const initialState = {
     error: ''
   },
   kropotkin: {
-      quote: ''
+        isFetchingKropotkin: false,
+        kropotkinFetchError: false,
+        paragraph: ''
   },
   browserEnv: {
       location: {}
