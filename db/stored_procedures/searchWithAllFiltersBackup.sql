@@ -1,7 +1,7 @@
 ﻿/* using named parameters
 SELECT concat_lower_or_upper(a := 'Hello', b := 'World', uppercase := true); */
 
-CREATE OR REPLACE FUNCTION search_with_all_filters(
+CREATE OR REPLACE FUNCTION search_with_all_filters_backup(
   time_filter BOOL,
   space_filter BOOL,
   thing_filter BOOL,

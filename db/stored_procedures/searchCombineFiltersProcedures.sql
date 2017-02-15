@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION search_3(
+CREATE OR REPLACE FUNCTION search_shareable_combine_filters(
   longitude FLOAT DEFAULT NULL ,
   latitude FLOAT DEFAULT NULL ,
   distance INT DEFAULT NULL ,
@@ -88,4 +88,3 @@ END;
 $$
 LANGUAGE 'plpgsql' VOLATILE ;
 
-SELECT (search_3(type_name:= 'food'))
