@@ -29,17 +29,34 @@ class ShareableSearchEndpoint(Resource):
   def post(self, id ):
     search_params = request.get_json() or json.loads(request.data) \
       if isinstance(request.data, str) else json.loads(request.data.decode('utf-8'))
-    '''
-    (time_params, thing_pararameters, space_params) = search_params
-    (tag_param, type_param, subtype_param) = search_params
-    (radius_param, position_param) = space_params
-    (date_params) = time_params
-    query = Shareable.query\
-      .filter(Shareable.thing.filter(type=type_param, subtype in subtype_param))\
-      .filter(Shareable.space.filter('position', position_param, radius_param))\
-      .filter(Shareable.time.filter('event'))
-    '''
+    # extract the params
+    longitude = None
+    latitude = None
+    distance = None
+    type_name = None
+    subtype_list = None
+    tag_list = None
+    date_input = None
 
+    # find IDS from database
+    # SELECT(search_3(type_name: = 'food'))
+    query_string = "SELECT(search_shareable_combine_filters(" +\
+                   "longditude := " + longitude + \
+                   ", latitude := " + latitude + \
+                   ", distance := " + distance + \
+                   ", type_name := " + type_name + \
+                   ", subtype_list := " + subtype_list + \
+                   ", tag_list := " + tag_list + \
+                   ", date_input := " + date_input + ")"
+
+    shareable_ids = db.engine.execute(query_string)
+
+    # get the full object associated with each id
+    shareable_objects = Shareable.query.filter(id=shareable_ids)
+
+    # serialize it out
+    results = ShareableSerializer.dump(shareable_objects, many=True).data
+    return results
 
 class ShareableEndpoint(Resource):
   def get(self, id):
