@@ -1,4 +1,4 @@
-/* using named parameters
+﻿/* using named parameters
 SELECT concat_lower_or_upper(a := 'Hello', b := 'World', uppercase := true); */
 
 CREATE OR REPLACE FUNCTION search_with_all_filters(
@@ -15,8 +15,11 @@ CREATE OR REPLACE FUNCTION search_with_all_filters(
 )
   RETURNS TABLE(id INT) AS
 $$
-SELECT shareable.id FROM shareable, space
-WHERE 1
+SELECT shareable.id FROM
+  shareable, space,
+  thing, thing_subtype_association, main_type, subtype, tag, thing_tag_association,
+  calendar_event_association, event, time, calendar, recurrence_rule
+WHERE TRUE
       AND                           /* location filter */
       (space_filter is FALSE OR
        (space_id = space.id
