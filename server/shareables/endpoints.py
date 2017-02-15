@@ -39,7 +39,6 @@ class ShareableSearchEndpoint(Resource):
     date_input = None
 
     # find IDS from database
-    # SELECT(search_3(type_name: = 'food'))
     query_string = "SELECT(search_shareable_combine_filters(" +\
                    "longditude := " + longitude + \
                    ", latitude := " + latitude + \
@@ -49,10 +48,14 @@ class ShareableSearchEndpoint(Resource):
                    ", tag_list := " + tag_list + \
                    ", date_input := " + date_input + ")"
 
+    # array output is "{1,2,3,4,5,6,7,8,9}"
     shareable_ids = db.engine.execute(query_string)
 
+
     # get the full object associated with each id
-    shareable_objects = Shareable.query.filter(id=shareable_ids)
+    # >>> session.query(User).filter(User.name.in_(['Edwardo', 'fakeuser'])).all()
+
+    shareable_objects = Shareable.query.filter(Shareable.id.in_(shareable_ids)).all()
 
     # serialize it out
     results = ShareableSerializer.dump(shareable_objects, many=True).data

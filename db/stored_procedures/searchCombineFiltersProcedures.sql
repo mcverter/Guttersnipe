@@ -7,7 +7,7 @@ CREATE OR REPLACE FUNCTION search_shareable_combine_filters(
   tag_list TEXT DEFAULT NULL ,
   date_input DATE DEFAULT NULL
 )
-  RETURNS TABLE(id INT) AS
+  RETURNS INT[] AS
 $$
 DECLARE
 touched BOOLEAN := FALSE ;
@@ -80,11 +80,11 @@ BEGIN
       SELECT (search_from_center(longitude, latitude, distance));
     END IF;
   END IF;
-  RETURN QUERY
-    SELECT results.id
-  FROM results;
+
+  RETURN ARRAY(SELECT results.id FROM results);
 END;
 
 $$
 LANGUAGE 'plpgsql' VOLATILE ;
 
+SELECT (search_shareable_combine_filters(type_name:= 'food')) ;
