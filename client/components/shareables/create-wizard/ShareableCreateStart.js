@@ -26,5 +26,11 @@ export default reduxForm({
   destroyOnUnmount: false,        // <------ preserve form data
   forceUnregisterOnUnmount: true,  // <------ unregister fields on unmount
   validate,
-  initialValues: {time_calendar: []},
+  initialValues: {
+    time_calendar: [],
+    space_map: {
+      latitude: 40.689613,
+      longitude:  -73.99243,
+      canonical_address: ''
+    }},
 })(ShareableCreateStart);

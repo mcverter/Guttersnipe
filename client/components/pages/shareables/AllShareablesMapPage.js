@@ -43,7 +43,6 @@ class AllShareablesMapPage extends React.Component {
     if (nextProps.isActiveView && this.map) {
       console.log('resizing');
 
-      debugger;
       this.map.leafletElement.invalidateSize(false);
     }
   }

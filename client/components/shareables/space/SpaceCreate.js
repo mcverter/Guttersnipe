@@ -24,7 +24,7 @@ class SpaceCreate extends Component {
                      label="Location of Shareable">
                      <MapWithGeocoderInput
                        currentPosition={props.currentPosition}
-                       inp={props.input}
+                       formInput={props.input}
                      />
                    </ReduxFormComponentField>}/>
 

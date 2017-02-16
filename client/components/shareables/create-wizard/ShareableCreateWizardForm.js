@@ -40,7 +40,7 @@ class ShareableCreateWizardForm extends Component {
 }
 
 ShareableCreateWizardForm.propTypes = {
-  handleSubmit: PropTypes.func,
+  handleSubmit: PropTypes.func
 };
 
 

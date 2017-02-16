@@ -7,18 +7,12 @@ export default class MapWithGeocoder extends Component {
     constructor(props) {
         super(props);
         this.Geocoder = {};
-        props.inp.value={
-            latitude: props.latitude || 40.689613,
-            longitude: props.longitude || -73.99243,
-            canonical_address: ''
-        };
-
     }
 
     componentDidMount() {
         let map = L.map(this.el).setView([
-            this.props.inp.value.latitude,
-            this.props.inp.value.longitude], 12);
+            this.props.formInput.value.latitude,
+            this.props.formInput.value.longitude], 12);
         let  geoCoderOptions = {
             bounds: true,
             position: 'topright',
@@ -27,7 +21,7 @@ export default class MapWithGeocoder extends Component {
         L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
         this.geocoder = L.control.geocoder('mapzen-a2w6xkx', geoCoderOptions).addTo(map);
         this.geocoder.on('select', ((data) => {
-            this.props.inp.onChange({
+            this.props.formInput.onChange({
                 latitude: data.latlng.lat,
                 longitude: data.latlng.lng,
                 canonicalAddress: data.feature.properties.label
