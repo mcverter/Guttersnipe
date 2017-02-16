@@ -1,10 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router';
 import Kropotkin from './kropotkins/kropotkin';
+import imgsrc from '../img/piafGutterCropped.png'
+
 
 const FrontPage = (props) => (
   <section>
-    <img src="/img/piaf/Gutter1.png" />
 
     <div className="text-center jumbotron RedOnBlack">
       <ul className="nav nav-pills nav-stacked">
@@ -14,12 +15,16 @@ const FrontPage = (props) => (
        </ul>
     </div>
 
+
     <br /><hr /><br />
     <div className="jumbotron BlackOnRed text-center">
       <a ui-sref="mission">
         <q>the truth is only known by guttersnipes</q> <br />
         <cite>&nbsp;&nbsp;-- joe strummer</cite>
       </a>
+      <br />
+
+      <img src={imgsrc} />
     </div>
 
     <br /><hr /><br />
