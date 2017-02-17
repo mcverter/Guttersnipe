@@ -59,7 +59,7 @@ class SpaceSearchPanel extends Component {
                    label="Types">
                    <Select
                      value={props.input.value}
-                     onChange={(value)=> this.handleTypesChange(value, props.input.onChange)}
+                     onChange={props.input.onChange}
                      onBlur={() => props.input.onBlur(props.input.value)}
                      options={this.state.options}
                      placeholder="Pick a radius"
@@ -72,18 +72,3 @@ class SpaceSearchPanel extends Component {
 }
 
 export default SpaceSearchPanel;
-
-/*
- <Map center={this.props.location} zoom={13}>
- <TileLayer
- url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
- attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
- />
- <Marker position={this.props.location}>
- <Popup>
- <span>Location</span>
- </Popup>
- </Marker>
- </Map>
-
- */

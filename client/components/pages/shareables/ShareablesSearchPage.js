@@ -6,18 +6,30 @@ import SpaceSearchPanel from '../../shareables/space/SpaceSearchPanel'
 import TimeSearchPanel from '../../shareables/time/TimeSearchPanel'
 import ThingSearchPanel from '../../shareables/thing/ThingSearchPanel'
 import { Field, reduxForm } from 'redux-form';
+import {searchShareables} from '../../../actions/shareables/shareableActions';
 
 class ShareablesSearchPage extends Component {
 
-  render() {
-    return (
-      <div>
-        <TimeSearchPanel />
-        <SpaceSearchPanel />
-        <ThingSearchPanel />
-        <Button>Search</Button>
+  constructor(props) {
+    super(props);
+    this.handleFormSubmit = this.handleFormSubmit.bind(this);
+  }
+  handleFormSubmit(values) {
+    console.log('values are', values);
+    debugger;
+    this.props.searchShareables(values);
+  }
 
-      </div>
+  render() {
+    const {handleSubmit} = this.props;
+
+    return (
+      <form onSubmit={handleSubmit(this.handleFormSubmit)}>
+          <TimeSearchPanel />
+          <SpaceSearchPanel />
+          <ThingSearchPanel />
+          <Button type="submit">Search</Button>
+      </form>
     )
   }
 }
@@ -33,33 +45,21 @@ function mapStateToProps(state) {
   }
 }
 
-/*
-
-{
-state.browserEnv
-  "location": [
-    18.135228,
-    -97.0901879
-  ],
-  "latitude": 18.135228,
-  "longitude": -97.0901879
+function mapDispatchToProps(dispatch) {
+  return {
+    searchShareables: (formVals) => {
+      dispatch(searchShareables(formVals));
+    }
+  }
 }
- */
-/*const mapDispatchToProps = (dispatch) => {
- return {
- signInUser: (username, password) => {
- dispatch(signInUser(username, password));
- }
- };
- };
- */
+
 function validate(formProps) {
   console.log('form props', formProps);
   const errors = {};
   return errors;
 }
 
-export default connect(mapStateToProps)(
+export default connect(mapStateToProps, mapDispatchToProps())(
   reduxForm({
     form: 'shareableSearch',
     destroyOnUnmount: false,        // <------ preserve form data

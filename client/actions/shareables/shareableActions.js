@@ -2,6 +2,57 @@ import * as types from './shareableActionTypes';
 import _ from 'lodash';
 import {SERVER_URL} from '../../config';
 
+
+export function searchShareables(searchvals){
+
+  return function(dispatch) {
+    const headers = new Headers();
+    headers.append('Content-type', 'application/json');
+    const myInit = {
+      method: 'POST',
+      mode: 'cors',
+      headers: headers,
+      body:JSON.stringify({})
+    };
+    const myRequest = new Request(`${SERVER_URL}/api/shareables/search`, myInit);
+
+/*    fetch(myRequest)
+      .then(response => {
+        if (response.status === 200) {
+          response.json().then(function (data) {
+            console.log(data);
+            localStorage.setItem('token', data.access_token);
+            dispatch({type: AUTH_USER});
+            browserHistory.push('/welcome');
+          })
+        }
+        else {
+          const status = response.status;
+          const statusText = response.statusText;
+          response.json().then(function (data) {
+            dispatch(authError
+            ('Could not login ' + status + " " + statusText + ": " + data.msg));
+          })
+            .catch(() => {
+              dispatch(authError
+              ('Could not login ' + status + " " + statusText));
+
+            })
+        }
+      })
+
+      .catch(response => {
+        const errMsg =  response && response.data ? response.data.error : response;
+        dispatch (authError('Could not login ' + errMsg));
+      }); */
+  };
+}
+
+function receiveSearchResults() {
+
+}
+
+
 export function fetchAllShareables() {
     return dispatch => {
         dispatch(requestAllShareables());
