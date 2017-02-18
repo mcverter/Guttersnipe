@@ -2,9 +2,9 @@ import React, {PropTypes, Component} from "react";
 import {Link} from "react-router";
 import Button from "react-bootstrap/lib/Button";
 import { connect } from 'react-redux'
-import SpaceSearchPanel from '../../shareables/space/SpaceSearchPanel'
-import TimeSearchPanel from '../../shareables/time/TimeSearchPanel'
-import ThingSearchPanel from '../../shareables/thing/ThingSearchPanel'
+import SpaceSearchPanel from '../space/SpaceSearchPanel'
+import TimeSearchPanel from '../time/TimeSearchPanel'
+import ThingSearchPanel from '../thing/ThingSearchPanel'
 import { Field, reduxForm } from 'redux-form';
 import {searchShareables, fetchAllShareables} from '../../../actions/shareables/shareableActions';
 
@@ -14,33 +14,24 @@ class ShareablesSearchPage extends Component {
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
   }
 
-  /*
-   {longitude, latitude, distance, type_name,
-   subtype_list, tag_list, date_input}
-
-   {
-   "time_range": "2017-02-02T08:42:27 - 017-02-17T08:42:27",
-   "space_map": {
-   "latitude": 40.74983,
-   "longitude": -73.991668,
-   "canonicalAddress": "2 Penn Plaza, Manhattan, New York, NY, USA"
-   },
-   "space_radius": 1609.34,
-   "thing_type": "food",
-   "thing_subtypes": "dumpster"
-   }
-
-   */
-
+/*
+{
+  "date_input": "2017-02-08T05:00:00.000Z",
+  "distance": 1609.34,
+  "type_name": "food",
+  "subtype_list": "dumpster,food not bombs"
+}
+ */
   handleFormSubmit(values) {
     console.log('values are', values);
     const data = {
-     longditude: values.longitude,
-     latitude: values.latitude,
-     distance: values.space_radius,
-     type_name: values.thing_type,
-     subtype_list: values.thing_subtypes
-     }
+      date_input: values.time_input,
+      longitude: values.longitude,
+      latitude: values.latitude,
+      distance: values.space_radius,
+      type_name: values.thing_type,
+      subtype_list: values.thing_subtypes
+    }
     this.props.searchShareables(data);
   }
 
@@ -51,7 +42,6 @@ class ShareablesSearchPage extends Component {
         <TimeSearchPanel />
         <SpaceSearchPanel />
         <ThingSearchPanel />
-
         <Button type="submit">Search</Button>
       </form>
     )
@@ -60,7 +50,7 @@ class ShareablesSearchPage extends Component {
 function mapStateToProps(state) {
   return {
     initialValues: {
-      time_range: '2017-02-02T08:42:27 - 017-02-17T08:42:27',
+//      time_range: '2017-02-02T08:42:27 - 017-02-17T08:42:27',
       space_map: {
         currentPostion: state.browserEnv.location,
         latitude: state.browserEnv.latitude,
@@ -73,8 +63,8 @@ function mapStateToProps(state) {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    searchShareables: () => {
-      dispatch(searchShareables());
+    searchShareables: (data) => {
+      dispatch(searchShareables(data));
     }
   }
 }
@@ -90,10 +80,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(
     form: 'shareableSearch',
     destroyOnUnmount: false,        // <------ preserve form data
     forceUnregisterOnUnmount: true,  // <------ unregister fields on unmount
-    persistentSubmitErrors: true
+//    persistentSubmitErrors: true
 //    validate
   })(ShareablesSearchPage));
 
-/*
-
- */

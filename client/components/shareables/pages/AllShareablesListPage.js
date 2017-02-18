@@ -3,7 +3,7 @@ import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {fetchAllShareables} from '../../../actions/shareables/shareableActions';
 
-import ShareableLI from '../../shareables/ShareableLI';
+import ShareableLI from '../ShareableLI';
 import Table from 'react-bootstrap/lib/Table';
 
 

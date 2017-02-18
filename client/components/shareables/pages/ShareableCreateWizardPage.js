@@ -1,6 +1,6 @@
 import React, {PropTypes} from "react";
 import {connect} from "react-redux";
-import ShareableCreateWizardForm from "../../shareables/create-wizard/ShareableCreateWizardForm";
+import ShareableCreateWizardForm from "../create-wizard/ShareableCreateWizardForm";
 import {createShareable} from "../../../actions/shareables/shareableActions.js";
 
 const ShareableCreateWizardPage = () => {
