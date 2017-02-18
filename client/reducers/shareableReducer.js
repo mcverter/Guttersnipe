@@ -4,6 +4,10 @@ import initialState from './initialState';
 export default function shareables(
   shareables = initialState.shareables, action={}) {
   switch(action.type) {
+
+    case types.SHAREABLES_SEARCH_REQUEST:
+      debugger;
+      return shareables;
     case types.SHAREABLE_CATEGORIZATIONS_SUCCESS:
       return Object.assign({}, shareables, {
         categorizationMeta : action.categorizationMeta
