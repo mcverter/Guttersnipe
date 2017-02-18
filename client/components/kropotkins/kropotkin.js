@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
-import {fetchRandomKropotkin} from '../../actions/kropotkins/kropotkinActions'
+import {fetchRandomKropotkin} from '../../actions/kropotkins/kropotkinActions';
 
 class KropotkinQuote extends Component {
 
@@ -11,9 +11,8 @@ class KropotkinQuote extends Component {
   render() {
     const {isFetchingKropotkin, kropotkinFetchError, paragraph} = this.props.kropotkin;
     if (isFetchingKropotkin || kropotkinFetchError || ! paragraph) {
-      return <h1></h1>;
+      return <h1 />;
     }
-    console.log('props', this.props)
     return (
       <div className="RedOnBlack">
         <div className="text-center BlackOnRed">
@@ -24,10 +23,9 @@ class KropotkinQuote extends Component {
         </div>
         <button className="btn btn-danger" role="button" >New Quote</button>
       </div>
-    )
+    );
   }
 }
-
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -41,6 +39,13 @@ const mapStateToProps = (state) => {
   return {
     kropotkin: state.kropotkin
   };
-}
+};
+
+KropotkinQuote.propTypes = {
+  fetchRandomKropotkin: PropTypes.func,
+  isFetchingKropotkin: PropTypes.bool,
+  kropotkinFetchError: PropTypes.func,
+  kropotkin: PropTypes.object
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(KropotkinQuote);

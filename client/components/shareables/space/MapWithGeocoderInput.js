@@ -30,10 +30,10 @@ export default class MapWithGeocoder extends Component {
     }
 
     render() {
-        return <div ref={(el) => { this.el = el }} /> ;
+        return <div ref={(el) => { this.el = el }} />;
     }
 }
 
 MapWithGeocoder.propTypes = {
- // input: PropTypes.object
+ formInput: PropTypes.object
 };

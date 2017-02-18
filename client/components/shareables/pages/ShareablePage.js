@@ -28,7 +28,6 @@ class ShareablePage extends React.Component {
       return <div>Loading...</div>;
     }
 
-
     if (this.props.isFetchingShareables) {
       return <div>Loading...</div>;
     }
@@ -40,7 +39,7 @@ class ShareablePage extends React.Component {
 }
 
 ShareablePage.propTypes = {
-  fetchSingleShareableIfNeeded: PropTypes.func.isRequired,
+  fetchSingleShareableIfNeeded: PropTypes.func,
   params: PropTypes.object,
   shareableItems: PropTypes.array,
   selectedIndex: PropTypes.number,
@@ -56,5 +55,3 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps, {fetchSingleShareableIfNeeded})(ShareablePage);
-
-

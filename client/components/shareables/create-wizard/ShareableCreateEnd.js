@@ -13,7 +13,6 @@ const ShareableCreateEnd = ({handleSubmit, previousPage}) => (
       <Button type="button" className="previous" onClick={previousPage}>Previous</Button>
       <Button type="button" className="next" onClick={handleSubmit}>Create New Shareable</Button>
     </div>
-
   </form>
 );
 

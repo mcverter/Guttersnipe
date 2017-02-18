@@ -12,7 +12,6 @@ import Button from 'react-bootstrap/lib/Button';
 import {connect} from 'react-redux';
 
 
-
 class TimeCreate extends Component {
   render() {
         return(
@@ -26,10 +25,9 @@ class TimeCreate extends Component {
                    label="Schedule of Shareable" >
                    <CalendarInputField
                      headline={this.props.headline}
-                     inp={props.input}
+                     formInput={props.input}
                    />
                  </ReduxFormComponentField>} />
-
         <Field name="time_notes" type="text" component={ReduxFormHTMLInput} label="Additional Notes"/>
         <div>
           <Button type="button" className="previous" onClick={this.props.previousPage}>Previous</Button>
@@ -47,7 +45,7 @@ TimeCreate.propTypes = {
   headline: PropTypes.string
 };
 
-const selector = formValueSelector('wizard') // <-- same as form name
+const selector = formValueSelector('wizard'); // <-- same as form name
 TimeCreate = connect(
   state => {
     // can select values individually

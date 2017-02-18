@@ -1,5 +1,5 @@
 import React, {PropTypes} from 'react';
-import {renderMainType, renderTags, renderSubtypes} from './utils/transformThingInformation'
+import {renderMainType, renderTags, renderSubtypes} from './utils/transformThingInformation';
 
 
 const ThingFull = ({headline, thing: {description_how, description_what, notes,
@@ -36,14 +36,15 @@ const ThingFull = ({headline, thing: {description_how, description_what, notes,
 
 
 ThingFull.propTypes = {
-  thing: PropTypes.object.isRequired
+  thing: PropTypes.object,
+  headline: PropTypes.string
 };
 
 export default ThingFull;
 
 
-/*    main_type: PropTypes.string.isRequired,
- subtypes: PropTypes.arrayOf(PropTypes.string).isRequired,
+/*    main_type: PropTypes.string,
+ subtypes: PropTypes.arrayOf(PropTypes.string),
  description_how: PropTypes.string,
  description_what: PropTypes.string,
  notes: PropTypes.string,

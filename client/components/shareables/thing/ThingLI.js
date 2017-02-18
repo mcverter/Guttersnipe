@@ -1,5 +1,5 @@
 import React, {PropTypes, Component} from 'react';
-import {renderMainType, renderTags, renderSubtypes} from './utils/transformThingInformation'
+import {renderMainType, renderTags, renderSubtypes} from './utils/transformThingInformation';
 
 const ThingLI = ({thing: {main_type, subtypes, tags}}) => (
   <div>
@@ -9,10 +9,8 @@ const ThingLI = ({thing: {main_type, subtypes, tags}}) => (
   </div>
 );
 
-
-
 ThingLI.propTypes = {
-  thing: PropTypes.object.isRequired
+  thing: PropTypes.object
 };
 
 export default ThingLI;

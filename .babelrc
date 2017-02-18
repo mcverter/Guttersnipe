@@ -4,6 +4,9 @@
     "react",
     "stage-1"
   ],
+  "plugins": [
+    "transform-object-rest-spread"
+  ],
   "env": {
     "development": {
       "presets": [
@@ -13,7 +16,7 @@
     "production": {
       "plugins": [
         "transform-react-constant-elements",
-        "transform-react-remove-prop-types"
+        "transform-react-remove-prop-types",
       ]
     }
   }

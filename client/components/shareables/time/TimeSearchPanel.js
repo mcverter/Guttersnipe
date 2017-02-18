@@ -8,28 +8,20 @@ import Button from "react-bootstrap/lib/Button";
 import DateTime from 'react-datetime';
 import 'react-datetime/css/react-datetime.css'
 
-
-
-class TimeSearchPanel extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <div>
-        <h2> When would you like to go </h2>
-        <Field name="time_input"
-               component={props =>
-                 <ReduxFormComponentField
-                   meta={props.meta}
-                   label="Date ">
-                   <DateTime
-                     value={props.input.value}
-                     onChange={props.input.onChange} />
-                 </ReduxFormComponentField>} />
-      </div>
-    )
-  }
+const TimeSearchPanel = (props) => {
+  return (
+    <div>
+      <h2> When would you like to go </h2>
+      <Field name="time_input"
+             component={props =>
+               <ReduxFormComponentField
+                 meta={props.meta}
+                 label="Date ">
+                 <DateTime
+                   value={props.input.value}
+                   onChange={props.input.onChange} />
+               </ReduxFormComponentField>} />
+    </div>
+  );
 }
 export default TimeSearchPanel;

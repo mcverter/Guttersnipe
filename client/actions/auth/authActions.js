@@ -21,24 +21,22 @@ export function signInUser({email, password}) {
       .then(response => {
         if (response.status === 200) {
           response.json().then(function (data) {
-            console.log(data);
             localStorage.setItem('token', data.access_token);
             dispatch({type: AUTH_USER});
             browserHistory.push('/welcome');
-          })
+          });
         }
         else {
           const status = response.status;
           const statusText = response.statusText;
           response.json().then(function (data) {
-            dispatch(authError
-            ('Could not login ' + status + " " + statusText + ": " + data.msg));
+            dispatch(authError(
+              'Could not login ' + status + " " + statusText + ": " + data.msg));
           })
             .catch(() => {
-              dispatch(authError
-              ('Could not login ' + status + " " + statusText));
-
-            })
+              dispatch(authError(
+                'Could not login ' + status + " " + statusText));
+            });
         }
       })
 
@@ -67,7 +65,6 @@ export function signUpUser({email, password}) {
       .then(response => {
         if (response.status === 200) {
           response.json().then(function (data) {
-            console.log(data);
             localStorage.setItem('token', data.access_token);
             dispatch({type: AUTH_USER});
             browserHistory.push('/welcome');
@@ -77,13 +74,13 @@ export function signUpUser({email, password}) {
           const status = response.status;
           const statusText = response.statusText;
           response.json().then(function (data) {
-            dispatch(authError
-            ('Could not signup ' + status + " " + statusText + ": " + data.msg));
+            dispatch(authError(
+              'Could not signup ' + status + " " + statusText + ": " + data.msg));
           })
             .catch(() => {
-              dispatch(authError
-              ('Could not sign up ' + status + " " + statusText));
-            })
+              dispatch(authError(
+                'Could not sign up ' + status + " " + statusText));
+            });
         }
       })
       .catch(response => {

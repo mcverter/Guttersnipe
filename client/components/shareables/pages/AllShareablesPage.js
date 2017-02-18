@@ -1,15 +1,16 @@
 import React, {PropTypes, Component} from "react";
+import { connect } from 'react-redux';
 import {Link} from "react-router";
+
 import Tabs from "react-bootstrap/lib/Tabs";
 import Tab from "react-bootstrap/lib/Tab";
+
 import AllShareablesListPage from './AllShareablesListPage';
 import AllShareablesMapPage from './AllShareablesMapPage';
-import AllShareablesCalendarPage from './AllShareablesCalendarPage'
-import { connect } from 'react-redux'
-import {STORE_BROWSER_LOCATION} from '../../../actions/browserEnv/browserEnvActionTypes';
+import AllShareablesCalendarPage from './AllShareablesCalendarPage';
+
 import {setBrowserLocation} from '../../../actions/browserEnv/browserEnvActions';
 import {fetchAllShareables} from '../../../actions/shareables/shareableActions';
-
 
 class AllShareablesPage extends Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class AllShareablesPage extends Component {
 
     this.state = ({
       mapIsActiveView: false
-    })
+    });
   }
 
   componentWillMount() {
@@ -32,11 +33,9 @@ class AllShareablesPage extends Component {
     this.setState({mapIsActiveView: true});
   }
 
-
   unsetMapAsActiveView() {
     this.setState({mapIsActiveView: false});
   }
-
 
   render() {
     return (
@@ -52,13 +51,17 @@ class AllShareablesPage extends Component {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchAllShareables: () => {
-      dispatch(fetchAllShareables())
+      dispatch(fetchAllShareables());
     },
     setBrowserLocation: () => {
-      dispatch(setBrowserLocation() );
+      dispatch(setBrowserLocation());
     }
   };
 };
 
+AllShareablesCalendarPage.propTypes = {
+  fetchAllShareables: PropTypes.func,
+  setBrowserLocation: PropTypes.func
+}
 
 export default connect(null, mapDispatchToProps) (AllShareablesPage);

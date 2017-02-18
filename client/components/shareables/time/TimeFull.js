@@ -18,8 +18,8 @@ const TimeFull = (props) => (
  */
 
 TimeFull.propTypes = {
-  headline: PropTypes.string.isRequired,
-  time: PropTypes.object.isRequired
+  headline: PropTypes.string,
+  time: PropTypes.object
 //  , month: PropTypes.string
 };
 

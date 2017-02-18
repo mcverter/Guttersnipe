@@ -1,12 +1,10 @@
 import React from 'react';
 import {Link} from 'react-router';
 import Kropotkin from './kropotkins/kropotkin';
-import imgsrc from '../img/piafGutterCropped.png'
-
+import imgsrc from '../img/piafGutterCropped.png';
 
 const FrontPage = (props) => (
   <section>
-
     <div className="text-center jumbotron RedOnBlack">
       <ul className="nav nav-pills nav-stacked">
         <li><Link to="/shareables/create" className="btn btn-lg BlackOnRed"> Create Shareable </Link></li>
@@ -14,7 +12,6 @@ const FrontPage = (props) => (
         <li><Link to="/shareables/search" className="btn btn-lg BlackOnRed"> Search Shareables </Link></li>
        </ul>
     </div>
-
 
     <br /><hr /><br />
     <div className="jumbotron BlackOnRed text-center">
@@ -31,7 +28,6 @@ const FrontPage = (props) => (
     <Kropotkin/>
 
   </section>
-
 );
 
 export default FrontPage;

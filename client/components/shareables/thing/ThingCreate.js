@@ -136,14 +136,12 @@ ThingCreate.propTypes = {
   previousPage: PropTypes.func
 };
 
-const selector = formValueSelector('wizard') // <-- same as form name
+const selector = formValueSelector('wizard');
 ThingCreate = connect(
   state => {
-    // can select values individually
-    const headline = selector(state, 'headline')
     return {
-      headline
-    }
+      headline: selector(state, 'headline')
+    };
   }
 )(ThingCreate);
 

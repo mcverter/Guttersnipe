@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ShareableEditPage = (props) => {
-  <div> ShareableEditPage</div>
+  return <div> ShareableEditPage</div>;
 };
 
 export default ShareableEditPage;

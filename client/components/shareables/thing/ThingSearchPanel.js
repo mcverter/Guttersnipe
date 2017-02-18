@@ -1,11 +1,11 @@
 import React, {PropTypes, Component} from "react";
 import {Link} from "react-router";
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import ReduxFormComponentField from '../../reduxFormInputs/ReduxFormComponentField';
 import Select, {Creatable} from 'react-select';
 import { Field} from 'redux-form';
 import {fetchShareableCategorizations} from '../../../actions/shareables/shareableActions';
-
+import _ from 'lodash';
 
 class ThingSearchPanel extends Component {
 constructor(props) {
@@ -26,7 +26,7 @@ constructor(props) {
   }
 
     componentWillReceiveProps(nextProps) {
-    this.categorizationMetaToSelectOptions(nextProps.categorizationMeta)
+    this.categorizationMetaToSelectOptions(nextProps.categorizationMeta);
   }
 
   categorizationMetaToSelectOptions(categorizationMeta) {
@@ -43,7 +43,7 @@ constructor(props) {
         subtypes: categorizationMeta[typeKey].map(subKey => {
           return {value: subKey,  label: subKey};
         })
-      })
+      });
     }, [])});
   }
 
@@ -106,11 +106,15 @@ constructor(props) {
                      simpleValue
                      multi={true} />
                  </ReduxFormComponentField>}/>
-
       </div>
     )
   }
 }
+
+ThingSearchPanel.propTypes = {
+  categorizationMeta: PropTypes.object,
+  fetchShareableCategorizations: PropTypes.func
+};
 
 function mapStateToProps(state) {
   return {

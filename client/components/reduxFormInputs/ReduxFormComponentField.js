@@ -19,7 +19,7 @@ const ReduxFormComponentField = (props) => {
 ReduxFormComponentField.propTypes = {
   label: PropTypes.string,
   meta: PropTypes.object,
-  children: React.PropTypes.element.isRequired
+  children: React.PropTypes.element
 };
 
 

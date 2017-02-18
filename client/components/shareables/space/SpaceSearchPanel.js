@@ -1,6 +1,6 @@
 import React, {PropTypes, Component} from "react";
 import {Link} from "react-router";
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import MapWithGeocoderInput from './MapWithGeocoderInput';
 import Select from 'react-select';
 
@@ -24,17 +24,12 @@ class SpaceSearchPanel extends Component {
 
     this.state = {
       options: options
-    }
+    };
 
     this.setValue = this.setValue.bind(this);
   }
 
-  setValue(value) {
-    console.log('value', value);
-  }
-
   render() {
-//    const position = this.props.location;
     return (
       <div>
         <h2> Pick a center for your search </h2>
@@ -49,9 +44,7 @@ class SpaceSearchPanel extends Component {
                    />
                  </ReduxFormComponentField>}/>
 
-
         <h2> Pick a radius for your search </h2>
-
         <Field name="space_radius"
                component={props =>
                  <ReduxFormComponentField
@@ -65,9 +58,8 @@ class SpaceSearchPanel extends Component {
                      placeholder="Pick a radius"
                      simpleValue/>
                  </ReduxFormComponentField>} />
-
       </div>
-    )
+    );
   }
 }
 

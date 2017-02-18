@@ -69,7 +69,7 @@ class TimeLI extends Component {
     }
 }
 TimeLI.propTypes = {
-    time: PropTypes.object.isRequired
+    time: PropTypes.object
 };
 
 export default TimeLI;

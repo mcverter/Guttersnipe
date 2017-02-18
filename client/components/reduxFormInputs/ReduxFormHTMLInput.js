@@ -19,7 +19,8 @@ const ReduxFormHTMLInput = ( { input, label, type, meta: { touched, error } } ) 
 ReduxFormHTMLInput.propTypes = {
   label: PropTypes.string,
   meta: PropTypes.object,
-  type: PropTypes.string
+  type: PropTypes.string,
+  input: PropTypes.object
 };
 
 export default ReduxFormHTMLInput;

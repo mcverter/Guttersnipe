@@ -5,8 +5,7 @@ import {SERVER_URL} from "../../config";
 function shareableSearchRequest() {
   return {
     type: types.SHAREABLES_SEARCH_REQUEST
-
-  }
+  };
 }
 
 export function searchShareables(params={}){
@@ -19,7 +18,6 @@ export function searchShareables(params={}){
         dispatch(receiveAllShareables(json)));
   };
 }
-
 
 export function fetchAllShareables() {
   return dispatch => {

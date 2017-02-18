@@ -3,9 +3,7 @@ import React, {PropTypes} from 'react';
 import L from 'leaflet';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 
-
-const SpaceFull = ({space,
-  canonical_address,  alternate_names, notes}) =>  {
+const SpaceFull = ({space}) =>  {
     const {latitude, longitude} = JSON.parse(space.position);
     const position = [longitude, latitude];
 
@@ -28,7 +26,7 @@ const SpaceFull = ({space,
 };
 
 SpaceFull.propTypes = {
-    space: PropTypes.object.isRequired
+    space: PropTypes.object
 };
 
 export default SpaceFull;

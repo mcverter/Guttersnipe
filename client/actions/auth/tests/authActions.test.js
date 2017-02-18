@@ -15,5 +15,5 @@ describe('AuthActions', () => {
   });
   describe('signUpUser', () => {
   });
-})
+});
 

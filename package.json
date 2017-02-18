@@ -14,7 +14,7 @@
     "prestart": "npm-run-all --parallel start-message",
     "start-test": "npm-run-all --parallel test:watch open:client lint:watch",
     "start-skinny": "npm-run-all --parallel open:client",
-    "start": "npm run start-skinny",
+    "start": "npm run start-test",
     "open:client": "babel-node tools/srcServer.js",
     "open:dist": "babel-node tools/distServer.js",
     "lint": "esw webpack.config.* client tools --color",

@@ -8,7 +8,6 @@ const CommentFull = ({comment, author, date}) => (
   </div>
 );
 
-
 CommentFull.propTypes = {
   comment: PropTypes.string,
   author: PropTypes.string,

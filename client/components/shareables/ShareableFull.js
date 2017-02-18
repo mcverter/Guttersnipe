@@ -21,17 +21,17 @@ const ShareableFull = ( { shareable:{headline, summary,
 };
 
 ShareableFull.propTypes = {
-  shareable: PropTypes.object.isRequired
+  shareable: PropTypes.object
   /*
         {number_ratings && <div><h3>Rating</h3> total_rating/number_ratings </div>}
 
-   headline: PropTypes.string.isRequired,
-   summary: PropTypes.string.isRequired,
+   headline: PropTypes.string,
+   summary: PropTypes.string,
    number_ratings: PropTypes.number,
    total_rating: PropTypes.number,
-   thing: PropTypes.object.isRequired,
-   space: PropTypes.object.isRequired,
-   time: PropTypes.object.isRequired,
+   thing: PropTypes.object,
+   space: PropTypes.object,
+   time: PropTypes.object,
    notes:PropTypes.string,
    comments: PropTypes.arrayOf(PropTypes.object)
    */

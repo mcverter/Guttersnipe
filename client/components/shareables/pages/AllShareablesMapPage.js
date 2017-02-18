@@ -12,9 +12,12 @@ class AllShareablesMapPage extends React.Component {
     this.renderMarker = this.renderMarker.bind(this);
   }
 
-  componentWillMount() {
-//    this.props.fetchAllShareables();
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.isActiveView && this.map) {
+      this.map.leafletElement.invalidateSize(false);
+    }
   }
+
 
   calculateCenter(shareables) {
     return [40.693922, -73.991764];
@@ -29,22 +32,13 @@ class AllShareablesMapPage extends React.Component {
     return(
       <Marker key={`marker${id}`} position={position}>
         <Popup key={`popup${id}`}>
-        <div>
-          <h3> {headline}</h3>
-          <a href={"/shareables/shareable/" + id}> Full Record </a>
-        </div>
+          <div>
+            <h3> {headline}</h3>
+            <a href={"/shareables/shareable/" + id}> Full Record </a>
+          </div>
         </Popup>
       </Marker>
     );
-  }
-  componentWillReceiveProps(nextProps) {
-    console.log('next props', nextProps);
-
-    if (nextProps.isActiveView && this.map) {
-      console.log('resizing');
-
-      this.map.leafletElement.invalidateSize(false);
-    }
   }
 
   render() {
@@ -66,15 +60,15 @@ class AllShareablesMapPage extends React.Component {
             url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           />
-           {items.map(shareable => this.renderMarker(shareable))}
+          {items.map(shareable => this.renderMarker(shareable))}
         </Map>
       </div>
     )
   }
 }
 AllShareablesMapPage.propTypes = {
-  shareables: PropTypes.object.isRequired,
-  fetchAllShareables: PropTypes.func.isRequired
+  shareables: PropTypes.object,
+  fetchAllShareables: PropTypes.func
 };
 
 function mapStateToProps(state) {

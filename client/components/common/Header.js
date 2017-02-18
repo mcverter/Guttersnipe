@@ -9,13 +9,9 @@ import NavDropdown from 'react-bootstrap/lib/NavDropdown';
 import { LinkContainer } from 'react-router-bootstrap';
 
 
-class Header extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  renderAuthLinks() {
-    if (this.props.authenticated) {
+const Header = ({authenticated}) => {
+  const renderAuthLinks = () => {
+    if (authenticated) {
       return (
         <LinkContainer to="/auth/signout" className="navbar-brand ">
           <NavItem eventKey={3} title="Sign Out">Sign Out</NavItem>
@@ -33,25 +29,23 @@ class Header extends Component {
         </NavDropdown>
       );
     }
-  }
+  };
 
-  render() {
-    return (
-      <Navbar className="gs-navbar">
-        <Navbar.Header>
-          <Navbar.Brand>
-            <LinkContainer to="/" className="navbar-brand ">
-              <NavItem eventKey={5} title="Home Page">Guttersnipe</NavItem>
-            </LinkContainer>
-          </Navbar.Brand>
-        </Navbar.Header>
-        <Nav pullRight>
-          {this.renderAuthLinks()}
-        </Nav>
-      </Navbar>
-    );
-  }
-}
+  return (
+    <Navbar className="gs-navbar">
+      <Navbar.Header>
+        <Navbar.Brand>
+          <LinkContainer to="/" className="navbar-brand ">
+            <NavItem eventKey={5} title="Home Page">Guttersnipe</NavItem>
+          </LinkContainer>
+        </Navbar.Brand>
+      </Navbar.Header>
+      <Nav pullRight>
+        {renderAuthLinks()}
+      </Nav>
+    </Navbar>
+  );
+};
 
 function mapStateToProps(state) {
   return {

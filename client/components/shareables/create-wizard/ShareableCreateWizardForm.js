@@ -12,7 +12,6 @@ class ShareableCreateWizardForm extends Component {
     this.state = {
       page: 1
     };
-
     this.nextPage = this.nextPage.bind(this);
     this.previousPage = this.previousPage.bind(this);
   }
@@ -42,6 +41,5 @@ class ShareableCreateWizardForm extends Component {
 ShareableCreateWizardForm.propTypes = {
   handleSubmit: PropTypes.func
 };
-
 
 export default ShareableCreateWizardForm;

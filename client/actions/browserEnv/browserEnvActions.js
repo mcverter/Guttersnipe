@@ -12,9 +12,8 @@ export function setBrowserLocation() {
   return function(dispatch) {
     getBrowserLocationAsPromise()
       .then(coords=>{
-        console.log('foo');
         dispatch({type: STORE_BROWSER_LOCATION, location: coords})
-      })
-  }
+      });
+  };
 }
 

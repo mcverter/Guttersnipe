@@ -9,8 +9,8 @@ const renderArrayedLabels = (categories, label, style) => {
       <div>
         <h3>{label}</h3>
         {categories.map((cat)=>{
-          return <Button bsStyle={style} key={cat}>{cat}</Button>})}
-      </div>)
+          return <Button bsStyle={style} key={cat}>{cat}</Button>;})}
+      </div>);
   }
 };
 
@@ -21,7 +21,7 @@ export const renderMainType = (main_type) => {
       <h2>Main Type</h2>
       <Button bsSize="large" bsStyle="success">{main_type.name}</Button>
     </div>
-  )
+  );
 };
 
 export const renderSubtypes = (subtypes) => (

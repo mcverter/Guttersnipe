@@ -2,11 +2,9 @@ import React, {PropTypes, Component} from 'react';
 
 import moment from 'moment';
 import BigCalendar from 'react-big-calendar';
-import {calculateAllEvents} from './utils/calendarTransformations'
 BigCalendar.momentLocalizer(moment);
 
-const EventCalendarView = ({headline, viewMonth,
-  handleSelectSlot, handleNavigation,
+const EventCalendarView = ({handleSelectSlot, handleNavigation,
   selectable, events}) => {
 
 
@@ -24,8 +22,8 @@ const EventCalendarView = ({headline, viewMonth,
 };
 
 EventCalendarView.propTypes = {
-  events: PropTypes.array.isRequired,
-  handleNavigation: PropTypes.func.isRequired,
+  events: PropTypes.array,
+  handleNavigation: PropTypes.func,
   handleSelectSlot: PropTypes.func,
   selectable: PropTypes.bool
 };

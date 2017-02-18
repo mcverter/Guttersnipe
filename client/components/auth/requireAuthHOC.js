@@ -7,7 +7,6 @@ export default function(ComposedComponent) {
       router: React.PropTypes.object
     };
 
-
     componentWillMount() {
       if (!this.props.authentication) {
         this.context.router.push('/')

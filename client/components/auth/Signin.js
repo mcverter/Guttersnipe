@@ -7,42 +7,34 @@ import {connect} from 'react-redux';
 
 import {signInUser} from '../../actions/auth/authActions';
 
-class Signin extends Component {
-  constructor(props) {
-    super(props);
-    this.handleFormSubmit = this.handleFormSubmit.bind(this);
-  }
-  handleFormSubmit({email, password}) {
-    this.props.signInUser({email, password});
-  }
+const Signin = (props) => {
+  const {handleSubmit} = props;
 
+  const handleFormSubmit = ({email, password}) => {
+    props.signInUser({email, password});
+  };
 
-  renderAlert() {
-    if (this.props.errorMessage) {
+  const renderAlert = () => {
+    if (props.errorMessage) {
       return (
         <div className="alert alert-danger">
-          <strong>Oops!</strong> {this.props.errorMessage}
+          <strong>Oops!</strong> {props.errorMessage}
         </div>
       );
     }
-  }
+  };
 
-
-  render () {
-    const {handleSubmit} = this.props;
-    return (
-      <form onSubmit={handleSubmit(this.handleFormSubmit)}>
-        <Field name="email" type="text" component={ReduxFormHTMLInput} label="Email"/>
-        <Field name="password" type="password" component={ReduxFormHTMLInput} label="Password"/>
-        <div>
-          <Button type="submit">Sign In</Button>
-        </div>
-      {this.renderAlert()}
-
-      </form>
-    );
-  }
-}
+  return (
+    <form onSubmit={handleSubmit(handleFormSubmit)}>
+      <Field name="email" type="text" component={ReduxFormHTMLInput} label="Email"/>
+      <Field name="password" type="password" component={ReduxFormHTMLInput} label="Password"/>
+      <div>
+        <Button type="submit">Sign In</Button>
+      </div>
+      {renderAlert()}
+    </form>
+  );
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -57,14 +49,14 @@ function mapStateToProps(state) {
 }
 
 function validate(formProps) {
-    const errors = {};
-    return errors;
+  const errors = {};
+  return errors;
 }
 
 Signin.propTypes = {
-  signInUser: PropTypes.func.isRequired,
+  signInUser: PropTypes.func,
   errorMessage: PropTypes.string,
-  handleSubmit: PropTypes.func.isRequired
+  handleSubmit: PropTypes.func
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(

@@ -16,7 +16,7 @@ class CalendarInputField extends Component {
       modalDay: '',
       modalRepeating: false,
     };
-    
+
     // calendar
     this.handleCalendarSelectSlot = this.handleCalendarSelectSlot.bind(this);
 
@@ -81,8 +81,8 @@ class CalendarInputField extends Component {
 
   handleModalSubmit(event) {
     if (this.state.modalRepeating) {
-      this.props.inp.onChange(
-        this.props.inp.value.concat(
+      this.props.formInput.onChange(
+        this.props.formInput.value.concat(
           {
             dt_start: moment(this.state.modalDate + " " +
               this.state.modalStartTime, "MMMM DD, YYYY HH:mm")
@@ -96,8 +96,8 @@ class CalendarInputField extends Component {
               byDay: this.state.modalDay.substring(0, 2).toLowerCase()
             }}))}
     else {
-      this.props.inp.onChange(
-        this.props.inp.value.concat({
+      this.props.formInput.onChange(
+        this.props.formInput.value.concat({
           dt_start: moment(
             this.state.modalDate + " " + this.state.modalStartTime, "MMMM DD, YYYY HH:mm")
             .format('YYYY-MM-DDTHH:mm:ss'),
@@ -140,7 +140,7 @@ class CalendarInputField extends Component {
         <EventCalendarNavigable
           arrayOfCalendarEventsWithHeadlines={[{
             headline: this.props.headline,
-            calendarEvents: this.props.inp.value
+            calendarEvents: this.props.formInput.value
           }]}
           viewMonth={new Date()}
           handleSelectSlot={this.handleCalendarSelectSlot}
@@ -166,8 +166,8 @@ class CalendarInputField extends Component {
 }
 
 CalendarInputField.propTypes = {
-//  headline: PropTypes.string.isRequired,
-//  inp:  PropTypes.object
+  formInput:  PropTypes.object,
+  headline: PropTypes.string
 };
 
 export default CalendarInputField;

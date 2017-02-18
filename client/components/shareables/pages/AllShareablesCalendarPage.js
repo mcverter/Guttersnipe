@@ -4,43 +4,28 @@ import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import {connect} from 'react-redux';
 import {fetchAllShareables} from '../../../actions/shareables/shareableActions';
 import {Link} from 'react-router';
-import EventCalendarNavigable from '../time/EventCalendarNavigable'
+import EventCalendarNavigable from '../time/EventCalendarNavigable';
 
-class AllShareablesCalendarPage extends React.Component {
-  constructor(props) {
-    super(props);
+const AllShareablesCalendarPage = (props) => {
+  const {shareables: {isFetchingShareables, items}}= props;
+
+  if (isFetchingShareables || !items || items.length < 1) {
+    return <div>Loading...</div>;
   }
 
-  componentWillMount() {
-//    this.props.fetchAllShareables();
-  }
+  const allEvents = items.map((item)=>
+    ({calendarEvents: item.time.calendar.events, headline: item.headline}));
 
-  render() {
-    const {
-      shareables: {
-        isFetchingShareables,
-        shareableFetchError, items, selectedIndex
-      }
-    }  = this.props;
-
-    if (isFetchingShareables || !items || items.length < 1) {
-      return <div>Loading...</div>;
-    }
-
-    const allEvents = items.map((item)=>
-      ({calendarEvents: item.time.calendar.events, headline: item.headline}));
-
-    return (
+  return (
     <EventCalendarNavigable
       arrayOfCalendarEventsWithHeadlines={allEvents}
-        viewMonth={new Date()} />
-    )
-  }
-}
+      viewMonth={new Date()} />
+  );
+};
 
 AllShareablesCalendarPage.propTypes = {
-  shareables: PropTypes.object.isRequired,
-  fetchAllShareables: PropTypes.func.isRequired
+  shareables: PropTypes.object,
+  fetchAllShareables: PropTypes.func
 };
 
 function mapStateToProps(state) {
