@@ -14,7 +14,7 @@ export default class MapWithGeocoder extends Component {
             this.props.formInput.value.latitude,
             this.props.formInput.value.longitude], 12);
         let  geoCoderOptions = {
-            bounds: true,
+            bounds: false,
             position: 'topright',
             expanded: true
         };
