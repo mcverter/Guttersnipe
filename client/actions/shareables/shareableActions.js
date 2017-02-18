@@ -10,10 +10,8 @@ function shareableSearchRequest() {
 }
 
 export function searchShareables(params={}){
-  debugger;
   return dispatch => {
     dispatch(shareableSearchRequest());
-
     return fetch(`${SERVER_URL}/api/shareables/search`,
       { method: 'POST', body: JSON.stringify(params) })
       .then(response=>response.json())

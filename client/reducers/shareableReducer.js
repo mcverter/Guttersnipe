@@ -6,7 +6,6 @@ export default function shareables(
   switch(action.type) {
 
     case types.SHAREABLES_SEARCH_REQUEST:
-      debugger;
       return shareables;
     case types.SHAREABLE_CATEGORIZATIONS_SUCCESS:
       return Object.assign({}, shareables, {
