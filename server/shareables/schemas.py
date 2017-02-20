@@ -1,7 +1,7 @@
 from server import db
 
 from marshmallow import  fields
-from server.calendars.schemas import CalendarSchema
+from server.calendars.schemas import ScheduleSchema
 from marshmallow_sqlalchemy import ModelSchema
 from server.shareables.models import Shareable, Thing, Space, Time, \
   MainType, Subtype, Comment
@@ -34,7 +34,7 @@ class ThingSchema(BaseSchema):
     model = Thing
 
 class TimeSchema(BaseSchema):
-  calendar = fields.Nested(CalendarSchema)
+  schedule = fields.Nested(ScheduleSchema)
 
   class Meta:
     model = Time

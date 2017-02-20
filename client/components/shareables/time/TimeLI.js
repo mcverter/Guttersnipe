@@ -6,7 +6,7 @@ class TimeLI extends Component {
     constructor(props) {
         super(props);
         let {time} = props;
-        let events = time.calendar.events;
+        let events = time.schedule.events;
         let event = events[0];
         let fixedDates = [];
         let recurringDates = [];

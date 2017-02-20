@@ -1,22 +1,8 @@
 """
+The Following class is used to model availability Schedules events
+  of Shareables and of Guttersnipe Users
 
- "error": "(raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely) (IntegrityError) new row for relation \"recurrence_rule\" violates check constraint \"recurrence_rule_freq_check\"\nDETAIL:  Failing row contains (2, weekly, mo, null, null, null, null, null, null, 1, null).\n 'INSERT INTO recurrence_rule (freq, \"byDay\", \"byMonthDay\", \"byYearDay\", \"byWeekNo\", \"byMonth\", until, count, interval, \"bySetPos\") VALUES (%(freq)s, %(byDay)s, %(byMonthDay)s, %(byYearDay)s, %(byWeekNo)s, %(byMonth)s, %(until)s, %(count)s, %(interval)s, %(bySetPos)s) RETURNING recurrence_rule.id' {'count': None, 'bySetPos': None, 'byDay': u'mo', 'byYearDay': None, 'byWeekNo': None, 'byMonth': None, 'interval': 1, 'byMonthDay': None, 'freq': u'weekly', 'until': None}"
-}
-class Parent(Base):
-    __tablename__ = 'parent'
-    id = Column(Integer, primary_key=True)
-    children = relationship("Child")
-
-class Child(Base):
-    __tablename__ = 'child'
-    id = Column(Integer, primary_key=True)
-    parent_id = Column(Integer, ForeignKey('parent.id'))
-
-The following file represents Guttersnipe's implementation
-of the iCalendar RFC
-https://tools.ietf.org/html/rfc5545
-
-In particular, it implements Schedules with
+It uses the following iCalendar specification to model Schedules
 * Events (VEvent: https://tools.ietf.org/html/rfc5545#section-3.6.1)
 * Recurrence Rules (Rrule: https://tools.ietf.org/html/rfc5545#section-3.3.10)
 
@@ -51,7 +37,7 @@ class RecurrenceRule(db.Model):
     # Frequency Type
     freq = db.Column(db.String(8), nullable=False, default='weekly')  # type of recurrence
 
-    # Calendar-Based Rules
+    # Schedule-Based Rules
 
     # List of Day of the Week
     # "mo,tu,we" for weekly
@@ -81,18 +67,6 @@ class RecurrenceRule(db.Model):
     bySetPos = db.Column(db.String())  # Specifies specific instances of recurrence
 
 
-# Valid Values
-#    CheckConstraint(freq in ('yearly', 'monthly', 'weekly', 'daily', 'single'),
-#                    name='Valid: Frequency Value')
-#    CheckConstraint(interval > 0, name='Valid: Positive Interval')
-#    CheckConstraint(byDay is not None and freq in ('daily', 'yearly', 'monthly'))
-#    CheckConstraint(byWeekNo is not None and freq in ('yearly', 'monthly'))
-#    CheckConstraint(byYearDay is not None and freq == 'yearly')
-
-# Until and Count may not coexist in the same rule.
-#    CheckConstraint(not (until is not None and count is not None),
-#                    name='Valid: Not Both Until and Count')
-
     def __init__(self, freq,
                  byDay=None, byMonthDay=None, byYearDay=None, byWeekNo=None, byMonth=None,
                  until=None, count=None, interval=None, bySetPos=None
@@ -118,12 +92,10 @@ class Event(db.Model):
     dt_start = db.Column(db.DateTime)  # start time
     dt_end = db.Column(db.DateTime)  # end time
     tz_id = db.Column(db.String)  # Time Zone
-    calendar_id = db.Column(db.Integer, db.ForeignKey('calendar.id'))
+    schedule_id = db.Column(db.Integer, db.ForeignKey('schedule.id'))
 
     recurrence_rule_id = db.Column(db.Integer, db.ForeignKey('recurrence_rule.id'))
     recurrence_rule = db.relationship(RecurrenceRule)
-
-
 
 # Start date must come before End date
     CheckConstraint('dtEnd is NULL OR dtStart <= dtEnd', name='Valid: Time Period')
@@ -135,13 +107,13 @@ class Event(db.Model):
         self.recurrence_rule = recurrence_rule
 
 
-calendar_event_association = db.Table(
-    'calendar_event_association',
-    db.Column('calendar_id', db.Integer, db.ForeignKey('calendar.id')),
+schedule_event_association = db.Table(
+    'schedule_event_association',
+    db.Column('schedule_id', db.Integer, db.ForeignKey('schedule.id')),
     db.Column('event_id', db.Integer, db.ForeignKey('event.id')))
 
-class Calendar(db.Model):
-    __tablename__ = 'calendar'
+class Schedule(db.Model):
+    __tablename__ = 'schedule'
     id = db.Column(db.Integer, primary_key=True)
     events = db.relationship('Event')
 
@@ -149,14 +121,4 @@ class Calendar(db.Model):
         self.events.extend(events)
 
     def __repr__(self):
-        return '<Calendar %r>' % self.id
-
-    '''
-    events = db.relationship("Event", backref="calendar")
-
-    event_relation = db.relationship(
-        'Event',
-        secondary=calendar_event_association,
-        backref=db.backref('calendar', lazy='dynamic'))
-    def __init__(self, events=[]):
-'''
+        return '<Schedule %r>' % self.id

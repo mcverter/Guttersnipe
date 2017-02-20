@@ -3,7 +3,7 @@ from sqlalchemy.ext.associationproxy import association_proxy
 from sqlalchemy.dialects.postgresql import ARRAY, array
 import geoalchemy2
 from server.users.models import Guttersnipe
-from server.calendars.models import Calendar
+from server.calendars.models import Schedule
 from datetime import datetime
 from geoalchemy2 import Geometry
 ####################
@@ -196,13 +196,13 @@ class Space(db.Model):
 class Time(db.Model):
   __tablename__ = 'time'
   id = db.Column(db.Integer, primary_key=True)
-  calendar_id = db.Column(db.Integer, db.ForeignKey('calendar.id'))
-  calendar = db.relationship(Calendar)
+  schedule_id = db.Column(db.Integer, db.ForeignKey('schedule.id'))
+  schedule = db.relationship(Schedule)
 
   notes = db.Column(db.Text)
 
-  def __init__(self, calendar, notes=""):
-    self.calendar = calendar
+  def __init__(self, schedule, notes=""):
+    self.schedule = schedule
     self.notes = notes
 
   def __repr__(self):

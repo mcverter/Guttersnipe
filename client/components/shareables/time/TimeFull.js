@@ -7,7 +7,7 @@ const TimeFull = (props) => (
     <EventCalendarNavigable
       arrayOfCalendarEventsWithHeadlines={[{
         headline:props.headline,
-        calendarEvents: props.time.calendar.events
+        calendarEvents: props.time.schedule.events
       }]}
       viewMonth={new Date()} />
   </div>
