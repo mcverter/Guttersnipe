@@ -19,7 +19,7 @@ export function searchShareables(params={}){
   };
 }
 
-export function fetchAllShareables() {
+function fetchAllShareables() {
   return dispatch => {
     dispatch(requestAllShareables());
     return fetch(`${SERVER_URL}/api/shareables`)
@@ -70,6 +70,15 @@ function setCurrentShareable(id) {
     selectedIndex: parseInt(id)
   };
 }
+
+export function fetchAllShareablesIfNeeded(forceFetch=false) {
+  return (dispatch, getState) => {
+    if (forceFetch || !getState().shareables.items || getState().shareables.items.length <= 0) {
+      return (dispatch(fetchAllShareables()));
+    }
+  }
+}
+
 export function fetchSingleShareableIfNeeded(id) {
   return (dispatch, getState) => {
     if (shouldFetchSingleShareable(getState(), id)){

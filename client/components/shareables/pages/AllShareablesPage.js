@@ -10,7 +10,7 @@ import AllShareablesMapPage from './AllShareablesMapPage';
 import AllShareablesCalendarPage from './AllShareablesCalendarPage';
 
 import {setBrowserLocation} from '../../../actions/browserEnv/browserEnvActions';
-import {fetchAllShareables} from '../../../actions/shareables/shareableActions';
+import {fetchAllShareablesIfNeeded} from '../../../actions/shareables/shareableActions';
 
 class AllShareablesPage extends Component {
   constructor(props) {
@@ -25,7 +25,7 @@ class AllShareablesPage extends Component {
   }
 
   componentWillMount() {
-    this.props.fetchAllShareables();
+    this.props.fetchAllShareablesIfNeeded();
     this.props.setBrowserLocation();
   }
 
@@ -50,8 +50,8 @@ class AllShareablesPage extends Component {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchAllShareables: () => {
-      dispatch(fetchAllShareables());
+    fetchAllShareablesIfNeeded: () => {
+      dispatch(fetchAllShareablesIfNeeded());
     },
     setBrowserLocation: () => {
       dispatch(setBrowserLocation());
@@ -60,7 +60,7 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 AllShareablesCalendarPage.propTypes = {
-  fetchAllShareables: PropTypes.func,
+  fetchAllShareablesIfNeeded: PropTypes.func,
   setBrowserLocation: PropTypes.func
 }
 
