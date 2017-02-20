@@ -4,90 +4,50 @@ import {browserHistory} from 'react-router';
 
 export function signInUser({email, password}) {
   return function(dispatch) {
-    const headers = new Headers();
-    headers.append('Content-type', 'application/json');
-    const myInit = {
+    fetch(`${SERVER_URL}/api/signin`, {
       method: 'POST',
       mode: 'cors',
-      headers: headers,
-      body:JSON.stringify({
-        username: email,
-        password: password
-      })
-    };
-    const myRequest = new Request(`${SERVER_URL}/api/signin`, myInit);
-
-    fetch(myRequest)
+      body: JSON.stringify({username: email, password:password})})
       .then(response => {
-        if (response.status === 200) {
-          response.json().then(function (data) {
-            localStorage.setItem('token', data.access_token);
-            dispatch({type: AUTH_USER});
-            browserHistory.push('/welcome');
-          });
-        }
-        else {
-          const status = response.status;
-          const statusText = response.statusText;
-          response.json().then(function (data) {
-            dispatch(authError(
-              'Could not login ' + status + " " + statusText + ": " + data.msg));
-          })
-            .catch(() => {
-              dispatch(authError(
-                'Could not login ' + status + " " + statusText));
-            });
-        }
+        if (response.status >= 200 && response.status <= 300) {
+          return response.json()
+        } else if (response.status === 401) {
+           return response.json()
+            .then(data => { debugger; throw(data.msg)})
+        } else {
+          throw("Could not login " + response.status + " " + response.statusText);
+        }})
+      .then (data => {
+        localStorage.setItem('token', data.access_token);
+        dispatch({type: AUTH_USER, username: data.username});
+        browserHistory.push('/welcome');
       })
-
-      .catch(response => {
-        const errMsg =  response && response.data ? response.data.error : response;
-        dispatch (authError('Could not login ' + errMsg));
-      });
-  };
+      .catch(errorMsg => {
+        dispatch(authError(errorMsg));
+      })
+  }
 }
 
 export function signUpUser({email, password}) {
   return function(dispatch) {
-    const headers = new Headers();
-    headers.append('Content-type', 'application/json');
-    const myInit = {
+    fetch(`${SERVER_URL}/api/signin`, {
       method: 'POST',
       mode: 'cors',
-      headers: headers,
-      body:JSON.stringify({
-        username: email,
-        password: password
-      })
-    };
-    const myRequest = new Request(`${SERVER_URL}/api/signup`, myInit);
-    fetch(myRequest)
+      body: JSON.stringify({username: email, password:password})})
       .then(response => {
-        if (response.status === 200) {
-          response.json().then(function (data) {
-            localStorage.setItem('token', data.access_token);
-            dispatch({type: AUTH_USER});
-            browserHistory.push('/welcome');
-          })
+        if (response.status !== 200) {
+          throw("Could not sign up " + response.status + " " +response.statusText);
         }
-        else {
-          const status = response.status;
-          const statusText = response.statusText;
-          response.json().then(function (data) {
-            dispatch(authError(
-              'Could not signup ' + status + " " + statusText + ": " + data.msg));
-          })
-            .catch(() => {
-              dispatch(authError(
-                'Could not sign up ' + status + " " + statusText));
-            });
-        }
+        return (response.json())})
+      .then((response, data) => {
+        localStorage.setItem('token', data.access_token);
+        dispatch({type: AUTH_USER});
+        browserHistory.push('/welcome');
       })
-      .catch(response => {
-        const errMsg =  response && response.data ? response.data.error : '';
-        dispatch (authError('Could not login ' + errMsg));
-      });
-  };
+      .catch(errorMsg => {
+        dispatch(authError(errorMsg));
+      })
+  }
 }
 
 export function authError(errorMsg) {

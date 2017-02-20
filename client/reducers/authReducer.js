@@ -10,11 +10,14 @@ export default function auth(
   auth=initialState.auth, action={}) {
   switch(action.type) {
     case AUTH_ERROR:
-      return {...auth, error: action.message};
+       return Object.assign({},
+        ...auth, {authenticated: false, username: '', error: action.message});
     case AUTH_USER:
-      return {...auth, authenticated: true};
+       return Object.assign({},
+        ...auth, {authenticated: true, username: action.username});
     case UNAUTH_USER:
-      return {...auth, authenticated: false}
+       return Object.assign({},
+        ...auth, {authenticated: false, username: ''});
     default:
       return auth;
   }

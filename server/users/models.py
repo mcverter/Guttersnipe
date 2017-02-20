@@ -4,7 +4,7 @@ from flask_restful import Resource, Api, fields as restful_fields, \
 from sqlalchemy import CheckConstraint
 from marshmallow_jsonapi import Schema, fields as schema_fields
 from marshmallow import validate
-from server.calendars.models import Calendar
+from server.calendars.models import Schedule
 from datetime import datetime
 
 class User(db.Model):
@@ -39,7 +39,7 @@ class User(db.Model):
       return None
 
 
-# A Single User has a single Profile and a single Calendar
+# A Single User has a single Profile and a single Schedule
 # and has a Mailbox with multiple messages
 class Guttersnipe(db.Model):
     __tablename__ = 'guttersnipe'
@@ -64,9 +64,9 @@ class Profile(db.Model):
 
 # Schedule is a Component of Guttersnipe.  1-to-1 relationship
 class Schedule (db.Model):
-    __tablename__ = 'schedule'
+    __tablename__ = 'user_schedule'
     id = db.Column(db.Integer, primary_key=True)
-    calendar = db.Column(db.Integer, db.ForeignKey('calendar.id'))
+    schedule = db.Column(db.Integer, db.ForeignKey('schedule.id'))
     notes = db.Column(db.String(20))
 
 
@@ -74,7 +74,7 @@ class Schedule (db.Model):
 class Message(db.Model):
     __tablename__ = 'message'
     id = db.Column(db.Integer, primary_key=True)
-    calendar = db.Column(db.Integer, db.ForeignKey('calendar.id'))
+    schedule = db.Column(db.Integer, db.ForeignKey('schedule.id'))
     text = db.Column(db.String(2054))
     sender = db.Column(db.Integer, db.ForeignKey('guttersnipe.id'))
     recipient = db.Column(db.Integer, db.ForeignKey('guttersnipe.id'))
