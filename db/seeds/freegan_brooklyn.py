@@ -4,7 +4,7 @@ from server.users.models import Guttersnipe, Profile, Schedule, Message, blockUs
 from server.shareables.models import Shareable, \
     Thing, Space, Time, \
     MainType, Subtype, Comment
-from server.calendars.models import Event, Calendar, RecurrenceRule
+from server.calendars.models import Event, Schedule, RecurrenceRule
 import pdb
 from datetime import datetime
 from server import db
@@ -67,7 +67,7 @@ def definePerelandaTime():
     tz_id ='America/New_York'
     perelandraEvent = Event(dt_start=dt_start, dt_end=dt_end,
                             tz_id=tz_id, recurrence_rule=perelandraRecurrence)
-    perelandraCalendar = Calendar(events=[perelandraEvent])
+    perelandraCalendar = Schedule(events=[perelandraEvent])
     notes = "8:45 when all the employees leave the store. Trash is collected between 10:30 p and 12:30a. One source says nothing is out on Saturdays"
 
     db.session.add(perelandraCalendar)
