@@ -15,17 +15,17 @@ const FrontPage = (props) => (
 
     <br /><hr /><br />
     <div className="jumbotron BlackOnRed text-center">
-      <a ui-sref="mission">
+      <Link to="mission">
         <q>the truth is only known by guttersnipes</q> <br />
         <cite>&nbsp;&nbsp;-- joe strummer</cite>
-      </a>
+      </Link>
       <br />
 
       <img src={imgsrc} />
     </div>
 
     <br /><hr /><br />
-    <Kropotkin/>
+    <Kropotkin />
 
   </section>
 );

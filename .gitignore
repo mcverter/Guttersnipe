@@ -28,5 +28,4 @@ server/static/*.svg
 server/static/*.ttf
 server/static/*.woff
 server/static/*.woff2
-server/static/*.png
 server/static/*.gif
