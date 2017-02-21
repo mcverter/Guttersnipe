@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
-import Signout from './Signout';
-import Signin from './Signin';
-import Signup from './Signup';
+import Signout from '../../components/auth/Signout';
+import Signin from '../../components/auth/Signin';
+import Signup from '../../components/auth/Signup';
 
 export default (
     <Route path="auth">
