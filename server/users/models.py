@@ -1,10 +1,4 @@
 from server import db, bcrypt
-from flask_restful import Resource, Api, fields as restful_fields, \
-    marshal_with, reqparse, abort
-from sqlalchemy import CheckConstraint
-from marshmallow_jsonapi import Schema, fields as schema_fields
-from marshmallow import validate
-from server.calendars.models import Schedule
 from datetime import datetime
 
 class User(db.Model):
