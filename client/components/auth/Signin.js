@@ -25,7 +25,7 @@ const Signin = (props) => {
   };
 
   return (
-    <form onSubmit={handleSubmit(handleFormSubmit)}>
+    <form style="signup-form"  onSubmit={handleSubmit(handleFormSubmit)}>
       <Field name="email" type="text" component={ReduxFormHTMLInput} label="Email"/>
       <Field name="password" type="password" component={ReduxFormHTMLInput} label="Password"/>
       <div>

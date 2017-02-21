@@ -1,6 +1,7 @@
 import * as types from "./shareableActionTypes";
 import _ from "lodash";
 import {SERVER_URL} from "../../config";
+import {browserHistory} from 'react-router';
 
 function shareableSearchRequest() {
   return {
@@ -14,13 +15,16 @@ export function searchShareables(params={}){
     return fetch(`${SERVER_URL}/api/shareables/search`,
       { method: 'POST', body: JSON.stringify(params) })
       .then(response=>response.json())
-      .then(json=>
-        dispatch(receiveAllShareables(json)));
+      .then(json=> {
+        dispatch(receiveAllShareables(json));
+        browserHistory.push('/shareables')
+      });
   };
 }
 
 function fetchAllShareables() {
   return dispatch => {
+    console.log('fetching all')
     dispatch(requestAllShareables());
     return fetch(`${SERVER_URL}/api/shareables`)
       .then(response => response.json())
@@ -73,6 +77,7 @@ function setCurrentShareable(id) {
 
 export function fetchAllShareablesIfNeeded(forceFetch=false) {
   return (dispatch, getState) => {
+    console.log('fetch if needed');
     if (forceFetch || !getState().shareables.items || getState().shareables.items.length <= 0) {
       return (dispatch(fetchAllShareables()));
     }
