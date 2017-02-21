@@ -13,10 +13,6 @@ const AllShareablesListPage = (props) => {
 
   return (
     <div>
-      <h1> Shareables </h1>
-      <h2> Sort by  Distance Type Name </h2>
-      <h2>View Map</h2>
-      <h2> View Calendar </h2>
       <Table striped bordered>
         <thead>
         <tr>

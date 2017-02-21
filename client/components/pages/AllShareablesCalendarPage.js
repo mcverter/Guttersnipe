@@ -14,7 +14,7 @@ const AllShareablesCalendarPage = (props) => {
   }
 
   const allEvents = items.map((item)=>
-    ({calendarEvents: item.time.calendar.events, headline: item.headline}));
+    ({calendarEvents: item.time.schedule.events, headline: item.headline}));
 
   return (
     <EventCalendarNavigable

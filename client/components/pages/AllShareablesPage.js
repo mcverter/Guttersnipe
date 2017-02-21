@@ -25,8 +25,8 @@ class AllShareablesPage extends Component {
   }
 
   componentWillMount() {
-    this.props.fetchAllShareablesIfNeeded();
     this.props.setBrowserLocation();
+    this.props.fetchAllShareablesIfNeeded();
   }
 
   setMapAsActiveView() {
@@ -39,11 +39,14 @@ class AllShareablesPage extends Component {
 
   render() {
     return (
-      <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
-        <Tab eventKey={1} onEnter={this.unsetMapAsActiveView}  title="List"><AllShareablesListPage/></Tab>
-        <Tab eventKey={2} onEnter={this.setMapAsActiveView} title="Map"><AllShareablesMapPage isActiveView={this.state.mapIsActiveView} /></Tab>
-        <Tab eventKey={3} onEnter={this.unsetMapAsActiveView} title="Calendar"><AllShareablesCalendarPage/></Tab>
-      </Tabs>
+      <div> <Link to="/shareables/search"> Search Results</Link>
+        <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
+          <Tab eventKey={1} onEnter={this.unsetMapAsActiveView}  title="List"><AllShareablesListPage/></Tab>
+          <Tab eventKey={2} onEnter={this.setMapAsActiveView} title="Map"><AllShareablesMapPage isActiveView={this.state.mapIsActiveView} /></Tab>
+          <Tab eventKey={3} onEnter={this.unsetMapAsActiveView} title="Calendar"><AllShareablesCalendarPage/></Tab>
+        </Tabs>
+      </div>
+
     );
   }
 }

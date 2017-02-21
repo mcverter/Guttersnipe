@@ -33,8 +33,9 @@ class ShareablesSearchPage extends Component {
         <TimeSearchPanel />
         <SpaceSearchPanel />
         <ThingSearchPanel />
-        <Button type="submit">Search</Button>
-      </form>
+        <Button type="submit" bsStyle="primary" bsSize="large" block>
+          Search</Button>
+     </form>
     );
   }
 }
