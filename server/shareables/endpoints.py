@@ -8,9 +8,9 @@ from marshmallow import ValidationError
 from sqlalchemy import func
 from sqlalchemy.exc import SQLAlchemyError
 
-from db.create_sqlalchemy.create_shareable_from_json import create_shareable
 from server import db, api
 from server.calendars.models import Schedule, Event, RecurrenceRule
+from server.create_sqlalchemy.create_shareable_from_json import create_shareable
 from server.shareables.models import Shareable, Subtype, Tag, Thing, MainType, Space, Time
 from server.shareables.schemas import ShareableSchema
 

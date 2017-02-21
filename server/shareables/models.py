@@ -168,12 +168,15 @@ thing_subtype_association = db.Table(
 class Space(db.Model):
   __tablename__ = 'space'
   id = db.Column(db.Integer, primary_key=True)
-#  longitude = db.Column(db.Float, nullable=False)
-#  latitude = db.Column(db.Float, nullable=False)
   position = db.Column (Geometry('POINT', srid=7483))
   canonical_address = db.Column(db.Text, nullable=False)
   alternate_names = db.Column(ARRAY(db.Text))
   notes = db.Column(db.Text)
+
+  # contact
+  phone = db.Column(db.Text)
+  email = db.Column(db.Text)
+  website = db.Column(db.Text)
 
   def __init__(self, position,
                canonical_address="",

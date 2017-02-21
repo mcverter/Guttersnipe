@@ -1,5 +1,5 @@
-from db.create_sqlalchemy.create_shareable_from_json import create_main_type, create_subtype_array
 from server import db
+from server.create_sqlalchemy.create_shareable_from_json import create_main_type, create_subtype_array
 from server.shareables.models import MainType, Subtype
 
 
