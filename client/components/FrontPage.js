@@ -1,7 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router';
 import Kropotkin from './kropotkins/kropotkin';
-import imgsrc from '../img/piafGutterCropped.png';
+//import imgsrc from '../img/piafGutterCropped.png';
+import SERVER_URL  from '../config';
 
 const FrontPage = (props) => (
   <section className="front-pg">
@@ -21,8 +22,9 @@ const FrontPage = (props) => (
       </Link>
       <br />
 
-      <img src={imgsrc} />
     </div>
+
+
 
     <br /><hr /><br />
     <Kropotkin />
@@ -31,3 +33,9 @@ const FrontPage = (props) => (
 );
 
 export default FrontPage;
+
+
+/*
+      <img src={imgsrc} />
+
+ */
