@@ -4,7 +4,7 @@ import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {fetchSingleShareableIfNeeded} from '../../actions/shareables/shareableActions';
 
-import ShareableFull from '../ShareableFull';
+import ShareableFull from '../shareables/ShareableFull';
 
 
 class ShareablePage extends React.Component {
