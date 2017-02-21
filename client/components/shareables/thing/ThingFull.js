@@ -1,11 +1,11 @@
 import React, {PropTypes} from 'react';
 import {renderMainType, renderTags, renderSubtypes} from './utils/transformThingInformation';
-
+import Panel from 'react-bootstrap/lib/Panel'
 
 const ThingFull = ({headline, thing: {description_how, description_what, notes,
   main_type, subtypes, tags} })=> {
   return (
-    <div>
+    <Panel header="Thing">
       <h2> Description of {headline}</h2>
       {description_how &&
       <div>
@@ -30,7 +30,7 @@ const ThingFull = ({headline, thing: {description_how, description_what, notes,
       </div>
       }
       {notes && <div><h3>Notes:</h3>{notes}</div>}
-    </div>
+    </Panel>
   );
 };
 

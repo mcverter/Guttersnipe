@@ -3,6 +3,9 @@ import {Link} from "react-router";
 import { connect } from 'react-redux';
 import MapWithGeocoderInput from './MapWithGeocoderInput';
 import Select from 'react-select';
+import Panel from 'react-bootstrap/lib/Panel'
+import Button from 'react-bootstrap/lib/Button'
+
 
 import { Field } from 'redux-form';
 import ReduxFormComponentField from '../../reduxFormInputs/ReduxFormComponentField';
@@ -23,41 +26,48 @@ class SpaceSearchPanel extends Component {
     ];
 
     this.state = {
-      options: options
+      options: options,
+      showPanel: false
     };
-
-    this.setValue = this.setValue.bind(this);
   }
 
   render() {
     return (
       <div>
-        <h2> Pick a center for your search </h2>
+        <Button onClick={ ()=> this.setState({ showPanel: !this.state.showPanel })}>
+          Filter by Space
+        </Button>
 
-        <Field name="space_map"
-               component={props =>
-                 <ReduxFormComponentField
-                   meta={props.meta}
-                   label="Choose Center">
-                   <MapWithGeocoderInput
-                     formInput={props.input}
-                   />
-                 </ReduxFormComponentField>}/>
+        <Panel heading="Filter By Space"
+               collapsible expanded={this.state.showPanel}>
 
-        <h2> Pick a radius for your search </h2>
-        <Field name="space_radius"
-               component={props =>
-                 <ReduxFormComponentField
-                   meta={props.meta}
-                   label="Types">
-                   <Select
-                     value={props.input.value}
-                     onChange={props.input.onChange}
-                     onBlur={() => props.input.onBlur(props.input.value)}
-                     options={this.state.options}
-                     placeholder="Pick a radius"
-                     simpleValue/>
-                 </ReduxFormComponentField>} />
+          <h2> Pick a center for your search </h2>
+
+          <Field name="space_map"
+                 component={props =>
+                   <ReduxFormComponentField
+                     meta={props.meta}
+                     label="Choose Center">
+                     <MapWithGeocoderInput
+                       formInput={props.input}
+                     />
+                   </ReduxFormComponentField>}/>
+
+          <h2> Pick a radius for your search </h2>
+          <Field name="space_radius"
+                 component={props =>
+                   <ReduxFormComponentField
+                     meta={props.meta}
+                     label="Types">
+                     <Select
+                       value={props.input.value}
+                       onChange={props.input.onChange}
+                       onBlur={() => props.input.onBlur(props.input.value)}
+                       options={this.state.options}
+                       placeholder="Pick a radius"
+                       simpleValue/>
+                   </ReduxFormComponentField>} />
+        </Panel>
       </div>
     );
   }
