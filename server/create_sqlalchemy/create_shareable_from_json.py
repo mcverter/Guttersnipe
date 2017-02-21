@@ -12,11 +12,9 @@ def create_many_shareables_from_json_string(json_string):
     create_shareable(py_dict)
 
 
-'''
-def create_shareable_from_json_string(json_string):
-  py_dict = json.loads(json_string)
-  create_shareable(py_dict)
-'''
+#def create_shareable_from_json_string(json_string):
+#  py_dict = json.loads(json_string)
+#  create_shareable(py_dict)
 
 def create_shareable(shareable_dict):
   headline = shareable_dict.get("headline")
@@ -48,7 +46,6 @@ def create_shareable(shareable_dict):
     Shareable.summary == summary,
     Shareable.headline == headline,
     Shareable.comments == comments,
-    Shareable.notes == shareable_notes,
     ).first()
 
   if shareable_entity is None:
@@ -61,7 +58,7 @@ def create_shareable(shareable_dict):
       number_ratings=number_ratings,
       total_ratings=total_ratings,
       comments=comments,
-      notes=shareable_notes)
+    )
     db.session.add(my_shareable)
     db.session.commit()
     return my_shareable
@@ -140,8 +137,12 @@ def create_thing(thing_dict):
 
 
 def create_space_from_json_object(space_dict):
-  longitude = ".6f"% (space_dict.get("longitude"))
-  latitude =  ".2f" % (space_dict.get("latitude"))
+  longitude = space_dict["longitude"]
+  latitude = space_dict["latitude"]
+  longitude = longitude if type(longitude) is str else \
+    '{0:.6f}'.format(longitude)
+  latitude = latitude if type(latitude) is str else \
+    '{0:.6f}'.format(latitude)
   canonical_address = space_dict.get("canonical_address")
   alternate_names = space_dict.get("alternate_names")  # string list
   space_notes = space_dict.get("notes")

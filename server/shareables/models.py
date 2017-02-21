@@ -174,9 +174,9 @@ class Space(db.Model):
   notes = db.Column(db.Text)
 
   # contact
-  phone = db.Column(db.Text)
-  email = db.Column(db.Text)
-  website = db.Column(db.Text)
+  # phone = db.Column(db.Text)
+  # email = db.Column(db.Text)
+  # website = db.Column(db.Text)
 
   def __init__(self, position,
                canonical_address="",
