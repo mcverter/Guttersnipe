@@ -9,7 +9,7 @@ from sqlalchemy.sql import operators, func
 def create_many_shareables_from_json_string(json_string):
   py_array = json.loads(json_string)
   for py_dict in py_array:
-    create_shareable(py_dict)
+    create_many_shareables_from_json_string(py_dict)
 
 
 def create_shareable_from_json_string(json_string):
