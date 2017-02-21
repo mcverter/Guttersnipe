@@ -45,7 +45,7 @@ class TimeLI extends Component {
         let {recurringDates, fixedDates} = this.state;
         let key=1;
         return (
-            <div>
+            <div className="time-li">
             {fixedDates && fixedDates.length >0 &&
                 <ul>
                     {fixedDates.map((date) => {

@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 import Comment from './CommentFull';
 
 const CommentList = (comments) => (
-  <div>
+  <div className="comment-list">
     {comments.map(comment =>
       <Comment key={comment.id} comment={comment} />
     )}

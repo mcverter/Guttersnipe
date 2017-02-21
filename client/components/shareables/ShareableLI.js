@@ -7,7 +7,7 @@ import ThingLI from './thing/ThingLI';
 
 const ShareableLI = ( { shareable: { headline, id,
   number_ratings, total_rating, thing, space, time } } ) => (
-  <tr key={id}>
+  <tr className="shareable-li" key={id}>
     <td>{headline}</td>
     <td><ThingLI thing={thing} /></td>
     <td><SpaceLI space={space} /></td>

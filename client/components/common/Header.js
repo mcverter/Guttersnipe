@@ -13,7 +13,7 @@ const Header = ({authenticated}) => {
   const renderAuthLinks = () => {
     if (authenticated) {
       return (
-        <LinkContainer to="/auth/signout" className="navbar-brand ">
+        <LinkContainer to="/auth/signout" className="header navbar-brand ">
           <NavItem eventKey={3} title="Sign Out">Sign Out</NavItem>
         </LinkContainer>
       );

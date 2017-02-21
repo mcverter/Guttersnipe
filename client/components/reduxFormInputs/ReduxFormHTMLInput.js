@@ -7,7 +7,7 @@ import HelpBlock from 'react-bootstrap/lib/HelpBlock';
 
 
 const ReduxFormHTMLInput = ( { input, label, type, meta: { touched, error } } ) =>  (
-  <FormGroup validationState={touched && error ? 'error' : null}>
+  <FormGroup className="form-html-input" validationState={touched && error ? 'error' : null}>
     <ControlLabel>{label}</ControlLabel>
     <FormControl {...input} placeholder={label} type={type}  />
     <FormControl.Feedback />

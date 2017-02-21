@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 import EventCalendarNavigable from './EventCalendarNavigable';
 
 const TimeFull = (props) => (
-  <div>
+  <div className="time-full">
     <h2> Calendar </h2>
     <EventCalendarNavigable
       arrayOfCalendarEventsWithHeadlines={[{

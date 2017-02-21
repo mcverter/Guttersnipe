@@ -53,7 +53,7 @@ class AllShareablesMapPage extends React.Component {
     const position = this.calculateCenter(items);
 
     return (
-      <div>
+      <div className="all-shareables-map-tab">
         <Map ref={(map) => { this.map = map; }}
              center={position} zoom={13}>
           <TileLayer

@@ -8,7 +8,7 @@ class Signout extends Component {
   }
 
   render() {
-    return <div>You are signed out</div>;
+    return <div className="signout">You are signed out</div>;
   }
 }
 

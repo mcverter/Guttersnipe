@@ -27,7 +27,7 @@ class ShareableCreateWizardForm extends Component {
   render() {
     const {page} = this.state;
     return (
-      <div>
+      <div className="shareable-create-wizard-form">
         {page === 1 && <ShareableCreateStart onSubmit={this.nextPage}/>}
         {page === 2 && <ThingCreate previousPage={this.previousPage} onSubmit={this.nextPage}/>}
         {page === 4 && <SpaceCreate previousPage={this.previousPage} onSubmit={this.nextPage}/>}

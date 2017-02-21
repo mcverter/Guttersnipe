@@ -11,7 +11,7 @@ import {connect} from 'react-redux';
 
 let SpaceCreate = (props) => {
   return (
-    <div> Create a Map for your {props.headline}
+    <div className="space-create"> Create a Map for your {props.headline}
       <form onSubmit={props.handleSubmit}>
         <Field name="space_map"
                validate={required}

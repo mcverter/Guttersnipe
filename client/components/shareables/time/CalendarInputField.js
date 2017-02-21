@@ -136,7 +136,7 @@ class CalendarInputField extends Component {
    */
   render() {
     return (
-      <div>
+      <div className="calendar-input-field">
         <EventCalendarNavigable
           arrayOfCalendarEventsWithHeadlines={[{
             headline: this.props.headline,

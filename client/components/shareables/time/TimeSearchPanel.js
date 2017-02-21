@@ -10,7 +10,7 @@ import 'react-datetime/css/react-datetime.css'
 
 const TimeSearchPanel = (props) => {
   return (
-    <div>
+    <div className="time-search-panel">
       <h2> When would you like to go </h2>
       <Field name="time_input"
              component={props =>

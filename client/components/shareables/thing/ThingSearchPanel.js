@@ -62,7 +62,7 @@ class ThingSearchPanel extends Component {
 
   render() {
     return (
-      <div>
+      <div className="thing-search">
         <Button onClick={ () => this.setState({showPanel: !this.state.showPanel})}>
           Filter by Thing
         </Button>

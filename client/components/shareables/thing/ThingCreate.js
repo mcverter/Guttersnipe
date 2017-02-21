@@ -61,7 +61,7 @@ class ThingCreate extends Component {
   render() {
     if (this.state.types === undefined) {return <div>Loading</div>;}
     return (
-      <form onSubmit={this.props.handleSubmit}>
+      <form className="thing-create-form" onSubmit={this.props.handleSubmit}>
         <h2> Describe and Categorize {this.props.headline} </h2>
         <Field validate={required} name="thing_description_what" type="text" component={ReduxFormHTMLInput} label="What is the shareable resource"/>
         <Field validate={required} name="thing_description_how" type="text" component={ReduxFormHTMLInput} label="How do you acquire it?"/>

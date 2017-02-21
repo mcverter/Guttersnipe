@@ -4,7 +4,7 @@ import Kropotkin from './kropotkins/kropotkin';
 import imgsrc from '../img/piafGutterCropped.png';
 
 const FrontPage = (props) => (
-  <section>
+  <section className="front-pg">
     <div className="text-center jumbotron RedOnBlack">
       <ul className="nav nav-pills nav-stacked">
         <li><Link to="/shareables/create" className="btn btn-lg BlackOnRed"> Create Shareable </Link></li>

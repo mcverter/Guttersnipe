@@ -30,7 +30,8 @@ export default class MapWithGeocoder extends Component {
     }
 
     render() {
-        return <div ref={(el) => { this.el = el }} />;
+        return <div ref={(el) => { this.el = el }}
+                    className="map-with-geocoder-input" />;
     }
 }
 

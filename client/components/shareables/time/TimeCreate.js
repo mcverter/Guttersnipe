@@ -15,7 +15,7 @@ import {connect} from 'react-redux';
 class TimeCreate extends Component {
   render() {
         return(
-      <form onSubmit={this.props.handleSubmit}>
+      <form className="time-create-form" onSubmit={this.props.handleSubmit}>
         <h2> Create a Schedule for {this.props.headline} </h2>
         <Field name="time_calendar"
                validate={required}

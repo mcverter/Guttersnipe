@@ -9,7 +9,7 @@ const SpaceFull = ({space}) =>  {
     const position = [longitude, latitude];
 
     return (
-        <Panel header="Space">
+        <Panel className="space-full" header="Space">
           <h2> Map </h2>
             <Map center={position} zoom={13}>
                 <TileLayer

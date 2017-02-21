@@ -14,7 +14,7 @@ class KropotkinQuote extends Component {
       return <h1 />;
     }
     return (
-      <div className="RedOnBlack">
+      <div className="kropotkin-quote RedOnBlack">
         <div className="text-center BlackOnRed">
           <h2><span>{paragraph}</span></h2>
         </div>

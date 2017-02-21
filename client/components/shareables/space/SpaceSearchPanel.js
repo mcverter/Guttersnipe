@@ -33,7 +33,7 @@ class SpaceSearchPanel extends Component {
 
   render() {
     return (
-      <div>
+      <div className="space-search-panel">
         <Button onClick={ ()=> this.setState({ showPanel: !this.state.showPanel })}>
           Filter by Space
         </Button>

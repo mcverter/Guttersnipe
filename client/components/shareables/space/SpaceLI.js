@@ -4,7 +4,7 @@ const SpaceLI = ({space}) => {
     const {canonical_address} = space;
 
     return (
-        <div> {canonical_address}</div>
+        <div className="space-li"> {canonical_address}</div>
     );
 };
 

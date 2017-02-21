@@ -3,7 +3,7 @@ import {Link} from 'react-router';
 import {connect} from 'react-redux';
 
 const WelcomePage = (props) => (
-  <div>
+  <div className="welcome-pg">
     <h2> Welcome to Guttersnipe, {props.username} </h2>
     <div> <Link to="/shareables"> Shareable List</Link></div>
     <div><Link to="/shareables/create"> Create Shareable </Link></div>

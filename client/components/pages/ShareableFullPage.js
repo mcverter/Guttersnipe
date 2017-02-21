@@ -33,7 +33,7 @@ class ShareablePage extends React.Component {
     }
 
     return (
-      <ShareableFull shareable={shareable} />
+      <ShareableFull className="shareable-full-page" shareable={shareable} />
     );
   }
 }

@@ -1,3 +1,5 @@
+.event-calendar-view {height: 400px}
+
 .leaflet-container {
     height: 400px;
     width: 80%;
@@ -368,3 +370,44 @@ a.fa-links:focus {
     height: 20px;
     width: 310px;
 }
+
+
+.all-shareables-map-tab {}
+.all-shareables-pg {}
+.app {}
+.calendar {}
+.calendar-input-field {}
+.comment-full {}
+.comment-list {}
+.date-listing {}
+.event-calendar-view {}
+.footer {}
+.form-component-field {}
+.form-html-input {}
+.front-pg {}
+.header  {}
+.kropotkin-quote {}
+.map-with-geocoder-input {}
+.shareable-create-end {}
+.shareable-create-start {}
+.shareable-create-wizard-form {}
+.shareable-create-wizard-pg {}
+.shareable-edit-page {}
+.shareable-full {}
+.shareable-full-page {}
+.shareable-li {}
+.signout {}
+.signup-form {}
+.space-create {}
+.space-full {}
+.space-li {}
+.space-search-panel {}
+.thing-create-form {}
+.thing-full {}
+.thing-li {}
+.thing-search {}
+.time-create-form {}
+.time-full {}
+.time-li {}
+.time-search-panel {}
+.welcome-pg {}

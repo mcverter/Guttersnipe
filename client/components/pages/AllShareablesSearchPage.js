@@ -29,7 +29,7 @@ class ShareablesSearchPage extends Component {
   render() {
     const {handleSubmit} = this.props;
     return (
-      <form onSubmit={handleSubmit(this.handleFormSubmit)}>
+      <form className="="shareable-search-pg" onSubmit={handleSubmit(this.handleFormSubmit)}>
         <TimeSearchPanel />
         <SpaceSearchPanel />
         <ThingSearchPanel />

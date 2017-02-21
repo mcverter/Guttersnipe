@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/lib/Button';
 import ReduxFormHTMLInput from '../../reduxFormInputs/ReduxFormHTMLInput';
 
 const ShareableCreateStart = ({handleSubmit}) => (
-  <form onSubmit={handleSubmit}>
+  <form className="shareable-create-start" onSubmit={handleSubmit}>
     <Field name="headline" type="text" component={ReduxFormHTMLInput} validate={required} label="Headline"/>
     <Field name="summary" type="textarea" component={ReduxFormHTMLInput}  validate={required} label="Summary"/>
     <div>

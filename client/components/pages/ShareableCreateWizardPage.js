@@ -37,7 +37,7 @@ const ShareableCreateWizardPage = () => {
   };
 
   return (
-    <ShareableCreateWizardForm handleSubmit={handleSubmit} />
+    <ShareableCreateWizardForm className="shareable-create-wizard-pg" handleSubmit={handleSubmit} />
   );
 };
 
