@@ -1,15 +1,15 @@
-
-from flask_script import Manager, Shell
-from flask.ext.migrate import Migrate, MigrateCommand
 import os
-import importlib
-from server.shareables.create_shareable_from_json import create_many_shareables_from_json_string
-import pdb
-from flask import url_for
-from db.seeds.types_subtypes_tags_seed import seed_types_and_subtypes_and_tags
-from db.seeds.kropotkinsSeed import seed_kropotkins
-from server import app, db
 import urllib
+
+from flask import url_for
+from flask.ext.migrate import Migrate, MigrateCommand
+from flask_script import Manager, Shell
+
+from db.create_sqlalchemy.create_shareable_from_json import create_many_shareables_from_json_string
+from db.seeds.kropotkinsSeed import seed_kropotkins
+from db.seeds.types_subtypes_tags_seed import seed_types_and_subtypes_and_tags
+from server import app, db
+
 
 def make_shell_context():
     return dict(app=app, db=db)
