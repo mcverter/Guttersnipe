@@ -20,6 +20,7 @@ import "../node_modules/leaflet/dist/images/marker-icon-2x.png";
 import "../node_modules/leaflet/dist/images/marker-icon.png";
 import "../node_modules/leaflet/dist/images/marker-shadow.png";
 import "../node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.eot";
+import "../node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.svg";
 import "../node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff";
 import "../node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2";
 import "../node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf";
