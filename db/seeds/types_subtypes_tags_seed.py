@@ -1,6 +1,8 @@
-from server.shareables.models import MainType, Subtype
+from db.create_sqlalchemy.create_shareable_from_json import create_main_type, create_subtype_array
 from server import db
-from server.shareables.create_shareable_from_json import create_main_type, create_subtype_array
+from server.shareables.models import MainType, Subtype
+
+
 def defineSubtype(main_type, name):
     subtype = Subtype(name=name, main_type=main_type)
     db.session.add(subtype)
