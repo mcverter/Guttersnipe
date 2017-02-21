@@ -11,7 +11,7 @@ from marshmallow import ValidationError
 from server.shareables.schemas import ShareableSchema
 from server.shareables.models import Shareable, Subtype, Tag, Thing, MainType, Space, Time
 from server.calendars.models import Schedule, Event, RecurrenceRule
-from server.shareables.create_shareable_from_json import create_shareable_from_json_object
+from server.shareables.create_shareable_from_json import create_shareable
 
 ShareableSerializer = ShareableSchema()
 
@@ -115,7 +115,7 @@ class ShareableListEndpoint(Resource):
     raw_dict = request.get_json() or json.loads(request.data) \
       if isinstance(request.data, str) else json.loads(request.data.decode('utf-8'))
     try:
-      shareable = create_shareable_from_json_object(raw_dict)
+      shareable = create_shareable(raw_dict)
       query = Shareable.query.get(shareable.id)
       results = ShareableSerializer.dump(query).data
       return results, 201

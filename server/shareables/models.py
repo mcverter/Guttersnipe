@@ -20,7 +20,6 @@ class Shareable(db.Model):
 
   summary = db.Column(db.Text)
   headline = db.Column(db.Text)
-  notes = db.Column(db.Text)
 
   thing = db.relationship('Thing')
   space = db.relationship('Space')
@@ -46,7 +45,6 @@ class Shareable(db.Model):
                created_on=None):
     self.summary = summary
     self.headline = headline
-    self.notes = notes
     self.thing = thing
     self.space = space
     self.time = time

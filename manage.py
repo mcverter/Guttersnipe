@@ -6,7 +6,7 @@ import importlib
 from server.shareables.create_shareable_from_json import create_many_shareables_from_json_string
 import pdb
 from flask import url_for
-from db.seeds.TypesAndSubtypesAndTags import seed_types_and_subtypes_and_tags
+from db.seeds.types_subtypes_tags_seed import seed_types_and_subtypes_and_tags
 from db.seeds.kropotkinsSeed import seed_kropotkins
 from server import app, db
 import urllib
@@ -26,7 +26,7 @@ def seed():
     curr_dir = os.path.dirname(os.path.realpath(__file__))
     filename = os.path.join(curr_dir, "db", "seeds", "brooklyn.data.json")
     json = (open(filename, "r", encoding="UTF-8")).read()
-#    seed_types_and_subtypes_and_tags()
+    seed_types_and_subtypes_and_tags()
     create_many_shareables_from_json_string(json)
     seed_kropotkins()
 

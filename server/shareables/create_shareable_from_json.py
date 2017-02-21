@@ -9,7 +9,7 @@ from sqlalchemy.sql import operators, func
 def create_many_shareables_from_json_string(json_string):
   py_array = json.loads(json_string)
   for py_dict in py_array:
-    create_shareable_from_json_object(py_dict)
+    create_shareable(py_dict)
 
 
 def create_shareable_from_json_string(json_string):
@@ -93,8 +93,8 @@ def create_shareable_from_json_object(py_dict):
 
   # space
   space = py_dict.get("space")
-  longitude = space.get("longitude")
-  latitude = space.get("latitude")
+  longitude = "{:.6f}".format(space.get("longitude"))
+  latitude =  "{:.6f}".format(space.get("latitude"))
   canonical_address = space.get("canonical_address")
   alternate_names = space.get("alternate_names")   # string list
   space_notes = space.get("notes")
@@ -347,7 +347,7 @@ def create_thing(thing_dict):
   description_how = thing_dict.get("description_how")
   description_what = thing_dict.get("description_what")
 
-  main_type_entity = create_event_from_json_object(
+  main_type_entity = create_main_type(
     thing_dict.get("main_type"))
   subtypes_entity_array = create_subtype_array(
     thing_dict.get("subtypes"), main_type_entity)
@@ -381,8 +381,8 @@ def create_thing(thing_dict):
 
 
 def create_space_from_json_object(space_dict):
-  longitude = space_dict.get("longitude")
-  latitude = space_dict.get("latitude")
+  longitude = "{:.6f}".format(space_dict.get("longitude"))
+  latitude =  "{:.6f}".format(space_dict.get("latitude"))
   canonical_address = space_dict.get("canonical_address")
   alternate_names = space_dict.get("alternate_names")  # string list
   space_notes = space_dict.get("notes")

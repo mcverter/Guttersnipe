@@ -1,6 +1,6 @@
 from server.shareables.models import MainType, Subtype
 from server import db
-
+from server.shareables.create_shareable_from_json import create_main_type, create_subtype_array
 def defineSubtype(main_type, name):
     subtype = Subtype(name=name, main_type=main_type)
     db.session.add(subtype)
@@ -31,9 +31,7 @@ types_and_subtypes = {
 }
 def seed_types_and_subtypes_and_tags():
   for typename in types_and_subtypes:
-    type = defineType(typename)
-    for subtypename in types_and_subtypes[typename]:
-      defineSubtype(type, subtypename)
-
+    type = create_main_type(typename)
+    create_subtype_array(types_and_subtypes[typename], type)
 
   db.session.commit()
