@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 
-import ShareableLI from '../ShareableLI';
+import ShareableLI from '../shareables/ShareableLI';
 import Table from 'react-bootstrap/lib/Table';
 
 const AllShareablesListPage = (props) => {

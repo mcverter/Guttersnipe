@@ -1,12 +1,12 @@
 import React, {PropTypes, Component} from "react";
 import {Link} from "react-router";
-import Button from "react-bootstrap/lib/Button";
+import {Button} from 'react-bootstrap/lib/Button';
 import { connect } from 'react-redux';
-import SpaceSearchPanel from '../space/SpaceSearchPanel'
-import TimeSearchPanel from '../time/TimeSearchPanel';
-import ThingSearchPanel from '../thing/ThingSearchPanel';
+import SpaceSearchPanel from '../shareables/space/SpaceSearchPanel'
+import TimeSearchPanel from '../shareables/time/TimeSearchPanel';
+import ThingSearchPanel from '../shareables/thing/ThingSearchPanel';
 import { Field, reduxForm } from 'redux-form';
-import {searchShareables} from '../../../actions/shareables/shareableActions';
+import {searchShareables} from '../../actions/shareables/shareableActions';
 
 class ShareablesSearchPage extends Component {
   constructor(props) {
@@ -29,7 +29,7 @@ class ShareablesSearchPage extends Component {
   render() {
     const {handleSubmit} = this.props;
     return (
-      <form className="="shareable-search-pg" onSubmit={handleSubmit(this.handleFormSubmit)}>
+      <form className="shareable-search-pg" onSubmit={handleSubmit(this.handleFormSubmit)}>
         <TimeSearchPanel />
         <SpaceSearchPanel />
         <ThingSearchPanel />

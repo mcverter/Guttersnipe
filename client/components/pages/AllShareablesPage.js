@@ -9,8 +9,8 @@ import AllShareablesListPage from './AllShareablesListTab';
 import AllShareablesMapPage from './AllShareablesMapTab';
 import AllShareablesCalendarPage from './AllShareablesCalendarTab';
 
-import {setBrowserLocation} from '../../../actions/browserEnv/browserEnvActions';
-import {fetchAllShareablesIfNeeded} from '../../../actions/shareables/shareableActions';
+import {setBrowserLocation} from '../../actions/browserEnv/browserEnvActions';
+import {fetchAllShareablesIfNeeded} from '../../actions/shareables/shareableActions';
 
 class AllShareablesPage extends Component {
   constructor(props) {
