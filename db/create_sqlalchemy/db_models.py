@@ -1,3 +1,5 @@
+'''
+
 from server import db
 from server.shareables.models import \
   Shareable, \
@@ -167,3 +169,4 @@ class DbShareable(DBObject):
       Shareable.notes == shareable_notes,
     ).first()
 
+'''
