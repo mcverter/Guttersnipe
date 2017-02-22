@@ -1,0 +1,1062 @@
+
+
+[
+{
+    "headline" : "After Hours Project, Inc",
+    "summary"  : "North American Syringe Exchange Network (NASEN)",
+    "notes"    : "",
+    "number_ratings" : 0,
+    "total_ratings" : 0,
+    "thing"    : {
+      "description_how" : "Talk to Fernando Soto",
+      "description_what" : "Needle Exchange",
+      "main_type": "medical",
+      "subtypes": [ "needle exchage"],
+      "tags": [],
+      "notes": ''
+    },
+    "space"    : {
+      "longitude" : "-73.92688527703285",
+      "latitude": "40.69218456745148",
+      "canonical_address": " 1204 Broadway Brooklyn, NY 11221",
+      "alternate_names": [],
+      "notes": ""
+    },
+    "time"    : {
+      "notes" : "not actual dates",
+      "calendar" : {
+        "events": [
+          {
+            "dt_start": "2017-01-01T18:00:00",
+            "dt_end": "2017-01-01T22:00:00",
+            "tz_id": "American/NewYork",
+            "recurrence_rule" : {
+              "freq": "weekly",
+              "byDay": "mo",
+              "interval": "1"
+            }
+          }
+        ]
+      }
+    }
+  },
+
+
+
+      {
+    "headline" : "Washington Heights CORNER Project",
+    "summary"  : "North American Syringe Exchange Network (NASEN)",
+    "notes"    : "",
+    "number_ratings" : 0,
+    "total_ratings" : 0,
+    "thing"    : {
+      "description_how" : "Talk to Taeko Frost",
+      "description_what" : "Needle Exchange",
+      "main_type": "medical",
+      "subtypes": [ "needle exchage"],
+      "tags": [],
+      "notes": ''
+    },
+    "space"    : {
+      "longitude" : "-73.93302820622921",
+      "latitude": "40.84897041320801",
+      "canonical_address": " 566 W 181 St 2nd floor New York, NY 10033",
+      "alternate_names": [],
+      "notes": ""
+    },
+    "time"    : {
+      "notes" : "not actual dates",
+      "calendar" : {
+        "events": [
+          {
+            "dt_start": "2017-01-01T18:00:00",
+            "dt_end": "2017-01-01T22:00:00",
+            "tz_id": "American/NewYork",
+            "recurrence_rule" : {
+              "freq": "weekly",
+              "byDay": "mo",
+              "interval": "1"
+            }
+          }
+        ]
+      }
+    }
+  },
+
+
+
+      {
+    "headline" : "New York Harm Reduction Educators, Inc",
+    "summary"  : "North American Syringe Exchange Network (NASEN)",
+    "notes"    : "",
+    "number_ratings" : 0,
+    "total_ratings" : 0,
+    "thing"    : {
+      "description_how" : "Talk to Carolina Lopez",
+      "description_what" : "Needle Exchange",
+      "main_type": "medical",
+      "subtypes": [ "needle exchage"],
+      "tags": [],
+      "notes": ''
+    },
+    "space"    : {
+      "longitude" : "-73.89170944690704",
+      "latitude": "40.82145430147648",
+      "canonical_address": " 953 Southern Blvd Ste 302 Bronx, NY 10459",
+      "alternate_names": [],
+      "notes": ""
+    },
+    "time"    : {
+      "notes" : "not actual dates",
+      "calendar" : {
+        "events": [
+          {
+            "dt_start": "2017-01-01T18:00:00",
+            "dt_end": "2017-01-01T22:00:00",
+            "tz_id": "American/NewYork",
+            "recurrence_rule" : {
+              "freq": "weekly",
+              "byDay": "mo",
+              "interval": "1"
+            }
+          }
+        ]
+      }
+    }
+  },
+
+
+
+      {
+    "headline" : "St Ann's Corner of Harm Reduction",
+    "summary"  : "North American Syringe Exchange Network (NASEN)",
+    "notes"    : "",
+    "number_ratings" : 0,
+    "total_ratings" : 0,
+    "thing"    : {
+      "description_how" : "Talk to Sandra Turner",
+      "description_what" : "Needle Exchange",
+      "main_type": "medical",
+      "subtypes": [ "needle exchage"],
+      "tags": [],
+      "notes": ''
+    },
+    "space"    : {
+      "longitude" : "-73.92980754375458",
+      "latitude": "40.8148929476738",
+      "canonical_address": " 310 Walton Ave #201 Bronx, NY 10451",
+      "alternate_names": [],
+      "notes": ""
+    },
+    "time"    : {
+      "notes" : "not actual dates",
+      "calendar" : {
+        "events": [
+          {
+            "dt_start": "2017-01-01T18:00:00",
+            "dt_end": "2017-01-01T22:00:00",
+            "tz_id": "American/NewYork",
+            "recurrence_rule" : {
+              "freq": "weekly",
+              "byDay": "mo",
+              "interval": "1"
+            }
+          }
+        ]
+      }
+    }
+  },
+
+
+
+      {
+    "headline" : "ACQC - Far Rockaway",
+    "summary"  : "North American Syringe Exchange Network (NASEN)",
+    "notes"    : "",
+    "number_ratings" : 0,
+    "total_ratings" : 0,
+    "thing"    : {
+      "description_how" : "Talk to Erika Vasquez",
+      "description_what" : "Needle Exchange",
+      "main_type": "medical",
+      "subtypes": [ "needle exchage"],
+      "tags": [],
+      "notes": ''
+    },
+    "space"    : {
+      "longitude" : "-73.753844",
+      "latitude": "40.603406",
+      "canonical_address": " Beach 21st Far Rockaway, NY 11691",
+      "alternate_names": [],
+      "notes": ""
+    },
+    "time"    : {
+      "notes" : "not actual dates",
+      "calendar" : {
+        "events": [
+          {
+            "dt_start": "2017-01-01T18:00:00",
+            "dt_end": "2017-01-01T22:00:00",
+            "tz_id": "American/NewYork",
+            "recurrence_rule" : {
+              "freq": "weekly",
+              "byDay": "mo",
+              "interval": "1"
+            }
+          }
+        ]
+      }
+    }
+  },
+
+
+
+      {
+    "headline" : "ACQC - Woodside",
+    "summary"  : "North American Syringe Exchange Network (NASEN)",
+    "notes"    : "",
+    "number_ratings" : 0,
+    "total_ratings" : 0,
+    "thing"    : {
+      "description_how" : "Talk to Erika Vasquez",
+      "description_what" : "Needle Exchange",
+      "main_type": "medical",
+      "subtypes": [ "needle exchage"],
+      "tags": [],
+      "notes": ''
+    },
+    "space"    : {
+      "longitude" : "-73.90226",
+      "latitude": "40.744682",
+      "canonical_address": " 6207 Woodside Ave 3rd floor Woodside, NY 11377",
+      "alternate_names": [],
+      "notes": ""
+    },
+    "time"    : {
+      "notes" : "not actual dates",
+      "calendar" : {
+        "events": [
+          {
+            "dt_start": "2017-01-01T18:00:00",
+            "dt_end": "2017-01-01T22:00:00",
+            "tz_id": "American/NewYork",
+            "recurrence_rule" : {
+              "freq": "weekly",
+              "byDay": "mo",
+              "interval": "1"
+            }
+          }
+        ]
+      }
+    }
+  },
+
+
+
+      {
+    "headline" : "Lower East Side Harm Reduction",
+    "summary"  : "North American Syringe Exchange Network (NASEN)",
+    "notes"    : "",
+    "number_ratings" : 0,
+    "total_ratings" : 0,
+    "thing"    : {
+      "description_how" : "Talk to Monique Wright",
+      "description_what" : "Needle Exchange",
+      "main_type": "medical",
+      "subtypes": [ "needle exchage"],
+      "tags": [],
+      "notes": ''
+    },
+    "space"    : {
+      "longitude" : "-73.992607",
+      "latitude": "40.715706",
+      "canonical_address": " 25 Allen St New York, NY 10002-5311",
+      "alternate_names": [],
+      "notes": ""
+    },
+    "time"    : {
+      "notes" : "not actual dates",
+      "calendar" : {
+        "events": [
+          {
+            "dt_start": "2017-01-01T18:00:00",
+            "dt_end": "2017-01-01T22:00:00",
+            "tz_id": "American/NewYork",
+            "recurrence_rule" : {
+              "freq": "weekly",
+              "byDay": "mo",
+              "interval": "1"
+            }
+          }
+        ]
+      }
+    }
+  },
+
+
+
+      {
+    "headline" : "Streetwork Project",
+    "summary"  : "North American Syringe Exchange Network (NASEN)",
+    "notes"    : "",
+    "number_ratings" : 0,
+    "total_ratings" : 0,
+    "thing"    : {
+      "description_how" : "Talk to John Welch",
+      "description_what" : "Needle Exchange",
+      "main_type": "medical",
+      "subtypes": [ "needle exchage"],
+      "tags": [],
+      "notes": ''
+    },
+    "space"    : {
+      "longitude" : "-73.989815",
+      "latitude": "40.716042",
+      "canonical_address": " 33 Essex St New York, NY 10002",
+      "alternate_names": [],
+      "notes": ""
+    },
+    "time"    : {
+      "notes" : "not actual dates",
+      "calendar" : {
+        "events": [
+          {
+            "dt_start": "2017-01-01T18:00:00",
+            "dt_end": "2017-01-01T22:00:00",
+            "tz_id": "American/NewYork",
+            "recurrence_rule" : {
+              "freq": "weekly",
+              "byDay": "mo",
+              "interval": "1"
+            }
+          }
+        ]
+      }
+    }
+  },
+
+
+
+      {
+    "headline" : "Housing Works, Inc",
+    "summary"  : "North American Syringe Exchange Network (NASEN)",
+    "notes"    : "",
+    "number_ratings" : 0,
+    "total_ratings" : 0,
+    "thing"    : {
+      "description_how" : "Talk to Linney Smith",
+      "description_what" : "Needle Exchange",
+      "main_type": "medical",
+      "subtypes": [ "needle exchage"],
+      "tags": [],
+      "notes": ''
+    },
+    "space"    : {
+      "longitude" : "-73.99624988436699",
+      "latitude": "40.72479955852032",
+      "canonical_address": " 130 Crosby St New York, NY 10012",
+      "alternate_names": [],
+      "notes": ""
+    },
+    "time"    : {
+      "notes" : "not actual dates",
+      "calendar" : {
+        "events": [
+          {
+            "dt_start": "2017-01-01T18:00:00",
+            "dt_end": "2017-01-01T22:00:00",
+            "tz_id": "American/NewYork",
+            "recurrence_rule" : {
+              "freq": "weekly",
+              "byDay": "mo",
+              "interval": "1"
+            }
+          }
+        ]
+      }
+    }
+  },
+
+
+
+      {
+    "headline" : "Harm Reduction Program",
+    "summary"  : "North American Syringe Exchange Network (NASEN)",
+    "notes"    : "",
+    "number_ratings" : 0,
+    "total_ratings" : 0,
+    "thing"    : {
+      "description_how" : "Talk to Sharon Thomas",
+      "description_what" : "Needle Exchange",
+      "main_type": "medical",
+      "subtypes": [ "needle exchage"],
+      "tags": [],
+      "notes": ''
+    },
+    "space"    : {
+      "longitude" : "-73.839394",
+      "latitude": "40.911457",
+      "canonical_address": " 100 Stevens Ave Mt Vernon, NY 10550",
+      "alternate_names": [],
+      "notes": ""
+    },
+    "time"    : {
+      "notes" : "not actual dates",
+      "calendar" : {
+        "events": [
+          {
+            "dt_start": "2017-01-01T18:00:00",
+            "dt_end": "2017-01-01T22:00:00",
+            "tz_id": "American/NewYork",
+            "recurrence_rule" : {
+              "freq": "weekly",
+              "byDay": "mo",
+              "interval": "1"
+            }
+          }
+        ]
+      }
+    }
+  },
+
+
+
+      {
+    "headline" : "Positive Health Project",
+    "summary"  : "North American Syringe Exchange Network (NASEN)",
+    "notes"    : "",
+    "number_ratings" : 0,
+    "total_ratings" : 0,
+    "thing"    : {
+      "description_how" : "Talk to Amu Ptah-Riojas",
+      "description_what" : "Needle Exchange",
+      "main_type": "medical",
+      "subtypes": [ "needle exchage"],
+      "tags": [],
+      "notes": ''
+    },
+    "space"    : {
+      "longitude" : "-73.99220913648605",
+      "latitude": "40.754195898771286",
+      "canonical_address": " 301 W 37th St 2nd floor New York, NY 10018",
+      "alternate_names": [],
+      "notes": ""
+    },
+    "time"    : {
+      "notes" : "not actual dates",
+      "calendar" : {
+        "events": [
+          {
+            "dt_start": "2017-01-01T18:00:00",
+            "dt_end": "2017-01-01T22:00:00",
+            "tz_id": "American/NewYork",
+            "recurrence_rule" : {
+              "freq": "weekly",
+              "byDay": "mo",
+              "interval": "1"
+            }
+          }
+        ]
+      }
+    }
+  },
+
+
+
+      {
+    "headline" : "BOOM! Health",
+    "summary"  : "North American Syringe Exchange Network (NASEN)",
+    "notes"    : "",
+    "number_ratings" : 0,
+    "total_ratings" : 0,
+    "thing"    : {
+      "description_how" : "Talk to Charles Bolds",
+      "description_what" : "Needle Exchange",
+      "main_type": "medical",
+      "subtypes": [ "needle exchage"],
+      "tags": [],
+      "notes": ''
+    },
+    "space"    : {
+      "longitude" : "-73.92531953752041",
+      "latitude": "40.81573851406574",
+      "canonical_address": " 226 E 144th St Bronx, NY 10451",
+      "alternate_names": [],
+      "notes": ""
+    },
+    "time"    : {
+      "notes" : "not actual dates",
+      "calendar" : {
+        "events": [
+          {
+            "dt_start": "2017-01-01T18:00:00",
+            "dt_end": "2017-01-01T22:00:00",
+            "tz_id": "American/NewYork",
+            "recurrence_rule" : {
+              "freq": "weekly",
+              "byDay": "mo",
+              "interval": "1"
+            }
+          }
+        ]
+      }
+    }
+  },
+
+
+
+      {
+    "headline" : "Tompkins County Prevention Point",
+    "summary"  : "North American Syringe Exchange Network (NASEN)",
+    "notes"    : "",
+    "number_ratings" : 0,
+    "total_ratings" : 0,
+    "thing"    : {
+      "description_how" : "Talk to Lillian Fan",
+      "description_what" : "Needle Exchange",
+      "main_type": "medical",
+      "subtypes": [ "needle exchage"],
+      "tags": [],
+      "notes": ''
+    },
+    "space"    : {
+      "longitude" : "-76.507706",
+      "latitude": "42.435242",
+      "canonical_address": " 501 S Meadow St Ithaca, NY 14850",
+      "alternate_names": [],
+      "notes": ""
+    },
+    "time"    : {
+      "notes" : "not actual dates",
+      "calendar" : {
+        "events": [
+          {
+            "dt_start": "2017-01-01T18:00:00",
+            "dt_end": "2017-01-01T22:00:00",
+            "tz_id": "American/NewYork",
+            "recurrence_rule" : {
+              "freq": "weekly",
+              "byDay": "mo",
+              "interval": "1"
+            }
+          }
+        ]
+      }
+    }
+  },
+
+
+
+      {
+    "headline" : "AIDS Rochester Harm Reduction Program",
+    "summary"  : "North American Syringe Exchange Network (NASEN)",
+    "notes"    : "",
+    "number_ratings" : 0,
+    "total_ratings" : 0,
+    "thing"    : {
+      "description_how" : "Talk to Lisette Castro",
+      "description_what" : "Needle Exchange",
+      "main_type": "medical",
+      "subtypes": [ "needle exchage"],
+      "tags": [],
+      "notes": ''
+    },
+    "space"    : {
+      "longitude" : "-77.605949",
+      "latitude": "43.163074",
+      "canonical_address": " 416 Central Ave Rochester, NY 14605",
+      "alternate_names": [],
+      "notes": ""
+    },
+    "time"    : {
+      "notes" : "not actual dates",
+      "calendar" : {
+        "events": [
+          {
+            "dt_start": "2017-01-01T18:00:00",
+            "dt_end": "2017-01-01T22:00:00",
+            "tz_id": "American/NewYork",
+            "recurrence_rule" : {
+              "freq": "weekly",
+              "byDay": "mo",
+              "interval": "1"
+            }
+          }
+        ]
+      }
+    }
+  },
+
+
+
+      {
+    "headline" : "Access Care and Resources Health",
+    "summary"  : "North American Syringe Exchange Network (NASEN)",
+    "notes"    : "",
+    "number_ratings" : 0,
+    "total_ratings" : 0,
+    "thing"    : {
+      "description_how" : "Talk to Nathan Barron",
+      "description_what" : "Needle Exchange",
+      "main_type": "medical",
+      "subtypes": [ "needle exchage"],
+      "tags": [],
+      "notes": ''
+    },
+    "space"    : {
+      "longitude" : "-76.161606",
+      "latitude": "43.052895",
+      "canonical_address": " 637 West Genesee Street Syracuse, NY 13204",
+      "alternate_names": [],
+      "notes": ""
+    },
+    "time"    : {
+      "notes" : "not actual dates",
+      "calendar" : {
+        "events": [
+          {
+            "dt_start": "2017-01-01T18:00:00",
+            "dt_end": "2017-01-01T22:00:00",
+            "tz_id": "American/NewYork",
+            "recurrence_rule" : {
+              "freq": "weekly",
+              "byDay": "mo",
+              "interval": "1"
+            }
+          }
+        ]
+      }
+    }
+  },
+
+
+
+      {
+    "headline" : "ACQC - Long Island City",
+    "summary"  : "North American Syringe Exchange Network (NASEN)",
+    "notes"    : "",
+    "number_ratings" : 0,
+    "total_ratings" : 0,
+    "thing"    : {
+      "description_how" : "Talk to Erika Vasquez",
+      "description_what" : "Needle Exchange",
+      "main_type": "medical",
+      "subtypes": [ "needle exchage"],
+      "tags": [],
+      "notes": ''
+    },
+    "space"    : {
+      "longitude" : "-73.94128214041984",
+      "latitude": "40.74982469235494",
+      "canonical_address": " 42nd Road between 27th & Crescent Street Long Island City, NY 11101",
+      "alternate_names": [],
+      "notes": ""
+    },
+    "time"    : {
+      "notes" : "not actual dates",
+      "calendar" : {
+        "events": [
+          {
+            "dt_start": "2017-01-01T18:00:00",
+            "dt_end": "2017-01-01T22:00:00",
+            "tz_id": "American/NewYork",
+            "recurrence_rule" : {
+              "freq": "weekly",
+              "byDay": "mo",
+              "interval": "1"
+            }
+          }
+        ]
+      }
+    }
+  },
+
+
+
+      {
+    "headline" : "Broome County Prevention Point",
+    "summary"  : "North American Syringe Exchange Network (NASEN)",
+    "notes"    : "",
+    "number_ratings" : 0,
+    "total_ratings" : 0,
+    "thing"    : {
+      "description_how" : "Talk to Lillian Fan",
+      "description_what" : "Needle Exchange",
+      "main_type": "medical",
+      "subtypes": [ "needle exchage"],
+      "tags": [],
+      "notes": ''
+    },
+    "space"    : {
+      "longitude" : "-75.958176",
+      "latitude": "42.111889",
+      "canonical_address": " 122 Baldwin St Johnson City, NY 13790",
+      "alternate_names": [],
+      "notes": ""
+    },
+    "time"    : {
+      "notes" : "not actual dates",
+      "calendar" : {
+        "events": [
+          {
+            "dt_start": "2017-01-01T18:00:00",
+            "dt_end": "2017-01-01T22:00:00",
+            "tz_id": "American/NewYork",
+            "recurrence_rule" : {
+              "freq": "weekly",
+              "byDay": "mo",
+              "interval": "1"
+            }
+          }
+        ]
+      }
+    }
+  },
+
+
+
+      {
+    "headline" : "Vocal-NY",
+    "summary"  : "North American Syringe Exchange Network (NASEN)",
+    "notes"    : "",
+    "number_ratings" : 0,
+    "total_ratings" : 0,
+    "thing"    : {
+      "description_how" : "Talk to Sean Barry",
+      "description_what" : "Needle Exchange",
+      "main_type": "medical",
+      "subtypes": [ "needle exchage"],
+      "tags": [],
+      "notes": ''
+    },
+    "space"    : {
+      "longitude" : "-73.980209",
+      "latitude": "40.682205",
+      "canonical_address": " 80-A Fourth Avenue Brooklyn, NY 11217",
+      "alternate_names": [],
+      "notes": ""
+    },
+    "time"    : {
+      "notes" : "not actual dates",
+      "calendar" : {
+        "events": [
+          {
+            "dt_start": "2017-01-01T18:00:00",
+            "dt_end": "2017-01-01T22:00:00",
+            "tz_id": "American/NewYork",
+            "recurrence_rule" : {
+              "freq": "weekly",
+              "byDay": "mo",
+              "interval": "1"
+            }
+          }
+        ]
+      }
+    }
+  },
+
+
+
+      {
+    "headline" : "Long Island Minority AIDS Coalition",
+    "summary"  : "North American Syringe Exchange Network (NASEN)",
+    "notes"    : "",
+    "number_ratings" : 0,
+    "total_ratings" : 0,
+    "thing"    : {
+      "description_how" : "Talk to Rabia Aziz",
+      "description_what" : "Needle Exchange",
+      "main_type": "medical",
+      "subtypes": [ "needle exchage"],
+      "tags": [],
+      "notes": ''
+    },
+    "space"    : {
+      "longitude" : "-73.62659990787506",
+      "latitude": "40.71261025965214",
+      "canonical_address": " Main Street & Bedell Street Hempstead, NY 11550",
+      "alternate_names": [],
+      "notes": ""
+    },
+    "time"    : {
+      "notes" : "not actual dates",
+      "calendar" : {
+        "events": [
+          {
+            "dt_start": "2017-01-01T18:00:00",
+            "dt_end": "2017-01-01T22:00:00",
+            "tz_id": "American/NewYork",
+            "recurrence_rule" : {
+              "freq": "weekly",
+              "byDay": "mo",
+              "interval": "1"
+            }
+          }
+        ]
+      }
+    }
+  },
+
+
+
+      {
+    "headline" : "Project Safe",
+    "summary"  : "North American Syringe Exchange Network (NASEN)",
+    "notes"    : "",
+    "number_ratings" : 0,
+    "total_ratings" : 0,
+    "thing"    : {
+      "description_how" : "Talk to Lindsay Roth",
+      "description_what" : "Needle Exchange",
+      "main_type": "medical",
+      "subtypes": [ "needle exchage"],
+      "tags": [],
+      "notes": ''
+    },
+    "space"    : {
+      "longitude" : "-78.87844830751419",
+      "latitude": "42.89074972271919",
+      "canonical_address": " 206 S Elmwood Ave Buffalo, NY 14201",
+      "alternate_names": [],
+      "notes": ""
+    },
+    "time"    : {
+      "notes" : "not actual dates",
+      "calendar" : {
+        "events": [
+          {
+            "dt_start": "2017-01-01T18:00:00",
+            "dt_end": "2017-01-01T22:00:00",
+            "tz_id": "American/NewYork",
+            "recurrence_rule" : {
+              "freq": "weekly",
+              "byDay": "mo",
+              "interval": "1"
+            }
+          }
+        ]
+      }
+    }
+  },
+
+
+
+      {
+    "headline" : "ACQC - Jamaica",
+    "summary"  : "North American Syringe Exchange Network (NASEN)",
+    "notes"    : "",
+    "number_ratings" : 0,
+    "total_ratings" : 0,
+    "thing"    : {
+      "description_how" : "Talk to Erika Vasquez",
+      "description_what" : "Needle Exchange",
+      "main_type": "medical",
+      "subtypes": [ "needle exchage"],
+      "tags": [],
+      "notes": ''
+    },
+    "space"    : {
+      "longitude" : "-73.80700059235096",
+      "latitude": "40.70079445838928",
+      "canonical_address": " 147-23 Archer Avenue Jamaica, NY 11432",
+      "alternate_names": [],
+      "notes": ""
+    },
+    "time"    : {
+      "notes" : "not actual dates",
+      "calendar" : {
+        "events": [
+          {
+            "dt_start": "2017-01-01T18:00:00",
+            "dt_end": "2017-01-01T22:00:00",
+            "tz_id": "American/NewYork",
+            "recurrence_rule" : {
+              "freq": "weekly",
+              "byDay": "mo",
+              "interval": "1"
+            }
+          }
+        ]
+      }
+    }
+  },
+
+
+
+      {
+    "headline" : "Family Services Network of NY",
+    "summary"  : "North American Syringe Exchange Network (NASEN)",
+    "notes"    : "",
+    "number_ratings" : 0,
+    "total_ratings" : 0,
+    "thing"    : {
+      "description_how" : "Talk to Leslie Bobb",
+      "description_what" : "Needle Exchange",
+      "main_type": "medical",
+      "subtypes": [ "needle exchage"],
+      "tags": [],
+      "notes": ''
+    },
+    "space"    : {
+      "longitude" : "-73.913864",
+      "latitude": "40.685135",
+      "canonical_address": " 1639 Broadway Brooklyn, NY 11207",
+      "alternate_names": [],
+      "notes": ""
+    },
+    "time"    : {
+      "notes" : "not actual dates",
+      "calendar" : {
+        "events": [
+          {
+            "dt_start": "2017-01-01T18:00:00",
+            "dt_end": "2017-01-01T22:00:00",
+            "tz_id": "American/NewYork",
+            "recurrence_rule" : {
+              "freq": "weekly",
+              "byDay": "mo",
+              "interval": "1"
+            }
+          }
+        ]
+      }
+    }
+  },
+
+
+
+      {
+    "headline" : "FROST'D",
+    "summary"  : "North American Syringe Exchange Network (NASEN)",
+    "notes"    : "",
+    "number_ratings" : 0,
+    "total_ratings" : 0,
+    "thing"    : {
+      "description_how" : "Talk to Becky Smith",
+      "description_what" : "Needle Exchange",
+      "main_type": "medical",
+      "subtypes": [ "needle exchage"],
+      "tags": [],
+      "notes": ''
+    },
+    "space"    : {
+      "longitude" : "-73.945297",
+      "latitude": "40.807373",
+      "canonical_address": " 290 Lenox Ave Lower Level New York, NY 10027",
+      "alternate_names": [],
+      "notes": ""
+    },
+    "time"    : {
+      "notes" : "not actual dates",
+      "calendar" : {
+        "events": [
+          {
+            "dt_start": "2017-01-01T18:00:00",
+            "dt_end": "2017-01-01T22:00:00",
+            "tz_id": "American/NewYork",
+            "recurrence_rule" : {
+              "freq": "weekly",
+              "byDay": "mo",
+              "interval": "1"
+            }
+          }
+        ]
+      }
+    }
+  }
+  ]
+Connected to pydev debugger (build 163.10154.50)
+headline  After Hours Project, Inc  website  http://www.afterhoursproject.org/ phone  718-249-0755 email afterhours748@aol.com
+summary North American Syringe Exchange Network (NASEN) what Needle Exchange how Talk to Fernando Soto
+longitude -73.92688527703285 latitude 40.69218456745148 subtypes ['needle exchange']
+types medical canonical address  1204 Broadway Brooklyn, NY 11221
+headline  Washington Heights CORNER Project  website  http://www.cornerproject.org/ phone  (212) 923-7600 email taeko@cornerproject.org
+summary North American Syringe Exchange Network (NASEN) what Needle Exchange how Talk to Taeko Frost
+longitude -73.93302820622921 latitude 40.84897041320801 subtypes ['needle exchange']
+types medical canonical address  566 W 181 St 2nd floor New York, NY 10033
+headline  New York Harm Reduction Educators, Inc  website  http://www.nyhre.org/ phone  (718) 842-6050 email clopez@nyhre.org
+summary North American Syringe Exchange Network (NASEN) what Needle Exchange how Talk to Carolina Lopez
+longitude -73.89170944690704 latitude 40.82145430147648 subtypes ['needle exchange']
+types medical canonical address  953 Southern Blvd Ste 302 Bronx, NY 10459
+headline  St Ann's Corner of Harm Reduction  website  http://www.sachr.org/ phone  email info@sachr.org
+summary North American Syringe Exchange Network (NASEN) what Needle Exchange how Talk to Sandra Turner
+longitude -73.92980754375458 latitude 40.8148929476738 subtypes ['needle exchange']
+types medical canonical address  310 Walton Ave #201 Bronx, NY 10451
+headline  ACQC - Far Rockaway  website  http://www.acqc.org/ phone  (718) 896-2500 email evasquez@acqc.org
+summary North American Syringe Exchange Network (NASEN) what Needle Exchange how Talk to Erika Vasquez
+longitude -73.753844 latitude 40.603406 subtypes ['needle exchange']
+types medical canonical address  Beach 21st Far Rockaway, NY 11691
+headline  ACQC - Woodside  website  http://www.acqc.org/ phone  (718) 896-2500 email evasquez@acqc.org
+summary North American Syringe Exchange Network (NASEN) what Needle Exchange how Talk to Erika Vasquez
+longitude -73.90226 latitude 40.744682 subtypes ['needle exchange']
+types medical canonical address  6207 Woodside Ave 3rd floor Woodside, NY 11377
+headline  Lower East Side Harm Reduction  website  http://www.leshrc.org/ phone  212-226-6333 email monique@leshrc.org
+summary North American Syringe Exchange Network (NASEN) what Needle Exchange how Talk to Monique Wright
+longitude -73.992607 latitude 40.715706 subtypes ['needle exchange']
+types medical canonical address  25 Allen St New York, NY 10002-5311
+headline  Streetwork Project  website  http://www.safehorizon.org/ phone  (646) 602-6404 email jwelch@safehorizon.org
+summary North American Syringe Exchange Network (NASEN) what Needle Exchange how Talk to John Welch
+longitude -73.989815 latitude 40.716042 subtypes ['needle exchange']
+types medical canonical address  33 Essex St New York, NY 10002
+headline  Housing Works, Inc  website  http://www.housingworks.org/ phone  (347) 473-7404 email
+summary North American Syringe Exchange Network (NASEN) what Needle Exchange how Talk to Linney Smith
+longitude -73.99624988436699 latitude 40.72479955852032 subtypes ['needle exchange']
+types medical canonical address  130 Crosby St New York, NY 10012
+headline  Harm Reduction Program  website  http://nul.iamempowered.com/ phone  email SThomas0203@hotmail.com
+summary North American Syringe Exchange Network (NASEN) what Needle Exchange how Talk to Sharon Thomas
+longitude -73.839394 latitude 40.911457 subtypes ['needle exchange']
+types medical canonical address  100 Stevens Ave Mt Vernon, NY 10550
+headline  Positive Health Project  website  http://www.positivehealthproject.org/ phone  (212) 465-8304 email
+summary North American Syringe Exchange Network (NASEN) what Needle Exchange how Talk to Amu Ptah-Riojas
+longitude -73.99220913648605 latitude 40.754195898771286 subtypes ['needle exchange']
+types medical canonical address  301 W 37th St 2nd floor New York, NY 10018
+headline  BOOM! Health  website  http://www.citiwidehr.org/ phone  email fjohnson@citiwidehr.org
+summary North American Syringe Exchange Network (NASEN) what Needle Exchange how Talk to Charles Bolds
+longitude -73.92531953752041 latitude 40.81573851406574 subtypes ['needle exchange']
+types medical canonical address  226 E 144th St Bronx, NY 10451
+headline  Tompkins County Prevention Point  website  http://www.stapinc.org/ phone  (607) 272-4098 email lfan@stapinc.org
+summary North American Syringe Exchange Network (NASEN) what Needle Exchange how Talk to Lillian Fan
+longitude -76.507706 latitude 42.435242 subtypes ['needle exchange']
+types medical canonical address  501 S Meadow St Ithaca, NY 14850
+headline  AIDS Rochester Harm Reduction Program  website  http://www.aidsrochester.org/ phone  (585) 545-5556 email lcastro@acrochester.org
+summary North American Syringe Exchange Network (NASEN) what Needle Exchange how Talk to Lisette Castro
+longitude -77.605949 latitude 43.163074 subtypes ['needle exchange']
+types medical canonical address  416 Central Ave Rochester, NY 14605
+headline  Access Care and Resources Health  website   phone  (315) 475-2430 email
+summary North American Syringe Exchange Network (NASEN) what Needle Exchange how Talk to Nathan Barron
+longitude -76.161606 latitude 43.052895 subtypes ['needle exchange']
+types medical canonical address  637 West Genesee Street Syracuse, NY 13204
+headline  ACQC - Long Island City  website  http://www.acqc.org/ phone  (718) 896-2500 email evasquez@acqc.org
+summary North American Syringe Exchange Network (NASEN) what Needle Exchange how Talk to Erika Vasquez
+longitude -73.94128214041984 latitude 40.74982469235494 subtypes ['needle exchange']
+types medical canonical address  42nd Road between 27th & Crescent Street Long Island City, NY 11101
+headline  Broome County Prevention Point  website  http://www.stapinc.org/ phone  (607) 798-1706 email lfan@stapinc.org
+summary North American Syringe Exchange Network (NASEN) what Needle Exchange how Talk to Lillian Fan
+longitude -75.958176 latitude 42.111889 subtypes ['needle exchange']
+types medical canonical address  122 Baldwin St Johnson City, NY 13790
+headline  Vocal-NY  website   phone  (718) 802-9540 email
+summary North American Syringe Exchange Network (NASEN) what Needle Exchange how Talk to Sean Barry
+longitude -73.980209 latitude 40.682205 subtypes ['needle exchange']
+types medical canonical address  80-A Fourth Avenue Brooklyn, NY 11217
+headline  Long Island Minority AIDS Coalition  website   phone  (631) 624-3357 email
+summary North American Syringe Exchange Network (NASEN) what Needle Exchange how Talk to Rabia Aziz
+longitude -73.62659990787506 latitude 40.71261025965214 subtypes ['needle exchange']
+types medical canonical address  Main Street & Bedell Street Hempstead, NY 11550
+headline  Project Safe  website  http://www.evergreenhs.org/ phone  email lindsay.a.roth@gmail.com
+summary North American Syringe Exchange Network (NASEN) what Needle Exchange how Talk to Lindsay Roth
+longitude -78.87844830751419 latitude 42.89074972271919 subtypes ['needle exchange']
+types medical canonical address  206 S Elmwood Ave Buffalo, NY 14201
+headline  ACQC - Jamaica  website  http://www.acqc.org/ phone  (718) 896-2500 email evasquez@acqc.org
+summary North American Syringe Exchange Network (NASEN) what Needle Exchange how Talk to Erika Vasquez
+longitude -73.80700059235096 latitude 40.70079445838928 subtypes ['needle exchange']
+types medical canonical address  147-23 Archer Avenue Jamaica, NY 11432
+headline  Family Services Network of NY  website  http://www.fsnny.org/ phone  (718) 573-3358 email lbobb@fsnny.org
+summary North American Syringe Exchange Network (NASEN) what Needle Exchange how Talk to Leslie Bobb
+longitude -73.913864 latitude 40.685135 subtypes ['needle exchange']
+types medical canonical address  1639 Broadway Brooklyn, NY 11207
+headline  FROST'D  website  http://www.frostd.org/ phone  (212) 924-3733 email rsmith@frostd.org
+summary North American Syringe Exchange Network (NASEN) what Needle Exchange how Talk to Becky Smith
+longitude -73.945297 latitude 40.807373 subtypes ['needle exchange']
+types medical canonical address  290 Lenox Ave Lower Level New York, NY 10027
+
+Process finished with exit code 0
