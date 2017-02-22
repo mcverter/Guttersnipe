@@ -1,14 +1,14 @@
 import expect from 'expect';
 import React from 'react';
 import {mount, shallow} from 'enzyme';
-import Header from '../Header';
+import Header from '../../../../components/common/Header';
 
-function makeFooter(authenticated) {
-  const props = {
-  };
 
-  return shallow(<Header {...props} />);
-}
+let header;
+
+beforeEach(() => {
+  console.log('hello world');
+});
 
 describe('Header', () => {
   it('shows link to home page', () => {
