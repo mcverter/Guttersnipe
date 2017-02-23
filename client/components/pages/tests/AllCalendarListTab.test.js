@@ -10,9 +10,8 @@ function setup({isFetchingShareables=false, items=[]}) {
 
 describe('AllCalendarListTab', () => {
   it('exists', () => {
-//    wrapper = setup();
-//    console.log(wrapper);
-//    expect(wrapper).toExist();
+    const wrapper = setup();
+    expect(wrapper).toExist();
   });
 
   it('displays loading if isFetchingShareables is true', () =>{
