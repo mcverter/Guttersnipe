@@ -9,7 +9,7 @@ import NavDropdown from 'react-bootstrap/lib/NavDropdown';
 import { LinkContainer } from 'react-router-bootstrap';
 
 
-const Header = ({authenticated}) => {
+export const Header = ({authenticated}) => {
   const renderAuthLinks = () => {
     if (authenticated) {
       return (
@@ -32,7 +32,7 @@ const Header = ({authenticated}) => {
   };
 
   return (
-    <Navbar className="gs-navbar">
+    <Navbar className="header gs-navbar">
       <Navbar.Header>
         <Navbar.Brand>
           <LinkContainer to="/" className="navbar-brand ">
