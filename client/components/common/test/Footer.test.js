@@ -1,7 +1,7 @@
 import expect from 'expect';
 import React from 'react';
 import {mount, shallow} from 'enzyme';
-import Footer from './Footer';
+import Footer from '../Footer';
 
 describe('Footer', () => {
   it('exists', () => {

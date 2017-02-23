@@ -2,7 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {fetchRandomKropotkin} from '../../actions/kropotkins/kropotkinActions';
 
-class KropotkinQuote extends Component {
+export class KropotkinQuote extends Component {
 
   componentWillMount() {
     this.props.fetchRandomKropotkin();
@@ -44,7 +44,7 @@ const mapStateToProps = (state) => {
 KropotkinQuote.propTypes = {
   fetchRandomKropotkin: PropTypes.func,
   isFetchingKropotkin: PropTypes.bool,
-  kropotkinFetchError: PropTypes.func,
+  kropotkinFetchError: PropTypes.bool,
   kropotkin: PropTypes.object
 };
 

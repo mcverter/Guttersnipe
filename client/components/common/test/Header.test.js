@@ -1,7 +1,7 @@
 import expect from 'expect';
 import React from 'react';
 import {mount, shallow} from 'enzyme';
-import {Header} from './Header';
+import {Header} from '../Header';
 
 describe('Header', () => {
   it('exists', () => {

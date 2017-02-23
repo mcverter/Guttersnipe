@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router';
-import Kropotkin from './kropotkins/kropotkin';
+import Kropotkin from './kropotkins/Kropotkin';
 //import imgsrc from '../img/piafGutterCropped.png';
 import SERVER_URL  from '../config';
 

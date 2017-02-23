@@ -6,7 +6,7 @@ import {fetchAllShareables} from '../../actions/shareables/shareableActions';
 import {Link} from 'react-router';
 import EventCalendarNavigable from '../shareables/time/EventCalendarNavigable';
 
-const AllShareablesCalendarPage = (props) => {
+export const AllShareablesCalendarPage = (props) => {
   const {shareables: {isFetchingShareables, items}}= props;
 
   if (isFetchingShareables || !items || items.length < 1) {
@@ -17,9 +17,11 @@ const AllShareablesCalendarPage = (props) => {
     ({calendarEvents: item.time.schedule.events, headline: item.headline}));
 
   return (
+    <div className="all-shareables-calendar-tab">
     <EventCalendarNavigable
       arrayOfCalendarEventsWithHeadlines={allEvents}
       viewMonth={new Date()} />
+    </div>
   );
 };
 
