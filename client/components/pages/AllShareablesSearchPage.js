@@ -1,6 +1,6 @@
 import React, {PropTypes, Component} from "react";
 import {Link} from "react-router";
-import {Button} from 'react-bootstrap/lib/Button';
+import Button from 'react-bootstrap/lib/Button';
 import { connect } from 'react-redux';
 import SpaceSearchPanel from '../shareables/space/SpaceSearchPanel'
 import TimeSearchPanel from '../shareables/time/TimeSearchPanel';
@@ -8,7 +8,7 @@ import ThingSearchPanel from '../shareables/thing/ThingSearchPanel';
 import { Field, reduxForm } from 'redux-form';
 import {searchShareables} from '../../actions/shareables/shareableActions';
 
-class ShareablesSearchPage extends Component {
+class AllShareablesSearchPage extends Component {
   constructor(props) {
     super(props);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
@@ -27,9 +27,10 @@ class ShareablesSearchPage extends Component {
   }
 
   render() {
+    debugger;
     const {handleSubmit} = this.props;
     return (
-      <form className="shareable-search-pg" onSubmit={handleSubmit(this.handleFormSubmit)}>
+    <form className="shareable-search-pg" onSubmit={handleSubmit(this.handleFormSubmit)}>
         <TimeSearchPanel />
         <SpaceSearchPanel />
         <ThingSearchPanel />
@@ -65,7 +66,7 @@ function validate(formProps) {
   return errors;
 }
 
-ShareablesSearchPage.propTypes = {
+AllShareablesSearchPage.propTypes = {
   searchShareables: PropTypes.func,
   handleSubmit: PropTypes.func
 };
@@ -76,5 +77,5 @@ export default connect(mapStateToProps, mapDispatchToProps)(
     destroyOnUnmount: false,        // <------ preserve form data
     forceUnregisterOnUnmount: true,  // <------ unregister fields on unmount
 //    validate
-  })(ShareablesSearchPage));
+  })(AllShareablesSearchPage));
 

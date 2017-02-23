@@ -25,7 +25,7 @@ class AllShareablesPage extends Component {
   }
 
   componentWillMount() {
-    this.props.setBrowserLocation();
+//    this.props.setBrowserLocation();
     this.props.fetchAllShareablesIfNeeded();
   }
 
@@ -65,7 +65,7 @@ const mapDispatchToProps = (dispatch) => {
 
 AllShareablesCalendarPage.propTypes = {
   fetchAllShareablesIfNeeded: PropTypes.func,
-  setBrowserLocation: PropTypes.func
+//  setBrowserLocation: PropTypes.func
 }
 
 export default connect(null, mapDispatchToProps) (AllShareablesPage);
