@@ -27,7 +27,6 @@ class AllShareablesSearchPage extends Component {
   }
 
   render() {
-    debugger;
     const {handleSubmit} = this.props;
     return (
     <form className="shareable-search-pg" onSubmit={handleSubmit(this.handleFormSubmit)}>
