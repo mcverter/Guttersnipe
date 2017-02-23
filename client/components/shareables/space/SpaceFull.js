@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
-
-import L from 'leaflet';
+import "../../../../node_modules/leaflet/dist/images/marker-icon-2x.png";
+import "../../../../node_modules/leaflet/dist/images/marker-icon.png";
+import "../../../../node_modules/leaflet/dist/images/marker-shadow.png";
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import Panel from 'react-bootstrap/lib/Panel'
 

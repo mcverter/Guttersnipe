@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router';
 import Kropotkin from './kropotkins/Kropotkin';
-//import imgsrc from '../img/piafGutterCropped.png';
+import imgsrc from '../img/piafGutterCropped.png';
 import SERVER_URL  from '../config';
 
 const FrontPage = (props) => (
@@ -24,6 +24,7 @@ const FrontPage = (props) => (
 
     </div>
 
+    <img src={imgsrc} className="piaf-img"/>
 
 
     <br /><hr /><br />

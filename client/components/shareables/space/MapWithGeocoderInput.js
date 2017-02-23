@@ -2,6 +2,10 @@ import React, {Component, PropTypes} from 'react';
 
 import L from 'leaflet';
 import 'leaflet-geocoder-mapzen';
+import "../../../../node_modules/leaflet/dist/images/marker-icon-2x.png";
+import "../../../../node_modules/leaflet/dist/images/marker-icon.png";
+import "../../../../node_modules/leaflet/dist/images/marker-shadow.png";
+
 
 export default class MapWithGeocoder extends Component {
     constructor(props) {

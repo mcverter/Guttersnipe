@@ -1,5 +1,11 @@
 .event-calendar-view {height: 400px}
 
+.piaf-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
 .leaflet-container {
     height: 400px;
     width: 80%;
