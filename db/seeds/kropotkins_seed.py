@@ -6,7 +6,7 @@ from server.kropotkins.models import Kropotkin
 
 def seed_kropotkins():
   curr_dir = os.path.dirname(os.path.realpath(__file__))
-  filename = os.path.join(curr_dir, "kropotkin.data.json")
+  filename = os.path.join(curr_dir, "json", "kropotkin.data.json")
   json_string = (open(filename, "r", encoding="UTF-8")).read()
   py_array = json.loads(json_string)
   for quote in py_array:
