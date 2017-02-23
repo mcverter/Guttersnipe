@@ -1,5 +1,4 @@
 '''
-
 from server import db
 from server.shareables.models import \
   Shareable, \
@@ -168,5 +167,6 @@ class DbShareable(DBObject):
       Shareable.comments == comments,
       Shareable.notes == shareable_notes,
     ).first()
+
 
 '''
