@@ -1,14 +1,17 @@
-import os
 import urllib
 
 from flask import url_for
 from flask.ext.migrate import Migrate, MigrateCommand
 from flask_script import Manager, Shell
 
-from db.seeds.kropotkinsSeed import seed_kropotkins
+from db.seeds.kropotkins_seed import seed_kropotkins
 from db.seeds.types_subtypes_tags_seed import seed_types_and_subtypes_and_tags
+from db.seeds.bk_freegan_seed import seed_bk_freegan
+from db.seeds.needle_exchange_seed import seed_needles
+
+
 from server import app, db
-from server.create_sqlalchemy.create_shareable_from_json import create_many_shareables_from_json_string
+
 
 
 def make_shell_context():
@@ -23,11 +26,9 @@ manager.add_command('db', MigrateCommand)
 
 @manager.command
 def seed():
-    curr_dir = os.path.dirname(os.path.realpath(__file__))
-    filename = os.path.join(curr_dir, "db", "seeds", "brooklyn.data.json")
-    json = (open(filename, "r", encoding="UTF-8")).read()
+    seed_needles()
+    seed_bk_freegan()
     seed_types_and_subtypes_and_tags()
-    create_many_shareables_from_json_string(json)
     seed_kropotkins()
 
 
