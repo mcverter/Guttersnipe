@@ -24,8 +24,10 @@ def signin():
 
 @app.route('/api/signup', methods=['POST'])
 def signup():
-  username = request.json.get('username', None)
-  password = request.json.get('password', None)
+  data = json.loads(request.data.decode('utf-8'))
+  username = data['username'] #request.json.get('username', None)
+  password = data['password'] # request.json.get('password', None)
+
   if username is None or password is None:
     return jsonify({"msg": "You must supply username and password"}), 401
 

@@ -13,7 +13,7 @@ export function signInUser({email, password}) {
           return response.json()
         } else if (response.status === 401) {
            return response.json()
-            .then(data => { debugger; throw(data.msg)})
+            .then(data => {throw(data.msg)})
         } else {
           throw("Could not login " + response.status + " " + response.statusText);
         }})
@@ -30,18 +30,22 @@ export function signInUser({email, password}) {
 
 export function signUpUser({email, password}) {
   return function(dispatch) {
-    fetch(`${SERVER_URL}/api/signin`, {
+    fetch(`${SERVER_URL}/api/signup`, {
       method: 'POST',
       mode: 'cors',
       body: JSON.stringify({username: email, password:password})})
       .then(response => {
-        if (response.status !== 200) {
-          throw("Could not sign up " + response.status + " " +response.statusText);
-        }
-        return (response.json())})
-      .then((response, data) => {
+        if (response.status >= 200 && response.status <= 300) {
+          return response.json()
+        } else if (response.status === 401) {
+           return response.json()
+            .then(data => { throw(data.msg)})
+        } else {
+          throw("Could not login " + response.status + " " + response.statusText);
+        }})
+      .then (data => {
         localStorage.setItem('token', data.access_token);
-        dispatch({type: AUTH_USER});
+        dispatch({type: AUTH_USER, username: data.username});
         browserHistory.push('/welcome');
       })
       .catch(errorMsg => {
