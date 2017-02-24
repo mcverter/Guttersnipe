@@ -61,6 +61,7 @@ class ThingSearchPanel extends Component {
 
 
   render() {
+    if (this.state.types === undefined) {return <div>Loading</div>;}
     return (
       <div className="thing-search">
         <Button onClick={ () => this.setState({showPanel: !this.state.showPanel})}>
@@ -101,23 +102,6 @@ class ThingSearchPanel extends Component {
                        multi={true}
                        simpleValue />
                    </ReduxFormComponentField>} />
-
-          <h2> Search by Tags </h2>
-
-          <Field name="thing_tags"
-                 component={props =>
-                   <ReduxFormComponentField
-                     meta={props.meta}
-                     label="Select or Create Zero or More Tags" >
-                     <Select
-                       value={props.input.value}
-                       onChange={props.input.onChange}
-                       onBlur={() => props.input.onBlur(props.input.value)}
-                       options={this.state.tags}
-                       placeholder="Select or Create Zero or More Tags"
-                       simpleValue
-                       multi={true} />
-                   </ReduxFormComponentField>}/>
         </Panel>
       </div>
     )
@@ -139,3 +123,25 @@ export default connect(mapStateToProps,
   {fetchShareableCategorizations})(ThingSearchPanel);
 
 
+
+
+/*
+
+          <h2> Search by Tags </h2>
+
+          <Field name="thing_tags"
+                 component={props =>
+                   <ReduxFormComponentField
+                     meta={props.meta}
+                     label="Select or Create Zero or More Tags" >
+                     <Select
+                       value={props.input.value}
+                       onChange={props.input.onChange}
+                       onBlur={() => props.input.onBlur(props.input.value)}
+                       options={this.state.tags}
+                       placeholder="Select or Create Zero or More Tags"
+                       simpleValue
+                       multi={true} />
+                   </ReduxFormComponentField>}/>
+
+ */

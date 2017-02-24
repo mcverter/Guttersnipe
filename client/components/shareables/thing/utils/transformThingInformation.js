@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/lib/Button';
 
 const renderArrayedLabels = (categories, label, style) => {
   if (categories && categories.length) {
-    categories = JSON.parse(categories.replace(/'/g, '"'));  // workaround
+        categories = JSON.parse(categories.replace(/'/g, '"'));  // workaround
     return (
       <div>
         <h3>{label}</h3>

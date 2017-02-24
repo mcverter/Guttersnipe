@@ -5,8 +5,7 @@ import {createShareable} from "../../actions/shareables/shareableActions.js";
 
 const ShareableCreateWizardPage = () => {
   const handleSubmit = (values) => {
-    debugger;
-    console.log('values', values)
+        console.log('values', values)
     const data = {
       'headline' : values.headline,
       'summary'  : values.summary,
@@ -17,7 +16,6 @@ const ShareableCreateWizardPage = () => {
         'main_type': values.thing_type,
         'subtypes': values.thing_subtypes ? values.thing_subtypes.split(',') : undefined,
         'notes': values.thing_notes,
-        'tags': values.thing_tags ? values.thing_tags.split(',') : undefined
       },
       'space'    : {
         'longitude' : values.space_map.longitude,

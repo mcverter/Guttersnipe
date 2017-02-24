@@ -14,6 +14,10 @@ class AllShareablesSearchPage extends Component {
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
   }
 
+  componentWillMount() {
+    
+  }
+
   handleFormSubmit(values) {
     const data = {
       date_input: values.time_input,

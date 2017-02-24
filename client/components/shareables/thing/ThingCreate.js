@@ -96,20 +96,6 @@ class ThingCreate extends Component {
                      simpleValue />
                  </ReduxFormComponentField>} />
 
-        <Field name="thing_tags"
-               component={props =>
-                 <ReduxFormComponentField
-                   meta={props.meta}
-                   label="Select or Create Zero or More Tags" >
-                   <Creatable
-                     value={props.input.value}
-                     onChange={props.input.onChange}
-                     onBlur={() => props.input.onBlur(props.input.value)}
-                     options={this.state.tags}
-                     placeholder="Select or Create Zero or More Tags"
-                     simpleValue
-                     multi={true} />
-                 </ReduxFormComponentField>}/>
 
         <Field name="thing_notes" type="text" component={ReduxFormHTMLInput} label="Additional Notes"/>
 
@@ -154,3 +140,21 @@ export default connect(mapStateToProps, {fetchShareableCategorizations})(reduxFo
 })(ThingCreate));
 
 
+/*
+Tags
+        <Field name="thing_tags"
+               component={props =>
+                 <ReduxFormComponentField
+                   meta={props.meta}
+                   label="Select or Create Zero or More Tags" >
+                   <Creatable
+                     value={props.input.value}
+                     onChange={props.input.onChange}
+                     onBlur={() => props.input.onBlur(props.input.value)}
+                     options={this.state.tags}
+                     placeholder="Select or Create Zero or More Tags"
+                     simpleValue
+                     multi={true} />
+                 </ReduxFormComponentField>}/>
+
+ */
