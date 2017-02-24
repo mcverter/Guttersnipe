@@ -20,6 +20,7 @@ errors.txt
 # Python Compiled
 *.pyc
 npm-debug.log*
+phantomjsdriver.log
 
 # Personal Study
 z_slingshot_src/
