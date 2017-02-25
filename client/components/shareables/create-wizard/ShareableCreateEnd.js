@@ -9,7 +9,8 @@ import {connect} from 'react-redux';
 import ReduxFormHTMLInput from '../../reduxFormInputs/ReduxFormHTMLInput';
 import Button from 'react-bootstrap/lib/Button';
 
-export let ShareableCreateEnd = ({handleSubmit, previousPage, shareable}) => {
+export let ShareableCreateEnd = ({handleSubmit, previousPage, shareable,
+  goToThingEdit, goToTimeEdit, goToSpaceEdit}) => {
 
 
   let {headline, summary, number_ratings, total_rating,
@@ -23,8 +24,14 @@ export let ShareableCreateEnd = ({handleSubmit, previousPage, shareable}) => {
       {number_ratings ? <div><h3>Rating</h3> {total_rating/number_ratings} </div>:''}
 
       <ThingFull thing={thing} headline={headline}/>
+      <Button type="button" onClick={goToThingEdit} />
+
       <SpaceFull space={space} headline={headline}/>
+      <Button type="button" onClick={goToSpaceEdit} />
+
+
       <TimeFull time={time} headline={headline}/>
+      <Button type="button" onClick={goToTimeEdit} />
 
       {notes && <div><h3>Notes:</h3> {notes} </div>}
       <Button type="button" className="previous" onClick={previousPage}>Previous</Button>
@@ -34,7 +41,7 @@ export let ShareableCreateEnd = ({handleSubmit, previousPage, shareable}) => {
 }
 
 ShareableCreateEnd.propTypes = {
-  handleSubmit: PropTypes.fesunc,
+  handleSubmit: PropTypes.func,
   previousPage: PropTypes.func
 };
 

@@ -20,17 +20,24 @@ class ThingCreate extends Component {
       types: undefined,
       subtypes: undefined
     };
+    console.log('props.meta', props.categorizationMeta);
     this.categorizationMetaToSelectOptions(props.categorizationMeta);
 
     this.handleTypesChange = this.handleTypesChange.bind(this);
   }
 
   componentWillMount() {
+    console.log('component is mounting');
     this.props.fetchShareableCategorizations();
   }
 
     componentWillReceiveProps(nextProps) {
+    console.log('props received', nextProps)
     this.categorizationMetaToSelectOptions(nextProps.categorizationMeta)
+  }
+
+  componentDidMount() {
+    this.categorizationMetaToSelectOptions(this.props.categorizationMeta)
   }
 
   categorizationMetaToSelectOptions(categorizationMeta) {
@@ -59,6 +66,8 @@ class ThingCreate extends Component {
   }
 
   render() {
+    console.log('rendering', this.state)
+
     if (this.state.types === undefined) {return <div>Loading</div>;}
     return (
       <form className="thing-create-form" onSubmit={this.props.handleSubmit}>
@@ -109,6 +118,7 @@ class ThingCreate extends Component {
 }
 
 function mapStateToProps(state) {
+  console.log('mapping state to props', state.shareables.categorizationMeta)
   return {
     categorizationMeta: state.shareables.categorizationMeta
   };

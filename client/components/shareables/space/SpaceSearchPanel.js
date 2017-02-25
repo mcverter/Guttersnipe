@@ -1,6 +1,4 @@
 import React, {PropTypes, Component} from "react";
-import {Link} from "react-router";
-import { connect } from 'react-redux';
 import MapWithGeocoderInput from './MapWithGeocoderInput';
 import Select from 'react-select';
 import Panel from 'react-bootstrap/lib/Panel'

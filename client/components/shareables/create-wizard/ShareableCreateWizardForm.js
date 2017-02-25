@@ -14,6 +14,7 @@ class ShareableCreateWizardForm extends Component {
     };
     this.nextPage = this.nextPage.bind(this);
     this.previousPage = this.previousPage.bind(this);
+    this.goToPageNumber = this.goToPageNumber.bind(this);
   }
 
   nextPage() {
@@ -22,6 +23,9 @@ class ShareableCreateWizardForm extends Component {
 
   previousPage() {
     this.setState({ page: this.state.page - 1 });
+  }
+  goToPageNumber(pgNum) {
+    this.setState({page: pgNum})
   }
 
   render() {
@@ -32,7 +36,11 @@ class ShareableCreateWizardForm extends Component {
         {page === 2 && <ThingCreate previousPage={this.previousPage} onSubmit={this.nextPage}/>}
         {page === 4 && <SpaceCreate previousPage={this.previousPage} onSubmit={this.nextPage}/>}
         {page === 3 && <TimeCreate previousPage={this.previousPage} onSubmit={this.nextPage}/>}
-        {page === 5 && <ShareableCreateEnd previousPage={this.previousPage} onSubmit={this.props.handleSubmit}/>}
+        {page === 5 && <ShareableCreateEnd
+          goToThingEdit ={()=>this.goToPageNumber(2)}
+          goToSpaceEdit ={()=>this.goToPageNumber(4)}
+          goToTimeEdit={()=>this.goToPageNumber(3)}
+          previousPage={this.previousPage} onSubmit={this.props.handleSubmit}/>}
       </div>
     );
   }
