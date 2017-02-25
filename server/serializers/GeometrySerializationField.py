@@ -10,8 +10,8 @@ class GeometrySerializationField(fields.Field):
             return value
         else:
             if isinstance(value, WKBElement):
-                return json.dumps({"latitude": db.session.scalar(func.ST_X(value)),
-                                   "longitude": db.session.scalar(func.ST_Y(value))})
+                return json.dumps({"longitude": db.session.scalar(func.ST_X(value)),
+                                   "latitude": db.session.scalar(func.ST_Y(value))})
             else:
                 return None
 
@@ -20,7 +20,7 @@ class GeometrySerializationField(fields.Field):
             return value
         else:
             if isinstance(value, Geometry):
-                return {'latitude': db.session.scalar(func.ST_X(value)),
-                        'longitude': db.session.scalar(func.ST_Y(value))}
+                return {'longitude': db.session.scalar(func.ST_X(value)),
+                        'latitude': db.session.scalar(func.ST_Y(value))}
             else:
                 return None

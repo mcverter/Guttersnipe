@@ -7,8 +7,7 @@ import Panel from 'react-bootstrap/lib/Panel'
 
 const SpaceFull = ({space}) =>  {
       const {latitude, longitude} = JSON.parse(space.position);
-    const position = [longitude, latitude];
-
+    const position = [latitude, longitude];
         return (
         <Panel className="space-full" header="Space">
           <h2> Map </h2>
