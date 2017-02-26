@@ -94,13 +94,30 @@ class ThingCreate extends Component {
                component={props =>
                  <ReduxFormComponentField
                    meta={props.meta}
-                   label="subtypes">
+                   label="Subtypes">
                    <Select
                      value={props.input.value}
                      onChange={props.input.onChange}
                      onBlur={() => props.input.onBlur(props.input.value)}
                      options={this.state.subtypes}
                      placeholder="Select Zero or More Subtypes"
+                     multi={true}
+                     simpleValue
+                     tabSelectsValue={false} />
+                 </ReduxFormComponentField>} />
+
+
+        <Field name="thing_tags"
+               component={props =>
+                 <ReduxFormComponentField
+                   meta={props.meta}
+                   label="Tags">
+                   <Select
+                     value={props.input.value}
+                     onChange={props.input.onChange}
+                     onBlur={() => props.input.onBlur(props.input.value)}
+                     options={this.state.subtypes}
+                     placeholder="Select Zero or More Tags"
                      multi={true}
                      simpleValue
                      tabSelectsValue={false} />

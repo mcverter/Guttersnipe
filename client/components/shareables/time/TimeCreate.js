@@ -28,7 +28,9 @@ class TimeCreate extends Component {
                      formInput={props.input}
                    />
                  </ReduxFormComponentField>} />
+    
         <Field name="time_notes" type="text" component={ReduxFormHTMLInput} label="Additional Notes"/>
+    
         <div>
           <Button type="button" className="previous" onClick={this.props.previousPage}>Previous</Button>
           <Button type="submit" className="next">Next</Button>
