@@ -15,8 +15,10 @@
 
 .calendar {
  width: 80%;
-    margin: 0 auto;
-    height: 500px
+ height: 75%;
+margin: 15px;
+overflow: hidden;
+
 }
 
 #calendar {
@@ -175,7 +177,6 @@ html {
 }
 
 .footer {
-    position: absolute;
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer here */
@@ -407,7 +408,11 @@ a.fa-links:focus {
 .calendar-input-field {}
 .comment-full {}
 .comment-list {}
-.date-listing {}
+.date-listing {
+    width: 75%;
+    background-color: yellow;
+    
+}
 .event-calendar-view {}
 .footer {}
 .form-component-field {}
