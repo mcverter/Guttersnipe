@@ -97,8 +97,8 @@ class CalendarInputField extends Component {
         const {onChange, value} = this.props.formInput;
 
         if (this.state.modalRepeating) {
-            this.props.formInput.onChange(
-                this.props.formInput.value.concat({
+            onChange(
+                value.concat({
                     eventIndex: eventIndex,
                     dt_start: moment(this.state.modalDate + " " +
                             this.state.modalStartTime, "MMMM DD, YYYY HH:mm")
@@ -113,8 +113,8 @@ class CalendarInputField extends Component {
                     }
                 }))
         } else {
-            this.props.formInput.onChange(
-                this.props.formInput.value.concat({
+            onChange(
+                value.concat({
                     eventIndex: eventIndex,
                     dt_start: moment(
                             this.state.modalDate + " " + this.state.modalStartTime, "MMMM DD, YYYY HH:mm")
