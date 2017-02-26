@@ -4,7 +4,18 @@ import Kropotkin from './kropotkins/Kropotkin';
 import imgsrc from '../img/piafGutterCropped.png';
 import {SERVER_URL}  from '../config';
 
-const FrontPage = (props) => (
+
+const FrontPage = (props) => {
+debugger;
+let piaf_image;
+if (__DEV__) {
+  piaf_image = <img src={imgsrc} className="piaf-img"/>
+} else {
+ const piafSrc = SERVER_URL + '/sta' + 'tic/img/piafGutterCropped.png'
+ piaf_image = <img src={piafSrc} className="piaf-img"/>
+}
+
+return (
   <section className="front-pg">
     <div className="text-center jumbotron RedOnBlack">
       <ul className="nav nav-pills nav-stacked">
@@ -25,19 +36,18 @@ const FrontPage = (props) => (
     </div>
 
 
-    <img src={`${SERVER_URL}`/static/img/piafGutterCropped.png`} className="piaf-img"/>
+   {piaf_image}
 
     <br /><hr /><br />
     <Kropotkin />
 
   </section>
 );
-
+}
 export default FrontPage;
 
 
 /*
       <img src={imgsrc} />
-    <img src={imgsrc} className="piaf-img"/>
 
  */
