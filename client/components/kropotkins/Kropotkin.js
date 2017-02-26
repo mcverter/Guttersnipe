@@ -21,7 +21,7 @@ export class KropotkinQuote extends Component {
         <div>
           <h3><a href="http://www.gutenberg.org/files/23428/23428-h/23428-h.htm">The Conquest of Bread</a> by <a href="http://en.wikipedia.org/wiki/Peter_Kropotkin">Pyotr Alexeivitch Kropotkin</a></h3>
         </div>
-        <button className="btn btn-danger" role="button" >New Quote</button>
+        <button className="btn btn-danger" role="button" onClick={this.props.fetchRandomKropotkin} >New Quote</button>
       </div>
     );
   }
