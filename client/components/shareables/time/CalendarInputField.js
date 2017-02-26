@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import moment from 'moment';
+import _ from 'lodash';
 
 import AddDateModal from './AddDateModal';
 import EventCalendarNavigable from './EventCalendarNavigable';
@@ -15,9 +16,11 @@ class CalendarInputField extends Component {
             modalDate: '',
             modalDay: '',
             modalRepeating: false,
+            eventIndex: 1
         };
 
-        // calendar
+   
+         // calendar
         this.handleCalendarSelectSlot = this.handleCalendarSelectSlot.bind(this);
 
         // modal form
@@ -27,6 +30,9 @@ class CalendarInputField extends Component {
         this.handleModalDurationChange = this.handleModalDurationChange.bind(this);
         this.handleModalSubmit = this.handleModalSubmit.bind(this);
         this.handleModalRepeatToggle = this.handleModalRepeatToggle.bind(this);
+    
+
+        this.deleteEvent = this.deleteEvent.bind(this);
     }
 
     handleCalendarSelectSlot(slotInfo) {
@@ -79,10 +85,21 @@ class CalendarInputField extends Component {
         };
     }
 
+    deleteEvent(idx) {
+        const {onChange, value} = this.props.formInput;
+        onChange(
+            value.filter(e => e.eventIndex !== idx)
+        )
+    }
+
     handleModalSubmit(event) {
+        const eventIndex = this.state.eventIndex;
+        const {onChange, value} = this.props.formInput;
+
         if (this.state.modalRepeating) {
             this.props.formInput.onChange(
                 this.props.formInput.value.concat({
+                    eventIndex: eventIndex,
                     dt_start: moment(this.state.modalDate + " " +
                             this.state.modalStartTime, "MMMM DD, YYYY HH:mm")
                         .format('YYYY-MM-DDTHH:mm:ss'),
@@ -98,6 +115,7 @@ class CalendarInputField extends Component {
         } else {
             this.props.formInput.onChange(
                 this.props.formInput.value.concat({
+                    eventIndex: eventIndex,
                     dt_start: moment(
                             this.state.modalDate + " " + this.state.modalStartTime, "MMMM DD, YYYY HH:mm")
                         .format('YYYY-MM-DDTHH:mm:ss'),
@@ -108,6 +126,7 @@ class CalendarInputField extends Component {
                     headline: this.props.headline
                 }))
         }
+        this.setState({eventIndex: this.state.eventIndex + 1});
         this.closeModal();
     }
 
@@ -131,43 +150,43 @@ class CalendarInputField extends Component {
     }
 
     render() {
-        debugger;
         const calendarEvents = this.props.formInput.value;
-        return ( <
-            div className = "calendar-input-field" >
-            <
-            EventCalendarNavigable arrayOfCalendarEventsWithHeadlines = {
-                [{
-                    headline: this.props.headline,
-                    calendarEvents: calendarEvents
-                }]
-            }
-            viewMonth = { new Date() }
-            handleSelectSlot = { this.handleCalendarSelectSlot }
-            selectable / >
-
-            <
-            AddDateModal isOpen = { this.state.modalIsOpen }
-            closeModal = { this.closeModal }
-            customStyles = { this.customModalStyles() }
-            contentLabel = "Example Modal"
-            start = { this.state.modalStartTime }
-            date = { this.state.modalDate }
-            day = { this.state.modalDay }
-            duration = { this.state.modalDuration }
-            repeating = { this.state.modalRepeating }
-            handleRepeatToggle = { this.handleModalRepeatToggle }
-            handleStartTimeChange = { this.handleModalStartTimeChange }
-            handleDurationChange = { this.handleModalDurationChange }
-            handleDateSelection = { this.handleModalSubmit }
+        return ( 
+            <div className = "calendar-input-field">
+            
+            <EventCalendarNavigable 
+                arrayOfCalendarEventsWithHeadlines = {
+                    [{
+                        headline: this.props.headline,
+                        calendarEvents: calendarEvents
+                    }]}
+                viewMonth = { new Date() }
+                handleSelectSlot = { this.handleCalendarSelectSlot }
+                selectable 
             />
 
-            <
-            DateListing events = { calendarEvents }
+            <AddDateModal 
+                isOpen = { this.state.modalIsOpen }
+                closeModal = { this.closeModal }
+                customStyles = { this.customModalStyles() }
+                contentLabel = "Example Modal"
+                start = { this.state.modalStartTime }
+                date = { this.state.modalDate }
+                day = { this.state.modalDay }
+                duration = { this.state.modalDuration }
+                repeating = { this.state.modalRepeating }
+                handleRepeatToggle = { this.handleModalRepeatToggle }
+                handleStartTimeChange = { this.handleModalStartTimeChange }
+                handleDurationChange = { this.handleModalDurationChange }
+                handleDateSelection = { this.handleModalSubmit }
+            />
+
+            <DateListing 
+                events={calendarEvents} 
+                deleteEvent={this.deleteEvent}
             /> 
 
-            <
-            /div>
+            </div>
         );
     }
 }
