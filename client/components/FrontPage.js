@@ -24,8 +24,8 @@ const FrontPage = (props) => (
 
     </div>
 
-    <img src={imgsrc} className="piaf-img"/>
 
+    <img src={`${SERVER_URL}`/static/img/piafGutterCropped.png`} className="piaf-img"/>
 
     <br /><hr /><br />
     <Kropotkin />
@@ -38,5 +38,6 @@ export default FrontPage;
 
 /*
       <img src={imgsrc} />
+    <img src={imgsrc} className="piaf-img"/>
 
  */
