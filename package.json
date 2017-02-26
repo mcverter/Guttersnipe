@@ -1,5 +1,5 @@
 {
-  "name": "react-slingshot",
+  "name": "hobo-guttersnipe",
   "version": "5.0.0",
   "description": "Starter kit for creating apps with React and Redux",
   "engines": {
@@ -13,8 +13,9 @@
     "start-message": "babel-node tools/startMessage.js",
     "prestart": "npm-run-all --parallel start-message",
     "start-test": "npm-run-all --parallel test:watch open:client lint:watch",
+    "start-no-test": "npm-run-all --parallel open:client lint:watch",
     "start-skinny": "npm-run-all --parallel open:client",
-    "start": "npm run start-skinny",
+    "start": "npm run start-no-test",
     "open:client": "babel-node tools/srcServer.js",
     "open:dist": "babel-node tools/distServer.js",
     "lint": "esw webpack.config.* client tools --color",
