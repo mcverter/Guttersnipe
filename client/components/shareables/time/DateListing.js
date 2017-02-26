@@ -1,24 +1,7 @@
 import React from 'react';
 import moment from 'moment';
-/*
-{
-  "dt_start": "2017-01-31T18:00:00",
-  "tz_id": "America/New_York",
-  "dt_end": "2017-01-31T18:30:00",
-  "headline": "aa"
-}
+import Table from 'react-bootstrap/lib/Table';
 
-{
-  "dt_start": "2017-02-01T15:30:00",
-  "dt_end": "2017-02-01T17:30:00",
-  "tz_id": "America/New_York",
-  "recurrence_rule": {
-    "freq": "weekly",
-    "byDay": "we"
-  }
-}
-
- */
 const DateListing = (props) => {
   const events = props.events;
 
@@ -37,20 +20,27 @@ const DateListing = (props) => {
     start = start_mom.format('hh:mm A')
     end = end_mom.format('hh:mm A')
     return (
-      <tr><td>{day}</td><td>{start}</td><td>{end}</td></tr>
+      <tr>
+        <td cellPadding="15px">{day}</td>
+        <td cellPadding="15px">{start}</td>
+        <td cellPadding="15px">{end}</td></tr>
 
     )
   }
 
+if (!events || events.length < 1) {
+  return (<div /> );
+}
   return (
-    <table className="date-listing">
+
+    <Table bordered striped className="date-listing">
       <thead>
-      <th>Date</th>
-      <th>Start</th>
-      <th>End</th>
+      <th cellPadding="15px">Date</th>
+      <th cellPadding="15px">Start</th>
+      <th cellPadding="15px">End</th>
       </thead>
       {events.map(e=>renderEvent(e))}
-    </table>
+    </Table>
   )
 }
 

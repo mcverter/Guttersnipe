@@ -34,8 +34,14 @@ export default class MapWithGeocoder extends Component {
     }
 
     render() {
-        return <div ref={(el) => { this.el = el }}
-                    className="map-with-geocoder-input" />;
+        const address = this.props.formInput.value.canonicalAddress;
+        return (
+            <div> 
+            <div ref={(el) => { this.el = el }}
+                    className="map-with-geocoder-input" />
+                    {address && <div> Address: {address} </div>}
+            </div>
+        );
     }
 }
 

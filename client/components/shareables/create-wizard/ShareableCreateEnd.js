@@ -22,16 +22,19 @@ export let ShareableCreateEnd = ({handleSubmit, previousPage, shareable,
       {summary && <div><h3>Summary</h3>{summary} </div>}
 
       {number_ratings ? <div><h3>Rating</h3> {total_rating/number_ratings} </div>:''}
-
+      <div>
       <ThingFull thing={thing} headline={headline}/>
-      <Button type="button" onClick={goToThingEdit} />
-
+      <Button type="button" onClick={goToThingEdit}> Edit Thing </Button>
+      </div>
+      <div>
       <SpaceFull space={space} headline={headline}/>
-      <Button type="button" onClick={goToSpaceEdit} />
+      <Button type="button" onClick={goToSpaceEdit}> Edit Space </Button>
+      </div>
 
-
+      <div>
       <TimeFull time={time} headline={headline}/>
-      <Button type="button" onClick={goToTimeEdit} />
+      <Button type="button" onClick={goToTimeEdit}>  Edit Time </Button>
+      </div>
 
       {notes && <div><h3>Notes:</h3> {notes} </div>}
       <Button type="button" className="previous" onClick={previousPage}>Previous</Button>
@@ -52,18 +55,17 @@ ShareableCreateEnd = connect(
     function transformCategoriesToArray(categories) {
       if (categories === undefined)
         return undefined;
-      debugger
-      var foo = "['" + categories + "']"
-      return foo;
+      return "['" + categories + "']"
     }
-    return  {shareable :{
+    return  {
+      shareable :{
       headline : selector(state, 'headline'),
       summary  : selector(state, 'summary'),
       notes    : selector(state, 'shareable_notes'),
       thing    : {
         description_how : selector(state, 'thing_description_how'),
         description_what :selector(state, 'thing_description_how'),
-        main_type: selector(state, 'thing_type'),
+        main_type: {name: selector(state, 'thing_type')},
         subtypes: transformCategoriesToArray(selector(state, 'thing_subtypes')),
         notes: selector(state, 'thing_notes')
       },
