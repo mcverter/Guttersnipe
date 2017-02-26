@@ -17,14 +17,13 @@ export function searchShareables(params={}){
       .then(response=>response.json())
       .then(json=> {
         dispatch(receiveAllShareables(json));
-        browserHistory.push('/shareables')
+        browserHistory.push('/shareables');
       });
   };
 }
 
 function fetchAllShareables() {
   return dispatch => {
-    console.log('fetching all')
     dispatch(requestAllShareables());
     return fetch(`${SERVER_URL}/api/shareables`)
       .then(response => response.json())
@@ -44,14 +43,12 @@ function requestSingleShareable() {
   };
 }
 
-
 function receiveSingleShareable(json) {
   return {
     type: types.SHAREABLE_SINGLE_REQUEST_SUCCESS,
     shareables: json
   };
 }
-
 
 function receiveAllShareables(json) {
   return {
@@ -77,11 +74,10 @@ function setCurrentShareable(id) {
 
 export function fetchAllShareablesIfNeeded(forceFetch=false) {
   return (dispatch, getState) => {
-    console.log('fetch if needed');
     if (forceFetch || !getState().shareables.items || getState().shareables.items.length <= 0) {
       return (dispatch(fetchAllShareables()));
     }
-  }
+  };
 }
 
 export function fetchSingleShareableIfNeeded(id) {
@@ -122,8 +118,7 @@ export function fetchShareableCategorizations() {
         .then(response => response.json())
         .then(json => dispatch(receiveShareableCategorization(json)));
     }
-    ;
-  }
+  };
 }
 
 function receiveShareableCategorization(json) {

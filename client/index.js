@@ -11,7 +11,6 @@ import { Router, browserHistory } from 'react-router';
 
 
 import 'react-select/dist/react-select.css';
-import './styles.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/leaflet/dist/leaflet.css';
 import '../node_modules/leaflet-geocoder-mapzen/dist/leaflet-geocoder-mapzen.css';
@@ -21,6 +20,7 @@ import "../node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.svg";
 import "../node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff";
 import "../node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2";
 import "../node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf";
+import './styles.css';
 
 const store = configureStore();
 

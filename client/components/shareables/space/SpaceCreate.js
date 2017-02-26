@@ -41,7 +41,9 @@ SpaceCreate.propTypes = {
   previousPage: PropTypes.func,
   onChange: PropTypes.func,
   meta: PropTypes.object,
-  headline: PropTypes.string
+  headline: PropTypes.string, 
+  currentPosition: PropTypes.array,
+  input: PropTypes.obect
 };
 
 const selector = formValueSelector('wizard'); // <-- same as form name

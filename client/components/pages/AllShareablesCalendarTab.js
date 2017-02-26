@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {Link} from 'react-router';
 import EventCalendarNavigable from '../shareables/time/EventCalendarNavigable';
 
-export const AllShareablesCalendarPage = (props) => {
+export const AllShareablesCalendarTab = (props) => {
   const {shareables: {isFetchingShareables, items}}= props;
 
   if (isFetchingShareables || !items || items.length < 1) {
@@ -22,7 +22,7 @@ export const AllShareablesCalendarPage = (props) => {
   );
 };
 
-AllShareablesCalendarPage.propTypes = {
+AllShareablesCalendarTab.propTypes = {
   shareables: PropTypes.object,
 };
 
@@ -32,5 +32,5 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(AllShareablesCalendarPage);
+export default connect(mapStateToProps)(AllShareablesCalendarTab);
 

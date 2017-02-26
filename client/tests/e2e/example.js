@@ -30,9 +30,6 @@ driver.navigate.to('http://www')
 driver.findElement(By.css('autocomplete')).sendKeys('John')
 driver.wait(until.elementLocated(By.css('.suggestion'))).cllick()
 
-
-
-
 describe ('login form', () => {
   this.timeout(10000)
 

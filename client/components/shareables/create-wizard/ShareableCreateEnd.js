@@ -1,8 +1,8 @@
 import React, {PropTypes} from 'react';
 
-import SpaceFull from '../space/SpaceFull'
-import TimeFull from '../time/TimeFull'
-import ThingFull from '../thing/ThingFull'
+import SpaceFull from '../space/SpaceFull';
+import TimeFull from '../time/TimeFull';
+import ThingFull from '../thing/ThingFull';
 import { Field, reduxForm, formValueSelector } from 'redux-form';
 import validate from './validateCreateShareableWizard';
 import {connect} from 'react-redux';
@@ -41,7 +41,7 @@ export let ShareableCreateEnd = ({handleSubmit, previousPage, shareable,
       <Button type="button" className="next" onClick={handleSubmit}>Create New Shareable</Button>
     </form>
   );
-}
+};
 
 ShareableCreateEnd.propTypes = {
   handleSubmit: PropTypes.func,
@@ -55,7 +55,7 @@ ShareableCreateEnd = connect(
     function transformCategoriesToArray(categories) {
       if (categories === undefined)
         return undefined;
-      return "['" + categories + "']"
+      return "['" + categories + "']";
     }
     return  {
       shareable :{
@@ -91,6 +91,12 @@ ShareableCreateEnd = connect(
 "['dumpster']"
 "{"longitude": 40.689613, "latitude": -73.99243}"
  */
+ShareableCreateEnd.propTypes = {
+  shareable: PropTypes.object,
+  goToThingEdit: PropTypes.func, 
+  goToTimeEdit: PropTypes.func, 
+  goToSpaceEdit: PropTypes.func
+}
 
 export default reduxForm({
   form: 'wizard',                 // <------ same form name

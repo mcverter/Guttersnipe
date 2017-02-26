@@ -16,7 +16,7 @@ describe('AllCalendarListTab', () => {
 
   it('displays loading if isFetchingShareables is true', () =>{
     const wrapper = setup({isFetchingShareables: true, items: ['foo']});
-    expect(wrapper.find('div').text()).toEqual('Loading...')
+    expect(wrapper.find('div').text()).toEqual('Loading...');
   });
 
   it('displays loading if items array is null or has no items', () =>{
@@ -34,7 +34,6 @@ describe('AllCalendarListTab', () => {
 
     it ('has correct css class', () => {
       expect(wrapper.find('.all-shareables-list-tab')).toExist();
-
-    })
-  })
+    });
+  });
 });

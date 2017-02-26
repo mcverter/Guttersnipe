@@ -11,6 +11,6 @@ describe('Footer', () => {
 
   it('has class gs-navbar', () => {
     const wrapper = mount(<Footer />);
-    expect(wrapper.find('.gs-navbar')).toExist()
-  })
+    expect(wrapper.find('.gs-navbar')).toExist();
+  });
 });

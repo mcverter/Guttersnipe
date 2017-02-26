@@ -10,10 +10,10 @@ export function signInUser({email, password}) {
       body: JSON.stringify({username: email, password:password})})
       .then(response => {
         if (response.status >= 200 && response.status <= 300) {
-          return response.json()
+          return response.json();
         } else if (response.status === 401) {
            return response.json()
-            .then(data => {throw(data.msg)})
+            .then(data => {throw(data.msg);});
         } else {
           throw("Could not login " + response.status + " " + response.statusText);
         }})
@@ -24,8 +24,8 @@ export function signInUser({email, password}) {
       })
       .catch(errorMsg => {
         dispatch(authError(errorMsg));
-      })
-  }
+      });
+  };
 }
 
 export function signUpUser({email, password}) {
@@ -36,10 +36,10 @@ export function signUpUser({email, password}) {
       body: JSON.stringify({username: email, password:password})})
       .then(response => {
         if (response.status >= 200 && response.status <= 300) {
-          return response.json()
+          return response.json();
         } else if (response.status === 401) {
            return response.json()
-            .then(data => { throw(data.msg)})
+            .then(data => { throw(data.msg);});
         } else {
           throw("Could not login " + response.status + " " + response.statusText);
         }})
@@ -50,8 +50,8 @@ export function signUpUser({email, password}) {
       })
       .catch(errorMsg => {
         dispatch(authError(errorMsg));
-      })
-  }
+      });
+  };
 }
 
 export function authError(errorMsg) {

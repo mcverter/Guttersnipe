@@ -5,7 +5,7 @@ import {createShareable} from "../../actions/shareables/shareableActions.js";
 
 const ShareableCreateWizardPage = () => {
   const handleSubmit = (values) => {
-        console.log('values', values)
+    console.log('values', values);
     const data = {
       'headline' : values.headline,
       'summary'  : values.summary,

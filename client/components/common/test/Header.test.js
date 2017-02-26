@@ -11,29 +11,26 @@ describe('Header', () => {
 
   it('has class gs-navbar', () => {
     const wrapper = mount(<Header />);
-    expect(wrapper.find('.gs-navbar')).toExist()
-  })
-
+    expect(wrapper.find('.gs-navbar')).toExist();
+  });
   describe('without authentication', () => {
     let unauthHeader;
     beforeEach(() => {
-      let props = {authenticated: false}
+      let props = {authenticated: false};
       unauthHeader = mount(<Header {...props} />);
     });
     it ('has only four links', () => {
       expect(unauthHeader.find('a').length).toEqual(4);
-    })
-  })
+    });
+  });
   describe('with authentication', () => {
     let unauthHeader;
     beforeEach(() => {
-      let props = {authenticated: true}
+      let props = {authenticated: true};
       unauthHeader = mount(<Header {...props}/>);
     });
     it ('has only two links', () => {
       expect(unauthHeader.find('a').length).toEqual(2);
-    })
-  })
-
-
+    });
+  });
 });

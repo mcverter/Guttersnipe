@@ -5,9 +5,9 @@ import {Link} from "react-router";
 import Tabs from "react-bootstrap/lib/Tabs";
 import Tab from "react-bootstrap/lib/Tab";
 
-import AllShareablesListPage from './AllShareablesListTab';
-import AllShareablesMapPage from './AllShareablesMapTab';
-import AllShareablesCalendarPage from './AllShareablesCalendarTab';
+import AllShareablesListTab from './AllShareablesListTab';
+import AllShareablesMapTab from './AllShareablesMapTab';
+import AllShareablesCalendarTab from './AllShareablesCalendarTab';
 
 import {setBrowserLocation} from '../../actions/browserEnv/browserEnvActions';
 import {fetchAllShareablesIfNeeded} from '../../actions/shareables/shareableActions';
@@ -25,7 +25,6 @@ class AllShareablesPage extends Component {
   }
 
   componentWillMount() {
-//    this.props.setBrowserLocation();
     this.props.fetchAllShareablesIfNeeded();
   }
 
@@ -42,9 +41,9 @@ class AllShareablesPage extends Component {
       <div className="all-shareables-pg">
         <Link to="/shareables/search"> Search Results</Link>
         <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
-          <Tab eventKey={1} onEnter={this.unsetMapAsActiveView}  title="List"><AllShareablesListPage/></Tab>
-          <Tab eventKey={2} onEnter={this.setMapAsActiveView} title="Map"><AllShareablesMapPage isActiveView={this.state.mapIsActiveView} /></Tab>
-          <Tab eventKey={3} onEnter={this.unsetMapAsActiveView} title="Calendar"><AllShareablesCalendarPage/></Tab>
+          <Tab eventKey={1} onEnter={this.unsetMapAsActiveView}  title="List"><AllShareablesListTab/></Tab>
+          <Tab eventKey={2} onEnter={this.setMapAsActiveView} title="Map"><AllShareablesMapTab isActiveView={this.state.mapIsActiveView} /></Tab>
+          <Tab eventKey={3} onEnter={this.unsetMapAsActiveView} title="Calendar"><AllShareablesCalendarTab/></Tab>
         </Tabs>
       </div>
 
@@ -63,9 +62,8 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-AllShareablesCalendarPage.propTypes = {
+AllShareablesPage.propTypes = {
   fetchAllShareablesIfNeeded: PropTypes.func,
-//  setBrowserLocation: PropTypes.func
 }
 
 export default connect(null, mapDispatchToProps) (AllShareablesPage);

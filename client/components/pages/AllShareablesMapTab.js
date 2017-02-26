@@ -2,7 +2,6 @@ import React, {PropTypes} from 'react';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 
 import {connect} from 'react-redux';
-import {fetchAllShareables} from '../../actions/shareables/shareableActions';
 import {Link} from 'react-router';
 
 export class AllShareablesMapTab extends React.Component {
@@ -17,7 +16,6 @@ export class AllShareablesMapTab extends React.Component {
       this.map.leafletElement.invalidateSize(false);
     }
   }
-
 
   calculateCenter(shareables) {
     return [40.693922, -73.991764];
@@ -45,7 +43,6 @@ export class AllShareablesMapTab extends React.Component {
     const {
       shareables: { isFetchingShareables,shareableFetchError, items}}  = this.props;
 
-
     if (isFetchingShareables || shareableFetchError || !items || items.length < 1) {
       return <div>Loading...</div>;
     }
@@ -63,12 +60,11 @@ export class AllShareablesMapTab extends React.Component {
           {items.map(shareable => this.renderMarker(shareable))}
         </Map>
       </div>
-    )
+    );
   }
 }
 AllShareablesMapTab.propTypes = {
   shareables: PropTypes.object,
-  fetchAllShareables: PropTypes.func
 };
 
 function mapStateToProps(state) {
@@ -77,4 +73,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, {fetchAllShareables})(AllShareablesMapTab);
+export default connect(mapStateToProps)(AllShareablesMapTab);

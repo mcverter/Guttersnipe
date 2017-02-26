@@ -2,7 +2,7 @@ import React, {PropTypes, Component} from "react";
 import {Link} from "react-router";
 import Button from 'react-bootstrap/lib/Button';
 import { connect } from 'react-redux';
-import SpaceSearchPanel from '../shareables/space/SpaceSearchPanel'
+import SpaceSearchPanel from '../shareables/space/SpaceSearchPanel';
 import TimeSearchPanel from '../shareables/time/TimeSearchPanel';
 import ThingSearchPanel from '../shareables/thing/ThingSearchPanel';
 import { Field, reduxForm } from 'redux-form';
@@ -12,10 +12,6 @@ class AllShareablesSearchPage extends Component {
   constructor(props) {
     super(props);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
-  }
-
-  componentWillMount() {
-    
   }
 
   handleFormSubmit(values) {
@@ -81,4 +77,3 @@ export default connect(mapStateToProps, mapDispatchToProps)(
     forceUnregisterOnUnmount: true,  // <------ unregister fields on unmount
 //    validate
   })(AllShareablesSearchPage));
-

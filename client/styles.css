@@ -11,14 +11,16 @@
     width: 80%;
 }
 
+
+
 .calendar {
- width: 900px;
+ width: 80%;
     margin: 0 auto;
     height: 500px
 }
 
 #calendar {
-    width: 900px;
+    width: 80%;
     margin: 0 auto;
     height: 500px
 }
@@ -66,18 +68,39 @@ a{
     font-weight: bolder;
 }
 
-body {
-    background-color: #be0404;
+
+html, body {
+    background-color: light-red;
     /* Margin bottom by footer height */
     margin-bottom: 60px;
-
 }
 
-.entireDisplay {
-    background-color: #E83A8B;
-    /* Margin bottom by footer height */
-    margin-bottom: 60px;
+.control-label {
+    color: black;
+}
 
+.has-error .help-block {
+    color: green;
+}
+
+.has-error .control-label {
+    color: green;
+}
+
+
+.help-block {
+    color: black;
+}
+
+
+.entireDisplay {
+    background-color: #ef3d47;
+    /* Margin bottom by fo #F47F7Foter height */
+    margion-bottom: 60px;
+position: absolute;
+         top: 0; right: 0;
+          bottom: 0;
+           left: 0;
 }
 
 video {
@@ -380,7 +403,6 @@ a.fa-links:focus {
 
 .all-shareables-map-tab {}
 .all-shareables-pg {}
-.app {}
 .calendar {}
 .calendar-input-field {}
 .comment-full {}

@@ -102,7 +102,8 @@ class ThingCreate extends Component {
                      options={this.state.subtypes}
                      placeholder="Select Zero or More Subtypes"
                      multi={true}
-                     simpleValue />
+                     simpleValue
+                     tabSelectsValue={false} />
                  </ReduxFormComponentField>} />
 
 

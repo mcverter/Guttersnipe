@@ -30,7 +30,7 @@ export class KropotkinQuote extends Component {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchRandomKropotkin: () => {
-      dispatch(fetchRandomKropotkin())
+      dispatch(fetchRandomKropotkin());
     }
   };
 };
