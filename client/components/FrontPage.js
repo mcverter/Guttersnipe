@@ -6,7 +6,6 @@ import {SERVER_URL}  from '../config';
 
 
 const FrontPage = (props) => {
-debugger;
 let piaf_image;
 if (__DEV__) {
   piaf_image = <img src={imgsrc} className="piaf-img"/>
