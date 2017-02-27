@@ -20,7 +20,7 @@ import "../node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.svg";
 import "../node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff";
 import "../node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2";
 import "../node_modules/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf";
-import './styles.css';
+import './sassStyles.scss';
 
 const store = configureStore();
 

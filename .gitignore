@@ -16,6 +16,7 @@ errors.txt
 # JetBrains
 *.xml
 .idea
+.vscode
 
 # Python Compiled
 *.pyc
