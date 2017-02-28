@@ -7,13 +7,15 @@ import Button from 'react-bootstrap/lib/Button';
 import Panel from 'react-bootstrap/lib/Panel';
 
 import ReduxFormHTMLInput from '../../reduxFormInputs/ReduxFormHTMLInput';
+import ReduxFormTextArea from '../../reduxFormInputs/ReduxFormTextArea';
+
 
 const ShareableCreateStart = ({handleSubmit}) => (
   <Panel className="shareable-create-start-panel">
   <form className="shareable-create-start" onSubmit={handleSubmit}>
     <Field name="headline" type="text" component={ReduxFormHTMLInput} validate={required} label="Headline"/>
-    <Field name="summary" type="textarea" component={ReduxFormHTMLInput}  validate={required} label="Summary"/>
-    <div>
+    <Field name="summary" type="textarea" component={ReduxFormTextArea}  validate={required} label="Summary"/>
+    <div className="wizard-navigation-buttons">
       <Button type="submit" className="next">Next</Button>
     </div>
   </form>

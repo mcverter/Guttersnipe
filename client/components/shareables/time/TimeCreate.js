@@ -9,12 +9,14 @@ import ReduxFormComponentField from '../../reduxFormInputs/ReduxFormComponentFie
 
 import CalendarInputField from './CalendarInputField';
 import Button from 'react-bootstrap/lib/Button';
+import Panel from 'react-bootstrap/lib/Panel';
 import {connect} from 'react-redux';
 
 
 class TimeCreate extends Component {
   render() {
         return(
+          <Panel className="time-create-panel">
       <form className="time-create-form" onSubmit={this.props.handleSubmit}>
         <h2> Create a Schedule for {this.props.headline} </h2>
         <Field name="time_calendar"
@@ -31,11 +33,12 @@ class TimeCreate extends Component {
     
         <Field name="time_notes" type="text" component={ReduxFormHTMLInput} label="Additional Notes"/>
     
-        <div>
+    <div className="wizard-navigation-buttons">
           <Button type="button" className="previous" onClick={this.props.previousPage}>Previous</Button>
           <Button type="submit" className="next">Next</Button>
         </div>
       </form>
+      </Panel>
     );
   }
 }

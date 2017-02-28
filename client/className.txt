@@ -1,46 +1,46 @@
-front-pg
-welcome-pg
-alert alert-danger
-signup-form  
-signout
-signup-form
-gs-navbar
-header
-gs-navbar
-kropotkin-quote 
-all-shareables-calendar-tab
-all-shareables-list-tab
-all-shareables-map-tab
-all-shareables-pg
-shareable-search-pg 
-shareable-create-wizard-pg
-shareable-edit-page
-shareable-full-page
-form-component-field
-form-html-input 
-shareable-full
-shareable-li
-comment-full
-comment-list
-shareable-create-start
-shareable-create-wizard-form
-map-with-geocoder-input 
-space-create
-space-full
-space-li
-space-search-panel
-thing-create-form
-thing-full header=Thing
-thing-li
-thing-search
-modal-header
-modal-title id=deployModalLabel
-modal-body
-modal-footer
-date-listing
-event-calendar-view
-event-calendar-view
-calendar
-time-create-formtime-full
-time-li
-time-search-panel
+.front-pg {}
+.welcome-pg {}
+.alert alert-danger {}
+.signup-form  {}
+.signout {}
+.signup-form {}
+.gs-navbar {}
+.header {}
+.gs-navbar {}
+.kropotkin-quote {} {}
+.all-shareables-calendar-tab{}
+.all-shareables-list-tab{}
+.all-shareables-map-tab{}
+.all-shareables-pg{}
+.shareable-search-pg {}
+.shareable-create-wizard-pg{}
+.shareable-edit-page{}
+.shareable-full-page{}
+.form-component-field{}
+.form-html-input {}
+.shareable-full{}
+.shareable-li{}
+.comment-full{}
+.comment-list{}
+.shareable-create-start{}
+.shareable-create-wizard-form{}
+.map-with-geocoder-input {}
+.space-create{}
+.space-full{}
+.space-li{}
+.space-search-panel{}
+.thing-create-form{}
+.thing-full header=Thing{}
+.thing-li{}
+.thing-search{}
+.modal-header{}
+.modal-title id=deployModalLabel{}
+.modal-body{}
+.modal-footer{}
+.date-listing{}
+.event-calendar-view{}
+.event-calendar-view{}
+.calendar{}
+.time-create-formtime-full{}
+.time-li{}
+.time-search-panel{}

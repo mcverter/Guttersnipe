@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import Panel from 'react-bootstrap/lib/Panel';
 
 import L from 'leaflet';
 import 'leaflet-geocoder-mapzen';
@@ -36,11 +37,11 @@ export default class MapWithGeocoder extends Component {
     render() {
         const address = this.props.formInput.value.canonicalAddress;
         return (
-            <div> 
+            <Panel className="space-create-panel"> 
             <div ref={(el) => { this.el = el }}
                     className="map-with-geocoder-input" />
                     {address && <div> Address: {address} </div>}
-            </div>
+            </Panel>
         );
     }
 }

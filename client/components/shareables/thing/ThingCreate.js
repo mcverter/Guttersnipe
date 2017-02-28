@@ -4,6 +4,7 @@ import { Field, reduxForm , formValueSelector} from 'redux-form';
 import validate, {required} from '../create-wizard/validateCreateShareableWizard';
 
 import ReduxFormHTMLInput from '../../reduxFormInputs/ReduxFormHTMLInput';
+import ReduxFormTextArea from '../../reduxFormInputs/ReduxFormTextArea';
 import ReduxFormComponentField from '../../reduxFormInputs/ReduxFormComponentField';
 import _ from 'lodash';
 import Button from 'react-bootstrap/lib/Button';
@@ -71,11 +72,11 @@ class ThingCreate extends Component {
 
     if (this.state.types === undefined) {return <div>Loading</div>;}
     return (
-      <Panel>
+      <Panel className="thing-create-panel">
       <form className="thing-create-form" onSubmit={this.props.handleSubmit}>
         <h2> Describe and Categorize {this.props.headline} </h2>
-        <Field validate={required} name="thing_description_what" type="text" component={ReduxFormHTMLInput} label="What is the shareable resource"/>
-        <Field validate={required} name="thing_description_how" type="text" component={ReduxFormHTMLInput} label="How do you acquire it?"/>
+        <Field validate={required} name="thing_description_what" type="text" component={ReduxFormTextArea} label="What is the shareable resource"/>
+        <Field validate={required} name="thing_description_how" type="text" component={ReduxFormTextArea} label="How do you acquire it?"/>
 
         <Field name="thing_type"
                validate={required}
@@ -126,9 +127,9 @@ class ThingCreate extends Component {
                  </ReduxFormComponentField>} />
 
 
-        <Field name="thing_notes" type="text" component={ReduxFormHTMLInput} label="Additional Notes"/>
+        <Field name="thing_notes" type="text" component={ReduxFormTextArea} label="Additional Notes"/>
 
-        <div>
+    <div className="wizard-navigation-buttons">
           <Button type="button" className="previous" onClick={this.props.previousPage}>Previous</Button>
           <Button type="submit" className="next">Next</Button>
         </div>

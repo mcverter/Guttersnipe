@@ -6,33 +6,38 @@ import ReduxFormComponentField from '../../reduxFormInputs/ReduxFormComponentFie
 import MapWithGeocoderInput from './MapWithGeocoderInput';
 
 import ReduxFormHTMLInput from '../../reduxFormInputs/ReduxFormHTMLInput';
+import ReduxFormTextArea from '../../reduxFormInputs/ReduxFormTextArea';
 import Button from 'react-bootstrap/lib/Button';
+import Panel from 'react-bootstrap/lib/Panel';
 import {connect} from 'react-redux';
 
 let SpaceCreate = (props) => {
+  const headline = props.headline;
   return (
-    <div className="space-create"> Create a Map for your {props.headline}
+    <Panel className="space-create-panel">
+    <div className="space-create"> 
       <form onSubmit={props.handleSubmit}>
         <Field name="space_map"
                validate={required}
                component={props =>
                  <ReduxFormComponentField
                    meta={props.meta}
-                   label="Location of Shareable">
+                   label={`Create a Map for ${headline}`}>
                    <MapWithGeocoderInput
                      currentPosition={props.currentPosition}
                      formInput={props.input}
                    />
                  </ReduxFormComponentField>}/>
 
-        <Field name="space_notes" type="text" component={ReduxFormHTMLInput} label="Additional Notes"/>
+        <Field name="space_notes" type="text" component={ReduxFormTextArea} label="Additional Notes"/>
 
-        <div>
+        <div className="wizard-navigation-buttons">
           <Button type="button" className="previous" onClick={props.previousPage}>Previous</Button>
           <Button type="submit" className="next">Next</Button>
         </div>
       </form>
     </div>
+    </Panel>
   );
 };
 
