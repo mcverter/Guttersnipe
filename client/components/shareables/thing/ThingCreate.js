@@ -7,6 +7,7 @@ import ReduxFormHTMLInput from '../../reduxFormInputs/ReduxFormHTMLInput';
 import ReduxFormComponentField from '../../reduxFormInputs/ReduxFormComponentField';
 import _ from 'lodash';
 import Button from 'react-bootstrap/lib/Button';
+import Panel from 'react-bootstrap/lib/Panel';
 import Select, {Creatable} from 'react-select';
 import {fetchShareableCategorizations} from '../../../actions/shareables/shareableActions';
 import {connect} from 'react-redux';
@@ -32,7 +33,7 @@ class ThingCreate extends Component {
   }
 
     componentWillReceiveProps(nextProps) {
-    console.log('props received', nextProps)
+    console.log('props received', nextProps);
     this.categorizationMetaToSelectOptions(nextProps.categorizationMeta)
   }
 
@@ -70,6 +71,7 @@ class ThingCreate extends Component {
 
     if (this.state.types === undefined) {return <div>Loading</div>;}
     return (
+      <Panel>
       <form className="thing-create-form" onSubmit={this.props.handleSubmit}>
         <h2> Describe and Categorize {this.props.headline} </h2>
         <Field validate={required} name="thing_description_what" type="text" component={ReduxFormHTMLInput} label="What is the shareable resource"/>
@@ -131,7 +133,14 @@ class ThingCreate extends Component {
           <Button type="submit" className="next">Next</Button>
         </div>
       </form>
+      </Panel>
     );
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    fetchShareableCategorizations: () => {dispatch(fetchShareableCategorizations())}
   }
 }
 
@@ -160,29 +169,9 @@ ThingCreate = connect(
 )(ThingCreate);
 
 
-export default connect(mapStateToProps, {fetchShareableCategorizations})(reduxForm({
+export default connect(mapStateToProps, mapDispatchToProps)(reduxForm({
   form: 'wizard',                 // <------ same form name
   destroyOnUnmount: false,        // <------ preserve form data
   forceUnregisterOnUnmount: true,  // <------ unregister fields on unmount
   validate
 })(ThingCreate));
-
-
-/*
-Tags
-        <Field name="thing_tags"
-               component={props =>
-                 <ReduxFormComponentField
-                   meta={props.meta}
-                   label="Select or Create Zero or More Tags" >
-                   <Creatable
-                     value={props.input.value}
-                     onChange={props.input.onChange}
-                     onBlur={() => props.input.onBlur(props.input.value)}
-                     options={this.state.tags}
-                     placeholder="Select or Create Zero or More Tags"
-                     simpleValue
-                     multi={true} />
-                 </ReduxFormComponentField>}/>
-
- */

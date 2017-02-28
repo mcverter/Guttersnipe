@@ -45,4 +45,10 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, {createShareable})(ShareableCreateWizardPage);
+function mapDispatchToProps(dispatch) {
+  return {
+    createShareable: () => {dispatch(createShareable)}
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ShareableCreateWizardPage);

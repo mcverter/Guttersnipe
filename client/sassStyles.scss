@@ -23,102 +23,76 @@ $color-complement-2: #D39791;
 $color-complement-3: #4F3734;
 $color-complement-4: #49201C;
 $pop-color: #D83636;
+.app {
+  background-color: $color-primary-3;
+}
 .gs-navbar {}
-
 .header {}
-
 .gs-navbar {}
-
 
 /* Panel */
-
 .space-search-panel {}
-
 .event-calendar-view {}
-
 .time-search-panel {}
-
 .thing-search {}
 
+.shareable-create-start-panel {
+  background-color: $color-secondary-2-2;
+}
 
+.front-page-panel {
+  background-color: $color-secondary-1-2;
+  ul {
+      background-color: $color-secondary-1-1;
+    li {
+      a {
+        color: $color-complement-3;
+      }
+    }
+  }
+}
 /* Pages */
-
 .gutterPage {}
-
 .front-pg {}
-
 .welcome-pg {}
-
 .all-shareables-pg {}
-
 .shareable-search-pg {}
-
 .shareable-create-wizard-pg {}
-
 .shareable-edit-page {}
-
 .shareable-full-page {}
-
 
 /* Buttons */
 
-
 /* Widgets */
-
 .alert alert-danger {}
 
-
 /* Tabs */
-
 .all-shareables-calendar-tab {}
-
 .all-shareables-list-tab {}
-
 .all-shareables-map-tab {}
 
-
 /*  Forms */
-
 .gutterForm {}
-
 .signup-form {}
-
 .signout {}
-
 .signup-form {}
-
 .shareable-create-wizard-form {}
-
 .thing-create-form {}
-
 .time-create-formtime-full {}
 
-
 /* Form Elements */
-
 .form-component-field {}
-
 .form-html-input {}
 
-
 /* Components */
-
 .shareable-create-start {}
-
 .map-with-geocoder-input {}
-
 .space-create {}
-
 .space-full {}
-
 .kropotkin-quote {}
 
-{}
-
 .shareable-full {}
-
 .thing-full {}
-
 .calendar {
     width: 80%;
     height: 75%;
@@ -126,31 +100,18 @@ $pop-color: #D83636;
     overflow: hidden;
 }
 
-
 /* Lists && Tables */
-
 .space-li {}
-
 .shareable-li {}
-
 .thing-li {}
-
 .time-li {}
-
 .date-listing {}
 
-
 /* comments */
-
 .comment-full {}
-
 .comment-list {}
 
-
 /* modals */
-
 .modal-header {}
-
 .modal-title .modal-body {}
-
 .modal-footer {}
