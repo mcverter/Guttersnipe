@@ -1,7 +1,7 @@
 import json
 from server.calendars.models import Event, Schedule, RecurrenceRule
 from server.shareables.models import Shareable, Thing, Space, \
-  Time, MainType, Subtype, Comment
+  Time, MainType, Subtype, Tag, Comment
 from datetime import datetime
 from server import db
 from sqlalchemy.sql import operators, func
@@ -76,8 +76,12 @@ def create_main_type(type_dict):
   return main_type_entity
 
 
-def create_tags_from_json_object(tags_dict):
-  pass
+def create_tags(tags_array):
+  for tag_string in tags_array:
+      my_tag = db.session.query(Tag).filter(Tag.name == tag_string).first()
+      if my_tag is None:
+        my_tag = Tag(tag_string)
+        db.session.add(my_tag)
 
 
 def create_subtype_array(subtype_json_array, main_type_entity):
