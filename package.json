@@ -106,7 +106,7 @@
     "mockdate": "2.0.1",
     "nightwatch": "^0.9.12",
     "nock": "^9.0.4",
-    "node-sass": "4.0.0",
+    "node-sass": "^4.0.0",
     "npm-run-all": "3.1.2",
     "open": "0.0.5",
     "phantomjs": "^2.1.7",

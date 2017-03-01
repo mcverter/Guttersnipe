@@ -26,18 +26,46 @@ $pop-color: #D83636;
 .app {
   background-color: $color-primary-3;
   position: absolute;
-  top: 0; 
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
 }
 
 .gs-navbar {
- margin: 20px;
+  margin: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+.strummer-quote {
+  background-color: $color-primary-2;
+  a {
+    color: $color-complement-4;
+  }
+}
+.header {
+  background-color: $color-secondary-1-1;
+  color: $color-secondary-2-4;
+  a {
+    color: $color-secondary-2-4;
+  }
 
 }
-.header {}
 .footer {
+  background-color: $color-secondary-2-4;
+  color: white;
+  font-weight: bolder;
+  ul {
+    width: 100%;
+  }
+  li {
+    width: 25%;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    vertical-align: middle;
+
+  }
 }
 
 /* Panel */
@@ -48,32 +76,35 @@ $pop-color: #D83636;
 
 .create-wizard-panel {
   width: 85%;
-  margin: auto;	
+  margin: auto;
 }
 
 .shareable-create-start-panel {
-	@extend .create-wizard-panel;
+  @extend .create-wizard-panel;
   background-color: $color-secondary-2-2;
 }
 
 .time-create-panel {
-	@extend .create-wizard-panel;
-	background-color: $color-secondary-1-1;
+  @extend .create-wizard-panel;
+  background-color: $color-secondary-1-1;
 }
 .thing-create-panel  {
-	@extend .create-wizard-panel;
+  @extend .create-wizard-panel;
   background-color: $color-primary-1;
 }
 .space-create-panel {
-	@extend .create-wizard-panel;
-	background-color: $color-secondary-2-2;
+  @extend .create-wizard-panel;
+  text-align: center;
+  background-color: $color-secondary-2-2;
 }
 
-
+.front-pg {
+  background-color: $color-primary-3;
+}
 .front-page-panel {
   background-color: $color-secondary-1-2;
   ul {
-      background-color: $color-secondary-1-1;
+    background-color: $color-secondary-1-1;
     li {
       a {
         color: $color-complement-3;
@@ -116,32 +147,67 @@ $pop-color: #D83636;
 
 /* Components */
 .shareable-create-start {}
-.map-with-geocoder-input {}
+.map-with-geocoder-input {
+  margin: auto;
+}
+
+.leaflet-pelias-result {
+  text-align: left;
+}
 .space-create {}
 .space-full {}
-.kropotkin-quote {}
+.kropotkin-quote-outer {
+  background-color: $color-primary-2;
+  .kropotkin-quote-inner {
+    background-color: $color-primary-1;
+    color: $color-complement-4;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    vertical-align: middle;
+  }
+  .kropotkin-source {
+    text-align: center;
+    color: white;
+    a {
+      color: $color-complement-4 !important;
+    }
+    .kropotkin-quote-button {
+      margin: 30px;
+    }
+  }
+}
+
 
 .shareable-full {}
 .thing-full {}
 .calendar {
-    width: 80%;
-    height: 500px;
-    margin: 15px;
-    overflow: scroll;
+  width: 80%;
+  height: 500px;
+  margin: 15px;
+  overflow: scroll;
 }
 
 .leaflet-container {
-    height: 400px;
-    width: 80%;
+  height: 400px;
+  width: 80%;
 }
 
+.result-address {
+  border: 2px solid black;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .wizard-navigation-buttons {
-	text-align: center;
-	button {
-		margin-left: 5px;
-		margin-right: 5px;
-	}
+  text-align: center;
+  button {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 }
 
 /* Lists && Tables */
@@ -150,11 +216,11 @@ $pop-color: #D83636;
 .thing-li {}
 .time-li {}
 .date-listing {
-border-color: black;
-	border: 1px black;
-	table, th, td {
-	border: 1px black;
-	}
+  border-color: black;
+  border: 1px black;
+  table, th, td {
+    border: 1px solid black;
+  }
 }
 
 /* comments */
@@ -165,3 +231,38 @@ border-color: black;
 .modal-header {}
 .modal-title .modal-body {}
 .modal-footer {}
+
+.piaf-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+video {
+  background-color: red;
+}
+
+.RedOnBlack {
+  background-color: black ;
+  color: red ;
+  border: 5px solid darkred;
+  a {
+    color: red ;
+    background-color: black ;
+
+    :hover {
+      color: #ff5555 ;
+      background-color: black ;
+    }
+  }
+
+}
+.BlackOnRed {
+  background-color: red !important;
+  color: #222222 !important;
+  border: 5px solid rgb(182,183,187);
+  a {
+    color: black !important;
+    background-color: red !important;
+  }
+}

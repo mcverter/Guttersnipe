@@ -29,15 +29,6 @@ overflow: hidden;
 
 
 
-.RedOnBlack{
-    background-color: black ;
-    color: red ;
-    border: 5px solid darkred;
-}
-.RedOnBlack > a  {
-    color: red ;
-    background-color: black ;
-}
 .RedOnBlack > a:hover {
     color: #ff1111 ;
     background-color: black ;
@@ -411,7 +402,7 @@ a.fa-links:focus {
 .date-listing {
     width: 75%;
     background-color: yellow;
-    
+
 }
 .event-calendar-view {}
 .footer {}

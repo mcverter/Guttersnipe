@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import {fetchRandomKropotkin} from '../../actions/kropotkins/kropotkinActions';
-
+import Button from 'react-bootstrap/lib/Button';
 export class KropotkinQuote extends Component {
 
   componentWillMount() {
@@ -14,14 +14,16 @@ export class KropotkinQuote extends Component {
       return <h1 />;
     }
     return (
-      <div className="kropotkin-quote RedOnBlack">
-        <div className="text-center BlackOnRed">
+      <div className="kropotkin-quote-outer">
+        <div className="kropotkin-quote-inner">
           <h2><span>{paragraph}</span></h2>
         </div>
-        <div>
+        <div className="kropotkin-source">
           <h3><a href="http://www.gutenberg.org/files/23428/23428-h/23428-h.htm">The Conquest of Bread</a> by <a href="http://en.wikipedia.org/wiki/Peter_Kropotkin">Pyotr Alexeivitch Kropotkin</a></h3>
         </div>
-        <button className="btn btn-danger" role="button" onClick={this.props.fetchRandomKropotkin} >New Quote</button>
+        <div className="text-center">
+        <Button bsSize="large" role="button" bsStyle="warning" onClick={this.props.fetchRandomKropotkin} >New Quote</Button>
+        </div>
       </div>
     );
   }

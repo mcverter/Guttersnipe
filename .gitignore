@@ -1,9 +1,6 @@
 # npm
 node_modules
 
-# Config Files
-config.js
-
 #temp files
 *~
 ~*
