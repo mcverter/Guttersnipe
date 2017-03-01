@@ -30,11 +30,6 @@ let SpaceEdit = (props) => {
                  </ReduxFormComponentField>}/>
 
         <Field name="space_notes" type="text" component={ReduxFormTextArea} label="Additional Notes"/>
-
-        <div className="wizard-navigation-buttons">
-          <Button type="button" className="previous" onClick={props.previousPage}>Previous</Button>
-          <Button type="submit" className="next">Next</Button>
-        </div>
       </form>
     </div>
     </Panel>

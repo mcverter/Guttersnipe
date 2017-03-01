@@ -31,7 +31,6 @@ class ShareableCreateEnd extends Component {
   }
 
   toggleSpaceEdit(){
-    debugger;
     this.setState({
       spaceEdit: !this.state.spaceEdit
     })

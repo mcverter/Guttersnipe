@@ -32,11 +32,6 @@ class TimeEdit extends Component {
                  </ReduxFormComponentField>} />
 
         <Field name="time_notes" type="text" component={ReduxFormHTMLInput} label="Additional Notes"/>
-
-    <div className="wizard-navigation-buttons">
-          <Button type="button" className="previous" onClick={this.props.previousPage}>Previous</Button>
-          <Button type="submit" className="next">Next</Button>
-        </div>
       </form>
       </Panel>
     );
