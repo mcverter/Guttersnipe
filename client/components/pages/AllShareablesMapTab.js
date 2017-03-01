@@ -17,10 +17,22 @@ export class AllShareablesMapTabComponent extends React.Component {
     }
   }
 
-  calculateCenter(shareables) {
-    return [40.693922, -73.991764];
+  averageSpot(shareables) {
+    const avg_lat = shareables.reduce((accumulator, shareable)=>{
+        const {latitude} = JSON.parse(shareable.space.position);
+        return accumulator += latitude;
+      }, 0) / shareables.length;
+    const avg_long = shareables.reduce((accumulator, shareable)=>{
+        const {longitude} = JSON.parse(shareable.space.position);
+        return accumulator += longitude;
+      }, 0) / shareables.length;
+    return [avg_lat, avg_long];
   }
 
+  calculateCenter(shareables) {
+    return [40.693922, -73.991764];
+
+  }
 
   renderMarker(shareable) {
     const {id, headline, space} = shareable;
