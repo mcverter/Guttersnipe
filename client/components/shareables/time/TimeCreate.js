@@ -12,31 +12,19 @@ import Button from 'react-bootstrap/lib/Button';
 import Panel from 'react-bootstrap/lib/Panel';
 import {connect} from 'react-redux';
 
+import TimeEdit from './TimeEdit';
+
 
 class TimeCreate extends Component {
   render() {
-        return(
-          <Panel className="time-create-panel">
-      <form className="time-create-form" onSubmit={this.props.handleSubmit}>
-        <Field name="time_calendar"
-               validate={required}
-               component={props =>
-                 <ReduxFormComponentField
-                   meta={props.meta}
-                   label={`Create a Schedule for ${this.props.headline}`} >
-                   <CalendarInputField
-                     headline={this.props.headline}
-                     formInput={props.input}
-                   />
-                 </ReduxFormComponentField>} />
-
-        <Field name="time_notes" type="text" component={ReduxFormHTMLInput} label="Additional Notes"/>
-
-    <div className="wizard-navigation-buttons">
+    return(
+      <Panel className="time-create-panel">
+        <TimeEdit {...this.props} />
+        <div className="wizard-navigation-buttons">
           <Button type="button" className="previous" onClick={this.props.previousPage}>Previous</Button>
-          <Button type="submit" className="next">Next</Button>
+          <Button type="button" onClick={this.props.nextPage} className="next">Next</Button>
         </div>
-      </form>
+
       </Panel>
     );
   }
@@ -44,28 +32,10 @@ class TimeCreate extends Component {
 
 TimeCreate.propTypes = {
   previousPage: PropTypes.func,
-  onChange: PropTypes.func,
-  handleSubmit: PropTypes.func,
-  headline: PropTypes.string
+  nextPage: PropTypes.func
 };
 
-const selector = formValueSelector('wizard'); // <-- same as form name
-TimeCreate = connect(
-  state => {
-    // can select values individually
-    const headline = selector(state, 'headline')
-    return {
-      headline
-    }
-  }
-)(TimeCreate);
 
-
-export default reduxForm({
-  form: 'wizard',
-  destroyOnUnmount: false,
-  forceUnregisterOnUnmount: true,
-  validate
-})(TimeCreate);
+export default TimeCreate;
 
 

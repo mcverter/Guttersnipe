@@ -55,7 +55,7 @@ class ThingEdit extends Component {
             return {value: subKey,  label: subKey};
           })
         })
-      }, [])});
+      }, []).slice(0,-1)});   /*TODO We shouldn't have to do this slice*/
   }
 
   handleTypesChange(value, formChangeFn) {

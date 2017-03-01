@@ -28,7 +28,15 @@ class SpaceSearchPanel extends Component {
       showPanel: false
     };
   }
-
+componentDidMount() {
+    debugger;
+}
+  componentWilReceiveProps(props) {
+    debugger;
+     if (nextProps.isActiveView && this.map) {
+      this.map.leafletElement.invalidateSize(false);
+    }
+  }
   render() {
     return (
       <div className="space-search-panel">
@@ -47,6 +55,7 @@ class SpaceSearchPanel extends Component {
                      meta={props.meta}
                      label="Choose Center">
                      <MapWithGeocoderInput
+                       ref={(map) => { this.map = map; }}
                        formInput={props.input}
                      />
                    </ReduxFormComponentField>}/>

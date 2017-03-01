@@ -3,6 +3,7 @@ import React, {Component, PropTypes} from 'react';
 import SpaceFull from '../space/SpaceFull';
 import SpaceEdit from '../space/SpaceEdit';
 
+import {browserHistory} from 'react-router';
 import TimeFull from '../time/TimeFull';
 import TimeEdit from '../time/TimeEdit';
 
@@ -27,9 +28,13 @@ class ShareableCreateEnd extends Component {
     this.toggleSpaceEdit = this.toggleSpaceEdit.bind(this);
     this.toggleThingEdit = this.toggleThingEdit.bind(this);
     this.toggleTimeEdit = this.toggleTimeEdit.bind(this);
+    this.redirectToList = this.redirectToList.bind(this);
 
   }
+  redirectToList() {
+    browserHistory.push('/shareables');
 
+  }
   toggleSpaceEdit(){
     this.setState({
       spaceEdit: !this.state.spaceEdit
@@ -91,8 +96,14 @@ class ShareableCreateEnd extends Component {
           </Panel>
 
           {notes && <div><h3>Notes:</h3> {notes} </div>}
-          <Button type="button" className="previous" onClick={this.props.previousPage}>Previous</Button>
-          <Button type="button" className="next" onClick={this.props.handleSubmit}>Create New Shareable</Button>
+          <div className="wizard-navigation-buttons">
+            <div>
+              <Button type="button" className="create-shareable-submit-btn" bsSize="large" bsStyle="primary" onClick={this.props.handleSubmit}>Create New Shareable</Button>
+            </div>
+            <div>
+              <Button type="button" className="previous" bsSize="Cancel" bsStyle="danger" onClick={this.redirectToList}>Cancel</Button>
+            </div>
+          </div>
         </form>
       </Panel>
     );

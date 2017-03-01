@@ -32,6 +32,7 @@ export default class MapWithGeocoder extends Component {
         canonicalAddress: data.feature.properties.label
       });
     }));
+    map.invalidateSize();
   }
 
   render() {

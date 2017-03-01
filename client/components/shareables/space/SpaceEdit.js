@@ -38,7 +38,6 @@ let SpaceEdit = (props) => {
 
 SpaceEdit.propTypes = {
   handleSubmit: PropTypes.func,
-  previousPage: PropTypes.func,
   onChange: PropTypes.func,
   meta: PropTypes.object,
   headline: PropTypes.string,

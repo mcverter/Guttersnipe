@@ -15,24 +15,24 @@ import {connect} from 'react-redux';
 
 class TimeEdit extends Component {
   render() {
-        return(
-          <Panel className="time-create-panel">
-      <form className="time-create-form" onSubmit={this.props.handleSubmit}>
-        <h2> Create a Schedule for {this.props.headline} </h2>
-        <Field name="time_calendar"
-               validate={required}
-               component={props =>
-                 <ReduxFormComponentField
-                   meta={props.meta}
-                   label="Schedule of Shareable" >
-                   <CalendarInputField
-                     headline={this.props.headline}
-                     formInput={props.input}
-                   />
-                 </ReduxFormComponentField>} />
+    return(
+      <Panel className="time-create-panel">
+        <form className="time-create-form" onSubmit={this.props.handleSubmit}>
+          <h2> Create a Schedule for {this.props.headline} </h2>
+          <Field name="time_calendar"
+                 validate={required}
+                 component={props =>
+                   <ReduxFormComponentField
+                     meta={props.meta}
+                     label="Schedule of Shareable" >
+                     <CalendarInputField
+                       headline={this.props.headline}
+                       formInput={props.input}
+                     />
+                   </ReduxFormComponentField>} />
 
-        <Field name="time_notes" type="text" component={ReduxFormHTMLInput} label="Additional Notes"/>
-      </form>
+          <Field name="time_notes" type="text" component={ReduxFormHTMLInput} label="Additional Notes"/>
+        </form>
       </Panel>
     );
   }

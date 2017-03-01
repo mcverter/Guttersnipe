@@ -10,59 +10,25 @@ import ReduxFormTextArea from '../../reduxFormInputs/ReduxFormTextArea';
 import Button from 'react-bootstrap/lib/Button';
 import Panel from 'react-bootstrap/lib/Panel';
 import {connect} from 'react-redux';
+import SpaceEdit from './SpaceEdit';
 
 let SpaceCreate = (props) => {
-  const headline = props.headline;
   return (
     <Panel className="space-create-panel">
-    <div className="space-create"> 
-      <form onSubmit={props.handleSubmit}>
-        <Field name="space_map"
-               validate={required}
-               component={props =>
-                 <ReduxFormComponentField
-                   meta={props.meta}
-                   label={`Create a Map for ${headline}`}>
-                   <MapWithGeocoderInput
-                     currentPosition={props.currentPosition}
-                     formInput={props.input}
-                   />
-                 </ReduxFormComponentField>}/>
-
-        <Field name="space_notes" type="text" component={ReduxFormTextArea} label="Additional Notes"/>
-
+      <div className="space-create">
+        <SpaceEdit {...props} />
         <div className="wizard-navigation-buttons">
           <Button type="button" className="previous" onClick={props.previousPage}>Previous</Button>
-          <Button type="submit" className="next">Next</Button>
+          <Button type="button" onClick={props.nextPage} className="next">Next</Button>
         </div>
-      </form>
-    </div>
+      </div>
     </Panel>
   );
 };
 
 SpaceCreate.propTypes = {
-  handleSubmit: PropTypes.func,
   previousPage: PropTypes.func,
-  onChange: PropTypes.func,
-  meta: PropTypes.object,
-  headline: PropTypes.string, 
-  currentPosition: PropTypes.array,
-  input: PropTypes.obect
+  nextPage: PropTypes.func
 };
 
-const selector = formValueSelector('wizard'); // <-- same as form name
-SpaceCreate = connect(
-  state => {
-    return {
-      headline: selector(state, 'headline')
-    };
-  }
-)(SpaceCreate);
-
-export default reduxForm({
-  form: 'wizard',
-  destroyOnUnmount: false,
-  forceUnregisterOnUnmount: true,
-  validate
-})(SpaceCreate);
+export default SpaceCreate;
