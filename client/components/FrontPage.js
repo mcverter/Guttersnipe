@@ -26,7 +26,7 @@ const FrontPage = (props) => {
 
       <br /><hr /><br />
       <div className="jumbotron strummer-quote text-center">
-        <Link to="mission">
+        <Link to="/docs/mission">
           <q>the truth is only known by guttersnipes</q> <br />
           <cite>&nbsp;&nbsp;-- joe strummer</cite>
         </Link>

@@ -197,6 +197,20 @@ $pop-color: #D83636;
     }
   }
 }
+
+.navbar-brand > a {
+  background-color: transparent;
+}
+.logo-container {
+  background-color: transparent;
+  width: 35%
+}
+.logo-img {
+  left: 0;
+  width:25%;
+  vertical-align: top;
+  background-color: transparent;
+}
 .mission-panel {
   background-color: $color-primary-4;
   text-align: center;

@@ -1,12 +1,13 @@
 import React, {Component, PropTypes} from 'react';
 import { connect } from 'react-redux';
 
-
+import {Link} from 'react-router';
 import Nav from 'react-bootstrap/lib/Nav';
 import NavItem from 'react-bootstrap/lib/NavItem';
 import Navbar from 'react-bootstrap/lib/Navbar';
 import NavDropdown from 'react-bootstrap/lib/NavDropdown';
 import { LinkContainer } from 'react-router-bootstrap';
+import imgsrc from '../../img/guttersnipeSwaggerSmall.png';
 
 
 export const Header = ({authenticated}) => {
@@ -32,14 +33,13 @@ export const Header = ({authenticated}) => {
   };
 
   return (
-    <Navbar className="header gs-navbar">
-      <Navbar.Header>
-        <Navbar.Brand>
-          <LinkContainer to="/" className="navbar-brand ">
-            <NavItem eventKey={5} title="Home Page">Guttersnipe</NavItem>
-          </LinkContainer>
-        </Navbar.Brand>
-      </Navbar.Header>
+    <Navbar className="">
+      <Link to="/" >
+          <img className="logo-img" src={imgsrc} />
+      </Link>
+
+
+
       <Nav pullRight>
         {renderAuthLinks()}
       </Nav>
@@ -59,3 +59,14 @@ Header.propTypes = {
 
 
 export default connect(mapStateToProps) (Header);
+/*
+ <Nav pullLeft>
+ <Navbar.Brand pullLeft>
+ <LinkContainer to="/" className="navbar-brand ">
+ <NavItem eventKey={5} title="Home Page">
+ <span className="logo-img"><img className="logo-img" src={imgsrc} /></span>
+ </NavItem>
+ </LinkContainer>
+ </Navbar.Brand>
+ </Nav>
+ */
