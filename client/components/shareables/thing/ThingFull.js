@@ -4,7 +4,6 @@ import Panel from 'react-bootstrap/lib/Panel'
 
 const ThingFull = ({headline, thing: {description_how, description_what, notes,
   main_type, subtypes, tags} })=> {
-    debugger;
   return (
     <Panel className="thing-full" header="Thing">
       <h2> Description of {headline}</h2>

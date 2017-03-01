@@ -18,21 +18,20 @@ class TimeCreate extends Component {
         return(
           <Panel className="time-create-panel">
       <form className="time-create-form" onSubmit={this.props.handleSubmit}>
-        <h2> Create a Schedule for {this.props.headline} </h2>
         <Field name="time_calendar"
                validate={required}
                component={props =>
                  <ReduxFormComponentField
                    meta={props.meta}
-                   label="Schedule of Shareable" >
+                   label={`Create a Schedule for ${this.props.headline}`} >
                    <CalendarInputField
                      headline={this.props.headline}
                      formInput={props.input}
                    />
                  </ReduxFormComponentField>} />
-    
+
         <Field name="time_notes" type="text" component={ReduxFormHTMLInput} label="Additional Notes"/>
-    
+
     <div className="wizard-navigation-buttons">
           <Button type="button" className="previous" onClick={this.props.previousPage}>Previous</Button>
           <Button type="submit" className="next">Next</Button>

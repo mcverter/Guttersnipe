@@ -1,48 +1,104 @@
-import React, {PropTypes} from 'react';
+import React, {Component, PropTypes} from 'react';
 
 import SpaceFull from '../space/SpaceFull';
+import SpaceEdit from '../space/SpaceEdit';
+
 import TimeFull from '../time/TimeFull';
+import TimeEdit from '../time/TimeEdit';
+
 import ThingFull from '../thing/ThingFull';
+import ThingEdit from '../thing/ThingEdit'
+
 import { Field, reduxForm, formValueSelector } from 'redux-form';
 import validate from './validateCreateShareableWizard';
 import {connect} from 'react-redux';
-import ReduxFormHTMLInput from '../../reduxFormInputs/ReduxFormHTMLInput';
 import Button from 'react-bootstrap/lib/Button';
-
-export let ShareableCreateEnd = ({handleSubmit, previousPage, shareable,
-  goToThingEdit, goToTimeEdit, goToSpaceEdit}) => {
+import Panel from 'react-bootstrap/lib/Panel';
 
 
-  let {headline, summary, number_ratings, total_rating,
-    thing, space, time, notes, comments} = shareable;
-  return (
-    <form className="shareable-create-end" onSubmit={handleSubmit}>
-      <div className="jumbotron"> {headline} </div>
+class ShareableCreateEnd extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      timeEdit: false,
+      spaceEdit: false,
+      timeEdit:false,
+    }
+    this.toggleSpaceEdit = this.toggleSpaceEdit.bind(this);
+    this.toggleThingEdit = this.toggleThingEdit.bind(this);
+    this.toggleTimeEdit = this.toggleTimeEdit.bind(this);
 
-      {summary && <div><h3>Summary</h3>{summary} </div>}
+  }
 
-      {number_ratings ? <div><h3>Rating</h3> {total_rating/number_ratings} </div>:''}
-      <div>
-      <ThingFull thing={thing} headline={headline}/>
-      <Button type="button" onClick={goToThingEdit}> Edit Thing </Button>
-      </div>
-      <div>
-      <SpaceFull space={space} headline={headline}/>
-      <Button type="button" onClick={goToSpaceEdit}> Edit Space </Button>
-      </div>
+  toggleSpaceEdit(){
+    debugger;
+    this.setState({
+      spaceEdit: !this.state.spaceEdit
+    })
+  }
 
-      <div>
-      <TimeFull time={time} headline={headline}/>
-      <Button type="button" onClick={goToTimeEdit}>  Edit Time </Button>
-      </div>
+  toggleTimeEdit(){
+    this.setState({
+      timeEdit: !this.state.timeEdit
+    })
+  }
 
-      {notes && <div><h3>Notes:</h3> {notes} </div>}
-      <Button type="button" className="previous" onClick={previousPage}>Previous</Button>
-      <Button type="button" className="next" onClick={handleSubmit}>Create New Shareable</Button>
-    </form>
-  );
-};
+  toggleThingEdit(){
+    debugger;
+    this.setState({
+      thingEdit: !this.state.thingEdit
+    })
+  }
 
+
+  render() {
+    let {
+      headline, summary, number_ratings, total_rating,
+      thing, space, time, notes, comments
+    } = this.props.shareable;
+    return (
+      <Panel className="shareable-create-end">
+        <form onSubmit={this.props.handleSubmit}>
+          <div className="jumbotron"> Headline: {headline} </div>
+
+          {summary && <div><h3>Summary</h3>{summary} </div>}
+
+          {number_ratings ? <div><h3>Rating</h3> {total_rating / number_ratings} </div> : ''}
+          <Panel>
+            <Button type="button" onClick={this.toggleThingEdit}>
+              {this.state.thingEdit ? "Confirm Thing" : "Edit Thing"}
+            </Button>
+            {this.state.thingEdit ?
+              <ThingEdit /> :
+              <ThingFull thing={thing} headline={headline}/>}
+          </Panel>
+
+          <Panel>
+            <Button type="button" onClick={this.toggleSpaceEdit}>
+              {this.state.spaceEdit ? "Confirm Space" : "Edit Space"}
+            </Button>
+            {this.state.spaceEdit ?
+              <SpaceEdit /> :
+              <SpaceFull space={space} headline={headline}/>}
+          </Panel>
+
+          <Panel>
+            <Button type="button" onClick={this.toggleTimeEdit}>
+              {this.state.timeEdit ? "Confirm Time" : "Edit Time" }</Button>
+            {this.state.timeEdit ?
+              <TimeEdit></TimeEdit> :
+              <TimeFull time={time} headline={headline}/> }
+
+          </Panel>
+
+          {notes && <div><h3>Notes:</h3> {notes} </div>}
+          <Button type="button" className="previous" onClick={this.props.previousPage}>Previous</Button>
+          <Button type="button" className="next" onClick={this.props.handleSubmit}>Create New Shareable</Button>
+        </form>
+      </Panel>
+    );
+  }
+}
 ShareableCreateEnd.propTypes = {
   handleSubmit: PropTypes.func,
   previousPage: PropTypes.func
@@ -59,42 +115,38 @@ ShareableCreateEnd = connect(
     }
     return  {
       shareable :{
-      headline : selector(state, 'headline'),
-      summary  : selector(state, 'summary'),
-      notes    : selector(state, 'shareable_notes'),
-      thing    : {
-        description_how : selector(state, 'thing_description_how'),
-        description_what :selector(state, 'thing_description_how'),
-        main_type: {name: selector(state, 'thing_type')},
-        subtypes: transformCategoriesToArray(selector(state, 'thing_subtypes')),
-        notes: selector(state, 'thing_notes')
-      },
-      space    : {
-        position:'{"longitude":' + selector(state, 'space_map.longitude') + ','
+        headline : selector(state, 'headline'),
+        summary  : selector(state, 'summary'),
+        notes    : selector(state, 'shareable_notes'),
+        thing    : {
+          description_how : selector(state, 'thing_description_how'),
+          description_what :selector(state, 'thing_description_how'),
+          main_type: {name: selector(state, 'thing_type')},
+          subtypes: transformCategoriesToArray(selector(state, 'thing_subtypes')),
+          notes: selector(state, 'thing_notes')
+        },
+        space    : {
+          position:'{"longitude":' + selector(state, 'space_map.longitude') + ','
           + '"latitude":' + selector(state, 'space_map.latitude') + '}',
-        longitude : selector(state, 'space_map.longitude'),
-        latitude: selector(state, 'space_map.latitude'),
-        canonical_address: selector(state, 'values.space_map.canonicalAddress'),
-        notes: selector(state, 'space_notes')
-      },
-      time    : {
-        notes : selector(state, 'time_notes'),
-        schedule : {
-          events: selector(state, 'time_calendar')
-        }
-      }}
+          longitude : selector(state, 'space_map.longitude'),
+          latitude: selector(state, 'space_map.latitude'),
+          canonical_address: selector(state, 'values.space_map.canonicalAddress'),
+          notes: selector(state, 'space_notes')
+        },
+        time    : {
+          notes : selector(state, 'time_notes'),
+          schedule : {
+            events: selector(state, 'time_calendar')
+          }
+        }}
     };
   }
 )(ShareableCreateEnd);
 
-/*
-"['dumpster']"
-"{"longitude": 40.689613, "latitude": -73.99243}"
- */
 ShareableCreateEnd.propTypes = {
   shareable: PropTypes.object,
-  goToThingEdit: PropTypes.func, 
-  goToTimeEdit: PropTypes.func, 
+  goToThingEdit: PropTypes.func,
+  goToTimeEdit: PropTypes.func,
   goToSpaceEdit: PropTypes.func
 }
 

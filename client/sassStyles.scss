@@ -70,7 +70,10 @@ $pop-color: #D83636;
 
 /* Panel */
 .space-search-panel {}
-.event-calendar-view {}
+.event-calendar-view {
+  margin: 0 auto;
+  display: table;
+}
 .time-search-panel {}
 .thing-search {}
 
@@ -139,7 +142,11 @@ $pop-color: #D83636;
 .signup-form {}
 .shareable-create-wizard-form {}
 .thing-create-form {}
-.time-create-formtime-full {}
+.time-create-form {}
+.time-full {
+  background-color: $color-secondary-1-1;
+  text-align: center;
+}
 
 /* Form Elements */
 .form-component-field {}
@@ -149,6 +156,10 @@ $pop-color: #D83636;
 .shareable-create-start {}
 .map-with-geocoder-input {
   margin: auto;
+}
+
+.shareable-create-end {
+  background-color: $color-primary-2;
 }
 
 .leaflet-pelias-result {
@@ -183,9 +194,12 @@ $pop-color: #D83636;
 .shareable-full {}
 .thing-full {}
 .calendar {
-  width: 80%;
+  width: 85%;
   height: 500px;
-  margin: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: auto;
+  margin-left: auto;
   overflow: scroll;
 }
 
@@ -216,10 +230,9 @@ $pop-color: #D83636;
 .thing-li {}
 .time-li {}
 .date-listing {
-  border-color: black;
-  border: 1px black;
-  table, th, td {
-    border: 1px solid black;
+  border: 1px black !important;
+  table, th, thead, tr, td {
+    border: 1px solid black !important;
   }
 }
 

@@ -25,23 +25,25 @@ const DateListing = (props) => {
         <td cellPadding="10px">{day}</td>
         <td cellPadding="10px">{start}</td>
         <td cellPadding="10px">{end}</td>
-        <td cellPadding="10px" 
-          onClick={()=>deleteEvent(eventIndex)}> X</td>
-        </tr>
+        <td cellPadding="10px"
+            onClick={()=>deleteEvent(eventIndex)}> X</td>
+      </tr>
     )
   }
 
-if (!events || events.length < 1) {
-  return (<div /> );
-}
+  if (!events || events.length < 1) {
+    return (<div /> );
+  }
   return (
 
     <Table bordered striped className="date-listing">
       <thead>
-      <th cellPadding="10px">Date</th>
-      <th cellPadding="10px">Start</th>
-      <th cellPadding="10px">End</th>
-      <th cellPadding="10px">Cancel</th>
+      <tr>
+        <th cellPadding="10px">Date</th>
+        <th cellPadding="10px">Start</th>
+        <th cellPadding="10px">End</th>
+        <th cellPadding="10px">Cancel</th>
+      </tr>
       </thead>
       {events.map(e=>renderEvent(e))}
     </Table>
