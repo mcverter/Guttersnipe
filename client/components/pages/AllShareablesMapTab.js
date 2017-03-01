@@ -25,7 +25,7 @@ export class AllShareablesMapTabComponent extends React.Component {
   renderMarker(shareable) {
     const {id, headline, space} = shareable;
     const {latitude, longitude} = JSON.parse(space.position);
-    const position = [longitude, latitude];
+    const position = [latitude, longitude];
 
     return(
       <Marker key={`marker${id}`} position={position}>
