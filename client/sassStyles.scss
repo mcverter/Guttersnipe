@@ -119,8 +119,12 @@ $pop-color: #D83636;
 .gutterPage {}
 .front-pg {}
 .welcome-pg {}
-.all-shareables-pg {}
-.shareable-search-pg {}
+.all-shareables-pg {
+  background-color: $color-secondary-1-1;
+}
+.shareable-search-pg {
+  background-color: $color-secondary-1-1;
+}
 .shareable-create-wizard-pg {}
 .shareable-edit-page {}
 .shareable-full-page {}
@@ -146,6 +150,7 @@ $pop-color: #D83636;
 .time-full {
   background-color: $color-secondary-1-1;
   text-align: center;
+  height: 25%;
 }
 
 /* Form Elements */
@@ -166,7 +171,10 @@ $pop-color: #D83636;
   text-align: left;
 }
 .space-create {}
-.space-full {}
+.space-full {
+  height: 25%;
+  background-color: $color-secondary-2-1;
+}
 .kropotkin-quote-outer {
   background-color: $color-primary-2;
   .kropotkin-quote-inner {
@@ -192,7 +200,11 @@ $pop-color: #D83636;
 
 
 .shareable-full {}
-.thing-full {}
+.thing-full {
+  height: 25%;
+  background-color: $color-secondary-1-1;
+
+}
 .calendar {
   width: 85%;
   height: 500px;

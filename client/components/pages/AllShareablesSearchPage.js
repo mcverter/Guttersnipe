@@ -1,6 +1,8 @@
 import React, {PropTypes, Component} from "react";
 import {Link} from "react-router";
 import Button from 'react-bootstrap/lib/Button';
+import Panel from 'react-bootstrap/lib/Panel';
+
 import { connect } from 'react-redux';
 import SpaceSearchPanel from '../shareables/space/SpaceSearchPanel';
 import TimeSearchPanel from '../shareables/time/TimeSearchPanel';
@@ -29,13 +31,15 @@ class AllShareablesSearchPage extends Component {
   render() {
     const {handleSubmit} = this.props;
     return (
-    <form className="shareable-search-pg" onSubmit={handleSubmit(this.handleFormSubmit)}>
+      <Panel className="shareable-search-pg">
+    <form onSubmit={handleSubmit(this.handleFormSubmit)}>
         <TimeSearchPanel />
         <SpaceSearchPanel />
         <ThingSearchPanel />
         <Button type="submit" bsStyle="primary" bsSize="large" block>
           Search</Button>
      </form>
+      </Panel>
     );
   }
 }

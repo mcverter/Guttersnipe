@@ -7,9 +7,9 @@ const renderArrayedLabels = (categories, label, style) => {
         categories = JSON.parse(categories.replace(/'/g, '"'));  // workaround
     return (
       <div>
-        <h3>{label}</h3>
+        <h5>{label}</h5>
         {categories.map((cat)=>{
-          return <Button bsStyle={style} key={cat}>{cat}</Button>;})}
+          return <Button bsSize="xs" bsStyle={style} key={cat}>{cat}</Button>;})}
       </div>);
   }
 };
@@ -18,8 +18,8 @@ const renderArrayedLabels = (categories, label, style) => {
 export const renderMainType = (main_type) => {
   return (
     <div>
-      <h2>Main Type</h2>
-      <Button bsSize="large" bsStyle="success">{main_type.name}</Button>
+      <h4>Main Type</h4>
+      <Button bsSize="sm" bsStyle="success">{main_type.name}</Button>
     </div>
   );
 };

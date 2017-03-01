@@ -1,14 +1,14 @@
 import expect from 'expect';
 import React from 'react';
 import {mount, shallow} from 'enzyme';
-import {AllShareablesCalendarTab} from '../AllShareablesCalendarTab';
+import {AllShareablesCalendarTabComponent} from '../AllShareablesCalendarTab';
 
 function setup({isFetchingShareables=false, items=[]}) {
   const props = {shareables: {isFetchingShareables, items}};
   return shallow(<AllShareablesCalendarPage {...props} />);
 }
 
-describe('AllShareablesCalendarTab', () => {
+describe('AllShareablesCalendarTabComponent', () => {
   it('displays loading if isFetchingShareables is true', () =>{
     const wrapper = setup({isFetchingShareables: true, items: ['foo']});
     expect(wrapper.find('div').text()).toEqual('Loading...');

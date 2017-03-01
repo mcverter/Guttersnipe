@@ -1,11 +1,11 @@
 import expect from 'expect';
 import React from 'react';
 import {mount, shallow} from 'enzyme';
-import {AllShareablesListTab} from '../AllShareablesListTab';
+import {AllShareablesListTabComponent} from '../AllShareablesListTab';
 
 function setup({isFetchingShareables=false, items=[]}) {
   const props = {shareables: {isFetchingShareables, items}};
-  return shallow(<AllShareablesListTab {...props} />);
+  return shallow(<AllShareablesListTabComponent {...props} />);
 }
 
 describe('AllCalendarListTab', () => {

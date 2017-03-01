@@ -4,7 +4,7 @@ import {Link} from "react-router";
 
 import Tabs from "react-bootstrap/lib/Tabs";
 import Tab from "react-bootstrap/lib/Tab";
-
+import Panel from "react-bootstrap/lib/Panel"
 import AllShareablesListTab from './AllShareablesListTab';
 import AllShareablesMapTab from './AllShareablesMapTab';
 import AllShareablesCalendarTab from './AllShareablesCalendarTab';
@@ -38,14 +38,14 @@ class AllShareablesPage extends Component {
 
   render() {
     return (
-      <div className="all-shareables-pg">
+      <Panel className="all-shareables-pg">
         <Link to="/shareables/search"> Search Results</Link>
         <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
           <Tab eventKey={1} onEnter={this.unsetMapAsActiveView}  title="List"><AllShareablesListTab/></Tab>
           <Tab eventKey={2} onEnter={this.setMapAsActiveView} title="Map"><AllShareablesMapTab isActiveView={this.state.mapIsActiveView} /></Tab>
           <Tab eventKey={3} onEnter={this.unsetMapAsActiveView} title="Calendar"><AllShareablesCalendarTab/></Tab>
         </Tabs>
-      </div>
+      </Panel>
 
     );
   }

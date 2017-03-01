@@ -47,8 +47,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    createShareable: () => {dispatch(createShareable)}
-  }
+    createShareable: () => {dispatch(createShareable);}
+  };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShareableCreateWizardPage);

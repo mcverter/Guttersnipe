@@ -6,14 +6,14 @@ const ThingFull = ({headline, thing: {description_how, description_what, notes,
   main_type, subtypes, tags} })=> {
   return (
     <Panel className="thing-full" header="Thing">
-      <h2> Description of {headline}</h2>
+      <h3> Description of {headline}</h3>
       {description_how &&
       <div>
-        <h3> Way of acquiring {headline} </h3>
+        <h4> Way of acquiring {headline} </h4>
         {description_how}
       </div>}
       {description_what &&
-      <div> <h3>Description of {headline}</h3>
+      <div> <h4>Description of {headline}</h4>
         {description_what}
       </div>}
       <div>

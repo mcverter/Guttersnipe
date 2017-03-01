@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import ShareableLI from '../shareables/ShareableLI';
 import Table from 'react-bootstrap/lib/Table';
 
-export const AllShareablesListTab = (props) => {
+export const AllShareablesListTabComponent = (props) => {
   const { shareables: {isFetchingShareables, items}} = props;
 
   if (isFetchingShareables || !items || items.length < 1) {
@@ -34,7 +34,7 @@ export const AllShareablesListTab = (props) => {
   );
 };
 
-AllShareablesListTab.propTypes = {
+AllShareablesListTabComponent.propTypes = {
   shareables: PropTypes.object,
 };
 
@@ -44,4 +44,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(AllShareablesListTab);
+export default connect(mapStateToProps)(AllShareablesListTabComponent);

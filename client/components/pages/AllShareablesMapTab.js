@@ -4,7 +4,7 @@ import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import {connect} from 'react-redux';
 import {Link} from 'react-router';
 
-export class AllShareablesMapTab extends React.Component {
+export class AllShareablesMapTabComponent extends React.Component {
   constructor(props) {
     super(props);
     this.calculateCenter = this.calculateCenter.bind(this);
@@ -63,7 +63,7 @@ export class AllShareablesMapTab extends React.Component {
     );
   }
 }
-AllShareablesMapTab.propTypes = {
+AllShareablesMapTabComponent.propTypes = {
   shareables: PropTypes.object,
 };
 
@@ -73,4 +73,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(AllShareablesMapTab);
+export default connect(mapStateToProps)(AllShareablesMapTabComponent);
