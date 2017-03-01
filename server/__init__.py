@@ -1,12 +1,12 @@
 
-from flask import jsonify, Flask, request, render_template, send_from_directory, redirect, make_response
+from flask import jsonify, Flask, request, render_template, send_file,  url_for, send_from_directory, redirect, make_response
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.restful import Api
 from flask_cors import CORS
 from flask_jwt_extended import JWTManager, jwt_required,\
     create_access_token, get_jwt_identity
 from flask_bcrypt import Bcrypt
-
+import os
 
 app = Flask(__name__, static_url_path='/static')
 
@@ -58,6 +58,14 @@ def protected():
 @app.route('/<path:path>')
 def catch_all(path):
   return render_template('index.html')
+
+
+@app.route('/<path>.png')
+def imgpng(path):
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               '%s.png' % path, mimetype='image/png')
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
