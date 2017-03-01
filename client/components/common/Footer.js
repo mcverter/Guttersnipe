@@ -11,8 +11,8 @@ const Footer = (props) => (
       <LinkContainer to="/docs/faq" className="navbar-brand ">
         <NavItem eventKey="1" title="FAQ">FAQ</NavItem>
       </LinkContainer>
-      <LinkContainer to="/docs/documentation"  className="navbar-brand ">
-        <NavItem eventKey="2"  title="documentation">Docs</NavItem>
+      <LinkContainer to="/docs/mission"  className="navbar-brand ">
+        <NavItem eventKey="2"  title="mission">Mission</NavItem>
       </LinkContainer>
       <LinkContainer to="/docs/illlegal"  className="navbar-brand ">
         <NavItem eventKey="3" title="illlegal">L@W</NavItem>

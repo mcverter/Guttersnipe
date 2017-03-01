@@ -197,7 +197,10 @@ $pop-color: #D83636;
     }
   }
 }
-
+.mission-panel {
+  background-color: $color-primary-4;
+  text-align: center;
+}
 .create-shareable-submit-btn{
   border: 20px;
   margin: 20px;
