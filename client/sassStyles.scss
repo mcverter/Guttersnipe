@@ -184,11 +184,18 @@ ul.navbar-nav li a {
   background-color: $color-secondary-2-1;
 }
 .kropotkin-quote-outer {
+  border: 20px;
+  margin: 20px;
+  padding: 20px;
   background-color: $color-primary-2;
   .kropotkin-quote-inner {
     background-color: $color-primary-1;
     color: $color-complement-4;
     width: 85%;
+    border: 20px;
+  margin-top: 20px;
+    margin-bottom: 20px;
+  padding: 20px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
@@ -197,11 +204,16 @@ ul.navbar-nav li a {
   .kropotkin-source {
     text-align: center;
     color: white;
+    border: 10px;
+  margin: 10px;
+  padding: 20px;
     a {
       color: $color-complement-4 !important;
     }
     .kropotkin-quote-button {
       margin: 30px;
+      border: 20px;
+  padding: 20px;
     }
   }
 }
