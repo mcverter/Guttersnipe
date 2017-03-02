@@ -20,7 +20,7 @@ export const Header = ({authenticated}) => {
       );
     } else {
       return (
-        <NavDropdown title="Signin" id="basic nav-dropdown">
+        <NavDropdown title="Sign In" id="basic nav-dropdown">
           <LinkContainer to="/auth/signin" className="navbar-brand ">
             <NavItem eventKey={1} title="Sign Up">Sign In</NavItem>
           </LinkContainer>
