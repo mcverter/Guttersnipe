@@ -33,13 +33,10 @@ export const Header = ({authenticated}) => {
   };
 
   return (
-    <Navbar className="">
+    <Navbar className="header">
       <Link to="/" >
           <img className="logo-img" src={imgsrc} />
       </Link>
-
-
-
       <Nav pullRight>
         {renderAuthLinks()}
       </Nav>

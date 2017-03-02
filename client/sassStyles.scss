@@ -44,12 +44,20 @@ $pop-color: #D83636;
   }
 }
 .header {
-  background-color: $color-secondary-1-1;
+  background-color: $color-complement-4;
   color: $color-secondary-2-4;
   a {
-    color: $color-secondary-2-4;
+    color: $color-primary-1;
   }
 
+}
+
+
+ul.navbar-nav li a {
+  color: $color-primary-1;
+  font-weight: bolder;
+  font-size: 250%;
+  margin: 10px;
 }
 .footer {
   background-color: $color-secondary-2-4;
