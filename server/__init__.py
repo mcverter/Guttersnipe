@@ -61,11 +61,11 @@ def catch_all(path):
 
 
 @app.route('/<path>.ico')
-def imgpng(path):
+def imgico(path):
     return send_from_directory(os.path.join(app.root_path, 'static'),
                                '%s.ico' % path, mimetype='image/ico')
 @app.route('/<path>.jpg')
-def imgpng(path):
+def imgjpg(path):
     return send_from_directory(os.path.join(app.root_path, 'static'),
                                '%s.jpg' % path, mimetype='image/jpg')
 
