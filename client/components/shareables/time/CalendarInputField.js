@@ -19,7 +19,7 @@ class CalendarInputField extends Component {
             eventIndex: 1
         };
 
-   
+
          // calendar
         this.handleCalendarSelectSlot = this.handleCalendarSelectSlot.bind(this);
 
@@ -30,7 +30,7 @@ class CalendarInputField extends Component {
         this.handleModalDurationChange = this.handleModalDurationChange.bind(this);
         this.handleModalSubmit = this.handleModalSubmit.bind(this);
         this.handleModalRepeatToggle = this.handleModalRepeatToggle.bind(this);
-    
+
 
         this.deleteEvent = this.deleteEvent.bind(this);
     }
@@ -60,7 +60,7 @@ class CalendarInputField extends Component {
         this.setState({ modalIsOpen: false });
     }
 
-    customModalStyles() {
+    static customModalStyles() {
         return {
             overlay: {
                 position: 'fixed',
@@ -151,10 +151,10 @@ class CalendarInputField extends Component {
 
     render() {
         const calendarEvents = this.props.formInput.value;
-        return ( 
+        return (
             <div className = "calendar-input-field">
-            
-            <EventCalendarNavigable 
+
+            <EventCalendarNavigable
                 arrayOfCalendarEventsWithHeadlines = {
                     [{
                         headline: this.props.headline,
@@ -162,10 +162,10 @@ class CalendarInputField extends Component {
                     }]}
                 viewMonth = { new Date() }
                 handleSelectSlot = { this.handleCalendarSelectSlot }
-                selectable 
+                selectable
             />
 
-            <AddDateModal 
+            <AddDateModal
                 isOpen = { this.state.modalIsOpen }
                 closeModal = { this.closeModal }
                 customStyles = { this.customModalStyles() }
@@ -181,10 +181,10 @@ class CalendarInputField extends Component {
                 handleDateSelection = { this.handleModalSubmit }
             />
 
-            <DateListing 
-                events={calendarEvents} 
+            <DateListing
+                events={calendarEvents}
                 deleteEvent={this.deleteEvent}
-            /> 
+            />
 
             </div>
         );

@@ -64,6 +64,6 @@ const mapDispatchToProps = (dispatch) => {
 
 AllShareablesPage.propTypes = {
   fetchAllShareablesIfNeeded: PropTypes.func,
-}
+};
 
 export default connect(null, mapDispatchToProps) (AllShareablesPage);

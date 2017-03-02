@@ -29,12 +29,12 @@ export class AllShareablesMapTabComponent extends React.Component {
     return [avg_lat, avg_long];
   }
 
-  calculateCenter(shareables) {
+  static calculateCenter(shareables) {
     return [40.693922, -73.991764];
 
   }
 
-  renderMarker(shareable) {
+  static renderMarker(shareable) {
     const {id, headline, space} = shareable;
     const {latitude, longitude} = JSON.parse(space.position);
     const position = [latitude, longitude];
