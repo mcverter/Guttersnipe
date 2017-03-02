@@ -60,10 +60,20 @@ def catch_all(path):
   return render_template('index.html')
 
 
+@app.route('/<path>.ico')
+def imgpng(path):
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               '%s.ico' % path, mimetype='image/ico')
+@app.route('/<path>.jpg')
+def imgpng(path):
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               '%s.jpg' % path, mimetype='image/jpg')
+
 @app.route('/<path>.png')
 def imgpng(path):
     return send_from_directory(os.path.join(app.root_path, 'static'),
                                '%s.png' % path, mimetype='image/png')
+
 
 
 
