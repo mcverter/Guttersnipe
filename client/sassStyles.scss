@@ -76,7 +76,36 @@ ul.navbar-nav li a {
   }
 }
 
+.negate-button {
+  background-color: red;
+  color: white;
+  font-weight: 900;
+}
+
+
+.consent-button {
+  background-color: green;
+  color: white;
+  font-weight: 900;
+}
+
 /* Panel */
+.consent-for-create-panel{
+  background-color: $color-secondary-1-3;
+  .agreement-div {
+    background-color: $color-secondary-1-1;
+  }
+}
+.instructions-for-create-panel {
+  background-color: $color-secondary-2-3;
+  .instruction-summary {
+    background-color: $color-secondary-2-2;
+    .jumbotron {
+      background-color: $color-secondary-2-1;
+
+    }
+  }
+}
 .space-search-panel {}
 .event-calendar-view {
   margin: 0 auto;

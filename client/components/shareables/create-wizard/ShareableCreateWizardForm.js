@@ -40,7 +40,7 @@ class ShareableCreateWizardForm extends Component {
       <div className="shareable-create-wizard-form">
         {page === 1 && <InstructionsForCreate nextPage={this.nextPage}/>}
         {page === 2 && <ConsentForCreate previousPage={this.previousPage} nextPage={this.nextPage} />}
-        {page === 3 && <HeadlineSummaryCreate  previousPage={this.previousPage} nextPage={this.nextPage}/>}
+        {page === 3 && <HeadlineSummaryCreate  nextPage={this.nextPage}/>}
         {page === 4 && <ThingCreate previousPage={this.previousPage} nextPage={this.nextPage} />}
         {page === 5 && <SpaceCreate previousPage={this.previousPage}  nextPage={this.nextPage} />}
         {page === 6 && <TimeCreate previousPage={this.previousPage}  nextPage={this.nextPage} />}

@@ -1,9 +1,10 @@
-
-
 import React from 'react';
+import Panel from 'react-bootstrap/lib/Panel';
+import Button from 'react-bootstrap/lib/Panel';
 
-const DirectionsPage = (props) => (
-  <div id="instruction-summary" className="jumbotron">
+const InstructionsForCreate = (props) => (
+  <Panel className="instructions-for-create-panel">
+  <div id="instruction-summary" className="jumbotron instruction-summary">
     Resource = Thing + Place + Time
     <div className="jumbotron">
       Example:  Free meal in Prospect Park every Wednesday from 4PM to 9PM
@@ -19,12 +20,12 @@ const DirectionsPage = (props) => (
       </ol>
     </div>
     <div>
-      <div className="row text-center">
-        <!-- a type="button" className="btn btn-default" ui-sref="createResource.thing">Resource Create Wizard </span></a-->
-        <a type="button" className="btn btn-default" ui-sref="createResource.singleForm">Create Resource</a>
+      <div className="wizard-navigation-buttons">
+        <Button type="button" onClick={props.nextPage} className="next">Next</Button>
       </div>
     </div>
   </div>
+  </Panel>
 );
 
-export default DirectionsPage;
+export default InstructionsForCreate;
