@@ -1,3 +1,10 @@
+results_*
+
+
+db/results/
+db/seeds/data_to_be_migrated/
+selenium/
+	
 # npm
 node_modules
 
