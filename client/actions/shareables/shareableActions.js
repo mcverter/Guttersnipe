@@ -7,23 +7,17 @@ export function fetchAllShareablesIfNeeded(forceFetch=false) {
   return (dispatch, getState) => {
     const state = getState();
     if (forceFetch || ! state.shareables.items || state.shareables.items.length <= 0) {
-      return (dispatch(fetchAllShareables()));
+      return (dispatch(fetchAllShareables(dispatch)));
     }
   };
 }
 
-function fetchAllShareables() {
-  return dispatch => {
-    dispatch(requestAllShareables());
+function fetchAllShareables(dispatch) {
+ return () => {
+    dispatch({type: types.SHAREABLES_ALL_REQUEST});
     return fetch(`${SERVER_URL}/api/shareables`)
       .then(response => response.json())
       .then(json => dispatch(receiveAllShareables(json)));
-  };
-}
-
-function requestAllShareables() {
-  return {
-    type: types.SHAREABLES_ALL_REQUEST
   };
 }
 
