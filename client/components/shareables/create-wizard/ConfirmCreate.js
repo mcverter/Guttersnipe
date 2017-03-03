@@ -31,7 +31,7 @@ class ShareableCreateEnd extends Component {
     this.redirectToList = this.redirectToList.bind(this);
 
   }
-  static redirectToList() {
+   redirectToList() {
     browserHistory.push('/shareables');
 
   }
