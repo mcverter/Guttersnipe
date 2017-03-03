@@ -1,0 +1,78 @@
+ Loft 345	Guangzhou City, Haizhu District Jiangnan East Road, Xiaogang Garden No.19 4th floor Guangzhou, China	[23.1078063, 113.2700051]	culture	infoshop
+Social Movement Resourse Centre	Flat A 8/F, Kingland Apartments, 739 Nathan Rd. Price Edward, Kowloon, Hong Kong	[22.3217419, 114.1685984]	culture	infoshop
+C2O Library & Collabtive	Jl. Dr. Cipto 20, Surabaya 60264, Indonesia	[-7.2815014, 112.7387315]	culture	infoshop
+Bar Akane	2-1-17-1F Nishi-Waseda, Shinjuku-ku Tokyo, Japan 162-0051	[35.7065391, 139.7178221]	culture	infoshop
+FNB Kuala Lumpur	Section 8 Pealing Jaya, Selangor 50250 Kuala Lumpur, Malaysia	[3.1079282, 101.6058879]	food	food not bombs
+26A Collective	Tel Sokak No 26 / A Beyoglu / Istanbul (0212) 243 60 85	[41.03432, 28.981563]	culture	infoshop
+Acrata	32 Rue de la Grande Ile 1000 Brussels, Belgium	[50.8466991, 4.346883099999999]	culture	infoshop
+*Infoshop Iskra	R.K Jeretova 5, Zadar, Croatia	[44.1170404, 15.230964]	culture	infoshop
+*Infocafe Sale	Orebitska 194-14 Praha 3, Czech Republic	[50.0860432, 14.44667]	culture	infoshop
+Folkets Hus (People's House)	Stengade 50 2200 Copenhagen N. Denmark	[55.68730499999999, 12.554182]	culture	infoshop
+Assata Autonomous Bookstore	Van Broeckhuysenstraat 46, 6511 PK Nijmegen, 024-3605208	[51.8438169, 5.865908399999999]	culture	bookstore infoshop
+*Black Rabbit Hole	Hameentie 28, Helsinki, Finland 00530 ph 040-300-1909	[60.2127297, 24.9790105]	culture	infoshop
+Alternative Conference Center	Willy Brandt Ave 9, 23554 Lüebeck D. Germany	[53.869894, 10.677232]	culture	infoshop
+Aftonomo Steki Social Space	Zoodochou Pigis & Isavron, 114 73, Athens, Greece	[37.9869059, 23.7399489]	culture	infoshop
+Blitz	Pilestredet 30, N-0166 Oslo, Norway +47 22 11 23 49	[59.9183499, 10.7378677]	culture	infoshop
+Ateneu Anarquista del Poble Sec	c/ Creu dels Molers 86, Barcelona, Spain	[41.3711974, 2.1606744]	culture	infoshop
+Amalthea Bokcafe	Kristiansstadsgstaan 41c, 214 22 Malmo, Sweden	[55.5925898, 13.0074303]	culture	bookstore
+Centre de recherches sur l'Anarchisma	Beaumont 24 Lausanne 1012, Switzerland	[46.5262934, 6.645402499999999]	culture	bookstore
+26A Collective	Tel Sokak No 26 / A Beyoglu / Istanbul (0212) 243 60 85	[41.03432, 28.981563]	culture	infoshop
+1 in 12 Club	21-23 Albion St, Bradford, West Yorkshire BD1 2LY, England (01274) 734160	[53.79483889999999, -1.7580137]	culture	infoshop
+The Bike Kitchen at UBC	6138 Student Union Boulevard Vancouver, BC V6T 1Z1 604-822-2453	[49.2674755, -123.2502913]	motion	bike
+*Ordinary Spokes Community Bike Shop	576A Water St., St. John's, NL A1E 1B8 Canada	[47.552529, -52.7157741]	motion	bike
+AKA Autonomous Social Centre	75 Queen Street, Unit 1, Kingston, Ontario K7K 1A5	[44.2326547, -76.4824763]	culture	infoshop
+Bar-Coop l'Agit�e	255 rue Dorchester, Qu�bec, Qu�bec, G1K 5Z6, 418-522-6133	[46.8188547, -71.2233182]	culture	infoshop
+*Auditorio Okupaciun Che Guevara	Facultad de Filosofia y Letras, Ciudad Unversitaria D.F. Mexico	[19.3340082, -99.1868398]	culture	infoshop
+Bici Bike Coop	4000 3rd Ave. S, Suite 103 Birmingham, AL 35222	[33.5232617, -86.7755234]	motion	bike
+Alaska Center for Alternative Lifestyles (ACAL)	420 W. 3rd Ave. Anchorage AK 99501 907-775-8419	[61.2195417, -149.8893846]
+Bicycle Inter-Community Action	44 W. 6th St. Tucson, AZ 85705 520-628-7950	[32.227922, -110.9728159]	motion	bike
+Arkansas Sustainability Network	509 Scott St. Little Rock, AR 72201 501-291-2769	[34.7434419, -92.2696089]
+AK Press	370 Ryan Ave #100 Chico, CA 95973	[39.80665399999999, -121.854593]
+Bad Water Flats Collective	629 Ouray Ave Grand Junction, Co 81501 970-245-3720	[39.07109700000001, -108.561958]
+*Willamantic Food Coop	91 Valley St. Willimantic, CT 06226 860-456-3611	[41.7135326, -72.2111157]	food	coop
+Emergence	733 Euclid St. NW Washington, DC 20001 202-462-2285	[38.924352, -77.0237439]
+Bread and Roses Food Coop	915-2 Railroad Avenue Tallahassee Fl 32310-4347 (850) 425-8486	[30.433991, -84.28942599999999]	food	coop
+Bombs Away! Bookstore	317 N Chase St. Athens GA 30606	[33.9565701, -83.3917834]	culture	bookstore
+Kokua Co-op	2643 S King St. Honolulu, HI 96826 808-941-1922	[21.2911434, -157.8208621]	food	coop
+Backroom Books	750 W. Wyeth St. Pocatello, Idaho 83204   208-234-9834	[42.8620971, -112.4591745]	culture	bookstore
+Acme Artworks	1741 N. Western, Chicago, IL (??) (773) 278-7677	[41.9133308, -87.68692]	culture	art
+Boxcar Books	408 E. 6th, Bloomington, IN 47408 812-339-8710	[39.1673477, -86.52926049999999]	culture	bookstore
+Iowa Citizens for Community Improvement	2001 Forest Ave, Des Moines, IA 50311	[41.604348, -93.644139]
+Cosmic Beauty School	1145 Pennsylvania St. Lawrence, KS 66044	[38.9621, -95.22925699999999]
+Falls City Community BikeWorks	1217 Logan St. Louisville, KY 40204 502-509-3308	[38.2324791, -85.73967069999999]	motion	bike
+Orleans Food CoopNew	2372 St. Claude Ave. #110, New Orleans, LA 70117 504-264-5579	[29.9685946, -90.0523981]	food	coop
+Gulf of Maine books	134 Maine Street Brunswick, ME 04011 207-729-5083	[43.9149025, -69.9654554]	culture	bookstore
+Alternative Press Center	1443 Gorsuch Ave. Baltimore MD 21218, 410.243.2471	[39.322847, -76.597674]	culture	media
+Democracy Center	45 Mount Auburn St. Cambridge, MA 02138 617-492-8855	[42.3713537, -71.1164569]
+Ancestry Books	2205 Lowry Ave N Minneapolis, MN 55441 612-521-4090	[45.0131149, -93.3085557]	culture	bookstore
+Mississippi Immigrants' Rights Alliance	612 N State St. Jackson, MS 39202	[32.3050185, -90.1792419]	legal	immigrants
+Community Arts & Media Project	3022A Cherokee St., St. Louis, MO 63118 (314) 827-4730	[38.5942257, -90.2344299]	culture	arts media
+Jeannette Rankin Peace Center	519 S. Higgins Ave. Missoula, MT 59801 (406) 543-3955	[46.8664437, -113.9977549]
+Black Cat House, the	1601 B St. Lincoln, NE 68502	[40.8001485, -96.6980248]
+Change Point	445 Ralston St. Reno, NV 89503 775-997-7519	[39.529288, -119.8209844]
+George Street Co-op	89 Morris Street, New Brunswick, NJ 08901 732-247-8280	[40.49176310000001, -74.4449989]
+Albuquerque Center for Peace & Justice	202 Harvard Dr. SE, Albuquerque, NM, 87106 505-268-9557	[35.0789793, -106.6205858]
+Base, the	1302 Myrtle ave. Brooklyn, NY 11221	[40.6980462, -73.924447]	culture	infoshop
+Bike Recyclery	90 Biltmore Ave. Asheville, NC 28801 828-255-7916	[35.5917314, -82.5504886]	motion	bike
+Amazing Grains Coop	214 DeMers Ave Grand Forks, ND 58201 (701) 775-4542	[47.9257207, -97.0303615]	food	coop
+*Antioch Alternative Library	Sontag Fels Building 800 Livermore St. Yellow Springs, OH 45387	[39.7993021, -83.8903758]
+Bad Egg Books / Phoenix Rising	306 S. Phoenix Ave. Tulsa, OK 74127 918-582-5344	[36.1500456, -96.0060563]
+Anarres Infoshop	7101 N Lombard, Portland, OR 972039	[45.58754159999999, -122.7402479]
+A-Space	4722 Baltimore Ave, Philadelphia PA 19143 215-821-6877 / 215 727-0882	[39.9483428, -75.21772039999999]
+George Wiley Center	32 E Ave. Pawtucket, RI 02860 401-728-5555	[41.8766232, -71.3845504]
+TIVOLI	517 Joseph St, Charleston, SC 29412 843-425-5842​	[32.755353, -79.96588400000002]
+spearfish Bicycle Coop	727 N Main St, Spearfish, SD 57783	[44.4905408, -103.8594024]
+Birdhouse Community Center	800 N. 4th Ave., Knoxville, TN 37917	[35.9793424, -83.9174088]
+1919 Hemphill	1919 Hemphill St. Fort Worth, TX 76110 (817) 920-9665	[32.722995, -97.33124199999999]
+Boing! Anarchist Collective	608 S. 500 E. Salt Lake City, Utah 84102 801-364-2426	[40.7584792, -111.8726556]
+Everyone's Books	25 Elliott St, Brattleboro VT 05301 802 254-8160	[42.8521667, -72.5588915]
+*Acorn Community	1259 Indian Creek Dr. Mineral, VA 23117	[37.8979413, -77.932689]
+!Bellingham Alternative Library	929 N. State St. Bellingham, WA 98225 360-312-4287	[48.7451418, -122.4821949]
+A Room of One's Own	315 W. Gorham St. Madison, WI 53703 608-257-7888	[43.074353, -89.39173149999999]
+*Big Hollow Food Coop	119 S. 1st St. Laramie, WY 82070 307-745-3586	[41.3123551, -105.5957926]
+Black & Green Infoshop	80 Ryan Street, West End, Brisbane, Australia 4101	[-27.4887457, 153.0041223]
+Biblioteca Anarchista Alberto Ghiraldo	Paraguay 2212, 2000 Rosario, Argentina	[-32.96220900000001, -60.64802]
+CONAMAQ	Calle Boqueron 1507, La Paz, Bolivia f	591-2248-3948	[-16.5027632, -68.1383809]
+*Casa TIAO	Yungay 1772 Valparaiso, Chile	[-33.0453082, -71.6182832]
+Centro Cultural El Averno	Jiron Quilca 238 Lima 1, Peru	[-12.0511466, -77.03721300000001]
+Ateneo Libertario Heber Nieto	Maldonado 1162, cp	11100, Montevideo, Uruguay	[-34.9096847, -56.1907218]
