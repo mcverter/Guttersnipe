@@ -3,22 +3,12 @@ import _ from "lodash";
 import {SERVER_URL} from "../../config";
 import {browserHistory} from 'react-router';
 
-function shareableSearchRequest() {
-  return {
-    type: types.SHAREABLES_SEARCH_REQUEST
-  };
-}
-
-export function searchShareables(params={}){
-  return dispatch => {
-    dispatch(shareableSearchRequest());
-    return fetch(`${SERVER_URL}/api/shareables/search`,
-      { method: 'POST', body: JSON.stringify(params) })
-      .then(response=>response.json())
-      .then(json=> {
-        dispatch(receiveAllShareables(json));
-        browserHistory.push('/shareables');
-      });
+export function fetchAllShareablesIfNeeded(forceFetch=false) {
+  return (dispatch, getState) => {
+    const state = getState();
+    if (forceFetch || ! state.shareables.items || state.shareables.items.length <= 0) {
+      return (dispatch(fetchAllShareables()));
+    }
   };
 }
 
@@ -37,32 +27,12 @@ function requestAllShareables() {
   };
 }
 
-function requestSingleShareable() {
-  return {
-    type: types.SHAREABLE_SINGLE_REQUEST
-  };
-}
-
-function receiveSingleShareable(json) {
-  return {
-    type: types.SHAREABLE_SINGLE_REQUEST_SUCCESS,
-    shareables: json
-  };
-}
 
 function receiveAllShareables(json) {
   return {
     type: types.SHAREABLES_ALL_REQUEST_SUCCESS,
     shareables: json
   };
-}
-
-function shouldFetchSingleShareable(state, id) {
-  if(!state.shareables || !state.shareables.items ||
-    _.find(state.shareables.items, {id: parseInt(id)})) {
-    return false;
-  }
-  return true;
 }
 
 function setCurrentShareable(id) {
@@ -72,13 +42,15 @@ function setCurrentShareable(id) {
   };
 }
 
-export function fetchAllShareablesIfNeeded(forceFetch=false) {
-  return (dispatch, getState) => {
-    if (forceFetch || !getState().shareables.items || getState().shareables.items.length <= 0) {
-      return (dispatch(fetchAllShareables()));
-    }
-  };
+
+function shouldFetchSingleShareable(state, id) {
+  if(!state.shareables || !state.shareables.items ||
+    _.find(state.shareables.items, {id: parseInt(id)})) {
+    return false;
+  }
+  return true;
 }
+
 
 export function fetchSingleShareableIfNeeded(id) {
   return (dispatch, getState) => {
@@ -125,5 +97,37 @@ function receiveShareableCategorization(json) {
   return {
     type: types.SHAREABLE_CATEGORIZATIONS_SUCCESS,
     categorizationMeta: json
+  };
+}
+
+
+function requestSingleShareable() {
+  return {
+    type: types.SHAREABLE_SINGLE_REQUEST
+  };
+}
+
+function receiveSingleShareable(json) {
+  return {
+    type: types.SHAREABLE_SINGLE_REQUEST_SUCCESS,
+    shareables: json
+  };
+}
+function shareableSearchRequest() {
+  return {
+    type: types.SHAREABLES_SEARCH_REQUEST
+  };
+}
+
+export function searchShareables(params={}){
+  return dispatch => {
+    dispatch(shareableSearchRequest());
+    return fetch(`${SERVER_URL}/api/shareables/search`,
+      { method: 'POST', body: JSON.stringify(params) })
+      .then(response=>response.json())
+      .then(json=> {
+        dispatch(receiveAllShareables(json));
+        browserHistory.push('/shareables');
+      });
   };
 }
