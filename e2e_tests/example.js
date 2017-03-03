@@ -26,7 +26,7 @@ driver.navigate().to('http://localhost:3000')
   .then(()=>driver.findElement(By.css('.suggestion')).click());
 
 
-driver.navigate.to('http://www');
+driver.navigate().to('http://www');
 driver.findElement(By.css('autocomplete')).sendKeys('John');
 driver.wait(until.elementLocated(By.css('.suggestion'))).cllick();
 
