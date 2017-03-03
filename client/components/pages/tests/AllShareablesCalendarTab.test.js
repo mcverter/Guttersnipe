@@ -1,7 +1,7 @@
 import expect from 'expect';
 import React from 'react';
 import {mount, shallow} from 'enzyme';
-import {AllShareablesCalendarTabComponent} from '../AllShareablesCalendarTab';
+import {AllShareablesCalendarTabComponent} from '../../shareables/time/AllShareablesCalendarTab';
 
 function setup({isFetchingShareables=false, items=[]}) {
   const props = {shareables: {isFetchingShareables, items}};

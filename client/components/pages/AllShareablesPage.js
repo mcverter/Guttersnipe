@@ -1,13 +1,14 @@
 import React, {PropTypes, Component} from "react";
 import { connect } from 'react-redux';
 import {Link} from "react-router";
+import Button from "react-bootstrap/lib/Button";
 
 import Tabs from "react-bootstrap/lib/Tabs";
 import Tab from "react-bootstrap/lib/Tab";
 import Panel from "react-bootstrap/lib/Panel"
-import AllShareablesListTab from './AllShareablesListTab';
-import AllShareablesMapTab from './AllShareablesMapTab';
-import AllShareablesCalendarTab from './AllShareablesCalendarTab';
+import AllShareablesListTab from '../shareables/thing/AllShareablesListTab';
+import AllShareablesMapTab from '../shareables/space/AllShareablesMapTab';
+import AllShareablesCalendarTab from '../shareables/time/AllShareablesCalendarTab';
 
 import {setBrowserLocation} from '../../actions/browserEnv/browserEnvActions';
 import {fetchAllShareablesIfNeeded} from '../../actions/shareables/shareableActions';
@@ -39,7 +40,10 @@ class AllShareablesPage extends Component {
   render() {
     return (
       <Panel className="all-shareables-pg">
-        <Link to="/shareables/search"> Search Results</Link>
+        <Panel>
+          <button><Link to="/shareables/search"> Search For Shareables</Link></button>
+          <button><Link to="/shareables/search"> Clear Search Filters</Link></button>
+        </Panel>
         <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
           <Tab eventKey={1} onEnter={this.unsetMapAsActiveView}  title="List"><AllShareablesListTab/></Tab>
           <Tab eventKey={2} onEnter={this.setMapAsActiveView} title="Map"><AllShareablesMapTab isActiveView={this.state.mapIsActiveView} /></Tab>

@@ -1,7 +1,7 @@
 import expect from 'expect';
 import React from 'react';
 import {mount, shallow} from 'enzyme';
-import {AllShareablesListTabComponent} from '../AllShareablesListTab';
+import {AllShareablesListTabComponent} from '../../shareables/thing/AllShareablesListTab';
 
 function setup({isFetchingShareables=false, items=[]}) {
   const props = {shareables: {isFetchingShareables, items}};
