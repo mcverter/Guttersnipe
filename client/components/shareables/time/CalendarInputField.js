@@ -60,7 +60,7 @@ class CalendarInputField extends Component {
         this.setState({ modalIsOpen: false });
     }
 
-    static customModalStyles() {
+     customModalStyles() {
         return {
             overlay: {
                 position: 'fixed',

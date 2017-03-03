@@ -25,7 +25,7 @@ class TimeLI extends Component {
         };
     }
 
-    static getDaysFromRule(days) {
+     getDaysFromRule(days) {
             return days.split(',').map(day => {
                 switch (day) {
                     case 'su': return "Su, ";
