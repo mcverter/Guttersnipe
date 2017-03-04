@@ -1,6 +1,7 @@
 import calendar as calfn
 import json
 from datetime import datetime
+import random
 
 from flask import request, jsonify, make_response
 from flask.ext.restful import Resource
@@ -108,6 +109,7 @@ class ShareableEndpoint(Resource):
 class ShareableListEndpoint(Resource):
   def get(self):
     query = Shareable.query.all()
+    random.shuffle(query)
     results = ShareableSerializer.dump(query, many=True).data
     return results
 
