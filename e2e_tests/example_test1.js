@@ -1,4 +1,6 @@
+/*
 module.exports = {
+
   'Demo test Google' : function (browser) {
     browser
       .url('http://www.google.com')
@@ -11,3 +13,4 @@ module.exports = {
       .end();
   }
 };
+*/

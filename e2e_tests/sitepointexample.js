@@ -1,4 +1,4 @@
-module.exports = {
+/*module.exports = {
   'login test': function (client) {
     client
       .url('http://localhost:3000')
@@ -31,7 +31,7 @@ const boo = {
     client.end();
   }
 }
-
+*/
 
     /*
 

@@ -5,7 +5,6 @@ module.exports = {
   'Test dev deployment' : function (browser) {
     browser
       .url('http://localhost:3000')
-      .assert.containsText('body', 'guttersnipe')
       .end();
   }
 };
