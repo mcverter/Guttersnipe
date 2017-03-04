@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import geocoder
 import re
+import time
 
 f = open('./slingshot_output.html', 'r')
 html_doc = f.read()
@@ -23,6 +24,16 @@ def geocode3(address):
   latlng = g.latlng
   return latlng
 
+def geocode4(address):
+  g = geocoder.mapbox(address)
+  latlng = g.latlng
+  return latlng
+
+def geocode5(address):
+  g = geocoder.mapquest(address)
+  latlng = g.latlng
+  return latlng
+
 def get_contact_list(listing):
   dt_list = listing.find_all('dt')
   dd_list = listing.find_all('dd')
@@ -31,6 +42,7 @@ def get_contact_list(listing):
     print(dt_list[0].text)
 
   for x in range (len(dd_list)):
+    time.sleep(1)
     headline = dt_list[x].text
     if re.match('Neverland', headline) is not None:
       pass
@@ -40,8 +52,10 @@ def get_contact_list(listing):
       return
     lat_lng = geocode1(contact_info)
     if not lat_lng or len(lat_lng) < 1:
+      time.sleep(10)
       lat_lng = geocode2(contact_info)
       if not lat_lng or len(lat_lng) < 1:
+        time.sleep(5)
         lat_lng = geocode3(contact_info)
 
 
