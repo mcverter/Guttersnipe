@@ -1,0 +1,508 @@
+
+ Assert
+ attributeContains
+ attributeEquals
+ containsText
+ cssClassPresent
+ cssClassNotPresent
+ cssProperty
+ elementPresent
+ elementNotPresent
+ hidden
+ title
+ urlContains
+ urlEquals
+ value
+ valueContains
+ visible
+ Commands
+ WebDriver Protocol
+ Expect
+
+
+ WebDriver Protocol
+ Expect
+
+ Nightwatch introduces in version 0.7 a new BDD-style interface for performing assertions on elements, defined on the expect namespace on the main Nightwatch instance. It is based on the Chai Expect assertion library and provides a greater level of flexibility and adds new capabilities over the classic assert interface.
+
+ It uses a chainable language to construct assertions given an element specified by a css/xpath selector. A simple example looks like the following:
+
+
+ this.demoTest = function (browser) {
+ // start with identifying the element
+ // and then assert the element is present
+ browser.expect.element('#main').to.be.present;
+
+ // or assert the element is visible
+ browser.expect.element('#main').to.be.visible;
+ };
+ Language Chains
+ The following are provided as chainable getters to improve the readability of your assertions. They do not provide testing capabilities and the order is not important.
+
+ to
+ be
+ been
+ is
+ that
+ which
+ and
+ has
+ have
+ with
+ at
+ does
+ of
+ .equal(value)/.contain(value)/.match(regex)
+ These methods will perform assertions on the specified target on the current element. The targets can be an attribute value, the element's inner text and a css property.
+
+
+ this.demoTest = function (browser) {
+ browser.expect.element('#main').text.to.equal('The Night Watch');
+
+ browser.expect.element('#main').text.to.contain('The Night Watch');
+
+ browser.expect.element('#main').to.have.css('display').which.equals('block');
+ };
+ .not
+ Negates any of assertions following in the chain.
+
+
+ this.demoTest = function (browser) {
+ browser.expect.element('#main').text.to.not.equal('The Night Watch');
+
+ browser.expect.element('#main').text.to.not.contain('The Night Watch');
+
+ browser.expect.element('#main').to.have.css('display').which.does.not.equal('block');
+ };
+ .before(ms)/.after(ms)
+ These methods perform the same thing which is essentially retrying the assertion for the given amount of time (in milliseconds). before or after can be chained to any assertion and thus adding retry capability.
+
+ You can change the polling interval by defining a waitForConditionPollInterval property (in milliseconds) as a global property in your nightwatch.json or in your external globals file. Similarly, a default timeout can be specified as a global waitForConditionTimeout property (in milliseconds).
+
+
+ this.demoTest = function (browser) {
+ browser.expect.element('#main').text.to.contain('The Night Watch').before(1000);
+
+ browser.expect.element('#main').text.to.not.contain('The Night Watch').after(500);
+ };
+ .a(type)
+ Checks if the type (i.e. tag name) of a specified element is of an expected value.
+
+ Parameters:
+
+ Name	Type	description
+ type	string	The expected type
+ message
+ Optional	string	Optional log message to display in the output. If missing, one is displayed by default.
+ Usage:
+
+
+ this.demoTest = function (browser) {
+ browser.expect.element('#q').to.be.an('input');
+ browser.expect.element('#q').to.be.an('input', 'Testing if #q is an input');
+ browser.expect.element('#w').to.be.a('span');
+ };
+ .attribute(name)
+ Checks if a given attribute of an element exists and optionally if it has the expected value.
+
+ Parameters:
+
+ Name	Type	description
+ attribute	string	The attribute name
+ message
+ Optional	string	Optional log message to display in the output. If missing, one is displayed by default.
+ Usage:
+
+
+ this.demoTest = function (browser) {
+ browser.expect.element('body').to.have.attribute('data-attr');
+ browser.expect.element('body').to.not.have.attribute('data-attr');
+ browser.expect.element('body').to.not.have.attribute('data-attr', 'Testing if body does not have data-attr');
+ browser.expect.element('body').to.have.attribute('data-attr').before(100);
+ browser.expect.element('body').to.have.attribute('data-attr')
+ .equals('some attribute');
+ browser.expect.element('body').to.have.attribute('data-attr')
+ .not.equals('other attribute');
+ browser.expect.element('body').to.have.attribute('data-attr')
+ .which.contains('something');
+ browser.expect.element('body').to.have.attribute('data-attr')
+ .which.matches(/^something\ else/);
+ };
+ .css(property)
+ Checks a given css property of an element exists and optionally if it has the expected value.
+
+ Parameters:
+
+ Name	Type	description
+ property	string	The css property name
+ message
+ Optional	string	Optional log message to display in the output. If missing, one is displayed by default.*
+ Usage:
+
+
+ this.demoTest = function (browser) {
+ browser.expect.element('#main').to.have.css('display');
+ browser.expect.element('#main').to.have.css('display', 'Testing for display');
+ browser.expect.element('#main').to.not.have.css('display');
+ browser.expect.element('#main').to.have.css('display').before(100);
+ browser.expect.element('#main').to.have.css('display').which.equals('block');
+ browser.expect.element('#main').to.have.css('display').which.contains('some value');
+ browser.expect.element('#main').to.have.css('display').which.matches(/some\ value/);
+ };
+ .enabled
+ Property that checks if an element is currently enabled.
+
+ Usage:
+
+
+ this.demoTest = function (browser) {
+ browser.expect.element('#weblogin').to.be.enabled;
+ browser.expect.element('#main').to.not.be.enabled;
+ browser.expect.element('#main').to.be.enabled.before(100);
+ };
+ .present
+ Property that checks if an element is present in the DOM.
+
+ Usage:
+
+
+ this.demoTest = function (browser) {
+ browser.expect.element('#main').to.be.present;
+ browser.expect.element('#main').to.not.be.present;
+ browser.expect.element('#main').to.be.present.before(100);
+ };
+ .selected
+ Property that checks if an OPTION element, or an INPUT element of type checkbox or radio button is currently selected.
+
+ Usage:
+
+
+ this.demoTest = function (browser) {
+ browser.expect.element('#main').to.be.selected;
+ browser.expect.element('#main').to.not.be.selected;
+ browser.expect.element('#main').to.be.selected.before(100);
+ };
+ .text
+ Property that retrieves the text contained by an element. Can be chained to check if contains/equals/matches the specified text or regex.
+
+ Usage:
+
+
+ this.demoTest = function (browser) {
+ browser.expect.element('#main').text.to.equal('The Night Watch');
+ browser.expect.element('#main').text.to.not.equal('The Night Watch');
+ browser.expect.element('#main').text.to.equal('The Night Watch').before(100);
+ browser.expect.element('#main').text.to.contain('The Night Watch');
+ browser.expect.element('#main').text.to.match(/The\ Night\ Watch/);
+ };
+ .value
+ Property that retrieves the value (i.e. the value attributed) of an element. Can be chained to check if contains/equals/matches the specified text or regex.
+
+ Usage:
+
+
+ this.demoTest = function (browser) {
+ browser.expect.element('#q').to.have.value.that.equals('search');
+ browser.expect.element('#q').to.have.value.not.equals('search');
+ browser.expect.element('#q').to.have.value.which.contains('search');
+ browser.expect.element('#q').to.have.value.which.matches(/search/);
+ };
+ .visible
+ Property that asserts the visibility of a specified element.
+
+ Usage:
+
+
+ this.demoTest = function (browser) {
+ browser.expect.element('#main').to.be.visible;
+ browser.expect.element('#main').to.not.be.visible;
+ browser.expect.element('#main').to.be.visible.before(100);
+ };
+ Assert
+
+ The classic assert/verify library is still available on the Nightwatch instance as two objects containing the same methods to perform assertions on elements:
+
+ .assert - when an assertion fails, the test ends, skipping all other assertions.
+ .verify - when an assertion fails, the test logs the failure and continues with other assertions.
+ This will end the test:
+ client.assert.visible('.non_existing');
+ But this will just log the failure and continue:
+ client.verify.visible(".non_existing");
+ Node.js Assert Module
+
+ Nightwatch.js extends Node.js assert module, so you can also use any of the available methods there in your tests.
+
+ Automatically retrying failed assertions
+
+ You can tell Nightwatch to automatically retry failed assertions until a given timeout is reached, before the test runner gives up and fails the test. This can be accomplished by setting the property retryAssertionTimeout (in milliseconds) in the globals file.
+
+ For example: retryAssertionTimeout = 2000
+
+ .attributeContains()
+ Checks if the given attribute of an element contains the expected value.
+
+ Parameters:
+
+ Name	Type	description
+ selector	string	The selector (CSS / Xpath) used to locate the element.
+ attribute	string	The attribute name
+ expected	string	The expected contained value of the attribute to check.
+ message
+ Optional	string	Optional log message to display in the output. If missing, one is displayed by default.
+ Usage:
+
+
+ this.demoTest = function (browser) {
+
+ browser.assert.attributeContains('#someElement', 'href', 'google.com');
+
+ };
+ .attributeEquals()
+ Checks if the given attribute of an element has the expected value.
+
+ Parameters:
+
+ Name	Type	description
+ cssSelector	string	The CSS selector used to locate the element.
+ attribute	string	The attribute name
+ expected	string	The expected value of the attribute to check.
+ msg
+ Optional	string	Optional log message to display in the output. If missing, one is displayed by default.
+ Usage:
+
+
+ this.demoTest = function (browser) {
+
+ browser.assert.attributeEquals("body", "data-attr", "some value");
+
+ };
+ .containsText()
+ Checks if the given element contains the specified text.
+
+ Parameters:
+
+ Name	Type	description
+ cssSelector	string	The CSS selector used to locate the element.
+ expectedText	string	The text to look for.
+ msg
+ Optional	string	Optional log message to display in the output. If missing, one is displayed by default.
+ Usage:
+
+
+ this.demoTest = function (browser) {
+
+ browser.assert.containsText("#main", "The Night Watch");
+
+ };
+ .cssClassPresent()
+ Checks if the given element has the specified CSS class.
+
+ Parameters:
+
+ Name	Type	description
+ cssSelector	string	The CSS selector used to locate the element.
+ className	string	The CSS class to look for.
+ msg
+ Optional	string	Optional log message to display in the output. If missing, one is displayed by default.
+ Usage:
+
+
+ this.demoTest = function (browser) {
+
+ browser.assert.cssClassPresent("#main", "container");
+
+ };
+ .cssClassNotPresent()
+ Checks if the given element does not have the specified CSS class.
+
+ Parameters:
+
+ Name	Type	description
+ cssSelector	string	The CSS selector used to locate the element.
+ className	string	The CSS class to look for.
+ msg
+ Optional	string	Optional log message to display in the output. If missing, one is displayed by default.
+ Usage:
+
+
+ this.demoTest = function (browser) {
+
+ browser.assert.cssClassNotPresent("#main", "container");
+
+ };
+ .cssProperty()
+ Checks if the specified css property of a given element has the expected value.
+
+ Parameters:
+
+ Name	Type	description
+ cssSelector	string	The CSS selector used to locate the element.
+ cssProperty	string	The CSS property.
+ expected	string|number	The expected value of the css property to check.
+ msg
+ Optional	string	Optional log message to display in the output. If missing, one is displayed by default.
+ Usage:
+
+
+ this.demoTest = function (browser) {
+
+ browser.assert.cssProperty("#main", "display", "block");
+
+ };
+ .elementPresent()
+ Checks if the given element exists in the DOM.
+
+ Parameters:
+
+ Name	Type	description
+ cssSelector	string	The CSS selector used to locate the element.
+ msg
+ Optional	string	Optional log message to display in the output. If missing, one is displayed by default.
+ Usage:
+
+
+ this.demoTest = function (browser) {
+
+ browser.assert.elementPresent("#main");
+
+ };
+ .elementNotPresent()
+ Checks if the given element does not exist in the DOM.
+
+ Parameters:
+
+ Name	Type	description
+ cssSelector	string	The CSS selector used to locate the element.
+ msg
+ Optional	string	Optional log message to display in the output. If missing, one is displayed by default.
+ Usage:
+
+
+ this.demoTest = function (browser) {
+
+ browser.assert.elementNotPresent(".should_not_exist");
+
+ };
+ .hidden()
+ Checks if the given element is not visible on the page.
+
+ Parameters:
+
+ Name	Type	description
+ cssSelector	string	The CSS selector used to locate the element.
+ msg
+ Optional	string	Optional log message to display in the output. If missing, one is displayed by default.
+ Usage:
+
+
+ this.demoTest = function (browser) {
+
+ browser.assert.hidden(".should_not_be_visible");
+
+ };
+ .title()
+ Checks if the page title equals the given value.
+
+ Parameters:
+
+ Name	Type	description
+ expected	string	The expected page title.
+ msg
+ Optional	string	Optional log message to display in the output. If missing, one is displayed by default.
+ Usage:
+
+
+ this.demoTest = function (browser) {
+
+ browser.assert.title("Nightwatch.js");
+
+ };
+ .urlContains()
+ Checks if the current URL contains the given value.
+
+ Parameters:
+
+ Name	Type	description
+ expectedText	string	The value expected to exist within the current URL.
+ msg
+ Optional	string	Optional log message to display in the output. If missing, one is displayed by default.
+ Usage:
+
+
+ this.demoTest = function (browser) {
+
+ browser.assert.urlContains('google');
+
+ };
+ .urlEquals()
+ Checks if the current url equals the given value.
+
+ Parameters:
+
+ Name	Type	description
+ expected	string	The expected url.
+ msg
+ Optional	string	Optional log message to display in the output. If missing, one is displayed by default.
+ Usage:
+
+
+ this.demoTest = function (browser) {
+
+ browser.assert.urlEquals('http://www.google.com');
+
+ };
+ .value()
+ Checks if the given form element's value equals the expected value.
+
+ Parameters:
+
+ Name	Type	description
+ cssSelector	string	The CSS selector used to locate the element.
+ expectedText	string	The expected text.
+ msg
+ Optional	string	Optional log message to display in the output. If missing, one is displayed by default.
+ Usage:
+
+
+ this.demoTest = function (browser) {
+
+ browser.assert.value("form.login input[type=text]", "username");
+
+ };
+ .valueContains()
+ Checks if the given form element's value contains the expected value.
+
+ Parameters:
+
+ Name	Type	description
+ cssSelector	string	The CSS selector used to locate the element.
+ expectedText	string	The expected text.
+ msg
+ Optional	string	Optional log message to display in the output. If missing, one is displayed by default.
+ Usage:
+
+
+ this.demoTest = function (browser) {
+
+ browser.assert.valueContains("form.login input[type=text]", "username");
+
+ };
+ .visible()
+ Checks if the given element is visible on the page.
+
+ Parameters:
+
+ Name	Type	description
+ cssSelector	string	The CSS selector used to locate the element.
+ msg
+ Optional	string	Optional log message to display in the output. If missing, one is displayed by default.
+ Usage:
+
+
+ this.demoTest = function (browser) {
+
+ browser.assert.visible(".should_be_visible");
+
+ };
+
+
