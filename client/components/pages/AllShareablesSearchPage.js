@@ -19,8 +19,8 @@ class AllShareablesSearchPage extends Component {
   handleFormSubmit(values) {
     const data = {
       date_input: values.time_input,
-      longitude: values.longitude,
-      latitude: values.latitude,
+      longitude: values.space_map.longitude,
+      latitude: values.space_map.latitude,
       distance: values.space_radius,
       type_name: values.thing_type,
       subtype_list: values.thing_subtypes
@@ -31,7 +31,7 @@ class AllShareablesSearchPage extends Component {
   render() {
     const {handleSubmit} = this.props;
     return (
-      <Panel className="shareable-search-pg">
+      <Panel id="shareable-search-pg">
     <form onSubmit={handleSubmit(this.handleFormSubmit)}>
         <TimeSearchPanel />
         <SpaceSearchPanel />
@@ -74,10 +74,13 @@ AllShareablesSearchPage.propTypes = {
   handleSubmit: PropTypes.func
 };
 
+function validate(vals) {
+  console.log('vals', vals);
+}
 export default connect(mapStateToProps, mapDispatchToProps)(
   reduxForm({
     form: 'shareableSearch',
     destroyOnUnmount: false,        // <------ preserve form data
     forceUnregisterOnUnmount: true,  // <------ unregister fields on unmount
-//    validate
+   validate: validate
   })(AllShareablesSearchPage));
