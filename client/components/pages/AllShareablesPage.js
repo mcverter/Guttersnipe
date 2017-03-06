@@ -11,7 +11,7 @@ import AllShareablesMapTab from '../shareables/space/AllShareablesMapTab';
 import AllShareablesCalendarTab from '../shareables/time/AllShareablesCalendarTab';
 
 import {setBrowserLocation} from '../../actions/browserEnv/browserEnvActions';
-import {fetchAllShareablesIfNeeded} from '../../actions/shareables/shareableActions';
+import {fetchAllShareablesIfNeeded, searchShareables} from '../../actions/shareables/shareableActions';
 
 class AllShareablesPage extends Component {
   constructor(props) {
@@ -19,6 +19,7 @@ class AllShareablesPage extends Component {
 
     this.setMapAsActiveView = this.setMapAsActiveView.bind(this);
     this.unsetMapAsActiveView = this.unsetMapAsActiveView.bind(this);
+    this.resetSearchResults = this.resetSearchResults.bind(this);
 
     this.state = ({
       mapIsActiveView: false
@@ -27,6 +28,11 @@ class AllShareablesPage extends Component {
 
   componentWillMount() {
     this.props.fetchAllShareablesIfNeeded();
+  }
+
+  resetSearchResults() {
+        this.props.searchShareables();
+
   }
 
   setMapAsActiveView() {
@@ -42,7 +48,7 @@ class AllShareablesPage extends Component {
       <Panel id="all-shareables-pg">
         <Panel>
           <button><Link to="/shareables/search"> Search For Shareables</Link></button>
-          <button><Link to="/shareables/search"> Clear Search Filters</Link></button>
+          <button onClick={this.resetSearchResults}> Clear Search Filters</button>
         </Panel>
         <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
           <Tab eventKey={1} onEnter={this.unsetMapAsActiveView}  title="List"><AllShareablesListTab/></Tab>
@@ -60,6 +66,10 @@ const mapDispatchToProps = (dispatch) => {
     fetchAllShareablesIfNeeded: () => {
       dispatch(fetchAllShareablesIfNeeded());
     },
+    searchShareables: () => {
+      dispatch(searchShareables())
+    },
+
     setBrowserLocation: () => {
       dispatch(setBrowserLocation());
     }
