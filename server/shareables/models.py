@@ -168,7 +168,7 @@ thing_subtype_association = db.Table(
 class Space(db.Model):
   __tablename__ = 'space'
   id = db.Column(db.Integer, primary_key=True)
-  position = db.Column (Geometry('POINT', srid=7483))
+  position = db.Column (Geometry('POINT', srid=4326))
   canonical_address = db.Column(db.Text, nullable=False)
   alternate_names = db.Column(ARRAY(db.Text))
   notes = db.Column(db.Text)

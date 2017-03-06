@@ -6,7 +6,7 @@ import random
 from flask import request, jsonify, make_response
 from flask.ext.restful import Resource
 from marshmallow import ValidationError
-from sqlalchemy import func
+from sqlalchemy import func, cast
 from sqlalchemy.exc import SQLAlchemyError
 
 from server import db, api
@@ -43,8 +43,10 @@ class ShareableSearchEndpoint(Resource):
       return query.join(Thing).join(Thing.tag_relation).filter(Tag.name.in_(tag_list))
 
     def apply_space_filter(query, longitude, latitude, distance):
-      return query.join(Space).filter(func.ST_DWithin((func.ST_PointFromText('POINT(' + longitude + ' ' + latitude + ')', 7483)), Space.position, distance))
-
+      return query.join(Space).filter(
+        func.ST_Distance_Sphere(
+          func.ST_PointFromText('POINT(' + '%.8f' % longitude + ' ' +
+                                '%.8f' % latitude + ')', 4326), Space.position) < distance)
     def apply_time_filter(query, date_input):
       def apply_single_event_filter(query, date_input):
         return query.join(Time).join(Schedule).join(Event).filter(Event.recurrence_rule_id is None and date_input <= Event.dt_end and date_input >= Event.dt_start)

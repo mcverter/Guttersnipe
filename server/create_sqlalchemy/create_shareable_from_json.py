@@ -5,6 +5,7 @@ from server.shareables.models import Shareable, Thing, Space, \
 from datetime import datetime
 from server import db
 from sqlalchemy.sql import operators, func
+from geoalchemy2 import Geometry
 
 def create_many_shareables_from_json_string(json_string):
   py_array = json.loads(json_string)
@@ -157,13 +158,13 @@ def create_space_from_json_object(space_dict):
     Space.alternate_names == alternate_names).first()
   if space_entity is None:
     my_space = Space(
-      position='SRID=7483;POINT(' + longitude + " " + latitude + ")",
+      position='SRID=4326;POINT(' + longitude + " " + latitude + ")",
       canonical_address=canonical_address,
       alternate_names=alternate_names,
       notes=space_notes)
     db.session.add(my_space)
     space_entity = db.session.query(Space).filter(
-      func.ST_Equals(Space.position, 'SRID=7483;POINT(' + longitude + " " + latitude + ")"),
+      func.ST_Equals(Space.position, 'SRID=4326;POINT(' + longitude + " " + latitude + ")"),
       Space.canonical_address == canonical_address,
       Space.alternate_names == alternate_names).first()
   return space_entity
@@ -383,18 +384,18 @@ def create_shareable_from_json_object(py_dict):
     space_notes = space.get("notes")
 
     space_entity = db.session.query(Space).filter(
-        func.ST_Equals(Space.position, 'SRID=7483;POINT(' + longitude + " " + latitude + ")",  srid=7483),
+        func.ST_Equals(Space.position, 'SRID=4326;POINT(' + longitude + " " + latitude + ")",  srid=4326),
         Space.canonical_address == canonical_address,
         Space.alternate_names == alternate_names).first()
     if space_entity is None:
         my_space = Space(
-            position='SRID=7483;POINT(' + longitude + " " + latitude + ")",
+            position='SRID=4326;POINT(' + longitude + " " + latitude + ")",
             canonical_address=canonical_address,
             alternate_names=alternate_names,
             notes=space_notes)
         db.session.add(my_space)
         space_entity = db.session.query(Space).filter(
-            func.ST_Equals(Space.position, 'SRID=7483;POINT(' + longitude + " " + latitude + ")"),
+            func.ST_Equals(Space.position, 'SRID=4326;POINT(' + longitude + " " + latitude + ")"),
             Space.canonical_address == canonical_address,
             Space.alternate_names == alternate_names).first()
 

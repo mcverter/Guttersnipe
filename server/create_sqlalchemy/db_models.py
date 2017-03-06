@@ -83,14 +83,14 @@ class DbTime(DBObject)
 class DbSpace(DBObject):
   def __init__(self):
     my_space = Space(
-      position='SRID=7483;POINT(' + longitude + " " + latitude + ")",
+      position='srid=4326;POINT(' + longitude + " " + latitude + ")",
       canonical_address=canonical_address,
       alternate_names=alternate_names,
       notes=space_notes)
 
   def id_if_exists(self):
     space_entity = db.session.query(Space).filter(
-      func.ST_Equals(Space.position, 'SRID=7483;POINT(' + longitude + " " + latitude + ")"),
+      func.ST_Equals(Space.position, 'srid=4326;POINT(' + longitude + " " + latitude + ")"),
       Space.canonical_address == canonical_address,
       Space.alternate_names == alternate_names).first()
 
