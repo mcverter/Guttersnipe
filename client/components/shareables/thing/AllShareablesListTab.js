@@ -6,7 +6,6 @@ import Table from 'react-bootstrap/lib/Table';
 
 export const AllShareablesListTabComponent = (props) => {
   const { shareables: {isFetchingShareables, items}} = props;
-  debugger;
 
   if (isFetchingShareables || !items || items.length < 1) {
     return <div>Loading...</div>;

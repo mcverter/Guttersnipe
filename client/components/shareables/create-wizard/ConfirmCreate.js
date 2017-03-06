@@ -48,7 +48,6 @@ class ShareableCreateEnd extends Component {
   }
 
   toggleThingEdit(){
-    debugger;
     this.setState({
       thingEdit: !this.state.thingEdit
     })
