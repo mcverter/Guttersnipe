@@ -38,7 +38,14 @@ const confirm_7 = {
   elements: {}
 };
 
-
+module.exports = {
+  'Create Page is navigable': (client) => {
+    client
+      .url('http://localhost:3000/shareables/create')
+      .find('.')
+  }
+}
+/*
 module.exports = {
     url: () => {return this.api.launch_url + '/shareables/create';},
     steps: {
@@ -52,3 +59,4 @@ module.exports = {
     }
   };
 
+*/

@@ -9,9 +9,6 @@ module.exports = {
       .assert.elementPresent('.strummer-quote')
       .assert.elementPresent('.piaf-img')
       .assert.elementPresent('.footer')
-
-
-
       .assert.elementPresent('.kropotkin-quote-outer')
       .end();
   }
