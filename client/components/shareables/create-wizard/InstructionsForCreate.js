@@ -3,8 +3,8 @@ import Panel from 'react-bootstrap/lib/Panel';
 import Button from 'react-bootstrap/lib/Panel';
 
 const InstructionsForCreate = (props) => (
-  <Panel className="instructions-for-create-panel">
-  <div id="instruction-summary" className="jumbotron instruction-summary">
+  <Panel id="instructions-for-create-panel">
+  <div id="instruction-summary" className="jumbotron">
     Resource = Thing + Place + Time
     <div className="jumbotron">
       Example:  Free meal in Prospect Park every Wednesday from 4PM to 9PM

@@ -9,7 +9,7 @@ import CommentList from './comment/CommentList';
 const ShareableFull = ( { shareable:{headline, summary,
   number_ratings, total_rating, thing, space, time, notes, comments} } ) => {
   return (
-    <div className="shareable-full">
+    <div id="shareable-full">
       <div className="jumbotron"> {headline} </div>
       {summary && <div><h3>Summary</h3>{summary} </div>}
       {number_ratings ? <div><h3>Rating</h3> {total_rating/number_ratings} </div>:''}

@@ -61,7 +61,7 @@ class ShareableCreateEnd extends Component {
       thing, space, time, notes, comments
     } = this.props.shareable;
     return (
-      <Panel className="shareable-create-end">
+      <Panel id="shareable-create-end">
         <form onSubmit={this.props.handleSubmit}>
           <div className="jumbotron"> Headline: {headline} </div>
 
@@ -98,7 +98,7 @@ class ShareableCreateEnd extends Component {
           {notes && <div><h3>Notes:</h3> {notes} </div>}
           <div className="wizard-navigation-buttons">
             <div>
-              <Button type="button" className="create-shareable-submit-btn" bsSize="large" bsStyle="primary" onClick={this.props.handleSubmit}>Create New Shareable</Button>
+              <Button type="button" id="create-shareable-submit-btn" bsSize="large" bsStyle="primary" onClick={this.props.handleSubmit}>Create New Shareable</Button>
             </div>
             <div>
               <Button type="button" className="previous" bsSize="Cancel" bsStyle="danger" onClick={this.redirectToList}>Cancel</Button>

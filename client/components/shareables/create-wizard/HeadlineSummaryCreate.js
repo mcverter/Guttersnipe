@@ -11,10 +11,10 @@ import ReduxFormTextArea from '../../reduxFormInputs/ReduxFormTextArea';
 
 
 const ShareableCreateStart = (props) => (
-  <Panel className="shareable-create-start-panel">
-  <form className="shareable-create-start" >
-    <Field name="headline" type="text" component={ReduxFormHTMLInput} validate={required} label="Headline"/>
-    <Field name="summary" type="textarea" component={ReduxFormTextArea}  validate={required} label="Summary"/>
+  <Panel id="shareable-create-start-panel">
+  <form id="shareable-create-start" >
+    <Field id="headline-input" name="headline" type="text" component={ReduxFormHTMLInput} validate={required} label="Headline"/>
+    <Field id="summary-input" name="summary" type="textarea" component={ReduxFormTextArea}  validate={required} label="Summary"/>
     <div className="wizard-navigation-buttons">
       <Button type="button" onClick={props.nextPage} className="next">Next</Button>
     </div>

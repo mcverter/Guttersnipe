@@ -19,7 +19,7 @@ class EventCalendarNavigable extends Component {
 
   render() {
     return (
-      <EventCalendarView className="event-calendar-view"
+      <EventCalendarView
         events={calculateShareableScheduleArray(
           this.props.arrayOfCalendarEventsWithHeadlines, this.state.viewMonth)}
         handleSelectSlot={this.props.handleSelectSlot}

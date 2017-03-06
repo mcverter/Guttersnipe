@@ -38,7 +38,7 @@ export default class MapWithGeocoder extends Component {
   render() {
     const address = this.props.formInput.value.canonicalAddress;
     return (
-      <Panel className="space-create-panel">
+      <Panel id="space-create-panel">
         <div ref={(el) => { this.el = el }}
              className="map-with-geocoder-input" />
         {address &&

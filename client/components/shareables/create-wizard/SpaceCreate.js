@@ -15,7 +15,7 @@ import SpaceEdit from '../space/SpaceEdit';
 let SpaceCreate = (props) => {
   return (
     <Panel className="space-create-panel">
-      <div className="space-create">
+      <div id="space-create">
         <SpaceEdit {...props} />
         <div className="wizard-navigation-buttons">
           <Button type="button" className="previous" onClick={props.previousPage}>Previous</Button>

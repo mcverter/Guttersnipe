@@ -3,7 +3,7 @@ import Footer from './common/Footer';
 import Header from './common/Header';
 
 const App = (props) => (
-  <div className="app container-fluid">
+  <div id="app" className="container-fluid">
     <Header  />
     {props.children}
     <Footer />

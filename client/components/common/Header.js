@@ -14,7 +14,7 @@ export const Header = ({authenticated}) => {
   const renderAuthLinks = () => {
     if (authenticated) {
       return (
-        <LinkContainer to="/auth/signout" className="header navbar-brand ">
+        <LinkContainer to="/auth/signout" id="header" className="header navbar-brand ">
           <NavItem eventKey={3} title="Sign Out">Sign Out</NavItem>
         </LinkContainer>
       );

@@ -39,7 +39,7 @@ class AllShareablesPage extends Component {
 
   render() {
     return (
-      <Panel className="all-shareables-pg">
+      <Panel id="all-shareables-pg">
         <Panel>
           <button><Link to="/shareables/search"> Search For Shareables</Link></button>
           <button><Link to="/shareables/search"> Clear Search Filters</Link></button>

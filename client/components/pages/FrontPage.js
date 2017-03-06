@@ -8,15 +8,15 @@ import Panel from 'react-bootstrap/lib/Panel';
 const FrontPage = (props) => {
   let piaf_image;
   if (__DEV__) {
-    piaf_image = <img src={imgsrc} className="piaf-img"/>
+    piaf_image = <img src={imgsrc} id="piaf-img"/>
   } else {
     const piafSrc = SERVER_URL + '/sta' + 'tic/img/piafGutterCropped.png'
-    piaf_image = <img src={piafSrc} className="piaf-img"/>
+    piaf_image = <img src={piafSrc} clasidsName="piaf-img"/>
   }
 
   return (
-    <section className="front-pg">
-      <Panel className="front-page-panel text-center">
+    <section id="front-pg">
+      <Panel id="front-page-panel"  className="text-center">
         <ul className="nav nav-pills nav-stacked">
           <li><Link to="/shareables/create" className="btn btn-lg"> Create Shareable </Link></li>
           <li><Link to="/shareables" className="btn btn-lg"> List Shareables </Link></li>

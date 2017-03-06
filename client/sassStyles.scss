@@ -23,7 +23,7 @@ $color-complement-2: #D39791;
 $color-complement-3: #4F3734;
 $color-complement-4: #49201C;
 $pop-color: #D83636;
-.app {
+#app {
   background-color: $color-primary-3;
   position: absolute;
   top: 0;
@@ -59,7 +59,7 @@ ul.navbar-nav li a {
   font-size: 250%;
   margin: 10px;
 }
-.footer {
+#footer {
   background-color: $color-secondary-2-4;
   color: white;
   font-weight: bolder;
@@ -76,29 +76,29 @@ ul.navbar-nav li a {
   }
 }
 
-.negate-button {
+#negate-button {
   background-color: red;
   color: white;
   font-weight: 900;
 }
 
 
-.consent-button {
+#consent-button {
   background-color: green;
   color: white;
   font-weight: 900;
 }
 
 /* Panel */
-.consent-for-create-panel{
+#consent-for-create-panel{
   background-color: $color-secondary-1-3;
-  .agreement-div {
+  #agreement-div {
     background-color: $color-secondary-1-1;
   }
 }
-.instructions-for-create-panel {
+#instructions-for-create-panel {
   background-color: $color-secondary-2-3;
-  .instruction-summary {
+  #instruction-summary {
     background-color: $color-secondary-2-2;
     .jumbotron {
       background-color: $color-secondary-2-1;
@@ -106,8 +106,8 @@ ul.navbar-nav li a {
     }
   }
 }
-.space-search-panel {}
-.event-calendar-view {
+#space-search-panel {}
+#event-calendar-view {
   margin: 0 auto;
   display: table;
 }
@@ -119,12 +119,12 @@ ul.navbar-nav li a {
   margin: auto;
 }
 
-.shareable-create-start-panel {
+#shareable-create-start-panel {
   @extend .create-wizard-panel;
   background-color: $color-secondary-2-2;
 }
 
-.time-create-panel {
+#time-create-panel {
   @extend .create-wizard-panel;
   background-color: $color-secondary-1-1;
 }
@@ -138,10 +138,10 @@ ul.navbar-nav li a {
   background-color: $color-secondary-2-2;
 }
 
-.front-pg {
+#front-pg {
   background-color: $color-primary-3;
 }
-.front-page-panel {
+#front-page-panel {
   background-color: $color-secondary-1-2;
   ul {
     background-color: $color-secondary-1-1;
@@ -155,16 +155,16 @@ ul.navbar-nav li a {
 /* Pages */
 .gutterPage {}
 .front-pg {}
-.welcome-pg {}
-.all-shareables-pg {
+#welcome-pg {}
+#all-shareables-pg {
   background-color: $color-secondary-1-1;
 }
-.shareable-search-pg {
+#shareable-search-pg {
   background-color: $color-secondary-1-1;
 }
-.shareable-create-wizard-pg {}
-.shareable-edit-page {}
-.shareable-full-page {}
+#shareable-create-wizard-pg {}
+#shareable-edit-page {}
+#shareable-full-page {}
 
 /* Buttons */
 
@@ -172,15 +172,15 @@ ul.navbar-nav li a {
 .alert alert-danger {}
 
 /* Tabs */
-.all-shareables-calendar-tab {}
-.all-shareables-list-tab {}
-.all-shareables-map-tab {}
+#all-shareables-calendar-tab {}
+#all-shareables-list-tab {}
+#all-shareables-map-tab {}
 
 /*  Forms */
 .gutterForm {}
-.signup-form {}
-.signout {}
-.signup-form {}
+#signup-form {}
+#signout {}
+#signup-form {}
 .shareable-create-wizard-form {}
 .thing-create-form {}
 .time-create-form {}
@@ -195,29 +195,29 @@ ul.navbar-nav li a {
 .form-html-input {}
 
 /* Components */
-.shareable-create-start {}
+#shareable-create-start {}
 .map-with-geocoder-input {
   margin: auto;
 }
 
-.shareable-create-end {
+#shareable-create-end {
   background-color: $color-primary-2;
 }
 
 .leaflet-pelias-result {
   text-align: left;
 }
-.space-create {}
-.space-full {
+#space-create {}
+#space-full {
   height: 25%;
   background-color: $color-secondary-2-1;
 }
-.kropotkin-quote-outer {
+#kropotkin-quote-outer {
   border: 20px;
   margin: 20px;
   padding: 20px;
   background-color: $color-primary-2;
-  .kropotkin-quote-inner {
+  #kropotkin-quote-inner {
     background-color: $color-primary-1;
     color: $color-complement-4;
     width: 85%;
@@ -230,7 +230,7 @@ ul.navbar-nav li a {
     margin-top: 20px;
     vertical-align: middle;
   }
-  .kropotkin-source {
+  #kropotkin-source {
     text-align: center;
     color: white;
     border: 10px;
@@ -264,11 +264,11 @@ ul.navbar-nav li a {
   background-color: $color-primary-4;
   text-align: center;
 }
-.create-shareable-submit-btn{
+#create-shareable-submit-btn{
   border: 20px;
   margin: 20px;
 }
-.shareable-full {}
+#shareable-full {}
 .thing-full {
   height: 25%;
   background-color: $color-secondary-1-1;
@@ -326,7 +326,7 @@ ul.navbar-nav li a {
 .modal-title .modal-body {}
 .modal-footer {}
 
-.piaf-img {
+#piaf-img {
   display: block;
   margin-left: auto;
   margin-right: auto

@@ -6,7 +6,7 @@ import Nav from 'react-bootstrap/lib/Nav';
 import NavItem from 'react-bootstrap/lib/NavItem';
 
 const Footer = (props) => (
-  <Navbar className="footer gs-navbar">
+  <Navbar id="footer" className="footer gs-navbar">
     <Nav  role="navigation">
       <LinkContainer to="/docs/faq" className="navbar-brand ">
         <NavItem eventKey="1" title="FAQ">FAQ</NavItem>

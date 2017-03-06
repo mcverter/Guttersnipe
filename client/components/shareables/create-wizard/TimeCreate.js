@@ -13,7 +13,7 @@ import TimeEdit from '../time/TimeEdit';
 class TimeCreate extends Component {
   render() {
     return(
-      <Panel className="time-create-panel">
+      <Panel id="time-create-panel">
         <TimeEdit {...this.props} />
         <div className="wizard-navigation-buttons">
           <Button type="button" className="previous" onClick={this.props.previousPage}>Previous</Button>

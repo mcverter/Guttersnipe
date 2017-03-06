@@ -9,7 +9,7 @@ const SpaceFull = ({space}) =>  {
       const {latitude, longitude} = JSON.parse(space.position);
     const position = [latitude, longitude];
         return (
-        <Panel className="space-full" header="Space">
+        <Panel id="space-full" header="Space">
           <h2> Map </h2>
             <Map center={position} zoom={13}>
                 <TileLayer

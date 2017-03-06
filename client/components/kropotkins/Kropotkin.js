@@ -14,11 +14,11 @@ export class KropotkinQuote extends Component {
       return <h1 />;
     }
     return (
-      <div className="kropotkin-quote-outer">
-        <div className="kropotkin-quote-inner">
+      <div id="kropotkin-quote-outer">
+        <div id="kropotkin-quote-inner">
           <h2><span>{paragraph}</span></h2>
         </div>
-        <div className="kropotkin-source">
+        <div id="kropotkin-source">
           <h3><a href="http://www.gutenberg.org/files/23428/23428-h/23428-h.htm">The Conquest of Bread</a> by <a href="http://en.wikipedia.org/wiki/Peter_Kropotkin">Pyotr Alexeivitch Kropotkin</a></h3>
         </div>
         <div className="text-center">

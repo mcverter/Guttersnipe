@@ -6,13 +6,13 @@ import Button from 'react-bootstrap/lib/Panel';
 
 
 const ConsentForCreate = (props) => (
-  <Panel className="consent-for-create-panel">
-    <div className=" agreement-div ">
+  <Panel id="consent-for-create-panel">
+    <div id="agreement-div">
       Through your usage of Guttersnipe, you agree to not put yourself or any other person in legal jeopardy.
       <div className="text-center">
        <div className="wizard-navigation-buttons">
-         <Button className="negate-button">Negate</Button>
-         <Button className="consent-button" onClick={props.nextPage}>Consent </Button>
+         <Button id="negate-button">Negate</Button>
+         <Button id="consent-button" onClick={props.nextPage}>Consent </Button>
        </div>
       </div>
       <div className="text-center">

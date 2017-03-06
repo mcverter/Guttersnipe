@@ -9,7 +9,7 @@ const EventCalendarView = ({handleSelectSlot, handleNavigation,
 
 
   return (
-    <div className="event-calendar-view">
+    <div id="event-calendar-view">
       <BigCalendar
         className="calendar"
         timeslots={4}
