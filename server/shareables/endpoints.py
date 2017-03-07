@@ -107,11 +107,17 @@ class ShareableEndpoint(Resource):
       resp.status_code = 401
       return resp
 
+class ShareableTotalCount(Resource):
+  def get(self):
+    return Shareable.query.count()
+
 
 class ShareableListEndpoint(Resource):
   def get(self):
-    query = Shareable.query.all()
-    random.shuffle(query)
+    page_num = request.args.get('page_num')
+    query = Shareable.query.paginate(int(page_num), 10, False).items
+    #    query = Shareable.query.all()
+    # random.shuffle(query)
     results = ShareableSerializer.dump(query, many=True).data
     return results
 

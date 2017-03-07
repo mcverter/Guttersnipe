@@ -3,19 +3,19 @@ import _ from "lodash";
 import {SERVER_URL} from "../../config";
 import {browserHistory} from 'react-router';
 
-export function fetchAllShareablesIfNeeded(forceFetch=false) {
+export function fetchAllShareablesIfNeeded(forceFetch=false, pageNumber=1) {
   return (dispatch, getState) => {
     const state = getState();
     if (forceFetch || ! state.shareables.items || state.shareables.items.length <= 0) {
-      return (dispatch(fetchAllShareables(dispatch)));
+      return (dispatch(fetchAllShareables(dispatch, pageNumber)));
     }
   };
 }
 
-function fetchAllShareables(dispatch) {
+export function fetchAllShareables(dispatch, pageNumber) {
  return () => {
     dispatch({type: types.SHAREABLES_ALL_REQUEST});
-    return fetch(`${SERVER_URL}/api/shareables`)
+    return fetch(`${SERVER_URL}/api/shareables?page_num=${pageNumber}`)
       .then(response => response.json())
       .then(json => dispatch(receiveAllShareables(json)));
   };
