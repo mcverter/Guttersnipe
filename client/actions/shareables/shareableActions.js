@@ -133,3 +133,18 @@ export function searchShareables(params={}){
       });
   };
 }
+
+export function searchShareablesWithParametersAndPagination(
+  forceFetch=false, pageNumber=1, params={}){
+  return dispatch => {
+    dispatch(shareableSearchRequest());
+    dispatch(saveSearchParams(params));
+    return fetch(`${SERVER_URL}/api/shareables/search`,
+      { method: 'POST', body: JSON.stringify(params) })
+      .then(response=>response.json())
+      .then(json=> {
+        dispatch(receiveAllShareables(json));
+        browserHistory.push('/shareables');
+      });
+  };
+}
