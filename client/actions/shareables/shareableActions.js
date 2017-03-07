@@ -113,9 +113,17 @@ function shareableSearchRequest() {
   };
 }
 
+function saveSearchParams(searchParams) {
+  return {
+    type: types.SAVE_SEARCH_PARAMS,
+    searchParams: searchParams
+  }
+}
+
 export function searchShareables(params={}){
   return dispatch => {
     dispatch(shareableSearchRequest());
+    dispatch(saveSearchParams(params));
     return fetch(`${SERVER_URL}/api/shareables/search`,
       { method: 'POST', body: JSON.stringify(params) })
       .then(response=>response.json())

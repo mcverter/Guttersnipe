@@ -7,6 +7,10 @@ export default function shareables(
 
     case types.SHAREABLES_SEARCH_REQUEST:
       return shareables;
+    case types.SAVE_SEARCH_PARAMS:
+      return Object.assign({}, shareables, {
+        searchParams: action.searchParams
+      })
     case types.SHAREABLE_CATEGORIZATIONS_SUCCESS:
       return Object.assign({}, shareables, {
         categorizationMeta : action.categorizationMeta
