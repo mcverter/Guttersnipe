@@ -117,7 +117,7 @@ function saveSearchParams(searchParams) {
   return {
     type: types.SAVE_SEARCH_PARAMS,
     searchParams: searchParams
-  }
+  };
 }
 
 export function searchShareables(params={}){
