@@ -60,6 +60,65 @@ class ShareableSearchEndpoint(Resource):
       return apply_recurring_event_filter(query, date_input).union(
         apply_single_event_filter(query, date_input))
 
+    params = json.loads(request.data.decode('utf-8'))
+    search_params = params['search_params']
+    longitude = search_params['longitude'] if 'longitude' in search_params else None
+    latitude = search_params['latitude'] if 'latitude' in search_params else None
+    distance = search_params['distance'] if 'distance' in search_params else None
+    type_name = search_params['type_name'] if 'type_name' in search_params else None
+    subtype_list = search_params['subtype_list'] if 'subtype_list' in search_params else None
+    tag_list = search_params['tag_list'] if 'tag_list' in search_params else None
+    date_input = datetime.strptime(search_params['date_input'], '%Y-%m-%dT%H:%M:%S') \
+      if 'date_input' in search_params else None
+
+    baseQuery = Shareable.query
+
+    if (type_name):
+      baseQuery = apply_type_filter(baseQuery, type_name)
+    if (subtype_list):
+      baseQuery = apply_subtype_filter(baseQuery, subtype_list)
+    if (tag_list):
+      baseQuery = apply_tag_filter(baseQuery, tag_list)
+    if (distance and latitude and longitude):
+      baseQuery = apply_space_filter(baseQuery, longitude, latitude, distance)
+    if (date_input):
+      baseQuery = apply_time_filter(baseQuery, date_input)
+
+    return ShareableSerializer.dump(baseQuery.all(), many=True).data
+
+class ShareableSearchEndpoint2(Resource):
+  def post(self):
+    def apply_type_filter(query, type_name):
+      return query.join(Thing).join(MainType).filter(MainType.name == type_name)
+
+    def apply_subtype_filter(query, subtype_list):
+      return query.join(Thing).join(Thing.subtypes_relation).filter(Subtype.name.in_(subtype_list))
+
+    def apply_tag_filter(query, tag_list):
+      return query.join(Thing).join(Thing.tag_relation).filter(Tag.name.in_(tag_list))
+
+    def apply_space_filter(query, longitude, latitude, distance):
+      return query.join(Space).filter(
+        func.ST_Distance_Sphere(
+          func.ST_PointFromText('POINT(' + '%.8f' % longitude + ' ' +
+                                '%.8f' % latitude + ')', 4326), Space.position) < distance)
+    def apply_time_filter(query, date_input):
+      def apply_single_event_filter(query, date_input):
+        return query.join(Time).join(Schedule).join(Event).filter(Event.recurrence_rule_id is None and date_input <= Event.dt_end and date_input >= Event.dt_start)
+
+      def apply_recurring_event_filter(query, date_input):
+        return query.join(Time).join(Schedule).join(Event).filter(
+          Event.recurrence_rule_id is not None).join(RecurrenceRule)\
+          .filter(RecurrenceRule.byDay.like('%' + \
+          calfn.day_name[date_input.weekday()][0:2].lower() + '%'))
+
+      return apply_recurring_event_filter(query, date_input).union(
+        apply_single_event_filter(query, date_input))
+
+    page_num = request.args.get('page_num')
+    query = Shareable.query.paginate(int(page_num), 10, False).items
+
+    print(page_num)
     search_params = request.get_json() or json.loads(request.data) \
       if isinstance(request.data, str) else json.loads(request.data.decode('utf-8'))
     longitude = search_params['longitude'] if 'longitude' in search_params else None
@@ -85,6 +144,7 @@ class ShareableSearchEndpoint(Resource):
       baseQuery = apply_time_filter(baseQuery, date_input)
 
     return ShareableSerializer.dump(baseQuery.all(), many=True).data
+
 
 class ShareableEndpoint(Resource):
   def get(self, id):

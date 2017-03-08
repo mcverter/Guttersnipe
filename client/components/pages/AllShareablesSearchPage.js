@@ -8,7 +8,7 @@ import SpaceSearchPanel from '../shareables/space/SpaceSearchPanel';
 import TimeSearchPanel from '../shareables/time/TimeSearchPanel';
 import ThingSearchPanel from '../shareables/thing/ThingSearchPanel';
 import { Field, reduxForm } from 'redux-form';
-import {searchShareables} from '../../actions/shareables/shareableActions';
+import {searchShareables, searchShareablesWithParametersAndPagination} from '../../actions/shareables/shareableActions';
 
 class AllShareablesSearchPage extends Component {
   constructor(props) {
@@ -25,7 +25,9 @@ class AllShareablesSearchPage extends Component {
       type_name: values.thing_type,
       subtype_list: values.thing_subtypes
     };
-    this.props.searchShareables(data);
+    debugger;
+    this.props.searchShareables({searchParams: data,
+      page_size: 20});
   }
 
   render() {
@@ -59,7 +61,7 @@ function mapStateToProps(state) {
 const mapDispatchToProps = (dispatch) => {
   return {
     searchShareables: (data) => {
-      dispatch(searchShareables(data));
+      dispatch(searchShareablesWithParametersAndPagination(data));
     }
   };
 };

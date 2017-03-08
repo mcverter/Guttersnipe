@@ -134,13 +134,21 @@ export function searchShareables(params={}){
   };
 }
 
-export function searchShareablesWithParametersAndPagination(
-  forceFetch=false, pageNumber=1, params={}){
+export function searchShareablesWithParametersAndPagination(options){
+
+  let {forceFetch, pageNumber, pageSize, searchParams}=options;
+  forceFetch = forceFetch || false;
+  pageNumber = pageNumber || 1;
+  pageSize = pageSize || 20;
   return dispatch => {
     dispatch(shareableSearchRequest());
-    dispatch(saveSearchParams(params));
+    dispatch(saveSearchParams(searchParams));
     return fetch(`${SERVER_URL}/api/shareables/search`,
-      { method: 'POST', body: JSON.stringify(params) })
+      { method: 'POST', body: JSON.stringify({
+        search_params:searchParams,
+        page_number: pageNumber,
+        page_size: pageSize
+      }) })
       .then(response=>response.json())
       .then(json=> {
         dispatch(receiveAllShareables(json));
