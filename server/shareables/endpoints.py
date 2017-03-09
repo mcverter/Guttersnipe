@@ -122,15 +122,6 @@ class ShareableTotalCount(Resource):
 
 
 class ShareableListEndpoint(Resource):
-  def get(self):
-    page_num = request.args.get('page_num')
-    query = Shareable.query.paginate(int(page_num), 10, False).items
-    #    query = Shareable.query.all()
-    # random.shuffle(query)
-    results = ShareableSerializer.dump(query, many=True).data
-    return results
-
-
   def post(self):
     raw_dict = request.get_json() or json.loads(request.data) \
       if isinstance(request.data, str) else json.loads(request.data.decode('utf-8'))
