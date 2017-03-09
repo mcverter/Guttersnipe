@@ -3,19 +3,19 @@ import _ from "lodash";
 import {SERVER_URL} from "../../config";
 import {browserHistory} from 'react-router';
 
-export function fetchAllShareablesIfNeeded(forceFetch=false) {
+export function fetchAllShareablesIfNeeded(forceFetch=false, page_num=1) {
   return (dispatch, getState) => {
     const state = getState();
     if (forceFetch || ! state.shareables.items || state.shareables.items.length <= 0) {
-      return (dispatch(fetchAllShareables(dispatch)));
+      return dispatch(searchShareablesWithParametersAndPagination({page_num: 1}))
     }
   };
 }
 
-function fetchAllShareables(dispatch) {
+export function fetchAllShareables(dispatch, page_num) {
  return () => {
     dispatch({type: types.SHAREABLES_ALL_REQUEST});
-    return fetch(`${SERVER_URL}/api/shareables`)
+    return fetch(`${SERVER_URL}/api/shareables?page_num=${page_num}`)
       .then(response => response.json())
       .then(json => dispatch(receiveAllShareables(json)));
   };
@@ -113,11 +113,28 @@ function shareableSearchRequest() {
   };
 }
 
-export function searchShareables(params={}){
+function saveSearchParams(searchParams) {
+  return {
+    type: types.SAVE_SEARCH_PARAMS,
+    searchParams: searchParams
+  };
+}
+export function searchShareablesWithParametersAndPagination(options){
+
+  let {forceFetch, page_num, pageSize, searchParams}=options;
+  forceFetch = forceFetch || false;
+  page_num = page_num || 1;
+  pageSize = pageSize || 20;
+  searchParams = searchParams || {};
   return dispatch => {
     dispatch(shareableSearchRequest());
+    dispatch(saveSearchParams(searchParams));
     return fetch(`${SERVER_URL}/api/shareables/search`,
-      { method: 'POST', body: JSON.stringify(params) })
+      { method: 'POST', body: JSON.stringify({
+        search_params:searchParams,
+        page_num: page_num,
+        page_size: pageSize
+      }) })
       .then(response=>response.json())
       .then(json=> {
         dispatch(receiveAllShareables(json));

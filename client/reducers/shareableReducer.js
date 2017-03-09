@@ -7,6 +7,11 @@ export default function shareables(
 
     case types.SHAREABLES_SEARCH_REQUEST:
       return shareables;
+    case types.SAVE_SEARCH_PARAMS:
+      debugger;
+      return Object.assign({}, shareables, {
+        searchParams: action.searchParams
+      })
     case types.SHAREABLE_CATEGORIZATIONS_SUCCESS:
       return Object.assign({}, shareables, {
         categorizationMeta : action.categorizationMeta
@@ -40,7 +45,8 @@ export default function shareables(
         shareableFetchError: true
       });
     case types.SHAREABLES_ALL_REQUEST_SUCCESS:
-      return Object.assign({}, ...shareables, {
+      debugger;
+      return Object.assign({}, {...shareables,
         isFetchingShareables: false,
         shareableFetchError: false,
         items: action.shareables

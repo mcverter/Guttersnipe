@@ -60,8 +60,13 @@ class ShareableSearchEndpoint(Resource):
       return apply_recurring_event_filter(query, date_input).union(
         apply_single_event_filter(query, date_input))
 
-    search_params = request.get_json() or json.loads(request.data) \
-      if isinstance(request.data, str) else json.loads(request.data.decode('utf-8'))
+    # DEF POST
+
+    params = json.loads(request.data.decode('utf-8'))
+    search_params = params['search_params'] if 'search_params' in params else {}
+    page_num = params['page_num'] if 'page_num' in params else 1
+    page_size = params['page_size'] if 'page_size' in params else 10
+
     longitude = search_params['longitude'] if 'longitude' in search_params else None
     latitude = search_params['latitude'] if 'latitude' in search_params else None
     distance = search_params['distance'] if 'distance' in search_params else None
@@ -84,7 +89,11 @@ class ShareableSearchEndpoint(Resource):
     if (date_input):
       baseQuery = apply_time_filter(baseQuery, date_input)
 
-    return ShareableSerializer.dump(baseQuery.all(), many=True).data
+
+    page_results = baseQuery.paginate(int(page_num), page_size, False).items
+
+    return ShareableSerializer.dump(page_results, many=True).data
+
 
 class ShareableEndpoint(Resource):
   def get(self, id):
@@ -107,15 +116,12 @@ class ShareableEndpoint(Resource):
       resp.status_code = 401
       return resp
 
+class ShareableTotalCount(Resource):
+  def get(self):
+    return Shareable.query.count()
+
 
 class ShareableListEndpoint(Resource):
-  def get(self):
-    query = Shareable.query.all()
-    random.shuffle(query)
-    results = ShareableSerializer.dump(query, many=True).data
-    return results
-
-
   def post(self):
     raw_dict = request.get_json() or json.loads(request.data) \
       if isinstance(request.data, str) else json.loads(request.data.decode('utf-8'))
