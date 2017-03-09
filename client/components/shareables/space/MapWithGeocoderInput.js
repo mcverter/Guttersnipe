@@ -32,7 +32,12 @@ export default class MapWithGeocoder extends Component {
         canonicalAddress: data.feature.properties.label
       });
     }));
-    map.invalidateSize();
+    // needed when exposing the search panel
+    if (this.props.forceRedraw) {
+      setTimeout(()=>{ map.invalidateSize();}, 500)
+    } else {
+      map.invalidateSize();
+    }
   }
 
   render() {
