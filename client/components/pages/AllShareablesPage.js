@@ -82,8 +82,10 @@ class AllShareablesPage extends Component {
 
 const mapStateToProps = (state) => {
   debugger;
-
-    return {searchParams: state && state.shareables ? state.shareables.searchParams: {}}
+    return {
+      pageCount: Math.ceil(state.shareables.items.length / 20 ),
+      searchParams: state && state.shareables ? state.shareables.searchParams: {}
+    }
 }
 const mapDispatchToProps = (dispatch) => {
   return {
