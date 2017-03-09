@@ -33,7 +33,6 @@ class AllShareablesPage extends Component {
   }
 
   handlePageClick(data){
-    debugger;
     this.props.searchShareables({page_num: data.selected + 1})
 
   }
