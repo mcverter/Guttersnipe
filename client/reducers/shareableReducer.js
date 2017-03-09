@@ -44,10 +44,13 @@ export default function shareables(
         shareableFetchError: true
       });
     case types.SHAREABLES_ALL_REQUEST_SUCCESS:
+      const count = action.shareables.splice(
+        action.shareables.length -1)
       return Object.assign({}, {...shareables,
         isFetchingShareables: false,
         shareableFetchError: false,
-        items: action.shareables
+        items: action.shareables,
+        total: count[0]
       });
     case types.SHAREABLES_ALL_REQUEST_ERROR:
       return Object.assign({}, {...shareables,

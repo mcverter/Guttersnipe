@@ -67,7 +67,7 @@ class AllShareablesPage extends Component {
                          nextLabel={"next"}
                          breakLabel={<a href="">...</a>}
                          breakClassName={"break-me"}
-                         pageCount={5}
+                         pageCount={this.props.pageCount}
                          marginPagesDisplayed={2}
                          pageRangeDisplayed={5}
                           onPageChange={this.handlePageClick}
@@ -82,7 +82,7 @@ class AllShareablesPage extends Component {
 
 const mapStateToProps = (state) => {
     return {
-      pageCount: Math.ceil(state.shareables.items.length / 20 ),
+      pageCount: Math.ceil(state.shareables.total / 20 ),
       searchParams: state && state.shareables ? state.shareables.searchParams: {}
     }
 }
