@@ -33,7 +33,7 @@ class AllShareablesPage extends Component {
   }
 
   handlePageClick(data){
-    this.props.searchShareables({page_num: data.selected + 1})
+    this.props.searchShareables({page_num: data.selected + 1, searchParams: this.props.searchParams})
 
   }
 
@@ -80,6 +80,11 @@ class AllShareablesPage extends Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  debugger;
+
+    return {searchParams: state && state.shareables ? state.shareables.searchParams: {}}
+}
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchAllShareablesIfNeeded: () => {
@@ -99,4 +104,4 @@ AllShareablesPage.propTypes = {
   fetchAllShareablesIfNeeded: PropTypes.func,
 };
 
-export default connect(null, mapDispatchToProps) (AllShareablesPage);
+export default connect(mapStateToProps, mapDispatchToProps) (AllShareablesPage);

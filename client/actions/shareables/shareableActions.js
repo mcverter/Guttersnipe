@@ -125,6 +125,7 @@ export function searchShareablesWithParametersAndPagination(options){
   forceFetch = forceFetch || false;
   page_num = page_num || 1;
   pageSize = pageSize || 20;
+  searchParams = searchParams || {};
   return dispatch => {
     dispatch(shareableSearchRequest());
     dispatch(saveSearchParams(searchParams));
