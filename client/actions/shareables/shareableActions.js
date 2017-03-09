@@ -146,7 +146,7 @@ export function searchShareablesWithParametersAndPagination(options){
     return fetch(`${SERVER_URL}/api/shareables/search`,
       { method: 'POST', body: JSON.stringify({
         search_params:searchParams,
-        page_number: pageNumber,
+        page_num: pageNumber,
         page_size: pageSize
       }) })
       .then(response=>response.json())

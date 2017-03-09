@@ -11,7 +11,7 @@ import AllShareablesMapTab from '../shareables/space/AllShareablesMapTab';
 import AllShareablesCalendarTab from '../shareables/time/AllShareablesCalendarTab';
 
 import {setBrowserLocation} from '../../actions/browserEnv/browserEnvActions';
-import {fetchAllShareablesIfNeeded, fetchAllShareables, searchShareables} from '../../actions/shareables/shareableActions';
+import {fetchAllShareablesIfNeeded, fetchAllShareables, searchShareablesWithParametersAndPagination} from '../../actions/shareables/shareableActions';
 import ReactPaginate from 'react-paginate';
 
 
@@ -39,7 +39,7 @@ class AllShareablesPage extends Component {
   }
 
   resetSearchResults() {
-    this.props.searchShareables();
+    this.props.searchShareables({});
 
   }
 
@@ -89,8 +89,8 @@ const mapDispatchToProps = (dispatch) => {
     fetchAllShareables: (page_num) => {
       dispatch(fetchAllShareables(dispatch, page_num));
     },
-    searchShareables: () => {
-      dispatch(searchShareables())
+    searchShareables: (params) => {
+      dispatch(searchShareablesWithParametersAndPagination(params))
     },
 
     setBrowserLocation: () => {
