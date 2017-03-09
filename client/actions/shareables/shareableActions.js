@@ -7,7 +7,7 @@ export function fetchAllShareablesIfNeeded(forceFetch=false, page_num=1) {
   return (dispatch, getState) => {
     const state = getState();
     if (forceFetch || ! state.shareables.items || state.shareables.items.length <= 0) {
-      return dispatch(searchShareablesWithParametersAndPagination({page_num: 1}))
+      return dispatch(searchShareablesWithParametersAndPagination({page_num: 1}));
     }
   };
 }

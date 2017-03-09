@@ -29,9 +29,16 @@ class SpaceSearchPanel extends Component {
     };
   }
   componentWilReceiveProps(props) {
+    debugger;
      if (nextProps.isActiveView && this.map) {
       this.map.leafletElement.invalidateSize(false);
     }
+  }
+  componentDidMount() {
+    debugger;
+          this.map.leafletElement.invalidateSize(false);
+      this.map.leafletElement.invalidateSize(false);
+
   }
   render() {
     return (
