@@ -8,7 +8,7 @@ import SpaceSearchPanel from '../shareables/space/SpaceSearchPanel';
 import TimeSearchPanel from '../shareables/time/TimeSearchPanel';
 import ThingSearchPanel from '../shareables/thing/ThingSearchPanel';
 import { Field, reduxForm } from 'redux-form';
-import {searchShareables, searchShareablesWithParametersAndPagination} from '../../actions/shareables/shareableActions';
+import {searchShareablesWithParametersAndPagination} from '../../actions/shareables/shareableActions';
 
 class AllShareablesSearchPage extends Component {
   constructor(props) {

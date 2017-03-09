@@ -1,7 +1,6 @@
 import React, {PropTypes, Component} from "react";
 import { connect } from 'react-redux';
 import {Link} from "react-router";
-import Button from "react-bootstrap/lib/Button";
 
 import Tabs from "react-bootstrap/lib/Tabs";
 import Tab from "react-bootstrap/lib/Tab";
@@ -11,7 +10,7 @@ import AllShareablesMapTab from '../shareables/space/AllShareablesMapTab';
 import AllShareablesCalendarTab from '../shareables/time/AllShareablesCalendarTab';
 
 import {setBrowserLocation} from '../../actions/browserEnv/browserEnvActions';
-import {fetchAllShareablesIfNeeded, fetchAllShareables, searchShareablesWithParametersAndPagination} from '../../actions/shareables/shareableActions';
+import {fetchAllShareablesIfNeeded, searchShareablesWithParametersAndPagination} from '../../actions/shareables/shareableActions';
 import ReactPaginate from 'react-paginate';
 
 
@@ -34,7 +33,8 @@ class AllShareablesPage extends Component {
   }
 
   handlePageClick(data){
-    this.props.fetchAllShareables(data.selected + 1)
+    debugger;
+    this.props.searchShareables({page_num: data.selected + 1})
 
   }
 
@@ -85,9 +85,6 @@ const mapDispatchToProps = (dispatch) => {
   return {
     fetchAllShareablesIfNeeded: () => {
       dispatch(fetchAllShareablesIfNeeded());
-    },
-    fetchAllShareables: (page_num) => {
-      dispatch(fetchAllShareables(dispatch, page_num));
     },
     searchShareables: (params) => {
       dispatch(searchShareablesWithParametersAndPagination(params))

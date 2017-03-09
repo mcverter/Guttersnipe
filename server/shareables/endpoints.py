@@ -63,9 +63,9 @@ class ShareableSearchEndpoint(Resource):
     # DEF POST
 
     params = json.loads(request.data.decode('utf-8'))
-    search_params = params['search_params'] or {}
-    page_num = params['page_num'] or 1
-    page_size = params['page_num'] or 10
+    search_params = params['search_params'] if 'search_params' in params else {}
+    page_num = params['page_num'] if 'page_num' in params else 1
+    page_size = params['page_size'] if 'page_size' in params else 10
 
     longitude = search_params['longitude'] if 'longitude' in search_params else None
     latitude = search_params['latitude'] if 'latitude' in search_params else None
