@@ -60,8 +60,13 @@ class ShareableSearchEndpoint(Resource):
       return apply_recurring_event_filter(query, date_input).union(
         apply_single_event_filter(query, date_input))
 
+    # DEF POST
+
     params = json.loads(request.data.decode('utf-8'))
     search_params = params['search_params']
+    page_num = params['page_num'] or 1
+    page_size = params['page_num'] or 10
+
     longitude = search_params['longitude'] if 'longitude' in search_params else None
     latitude = search_params['latitude'] if 'latitude' in search_params else None
     distance = search_params['distance'] if 'distance' in search_params else None
@@ -83,6 +88,9 @@ class ShareableSearchEndpoint(Resource):
       baseQuery = apply_space_filter(baseQuery, longitude, latitude, distance)
     if (date_input):
       baseQuery = apply_time_filter(baseQuery, date_input)
+
+
+    baseQuery = baseQuery.paginate(int(page_num), page_size, False).items
 
     return ShareableSerializer.dump(baseQuery.all(), many=True).data
 
@@ -115,8 +123,12 @@ class ShareableSearchEndpoint2(Resource):
       return apply_recurring_event_filter(query, date_input).union(
         apply_single_event_filter(query, date_input))
 
-    page_num = request.args.get('page_num')
-    query = Shareable.query.paginate(int(page_num), 10, False).items
+
+    # DEF POST
+    page_num = request.args.get('page_num') or 1
+    page_size = request.args.get('page_num') or 10
+
+    query = Shareable.query.paginate(int(page_num), page_size, False).items
 
     print(page_num)
     search_params = request.get_json() or json.loads(request.data) \

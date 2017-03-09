@@ -12,7 +12,6 @@ import AllShareablesCalendarTab from '../shareables/time/AllShareablesCalendarTa
 
 import {setBrowserLocation} from '../../actions/browserEnv/browserEnvActions';
 import {fetchAllShareablesIfNeeded, fetchAllShareables, searchShareables} from '../../actions/shareables/shareableActions';
-import Paginate from 'rc-pagination';
 import ReactPaginate from 'react-paginate';
 
 
@@ -35,7 +34,6 @@ class AllShareablesPage extends Component {
   }
 
   handlePageClick(data){
-    debugger;
     this.props.fetchAllShareables(data.selected + 1)
 
   }

@@ -25,7 +25,6 @@ class AllShareablesSearchPage extends Component {
       type_name: values.thing_type,
       subtype_list: values.thing_subtypes
     };
-    debugger;
     this.props.searchShareables({searchParams: data,
       page_size: 20});
   }
