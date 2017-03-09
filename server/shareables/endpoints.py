@@ -89,10 +89,12 @@ class ShareableSearchEndpoint(Resource):
     if (date_input):
       baseQuery = apply_time_filter(baseQuery, date_input)
 
-    count = baseQuery.count()
     page_results = baseQuery.paginate(int(page_num), page_size, False).items
 
     items = ShareableSerializer.dump(page_results, many=True).data
+
+    # return the total items as well as the page items
+    count = baseQuery.count()
     items.append(count)
     return items
 

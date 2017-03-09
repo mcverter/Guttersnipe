@@ -44,6 +44,7 @@ export default function shareables(
         shareableFetchError: true
       });
     case types.SHAREABLES_ALL_REQUEST_SUCCESS:
+      /* the total items are returned as well as the page items */
       const count = action.shareables.splice(
         action.shareables.length -1)
       return Object.assign({}, {...shareables,
