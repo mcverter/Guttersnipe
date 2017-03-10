@@ -10,7 +10,7 @@ export default function shareables(
     case types.SAVE_SEARCH_PARAMS:
       return Object.assign({}, {...shareables,
         searchParams: action.searchParams
-      })
+      });
     case types.SHAREABLE_CATEGORIZATIONS_SUCCESS:
       return Object.assign({}, {...shareables,
         categorizationMeta : action.categorizationMeta
@@ -46,7 +46,7 @@ export default function shareables(
     case types.SHAREABLES_ALL_REQUEST_SUCCESS:
       /* the total items are returned as well as the page items */
       const count = action.shareables.splice(
-        action.shareables.length -1)
+        action.shareables.length -1);
       return Object.assign({}, {...shareables,
         isFetchingShareables: false,
         shareableFetchError: false,

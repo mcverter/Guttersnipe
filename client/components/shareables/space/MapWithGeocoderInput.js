@@ -56,5 +56,6 @@ export default class MapWithGeocoder extends Component {
 }
 
 MapWithGeocoder.propTypes = {
-  formInput: PropTypes.object
+  formInput: PropTypes.object,
+  forceRedraw: PropTypes.bool
 };

@@ -14,7 +14,7 @@ class ProfilePage extends Component {
   }
 
   showSchedule() {
-    const {schedule} = this.props
+    const {schedule} = this.props;
     if (schedule) {
       return (
         <Panel>
@@ -28,8 +28,7 @@ class ProfilePage extends Component {
             <Button type="button" onClick={this.toggleTimeEdit}>
               {this.state.timeEdit ? "Confirm Time" : "Edit Time" }</Button>
             {this.state.timeEdit ?
-              <TimeEdit></TimeEdit> :
-              <TimeFull time={time} headline={headline}/> }
+              <TimeEdit/> : <TimeFull time={time} headline={headline}/> }
           </Panel>
       );
     }

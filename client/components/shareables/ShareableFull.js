@@ -38,7 +38,7 @@ const ShareableFull = ( { shareable:{headline, summary,
                 </Panel>
       )
     }
-  }
+  };
 
   return (
     <div id="shareable-full">

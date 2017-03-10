@@ -4,7 +4,7 @@ import {Link} from "react-router";
 
 import Tabs from "react-bootstrap/lib/Tabs";
 import Tab from "react-bootstrap/lib/Tab";
-import Panel from "react-bootstrap/lib/Panel"
+import Panel from "react-bootstrap/lib/Panel";
 import AllShareablesListTab from '../shareables/thing/AllShareablesListTab';
 import AllShareablesMapTab from '../shareables/space/AllShareablesMapTab';
 import AllShareablesCalendarTab from '../shareables/time/AllShareablesCalendarTab';
@@ -33,8 +33,7 @@ class AllShareablesPage extends Component {
   }
 
   handlePageClick(data){
-    this.props.searchShareables({page_num: data.selected + 1, searchParams: this.props.searchParams})
-
+    this.props.searchShareables({page_num: data.selected + 1, searchParams: this.props.searchParams});
   }
 
   resetSearchResults() {
@@ -84,15 +83,16 @@ const mapStateToProps = (state) => {
     return {
       pageCount: Math.ceil(state.shareables.total / 20 ),
       searchParams: state && state.shareables ? state.shareables.searchParams: {}
-    }
-}
+    };
+};
+
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchAllShareablesIfNeeded: () => {
       dispatch(fetchAllShareablesIfNeeded());
     },
     searchShareables: (params) => {
-      dispatch(searchShareablesWithParametersAndPagination(params))
+      dispatch(searchShareablesWithParametersAndPagination(params));
     },
 
     setBrowserLocation: () => {
@@ -103,6 +103,9 @@ const mapDispatchToProps = (dispatch) => {
 
 AllShareablesPage.propTypes = {
   fetchAllShareablesIfNeeded: PropTypes.func,
+  searchShareables: PropTypes.func,
+  searchParams: PropTypes.object,
+  pageCount: PropTypes.number
 };
 
 export default connect(mapStateToProps, mapDispatchToProps) (AllShareablesPage);

@@ -66,7 +66,7 @@ class ThingEdit extends Component {
   }
 
   render() {
-    console.log('rendering', this.state)
+    console.log('rendering', this.state);
 
     if (this.state.types === undefined) {return <div>Loading</div>;}
     return (
@@ -139,7 +139,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 function mapStateToProps(state) {
-  console.log('mapping state to props', state.shareables.categorizationMeta)
+  console.log('mapping state to props', state.shareables.categorizationMeta);
   return {
     categorizationMeta: state.shareables.categorizationMeta
   };

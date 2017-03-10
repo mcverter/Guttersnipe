@@ -11,7 +11,7 @@ class sendMessage extends Component {
       <div> Recipient</div>
         <input />
         <div> Message</div>
-        <textarea></textarea>
+        <textarea />
         <button>Send Message</button>
       </Panel>
     )
