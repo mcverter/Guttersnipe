@@ -21,12 +21,12 @@ describe('Kropotkin', () => {
   });
   it('displays nothing if kropotkinFetchError is true ', () =>{
     const wrapper = setupKropotkin({isFetchingKropotkin: false,
-      kropotkinFetchError: true, paragraph: 'glory'})
+      kropotkinFetchError: true, paragraph: 'glory'});
       expect(wrapper.find('.kropotkin-quote')).toNotExist();
-  })
+  });
   it('displays nothing if paragraph is empty ', () =>{
     const wrapper = setupKropotkin({isFetchingKropotkin: false,
-      kropotkinFetchError: false, paragraph: ''})
+      kropotkinFetchError: false, paragraph: ''});
     expect(wrapper.find('.kropotkin-quote')).toNotExist();
   });
   describe(' A Kropotkin with appropriate parmeter values', () => {

@@ -49,7 +49,7 @@ const selector = formValueSelector('wizard'); // <-- same as form name
 TimeEdit = connect(
   state => {
     // can select values individually
-    const headline = selector(state, 'headline')
+    const headline = selector(state, 'headline');
     return {
       headline
     }

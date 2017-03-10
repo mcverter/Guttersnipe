@@ -23,8 +23,8 @@ class ShareableCreateEnd extends Component {
     this.state = {
       timeEdit: false,
       spaceEdit: false,
-      timeEdit:false,
-    }
+      thingEdit:false
+    };
     this.toggleSpaceEdit = this.toggleSpaceEdit.bind(this);
     this.toggleThingEdit = this.toggleThingEdit.bind(this);
     this.toggleTimeEdit = this.toggleTimeEdit.bind(this);
@@ -89,9 +89,7 @@ class ShareableCreateEnd extends Component {
             <Button type="button" onClick={this.toggleTimeEdit}>
               {this.state.timeEdit ? "Confirm Time" : "Edit Time" }</Button>
             {this.state.timeEdit ?
-              <TimeEdit></TimeEdit> :
-              <TimeFull time={time} headline={headline}/> }
-
+              <TimeEdit /> : <TimeFull time={time} headline={headline}/> }
           </Panel>
 
           {notes && <div><h3>Notes:</h3> {notes} </div>}
@@ -157,7 +155,7 @@ ShareableCreateEnd.propTypes = {
   goToThingEdit: PropTypes.func,
   goToTimeEdit: PropTypes.func,
   goToSpaceEdit: PropTypes.func
-}
+};
 
 export default reduxForm({
   form: 'wizard',                 // <------ same form name
