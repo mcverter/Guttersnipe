@@ -15,8 +15,6 @@
     },
     "production": {
       "plugins": [
-        "transform-react-constant-elements",
-        "transform-react-remove-prop-types",
       ]
     }
   }

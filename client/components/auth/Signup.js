@@ -4,6 +4,7 @@ import ReduxFormHTMLInput from '../../components/reduxFormInputs/ReduxFormHTMLIn
 import Button from 'react-bootstrap/lib/Button';
 import {connect} from 'react-redux';
 import {signUpUser} from '../../actions/auth/authActions';
+import Panel from 'react-bootstrap/lib/Panel';
 
 const Signup = (props) => {
   const {handleSubmit} = props;
@@ -23,6 +24,7 @@ const Signup = (props) => {
   };
 
   return (
+    <Panel id="signup-panel">
     <form id="signup-form" onSubmit={handleSubmit(handleFormSubmit)}>
       <Field name="email" type="text" component={ReduxFormHTMLInput} label="Email"/>
       <Field name="password" type="password" component={ReduxFormHTMLInput} label="Password"/>
@@ -32,6 +34,7 @@ const Signup = (props) => {
       </div>
       {renderAlert()}
     </form>
+    </Panel>
   );
 };
 

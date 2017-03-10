@@ -4,7 +4,8 @@ const initialState = {
     shareableFetchError: false,
     items: [],
     selectedIndex: -1,
-    categorizationMeta: {}
+    categorizationMeta: {},
+    searchParams : {}
   },
   auth : {
     authenticated: false,

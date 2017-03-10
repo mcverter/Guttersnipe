@@ -10,7 +10,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 import imgsrc from '../../img/guttersnipeSwaggerSmall.png';
 
 
-export const Header = ({authenticated}) => {
+export const HeaderComponent = ({authenticated}) => {
   const renderAuthLinks = () => {
     if (authenticated) {
       return (
@@ -50,12 +50,12 @@ function mapStateToProps(state) {
   };
 }
 
-Header.propTypes = {
+HeaderComponent.propTypes = {
   authenticated: PropTypes.bool
 };
 
 
-export default connect(mapStateToProps) (Header);
+export default connect(mapStateToProps) (HeaderComponent);
 /*
  <Nav pullLeft>
  <Navbar.Brand pullLeft>

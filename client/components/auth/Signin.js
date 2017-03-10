@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/lib/Button';
 import {connect} from 'react-redux';
 
 import {signInUser} from '../../actions/auth/authActions';
+import Panel from 'react-bootstrap/lib/Panel';
 
 const Signin = (props) => {
   const {handleSubmit} = props;
@@ -25,7 +26,8 @@ const Signin = (props) => {
   };
 
   return (
-    <form id="signup-form"  onSubmit={handleSubmit(handleFormSubmit)}>
+    <Panel id="signin-panel">
+    <form id="signin-form"  onSubmit={handleSubmit(handleFormSubmit)}>
       <Field name="email" type="text" component={ReduxFormHTMLInput} label="Email"/>
       <Field name="password" type="password" component={ReduxFormHTMLInput} label="Password"/>
       <div>
@@ -33,6 +35,7 @@ const Signin = (props) => {
       </div>
       {renderAlert()}
     </form>
+    </Panel>
   );
 };
 
