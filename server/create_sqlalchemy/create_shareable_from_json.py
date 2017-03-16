@@ -145,17 +145,15 @@ def create_space_from_json_object(space_dict):
   longitude = space_dict["longitude"]
   latitude = space_dict["latitude"]
   longitude = longitude if type(longitude) is str else \
-    '{0:.6f}'.format(longitude)
+    '{0:.9f}'.format(longitude)
   latitude = latitude if type(latitude) is str else \
-    '{0:.6f}'.format(latitude)
+    '{0:.9f}'.format(latitude)
   canonical_address = space_dict.get("canonical_address")
   alternate_names = space_dict.get("alternate_names")  # string list
   space_notes = space_dict.get("notes")
 
   space_entity = db.session.query(Space).filter(
-    func.ST_Equals(Space.position, 'SRID=7483;POINT(' + longitude + " " + latitude + ")", srid=7483),
-    Space.canonical_address == canonical_address,
-    Space.alternate_names == alternate_names).first()
+    func.ST_Equals(Space.position, 'SRID=4326;POINT(' + longitude + " " + latitude + ")", srid=4326)).first()
   if space_entity is None:
     my_space = Space(
       position='SRID=4326;POINT(' + longitude + " " + latitude + ")",
@@ -174,7 +172,8 @@ def create_time_from_json_object(time_dict):
   time_notes = time_dict.get("notes")
   calendar = time_dict.get("calendar")
   events = calendar.get("events")
-  calendar_entity = None
+  schedule_entity = None
+
   if events and len(events):
     event_entities_array = []
     for e in events:
