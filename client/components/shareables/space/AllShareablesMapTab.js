@@ -7,7 +7,6 @@ import {Link} from 'react-router';
 export class AllShareablesMapTabComponent extends React.Component {
   constructor(props) {
     super(props);
-    this.calculateCenter = this.calculateCenter.bind(this);
     this.renderMarker = this.renderMarker.bind(this);
   }
 
@@ -49,9 +48,6 @@ export class AllShareablesMapTabComponent extends React.Component {
     if (isFetchingShareables || shareableFetchError || !items || items.length < 1) {
       return <div>Loading...</div>;
     }
-
-
-    const position = this.calculateCenter(items);
 
     return (
       <div id="all-shareables-map-tab">
