@@ -1,3 +1,5 @@
-/**
- * Created by mitchell on 3/16/17.
- */
+export const shareableHasEvents = (item) => {
+  return item && item.time && item.time.schedule
+    && item.time.schedule.events
+};
+
