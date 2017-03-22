@@ -1,7 +1,5 @@
 <a href="http://guttersnipe.org">Guttersnipe Website </a>
 
-
-
 <h1>PROPOSAL:  GUTTERSNIPE FAQ</h1>
 
 <div>
@@ -24,31 +22,31 @@
   </ul>
 </div>
 
-<dl>
-  <dt>2. What need does this meet? or problem does it solve?</dt>
+<ul>
+  <li><strong>2. What need does this meet? or problem does it solve?</strong></li>
   <li>This application serves the urgent need to overthrow capitalism by helping people to self-organize outside and beyond the market of commerce.</li>
   <li>The ultimate intention is to facilitate the creation of alternate avenues of exchange, freely organized by free individuals.</li>
-</dl>
+</ul>
 
-<dl>
-  <dt>3. Who is going to use to this site/app?</dt>
+<ul>
+  <li><strong>3. Who is going to use to this site/app?</strong></li>
   <li>In the current incarnation, it is mostly aimed towards the freegans gutterpunks, who live off of dumpstered food, live in squatted housing, and travel by hopping trains.</li>
   <li>As we get a better sense on the needs of the anticapitalist community and possibilities for alternative organizing, we will expand the possibilities for anti-market resource sharing.</li>
-  <li>Other shared services such as needle exchanges, medical clinics, rideshares, and couches will be offered</li>
-</dl>
+  <li>Other shared services such as neeule exchanges, medical clinics, rideshares, and couches will be offered</li>
+</ul>
 
-<dl>
-  <dt>4. Why will they go to this site/app?</dt>
+<ul>
+  <li><strong>4. Why will they go to this site/app?</strong></li>
   <li>To find food, clothing, shelter, etc.  </li>
-</dl>
+</ul>
 
-<dl>
-  <dt>5. Why will they keep coming back to your site/app?</dt>
+<ul>
+  <li><strong>5. Why will they keep coming back to your site/app?</strong></li>
   <li>See above.  </li>
-</dl>
+</ul>
 
-<dl>
-  <dt>6. How is it different from other similar sites?</dt>
+<ul>
+  <li><strong>6. How is it different from other similar sites?</strong></li>
   <li>There are similar sites of various types, but many of them have certain faults.</li>
   <li>There is a site called rideshare.com; there is a site named couchsurfer.com; there is freecycle.com, which allows the sharing of goods.</li>
   <li> These are all laudable efforts.  Some of these are marred by an underlying desire for profit.  But some of them are motivated out of genuine desire to promote Mutual Aid.</li>
@@ -67,9 +65,9 @@
     Many of our initial design specifications will be taken from the freegan group and Picture the Homeless.  </li>
   <li>In aliition, we intend Guttersnipe to be cross platform, available both via the web and as a mobile app.  To my knowledge, there are not yet any apps dedicated with such a task.  </li>
 
-  <dl>
-    <dt>7. What steps will a person go through interacting with the site/app?</dt>
-    <li>Most of the various interactions will be handled using forms.</li>
+  <ul>
+    <li><strong>7. What steps will a person go through interacting with the site/app?</strong></li>
+    <li>Most of the various interactions will be hanuled using forms.</li>
     <li>The various services offered by Guttersnipe all boil essentially boil down to two types of transaction:
     <li> <ol>
       <li>  information submission; </li>
@@ -79,15 +77,15 @@
     <li> One person posts about an abandoned building or a good dumpster; another person searches for such information.  </li>
     <li>There may be very many different interfaces for the reporting and retrieval.  Some of the data will be entered and retrieved using forms and text inputs; some will be accessed through map interfaces; some will be accessed through calendar interfaces.  </li>
     <li>In addition, there may be some need for identity management.  Some users may choose to register accounts.  Others may choose to always have singular, anonymous transactions.</li>
-  </dl>
+  </ul>
 
   <h2>Practical Constraints</h2>
-  <dl>
-    <dt> Security</dt>
+  <ul>
+    <li><strong> Security</strong></li>
     <li>
       We will have to build in a security infrastructure in the project in order to guarantee anonymity of transactions.
     </li>
     <li>
       <a href="https://www.torproject.org/"> Tor</a>  will be used to anonymize transactions.
     </li>
-  </dl>
+  </ul>
