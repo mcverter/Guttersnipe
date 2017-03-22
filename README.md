@@ -21,8 +21,6 @@
         <li> SPACE:  geography -- [40.9999, -70111111]; name -- Prospect Park </li>
         <li> TIME:  Every Saturday, 5:00-7:00PM. </li>
       </ul>
-    </li>
-    <li>Further development will require a close study of the writings of Kropotkin and Fourier.<li>
   </ul>
 </div>
 
