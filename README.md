@@ -1,3 +1,5 @@
+```html
+
 <a href="http://guttersnipe.org">Guttersnipe Website </a>
 
 <h1>PROPOSAL:  GUTTERSNIPE FAQ</h1>
@@ -87,3 +89,4 @@
     <a href="https://www.torproject.org/"> Tor</a>  will be used to anonymize transactions.
   </li>
 </ul>
+```
