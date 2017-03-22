@@ -61,31 +61,29 @@
       <li> <a href="http://foodsharing.de/"> Foodsharing (Germany) </a></li>
     </ul>
   </li>
+  <li>In addition, we intend Guttersnipe to be cross platform, available both via the web and as a mobile app.  To my knowledge, there are not yet any apps dedicated with such a task.  </li>
+</ul>
+<ul>
+  <li><strong>7. What steps will a person go through interacting with the site/app?</strong></li>
+  <li>Most of the various interactions will be hanuled using forms.</li>
+  <li>The various services offered by Guttersnipe all boil essentially boil down to two types of transaction:
+  <li> <ol>
+    <li>  information submission; </li>
+    <li>  information retrieval.  </li>
+  </ol>
+  </li>
+  <li> One person posts about an abandoned building or a good dumpster; another person searches for such information.  </li>
+  <li>There may be very many different interfaces for the reporting and retrieval.  Some of the data will be entered and retrieved using forms and text inputs; some will be accessed through map interfaces; some will be accessed through calendar interfaces.  </li>
+  <li>In addition, there may be some need for identity management.  Some users may choose to register accounts.  Others may choose to always have singular, anonymous transactions.</li>
+</ul>
+
+<h2>Practical Constraints</h2>
+<ul>
+  <li><strong> Security</strong></li>
   <li>
-    Many of our initial design specifications will be taken from the freegan group and Picture the Homeless.  </li>
-  <li>In aliition, we intend Guttersnipe to be cross platform, available both via the web and as a mobile app.  To my knowledge, there are not yet any apps dedicated with such a task.  </li>
-
-  <ul>
-    <li><strong>7. What steps will a person go through interacting with the site/app?</strong></li>
-    <li>Most of the various interactions will be hanuled using forms.</li>
-    <li>The various services offered by Guttersnipe all boil essentially boil down to two types of transaction:
-    <li> <ol>
-      <li>  information submission; </li>
-      <li>  information retrieval.  </li>
-    </ol>
-    </li>
-    <li> One person posts about an abandoned building or a good dumpster; another person searches for such information.  </li>
-    <li>There may be very many different interfaces for the reporting and retrieval.  Some of the data will be entered and retrieved using forms and text inputs; some will be accessed through map interfaces; some will be accessed through calendar interfaces.  </li>
-    <li>In addition, there may be some need for identity management.  Some users may choose to register accounts.  Others may choose to always have singular, anonymous transactions.</li>
-  </ul>
-
-  <h2>Practical Constraints</h2>
-  <ul>
-    <li><strong> Security</strong></li>
-    <li>
-      We will have to build in a security infrastructure in the project in order to guarantee anonymity of transactions.
-    </li>
-    <li>
-      <a href="https://www.torproject.org/"> Tor</a>  will be used to anonymize transactions.
-    </li>
-  </ul>
+    We will have to build in a security infrastructure in the project in order to guarantee anonymity of transactions.
+  </li>
+  <li>
+    <a href="https://www.torproject.org/"> Tor</a>  will be used to anonymize transactions.
+  </li>
+</ul>
