@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" id="css-continents">
+<head>
+ <meta charset="utf-8" />
+<!--
+
+
+
+
+ *** DON'T COPY ANYTHING FROM THE SOURCE CODE OF THIS DEMO PAGE ! ***
+
+
+ * CSSMap plugin - World continents
+ * map version: 4.4.16
+ * web: http://cssmapsplugin.com/world-continents.html
+ * email: support@cssmapsplugin.com
+ * author: Łukasz Popardowski { Winston_Wolf }
+ * license: http://cssmapsplugin.com/license
+
+
+
+
+-->
+  <style> /* THIS IS NOT A PART OF THE MAP! Dont' put it on your site! */ html,body,header,hgroup,article,section,aside,footer,nav,div,p,span,ul,ol,dl,li,dt,dd,abbr,a,h1,h2,h3,hr,form,input{background:transparent;border:0 none;margin:0;outline:0 none;padding:0;vertical-align:baseline} ul{list-style:none} ol{line-height:1.5em;margin-left:2em} small{font-size:1em} hr{display:none} a{color:#000;text-decoration:underline} a:active,a:visited{color:#666} a:hover,a:focus{color:#c00} p{margin:1em 0} h2,h3,h4{font-family:'Lucida Grande',Arial,sans-serif;font-weight:normal;margin:1em 0} h2{color:#666;font-size:2em;text-transform:uppercase} h3{color:#037fbb;font-size:1.5em;margin-top:2em} h3 i{color:#999;font-style:normal} h4{font-size:1em;font-weight:bold;text-transform:uppercase} article,aside,footer,header,hgroup,section,nav{display:block} body{background:#f5f1ee;font:normal .75em 'Lucida Grande',Arial,sans-serif;text-shadow:0 1px 0 #fff;width:100%} header{background:#e2dedb;border-bottom:1px solid rgba(0,0,0,.2);left:0;padding:1em 0;position:fixed;top:0;width:100%;z-index:110;box-shadow:0 1px 10px rgba(0,0,0,.3)} hgroup{margin:-.5em 0 0 -489px;left:50%;position:absolute;top:50%;width:489px} hgroup h1,hgroup h2{display:inline;font:normal bold 1.167em 'Lucida Grande',Arial,sans-serif} hgroup h1 a{color:#037fbb;margin:0 .5em 0 0;text-decoration:none;text-transform:uppercase} hgroup h2{color:#827e79;font-weight:normal} hgroup h2 b{color:#5f5b57} hgroup h1 a:hover,hgroup h1 a:focus{color:#004f80} header nav{left:50%;overflow:hidden;position:relative;width:498px} header ul{float:left;line-height:1.5em;width:33%} header nav a{color:#555;font-size:.834em;text-decoration:none;text-transform:uppercase} header nav a:hover,header nav a:focus{color:#037fbb} article{margin:10em auto 15em auto;max-width:978px} section{margin:0 auto -3em auto;padding-top:7em;width:978px} div.col{display:inline-block;vertical-align:top;width:47.75%} div.col.left{padding-right:2%} div.col.right{padding-left:2%} div.col h3{margin-top:0} div.info-bar{margin-bottom:2em;text-align:center;width:100%} div.info-bar b{background:#e092aa;border:1px solid #ce8199;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;box-shadow:inset 0 1px 2px rgba(255,255,255,.7);color:#600;display:inline-block;margin:0 auto;padding:1em 2em;text-shadow:0 1px 0 rgba(255,255,255,.5);text-transform:uppercase} pre,code{background:#2c2a29;color:#ddd;font:normal 100 1em/1.5em 'M+ 1m',Consolas, Monaco,'Andale Mono',Courier,monospace;text-shadow:0 1px 0 #000;-webkit-text-stroke:.35px} pre{-moz-border-radius:10px;-ms-border-radius:10px;-o-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;font-size:1.1em;margin-bottom:2em;overflow-y:auto;padding:1em 2em;position:relative} p code,li code,dd code,dt code{background:#e4e1de;color:#333;text-shadow:0 1px 0 rgba(255,255,255,.5);padding:.25em .5em;white-space:nowrap} code[class*="language-"],pre[class*="language-"]{direction: ltr;text-align: left;white-space: pre;word-spacing: normal;-moz-tab-size: 4;-o-tab-size: 4;tab-size: 4;-webkit-hyphens: none;-moz-hyphens: none;-ms-hyphens: none;hyphens: none} .token.comment,.token.prolog,.token.doctype,.token.cdata{color: #aaa} .namespace{opacity: .7} .token.property,.token.tag{color: #d5a514} .token.selector,.token.string{color: #c00} .language-css .token.selector,.token.attr-name{color:#c60;} .token.operator,.token.entity,.token.url,.language-css .token.string,.style .token.string{color: #add353} .token.atrule,.token.attr-value,.token.keyword{color: #add353} .token.number,.token.boolean{color:#99cee4} .token.regex,.token.important{color: #e90} .token.important{font-weight: bold} .token.entity{cursor: help} pre code span.ln{background:#555;color:#999;display:inline-block;font:normal .834em Arial,sans-serif;margin-left:-2.5em;margin-right:1em;padding:.4em .5em;text-align:right;width:2.5em} code em{font-style: normal} #list-code{max-height:30em} #samples{background:#3b3735;border:1px solid #fff;-moz-border-radius:1em;-webkit-border-radius:1em;-o-border-radius:1em;-ms-border-radius:1em;border-radius:1em;padding-top:0;text-shadow:0 1px 0 #000;width:1024px} #maps-switcher{font-size:.834em;position:relative;text-align:center;top:-1.5em} #maps-switcher li{display:inline-block;margin:0 -2px} #maps-switcher a{background:#333;border-top:1px solid #fff;border-bottom:1px solid rgba(0,0,0,.3);color:#ccc;display:block;padding:1em 2em;text-decoration:none;text-transform:uppercase} #maps-switcher a:hover,#maps-switcher a:focus{background:#222;color:#fff} #maps-switcher a:active,#maps-switcher a.active{background:#222;color:#fd0} #maps-switcher li:first-child a{-moz-border-radius:6px 0 0 6px;-ms-border-radius:6px 0 0 6px;-o-border-radius:6px 0 0 6px;-webkit-border-radius:6px 0 0 6px;border-radius:6px 0 0 6px} #maps-switcher li:last-child a{-moz-border-radius:0 6px 6px 0;-ms-border-radius:0 6px 6px 0;-o-border-radius:0 6px 6px 0;-webkit-border-radius:0 6px 6px 0;border-radius:0 6px 6px 0} .sample{color:#eee;padding:30px 0;width:100%} .sample.hidden{left:-9999em;position:absolute} .sample.active{left:0;position:relative} .sample a,.sample .css-map li a,.sample .map-visible-list a{color:#eee;text-decoration:none} .sample a:hover,.sample a:focus,.sample .map-visible-list a:hover,.sample .map-visible-list a:focus,.sample .map-visible-list li.focus a{color:#fc0;text-decoration:none} .sample a:active,.sample .map-visible-list a:active,.sample .map-visible-list li.active-region a{color:#cc3} .sample .map-search-link{background:#111;background:rgba(0,0,0,.8);color:#eee;font:normal 14px 'Lucida Grande',Arial,sans-serif;float:right;margin-right:1em;overflow:hidden;padding:.8em 1.6em;text-shadow:0 1px 0 #000;-moz-border-radius:.6em;-ms-border-radius:.6em;-o-border-radius:.6em;-webkit-border-radius:.6em;border-radius:.6em} .sample .map-search-link:hover,a.sample .map-search-link:focus{color:#fd0;text-decoration: none} .m430 .sample .map-search-link{font-size:1em} .sample .m430 .map-search-link{font-size:1em} .sample pre{border-top:2px solid #7a7672;margin:2em 40px 0 40px;overflow:visible} .sample pre:before,.sample pre:after{border:solid;content:'';display:block;height:0;left:50%;position:absolute;width:0} .sample pre:before{border-color:#7a7672 transparent;border-width:0 9px 9px 9px;margin-left:-9px;top:-9px} .sample pre:after{border-color:#2c2a29 transparent;border-width:0 6px 6px 6px;margin-left:-6px;top:-6px} .map-visible-list{font-size:.9167em} .map-visible-list li{display:inline-block;line-height:1.5em} .m960 .map-visible-list li,.m750 .map-visible-list li{width:20%} .m540 .map-visible-list li{width:25%} .m430 .map-visible-list li{width:33%} .css-map-container.m1110,.css-map-container.m1280,.css-map-container.m1450,.css-map-container.m2050{overflow-x:visible;width:100%} #example4 .css-map,#example4 .map-visible-list{display:inline-block;vertical-align:top} #example4 .css-map-container{width:635px} #example4 .map-visible-list{margin-left:20px;margin-top:50px;width:180px} #example4 .m430 .map-visible-list li{width:100%} #example4 .m430 .map-visible-list li small{display:none} footer{background:#e2dedb;border-top:1px solid rgba(0,0,0,.2);bottom:0;color:#666;font-size:.834em;left:0;position:fixed;width:100%;z-index:110} footer ul{border-top:1px solid rgba(255,255,255,.7);margin:0 auto;overflow:hidden;padding:1em 0 1.2em 0;width:978px} footer li{display:block;margin:0 1em;text-transform:uppercase} footer .fl{float:left} footer .fr{float:right} footer a{color:#555;text-decoration:none} footer a:hover,footer a:focus{color:#037fbb} #top-link{background:#e2dedb;border-top:1px solid rgba(0,0,0,.4);display:block;height:6em;left:50%;margin-left:-3em;position:absolute;text-decoration:none;top:-3em;width:6em;-moz-border-radius:50%;-ms-border-radius:50%;-o-border-radius:50%;-webkit-border-radius:50%;border-radius:50%} #top-link b{font-size:1.5em;left:0;margin-top:-.6em;position:absolute;text-align:center;top:50%;width:100%} #top-link:hover,#top-link:focus{top:-3.1em} #raw-file{position:relative;width:100%} #raw-file a{background:#9fc73f;bottom:-3em;color:#030;font-weight:bold;padding:1em;position:absolute;right:3em;text-decoration:none;text-shadow:0 1px 0 rgba(255,255,255,.5);text-transform:uppercase;z-index:99;-moz-box-shadow:0 2px 4px rgba(0,0,0,.8),inset 0 5px 7px rgba(255,255,255,.5);-ms-box-shadow:0 2px 4px rgba(0,0,0,.8),inset 0 5px 7px rgba(255,255,255,.5);box-shadow:0 2px 4px rgba(0,0,0,.8),inset 0 5px 7px rgba(255,255,255,.5);-moz-border-radius:2px;-ms-border-radius:2px;-webkit-border-radius:2px;border-radius:2px} #raw-file a:hover,#raw-file a:focus{background:#add353;color:#030} </style>
+  
+   <link rel="stylesheet" media="screen,projection" href="cssmap-continents/cssmap-continents.css" />
+    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="http://cssmapsplugin.com/4/jquery.cssmap.js"></script>
+    <script>
+      /* THIS IS NOT A PART OF THE MAP'S SCRIPT! Don't put it on your site!
+     * Prism: Lightweight, robust, elegant syntax highlighting
+     * MIT license http://www.opensource.org/licenses/mit-license.php/
+     * @author Lea Verou http://lea.verou.me
+     */(function(){var e=/\blang(?:uage)?-(?!\*)(\w+)\b/i,t=self.Prism={util:{type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},clone:function(e){var n=t.util.type(e);switch(n){case"Object":var r={};for(var i in e)e.hasOwnProperty(i)&&(r[i]=t.util.clone(e[i]));return r;case"Array":return e.slice()}return e}},languages:{extend:function(e,n){var r=t.util.clone(t.languages[e]);for(var i in n)r[i]=n[i];return r},insertBefore:function(e,n,r,i){i=i||t.languages;var s=i[e],o={};for(var u in s)if(s.hasOwnProperty(u)){if(u==n)for(var a in r)r.hasOwnProperty(a)&&(o[a]=r[a]);o[u]=s[u]}return i[e]=o},DFS:function(e,n){for(var r in e){n.call(e,r,e[r]);t.util.type(e)==="Object"&&t.languages.DFS(e[r],n)}}},highlightAll:function(e,n){var r=document.querySelectorAll('code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code');for(var i=0,s;s=r[i++];)t.highlightElement(s,e===!0,n)},highlightElement:function(r,i,s){var o,u,a=r;while(a&&!e.test(a.className))a=a.parentNode;if(a){o=(a.className.match(e)||[,""])[1];u=t.languages[o]}if(!u)return;r.className=r.className.replace(e,"").replace(/\s+/g," ")+" language-"+o;a=r.parentNode;/pre/i.test(a.nodeName)&&(a.className=a.className.replace(e,"").replace(/\s+/g," ")+" language-"+o);var f=r.textContent;if(!f)return;f=f.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/\u00a0/g," ");var l={element:r,language:o,grammar:u,code:f};t.hooks.run("before-highlight",l);if(i&&self.Worker){var c=new Worker(t.filename);c.onmessage=function(e){l.highlightedCode=n.stringify(JSON.parse(e.data));l.element.innerHTML=l.highlightedCode;s&&s.call(l.element);t.hooks.run("after-highlight",l)};c.postMessage(JSON.stringify({language:l.language,code:l.code}))}else{l.highlightedCode=t.highlight(l.code,l.grammar);l.element.innerHTML=l.highlightedCode;s&&s.call(r);t.hooks.run("after-highlight",l)}},highlight:function(e,r){return n.stringify(t.tokenize(e,r))},tokenize:function(e,n){var r=t.Token,i=[e],s=n.rest;if(s){for(var o in s)n[o]=s[o];delete n.rest}e:for(var o in n){if(!n.hasOwnProperty(o)||!n[o])continue;var u=n[o],a=u.inside,f=!!u.lookbehind||0;u=u.pattern||u;for(var l=0;l<i.length;l++){var c=i[l];if(i.length>e.length)break e;if(c instanceof r)continue;u.lastIndex=0;var h=u.exec(c);if(h){f&&(f=h[1].length);var p=h.index-1+f,h=h[0].slice(f),d=h.length,v=p+d,m=c.slice(0,p+1),g=c.slice(v+1),y=[l,1];m&&y.push(m);var b=new r(o,a?t.tokenize(h,a):h);y.push(b);g&&y.push(g);Array.prototype.splice.apply(i,y)}}}return i},hooks:{all:{},add:function(e,n){var r=t.hooks.all;r[e]=r[e]||[];r[e].push(n)},run:function(e,n){var r=t.hooks.all[e];if(!r||!r.length)return;for(var i=0,s;s=r[i++];)s(n)}}},n=t.Token=function(e,t){this.type=e;this.content=t};n.stringify=function(e){if(typeof e=="string")return e;if(Object.prototype.toString.call(e)=="[object Array]")return e.map(n.stringify).join("");var r={type:e.type,content:n.stringify(e.content),tag:"span",classes:["token",e.type],attributes:{}};r.type=="comment"&&(r.attributes.spellcheck="true");t.hooks.run("wrap",r);var i="";for(var s in r.attributes)i+=s+'="'+(r.attributes[s]||"")+'"';return"<"+r.tag+' class="'+r.classes.join(" ")+'" '+i+">"+r.content+"</"+r.tag+">"};if(!self.document){self.addEventListener("message",function(e){var n=JSON.parse(e.data),r=n.language,i=n.code;self.postMessage(JSON.stringify(t.tokenize(i,t.languages[r])));self.close()},!1);return}var r=document.getElementsByTagName("script");r=r[r.length-1];if(r){t.filename=r.src;document.addEventListener&&!r.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",t.highlightAll)}})();; Prism.languages.markup={comment:/&lt;!--[\w\W]*?--(&gt;|&gt;)/g,prolog:/&lt;\?.+?\?&gt;/,doctype:/&lt;!DOCTYPE.+?&gt;/,cdata:/&lt;!\[CDATA\[[\w\W]+?]]&gt;/i,tag:{pattern:/&lt;\/?[\w:-]+\s*(?:\s+[\w:-]+(?:=(?:("|')(\\?[\w\W])*?\1|\w+))?\s*)*\/?&gt;/gi,inside:{tag:{pattern:/^&lt;\/?[\w:-]+/i,inside:{punctuation:/^&lt;\/?/,namespace:/^[\w-]+?:/}},"attr-value":{pattern:/=(?:('|")[\w\W]*?(\1)|[^\s>]+)/gi,inside:{punctuation:/=|&gt;|"/g}},punctuation:/\/?&gt;/g,"attr-name":{pattern:/[\w:-]+/g,inside:{namespace:/^[\w-]+?:/}}}},entity:/&amp;#?[\da-z]{1,8};/gi};Prism.hooks.add("wrap",function(e){e.type==="entity"&&(e.attributes.title=e.content.replace(/&amp;/,"&"))});; Prism.languages.css={comment:/\/\*[\w\W]*?\*\//g,atrule:/@[\w-]+?(\s+[^;{]+)?(?=\s*{|\s*;)/gi,url:/url\((["']?).*?\1\)/gi,selector:/[^\{\}\s][^\{\}]*(?=\s*\{)/g,property:/(\b|\B)[a-z-]+(?=\s*:)/ig,string:/("|')(\\?.)*?\1/g,important:/\B!important\b/gi,ignore:/&(lt|gt|amp);/gi,punctuation:/[\{\};:]/g};Prism.languages.markup&&Prism.languages.insertBefore("markup","tag",{style:{pattern:/(&lt;|<)style[\w\W]*?(>|&gt;)[\w\W]*?(&lt;|<)\/style(>|&gt;)/ig,inside:{tag:{pattern:/(&lt;|<)style[\w\W]*?(>|&gt;)|(&lt;|<)\/style(>|&gt;)/ig,inside:Prism.languages.markup.tag.inside},rest:Prism.languages.css}}});; Prism.languages.clike={comment:{pattern:/(^|[^\\])(\/\*[\w\W]*?\*\/|[^:]\/\/.*?(\r?\n|$))/g,lookbehind:!0},string:/("|')(\\?.)*?\1/g,keyword:/\b(if|else|while|do|for|return|in|instanceof|function|new|try|catch|finally|null|break|continue)\b/g,"boolean":/\b(true|false)\b/g,number:/\b-?(0x)?\d*\.?[\da-f]+\b/g,operator:/[-+]{1,2}|!|=?&lt;|=?&gt;|={1,2}|(&amp;){1,2}|\|?\||\?|\*|\//g,ignore:/&(lt|gt|amp);/gi,punctuation:/[{}[\];(),.:]/g};; Prism.languages.javascript=Prism.languages.extend("clike",{keyword:/\b(var|let|if|else|while|do|for|return|in|instanceof|function|new|with|typeof|try|catch|finally|null|break|continue)\b/g,number:/\b(-?(0x)?\d*\.?[\da-f]+|NaN|-?Infinity)\b/g});Prism.languages.insertBefore("javascript","keyword",{regex:{pattern:/(^|[^/])\/(?!\/)(\[.+?]|\\.|[^/\r\n])+\/[gim]{0,3}(?=\s*($|[\r\n,.;})]))/g,lookbehind:!0}});Prism.languages.markup&&Prism.languages.insertBefore("markup","tag",{script:{pattern:/(&lt;|<)script[\w\W]*?(>|&gt;)[\w\W]*?(&lt;|<)\/script(>|&gt;)/ig,inside:{tag:{pattern:/(&lt;|<)script[\w\W]*?(>|&gt;)|(&lt;|<)\/script(>|&gt;)/ig,inside:Prism.languages.markup.tag.inside},rest:Prism.languages.javascript}}});;
+
+    $(function($) {
+      var msA=$('#maps-switcher').find('a'),scroll_timer,displayed=false,$message=$('#top-link'),$window=$(window),top=$(document.body).children(0).position().top;$('.in-nav').click(function(){var elementClicked=$(this).attr("href"),destination=$(elementClicked).offset().top;$("html:not(:animated),body:not(:animated)").animate({scrollTop:destination-20},1500);return false;});$window.scroll(function(){window.clearTimeout(scroll_timer);scroll_timer=window.setTimeout(function(){if($window.scrollTop()<=top){displayed=false;$message.fadeOut();}else if(displayed==false){displayed=true;$message.stop(true,true).fadeIn().click(function(){$("html:not(:animated),body:not(:animated)").animate({scrollTop:0},1500);$message.fadeOut('slow');return false;});}},300);}); $('.sample').addClass('hidden');$('#example1').addClass('active');$(msA).click(function(){var lH=$(this).attr('href'),mH=$(lH).outerHeight();$('#maps-switcher').find('a').removeClass('active');$('.sample').removeClass('active').addClass('hidden');$(lH).removeClass('hidden').addClass('active');$(this).addClass('active');return false;});
+      $("#map-continents").cssMap({size:540,tooltips:"floating"});
+      $("#map-continents2").cssMap({size:750,tooltips:false,cities:true});
+      $("#map-continents3").cssMap({size:540,multipleClick:true,clicksLimit:3});
+      $("#map-continents4").cssMap({size:430,tooltips:"floating-bottom-right",visibleList:true,cities:true});
+      $("#map-continents5").cssMap({size:540,onClick:function(e){var a=e.children('a'),link=a.attr('href'),text=a.text(),className=e.attr('class').split(' ')[0];$('#clickmessage1').text('=> '+link+'; ');$('#clickmessage2').text('=> '+text+'; ');$('#clickmessage3').text('=> '+className+'; ');},onSecondClick: function(e){ $('#clickmessage1,#clickmessage2,#clickmessage3').text(""); } });
+    });
+
+    </script>
+ <title>FNB : Contact Map</title>
+</head>
+<body>
+<br>
+ <!-- sample maps -->
+ <section id="samples"><hr/>
+  
+  <div id="example1" class="sample active">
+   <div id="map-continents"><ul class="continents"> <li class="c1"><a href="africa.html">Africa</a></li> <li class="c2"><a href="asia.html">Asia</a></li> <li class="c3"><a href="australia.html">Australia and Southern Pacific</a></li> <li class="c4"><a href="europe.html">Europe</a></li> <li class="c5"><a href="northamerica.html">North America</a></li> <li class="c6"><a href="southamerica.html">South America</a></li></ul></div>
+   <pre><h4 class="language-javascript"><center>Food Not Bombs : Asia
+</center></code></pre>
+  </div><br><br>
+  
+  
+ </section>
+
+<center>
+ <section id="setup"><hr/>
+<CENTER><font FACE="arial, helvetica" color="#8304D9" SIZE=5><b>
+ALL KNOWN GROUPS IN ASIA, AUSTRALIA AND NEW ZEALAND</b></font>
+<BR>
+
+<br>
+
+
+
+
+This page was updated February 21, 2014 <br>
+
+There are 175 known groups in Asia, Australia and New Zealand.<br><br>
+
+<B>AUSTRALIA and NEW ZEALAND</B><BR>
+<A HREF="australia.html">Australia and New Zealand contacts</a><br><br><br>
+
+<b>CHINA</B><br>
+ <b>Beijing</b><br>
+<a href="mailto:grace2maine@gmail.com">grace2maine@gmail.com</a>
+<br><a href="chinese_cook_for _peace.html">Cook For Peace in Chinese</a><p>
+<B>INDIA</B><br>
+
+
+<b>Kota</b><br>
+C/O Rural Development and Youth Training Institute
+<br>
+1-K-22, Dadabari <br>
+Kota-324009<br>
+
+Rajasthan<br>
+India<br>
+
+ JAMBU KUMAR JAIN  PH  :  +91-744-503823<br>
+
+CONVENER          FAX.   :  +91-744-361205<br>
+<a href="mailto:jambusuman@yahoo.com">jambusuman@yahoo.com</A>
+<p>
+
+
+
+
+<b>INDONESIA</b><br>
+<b>Bandung</b><br>
+<A HREF="http://www.facebook.com/profile.php?id=1288964472&ref=sgm">facebook.com/bandug</a><br>
+<A HREF="http://groups.yahoo.com/group/fnbbdg/">Bandung FNB website</a><br>
+
+Post message:	fnbbdg@yahoogroups.com<br>
+
+Subscribe:	fnbbdg-subscribe@yahoogroups.com<br>
+Unsubscribe:	fnbbdg-unsubscribe@yahoogroups.com<br>
+List owner:	fnbbdg-owner@yahoogroups.com<p><center>
+<b>Borneo</b><br>
+<A HREF="http://a-manila-x.wikidot.com/food-not-bombs-borneo-indonesia-dispatch">a-manila-x.wikidot.com/food-not-bombs-borneo-indonesia</a><P>
+<b>Jakarta</b><br>
+
+Kontak salah satu agen Dipepi Free-Food Gang di 0811 825 545,0856 15
+010 15atau 021-7266438.<br>
+friendster : fnbjkt@lycos.com<br>
+
+myspace : fnbjkt@lycos.com atau<br>
+email kami : <A HREF="mailto:dipepifreefoodgang@gmail.com">dipepifreefoodgang@gmail.com</a><br>
+<a href="http://groups.yahoo.com/group/fnb-jkt/">http://groups.yahoo.com/group/fnb-jkt/</a><br>
+<A HREF="http://www.facebook.com/profile.php?id=100001096501877&ref=sgm">facebook.com/ponti</a><br>
+
+<a href="http://fnb.blogs.friendster.com/food_not_bombs/2007/10/a_really_really_1.html">http://fnb.blogs.friendster.com/food_not_bombs</a><br>
+Related Link:<br>	<A HREF="http://www.foodnotbombs.cjb.net/">www.foodnotbombs.cjb.net/</a><br>
+
+Post message:	fnb-jkt@yahoogroups.com<br>
+
+Subscribe:	<A HREF="mailto:fnb-jkt-subscribe@yahoogroups.com">fnb-jkt-subscribe@yahoogroups.com</a><br>
+Unsubscribe:	<A HREF="mailto:fnb-jkt-unsubscribe@yahoogroups.com">fnb-jkt-unsubscribe@yahoogroups.com</a><br>
+List owner:	<A HREF="mailto:fnb-jkt-owner@yahoogroups.com">fnb-jkt-owner@yahoogroups.com</a> <br>
+<A HREF="mailto:senjatarahasia@yahoo.com">senjatarahasia@yahoo.com</a><p>
+<b>Jambi</b><br>
+<A HREF="http://www.facebook.com/pages/FOOD-NOT-BOMBS-JAMBI/201781469864916">www.facebook.com/pages/FOOD-NOT-BOMBS-JAMBI</a><p>
+
+
+<b>Manado</b><br>
+
+<A HREF="http://www.facebook.com/foodnotbombs.manado">www.facebook.com/foodnotbombs.manado</a><p>
+
+
+<b>Makassar</b><br>
+
+<A HREF="http://fnbmks.blogspot.com/">http://fnbmks.blogspot.com</a><br>
+<A HREF="http://www.facebook.com/pangan.semua?ref=ts&fref=ts">www.facebook.com/pangan.semua</a>
+<p>
+
+<b>Medan</B><br><A HREF="http://www.facebook.com/foodnotbombsmedan">www.facebook.com/foodnotbombsmedan</a><p>
+
+
+
+<b>Palembang</b><br>
+<A HREF="http://www.facebook.com/profile.php?id=100000341407848">www.facebook.com/Palembang</a>
+<p>
+
+
+<b>Ponti</b><br>
+<A HREF="http://www.facebook.com/fnbponti">www.facebook.com/fnbponti</a><p>
+
+
+
+
+<b>JAPAN</b><br>
+<b>Hokkaido</b><br>
+<A HREF="mailto:mod@aa.tufs.ac.jp">mod@aa.tufs.ac.jp</a><br>
+<a href="http://www.myspace.com/illcommonz">http://www.myspace.com/illcommonz</a><p>
+<b>Tokyo</b><br>
+Contact Kaori Yoshida <br><A HREF="mailto:kaory@rc4.so-net.ne.jp">kaory@rc4.so-net.ne.jp</a>
+
+<br>
+
+<A HREF="http://lists.riseup.net/www/info/foodnotbombstokyo">Join the Tokyo Food Not Bombs list-serv</a><br>
+
+<A HREF="http://d.hatena.ne.jp/gnarly/20040902#p1">Food Not Bombs in Tokyo</a><br>
+<p>
+
+<B>MALAYSIA</B><BR>
+<b>Georgetown</b><br>
+19 D Rangoon Road, <br>
+10030 Georgetown Penang Malaysia<br>
+
+<A HREF="mailto:fnb_gt@yahoo.com">fnb_gt@yahoo.com</a><br>
+
+<A href="http://fnbgt.cjb.net "> Georgetown FNB website</a> <P>
+ <b>Kota Kinabalu</b>  <br>
+C/O Radzy <br>
+Awang Hafiz bin Hj.Awang Tahir,<br>
+No.12,Lorong Gerunggung B,<br>
+
+Taman Sempelang,Sembulan,<br>
+88100 kota kinabalu,<br>
+
+Borneo Sabah<br>
+Malaysia <br>
+<A HREF="mailto:xavier_radzy@hotmail.com">xavier_radzy@hotmail.com</A><p>
+
+<b> Kuala Lumpur</b> <br>
+<A HREF="mailto:bidas@riseup.net">bidas@riseup.net</a><br>
+<A href="http://www.fnbkl.cjb.net">KUALA LUMPUR FNB website</a><br>
+
+<A href="http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&friendid=2141030"> Kuala Lumpur Myspace</a><P>
+<b> Pulau Pinang</b> <br>
+
+Nombor 8<br>Lorong Prangin<br>10300 Pulau Pinang <br>
+Tel: 04-2617585<br>
+
+<A HREF="mailto:fnbpp@yahoo.com">fnbpp@yahoo.com</a><br>
+<A href="http://www.fnbpulaupinang.cjb.net">Pulau Pinang FNB website</A>
+
+<P>
+
+
+<B>PHILIPPINES</B><BR>
+
+<b>Bacolod City Negros Island</b><br>
+
+<A HREF="http://profile.myspace.com/index.cfm?fuseaction=user.viewprofile&friendID=91991830">Bacolod FNB website</a><p>
+
+
+<b> Baliwag,  Bulacan</b><br>
+<A HREF="mailto:aljonzki23@hotmail.com">aljonzki23@hotmail.com</a>
+<A HREF="mailto:alwaysdubi@yahoo.com">alwaysdubi@yahoo.com</a>
+<A HREF="mailto:FNBbaliwag01@gmail.com">FNBbaliwag01@gmail.com</a><p>
+
+<b> Baquio</b><p>
+
+<b> Batangos</b><br>
+
+<b> Bicol</b><br>
+<b>Cebu</b><br>
+
+188-San Agustin village Inayawan<br>
+Cebu City Philippines 6000<br>
+
+There are 4 chapters in Cebu<br>
+<A HREF="mailto:earthfirst_cebu@yahoo.com">earthfirst_cebu@yahoo.com</a><p>
+<b>Dasmarinas,  Cavite</b><br>
+<A HREF="mailto:gutsondpunk@yahoo.com">gutsondpunk@yahoo.com</A><P>
+<b>Dumaguete City</b><br>
+Dumaguete City, Negros Oriental contact phone 0916-7972135<br>
+<A HREF="mailto:karlllena@yahoo.com">karlllena@yahoo.com</a><br>
+<A HREF="http://www.fnbdgte.741.com"> Dumaguete City website</a> <p>
+<b>Gensantos</b><BR>
+<b>Iloilo</b><br>
+<A HREF="mailto:foodnotbombsiloilo@yahoo.com">foodnotbombsiloilo@yahoo.com</a><p> 
+
+<b> Kabankalan City a small city in Negros Island </b><br>
+<A HREF="https://www.facebook.com/pages/Kabankalan-City-Food-Not-Bombs/188024454676585">www.facebook.com/pages/Kabankalan-City-Food-Not-Bombs</a><br>
+
+<A HREF="http://www.facebook.com/photo.php?fbid=571551666206284&set=o.2204806848&type=1&theater">www.facebook.com</a><p>
+<b>Laguna</b><BR>
+<b>Lanang Davao City</b>
+
+<p>
+<b>Leyte</b><p>
+
+<b>Lucena City</b><BR>
+A.Larm.A Kolektiva <BR>
+c/o KrustyBud<BR>
+
+113 Jasmin st. Zaballero Subd<BR>
+
+4301 Lucena City, <BR>Philippines<BR>
+(042)373-1743<BR>
+<A HREF="mailto:Larm_Solidaridad@yahoo.com">Larm_Solidaridad@yahoo.com </a><br>
+
+Every Sunday 2-6pm-Perez Park, Lucena City <br>
+
+Cook at DSWD (Dept. of Social & Welfare Dev1t) Sunday 4-6pm (Civic Welfare Service-CWS/ School Apostolate) 
+<p>
+
+<b>Lucia Pasig City</b><br>
+ARLENE FELIPE<br>
+
+   #26 Rissa st., Llamson Subdivision, Barangay Sta.<br>
+Lucia Pasig City<br>
+
+  Philippines 1600<br>
+<A HREF="mailto:fnb_cainta@hotmail.com">fnb_cainta@hotmail.com</a><br>
+When: If we are here in our place we do it every saturday. If we're out of
+   town, we dont have a specific date and time.<br>
+
+   Where: Most of the time we held it in front of a mall, school or food
+   joints. Sometimes we conduct it in different depressed areas out of our
+   community.
+   <p>
+  <b> Naga City</b><br>
+<A HREF="http://vimeo.com/86959952">Food Not Bombs Naga City Video</a>
+
+<p>
+<b>Pampanga</b><p>
+<b>Pangasinan</b><p>
+
+<b>Polomolok, South Cotababo</b><br>
+
+<A HREF="http://www.facebook.com/pages/Polomolok-FOOD-NOT-Bombs/226691484015227?sk=wall">www.facebook.com/pages/Polomolok-FOOD-NOT-Bombs</a><p>
+<b>Samar</b><p>
+
+<b>Sanjose del Monte, Bulacan</b><br>
+<A HREF="http://www.facebook.com/asherisraelquimson">www.facebook.com/asherisraelquimson</a><p>
+
+
+
+<b>Tarlac</b><p>
+
+<b>Taguig City, Manila</b><br>
+Bicutan kolektiv
+blk 45 lot 33 osano st. purok 3 upper bicutan taguig city
+<br>
+<A HREF="mailto:fnbbicutan@yahoo.com">fnbbicutan@yahoo.com</a><br>
+<A HREF="mailto:lamok_punk@yahoo.com">lamok_punk@yahoo.com</a><br>
+
+<A HREF="mailto:ian_smiths2000@yahoo.com">ian_smiths2000@yahoo.com</a>
+<p>
+
+<b>SINGAPORE</b><br><br>
+<b>Singapore</b><br>
+<A HREF="mailto:leileijessica.passion@gmail.com">leileijessica.passion@gmail.com</a><br>
+<p>
+<b>SOUTH KOREA</b><br><br>
+<b>Seoul</b><br>
+<A HREF="mailto:dopehead@jinbo.net">dopehead@jinbo.net</a><p>
+
+<b>THAILAND</b><br><br>
+<b>Apis </b><br>
+<A HREF="mailto:maxh974@apis-moodle.com">maxh974@apis-moodle.com</a><p>
+
+
+<b>Bangkok</b><br>
+ +66 83 991 9876<br>
+ Fai-08 3991 9876<br>
+Air-08 1561 6687 <br>
+<A HREF="mailto:fnb.bkk@gmail.com">fnb.bkk@gmail.com</a><br>
+<A HREF="mailto:fnb_bkk@yahoo.com">fnb_bkk@yahoo.com</a><br>
+<A HREF="fnbbangkok.blogspot.com">fnbbangkok.blogspot.com</a><br>
+
+<A HREF="http://review.semsikkha.org/content/view/412/68/">Food Not Bombs in Pacharasarn</a><p>
+</Center>
+
+   </section>
+
+</center>
+<footer>
+ 
+</footer>
+</body>
+</html>

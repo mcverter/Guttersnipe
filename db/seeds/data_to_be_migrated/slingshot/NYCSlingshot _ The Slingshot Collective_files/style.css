@@ -1,0 +1,148 @@
+/*
+ Theme Name:   Twelve 14
+ Theme URI:    http://anandu.info/twelve14
+ Description:  The WordPress theme twenty twelve has a very nice layout for those who just want a simple blog, Now the latest theme Twenty Fourteen Is Released.This child theme imagines Twenty Twelve's Layout on Twenty Fourteen Theme.
+ Author:       Anandu B Ajith
+ Author URI:   http://anandu.info
+ Template:     twentyfourteen
+ Version:      1.0.3
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout
+ Text Domain:  twelve-fourteen
+*/
+
+@import url("../twentyfourteen/style.css");
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+@media screen and (min-width: 783px) {
+    .primary-navigation {
+        float: right;
+        margin-left: 20px;
+    }
+
+    a {
+        transition: all .5s ease;
+    }
+}
+
+.site {
+    margin: 0 auto;
+    max-width: 900px;
+    width: 100%;
+}
+
+.site-header {
+    max-width: 900px;
+}
+
+@media screen and (min-width: 1110px) {
+    .archive-header,.comments-area,.image-navigation,.page-header,.page-content,.post-navigation,.site-content .entry-header,
+	    .site-content .entry-content,.site-content .entry-summary,.site-content footer.entry-meta {
+        padding-left: 55px;
+    }
+}
+
+.site-content .entry-header,.site-content .entry-content,.site-content .entry-summary,.site-content .entry-meta,.page-content {
+    max-width: 474px;
+}
+
+.comments-area {
+    max-width: 474px;
+}
+
+.post-navigation, .image-navigation {
+    max-width: 474px;
+}
+
+@media screen and (min-width: 594px) {
+    .site-content .has-post-thumbnail .entry-header {
+        margin-top: -48px !important;
+    }
+}
+
+@media screen and (min-width: 846px) {
+    .site-content .has-post-thumbnail .entry-header {
+        margin-top: -48px !important;
+    }
+}
+
+@media screen and (min-width: 1040px) {
+    .site-content .has-post-thumbnail .entry-header {
+        margin-top: -48px !important;
+    }
+}
+
+.site:before,#secondary {
+    width: 0;
+    display: none;
+}
+
+.ie8 .site:before,.ie8 #secondary {
+    width: 0px;
+    display: none;
+}
+
+.featured-content {
+    padding-left: 0;
+}
+
+.site-content,.site-main .widecolumn {
+    margin-left: 0;
+}
+
+.ie8 .site-content,.ie8 .site-main .widecolumn {
+    margin-left: 0;
+}
+
+@media screen and (min-width: 1008px) {
+    .search-box-wrapper {
+        padding-left: 0;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .search-box-wrapper,.featured-content {
+        padding-left: 0;
+    }
+}
+
+.hentry {
+    max-width: 900px;
+}
+
+img.size-full,img.size-large,.wp-post-image,.post-thumbnail img,.site-content .post-thumbnail img {
+    max-height: 572px;
+}
+
+.slider .featured-content .hentry {
+    max-height: 500px;
+}
+
+.slider .featured-content {
+    max-width: 1600px;
+    margin: 0px auto;
+}
+
+.slider .featured-content .post-thumbnail img {
+    max-width: 1600px;
+    width: 100%;
+}
+
+.slider .featured-content .post-thumbnail {
+    background: none;
+}
+
+.slider .featured-content a.post-thumbnail:hover {
+    background-color: transparent;
+}
+
+.site-content .hentry {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.site-content .hentry:first-child {
+    border-top: 0;
+}
+
+.site-navigation ul {
+max-width: 714px;}

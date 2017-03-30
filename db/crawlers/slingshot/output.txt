@@ -1,0 +1,901 @@
+!!
+python parse_slingshot_output.py 
+Womyns Agenda for Change 	 PO Box 883, #1 Sisowat Quay, Phnom Penh, Cambodia Tel: (885) 12-222-171 	 [11.56245, 104.91601]
+Loft 345 	 Guangzhou City, Haizhu District Jiangnan East Road, Xiaogang Garden No.19 4th floor Guangzhou, China 	 [23.113511, 113.289942]
+Social Movement Resourse Centre 	 Flat A 8/F, Kingland Apartments, 739 Nathan Rd. Price Edward, Kowloon, Hong Kong 	 [22.32866, 114.19121]
+Woofer Ten Shanghai Street Artspace 	 404 Shanghai Street, Yaumatei, Kowloon, Hong Kong 	 [22.32866, 114.19121]
+Halfway Cafe 	 No. 9, Alley 51, Lane 269, Section 3, Roosevelt Rd, Da�an District
+Taipei City, Taiwan 	 [-9.42257, 147.16641]
+Tang-Shan bookstore 	 B1, No.9, Lane 333, Sec. 3, Roosevelt Rd., Da-an District, Taipei City 106, Taiwan, 886-2-2363-3072* 	 [24, 121]
+Go Straight Cafe 	 Tingzhou Rd. Zhongzheng Dist. Taipei City 100 Taiwan (thee lane 27 Taipower building station exit first along the alley Lyle rich left straight ahead 886-(2) 2365-3703 	 [24, 121]
+Social Movement Resourse Centre 	 Flat A 8/F, Kingland Apartments, 739 Nathan Rd. Price Edward, Kowloon, Hong Kong 	 [22.32866, 114.19121]
+!Woofer Ten Shanghai Street Artspace 	 404 Shanghai Street, Yaumatei, Kowloon, Hong Kong 	 [22.32866, 114.19121]
+Open Space 	 B-301, Kanchanjunga Building, Kanchan Ln. Pune 3 India 411004 tel. 25457371 	 [22.412321, 79.132924]
+Shikshantar 	 83 Adinath Nagar, Udaipur, Rajasthan India 313004 tel. 91-294-245-1303 India 	 [24.33, 73.77]
+Swaraj University 	 39 Old Fatehpura 1st Floor Udaipur India 31304 tel. 09414155919 	 [22.412321, 79.132924]
+C2O Library & Collabtive 	 Jl. Dr. Cipto 20, Surabaya 60264, Indonesia 	 [-7.24917, 112.75083]
+Harder Distro 	 Jl. Ciampelas 219a, Bandung, Java, Indonesia 	 [-5, 120]
+Instituta 	 Jl. Arteri Permata Hijau No.14, Kebayoran Lama, Jarkata Selatan, Indonesia 	 [-5, 120]
+Taring Badi 	 Jl. Moh Kafi ll, Gg Setiabudi No. 39, Rt. 11, Rw.8, Srengsengsawah, Jagakarsa, Jakarta Selatan 12640, Indonesia Tel: 021-7270666 	 [-6.282174, 106.782542]
+Taring Padi Radical Art Collective 	 Dusun Sembungan, Rt.02, Desa Bangunjiwo Kec. Kasihan, Kab.Bantul, Yogyakarta, Indonesia 	 [-7.80139, 110.36472]
+☭RIP☭Sayap Ikarus Infoshop 	 Bandung, Java, Indonesia resist_revolt@yahoo.com 	 [-6.92222, 107.60694]
+☭RIP☭Stupid Distro 	 Jl. Letda Winda no. 19 Denpasar, Bali, Indonesia 	 [-8.65, 115.21667]
+*Alternative Information Center (Beit Sahour) 	 Building 111 Main Street - Beit Sahour, occupied Palestine - 00972-2-2775444 	 [-38.220016, 145.038643]
+*Alternative Information Center (Jerusalem) 	 Queen Shlomzion Street 4 (second floor)- West Jerusalem PO Box 31417 Israel - 00972-2-6241159 	 [31.5, 34.75]
+Ashanha zman (azhes of time) 	 17 Anielewicz, Be'er Sheva Israel 077-7644218 	 [31.5, 34.75]
+☭RIP☭Salon Mazal Infoshop 	 3 Simta Almonit, Tel Aviv, Israel 972 3 6297734 	 [32.08088, 34.78057]
+Bar Akane 	 2-1-17-1F Nishi-Waseda, Shinjuku-ku Tokyo, Japan 162-0051 	 [35.7065391, 139.7178221]
+Bar Grisette 	 1-1-5 Kabuki-cho, Shinjuku-ku Tokyo, Japan 160-0032 	 [35.661208, 139.3802]
+Bar Six 	 1-36-10 chuo Okinawa City Okinawa Japan 	 [15.2863, 145.81506]
+Cafe Lavanderia 	 2-12-9 Kouyousha 1F Shinjuku, Shinjuku-ku Tokyo, Japan 160-0022 	 [35.661208, 139.3802]
+Cocoroom 	 1-15-11 Sannou, Nishinari-ku Osaka, Japan 557-0001 	 [34.69374, 135.50218]
+CRY IN PUBLIC 	 3-11-35-1F Omiya-cho, Mishima-shi Shizuoka Japan 411-0035 	 [35.1262685, 138.9171042]
+Kisui Kuukou 	 434-18 Matsuzaki, Yurihama-cho Tohaku-gun, Tottori, Japan 689-0711 	 [35.379594, 133.839626]
+!Hantenchi 	 1-23-4 Shin-Tenjin-Bld 2F, Imaizumi Chuo-ku Fukuoka-shi, Fukuoka Japan 810-0021 	 [33.568796, 130.396607]
+Irregular Rhythm Asylum 	 1-30-12-302 Shinjuku, Shinjuku-ku Tokyo-to, Japan 160-0022 	 [35.69355, 139.70352]
+Kakekomitei 	 1-17-12 B1 Fujimidai, Kunitachi-shi Tokyo, Japan 186-0003 	 [35.661208, 139.3802]
+Kaman Media Center 	 1-11-6 Taishi, Nishinar, Osaka, Japan 557-0002 tel. 06-6643-3233 	 [34.69374, 135.50218]
+Kiryusha 	 5-29-17 Daizawa, Setagaya-ku Tokyo, Japan 155-0032 	 [35.661208, 139.3802]
+Kisui Kuukou 	 434-18 Matsuzaki, Yurihama-cho Tohaku-gun, Tottori, Japan 689-0711 	 [35.379594, 133.839626]
+Mosakusha 	 2-4-9 Shinjuku, Shinjuku-ku Tokyo-to, Japan 160-0022 	 [35.69355, 139.70352]
+Nantoka Bar 	 3-4-12 Kouenji-Kita, Suginami-ku Tokyo, Japan 166-0002 	 [35.661208, 139.3802]
+Roji to Hito 	 1-14 2F Kanda Jinboucho, Chiyoda-ku Tokyo, Japan 101-0051 	 [35.69097, 139.77062]
+Shirouto no Ran 	 8-9-11 Kouenji-Kita, Suginami-ku Tokyo, 166-0022 Japan 	 [35.661208, 139.3802]
+Shirouto no Ran 	 3-9-11 Kouenji-Kita, Suginami-ku Tokyo, Japan 166-0022 	 [35.661208, 139.3802]
+No headline and/or contact. head: The following places are defunct  contact:  
+*AGIT 	 74-36 Jangjeon 1-Dong, Geumjeong-ju, Busan, South Korea 8216-866-1235, artbefree@gmail.com 	 [36.382192, 128.123986]
+B House 	 10-1 Geumgang-ro 335Beon-gil, Geumjeong-gu, Busan, Korea 	 [35.264248, 129.088497]
+Bingage Cafe 	 2-22-1 Yongsan-Dong, Yongsan-gu, Seoul, South Korea 82(70)8748-1968 	 [37.539619, 127.009676]
+Book Society, the 	 2F, 13 Tongui-dong, Jongno-gu, Seoul 110-040 Korea 	 [63.189832, 10.306458]
+Cafe Byul Kkol 	 Hawolgok-dong 27-130 1F Seongbuk-gu, Seoul, South Korea 	 [37.60267, 127.01448]
+Cafe Haecceity 	 389-20, Jangjeon 1-dong, Geumjeong-gu, Busan, Korea 	 [35.23489, 129.07588]
+Gangjeong Peace Book Cafe 	 4521-22, Gangjeong-dong, Seogwipo-si, Jeju-do, Korea (697-829) tel. 070-8819-0923 	 [32.08088, 34.78057]
+Underground art space AGIT 	 74-36 Jangjeon 1-Dong, Geumjeong-gu, Busan, South Korea 8216-866-1235; artbefree@gmail.com 	 [36.382192, 128.123986]
+☭RIP☭People's Cultural Research Ctr 	 Seoul, Korea 018-866-1116 	 [37.539619, 127.009676]
+FNB Kuala Lumpur 	 Section 8 Pealing Jaya, Selangor 50250 Kuala Lumpur, Malaysia 	 [3.158907, 101.704979]
+!Lost Generation 	 8c, Jalan Panggung, 50000 Kuala Lumpur, Malaysia 58000 	 [3.1412, 101.68653]
+!The Ricecooker Shop & Kerbau 	 5A, Lorong Kurau, Bangsar Kuala Lumpur MALAYSIA 59100, thericecookershop@gmail.com 	 [2.5, 112.5]
+*Rumah Api 	 178 Jalan Merdeka, Kg Baru Ampang, Pekan Ampang, 68000 Selangor Malaysia 	 [3.1447257, 101.7632032]
+Save Our Selves 	 67 Noordin St. Penang Island, Malaysia 	 [2.5, 112.5]
+Save Our Selves 	 67 Noordin St Penang Island, Malaysia 	 [2.5, 112.5]
+Sattya Media Arts Collective 	 no street address - see website for directions.  Mail:  G.P.O Box No 12668, Kathmandu, Nepal +977 9813.485.716, ollective@sattya.org 	 [27.70169, 85.3206]
+☭RIP☭The Infoshop 	 c/o nk rai, PO Box 21778 Kathmandu, Nepal 	 [27.70169, 85.3206]
+Bombs and Candies Infolibrary 	 Blk 24 Lot 51 Phase 1 Ciudad Adelina Brgy. Conchu, Trece Martirez City Cavite, 4109 +639-096028849 candiesandwhims@riseup.net 	 [14.238952, 120.884807]
+Kinaiyahan Unahon Collective 	 Dinah B. Canonigo Blk. 24 Lot 4 Phase 2 Ciudad De Esperanza Cabantian, Davao City, Philippines 8000 	 [16.932122, 121.387948]
+NonCollective Radical Center 	 c/o Rhado Garcia,134B Ermin Garcia St., Cubao, Quezon City, Metro Manila, Philippines 1109 	 NoGeocode
+Sadee's Kitchen 	 Davae City, Phillipines 09107843815 anakorsakoff@gmail.com 	 NoGeocode
+☭RIP☭Manila Info/Autonomia 	 C/o Terry G# 7 Dr Tinio, Subd.Guinyang San Mateo, Rizal 1850 Philippines, mipcrew@riseup.net 	 NoGeocode
+Black Hole 	 212 Syed Alwi Rd. Singapore tel. 94817382/82818224 	 [32.08414, 34.79995]
+26A Collective 	 Tel Sokak No 26 / A Beyoglu / Istanbul (0212) 243 60 85 	 [41.031033, 28.970218]
+Göçmen Dayanışması Mutfağı 	 Sakiz Agaci Cd., No.56/A, Tarlabaşı, Istanbul, Turkey 	 [39.339547, 34.51052]
+infiAl 	 Bülbül Mah. Turan Cd., No: 36A, Istanbul, Turkey  infialpostasi@gmail.com 	 [41.240616, 28.419199]
+Komşu Kafe Collective 	 Uzun Hafiz Sokak, 83/A, Istanbul, Turkey +90 216 418 4679 	 [44.81667, 38.05]
+Neverland Hostel 	 Boğazkesen Caddesi No:96, 34425 İstanbul, Turkey +90 212 243 3177 	 [41.240616, 28.419199]
+SAHAF 26A 	 Caferağa Mah. Sakız Sokak No: 3/1 Kadıköy/İSTANBUL Tel: (0216) 336 37 52 	 NoGeocode
+Anarchistische Biblothek 	 Lerchenfelderstr. 124-126,1080 Wien Hof 3 Tür 1A Vienna, Austria
+info(at)a-bibliothek.org 	 NoGeocode
+Ernst Kirchweger Haus 	 Wielandgasse 2-4/A-1100 Wien/ Vienna Austria 	 [48.1774438, 16.3789676]
+Acrata 	 32 Rue de la Grande Ile 1000 Brussels, Belgium 	 [50.85045, 4.34878]
+*Infoshop Iskra 	 R.K Jeretova 5, Zadar, Croatia 	 [44.114388, 15.246654]
+*Infoshop Pippilotta(AKC) 	 Pierottijeva 11, 10000 Zagreb, Croatia 016197223 	 [45.806026, 15.976218]
+Infoshop Skatula 	 Molekula, Delta 5, 51000 Rijeka, Croatia 	 [48.031489, 11.609254]
+Infoshop Roko i Cicibela 	 Frankopanska 1, 10000 Zagreb, Croatia 	 [45.806026, 15.976218]
+*Klub Kocka/Koalicija Udruga Mladih (KUM) 	 Ulica Slobode 28, 21000 Split, Croatia +385 21 540 537 	 [43.50891, 16.43915]
+*Sto Cats 	 Gundulićeva 11, 10000 Zagreb, Croatia 	 [45.8114221, 15.9721629]
+Zagreb Anarchist Movement ZAP/ARK 	 Gajeva 55, 10000 Zagreb, Croatia 	 [45.8062052, 15.9766674]
+*Infocafe Sale 	 Orebitska 194-14 Praha 3, Czech Republic 	 [50.0860432, 14.44667]
+*Squat Klinika  	 Jeseniova 60, Žižkov, Prague, Czech republic 	 [50.0877157, 14.4665623]
+*Tri ocasci 	 Gorkého 37, Veveří, Brno, Czech republic 	 [49.1990109, 16.5932022]
+Utopia Infoshop 	 Belehradska 45, Czech Republic 	 [50.070864, 14.433034]
+No headline and/or contact. head: Defunct  contact:  
+Folkets Hus (People's House)  	 Stengade 50 2200 Copenhagen N. Denmark 	 [55.966966, 9.018163]
+*Ungdomshuset  	 Dortheavej 61, 2400 Copenhagen NV, Denmark 	 [55.966966, 9.018163]
+☭RIP☭Spekulateriet Book-Cafe 	 Sommerstedgade 30, kld., 1671 Kobenhavn V, Denmark 	 [55.966966, 9.018163]
+Assata Autonomous Bookstore 	 Van Broeckhuysenstraat 46, 6511 PK Nijmegen, 024-3605208 	 [51.843824, 5.865944]
+Izbruh Alt Culture Club 	 Soraska 7,4000 Kranj, Slovenia 	 [46.23887, 14.35561]
+Omladinski Ck13 	 Vojvode Bojovica 12 21000 Novi Sad, Serbia +381 21 4737 600, 601 	 [45.2584782, 19.8396379]
+Ulase12 	 Kristiine district at Ulase Street 12 Tallinn, Harjumaa, Estonia 	 [59.4268586, 24.7240328]
+No headline and/or contact. head: The following places are defunct  contact:  
+*Black Rabbit Hole 	 Hameentie 28, Helsinki, Finland 00530 ph 040-300-1909 	 [60.2127297, 24.9790105]
+lists not equal
+Alter Local
+Alter Local 	 8 Route des Creuses, 74960 Cran Gevrier, France
+alterlocal(at)riseup.net 	 NoGeocode
+Antigone 	 22 rue des Violettes, 38000 Grenoble, France
+antigone[at]ouvaton.org 	 [45.179337, 5.708445]
+Athénée Albert Camus 	 36 Rue de Cugnaux, 31300 Toulouse, France
+groupe-albert-camus@c-g-a.org 	 [43.592268, 1.42209]
+L'Athenee Libertaire 	 7 Rue du Muguet, 33000 Bordeaux, France 05 56 81 01 91
+librairiedumuguet[at]no-log.org 	 [46.698481, 2.549047]
+Athenee Libertaire 	 8 Rue de Fouquerolles, 02000 Merlieux, France 	 [49.516952, 3.506091]
+B17 	 17 Rue Paul Bellamy, 44000 Nantes, France 06 99 95 79 55 	 [47.228973, -1.554004]
+La BAF 	 2 chemin des Alpins, Grenoble, France
+labaf(at)gresille.org 	 [45.171747, 5.721008]
+Bar La Real 	 Rue Louis Auguste Blanqui, 66000 Perpignan, France 	 [42.697543, 2.897219]
+Bibliotheque-Infokiosque 	 152 Grand Rue, 30270 St Jean-du-Gard, France 	 [44.1066912, 3.8826432]
+CAJ Molodoi 	 Centre Autonome Jeune Molodoi
+19 Rue du Ban de la Roche, 67000 Strasbourg, France.  03 88 22 10 07
+info@molodoi.net / booking@molodoi.net 	 NoGeocode
+La Cantine Populaire 	 244 Rue de Nantes, 35000 Rennes, France
+cantine35[at]hotmail.fr 	 NoGeocode
+Café-Librairie Michèle Firkà 	 La Parole errante à la Maison de l'arbre 7/9  rue François Debergue 93100 Montreuil France   michelefirk@riseup.net 	 [48.857885, 2.438581]
+CIRA 	 Centre International de Recherche sur l'Anarchisme
+50 Rue Consolat, 13001 Marseille, France 09 50 51 10 89
+cira.marseille[at]free.fr 	 [46.698481, 2.549047]
+Centre Ascaso-Durutti 	 6 Rue Henri Rene, 34000 Montpellier, France 04 67 58 83 03 	 [43.60346, 3.882514]
+Centre Culturel Libertaire 	 4 Rue de Colmar, 59000 Lille, France
+ccl59[at]no-log.org 	 [50.620296, 3.052074]
+Chat Noir Toulousain 	 18 Avenue de la Gloire, 31500 Toulouse, France 09 52 58 35 90
+cnt.31[at]cnt-f.org 	 [43.607113, 1.472039]
+CSA Croix Rousse 	 18 Rue des Tables Claudiennes, 69001 Lyon, France
+csaxrousse[at]riseup.net 	 [45.770873, 4.833062]
+Espace autogéré des Tanneries 	 37 Rue des Ateliers, 21000 Dijon, France 	 [47.3000848, 5.025260299999999]
+L'Etincelle 	 26 Rue Maille, 49100 Angers, France
+etincelle[at]hotmail.com 	 [47.4749534, -0.5525599999999999]
+La Gryffe 	 Librairie Libertaire La Gryffe
+5 Rue Sebastien Gryphe, 69007 Lyon, France 04 78 61 02 25 	 [45.7536042, 4.8459024]
+Le Kiosk Info-shop 	 passage Alexandre Dumas, 75011 Paris, France 01 43 72 15 77
+lekiosk[at]samizdat.net 	 NoGeocode
+Kiosk Arnaud-Bernard 	 3 Rue Escoussieres Arnaud-Bernard, 31000 Toulouse, France
+26 rue Maille, 49000 Angers, France 02 41 24 94 45 	 [47.474915, -0.552377]
+Le Kiosk 13 	 38 Rue Clovis Hugues 13003 Marseille, France 	 [43.309815, 5.386014]
+Le Laboratoire 	 8, place Saint-Jean, 26000 Valence, France 	 [44.93479, 4.891305]
+Libertad 	 19 Rue Burnouf 75019 Paris, France 	 [48.876339, 2.374189]
+Librairie La Gryffe 	 5 Rue Sebastien Gryphe, 69007 Lyon,  France
+lagryffe[at]lagryffe.net 	 [45.753573, 4.845836]
+Librairie La Plume Noire 	 19 Rue Pierre Blanc, 69001 Lyon, France
+groupe-lyon[at]c-g-a.org 	 [45.771037, 4.828028]
+Librairie L'Autodidacte 	 5 Rue Marulaz, 25000 Bensancon, France 03 81 82 14 94
+lautodidacte(at)lautodidacte.lautre.fr 	 [46.698481, 2.549047]
+Librairie Infos 	 2 Rue Theodore Guiter, 66000 Perpignan, France 	 [42.697511, 2.895291]
+Libraire L’Insoumise 	 128 Rue Saint-Hilaire, 76000 Rouen, France 	 [49.442371, 1.107358]
+Librairie Publico 	 145 Rue Amelot, 75011 Paris, France  01 48 05 34 08
+librairie-publico.info 	 [48.8651343, 2.3662344]
+Librairie Quilombo 	 21 ter Rue Voltaire, 75011 Paris, France
+quilombo[at]globnet.org 	 NoGeocode
+Librairie Scrupules 	 26 Boulevard Figuerolles, 34070 Montpellier, France
+Librairiescrupule[at]wanadoo.f 	 NoGeocode
+Local Anarchiste La Commune 	 17 Rue de Chateaudun, 35000 Rennes, France
+contact[at]farennes.org 	 [48.111529, -1.666049]
+Alternative Conference Center 	 Willy Brandt Ave 9, 23554 Lüebeck D. Germany 	 [51.196755, 9.62743]
+Anarchistische Bibliothek Die Sturmflut LiZ (Libertäres Zentrum) 	 Karolinenstrasse 21, 20357 Hamburg, Germany 	 [53.559059, 9.974644]
+Autonomous Center of Cologne 	 Wiersbergstrasse 44, 51103 Cologne, Germany 	 [51.196755, 9.62743]
+*Autonomes Zentrum (AZ) 	 Hackländerstr. 5 D-52062 Aachen, Germany
+info[at]az-aachen.de 	 [50.774209, 6.08443]
+No headline and/or contact. head: FAQ Infoladen  contact:  
+Aftonomo Steki Social Space 	 Zoodochou Pigis & Isavron, 114 73, Athens, Greece 	 [37.950989, 23.729093]
+Antiviosi Squat 	 Leof. Geor. Papandreou & Mpelogianni, 45444, Ioannina, Greece 	 [39.6718169, 20.8529644]
+Apertus Squat 	 Kalivion 70, 301 00, Agrinio, Greece 	 [38.6224243, 21.4011915]
+Atakton Social Space 	 Astiggos 100 & Kanakari Roufou, 262 23, Patras, Greece 	 [38.2515953, 21.7437108]
+Baruti Social Space 	 Pirrou 21, 591 00, Veria, Greece 	 [40.5286816, 22.1956385]
+Biologica Squat 	 Aristotle University, 541 24,  Thessaloniki, Greece 	 [34.964824, 25.064975]
+Epavli Squat 	 Dionisou & Solonos, 151 24, Athens, Greece 	 [40.212879, 23.325771]
+Epi Ta Proso Social Space 	 Patreon 87, 263 35, Patras, Greece 	 [38.2155, 21.79558]
+Evagelismos Squat 	 Theotokopoulou 18, 712 02, Iraklio, Greece 	 [39.78331, 21.708535]
+K-Vox Squat 	 Themistokleous & Arachovis, 106 81, Athens, Greece 	 [37.984836, 23.737151]
+LK 37 Squat 	 Lelas Karagianni 37, 112 57, Athens, Greece 	 [37.97945, 23.71622]
+Matsaggou Squat 	 P. Mela & Ermou, 383 33, Volos, Greece 	 [39.3619831, 22.9454631]
+Micropolis Social Space 	 El. Venizelou & Vasileos Irakleiou, 546 24, Thessaloniki, Greece 	 [40.6353931, 22.9402818]
+Mpineio Squat 	 Faonos & X.Trikoupi, 811 00, Lesvos, Greece 	 NoGeocode
+Papoutsadiko Squat 	 Sintagmatarchou Davaki 20, 124 61, Athens, Greece 	 [38.007812, 23.662714]
+Pikrodafni Social Space 	 Ag.Vasiliou & P.P. Germanou, 173 43, Athens, Greece 	 [39.107537, 26.557481]
+Prapopoulou Squat 	 Profitou Ilia 49, 152 33, Athens, Greece 	 [37.97945, 23.71622]
+Prokat 35 Squat  	 University Campus, 265 04, Patras, Greece 	 [32.232101, -110.952363]
+Rosa Nera Squat  	 Lofos Kasteli - Old Port, 731 32, Chania, Greece 	 [35.51192, 24.01714]
+Strouga Squat  	 Leof. Dekelias 116, 143 41, Athens, Greece 	 [38.0349788, 23.7382595]
+Terra Incognita Squat 	 Olimpou & Taskou Papageorgiou, 546 31, Thessaloniki, Greece 	 [40.638804, 22.9451021]
+Nosotros 	 Themiskokleous 66, Exarchia, Athens, Greece 	 [37.9860604, 23.7343009]
+Villa Zografou Squat 	 Zografou 13, 157 72, Athens, Greece 	 [37.9757007, 23.7722604]
+Vironos 	 3 Squat Vironos 3, 654 03, Kavala, Greece 	 NoGeocode
+Xanadu Social Space 	 Spartis & Zalacha, 671 00, Xanthi, Greece 	 [41.1443672, 24.891485]
+Yfanet Squat 	 Omirou & Perdika, 546 39, Thessaloniki, Greece 	 [40.6169617, 22.9633015]
+The Barricade Inn 	 77 Parnell St., Dublin, D1,  Ireland
+baricadeinn-at-squ.at
+Just Books
+22 Berry Street, Belfast, BT1 1FJ
+> Warzone, Little Victoria St, Belfast, County Antrim, BT2 7JHN, Ireland.
+> www.warzonecollective.com/ 	 NoGeocode
+*Warzone Collective 	 Unit 9 Bruce House Little Victoria St. BT2 7JH Belfast, Northern Ireland 	 [54.6119559, -5.9378024]
+No headline and/or contact. head: DEFUNCT SPACES:  contact:  
+Centro Sociale Askatasuna 	 Corso Regina Magherita, 47 Ð 10124 (Torino) Turin, Italy
+serateaskatasuna[at]yahoo(dot)it 	 NoGeocode
+CSA La Torre 	 via Bertero 13 (Roma) Rome, Italy 	 [41.9310176, 12.5538573]
+C.S.A nEXt Emerson 	 Via di Bellagio 15, (Firenze) Florence, Italy
+assemblea(at)csaexemerson(dot)it 	 NoGeocode
+C.S.O.A. Ex Snia Viscosa 	 Via Presenestina 173 Roma-Pigneto Presenestino RM, 00176 Lazio, Italy 	 NoGeocode
+C.S.O.A. Spartaco 	 Via Selinunte, 57 (Roma) Rome, Italy 	 [41.8569389, 12.550245]
+Forte Prenestino 	 Via Federico Del Pino, I-00100 (Roma) Rome, Italy 	 [41.8911782, 12.563532]
+Leoncavallo 	 Via Watteau 7,  20125 Milano, Italy +39-2-2614-0287 	 [45.5013618, 9.2081202]
+ACU, politiek cultureel centrum. 	 Voorstrat 71,3512 AK, Utrecht, Netherlands, +31 (0)302314590, info@acu.nl 	 NoGeocode
+Assata Autonomous Bookstore 	 Tweede Walstraat 21, 6511 LN Nijmegen, Netherlands +31 80 605 208 	 [51.8440745, 5.8657035]
+*Het Fort van Sjakoo Bookstore  	 Jodenbreestraat 24, 1011 NK Amsterdam, Holland 20 6258979 	 [52.3691822, 4.901692199999999]
+No headline and/or contact. head: SPACES THAT ARE DEFUNCT:  contact:  
+Blitz 	 Pilestredet 30, N-0166 Oslo, Norway +47 22 11 23 49 	 [59.9183499, 10.7378677]
+Bokafeen Jaap 	 Hjesmsgt 3 N-0355 Oslo, Norway 	 [59.92499249999999, 10.7217169]
+Ivar Matlaus Bokkafe 	 Strandveien 23, N-7042 Trondheim, Norway 	 [63.437627, 10.421063]
+Vestbredden Vel Vel 	 Hausmannsgate 40 0182 Oslo, Norway 	 [59.9193022, 10.7517505]
+ABC Bialystok 	 Box 43, 15-6562 Bialystok 26, Poland 	 [52, 20]
+CRK 	 10c/d Jagiellończyka St. 50-240 Warsaw, Poland 	 [52.2027606, 20.8601719]
+Rozbrat Squat 	 21A Pulaskiego St. Pozna, Poland  +48 61 823 25 63 	 [51.84442, 14.61868]
+RDA69 	 Reguierão dos Anjos, 69 1150-260 Lisboa, Portugal RDANJOS69@gmail.com 	 NoGeocode
+Disgraca and BOESG 	 Rua Penha de França, 217 1170-182 Lisboa, Portugal 	 [38.7281454, -9.1308327]
+GAIA - Grupo de Acção e Intervenção Ambiental 	 Rua da Regueira, 40 1100-437 Lisboa, Portugal 	 [38.7118997, -9.1284519]
+CCL - Centro de Cultura Libertária 	 Rua Cândido dos Reis, 121, 1º  dto 2800-801 Cacilhas, Almada, Portugal 	 NoGeocode
+Popescu Adi Aleea Teatrulul 	 BL.T2 Apt. 21 Craiova, DOLJ, COD 1100 Romania 	 NoGeocode
+Ateneu Anarquista del Poble Sec 	 c/ Creu dels Molers 86, Barcelona, Spain 	 [41.3711974, 2.1606744]
+Banc Expropiat de Gracia 	 Travessere de Gracia 181, Barcelona, Catalunya, Espanya (Catalan spelling: Spain)  elbanc@riseup.net 	 NoGeocode
+*Casal Popular de Castello 	 Carrer d'Amunt 167, 12001 Castello de la Plana, S. Catalonia 	 NoGeocode
+El Lokal 	 c. La Cera 1 bix, E-08001 Barcelona +(34) 3-3290643 Spain 	 NoGeocode
+Gatazka infoshop 	 Ronda Street, 12 48005 Bilbao, Spain Basque Country 	 [43.2564159, -2.9223624]
+Libreria La Rosa 	 Carrer de Joaquin Costa 34, 08001 Barcelona, Spain (34)933177892 	 [41.3824655, 2.1660164]
+Traficantes de Sueños Calle Hortaleza 	 19 1st floor right 28004 Madrid, Spain 915-32-0928 	 [40.4280787, -3.6984907]
+No headline and/or contact. head: Traficantes de Sueños  contact:  
+Amalthea Bokcafe 	 Kristiansstadsgstaan 41c, 214 22 Malmo, Sweden 	 [55.5925898, 13.0074303]
+BokKafe Vulgo 	 Nordhemsgatan 49, Gotehnburg, +46(0)31-364 64 54
+vulgoinfo(at)gmail.com 	 NoGeocode
+Cafe 44 	 Tjarhovsgatan 46 Sodermalm, Stockholm, Sweden 0 8-6445312 	 [59.3159527, 18.0827966]
+Hallongrottan 	 Bergsundsgatan 25, 117 37 Stockholm, Sweden +46 8 658 13 20 	 [59.3158733, 18.0299115]
+India DŠck Bookcaf 	 Stora Algatan 3, 224 51 Lund, Sweden
+idc@indiadack.net 	 NoGeocode
+Kafé44 	 Tjarhovsgatan 44, Metro; T-Medborgarplatsen Stockholm, Sweden +46-8-6445312 	 NoGeocode
+Kulturcentret Glassfabriken 	 Kristianstadsgatan 16, 214 23 Malmš, Sweden (+46) -040 - 23 81 01 	 [55.5922919, 13.0100476]
+SmŒlands Nation 	 Kastanjegatan 7, 223 59 Lund, Sweden, 046-12 06 80
+smalands(at)smalands.org 	 NoGeocode
+☭RIP☭Kulturhuset Underjorden/SPATT 	 Box 30, 40120 Gothenburg, Sweden 	 [57.70536200000001, 11.971888]
+Centre de recherches sur l'Anarchisma 	 Beaumont 24 Lausanne 1012, Switzerland 	 [46.5262934, 6.645402499999999]
+Autonome Schule Biel 	 villa fantasia, Alexander-Schöni-Strasse 26,
+2503 Biel-Bienne, Switzerland 	 NoGeocode
+Autonome Schule Denk-mal 	 Lagerweg 12, 3013 Bern, Switzerland 	 [46.95674959999999, 7.4454507]
+Autonome Schule Frauenfeld 	 Rheinstrasse 14, 8500 Frauenfeld, Switzerland 	 [47.5565046, 8.8957338]
+Autonome Schule Luzern - Kollektiv Grenzweg, Baselstrasse 85-89, 	 6003 Luzern, Switzerland 	 [47.0484552, 8.2920023]
+Autonome Schule Zürich 	 Bachmattstrasse 59, Zürich; Switzerland 	 [47.3890555, 8.4836733]
+Espace Noir 	 Francillon 29, 2610 Saint-Imier, Switzerland +41(0)329413535 	 [47.1530948, 6.999370099999999]
+KuZeB 	 Ecke Zurcher-Zuger Str. PostlFach 512, Ch-5620 Bremgarten AG, Switzerland 	 NoGeocode
+Infoladen Kasama 	 Militaerstrasse 87a, Zurich, Switzerland 	 [47.3785416, 8.529260599999999]
+Infoladen Magazin 	 Inselstrasse 79, 4057 Basel, Switzerland 	 [47.5772473, 7.591235899999999]
+Reithalle Infoshop 	 Neubruckstrasse 8, Postfach 5053 3011 Bern, Switzerland 	 NoGeocode
+Infoladen Romp 	 Steinenstrasse. 17, po box 6633, 6000 Luzern 6, Switzerland
+www.romp.ch 	 NoGeocode
+26A Collective 	 Tel Sokak No 26 / A Beyoglu / Istanbul (0212) 243 60 85 	 [41.031033, 28.970218]
+Göçmen Dayanışması Mutfağı 	 Sakiz Agaci Cd., No.56/A, Tarlabaşı, Istanbul, Turkey 	 [39.339547, 34.51052]
+infiAl 	 Bülbül Mah. Turan Cd., No: 36A, Istanbul, Turkey  infialpostasi@gmail.com 	 [41.240616, 28.419199]
+Komşu Kafe Collective 	 Uzun Hafiz Sokak, 83/A, Istanbul, Turkey +90 216 418 4679 	 [44.81667, 38.05]
+Neverland Hostel 	 Boğazkesen Caddesi No:96, 34425 İstanbul, Turkey +90 212 243 3177 	 [41.240616, 28.419199]
+SAHAF 26A 	 Caferağa Mah. Sakız Sokak No: 3/1 Kadıköy/İSTANBUL Tel: (0216) 336 37 52 	 NoGeocode
+1 in 12 Club 	 21-23 Albion St, Bradford, West Yorkshire BD1 2LY, England (01274) 734160 	 [53.79483889999999, -1.7580137]
+56A Infoshop 	 56 Crampton Street, Walworth SE 17 3AE, London, England 	 [51.4906378, -0.1003411]
+Autonomous Center 	 17 Montgomery Place, Edinburgh EH7 5HA 0131 557-6242 	 [55.9601274, -3.1783897]
+Black Cat Cafe 	 76 Clarence Rd. Hackney, London, England 0208 9857091 	 [51.55104799999999, -0.05535739999999999]
+Blackcurrent Centre 	 24 St. Michaels Avenue, Northampton, NN1 4JQ, England 	 [52.2452352, -0.8818967]
+Cornerstone Resource Centre 	 16 Sholebroke Ave, Leeds LS7 3HB, England 	 [53.8190988, -1.5333044]
+Commonweal Collection 	 c/o J.B. Priestley Library University of Bradford, Bradford, West Yorkshire BD7 1DP, England  01274 233404 	 NoGeocode
+Cowley Club 	 12 London Rd, Brighton East Sussex BN1 4JA UK +441273696104 	 [50.8302468, -0.1359383]
+Feminist Library  	 5 Westminster Bridge Rd., London SE1 7XW, England   020 7261 0879
+admin(at)feministlibrary.co.uk 	 NoGeocode
+Five Leaves Bookshop 	 14a Long Row, Nottingham, NG1 2DH, England 	 [52.9538502, -1.1486906]
+Freedom  	 84b Whitechapel High St., London, E17ZX UK 020 7247-9249 	 [51.5159917, -0.0706251]
+Glagow Women’s Library  	 23 Landressy St., Glasgow G40 1Bp, Scotland 0141 550 2267
+info(at)womenslibrary.org.uk 	 [55.8486845, -4.2277643]
+Housmans Bookshop 	 5 Caledonian Rd, London, N1 9DX, England 	 [51.53120910000001, -0.1211739]
+Hydra bookshop 	 34 Old Market, Bristol, BS2 0Ez 0117 3297401 	 [51.45625570000001, -2.5815362]
+Kebele Co-op 	 14 Robertson Rd, Easton, Bristol, BS5 6JY, England 	 [51.4694219, -2.5621519]
+LARC 	 London Action Resource Center
+62 Fieldgate St., E1 1ES Whitechapel, London, England 020 7377 9088 	 [51.5170177, -0.0639671]
+New Leaf Co-op 	 23 Argyle Place, Edinburgh Eh9 1JJ, UK 	 [55.9385547, -3.1915939]
+News From Nowhere 	 96 Bold Street, Liverpool, L1 4HY, England 	 [53.4024964, -2.977532]
+SUMAC Centre  	 245 Gladstone St, Nottingham NG76HX, England 0845 458 9595 	 [52.9713326, -1.1635756]
+Wharf Chambers Coop Club  	 23-25 Wharf St. Leeds LS2 7EQ, England 	 [53.7954888, -1.5379759]
+No headline and/or contact. head: DEFUNCT SPACES!  contact:  
+BikeWorks 	 BikeWorks South 8001 102 St Edmonton AB  T6E 4A2 780-433-2453
+BikeWorks North 9305 111 Ave Edmonton AB  T5G 0A2 780-757-9100 	 NoGeocode
+CommunityWise Resource Centre  	 223 12 Ave SW Calgary, AB T2R 0G9 403-261nnn-9660 	 [51.0412405, -114.0672769]
+Earth's General Store 	 9605 82nd Ave. Edmonton, AB T6C 0Z9 780-439-8725 	 [53.51764319999999, -113.4771229]
+Edmonton Small Press Association Infoshop 	 11336 101 St.  Edmonton, AB T5G 2A7 [mail: PO Box 95086 WPO, T6E 4E3 Tel: 780-434-9236 - by appointment only - contact@edmontonsmallpress.org 	 NoGeocode
+!Good Life Community Bikes 	 2100 4th Street SW Calgary, AB Canada T2S 1W7 403-984-4727 	 [51.0340656, -114.0708294]
+The Zine Tree Collective 	 [no physical address at this time - the zine library still exists - to view it, set up an appointment via email or mail: 104 1240 Kensington RD NW Suite 166 Calgary AB T2N 4X7 thezinetreecollective@riseup.net] 	 NoGeocode
+☭RIP☭Haymarket Books 	 1014 Macleod Trail SE (northbound) Calgary, AB T2G 2M7 (403) 234-0260 	 [55.44167, -114.446928]
+☭RIP☭Haymarket Cafe 	 Northmount Dr. N.W. Calgary, Alberta T2L 0E3 	 [51.0894669, -114.1181493]
+The Bike Kitchen at UBC 	 6138 Student Union Boulevard Vancouver, BC V6T 1Z1 604-822-2453 	 [49.255176, -123.114695]
+Black Raven Records 	 1294 Gladstone Victoria, BC V8T 1G8 250-590-1033 	 [48.430483, -123.345978]
+Camas infoshop 	 2620 Quadra, Victoria BC V8T 4E4 2500-381-0585 	 [54.790277, -124.557003]
+Little Sisters Book Store 	 1238 Davie St. Vancouver, BC V6E 1N4 604-669-1753, 1-800-567-1662 	 [49.2823048, -123.1341333]
+Our Community Bikes 	 3283 Main Street (at 17th) Vancouver, BC, V5V 3M6 Canada. (604) 879-2453 	 [49.2556851, -123.101277]
+People's Co-op Books 	 1391 Commercial Dr Vancouver, B.C. V5L 3X5 604-253-6442 	 [49.2724388, -123.0696052]
+Recyclistas Community Bike Shop 	 25 Crease Ave. Victoria, BC V8Z 1S4 250-418-8867 	 [48.45602359999999, -123.3780906]
+Spartacus Books 	 3378 Findlay Street Vancouver, BC V5N 4E7 604-688-6138  604-688-6138 	 [49.2552493, -123.067913]
+☭RIP☭3rd Avenue Collective Infoshop 	 1157 3rd Ave. Prince George, BC V2L 1T6 	 [53.9162145, -122.7437148]
+☭RIP☭Independent Media Center - Vancouver 	 614-207 West Hastings St. Vancouver BC 604-688-4085 	 [49.2829788, -123.1096973]
+☭RIP☭Kalayaan 	 451 Powell, Vancouver, BC V6A 1G7 604-255-0725 	 [49.28333749999999, -123.0941857]
+☭RIP☭Purple Thistle Center 	 260-975 Vernon Dr. Vancouver, BC Coast Salish Territory V6A 3P2 604-255-2838  info@purplethistle.ca 	 NoGeocode
+☭RIP☭Rhizome Cafe 	 317 E. Broadway, Vancouver, BC ________ 604-872-3166 	 [49.2630725, -123.0985916]
+Bike Dump 	 631 Main street (rear) Winnipeg MB, R3E 1E1 	 NoGeocode
+Indigenous Family Center 	 470 Selkirk Avenue Winnipeg, MB, R2W 2M5 204-586-8393 	 [49.91501599999999, -97.14380299999999]
+Organic Planet Coop 	 877 Westminster Ave Winnipeg, MB R3G 1B3 (204) 772 - 8771 	 [49.8817332, -97.1704561]
+Neechi Commons 	 865 Main Street Winnipeg, Manitoba 204-949-1338 	 [49.908896, -97.132786]
+Thunderbird House 	 715 Main Street Winnipeg, MB MB R3B 204-940-4240 	 [49.904034, -97.134289]
+No headline and/or contact. head: Defunct spaces MB- RIP  contact:  
+*Ordinary Spokes Community Bike Shop 	 576A Water St., St. John's, NL A1E 1B8 Canada 	 [47.552529, -52.7157741]
+The Sprout (Restaurant) 	 364 Duckworth, St John's, Newfoundland A1C 1H5 709-579-5485
+ 	 [47.5628895, -52.7095469]
+No headline and/or contact. head: ☭RIP☭  contact:  
+!Anchor Archive Zine Library 	 2180 Gottingen Street Halifax, NS B3K 3B2  Canada (Mail PO Box 33129 Halifax, NS B3L 4T6  Canada 902-422-1405 	 NoGeocode
+Outside The Lines 	 6297 Quinpool Rd Halifax, NS B3L 1A4 902-422-3544 	 [44.64523399999999, -63.5985917]
+ARADSTORM (Inkstorm + Sadrad) 	 6050 Almon Street, 2nd Floor, Halifax, NS  (mail: PO Box 33129 Halifax, NS B3L 4T6) 	 NoGeocode
+Venus Envy 	 1598 Barrington Street Halifax, Nova Scotia B3J 1Z6 902-422-0004 	 [44.64606939999999, -63.57364889999999]
+AKA Autonomous Social Centre 	 75 Queen Street, Unit 1, Kingston, Ontario K7K 1A5 	 [44.2326547, -76.4824763]
+Arrow Archive 	 RM#107 UC University of Guelph Campus (mail:  Box 183 Guelph, Ontario N1H 6J6)  519.824.4120 x58559 	 NoGeocode
+Bike Pirates 	 1292 Bloor St. W. Toronto, ON M6H 1N9 	 [43.6586005, -79.4421299]
+bikeSauce 	 235 Broadview Ave. Toronto, ON m4m 2g3 info[at]bikesauce[dot]org 	 NoGeocode
+Community Bicycle Network 	 c/o Centre for Social Innovation 215 Spadina Avenue, Suite 400,�Toronto, ON M5T 2T7 	 NoGeocode
+East Village Arts Collective 	 755 Dundas Street, London, ON. N5W 2Z6 	 [42.9902786, -81.22626989999999]
+Liber Libri Zine Library 	 27 King William St. Hamilton, Ont L8R 1A1 Canada 	 [43.25749099999999, -79.867775]
+Octopus Books 	 116 Third Ave, Ottawa, ON, K1S 2K1 613-233-2589 	 [45.4028772, -75.68883129999999]
+Kitchener Waterloo Community Centre for Social Justice (kwccsj) 	 63 Courtland Ave. E, Kitchener Ontario N2G 2T8 (519)569-8714 	 [43.444453, -80.49071200000002]
+RADSTORM 	 6050 Almon St. 2nd Floor Halifax, NS (mail: PO Box 33129 Halifax, NS B3L 4T6) 	 NoGeocode
+Sketch 	 180 Sudbury St. Toronto, Ontario M6J 3H2 416-516-1559 	 [43.6418521, -79.4251968]
+The Tower 	 281 Cannon St. E, Hamilton, ON L8L 2B4 	 [43.2579156, -79.854948]
+No headline and/or contact. head: Defunct spaces - RIP  contact:  
+Bar-Coop l'Agit�e 	 255 rue Dorchester, Qu�bec, Qu�bec, G1K 5Z6, 418-522-6133 	 [46.8142056, -71.2271856]
+Centre for Community Organizations 	 Suite 470, 3680 Jeanne-Mance, Montreal QC H2X 2K5 514-849-5599 	 [45.5114843, -73.5762443]
+La Page Noire 	 265 Dorchester St Quebec City, QC G1K 5Z6 418-977-1955 	 [46.8153222, -71.22850629999999]
+Librairie Anarchiste L'Insoumise 	 2035 St.-Laurent, 1er Etage, Montr�al, Quebec H2X 2T3 514-313-3489 	 NoGeocode
+*Deferle, la 	 1407 rue Valois, Montreal, QC au coin de la Sainte Catherine
+M�tro Joliette (Translation: 1407 Valois St. Montreal, QC, at the corner of St. Catherine.
+Metro stop is Joliette) 	 NoGeocode
+*DIRA 	 2035 St-Laurent, Montr�al, QC H2X 2T3 438-928-2728 	 [45.51173499999999, -73.56742299999999]
+*La Belle �poque 	 1984 rue Wellington, Montr�al, QC H3K 1W5 labelleepoque@riseup.net 	 NoGeocode
+RAJ Estrie 	 101, Rue Ball, Sherbrooke QC J1H 1T9 819-542-1045 	 [45.3989203, -71.8888284]
+☭RIP☭Cafe Esperanza 	 5490 St. Laurent, Montreal, QC. 514-948-3303 	 [45.525609, -73.598883]
+☭RIP☭Documentations, informations, références et alternatives 	 2035 St. Laurent, Montreal, QC H2X 2T3 514.524.4529 	 [45.51173499999999, -73.56742299999999]
+☭RIP☭Home of Elle Corazon, Blood Sisters, L'Arterie and Urban Armor 	 W. Bernard, Montreal, QC H2T 2K2 514.273.3933 	 [45.5243947, -73.6049226]
+☭RIP☭Le Cagibi 	 5490 St. Laurent Montreal, QC H2T 1S1 514-948-3303 	 [45.525609, -73.598883]
+☭RIP☭Les DéclencheurEs Arts et Médias 	 700, rue du Roi, 2e étage, Québec, PQ, G1R 2X7, 418-524-8228 	 NoGeocode
+☭RIP☭The People's Potato 	 (free food) Concordia University, Montreal, 514-848-7866 	 NoGeocode
+☭RIP☭Ste. Emilie Skillshare 	 3942 Ste. Emilie, Montreal, QC H4C 2A1 	 [45.4770589, -73.580821]
+Turning The Tide 	 615 Main Street Saskatoon, SK / Treaty 6 Territory S7H 0J8 306.955.3070 	 NoGeocode
+The Stand - Community Organizing Centre 	 615 Main Street Saskatoon, SK / Treaty 6 Territory S7H 0J8 306.955.3070 	 NoGeocode
+Briarpatch Magazine 	 2138 Mcintyre St, Regina, SK S4P 2R7 - (306) 525-2949 	 [50.44484689999999, -104.6168416]
+Changing Suns Press 	 2138 Mcintyre St, Regina, SK S4P 2R7 - 	 [50.44484689999999, -104.6168416]
+*Auditorio Okupaciun Che Guevara 	 Facultad de Filosofia y Letras, Ciudad Unversitaria D.F. Mexico 	 [19.3340082, -99.1868398]
+Biblioteca Social Reconstruir 	 Godard 20, Guadalupe Victoria II, 07790 Ciudad de M�xico, D.F. 	 [19.4701489, -99.14031849999999]
+No headline and/or contact. head: *Centro de Informacion Anarquista CEDIA Manuel Caripo 117, Corner of Torres Bodet, Col. Santa Mari� la Riberaj D.F. Mexico  contact:  
+Bici Bike Coop 	 4000 3rd Ave. S, Suite 103 Birmingham, AL 35222 	 [33.5232617, -86.7755234]
+Alaska Center for Alternative Lifestyles (ACAL) 	 420 W. 3rd Ave. Anchorage AK 99501 907-775-8419 	 [61.2195417, -149.8893846]
+Identity Inc. 	 336 E. 5th Ave. Anchorage AK 99501 907-929-4528 	 [61.2174104, -149.8777625]
+Off The Chain Bicycle Collective 	 1406 W 33rd Ave. Unit D, Anchorage AK 99503 907-258-6822 	 [61.1900661, -149.9102673]
+Bicycle Inter-Community Action 	 44 W. 6th St. Tucson, AZ 85705 520-628-7950 	 [32.227922, -110.9728159]
+Firehouse Artspace 	 1015 N. 1st St Phoenix, AZ 85006 	 [33.4592712, -112.0722499]
+Helping Understand Bicycles (HUB) 	 220 Grove Ave. Prescott, AZ 86301 928-350-1005 	 [34.544809, -112.476483]
+Revolutionary Grounds Books and Coffee 	 606 N. 4th Ave. Tucson, AZ 85705 520-620-1770 	 [32.2293064, -110.9653735]
+*Rusty Spoke Bicycle Collective 	 1023 Grand Avenue, Phoenix, AZ 85007 (entrance through the alley between Taylor and Fillmore) 	 [33.44838, -112.07404]
+Taala Hooghan Indigenous Youth Media Arts Center & Infoshop 	 1704 N. 2nd St. Flagstaff, AZ 86004, info@indigenousaction.org 	 NoGeocode
+Wasted Ink Zine Distro 	 2121 W University Dr, Ste 110, Tempe, Arizona 85281 	 [33.421158, -111.971179]
+☭RIP☭Carpe Locus Collective 	 1205 E Hubbell St. Phoenix AZ, 85006 602-888-6292 COLLECTIVE@CARPELOCUS.ORG 	 NoGeocode
+☭RIP☭Catalyst Infoshop 	 207 Spring St. in Prescott, Az 	 [34.5395278, -112.4738633]
+☭RIP☭The Counter Culture Cafe and Phoenix Anarchist Library 	 2330 E. McDowell Rd Phoenix AZ 85006 	 [33.4660431, -112.0314045]
+☭RIP☭Dry River Radical Resource Center 	 740 N. Main St. Tucson, AZ 85705 	 [32.2314688, -110.9777784]
+☭RIP☭Flagstaff Activist Network 	 PO Box 911 Flagstaff, AZ 86002 (928) 213-9507 	 [36.4974373, -112.1018979]
+☭RIP☭Hungry Knife 	 10565 W. Fernando Dr. Arizona City, AZ (mail:  PO Box 3285, Arizona City, AZ 85123) 520-466-8353 	 NoGeocode
+☭RIP☭The Hive 	 319 S. San Francisco St., Flagstaff, AZ 86001 	 [35.1929151, -111.6503896]
+☭RIP☭Ironwood Infoshop 	 11 E. 7th St., Tempe, AZ 85281 	 [33.4229535, -111.9390762]
+☭RIP☭Phoenix Anarchist Coalition 	 PO Box 3438, Tempe, AZ 85280-3438 	 [33.43, -111.93]
+☭RIP☭Phoenix Anarchist Library 	 c/o Conspire Gallery, 901 N 5th St. Phoenix, AZ 85004 602-237-5446 	 NoGeocode
+☭RIP☭Phoenix Infoshop (formally Wildgrass) 	 1206 E. McKinnley Phoenix, AZ 85006 	 [33.4569846, -112.0560993]
+☭RIP☭Thought Crime 	 Phoenix, AZ 	 [33.4483771, -112.0740373]
+Arkansas Sustainability Network 	 509 Scott St. Little Rock, AR 72201 501-291-2769 	 [34.7434419, -92.2696089]
+Center for Artistic Revolution 	 800 Scott St. Little Rock, AR 72201 (offices are downstairs in the First Presbyterian Church) 	 NoGeocode
+Backspace 	 541 W Meadow St. Unit H, Trailside Village Fayetteville, AR 72701 	 NoGeocode
+Lucie's Place 	 300 Spring St., Suite 803, Little Rock 72201 	 [34.746497, -92.2745422]
+☭RIP☭Bike City Recyclery 	 546 W. Center St  # C Fayetteville, AR  72701 479-521-2020 	 [36.0632042, -94.16666459999999]
+☭RIP☭All People's United Infoshop 	 523 W. Poplar Fayetteville, AR 	 [36.087934, -94.165808]
+AK Press 	 370 Ryan Ave #100 Chico, CA 95973 	 [39.80665399999999, -121.854593]
+Artists' Television Access 	 992 Valencia, SF, CA 94110 415 824-3890 	 [37.7570371, -122.4214654]
+Bicycle Kitchen 	 4429 Fountain Ave Los Angeles, CA 90029, 323.NO.CARRO (323.662.2776) 	 NoGeocode
+Berkeley Student Food Co-op 	 2440 Bancroft Way #102 Berkeley, CA 94705 510-845-1985 	 [37.8682781, -122.2604314]
+Biko Co-op 	 6612 Sueno Road, Isla Vista, CA 93117 858-722-8768 	 [34.412923, -119.859315]
+Bike Forth 	 1221 1/2 4th Street Davis, CA 95616 530-758-1483 	 [38.5470967, -121.7345375]
+Bridgetown DIY 	 1421 Valinda Ave., La Puente, CA 91744 	 [34.044731, -117.926596]
+Black Butte Center for Railroad Culture 	 800 Black Butte Road, Weed, CA 96094= 	 [41.3933738, -122.3688086]
+Bound Together Books 	 1369 Haight SF CA 94117, 415-431-8355 	 [37.7701339, -122.4447401]
+Collective For Arts Freedom and Ecology Infoshop 	 935 F st Fresno Ca 93706 559 237-0922 	 [36.7299148, -119.79473]
+Che Cafe 	 1000 Scholars Drive La Jolla, CA (Mail:  9500 Gilman Dr SC B-0323C, La Jolla 92093) 858-534-2311 	 NoGeocode
+Chuco's Justice Center   	 1137 E Redondo Blvd., Inglewood, CA 90302 323-235-4243 	 [33.9760879, -118.3355971]
+City Heights Free Skool 	 4246 Wightman St. San Diego, CA 92105 619-528-8383 	 [32.748012, -117.103435]
+CounterPulse 	 80 Turk San Francisco, CA 94102 415-626-2060 	 [37.7833779, -122.4104035]
+Ecology Center 	 2530 San Pablo Berkeley 94702 (510) 548-2220 	 [37.8600413, -122.2894898]
+Eso Won Bookstore 	 4327 Deghan Blvd. Los Angeles, CA 90008 323-290-1048 	 [34.0052036, -118.3317474]
+El Centro Cultural de M�xico 	 313 N Birch St. Santa Ana Ca 92701 info@elcentroculturaldemexico.org 	 NoGeocode
+Gilman St. Project 	 924 Gilman St. Berkeley, CA 94710 510-525-9926 	 [37.87959480000001, -122.2993617]
+Grassroots House  	 2022 Blake Berkeley, CA 94704 510-548-0425 	 [37.8626727, -122.2685622]
+Groundwork Books 	 0323 Student Ctr La Jolla 92037 858-452-9625 	 [32.8738562, -117.2406425]
+Grease Diner, the 	 6604 San Pablo Ave. Oakland, CA 94608 510-379-0190 	 [37.8490706, -122.2853939]
+HUB for Sustainable Transport 	 703 S. Pacific Santa Cruz, CA 95060 831-425-2453 	 [36.9685185, -122.0249935]
+Isla Vista Food Co-op 	 6575 Seville Rd., Isla Vista, CA 93117 805 968-1401 	 [34.4115678, -119.8576786]
+Intertribal Friendship House 	 523 International Blvd. Oakland CA 94606. 510-533-3204 	 [37.7952298, -122.2536216]
+*IntegreTea 	 717 Marin Street Vallejo, CA 94590 	 [38.102741, -122.256819]
+Issues 	 20 Glen Ave Oakland, CA 94611 510-652-5700 	 [37.8258401, -122.2524176]
+Kresge Coop 	 600 Kresge Court Santa Cruz CA 95064 831-426-1506 	 [36.9971825, -122.0668802]
+La Conca / Ovarian Psychos Bicycle Brigade 	 1214 East 1st St. Los Angeles, CA 90033 	 [34.047406, -118.227205]
+LA Fort 	 736 Ceres Ave Los Angeles, CA 90021. 	 [34.036948, -118.243875]
+Long Haul Infoshop 	 3124 Shattuck Berkeley 94705 510 540-0751 	 [37.852672, -122.2661552]
+The Mad House 	 3579 Madison Avenue San Diego, Ca 92116 	 [32.7607682, -117.1155911]
+!Modern Times 	 2919 24th Street San Francisco, CA 94110 415-282-9246 	 [37.7525224, -122.4105774]
+Niebyl Proctor Marxist Library 	 6501 Telegraph Ave Oakland, CA 94609-1113 510-595-7417 	 [37.8511148, -122.2606959]
+Noisebridge 	 2169 Mission Street San Francisco, CA 94103 	 [37.7624136, -122.419123]
+Omni Commons 	 4799 Shattuck Ave. Oakland, CA 94609 	 [37.8350003, -122.2641865]
+Peace & Justice Ctr. 	 467 Sebastopol Ave. Santa Rosa 95401 707-575-8902 	 [38.4332852, -122.7139265]
+PLACE for Sustainable Living 	 1121 64th Street Oakland, CA 94608 	 [37.8462189, -122.2854683]
+Monterey Peace and Justice Center 	 1364 Fremont Blvd., Seaside, CA 93955 831-899-7322 	 [36.6057747, -121.8469172]
+People's Action for Rights & Community 	 1617 3rd St. Eureka, CA 95501 707-442-7465 	 [40.8055487, -124.1542776]
+Qilombo 	 2313 San Pablo, Oakland, CA 94612 	 [37.8137499, -122.2746633]
+Quincy Natural Foods Coop 	 269 Main St. Quincy, CA 95971. 530-283-3528.
+60 North Pine St. Portola, CA 96122 530-832-1642 	 NoGeocode
+RAC Mutual Aid Community Center 	 2515 West 7th Street LA 90057 	 [34.059048, -118.282031]
+Sacramento Bike Kitchen 	 1915 I Street, Midtown Sacramento, CA 95811 	 [38.5781534, -121.4800715]
+Sacred Grove 	 701 Front St. Santa Cruz 95060 831-423-1949 	 [36.974166, -122.0251851]
+Sanctuary, the 	 1301 J Street Arcata, CA 95521 707-822-0898 	 [40.872881, -124.087862]
+San Jose Peace & Justice Center 	 48 S. 7th Street, #101 San Jose, CA 95112 408-297-2299 	 [37.3383606, -121.8832554]
+Santa Rosa Community Mkt 	 1899 Mendocino Ave, Santa Rosa 95401 707 546-1806 	 [38.458794, -122.71772]
+Seminary of the Street 	 1724 Filbert Street Oakland, CA 94607 510-225-8561 	 [37.811415, -122.281727]
+*Shades of Afrika 	 1001 East 4th Street Long Beach, CA 90802 562-436-2210 	 [33.7718891, -118.179489]
+Slack Collective  	 964 Pearl St. Suite B Napa, CA 94559 707-200-3712 	 [38.301051, -122.28601]
+*The Smell 	 247 S. Main St. Los Angeles, CA 90012 213-625-4325 	 [34.0502755, -118.2455212]
+Southern California Library for Social Studies and Research 	 6120 South Vermont Avenue, Los Angeles, CA 90044, (323) 759-6063 	 [33.9840059, -118.2911871]
+Station 40 	 3030b 16th St, San Francisco, CA 94103 415-621-4757 	 [37.7652736, -122.4203596]
+Street Level Cycles 	 84 Bolivar DR Berkeley, CA 94710 510-644-2577 	 [37.8641616, -122.3014534]
+SubRosa 	 703 Pacific Ave., Santa Cruz, CA 95060 831-426-5242 	 [36.9685185, -122.0249935]
+*Tahoe Cooperative Community Center 	 3445 Lake Tahoe Blvd. South Lake Tahoe, CA 96150 53-544-8000 	 [38.9462121, -119.9655819]
+Tia Chucha's Centro Cultural & Bookstore 	 13197 Gladstone Ave, Unit A, Sylmar, CA 91342 818-939-3433 	 [34.310469, -118.4282789]
+*Third Space Art Collective 	 946 Olive Drive, Davis, CA 95616. 	 [38.5400082, -121.7390218]
+Time Tested Books 	 1114 21st St. Sacramento, CA 95811 916 447 5696 	 [38.5748017, -121.4793948]
+*Tri-Cooperatives 	 TB 13, 14, 15 Reagan Hall Cir. and California Ave. UC Davis 1 Shields Ave.
+Davis, CA 95616 	 NoGeocode
+UCSD Student Food Co-op 	 9500 Gilman Dr. #0323 La Jolla, CA 92093 858-546-8339 	 [32.8753618, -117.2358622]
+Women's Building 	 3543 18th Street, SF, CA 94110, 415 431-1180 	 [37.7614353, -122.4226784]
+☭RIP☭33 1/3 Books 	 1200 N. Alvarado St., Los Angeles, CA 90026, 213-483-3500 	 [34.078137, -118.262864]
+☭RIP☭Bakersfield zine library 	 137 Donna Ave. Bakersfield, CA 93304 	 [35.356493, -119.007411]
+☭RIP☭Blood Orange Infoshop 	 3485 University Ave  Studio #2, Riverside, CA 92501 	 [33.9810518, -117.3715849]
+☭RIP☭Casa De Pueblo 	 2414 N. Broadway Suite 204. LA, CA 90026 213-481-1986 	 [34.0733947, -118.2163717]
+☭RIP☭Cell Space 	 2050 Bryant St, SF CA 94110 415 648-7562 	 [37.7611692, -122.410331]
+☭RIP☭Ex Nihilo 	 43302 45th St. West Lancaster, CA 93536 	 [34.66951, -118.209566]
+☭RIP☭Firehouse 51 	 410 James St. Modesto, CA 95354 	 [37.6440999, -120.9872581]
+☭RIP☭Flor y Canto 	 3706 N. Figueroa Ave LA, CA 90065 323 276-1148 	 [34.09023, -118.212317]
+☭RIP☭Free Mind Media 	 546 Pacific Ave Santa Rosa, CA 95404, 707-579-1605 	 [38.4530816, -122.7159493]
+☭RIP☭Gaian Mind 	 620 Pacific Ave., Long Beach, CA 90802, 562-552-9930 	 [33.7745744, -118.1934667]
+☭RIP☭Heart of Art Gallery 	 1907 Rodeo Rd. Los Angeles, CA 90018 	 [34.0184127, -118.3164164]
+☭RIP☭IMPACT! 	 1251 Marian Way Petaluma, CA 94954 707-338-5318 	 [38.2406686, -122.6186291]
+☭RIP☭Playing in Sand Collective 	 293 Squid Row Santa Cruz, CA 	 [36.975891, -122.0291339]
+☭RIP☭Pehrspace 	 325 Glendale Blvd. Los Angeles, CA 90026 	 [34.066422, -118.2605797]
+☭RIP☭Redwood Peace & Justice Ctr 	 1040 H St., Arcata, CA 95521 707-826-2511 	 [40.8701248, -124.0861981]
+☭RIP☭Rhizome Infoshop 	 47B West Third St. Eureka, CA [Mail PO Box 196 Eureka, CA 95501, 707-440-9310 rhizomeinfoshop@gmail.com, 	 NoGeocode
+☭RIP☭Rock Paper Scissors 	 2278 Telegraph Ave. Oakland, CA 94612 510-238-9171 	 [37.8124442, -122.2686537]
+☭RIP☭Sandpaper Books 	 3706 N. Figueroa St., Los Angeles, CA 90065 	 [34.09023, -118.212317]
+☭RIP☭ Santa Barbara Infoshop 	 421 N Alisos St. #A CA 93103, sbinfoshop@ gmail.com 	 NoGeocode
+☭RIP☭Students for Justice 	 3095 Yerba Buena San Jose 95135 408-274-7900 x6878 	 [37.3001189, -121.7627821]
+Bad Water Flats Collective 	 629 Ouray Ave Grand Junction, Co 81501 970-245-3720 	 [39.07109700000001, -108.561958]
+Bread and Roses Cultural Center 	 [physical location in transition] 720-840-0652 	 NoGeocode
+City, O’ City 	 206 E 13th Ave. Denver, CO 80203 303-831-6443 	 [39.7366466, -104.9845491]
+Community Cycles 	 2805 Wilderness place, Ste 1000, Boulder, CO 80301, 720-565-6019 	 [40.0255783, -105.2484526]
+Denver Community Health Collective 	 4130 Tejon St, Denver, CO 80211 720-432-9661 	 [39.7736253, -105.01111]
+Denver Justice and Peace Committee 	 3131 Osceola St. Denver, CO 80212 (303) 623-1463 	 [39.7618444, -105.0384323]
+Denver Zine Library 	 2400 Curtis St. Denver, CO 80205 (mail:  PO Box 13826, Denver CO 80201) 	 NoGeocode
+Flux Capacitor 	 3530 N. Chelton Loop Colorado Springs, CO 80909 	 [38.83781750000001, -104.7641541]
+Mercury Cafe 	 2199 California St. Denver, CO 80205 303-294-9258 	 [39.7508571, -104.9853515]
+Mutiny Information Cafe 	 2 So. Broadway Denver, CO 80209 303-778-7579 	 [39.71641779999999, -104.9871436]
+*P & L Press Infoshop 	 3827 Steel Street Denver, CO 80205 303-433-1852 	 [39.7700233, -104.9499018]
+*Rad-ish Collective 	 710 31st St. Boulder, CO 80303 collectivelyrad@gmail.com, theradishcollective@googlegroups.com 	 NoGeocode
+SAME Cafe 	 2023 E. Colfax Ave Denver Co 80206 (720) 530-6853 	 [39.7402352, -104.9627299]
+Seventh Circle Music Collective  	 2935 W 7th Ave, Denver, CO 80204 	 [39.72776100000001, -105.024239]
+*Wolverine Farm Publishing & Bookstore (formerly Matter Bookstore) 	 144 N. College Ave. Fort Collins, CO 80524 970-472-4284 	 [40.5879747, -105.0764099]
+No headline and/or contact. head: Defunct spaces - RIP  contact:  
+Emergence 	 733 Euclid St. NW Washington, DC 20001 202-462-2285 	 [38.924352, -77.0237439]
+Sankofa books and cafe 	 2714 Georgia Ave NW, Washington, DC 202-234-4755 	 [38.92556889999999, -77.0230955]
+No headline and/or contact. head: Defunct spaces - RIP  contact:  
+Bread and Roses Food Coop 	 915-2 Railroad Avenue Tallahassee Fl 32310-4347 (850) 425-8486 	 [30.433991, -84.28942599999999]
+Civic Media Center 	 433 S. Main St. Gainesville FL 32601 352-373-0010 	 [29.6473904, -82.32466389999999]
+Dandelion Communitea Cafe 	 618 N. Thornton Ave., Orlando, FL 32803 407-362-1864 	 [28.5520127, -81.365707]
+End of the Line Cafe 	 610 E. Wright St, Pensacola, FL 32501 850-429-0336 	 [30.418205, -87.20867450000001]
+Ethos Vegan Kitchen 	 601-B South New York Ave, Winter Park, FL 32789 407-228-3898 	 [28.5929319, -81.35294979999999]
+!Krank It Up Community Bike Project 	 ??? 1002 Stone Valley Way Tallahassee, FL 32310 850-222-6927 ??? 	 [30.4337688, -84.2954036]
+Open Books 	 1040 N. Guillemard St. Pensacola, FL 32501 850-453-6774 	 [30.4237855, -87.2162814]
+Plant, The 	 517 W. Gaines Street, Tallahassee, FL 32304. theplanet.tally at gmail.com 	 NoGeocode
+!Power U Center for Social Change  	 745 NW 54th St Miami, FL 33127 305-576-7449 info@poweru.org. 	 NoGeocode
+* Radical Press Coffee 	 433 S Main St. Gainesville, FL 32601 352-373-0010 	 [29.6473904, -82.32466389999999]
+Sluggo's Vegetarian Restaurant 	 101 S. Jefferson Pensacola, FL 32503 850-791-6501 	 [30.4112631, -87.21419039999999]
+Stonewall National Museum & Archives 	 1300 E. Sunrise Blvd., Ft. Lauderdale, FL 33304 954-763-8565 	 [26.21132, -80.22087]
+*ZenCog Bicycle Collective 	 883 Stockton St. Jacksonville, FL 32204 904-619-0496 	 [30.3151994, -81.6890971]
+No headline and/or contact. head: Defunct Spaces - RIP  contact:  
+Bombs Away! Bookstore 	 317 N Chase St. Athens GA 30606 	 [33.96095, -83.37794]
+Charis Books 	 1189 Euclid Ave Atlanta, GA 30307 404-524-0304 	 [33.7656025, -84.34866819999999]
+Infoshop at Atlanta Vintage Books 	 3660 Clairmont Road, Atlanta, GA 30341 770-457-2919 	 [33.76267, -84.42314]
+Little Five Points Community Center 	 1083 Austin Ave. Atlanta, GA 30307 404-522-2926 	 [33.7620406, -84.35255480000001]
+Savannah Tribe Intentional Community 	 631 West 37th St., Savannah, GA 93415 912-999-6988 	 [32.058962, -81.10830100000001]
+Sevananda  	 467 Moreland Ave NE Atlanta, GA 30307 404-681-2831 	 [33.7670312, -84.3485011]
+SOPO Bike Coop 	 222 Flat Shoals Ave SE Atlanta, Ga 30316 (mail: 1270 Caroline St NE Ste D120-392 Atlanta, GA 30307) 404-425-9989 	 NoGeocode
+Wonderroot Community Arts Center 	 982 Memorial Dr. SE Atlanta, GA 30316 (mail:  PO Box 89018, Atlanta, GA 30312), 404-254-5955 	 NoGeocode
+☭RIP☭Common Ground 	 157 N Newton St. Athens, GA 30601, 706-548-6011 	 [33.956975, -83.38176399999999]
+☭RIP☭Infoshop of Savannah 	 1728 Barnard St. Savannah, GA 31401 	 [32.060271, -81.1011226]
+☭RIP☭Mad Ratz Infoshop 	 840 DeKalb Ave. Suite C Atlanta, GA 30307 404 992-7218 	 [33.7545402, -84.35996180000001]
+Kokua Co-op 	 2643 S King St. Honolulu, HI 96826 808-941-1922 	 [21.2911434, -157.8208621]
+Backroom Books 	 750 W. Wyeth St. Pocatello, Idaho 83204   208-234-9834 	 [42.8620971, -112.4591745]
+Acme Artworks 	 1741 N. Western, Chicago, IL (??) (773) 278-7677 	 [41.9133308, -87.68692]
+Centro Autònomo 	 3460 W. Lawrence Ave. Chicago, IL 60625 773.583.7728 	 [41.9685443, -87.7155914]
+Common Ground Food Co-op 	 300 S. Broadway Ave. #166 Urbana, IL 61801 217-352-3347 	 [40.1105839, -88.2070866]
+Dill Pickle Food Co-Op  	 3039 W Fullerton Ave., Chicago, IL 60647, 773-252-2667
+NOTE:  they are moving in early 2017 so this contact was not published in the paper version of the 2017 organizer, but we would like to include the updated address (once we know it) in the 2018 paper slingshot organizer 	 NoGeocode
+Disaster House  	 714 Locust St. Rockford, IL 61101 	 [42.278006, -89.097211]
+Experimental Station / Blacksone Bike Works/ Backstory Cafe 	 6100 S. Blackstone Ave. Chicago, IL 60637 773-241-6044 	 [41.7841364, -87.5905903]
+Flyover Infoshop 	 214 N Washington St. in Carbondale, IL 62901 	 [37.7288921, -89.2158394]
+No headline and/or contact. head: IWW Headquarters & Infoshop  contact:  
+Boxcar Books 	 408 E. 6th, Bloomington, IN 47408 812-339-8710 	 [39.1673477, -86.52926049999999]
+Clear Creek Coop 	 3722 Pinehurst Dr. Richmond, IN 47374 765-983-1547 	 [39.838243, -84.85058099999999]
+Erasmus Books 	 1027 E. Wayne St South Bend, IN 46617 574-232-8444 	 [41.6737967, -86.2362229]
+The LGBTQ Center 	 1522 Mishawaka Ave South Bend, IN 46615 574-254-1411 	 [41.6655744, -86.22472060000001]
+The Purple Porch Co-op 	 123 N Hill St.  South Bend, IN 46617 	 [41.677239, -86.242922]
+Rose City Coffee Coop 	 801 National Rd. W. Richmond, IN 47374 765-983-1547 	 [39.8239393, -84.9130069]
+Iowa Citizens for Community Improvement  	 2001 Forest Ave, Des Moines, IA 50311 	 [41.604348, -93.644139]
+Peace Action and Education Center of Eastern Iowa (PEACE Iowa) 	 26 E. Market St. Iowa City, IA 52245 319-354-1925 	 [41.6638843, -91.53487439999999]
+Cosmic Beauty School  	 1145 Pennsylvania St. Lawrence, KS 66044 	 [38.9621, -95.22925699999999]
+Peace Connections  	 601 N. Main, Suite 303 / P.O. Box 1147 Newton, KS 67114 316-284-0000  Newton, KS 67114 316-284-0000 	 [38.04884029999999, -97.345428]
+Rewound Sounds 	 117 South Pattie Wichita, KS 67211 316-269-1413 	 [37.6854951, -97.32267999999999]
+Solidarity! Revolutionary Center & Radical Library 	 2nd Floor ECM, 1204 Oread Ave. Lawrence, KS 66044 	 [38.962126, -95.242547]
+Falls City Community BikeWorks  	 1217 Logan St. Louisville, KY 40204 502-509-3308 	 [38.2324791, -85.73967069999999]
+PeaceCraft 	 128 Main St. Berea, KY 40403 859-986-7441 	 [37.5727546, -84.2887657]
+Kentuckians for the Commonwealth 	 735 Lampton St. Suite 202 Lousisville, KY 40203 502-589-3188 	 [38.2414846, -85.74029639999999]
+☭RIP☭Autonomous People's Project 	 PO Box 2903  Louisville, KY 40201; (502) 291-8992If this is still around please help us out with an updated address/phone number
+livefreeordie@riseup.net 	 NoGeocode
+☭RIP☭BRYCC House 	 743 E. Broadway #101  Louisville, KY 40202 502-383-1177 	 [38.2449595, -85.73965059999999]
+☭RIP☭ReBelle 	 371 S. Limestone St. Lexington, KY 40508 859-389-9750 	 [38.0420985, -84.5033395]
+Orleans Food CoopNew 	 2372 St. Claude Ave. #110, New Orleans, LA 70117 504-264-5579 	 [29.9685946, -90.0523981]
+Rank & File Books/Sisters In Christ 	 5206 Magazine Street, New Orleans, LA 70115 	 [29.9204043, -90.11123769999999]
+*Nowe Miastor 	 223 Jane Place New Orleans, LA 70119 (Mail PO Box 53011, NOLA 70153) 504-451-3693 	 NoGeocode
+☭RIP☭Aboveground Zine Library 	 511 Marigny Street (at Decatur Street) in New Orleans, LA. 70117 504-944-0366 	 [29.9630345, -90.0548061]
+☭RIP☭Iron Rail Bookstore 	 503 Barracks St., New Orleans, LA 70116, 504-38-DEATH 	 NoGeocode
+☭RIP☭Plan B Bikes 	 1024 Elysian Fields New Orleans, LA 70116 504-272-7266 	 [29.9681547, -90.0571645]
+Gulf of Maine books 	 134 Maine Street Brunswick, ME 04011 207-729-5083 	 [43.9149025, -69.9654554]
+Local Sprouts 	 649 Congress St. Portland, ME 04101 207-899-3529 	 [43.65347389999999, -70.2654451]
+☭RIP☭Meg Perry Center 	 644 Congress Street, Portland, Maine. 04101 207-772-0680 	 [43.6532077, -70.2652076]
+☭RIP☭People's Free Space 	 144 Cumberland Ave. Portland, ME 04101 	 [43.6630069, -70.2530859]
+Alternative Press Center 	 1443 Gorsuch Ave. Baltimore MD 21218, 410.243.2471 	 [39.322847, -76.597674]
+Baltimore Free Farms 	 3510 Ash St. Baltimore, MD 21211 	 [39.329453, -76.64013249999999]
+Maryland Food Collective 	 B0203 Adele H. Stamp Student Union, University of Maryland, College Park, MD 20742 301-314-8089  (Drop-in volunteers can get food credit at the store if you're traveling through the area and need some eats) 	 NoGeocode
+Red Emma's 	 800 St. Paul St, Baltimore MD 21202 443-602-7585 	 [39.2988386, -76.6143982]
+Democracy Center  	 45 Mount Auburn St. Cambridge, MA 02138 617-492-8855 	 [42.3713537, -71.1164569]
+Encuentro 5 	 9a Hamilton Place Boston, MA 02108 617-482-3310 	 [42.3563106, -71.0613983]
+Flywheel Arts & Line Library 	 43 Main St. Easthampton, MA 01027 - 413 527-9800 	 [42.2713368, -72.6725024]
+Lucy Parsons Center 	 358A Centre St. Jamaica Plain, MA 02130 617 522-6098 	 [42.3222812, -71.1074861]
+Papercut Zine Library 	 10 Ward St Somerville, MA 02143 617 871-ZINE (9463) 	 [42.3749542, -71.0888877]
+Roos-Rohde House  	 c/o Hampshire College 893 West St. Amherst, MA 01002 	 [42.325559, -72.5322956]
+Smith College Bicycle Kitchen  	 basement of Talbot House on Smith Campus, Northampton, MA 413-585-2378 	 NoGeocode
+Stone Soup Community Center 	 4 King St. Worcester, MA 01610 508-443-4974 	 [42.2556672, -71.8134513]
+☭RIP☭Feed Your Head 	 272 Essex St. Salem, MA 01970 978-744-4009 	 [42.5216141, -70.897401]
+☭RIP☭Food For Thought Books 	 106 N Pleasant St, Amherst MA 01002 413 253-5432 	 [42.37758789999999, -72.51992299999999]
+Arcus Center for Social Justice Leadership 	 205 Monroe St, Kalamazoo, MI 49006 (mail: 1200 Academy St, Kalamazoo, MI 49006.) 269-337-7398 	 NoGeocode
+Back Alley Bikes 	 3535 Cass Ave Detroit, MI 48201 313-879-5630 	 [42.3462002, -83.0614453]
+Bartertown Diner & Roc's Cakes 	 6 Jefferson Ave. SE, Grand Rapids, MI 49503 616-233-3219 	 [42.9628813, -85.6642035]
+Everybody Reads 	 2019 E. Michigan Ave. Lansing, MI 48912 517 346-9900 	 [44.25029, -85.50033]
+Interfaith Peace & Justice 	 1679 Broadway Ann Arbor, MI 48105 734-663-1870 	 [42.2964492, -83.7269231]
+Peace Education Center 	 1120 S. Harrison Rd. East Lansing, MI 48823 517-515-5634 	 [42.721154, -84.494359]
+Kalamazoo Peace Center 	 2101 Wilbur Kalamazoo, MI 49006 269-344-4076 	 [42.2842714, -85.6169917]
+TOAD Bicycle Cooperative 	 __________ Kalamazoo, MI 49007 269-779-2888 	 [42.295054, -85.586782]
+Trumbullplex 	 4210 Trumbull Detroit, MI 48208 	 [42.346934, -83.07525299999999]
+United Peace Relief 	 4203 Lincoln St Detroit, MI 48208 313-377-4203 	 [42.346951, -83.074693]
+Universe Building, the 	 1 E Montana, Detroit 48203 734-417-9233 / 616-570-1459 	 [42.423918, -83.1020238]
+No headline and/or contact. head: Defunct spaces:  contact:  
+Ancestry Books 	 2205 Lowry Ave N Minneapolis, MN 55441 612-521-4090 	 [45.0131149, -93.3085557]
+Boneshaker Books 	 2002 23rd Ave. South, Minneapolis, MN 55404 612-871-7110 	 [44.9624212, -93.23966999999999]
+Center Street Free Space 	 703 Center Street Milwaukee, WI 53212 	 [43.067214, -87.902628]
+Cycles for Change (was Sibley bike depot) 	 712 University Ave., St. Paul, MN 55104 651-222-2080 	 [44.9554297, -93.1304182]
+Extreme Noise  	 407 West Lake St. Minneapolis, MN 55408 612-824-0100 	 [44.9481401, -93.2846951]
+Grease Pit bikes 	 2750 Bloomington Ave.Minneapolis, MN 55407 	 [44.9521384, -93.2530187]
+Hard Times 	 1821 Riverside Minneapolis MN 55454 612-341-9261 	 [44.9694654, -93.2461422]
+Hub Bike Coop 	 3020 Minnehaha Ave Minneapolis, MN 55406 612-729-0437
+or 301 Cedar Avenue South 	 NoGeocode
+Matchbox Cafe 	 1306 NE 2nd St. Minneapolis, MN 55413 612-259-0069 	 [45.0012779, -93.2663323]
+Mayday Books 	 301 Cedar Ave Minneapolis, MN 55454 612 333 4719 	 [44.9709622, -93.2469727]
+Minnehaha Free Space 	 3747 Minnehaha Ave. S. Minneapolis, MN 55406 612-729-3733 	 [44.9345662, -93.2239034]
+Mississippi Market 	 622 Selby Ave. St. Paul, MN 55104 651-690-0507 	 [44.946335, -93.12662399999999]
+Modern Times 	 3200 Chicago Ave. S Minneapolis, MN 55407 (612) 886-3882 	 [44.9445763, -93.2629321]
+*North Country Food Alliance 	 2 East Franklin Ave, Suite #1, Minneapolis, MN 55404 	 [44.9628508, -93.2774507]
+*Pineapple Arts Center 	 124 W. 1st St. Duluth, MN 55802 218-722-2919 	 [46.78598239999999, -92.1012489]
+Seward Cafe 	 2129 E Franklin Minneapolis MN 55404 612-332-1011 	 [44.9625675, -93.2411635]
+No headline and/or contact. head: Defunct spaces - RIP:  contact:  
+Mississippi Immigrants' Rights Alliance 	 612 N State St. Jackson, MS 39202 	 [32.3050185, -90.1792419]
+Rainbow Co-op 	 2807 Old Canton Rd. Jackson, MS 39216 601-366-1602 	 [32.3340559, -90.1751589]
+Community Arts & Media Project 	 3022A Cherokee St., St. Louis, MO 63118 (314) 827-4730 	 [38.5942257, -90.2344299]
+EarthDance Organic Farm School 	 233 S. Dade Ave. Ferguson, MO 63135 314-521-1006 	 [38.73923600000001, -90.316948]
+*Kismet Creative Center 	 3409 Iowa Street, St. Louis, MO 63118 314-696-8177 	 [38.5933847, -90.2290867]
+MoKaBe's Coffeehouse 	 3606 Arsenal St. St. Louis, MO 63116 314-865-2009 	 [38.6028044, -90.24247679999999]
+Peace Nook 	 804-C E Broadway Columbia, MO 65201 573-875-0539 	 [38.9511608, -92.32837289999999]
+Shameless Grounds 	 1901 Withnell Ave, St Louis, MO 63118 314-449-1240 	 [38.595398, -90.21825500000001]
+Yeyo Arts Collective 	 2907 South Jefferson Ave. Saint Louis, MO 63118 	 [38.600867, -90.224293]
+No headline and/or contact. head: RIP spaces:  contact:  
+Jeannette Rankin Peace Center 	 519 S. Higgins Ave. Missoula, MT 59801 (406) 543-3955 	 [46.8664437, -113.9977549]
+*Missoula Community Coop & Northside Community Center 	 1500 Burns Missoula, MT 59801 	 [46.88567, -114.014901]
+*Shakespeare & Co 	 103 S. 3rd St. W. Missoula, MT 59801 406 549-9010 	 [46.8668103, -113.9978564]
+No headline and/or contact. head: DEFUNCT SPACES:  contact:  
+Black Cat House, the  	 1601 B St. Lincoln, NE 68502 	 [40.8001485, -96.6980248]
+Common Root Mutual Aid Center 	 3140 O Street, Suite 202, Lincoln NE 68510 	 [40.8137465, -96.6749608]
+Commons, the 	 1239 S 14th St. Lincoln, NE 68502 402-312-3158 	 [40.8006697, -96.7012402]
+Change Point 	 445 Ralston St. Reno, NV 89503 775-997-7519 	 [39.529288, -119.8209844]
+Great Basin Food Co-op 	 240 Court St. Reno, NV 89501 775-324-6133 	 [39.5226315, -119.8154711]
+The Holland Project  	 The Holland Project 140 Vesta St. Reno, NV 89502 775-742-1858 	 [39.509635, -119.80367]
+Las Vegas Zine Library 	 520 Fremont St. Las Vegas, NV 89101 (mail zines to PO Box 72071 LV, NV 89170) lvzinelibrary@gmx.com 	 NoGeocode
+George Street Co-op 	 89 Morris Street, New Brunswick, NJ 08901 732-247-8280 	 [40.49176310000001, -74.4449989]
+☭RIP☭Green Heart collective 	 661 Haddon Ave. Collingswood, NJ 08108; 856-833-1144 	 [39.916801, -75.06991599999999]
+Albuquerque Center for Peace & Justice 	 202 Harvard Dr. SE, Albuquerque, NM, 87106 505-268-9557 	 [35.0789793, -106.6205858]
+Bike Works 	 815 E. 10th, Silver City, NM 88061 575-388-1444 	 [32.7747655, -108.2664546]
+Goathead Record Collective 	 310 Stanford Dr. SE Albuquerque, NM 87106 	 [35.076597, -106.617951]
+Tannex, the 	 1417 4th St. SW Albuquerque, NM 87102 	 [35.0712857, -106.6541477]
+☭RIP☭Taos Peace House and Infoshop 	 801 Paseo Del Pueblo Norte, Taos, NM 87571, 575-776-3880. 	 [36.4204116, -105.5723447]
+Base, the 	 1302 Myrtle ave. Brooklyn, NY 11221 	 [40.6980462, -73.924447]
+Bluestockings Radical Books 	 172 Allen St, NY NY 10002 212 777-6028 	 [40.7214094, -73.98891569999999]
+Burning Books 	 420 Connecticut Street, Buffalo NY 14213 (716) 881-0791 	 [42.9070013, -78.8859411]
+CUSLAR 	 316 Anabel Taylor Hall Ithaca, NY 14853 607-255-7293 	 NoGeocode
+DIY Resource Center 	 115 E. MLK st. (the commons) Ithaca, NY 14850 	 [42.4393038, -76.498221]
+Durland Alternatives Library  	 127 Anabel Taylor Hall Ithaca, NY 14853 607-255-6486 	 NoGeocode
+Flying Squirrel 	 285 Clarrissa St Rochester, NY 14608 585-678-6870 	 [43.1508737, -77.6190364]
+Freedom Square 	 39 5th Ave Troy, NY _____ 518-272-2390 	 [42.753918, -73.681625]
+Interference Archive 	 131 8th st. #4, Brooklyn, NY 11215 	 [40.6726331, -73.9911474]
+*IWW New York City General Membership Branch 	 45-02 23rd St. 2nd Floor Long Island City, NY 11101 	 [40.7468209, -73.9453618]
+Lesbian Herstory Archives 	 484 14th Street Brooklyn, NY 11215718 768-DYKE 	 NoGeocode
+*May Day Bar and Community Space 	 176 St Nicholas Avenue, Brooklyn NY 11237 	 [40.7041143, -73.9163094]
+*Museum of Reclaimed Urban Space 	 155 Avenue C New York, NY 10009 973-818-8495 	 [40.7257661, -73.9779461]
+Root Cellar Cafe and Zine Library@ Bard College 	 0 Stone Row Drive, Annandale-on-Hudson, NY  PO Box 5000, Annandale-on-Hudson, NY 12504 	 NoGeocode
+Rota Gallery & Studio 	 39 Bridge Street Plattsburgh, NY 12901 	 [44.697862, -73.45138899999999]
+Sanctuary for Independent Media 	 3361 6th Ave,  North Troy, NY 12180 (mail:  PO Box 35 Troy, NY 12181) 	 NoGeocode
+Social Justice Center Infoshop  	 33 Central Ave. Albany, NY 12210 518-434-4037 	 [42.6581735, -73.764636]
+Time's Up! 	 99 South 6th Street Brooklyn, NY 11211 212-802-8222 	 [40.7107557, -73.9646231]
+Troy Bike Rescue 	 3280 6th Ave., North Troy, NY 12180 518-328-4827 	 [42.75161869999999, -73.6809693]
+!WESPAC (Westchester People's Action Coalition) 	 31 Mamaroneck Avenue, Suite 403 White Plains, NY 10603  914-449-6514 	 [41.0315728, -73.76606140000001]
+Word Up community Bookshop / Librería Comunitaria 	 2113 Amsterdam Ave. New York, NY 10032 347-688-4456 	 [40.8376522, -73.93824719999999]
+☭RIP☭123 Community Space 	 123 Tompkins Ave #1L Brooklyn, NY 11206 	 [40.69527, -73.946147]
+☭RIP☭ABC No Rio 	 Under reconstruction:  156 Rivington St, NY NY 10002 212 254-3697 	 NoGeocode
+☭RIP☭Antiwar Storefront 	 658 Monroe Ave Rochester, NY 14607  585-271-2620 	 [43.14462779999999, -77.5899392]
+☭RIP☭Birdhouse collective 	 92 Bird Street Buffalo, NY 14202 716-884-2797 	 [42.905545, -78.848143]
+☭RIP☭Bon vivant Artspace 	 1862 Hertel Avenue Buffalo, NY 14216 	 [42.9477904, -78.83919089999999]
+☭RIP☭Crow's Pace 	 93 Montrose Ave, Brooklyn NY 11206 	 [40.7072999, -73.945976]
+☭RIP☭Dumba Queer Collective 	 57 Jay St 1A, Brooklyn NY 11201 718 858-4886 	 [40.7029673, -73.98638059999999]
+☭RIP☭Furnace, the 	 84 Grand Street Albany NY 12202 	 [42.6455559, -73.756751]
+☭RIP☭Fertile Minds Collective 	 153 Charles Smith Rd, Saugerties NY 12477 	 [42.14917, -73.96206099999999]
+☭RIP☭Ironweed Infoshop 	 98 Grand St, Albany NY 12202 518 436-0929 	 [42.6451629, -73.75692099999999]
+☭RIP☭MayDay Infoshop 	 155 1st Ave, NY NY 10003 	 [40.7286358, -73.9848342]
+☭RIP☭New Paltz Cultural  Collective 	 60 Main St New Paltz NY 12561 845-255-1901 	 [41.7477668, -74.0862592]
+☭RIP☭Rochester Infoshop 	 222 Driving Park Ave, Rochester NY 14613 	 [43.181144, -77.635834]
+☭RIP☭Slash Root Tech Cafe 	 60 Main Street New Paltz, NY 12561 	 [41.7477668, -74.0862592]
+☭RIP☭Tamiment Library 	 70 Washington Sq S. 10th Fl., NY NY 212 998-2630 	 [40.7295147, -73.9971879]
+☭RIP☭Vox Pop 	 1022 Cortelyou Rd, Brooklyn NY 11218 718 940-2084 	 [40.6394247, -73.96795589999999]
+☭RIP☭Women's Information Center 	 601 Allen St Syracuse, NY 13210 315-478-4363 	 [43.0414839, -76.116271]
+Bike Recyclery 	 90 Biltmore Ave. Asheville, NC 28801 828-255-7916 	 [35.5917314, -82.5504886]
+*Downtown Books & News 	 67 North Lexington Ave. Asheville, NC 28801 828-253-865 	 [35.5971101, -82.5536746]
+!Durham Bike Coop 	 1612 Acadia St. Durham, NC  (Mail:  PO Box 1225 Durham, NC 27702) 919-675-2453 	 NoGeocode
+Firestorm Cafe and Books 	 610 Haywood Rd, Asheville, NC 28806 828-255-8115 	 [35.5786161, -82.5880904]
+*Glenwood Community Bookshop 	 1212 Grove Street Greensboro, NC 27403 336-609-6168 	 [36.05352200000001, -79.81190800000002]
+Greenleaf Coffee Coop 	 5800 W. Friendly Ave. Greensboro NC 27410 336-316-2033 	 [36.0928801, -79.8896444]
+Internationalist Books 	 101 Lloyd St. Carrboro, NC 27510 919-942-1740 	 [35.911147, -79.069328]
+Recyclery NC, the 	 108 North Graham Street, Chapel Hill, NC 	 [35.910557, -79.064251]
+*Toy Boat Community Art Space 	 101 Fairview Rd. Suite B Asheville, NC 28803 828-505-8659 	 [35.5662168, -82.5374667]
+☭RIP☭Action for Community in Raleigh 	 2419 Mayview St. Raleigh, NC 27607 919-341-8263 	 [35.797035, -78.66464100000002]
+☭RIP☭Asheville Community Resource Center 	 16 Carolina Lane Asheville, NC 28801 828-252-8999 	 [35.5970446, -82.5528362]
+☭RIP☭Panaderia Break Bread Uprising Bakery 	 816 Yancey St. Durham, NC 27701 	 [35.9941975, -78.9141102]
+☭RIP☭PB Buttermilk's 	 720 1/2 Ninth St. Durham NC 27705 	 [36.0085773, -78.9221391]
+☭RIP☭Rebel Books 	 1701 Wrightsville Ave. Wilmington, NC 28403 	 [34.23617850000001, -77.9271101]
+Amazing Grains Coop  	 214 DeMers Ave Grand Forks, ND 58201 (701) 775-4542 	 [47.9257207, -97.0303615]
+Mill Town Herbs 	 2400 Highway 281 S Jamestown, ND 58401 701-252-2284 	 [46.8834667, -98.7203407]
+New Direction, the 	 14 Roberts St. N. Fargo, ND 58102 	 [46.8764586, -96.7904289]
+Ojata Records 	 1300 University Grand Forks, ND 58203 or 305 N. Washington St. 701-757-4002 	 NoGeocode
+Red Raven Espresso Parlor 	 916 Main Ave. Fargo, ND 58103 701-478-7337 	 [46.8744643, -96.793426]
+No headline and/or contact. head: DEFUNCT SPACES - RIP:  contact:  
+*Antioch Alternative Library 	 Sontag Fels Building 800 Livermore St. Yellow Springs, OH 45387 	 [39.7993021, -83.8903758]
+Cat in the Cream 	 180 West Lorain Street Oberlin, OH 44074 440-775-8279 	 [41.2942219, -82.22398319999999]
+Guide to Kulchur 	 5900 Detroit Ave Cleveland, OH 44102 216-314-4644 	 [41.485009, -81.727496]
+Land of Plenty 	 339 W. Market St. Akron, OH 44303 330-703-5633 	 [41.0903794, -81.5283614]
+McMicken Freespace 	 527 W. McMicken, Cincinnati OH 45214. 	 [39.121707, -84.52982999999999]
+!The Spore 	 979 E. 5th Ave. Columbus, OH 43201 (mail:  po box 8091, Columbus OH 43201) 	 [39.98869639999999, -83.04922220000002]
+*Visible Voice Books 	 1023 Kenilworth Ave. Cleveland, OH 44113 216-701-0809 	 [41.4794578, -81.6884391]
+No headline and/or contact. head: DEFUNCT SPACES:  contact:  
+Bad Egg Books / Phoenix Rising 	 306 S. Phoenix Ave. Tulsa, OK 74127 918-582-5344 	 [36.1500456, -96.0060563]
+Anarres Infoshop 	 7101 N Lombard, Portland, OR 972039 	 [45.58754159999999, -122.7402479]
+Aprovecho Education Center for Sustainable Living 	 80574 Hazelton Rd. Cottage Grove, OR 97424 541-942-8198 	 [43.8317433, -123.1305863]
+Eugene Infoshop C/O The Boreal 	 450 West 3rd Avenue Eugene, OR 97401 	 [44.0563914, -123.0998586]
+Bicycle Farm 	 1810 NE 1st Ave. Portland, OR 97212 971-533-7428 	 [45.5360643, -122.6644408]
+Bitch Media Community Lending Library 	 4930 NE 29th Ave. Portland, OR 97211 503-282-5699 	 [45.5588983, -122.6357397]
+Growers Market Building 	 454 Willamette, 2nd floor, Eugene, OR 97401 541-687-1145 	 [44.0547815, -123.092938]
+Hugo House Zine Archive 	 1634 11th Ave Seattle, WA 98122 206-322-7030 	 [47.6162021, -122.3178719]
+In Other Words Feminist Bookstore & Community Center 	 14 N.E. Killingsworth Portland, OR 97211 503-232-6003 	 [45.5625416, -122.6666581]
+Green Bike Coop 	 115 U.S. 101 Waldport, OR 97394 541-563-7328 	 [44.4266833, -124.0671993]
+Independent Publishing Resource Center 	 1001 SE Division Portland, OR 97202 503-827-0249 	 [45.5050581, -122.6554413]
+Microcosm Publishing 	 2752 N Williams Ave. Portland, OR 97227 503-799-2698 	 [45.5426947, -122.6664915]
+!Portland Button Works 	 1505 N. Bryant Street Portland, OR 97217 503-922-2684 	 [45.57380200000001, -122.682509]
+Survival Center 	 Suite 1 Erb Memorial Union on U of O Campus, Eugene, OR 97403 541-346-4356 	 NoGeocode
+Social Justice Action Center 	 400 SE 12th Street, Portland, OR 97214 – 971-279-7740 	 [45.519954, -122.653443]
+Tryon Life Community Farm 	 11640 SW Boones Ferry Rd. Portland, OR  97219 503-245-3847 	 [45.4408141, -122.6848317]
+☭RIP☭Blackjack Bioregional Infoshop 	 735 NW Columbia St. Bend, OR 97701 541-390-0951 	 [44.0571862, -121.326813]
+☭RIP☭Black Rose Collective Bookstore And Freecycling Space 	 4038 N. Mississippi Ave. Portland, OR 97227 	 [45.55270240000001, -122.675399]
+☭RIP☭Blue Heron Infoshop 	 Lower level, Reed College OR 97202 	 [45.4809782, -122.6303724]
+☭RIP☭Cascadia Rising Infoshop 	 1540 S.E. Clinton, PDX OR 97202  503.230.8360 	 [45.5033097, -122.6497284]
+☭RIP☭IWW Hall 	 616 E. Burnside, PDX OR 97214 503.231.5488 	 [45.5227534, -122.6592196]
+No headline and/or contact. head: ☭RIP☭L@s Quixotes Infoshop & Radical Library  contact:  
+A-Space 	 4722 Baltimore Ave, Philadelphia PA 19143 215-821-6877 / 215 727-0882 	 [39.9483428, -75.21772039999999]
+Big Idea Bookstore 	 4812 Liberty Ave. Pittsburgh, PA 15224 412-687-4323 	 [40.4601839, -79.9467016]
+Community Futures Lab 	 2204 Ridge Ave. Philadelphia, PA 19121 215-469-1609 	 [39.9795667, -75.17137819999999]
+!Devine Bike Church 	 3939 Lancaster Avenue Philadelphia, PA 19104 215-386-0316 	 [39.9626774, -75.20097830000002]
+Lancaster Avenue Autonomous Zone (LAVA) 	 4134 Lancaster Ave. Philadelphia, PA 19143 215.387.6155 	 [39.9655059, -75.2064445]
+Mariposa Food Co-op 	 4824 Baltimore Ave. Philadelphia, PA 19143 215-729-2121 	 [39.9479203, -75.2206709]
+*Seed, The 	 52 N. Queen Street Lancaster, PA 17603 717-945-5787 	 [40.0391885, -76.3060995]
+Soapbox 	 741 S. 51st St. Philadelphia, PA 19143 (Trying to move to 4700 Kingsessing
+Ave, Philadelphia, PA 19143 - not there yet but soon?) 	 NoGeocode
+Thomas Merton Center 	 5125 Penn Ave, Pittsburgh 15224 412 361-3022 	 [40.4648379, -79.9418129]
+Wooden Shoe Books 	 704 South St. Philadelphia, PA 19147 215 413-0999 	 [39.9420819, -75.15416549999999]
+☭RIP☭Alternative Arts Center / Sweet Candy Zine Library 	 1508 S 4th St, Philadelpia, PA 215-531-3155 	 [39.92933, -75.152109]
+☭RIP☭Community Center Coalition 	 307 N. Queen St. Lancaster, PA 17603 717-393-3848 	 [40.043031, -76.30637600000001]
+☭RIP☭Greater Pittsburgh Anarchist Collective 	 5001 Penn Ave Pittsburgh, PA 15224 	 [40.4653383, -79.9438735]
+George Wiley Center 	 32 E Ave. Pawtucket, RI 02860 401-728-5555 	 [41.8766232, -71.3845504]
+TIVOLI 	 517 Joseph St, Charleston, SC 29412 843-425-5842​ 	 [32.755353, -79.96588400000002]
+spearfish Bicycle Coop 	 727 N Main St, Spearfish, SD 57783 	 [44.4905408, -103.8594024]
+Birdhouse Community Center 	 800 N. 4th Ave., Knoxville, TN 37917 	 [35.9793424, -83.9174088]
+deCleyre Housing Co-op 	 787 Ellsworth Memphis, TN 38111 901-746-8126 	 [35.110092, -89.947605]
+☭RIP☭Owl Farm 	 811 Dickerson Pike Unit I, Nashville, TN 37207 	 [36.1853735, -86.7731653]
+☭RIP☭Groundswell Collective 	 1512 Magnolia Ave. Knoxville, TN 37919 	 [35.977913, -83.90917499999999]
+☭RIP☭Firebrand Collective 	 1318 Little Hamilton Road Nashville, TN 37203  615-406-2076 / 673-4153 	 [36.1398943, -86.7647791]
+☭RIP☭Sin Reading Room 	 918 Ward St. Nashville, TN 37207 	 [36.197589, -86.75294699999999]
+☭RIP☭The Barn 	 c/o FE POB 6 Liberty, TN 615-536-5022 	 NoGeocode
+1919 Hemphill  	 1919 Hemphill St. Fort Worth, TX 76110 (817) 920-9665 	 [32.722995, -97.33124199999999]
+Art Car Museum 	 140 Heights Blvd. Houston, TX 77007 (713) 861-5526 	 [29.77203039999999, -95.3968374]
+Austin Yellow Bike Project Shop 	 1216 Webberville Rd,  Austin, TX 78721 	 [30.278916, -97.68443839999999]
+Book Woman 	 5501 N. Lamar St Suite #105 , Austin, TX 78751 (512) 472-2785 	 [30.3231625, -97.7273395]
+Casa de Luz 	 1701 Toomey Rd. Austin, TX 78704 512-476-2535 	 [30.2644335, -97.7616436]
+Corazon 	 2318 Waugh Dr. Houston, TX 77006 (713) 526-6591 	 [29.748022, -95.3954029]
+Esperanza Peace & Justice Center 	 922 San Pedro Ave. San Antonio, TX 78212 210-228-0201 	 [29.442648, -98.49906399999999]
+Inside Books Project at Space 12 	 3121 E. 12th St. Austin, TX 78702 	 [30.2764383, -97.7014904]
+Monkey Wrench Books 	 110 E. North Loop Austin, TX 78751 (512) 407-6925 	 [30.3179515, -97.72168950000001]
+Resistencia Bookstore 	 4926 E. Cesar Chavez St Unit C1 Austin, TX 78702 512-389-9881 	 [30.251906, -97.70067]
+*Solidarity Houston 	 6733 Harrisburg Blvd. Houston, TX 77011 	 [29.7375208, -95.30729269999999]
+Super Happy Fun Land 	 3801 Polk St Houston, TX 77003 (713) 880-2100 	 [29.741216, -95.34220099999999]
+Tantra Coffeehouse 	 217 W. Hopkins St. San Marcos, TX 78666 512 558-2233 	 [29.8825912, -97.9433181]
+Treasure City Thrift 	 2142 E. 7th St. Austin, TX 78702 512-524-2820 	 [30.2619335, -97.7179472]
+Under the Hood Cafe 	 17 S. College Street Killeen, TX 76541
+Defunct SPACES listed below: 	 NoGeocode
+☭RIP☭406 Arts 	 406 S. Haskell Dallas, TX 75226 214-293-6823 	 [32.787129, -96.76852799999999]
+☭RIP☭Bill Hicks Resurrection Lab 	 2915 Delafield, Houston, TX 77023 (719) 921-1924 	 [29.709634, -95.325249]
+☭RIP☭Casa TAller Aziz 	 1205 West Elizabeth, Brownsville, TX 78520 	 [25.9173405, -97.51594159999999]
+☭RIP☭East Side Social Center 	 4202 Canal St. Houston, TX 77003 281-846-6894 	 [29.7494275, -95.3320188]
+☭RIP☭Rhizome Collective 	 300 Allen St. Austin, TX 78702 (512) 385-3695 	 [30.253165, -97.706576]
+☭RIP☭Rice, Beans & Revolution Infoshop 	 402 N. Main, McAllen, TX 78501 956-212-8753 	 [26.207584, -98.23351199999999]
+☭RIP☭Sedition Books 	 901 Richmond Ave Houston, TX 77006 	 [29.7343217, -95.3900728]
+☭RIP☭Southmorehouse 	 3107 Leeland St., Houston TX 77003  (832) 885-4228 	 [29.741648, -95.350016]
+☭RIP☭Yin-Yang Fandango & The Tango Tea Room 	 505 S Water St #545 Corpus Christi, TX 78401, 361-883-9123 	 [27.7874828, -97.3957887]
+Boing! Anarchist Collective 	 608 S. 500 E. Salt Lake City, Utah 84102 801-364-2426 	 [40.7584792, -111.8726556]
+Ogden Community Bike Shop 	 936 E. 28th Street Ogden, UT 84403 801-997-0336 	 [41.214526, -111.955496]
+Provo Bicycle Collective 	 397 E 200 N. Provo, UT 84606 	 [40.236564, -111.651902]
+SLC Bicycle Collective  	 2312 S West Temple, Salt Lake City, UT 84115 80-328-2453 	 [40.7205456, -111.8943042]
+No headline and/or contact. head: DEFUNCT SPACES LISTED BELOW:  contact:  
+Everyone's Books 	 25 Elliott St, Brattleboro VT 05301 802 254-8160 	 [44.00034, -72.74983]
+Free Ride Montepelier 	 89 Barre St. Monpelier, VT 05602 802-552-3521 	 [44.256175, -72.5737539]
+Peace and Justice Center 	 60 Lake St,  1C, Burlington VT 05401  802-863-8326 	 [44.482133, -73.224083]
+Root Radical Lending Library 	 28 Williams St. 1st floor Brattleboro, VT 05301 	 [42.8505869, -72.5684309]
+Root Social Justice Center 	 28 Williams St. 1st floor Brattleboro, VT 05301 802-254-3400 	 [42.8505869, -72.5684309]
+Vermont Workers' Center 	 294 N Winooski Ave., Burlington VT 05401 (802) 861 4892 	 [44.48777330000001, -73.20746150000001]
+☭RIP☭Black Sheep Books 	 5 State Street, Montpelier VT 05602 802 225-8906 	 [44.2603398, -72.5756121]
+☭RIP☭CRASH Collective Infoshop 	 117 Bank St. Burlington, VT 05401, infoshopvt@gmail.com 	 NoGeocode
+☭RIP☭Sovversiva Open Space 	 89 Barre Street Montpelier, VT 05602 	 [44.256175, -72.5737539]
+*Acorn Community 	 1259 Indian Creek Dr. Mineral, VA 23117 	 [37.8979413, -77.932689]
+Downstream project and Spring Village Ecology Center and Vine and Fig 	 715 N. Main St. Harrisonburg, VA 22802 540-434-4745 	 [38.457291, -78.86288499999999]
+Flying Brick Library 	 BY APPOINTMENT ONLY:  NO REGULAR OPEN HOURS 506 South Pine St. Richmond, VA 23220 theflyingbrick@riseup.net 	 NoGeocode
+Little Grill Collective 	 621 N. Main St. Harrisonburg, VA 22802 540-434-3594 	 [38.45621910000001, -78.8643318]
+Living Energy Farm 	 1022 Bibb Store Rd. Louisa, VA 23093 434 282 6471 	 [38.0381233, -77.98953499999999]
+Mind(ful) Liberation Project  	 2026 Parkwood Ave Apt. C Richmond, VA 23220 	 [37.547927, -77.46787599999999]
+Quercus Community  	 2005 Barton, Richmond, VA 23222 quercus.richmond@ gmail.com 	 NoGeocode
+*Rag & Bones Bicycle Co-op  	 3110 W. Leigh St. Richmond, VA 23230 804-386-5692 	 [37.5679561, -77.47127379999999]
+Rrenew Collective (note they spell it with 2 rs) 	 Appalachia, VA - call for email 276-565-2073 	 NoGeocode
+Twin Oaks Community 	 138 Twin Oaks Rd. Louisa, VA 23093 540-894-5126 	 [37.9326448, -77.99240490000001]
+Wayside Center for Popular Education  	 1100 Mill Pond Rd Faber, VA 22938 434-263-5115 	 [37.8253435, -78.7361438]
+☭RIP☭Better than Television 	 112 E. Main St. Charlottesville, VA  22902 434-295-0872 	 [38.030288, -78.481357]
+☭RIP☭Black Hand 	 3112 Woodcliff Ave, Richmond, VA 23222 804-334-2203
+85 E. Elizabeth St. Harrisonburg, VA 22802 540-437-0577 	 NoGeocode
+☭RIP☭Coldwater Distro 	 111 Main Street, Floyd, VA (mail PO Box 672, Floyd, VA 24091) 	 NoGeocode
+☭RIP☭Hazardous Materials Zine Shop 	 1806 Currie Street Richmond, VA 23220 	 [37.5594807, -77.4504152]
+☭RIP☭Wingnut, the 	 2005 Barton Ave. Richmond, VA 23222 804-303-5449 	 [37.560523, -77.432035]
+!Bellingham Alternative Library 	 929 N. State St. Bellingham, WA 98225 360-312-4287 	 [48.7451418, -122.4821949]
+*Bikery, the 	 845 Hiawatha Pl S, Seattle, WA 98144 	 [47.594722, -122.3097702]
+Boiler Room 	 711 Water St. Port Townsend, WA 98368 360-379-8247 	 [48.114997, -122.7546805]
+*Flaming Eggplant, the 	 2700 Evergreen Parkway NW Olympia, WA 98505 (3rd floor of CAB building) 360-867-5092 	 NoGeocode
+The Hub Community Bike Shop Cooperative 	 903 1/2 North state St. Bellingham, WA [Mail: PO Box 1593 98227] 360-255-2072 	 NoGeocode
+*Hugo House Zine Archive 	 1634 11th Ave Seattle, WA 98122 206-322-7030 	 [47.6162021, -122.3178719]
+Last Word Books & Zine Library 	 111 Cherry St. NE Olympia, WA 98501 360-786-WORD (9673) 	 [47.0458469, -122.895787]
+Left Bank Books 	 92 Pike St, Seattle WA 98101  206-622-0195 	 [47.6089115, -122.3403584]
+Media Island International 	 816 Adams St. SE Olympia, WA 98501 360-352-8526 	 [47.041246, -122.897023]
+New Moon Cooperative Cafe 	 113 4th Avenue West Olympia, WA 98501360-357-3452 	 [47.0446987, -122.902324]
+*Pipsqueak 	 173 16th Ave Seattle, WA 98122 	 [47.603381, -122.3115074]
+☭RIP☭Autonomia / L@s Quixtes Infoshop 	 600 24th Ave S, Seattle, WA 98144 	 [47.5966551, -122.300964]
+☭RIP☭Cusp, the 	 Off 4th on Franklin between Old School Pizzeria and Dumpster Values, Olympia, WA 	 [47.0454513, -122.8989638]
+☭RIP☭The Evergreen Infoshoppe 	 Sem 1, 3151 Olympia, WA 98505, 360-867-6574 	 NoGeocode
+☭RIP☭L@s Quixotes Infoshop & Radical Library 	 600 24th Ave S, Seattle, WA 98144 quixotes.infoshop@mail.com 	 NoGeocode
+☭RIP☭Olympia Free School 	 610 Columbia St Olympia, WA 98501, 360-352-4165 	 [47.0427617, -122.9023989]
+☭RIP☭Pitchpipe Infoshop 	 621 Martin Luther King Jr Way Tacoma, WA 98405 253-572-5176 	 [47.256372, -122.452288]
+☭RIP☭Soapbox 	 215 W. Holly St. H-23 Bellingham, WA 98225; 360.676.1724 	 [48.750719, -122.4811714]
+☭RIP☭Wildcat Infoshop 	 1105 23rd Ave. Seattle, WA 98122 	 [47.6117554, -122.3029802]
+No headline and/or contact. head: Defunct spaces - RIP  contact:  
+A Room of One's Own 	 315 W. Gorham St. Madison, WI 53703 608-257-7888 	 [43.074353, -89.39173149999999]
+Brewing Grounds for Change 	 2008 N Farwell Ave Milwaukee, WI 53202 414-273-9777 	 [43.05705460000001, -87.8884025]
+Candlelight Collective 	 258 N. Main St. (Basement), West Bend, WI 53095 	 [43.425851, -88.1839048]
+Common Gardens (AKA People’s Republic of Ketmora AKA West Driftless Church of the Flying Spaghetti monster) 	 6389 Rimmel Ct. Dane WI, 53529, commongardens@gmail.com 608-849-7739 	 NoGeocode
+Just Local Food Co-op 	 1117 S. Farwell St Eau Claire, WI 54701 715-552-3366 	 [44.8049341, -91.4923183]
+Madison Community Coop 	 1202 Williamson St. # 106 Madison, WI 53703 608 251-2667 	 [43.0835051, -89.3643934]
+Madison Infoshop 	 426 W. Gilman, Madison, WI 53703 	 [43.0742429, -89.3943046]
+Milwaukee Bike Coop 	 2910 W. Clybourn Milwaukee, WI 53208 414 431-0825 	 [43.0363323, -87.95105889999999]
+People's Books Cooperative 	 804 E. Center St. Milwaukee, WI, 53212 414-962-0575 	 [43.0676486, -87.90127860000001]
+Rainbow Books Collective 	 426 W. Gilman, Madison, WI 53703 608-257-6050 	 [43.0742429, -89.3943046]
+Riverwest Public House Cooperative 	 815 E. Locust St., Milwaukee, WI 53212 	 [43.0709363, -87.9010204]
+Social Justice Center 	 1202 Williamson St Madison, WI 53703 608-227-0206 	 [43.0835051, -89.3643934]
+Willy Street Co-op 	 6825 University Ave. Madison, WI 53562 608-284-7800 	 [43.0964478, -89.50040779999999]
+No headline and/or contact. head: Defunct Spaces - RIP  contact:  
+*Big Hollow Food Coop 	 119 S. 1st St. Laramie, WY 82070 307-745-3586 	 [41.3123551, -105.5957926]
+*Pizza Carrello 	 Gillette, WY mobil location 307-363-1743 	 NoGeocode
+Black & Green Infoshop 	 80 Ryan Street, West End, Brisbane, Australia 4101 	 [-27.4887457, 153.0041223]
+*Black Rose Collective 	 22 Enmore Rd. Newtown NSW Australia 0452-481-696 	 [-33.898396, 151.1774891]
+Brisbane Anarchist Library 	 69 Thomas st Brisbane, Australia 4101 	 [-27.4824118, 153.0107548]
+Friends of the Earth Books 	 312 Smith St Collingwood, Victoria 03 9417 4564 4564 Melbourne, Australia 	 [-37.799929, 144.984332]
+*Hares & Hyenas Books 	 63 Johnston St. Fitzroy VIC 3065 03 9495-6589 	 [-37.798002, 144.976861]
+Horn of Plenty Community Centre 	 659 Plenty Road, Reservoir, VIC 3073 	 [-37.730764, 145.014667]
+Huon Valley Environment Centre 	 3/17 Wilmot Rd, Huonville, Tas,ania 7109 (03) 6264 1286 [mail: PO Box 217, Huonville, Tas. 7109] Austrailia 	 [-43.030125, 147.047455]
+Jura Books 	 440 Parramatta Road Petersham, Sydney 2049 02 9550-9931 Australia PO Box N32, Petersham North, NSW, 2049 	 NoGeocode
+*Polyester Books 	 330 Brunswick St. Fitzroy VIC 3065 03-9419-5223 	 [-37.79726, 144.978844]
+*Rebel Worker Paper of the Anarcho-syndicalist Network 	 c/o PO Box 92 Broadway, NSW 2007 Australia 	 [-33.8842359, 151.1987352]
+Sticky Institute  	 Shop 10 Campbell Arcade, DeGraves Subway, Melbourne, VIC 8009 Australia (03) 9654 8559 	 NoGeocode
+☭RIP☭Barricade Infoshop 	 670 High St Thornbury, 3071 Melbourne Australia barricadeinfoshop@riseup.net 	 NoGeocode
+☭RIP☭Black Rose Anarchist Books 	 22 Enmore Road, Newtown, NSW, Sydney, Australia (mail: PO Box 691, Newtown, N.S.W. 2042) 	 NoGeocode
+☭RIP☭Loophole Community Centre 	 670 High St, Thornbury, VIC 3071, Australia 9495-1475 	 [-37.7591709, 145.0007211]
+☭RIP☭Ratbag Mobile Infoshop 	 Box 126, Cygnet 7112, Tasmania Australia 	 NoGeocode
+☭RIP☭Zapata's Bookshop/Ahimsa House 	 24-26 Horan Str. West End Brisbane 4101 (61) 07-3846-5077 Australia 	 [-27.4799638, 153.0089487]
+!128 Community House 	 128 Abel Smith St, Te Aro, Wellington, 6011, Aotearoa/New Zealand  04 9727260 128abelsmith[at]gmail.com 	 NoGeocode
+*Black Heart Infoshop 	 543 Karangahape Road, Newton, Auckland, New Zealand 	 [-36.8591093, 174.7535078]
+Black Star Books 	 Corso Bldg. 111 Moray Place Dunedin, New Zealand 	 [-45.873864, 170.501219]
+*Feraldom Gallery 	 111 High St. Motueka, New Zealand 	 [-41.1096376, 173.0116938]
+!Freedom Shop (inside Opportunity for Animals) 	 90 Riddiford St. Newton, Willington, New Zealand 	 [-41.3104903, 174.7788793]
+Katipo Books 	 15 Winchfield Street, Aranui, Christchurch, New Zealand 8061  (mailing:  PO Box 377, Christchurch Mail Centre Christchurch 8140) 	 NoGeocode
+Otautahi Social Centre 	 206 Barbados St Christchurch New Zealand +64 3 374 2495 	 NoGeocode
+☭RIP☭Misfit Theatre Zine Library 	 335 Great North Road [PO Box 68939] Auckland, NZ 	 [-36.8655594, 174.7433699]
+Biblioteca Anarchista Alberto Ghiraldo 	 Paraguay 2212, 2000 Rosario, Argentina 	 [-32.96220900000001, -60.64802]
+Biblioteca Popular José Ingenieros 	 J. Ramírez de Velasco 958 (alt. Corrientes 5600), 1414 Buenos Aires, Argentina; 54-11-4857-6404; bpji@nodo50.org/bpji 	 NoGeocode
+Biblioteca Popular Juventud Moderna 	 Diagonal Pueyrredón 3318, Mar de Plata, Argentina; 54-62-3495-3524 	 NoGeocode
+Federacion Libertaria 	 Calle Brasil 1551, Buenos Aires, Argentina; 54-11-4305-0307 	 [-34.62871, -58.38751419999999]
+FORA-Federacion Obrera Regional Argentina 	 Calle Coronel Salvadores 1200; Buenos Aires, Argentina; 54-11-4303-5963 	 [-34.6445878, -58.3669349]
+CONAMAQ 	 Calle Boqueron 1507, La Paz, Bolivia f: 591-2248-3948 	 [-16.5027632, -68.1383809]
+Mujeres Creando 	 Zona Sopocachi, Calle 20 de Octubre #2060 (entre Aspiazu y J.J. Perez) La Paz- Bolivia; 591-2241-3764 	 NoGeocode
+Red TiNKU 	 Esteban Arce 532, 1er Piso, Of. 2, Galeria El Nazareno, entre Calamo y Cadaislao Cabrera Cochabamba, Bolivia phone 71769493 redtinkubolivia - at - gmail.com 	 NoGeocode
+☭RIP☭Edificio Fabril-COD 	 Cochabamba, Bolivia f: 420-0220 cel: 7176-9493 [mail: casilla postal 1825, Cochabamba, Bolivia]  Tel: 591-2-2413764 	 NoGeocode
+Ação Social e Cultura Libertária 	 Caixa Postal 19078, CEP 81531-980, Curitiba-PR, Brasil 	 NoGeocode
+*Ativismo ABC Alcides de Queiros 	 161 Santo Andre Casa Branca, S�o Paulo Brazil 09015-550 	 [-23.6595327, -46.519036]
+BICICLETARIA CULTURAL 	 Rua Presidente Faria, 226 � basement (subsolo) Curitiba � PR, 80020-290 Brasil Telephone: +55 41 3153.0022 � +55 41 96392079 	 NoGeocode
+Biblioteca Popular José Ingenieros 	 J. Ramírez de Velasco 958 (alt. Corrientes 5600), 1414 Buenos Aires, Argentina; 54-11-4857-6404; bpji@nodo50.org/bpji 	 NoGeocode
+*Casa da Lagartixa Preta 	 Alcides de Queir�s, 161, Santo Andr�/Casa Branca, S�o Paulo, Brazil 09015-550 	 NoGeocode
+Centro de Cultura Social 	 Rua dos Trilhos, 1365 fundos, Mooca, Sao Paulo, Brasil [mail: Caixa Postal 2066, CEP 01060-970 S&atildeo; Paulo-SP Brasil] 	 NoGeocode
+Centro de Estudos Libertários Ideal Peres 	 Caixa Postal 14576, CEP 22412-970, Rio de Janeiro-RJ, Brasil http://jlimarocha.sites.uol.com.br/home.htm 	 NoGeocode
+Coletivo Alternativa Verde 	 Caixa Postal 78, CEP 11525-970, Cubatão-SP, Brasil 	 NoGeocode
+Comuna 	 Rua Sorocoba 585 Botafogo Rio de Janeiro 22271-110 (21) 3579-6175 	 [-22.9550856, -43.189008]
+Dona Vegana 	 Av. Marechal Floriano 13, Centro Rio de Janeiro 20080�3 (21) 2283-2012 	 NoGeocode
+*Espaco Improprio 	 Rua Dona Antonia de Queiroz, 40, Consolacao, Sao Paulo, Brazil (11) 3129-7197 improprio -at- riseup.net 	 NoGeocode
+Galp�o Ladeira das Artes 	 Rua Conselheiro Lampreia 225 Cosme Velho, Rio de Janeiro 22241-240 (21) 98614-7884 	 [-22.9423995, -43.2058427]
+*Organization of Permaculture & Art 	 Rua do Passo, 62, Bairro Santo Antonio, 430030-020, Salvador, BA, Brazil 55(71)3241-6204 	 [-12.9693502, -38.5079353]
+☭RIP☭Associação Cultural Quilombo Cecília 	 Rua do Passo, 37, Salvador-Bahia, Brasil 	 [-12.9697544, -38.5081603]
+*Casa TIAO 	 Yungay 1772 Valparaiso, Chile 	 [-33.0453082, -71.6182832]
+Centro Cultural de Playancha 	 Pedro Leán Gallo 404, Playancha/Valparáso, Chile,  56 (32) 2349571, 	 [-33.029724, -71.63202749999999]
+*Centro cultural cueto con andes 	 Cueto 993, Santiago centro, Chile 	 [-33.4332943, -70.67309329999999]
+*Taller Sol 	 Companania 2131 Santiago centro, Chile 56-2-6967658 	 [-33.4416802, -70.6342734]
+☭RIP☭Emma Goldman Community Space / Anarchist Bookstore 	 Avenida Cumming #453, Santiago, Chile (between calle Catedral y Compa��a) emma@traidores.org www.traidores.org/emma . 	 NoGeocode
+☭RIP☭Trabajadores Independientes de Artes y Oficios - Casa T.I.A.O. 	 Yungay 1772, Valparaiso, Chile 	 [-33.0453082, -71.6182832]
+El Hormiguero 	 Cra. 44 No. 41A-24 (second floor) Niquitao, Medellín, Colombia 	 NoGeocode
+Rojinegro Distribuidora Libertaria 	 Carrera 19 N 43-25 Palermo, Bogota, Colombia 	 [4.6318721, -74.07214069999999]
+Libreria Valija de Fuego 	 La calle 45 20-45, barrio Palermo, Bogota, Colombia 	 [4.6334396, -74.073021]
+Caffe Teatro Kussi-Huayra 	 Carrera 9 No. 9-15, Piedecuesta, Santander, Colombia Tel: 316 5854445 	 NoGeocode
+La Redada 	 Calle 17 No. 2-51, localidad de La Candelaria, barrio Las Aguas, Bogotá, Colombia 	 NoGeocode
+Red Juvenil 	 Calle 47 No. 40 - 53, Medellédn, Colombia 	 NoGeocode
+Colectivo Jaguos por el Territorio 	 Centro Poblado La Jagua, Garzan, Huila, Colombia 	 NoGeocode
+The Valija de Fuego Bookstore 	 Cr 7 No 46-68. Chapinero, Bogotá, Colombia 	 [4.6333631, -74.0638194]
+No headline and/or contact. head: DEFUNCT SPACES BELOW:  contact:  
+*CNC Mosquera Narvaez 	 OE 257 y Versailles, Quito, Ecuador; 593-2-223-5935 	 NoGeocode
+La Casa Feminista de Rosa 	 Ascazubi E2-48 entre 9 de Octubre y 10 de Agosto, Quito, Ecuador; casaderosa@riseup.net 	 NoGeocode
+Centro Cultural El Averno 	 Jiron Quilca 238 Lima 1, Peru 	 [-12.0511466, -77.03721300000001]
+Ateneo Libertario Heber Nieto 	 Maldonado 1162, cp: 11100, Montevideo, Uruguay 	 [-34.9096847, -56.1907218]
+(gsnipe-env) mitchell@mitchell-ThinkPad-X230:~/ComputerScience_Ubuntu/guttersnipe/db/crawlers$ 

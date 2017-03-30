@@ -1,0 +1,63 @@
+
+.t-edge, .b-edge, .l-edge, .r-edge, .wrap-corner {
+  position: relative;
+  /* hasLayout -1 ? For IE only */
+  zoom: 1;
+}
+#mini-panel-front_page_content .rounded-corner .t-edge {
+  background: url('/modules/panels/plugins/styles/corners/shadow-t.png') repeat-x 0 top;
+  font-size: 1px;
+}
+#mini-panel-front_page_content .rounded-corner .b-edge {
+  background: url('/modules/panels/plugins/styles/corners/shadow-b.png') repeat-x 0 bottom;
+  font-size: 1px;
+}
+#mini-panel-front_page_content .rounded-corner .l-edge {
+  background: url('/modules/panels/plugins/styles/corners/shadow-l.png') repeat-y 0 0;
+}
+#mini-panel-front_page_content .rounded-corner .r-edge {
+  background: url('/modules/panels/plugins/styles/corners/shadow-r.png') repeat-y right 0;
+}
+#mini-panel-front_page_content .rounded-corner .wrap-corner {
+  background: #fff !important;
+}
+#mini-panel-front_page_content .rounded-corner .wrap-corner .t-edge, #mini-panel-front_page_content .rounded-corner .wrap-corner .b-edge {
+  height: 11px;
+}
+#mini-panel-front_page_content .rounded-corner .wrap-corner .l, #mini-panel-front_page_content .rounded-corner .wrap-corner .r {
+  position: absolute;
+  top: 0;
+  height: 11px;
+  width: 11px;
+  background-image: url('/modules/panels/plugins/styles/corners/corner-bits.png');
+}
+#mini-panel-front_page_content .rounded-corner .wrap-corner .l {
+  left: 0;
+}
+#mini-panel-front_page_content .rounded-corner .wrap-corner .r {
+  right: 0;
+  background-position: -11px 0;
+}
+#mini-panel-front_page_content .rounded-corner .wrap-corner .b-edge .l {
+  background-position: 0 -11px;
+}
+#mini-panel-front_page_content .rounded-corner .wrap-corner .b-edge .r {
+  background-position: -11px -11px;
+}
+#mini-panel-front_page_content .rounded-corner .wrap-corner .r-edge {
+  padding: 5px 24px;
+}
+#mini-panel-front_page_content .rounded-corner div.admin-links {
+  margin-top: -14px;
+  margin-left: -12px;
+}
+
+#mini-panel-front_page_content .rounded-corner .panel-region-separator {
+  background: url('/modules/panels/plugins/styles/corners/shadow-b.png') repeat-x 0 center;
+  font-size: 1px;
+  height: 30px;
+}
+
+#mini-panel-front_page_content .rounded-corner .rounded-corner {
+  margin-bottom: 1em;
+}

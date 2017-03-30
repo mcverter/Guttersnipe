@@ -1,0 +1,84 @@
+.panels-flexible-region {
+  padding: 0;
+}
+
+.panels-flexible-region-inside {
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+
+.panels-flexible-region-inside-first {
+  padding-left: 0;
+}
+
+.panels-flexible-region-inside-last {
+  padding-right: 0;
+}
+
+.panels-flexible-column {
+  padding: 0;
+}
+
+.panels-flexible-column-inside {
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+
+.panels-flexible-column-inside-first {
+  padding-left: 0;
+}
+
+.panels-flexible-column-inside-last {
+  padding-right: 0;
+}
+
+.panels-flexible-row {
+  padding: 0 0 0.5em 0;
+  margin: 0;
+}
+
+.panels-flexible-row-last {
+  padding-bottom: 0;
+}
+
+.panels-flexible-column-19-main {
+  float: left;
+  width: 99.0000%;
+}
+
+.panels-flexible-19-inside {
+  padding-right: 0px;
+}
+
+.panels-flexible-19 {
+  width: auto;
+}
+
+.panels-flexible-region-19-row_1_1 {
+  float: left;
+  width: 49.5000%;
+}
+
+.panels-flexible-region-19-row_1_2 {
+  float: left;
+  width: 49.5000%;
+}
+
+.panels-flexible-row-19-row_1-inside {
+  padding-right: 0px;
+}
+
+.panels-flexible-region-19-bottom_left {
+  float: left;
+  width: 49.5000%;
+}
+
+.panels-flexible-region-19-bottom_right {
+  float: left;
+  width: 49.5000%;
+}
+
+.panels-flexible-row-19-1-inside {
+  padding-right: 0px;
+}
+

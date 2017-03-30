@@ -1,0 +1,63 @@
+
+.t-edge, .b-edge, .l-edge, .r-edge, .wrap-corner {
+  position: relative;
+  /* hasLayout -1 ? For IE only */
+  zoom: 1;
+}
+#headlines .rounded-corner .t-edge {
+  background: url('/modules/panels/plugins/styles/corners/shadow-t.png') repeat-x 0 top;
+  font-size: 1px;
+}
+#headlines .rounded-corner .b-edge {
+  background: url('/modules/panels/plugins/styles/corners/shadow-b.png') repeat-x 0 bottom;
+  font-size: 1px;
+}
+#headlines .rounded-corner .l-edge {
+  background: url('/modules/panels/plugins/styles/corners/shadow-l.png') repeat-y 0 0;
+}
+#headlines .rounded-corner .r-edge {
+  background: url('/modules/panels/plugins/styles/corners/shadow-r.png') repeat-y right 0;
+}
+#headlines .rounded-corner .wrap-corner {
+  background: #fff !important;
+}
+#headlines .rounded-corner .wrap-corner .t-edge, #headlines .rounded-corner .wrap-corner .b-edge {
+  height: 11px;
+}
+#headlines .rounded-corner .wrap-corner .l, #headlines .rounded-corner .wrap-corner .r {
+  position: absolute;
+  top: 0;
+  height: 11px;
+  width: 11px;
+  background-image: url('/modules/panels/plugins/styles/corners/corner-bits.png');
+}
+#headlines .rounded-corner .wrap-corner .l {
+  left: 0;
+}
+#headlines .rounded-corner .wrap-corner .r {
+  right: 0;
+  background-position: -11px 0;
+}
+#headlines .rounded-corner .wrap-corner .b-edge .l {
+  background-position: 0 -11px;
+}
+#headlines .rounded-corner .wrap-corner .b-edge .r {
+  background-position: -11px -11px;
+}
+#headlines .rounded-corner .wrap-corner .r-edge {
+  padding: 5px 24px;
+}
+#headlines .rounded-corner div.admin-links {
+  margin-top: -14px;
+  margin-left: -12px;
+}
+
+#headlines .rounded-corner .panel-region-separator {
+  background: url('/modules/panels/plugins/styles/corners/shadow-b.png') repeat-x 0 center;
+  font-size: 1px;
+  height: 30px;
+}
+
+#headlines .rounded-corner .rounded-corner {
+  margin-bottom: 1em;
+}
