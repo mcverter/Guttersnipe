@@ -12,7 +12,6 @@ export class AllShareablesMapTabComponent extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.isActiveView && this.map) {
-      debugger;
       this.map.leafletElement.invalidateSize(false);
       const shareableItems = this.props.shareables.items;
       const bounds = shareableItems.map (item=>{return [
@@ -20,14 +19,13 @@ export class AllShareablesMapTabComponent extends React.Component {
         JSON.parse(item.space.position).longitude
       ]});
       this.map.leafletElement.fitBounds(bounds);
-
     }
   }
 
-  renderMarker(shareable) {
-    const {id, headline, space} = shareable;
-    const {latitude, longitude} = JSON.parse(space.position);
-    const position = [latitude, longitude];
+  renderMarker(point) {
+    const headline = point.properties.headline;
+    const id = point.properties.id;
+    const position = point.geometry.coordinates;
 
     return(
       <Marker key={`marker${id}`} position={position}>
@@ -43,7 +41,7 @@ export class AllShareablesMapTabComponent extends React.Component {
 
   render() {
     const {
-      shareables: { isFetchingShareables,shareableFetchError, items}}  = this.props;
+      shareables: { isFetchingShareables,shareableFetchError, items, points}}  = this.props;
 
     if (isFetchingShareables || shareableFetchError || !items || items.length < 1) {
       return <div>Loading...</div>;
@@ -56,7 +54,7 @@ export class AllShareablesMapTabComponent extends React.Component {
             url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           />
-          {items.map(shareable => this.renderMarker(shareable))}
+          {points.map(shareable => this.renderMarker(shareable))}
         </Map>
       </div>
     );

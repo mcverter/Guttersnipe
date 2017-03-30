@@ -1,6 +1,6 @@
 from server import db
 
-from marshmallow import  fields
+from marshmallow import  fields, Schema
 from server.calendars.schemas import ScheduleSchema
 from marshmallow_sqlalchemy import ModelSchema
 from server.shareables.models import Shareable, Thing, Space, Time, \
@@ -53,3 +53,9 @@ class MainTypeSchema(BaseSchema):
   name = fields.String()
   class Meta:
     model = MainType
+
+
+class GeoJsonSchema(Schema):
+  id = fields.Int()
+  headline = fields.String()
+  position = GeometrySerializationField

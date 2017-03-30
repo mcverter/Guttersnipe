@@ -13,7 +13,7 @@ from server import db, api
 from server.calendars.models import Schedule, Event, RecurrenceRule
 from server.create_sqlalchemy.create_shareable_from_json import create_shareable
 from server.shareables.models import Shareable, Subtype, Tag, Thing, MainType, Space, Time
-from server.shareables.schemas import ShareableSchema
+from server.shareables.schemas import ShareableSchema, GeoJsonSchema
 
 ShareableSerializer = ShareableSchema()
 
@@ -30,6 +30,17 @@ class ShareableCategorizationEndpoint(Resource):
       types_and_subtypes[typename].extend([subname])
     types_and_subtypes["tags"] = [tag.name for tag in Tag.query.all()]
     return types_and_subtypes;
+
+'''      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [125.6, 10.1]
+      },
+      "properties": {
+        "name": "Dinagat Islands"
+      }
+    }
+'''
 
 class ShareableSearchEndpoint(Resource):
   def post(self):
@@ -89,14 +100,20 @@ class ShareableSearchEndpoint(Resource):
     if (date_input):
       baseQuery = apply_time_filter(baseQuery, date_input)
 
+    points_query =   db.engine.execute(
+      "select shareable.id, shareable.headline, ST_X(space.position), ST_Y(space.position) from shareable join space on space.id = shareable.space_id")\
+      .fetchall()
+    points_geoJSON_2 = [{"type": "Feature", "properties": {"id": j[0], "headline": j[1]},
+                         "geometry": {"type": "Point", "coordinates": [j[3],  j[2]]}}
+       for j in points_query]
+
     page_results = baseQuery.paginate(int(page_num), page_size, False).items
 
     items = ShareableSerializer.dump(page_results, many=True).data
 
-    # return the total items as well as the page items
-    count = baseQuery.count()
-    items.append(count)
-    return items
+    result = {"items": items, "total": len(points_geoJSON_2), "points": points_geoJSON_2}
+
+    return result
 
 
 class ShareableEndpoint(Resource):

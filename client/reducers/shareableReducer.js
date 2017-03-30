@@ -6,7 +6,9 @@ export default function shareables(
   switch(action.type) {
 
     case types.SHAREABLES_SEARCH_REQUEST:
-      return shareables;
+      return Object.assign({}, {...shareables,
+                isFetchingShareables: true
+      });
     case types.SAVE_SEARCH_PARAMS:
       return Object.assign({}, {...shareables,
         searchParams: action.searchParams
@@ -44,14 +46,12 @@ export default function shareables(
         shareableFetchError: true
       });
     case types.SHAREABLES_ALL_REQUEST_SUCCESS:
-      /* the total items are returned as well as the page items */
-      const count = action.shareables.splice(
-        action.shareables.length -1);
       return Object.assign({}, {...shareables,
         isFetchingShareables: false,
         shareableFetchError: false,
-        items: action.shareables,
-        total: count[0]
+        points: action.shareables.points,
+        items: action.shareables.items,
+        total: action.shareables.total
       });
     case types.SHAREABLES_ALL_REQUEST_ERROR:
       return Object.assign({}, {...shareables,

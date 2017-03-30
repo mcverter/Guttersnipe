@@ -120,7 +120,6 @@ function saveSearchParams(searchParams) {
   };
 }
 export function searchShareablesWithParametersAndPagination(options){
-
   let {forceFetch, page_num, pageSize, searchParams}=options;
   forceFetch = forceFetch || false;
   page_num = page_num || 1;
