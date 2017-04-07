@@ -101,7 +101,6 @@ export function searchShareablesWithParametersAndPagination(options){
       .then(response=>response.json())
       .then(json=> {
         dispatch(receiveAllShareables(json));
-        browserHistory.push('/shareables');
       });
   };
 }

@@ -4,16 +4,12 @@
 import React from 'react';
 import {Link} from 'react-router';
 
-const style = {
-  height:'200px',
-  width: '80%',
-  'font-size': '300%',
-  'background-color': 'lightgray'};
-
 const MobileNavButton = ({destination, label}) => (
+  <div className="mobile-nav-button">
   <Link to={destination}>
-    <button style={style}>{label}</button>
+    <button>{label}</button>
   </Link>
+  </div>
 )
 
 export default MobileNavButton;

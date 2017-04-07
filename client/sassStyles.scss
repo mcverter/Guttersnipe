@@ -6,3 +6,23 @@
     border: 3px solid black;
     padding: 10px;
 }
+
+#home-page {
+  height: 90vh;
+  width: 80vw;
+  text-align: center;
+  padding-top: 10vh;
+  margin: auto;
+}
+
+.mobile-nav-button {
+  height: 200px;
+  width: 80%;
+  font-size: 300%;
+  background-color: lightgrey;
+  margin: auto;
+  button {
+    margin-top: 5vh;
+    color: black;
+  }
+}
