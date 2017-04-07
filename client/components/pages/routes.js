@@ -9,7 +9,7 @@ import ShareablesSearchPage from './AllShareablesSearchPage';
 export default (
   <Route path="shareables">
     <IndexRoute component={AllShareablesPage} />
-        <Route path="search" component={ShareablesSearchPage} />
+    <Route path="search" component={ShareablesSearchPage} />
 
     <Route path="create" component={ShareableCreateWizardPage} />
     <Route path="shareable/:id" component={ShareablePage} />

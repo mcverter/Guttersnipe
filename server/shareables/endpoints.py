@@ -109,6 +109,7 @@ class ShareableSearchEndpoint(Resource):
 
     page_results = baseQuery.paginate(int(page_num), page_size, False).items
 
+
     items = ShareableSerializer.dump(page_results, many=True).data
 
     result = {"items": items, "total": len(points_geoJSON_2), "points": points_geoJSON_2}

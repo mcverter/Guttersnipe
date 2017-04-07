@@ -6,7 +6,7 @@ import {fetchSingleShareableIfNeeded} from '../../actions/shareables/shareableAc
 
 
 
-import ShareableFull from '../shareables/ShareableFull';
+import ShareableFull from '../shareables/ShareableFullMobile';
 
 
 class ShareablePage extends React.Component {

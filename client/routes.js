@@ -6,10 +6,12 @@ import AuthRoutes from './routes/auth/routes';
 import DocumentationRoutes from './components/docs/routes.js';
 import ShareableRoutes from './components/pages/routes';
 import WelcomePage from './components/pages/WelcomePage';
+import MobileRoutes from './components/mobileFirstStuff/routes'
 
 export default (
   <Route path="/" component={App}>
     <IndexRoute component={FrontPage} />
+    {MobileRoutes}
     {DocumentationRoutes}
     {ShareableRoutes}
     {AuthRoutes}
