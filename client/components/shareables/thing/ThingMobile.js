@@ -3,6 +3,7 @@ import {renderMainType, renderTags, renderSubtypes} from './utils/transformThing
 import Panel from 'react-bootstrap/lib/Panel'
 
 const summaryStyle = {
+
   width: '80%',
   'font-size': '150%',
   'backgroundColor': 'lightgray'
