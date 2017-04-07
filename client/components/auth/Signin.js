@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import {Field, reduxForm} from 'redux-form';
 
-import ReduxFormHTMLInput from '../../components/reduxFormInputs/ReduxFormHTMLInput';
+import ReduxFormHTMLInput from '../reduxFormInputs/ReduxFormHTMLInput';
 import Button from 'react-bootstrap/lib/Button';
 import {connect} from 'react-redux';
 

@@ -35,7 +35,7 @@ const MobileNavButton = ({headline}) => (
   <div style={style}>{headline}</div>
 )
 
-export default MobileNavButton;
+//export default MobileNavButton;
 
 
 const ThingMobile = ({headline, thing: {description_how, description_what, notes,

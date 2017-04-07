@@ -104,10 +104,6 @@ const mapDispatchToProps = (dispatch) => {
     fetchAllShareablesIfNeeded: () => {
       dispatch(fetchAllShareablesIfNeeded());
     },
-    searchShareables: (params) => {
-      dispatch(searchShareablesWithParametersAndPagination(params));
-    },
-
     setBrowserLocation: () => {
       dispatch(setBrowserLocation());
     }
