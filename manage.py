@@ -26,7 +26,7 @@ manager.add_command('db', MigrateCommand)
 
 @manager.command
 def seed():
-    seed_needles()
+#    seed_needles()
     seed_bk_freegan()
     seed_types_and_subtypes_and_tags()
     seed_kropotkins()

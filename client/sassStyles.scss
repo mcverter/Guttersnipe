@@ -1,4 +1,6 @@
-
+body {
+  font-size: 300%;
+}
 .leaflet-container {
   height: 100vh;
   width: 90vw;
@@ -18,7 +20,6 @@
 .mobile-nav-button {
   height: 200px;
   width: 80%;
-  font-size: 300%;
   background-color: lightgrey;
   margin: auto;
   button {
