@@ -10,7 +10,6 @@ const summaryStyle = {
 };
 
 const SummaryMobile = (summary) => {
-  debugger;
   if (summary) {
     return(
       <div style={summaryStyle}>
@@ -42,7 +41,6 @@ const ThingMobile = (props) => {
 
   console.log( headline, summary, main_type, subtype,
      description_how, description_what, notes)
-  debugger;
 
   return (
     <Panel className="thing-mobile" header="Thing">

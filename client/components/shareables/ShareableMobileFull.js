@@ -5,7 +5,6 @@ import ThingMobile from './thing/ThingMobile';
 
 const ShareableFullMobile = (props)  => {
   console.log('props', props);
-  debugger;
 
   const { shareable:{headline, summary, number_ratings,
     total_rating, thing, space, time, notes, comments} } = props;

@@ -11,7 +11,6 @@ const style = {
 
 
 const TimeMobile = (props) => {
-  debugger;
   const renderCalendar = () => {
     if (shareableHasEvents(props)) {
       return (
