@@ -15,12 +15,14 @@ class ShareablePage extends React.Component {
   }
 
   render() {
-    if (!this.props.shareableItems || this.props.selectedIndex < 1) {
+    const selectedIndex = this.props.selectedIndex;
+    if (!this.props.shareableItems || selectedIndex < 1) {
       return <div>Loading...</div>;
     }
 
+
     const shareable = this.props.shareableItems.find(
-      function(item){return item.id===this.props.selectedIndex});
+      function(item){return item.id===selectedIndex});
 
     console.log('shareable', shareable);
     if (!shareable) {
