@@ -6,7 +6,7 @@ import 'leaflet-geocoder-mapzen';
 import Panel from 'react-bootstrap/lib/Panel'
 import {connect} from 'react-redux';
 import {Link} from 'react-router';
-import {fetchAllShareablesIfNeeded}  from '../../../actions/shareables/shareableActions'
+import {fetchAllPointsIfNeeded}  from '../../../actions/points/pointActions'
 import {setBrowserLocation} from '../../../actions/browserEnv/browserEnvActions'
 
 export class FullMapComponent extends React.Component {
@@ -18,8 +18,7 @@ export class FullMapComponent extends React.Component {
   }
   componentWillMount() {
     this.props.setBrowserLocation();
-
-    this.props.fetchAllShareablesIfNeeded();
+    this.props.fetchAllPoints();
   }
 
   componentDidUpdate() {
@@ -44,15 +43,17 @@ export class FullMapComponent extends React.Component {
     });
 
 
-    this.props.shareables.points.forEach((point)=>{
+    this.props.points.items.forEach((point)=>{
       const headline = point.properties.headline;
+      const summary = point.properties.summary;
       const id = point.properties.id;
       const position = point.geometry.coordinates;
       L.marker(point.geometry.coordinates).addTo(map)
         .bindPopup(
-          `<div><h3> ${headline}</h3>
-                    <a href="/shareables/shareable/${id}"> Full Record </a>
-                   </div>`
+          `<div>
+                <h3> ${headline}</h3>
+                <p> ${summary} </p>
+          </div>`
         )
     });
     map.invalidateSize(false);
@@ -68,7 +69,7 @@ export class FullMapComponent extends React.Component {
         <Popup key={`popup${id}`}>
           <div>
             <h3> {headline}</h3>
-            <a href={"/shareables/shareable/" + id}> Full Record </a>
+            <a href={"/shareables/point/" + id}> Full Record </a>
           </div>
         </Popup>
       </Marker>
@@ -76,10 +77,12 @@ export class FullMapComponent extends React.Component {
   }
 
   render() {
-    const {
-      shareables: { isFetchingShareables,shareableFetchError, items, points}}  = this.props;
+      console.log(this.props);
 
-    if (isFetchingShareables || shareableFetchError || !items || items.length < 1) {
+    const {
+      points: { isFetchingPoints,pointFetchError, items, points}}  = this.props;
+
+    if (isFetchingPoints || pointFetchError || !items || items.length < 1) {
       return <div>Loading...</div>;
     }
     const address=this.state.address;
@@ -97,12 +100,12 @@ export class FullMapComponent extends React.Component {
   }
 }
 FullMapComponent.propTypes = {
-  shareables: PropTypes.object,
+  points: PropTypes.object,
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchAllShareablesIfNeeded: () => {
-      dispatch(fetchAllShareablesIfNeeded());
+    fetchAllPoints: () => {
+      dispatch(fetchAllPointsIfNeeded());
     },
     setBrowserLocation: () => {
       dispatch(setBrowserLocation());
@@ -112,7 +115,7 @@ const mapDispatchToProps = (dispatch) => {
 
 function mapStateToProps(state) {
   return {
-    shareables: state.shareables,
+    points: state.points,
     browserLocation: state.browserEnv.location
   };
 }

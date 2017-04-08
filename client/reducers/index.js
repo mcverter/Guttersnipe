@@ -4,13 +4,15 @@ import {reducer as form} from 'redux-form';
 import auth from './authReducer';
 import browserEnv from './browserEnvReducer';
 import kropotkin from './kropotkinReducer';
+import points from './pointsReducer';
 
 const rootReducer = combineReducers({
   shareables,
   auth,
   form,
   browserEnv,
-  kropotkin
+  kropotkin,
+  points
 });
 
 export default rootReducer;

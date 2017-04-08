@@ -7,6 +7,11 @@ const initialState = {
     categorizationMeta: {},
     searchParams : {}
   },
+  points : {
+   isFetchingPoints: false,
+    pointFetchError: false,
+    items: []
+  },
   auth : {
     authenticated: false,
     error: '',
@@ -18,9 +23,9 @@ const initialState = {
     paragraph: ''
   },
   browserEnv: {
-    location: [18.135228, -97.0901879],
-    latitude: 18.135228,
-    longitude: -97.0901879
+    location: [40.758895,-73.9873251],
+    latitude: 40.758895,
+    longitude: -73.9873251
   }
 };
 

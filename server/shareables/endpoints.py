@@ -116,6 +116,18 @@ class ShareableSearchEndpoint(Resource):
 
     return result
 
+class PointsEndpoint(Resource):
+    def get(self):
+      points_query =   db.engine.execute(
+        "select shareable.id, shareable.headline, " "shareable.summary, ST_X(space.position), "
+        "ST_Y(space.position) from shareable "
+        "join space on space.id = shareable.space_id").fetchall()
+      points_geoJSON_2 = [{"type": "Feature", "properties": {"id": j[0], "headline": j[1], "summary": j[2]},
+                           "geometry": {"type": "Point", "coordinates": [j[4],  j[3]]}}
+         for j in points_query]
+
+      result = {"items": points_geoJSON_2}
+      return result
 
 class ShareableEndpoint(Resource):
   def get(self, id):
@@ -164,14 +176,11 @@ class ShareableListEndpoint(Resource):
       resp.status_code = 403
       return resp
 
-#shareable_blueprint = Blueprint('shareable_print',__name__, url_prefix='/api/shareables')
-#api = Api(shareable_blueprint)
-#api.add_resource(ShareableListEndpoint, '')
 api.add_resource(ShareableListEndpoint, '/api/shareables', endpoint = 'shareables')
 api.add_resource(ShareableEndpoint, '/api/shareable/<int:id>', endpoint = 'shareable')
 api.add_resource(ShareableCategorizationEndpoint, '/api/shareables/categorization', endpoint = 'categorization')
 api.add_resource(ShareableSearchEndpoint, '/api/shareables/search', endpoint = 'search')
-
+api.add_resource(PointsEndpoint, '/api/points', endpoint = 'points')
 '''
 from flask import Flask, Blueprint
 from flask.ext import restful
