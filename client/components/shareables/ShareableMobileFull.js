@@ -12,14 +12,17 @@ const ShareableFullMobile = (props)  => {
 
   return (
     <div id="shareable-full">
+      hello world
+    </div>
+  );
+};
+/*
       <ThingMobile thing={thing} headline={headline} summary={summary} />
       <SpaceMobile space={space} headline={headline}/>
       <TimeMobile time={time} headline={headline}/>
       {notes && <div><h3>Notes:</h3> {notes} </div>}
-    </div>
-  );
-};
 
+ */
 ShareableFullMobile.propTypes = {
   shareable: PropTypes.object
 };
