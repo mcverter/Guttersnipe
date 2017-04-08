@@ -55,7 +55,7 @@ export class FullMapComponent extends React.Component {
       const position = point.geometry.coordinates;
       L.marker(point.geometry.coordinates).addTo(map)
         .bindPopup(
-          `<div style="font-size: 200%">
+          `<div style="font-size: 300%">
                 <h3> ${headline}</h3>
                 <p> ${summary} </p>
           </div>`
