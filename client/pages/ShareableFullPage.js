@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import React, {PropTypes} from 'react';
 
 import {connect} from 'react-redux';
@@ -20,9 +19,10 @@ class ShareablePage extends React.Component {
       return <div>Loading...</div>;
     }
 
-    const shareable = _.find(this.props.shareableItems,
-      {id: this.props.selectedIndex});
+    const shareable = this.props.shareableItems.find(
+      function(item){return item.id===this.props.selectedIndex});
 
+    console.log('shareable', shareable);
     if (!shareable) {
       return <div>Loading...</div>;
     }
