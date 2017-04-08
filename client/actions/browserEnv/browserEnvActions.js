@@ -4,9 +4,7 @@ function getBrowserLocationAsPromise() {
   return new Promise(function (resolve, reject) {
     navigator.geolocation.getCurrentPosition(function (position) {
         resolve([position.coords.latitude, position.coords.longitude]);},
-      function(error) {alert("Could not find your current position");},
-      {timeout:500}
-    );
+      function(error) {alert("Could not determine your position automatically.  Please press the button beneath the zoom controls to locate yourself.");});
   });
 }
 

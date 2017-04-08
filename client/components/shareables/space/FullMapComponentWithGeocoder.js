@@ -2,6 +2,9 @@ import React, {PropTypes} from 'react';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet-geocoder-mapzen';
+import 'leaflet.locatecontrol'
+import 'font-awesome/scss/font-awesome.scss'
+import '../../../leafletControlLocate.css'
 
 import Panel from 'react-bootstrap/lib/Panel'
 import {connect} from 'react-redux';
@@ -29,19 +32,21 @@ export class FullMapComponent extends React.Component {
   createMap() {
     const self = this;
     let location = this.props.browserLocation;
-    let map = L.map(this.el, {"zoomControl": false}).setView(location, 12);
+    let map = L.map(this.el, {"zoomControl": false}).setView(location, 14);
     let  geoCoderOptions = {
       bounds: false,
       position: 'bottomright',
       expanded: false
     };
-    L.control.zoom({position: 'topright'}).addTo(map)
-    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-    this.geocoder = L.control.geocoder('mapzen-a2w6xkx', geoCoderOptions).addTo(map);
-    this.geocoder.on('select', function(data) {
-      //self.setState({address: data.feature.properties.label})
-    });
+    let locateControlOptions = {
+      position: 'topright',
+      icon: 'fa fa-map-marker',
+      keepCurrentZoomLevel: true
+    };
 
+    L.control.zoom({position: 'topright'}).addTo(map)
+    L.control.locate(locateControlOptions).addTo(map);
+    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
     this.props.points.items.forEach((point)=>{
       const headline = point.properties.headline;
@@ -50,7 +55,7 @@ export class FullMapComponent extends React.Component {
       const position = point.geometry.coordinates;
       L.marker(point.geometry.coordinates).addTo(map)
         .bindPopup(
-          `<div>
+          `<div style="font-size: 200%">
                 <h3> ${headline}</h3>
                 <p> ${summary} </p>
           </div>`
