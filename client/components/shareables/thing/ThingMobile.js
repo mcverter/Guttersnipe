@@ -31,19 +31,30 @@ const style = {
   'backgroundColor': 'lightgray'
 };
 
-const MobileNavButton = ({headline}) => (
-  <div style={style}>{headline}</div>
-)
 
-//export default MobileNavButton;
+const ThingMobile = (props) => {
+  const {headline, summary, thing: {
+    description_how, description_what,
+    notes, main_type, subtypes, tags} } = props;
+  console.log(props);
 
+  const subtype = subtypes[0]
 
-const ThingMobile = ({headline, thing: {description_how, description_what, notes,
-  main_type, subtypes, tags} })=> {
+  console.log( headline, summary, main_type, subtype,
+     description_how, description_what, notes)
+  debugger;
+
   return (
     <Panel className="thing-mobile" header="Thing">
-      <h3> Description of {headline}</h3>
-      {description_how &&
+      <h3> {headline} </h3>
+      <h4>{main_type.name}:  dumpster</h4>
+      {summary &&
+      <div style={summaryStyle}>
+        <h3>Summary</h3>
+        {summary}
+      </div>}
+
+      {description_how  &&
       <div>
         <h4> Way of acquiring {headline} </h4>
         {description_how}
@@ -52,19 +63,6 @@ const ThingMobile = ({headline, thing: {description_how, description_what, notes
       <div> <h4>Description of {headline}</h4>
         {description_what}
       </div>}
-      <div>
-        {renderMainType(main_type)}
-      </div>
-      {subtypes &&
-      <div>
-        {renderSubtypes(subtypes)}
-      </div>
-      }
-      {tags && JSON.parse(tags).length > 0 &&    // hack
-      <div>
-        {renderTags(tags)}
-      </div>
-      }
       {notes && <div><h3>Notes:</h3>{notes}</div>}
     </Panel>
   );

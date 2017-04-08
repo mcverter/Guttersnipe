@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
-import ShareablePage from '../pages/ShareableMobilePage';
+import ShareablePage from '../pages/ShareableFullPage';
 
 export default (
   <Route path="shareables">

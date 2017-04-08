@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 import Home from '../pages/HomePage';
-import How from  '../components/shareables/thing/How';
+import How from  '../pages/How';
 import About from '../pages/AboutPage'
 import Map from '../pages/MapPage'
 
