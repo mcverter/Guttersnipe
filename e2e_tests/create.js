@@ -1,6 +1,7 @@
 
 
 module.exports = {
+
   'Create Page is navigable': function (client) {
     const create = client.page.create();
 
@@ -11,5 +12,6 @@ module.exports = {
       .assert.elementPresent('@consent_panel')
       .assert.elementPresent('@consent_negate')
       .assert.elementPresent('@consent_consent')
+
   }
 }
