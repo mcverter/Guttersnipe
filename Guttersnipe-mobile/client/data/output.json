@@ -1,0 +1,96 @@
+
+{
+  "headline" : "Great Stuff",
+  "summary"  : "You will love this stuff",
+  "notes"    : "Super Duper Stuff",
+  "number_ratings" : "1",
+  "total_ratings" : "5",
+  "thing"    : {
+    "description_how" : "Go For Stuff",
+    "description_what" : "You will get it",
+    "main_type": "food",
+    "subtypes": [ "dumpster"],
+    "tags": ["great', 'wonderful"],
+    "notes": "foo"
+  },
+  "space"    : {
+    "longitude" : "49.2121",
+    "latitude": "33.1234",
+    "canonical_address": "1 buttcase ville",
+    "alternate_names": ["1 hell ville street"],
+    "notes": "no more notes"
+  },
+  "time"    : {
+    "notes" : "no more notes",
+    "calendar" : {
+      "events": [
+        {
+          "dt_start": "2017-01-01T18:00:00",
+          "dt_end": "2017-01-01T22:00:00",
+          "tz_id": "American/NewYork",
+          "recurrence_rule" : {
+            "freq": "weekly",
+            "byDay": "mo",
+            "interval": "1"
+          }
+        }
+      ]
+    }
+  }
+}
+/*
+
+[
+  {
+    "headline" : "",
+    "summary"  : "",
+    "notes"    : "",
+    "number_ratings" : "",
+    "total_ratings" : "",
+    "comments" : [
+    ],
+    "thing"    : {
+      "description_how" : "",
+      "description_what" : "",
+      "main_type": "",
+      "subtypes": [
+      ],
+      "tags": [
+      ],
+      "notes": ""
+    },
+    "space"    : {
+      "longitude" : "",
+      "latitude": "",
+      "canonical_address": "",
+      "alternate_names": [
+      ],
+      "notes": ""
+    },
+    "time"    : {
+      "notes" : "",
+      "calendar" : {
+        "events": [
+          {
+            "dt_start": "",
+            "dt_end": "",
+            "tz_id": "",
+            "recurrence_rule" : {
+              "freq": "",
+              "byDay": "",
+              "byMonthDay": "",
+              "byYearDay": "",
+              "byWeekNo": "",
+              "byMonth": "",
+              "until": "",
+              "count": "",
+              "interval": "",
+              "bySetPos": ""
+            }
+          }
+        ]
+      }
+    }
+  }
+]
+*/
