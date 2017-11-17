@@ -77,7 +77,7 @@ function shareableSearchRequest() {
   };
 }
 
-function saveSearchParams(searchParams) {
+function saveSeharchParams(searchParams) {
   return {
     type: types.SAVE_SEARCH_PARAMS,
     searchParams: searchParams

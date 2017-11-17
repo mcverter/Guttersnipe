@@ -12,7 +12,7 @@ class BaseSchema(ModelSchema):
         sqla_session = db.Session
 
 class CommentSchema(BaseSchema):
-  class Meta:
+  class Meta:`
     model = Comment
 
 

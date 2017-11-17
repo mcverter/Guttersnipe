@@ -1,21 +1,18 @@
-
-from flask import jsonify, Flask, request, render_template, send_file,  url_for, send_from_directory, redirect, make_response
-from flask.ext.sqlalchemy import SQLAlchemy
+from flask import Flask
 from flask.ext.restful import Api
-from flask_cors import CORS
-from flask_jwt_extended import JWTManager, jwt_required,\
-    create_access_token, get_jwt_identity
-from flask_bcrypt import Bcrypt
-import os
-
-app = Flask(__name__, static_url_path='/static')
+from flask_sqlalchemy import SQLAlchemy
+app = Flask(__name__)
 
 app.config.from_object('config')
 db = SQLAlchemy(app)
 api = Api(app)
-CORS(app)
-bcrypt = Bcrypt(app)
 
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+'''
 from server.calendars.models import Event, RecurrenceRule
 from server.users.models import User, Guttersnipe, Profile, Schedule, Message, blockUserTable
 from server.shareables.models import Shareable, \
@@ -75,7 +72,4 @@ def imgpng(path):
                                '%s.png' % path, mimetype='image/png')
 
 
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
+'''
