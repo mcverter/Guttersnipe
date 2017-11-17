@@ -7,34 +7,24 @@ import {Link} from 'react-router';
 export class AllShareablesMapTabComponent extends React.Component {
   constructor(props) {
     super(props);
-    this.calculateCenter = this.calculateCenter.bind(this);
     this.renderMarker = this.renderMarker.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.isActiveView && this.map) {
+      debugger;
       this.map.leafletElement.invalidateSize(false);
+      const shareableItems = this.props.shareables.items;
+      const bounds = shareableItems.map (item=>{return [
+        JSON.parse(item.space.position).latitude,
+        JSON.parse(item.space.position).longitude
+      ]});
+      this.map.leafletElement.fitBounds(bounds);
+
     }
   }
 
-  averageSpot(shareables) {
-    const avg_lat = shareables.reduce((accumulator, shareable)=>{
-        const {latitude} = JSON.parse(shareable.space.position);
-        return accumulator += latitude;
-      }, 0) / shareables.length;
-    const avg_long = shareables.reduce((accumulator, shareable)=>{
-        const {longitude} = JSON.parse(shareable.space.position);
-        return accumulator += longitude;
-      }, 0) / shareables.length;
-    return [avg_lat, avg_long];
-  }
-
-   calculateCenter(shareables) {
-    return [40.693922, -73.991764];
-
-  }
-
-   renderMarker(shareable) {
+  renderMarker(shareable) {
     const {id, headline, space} = shareable;
     const {latitude, longitude} = JSON.parse(space.position);
     const position = [latitude, longitude];
@@ -59,12 +49,9 @@ export class AllShareablesMapTabComponent extends React.Component {
       return <div>Loading...</div>;
     }
 
-    const position = this.calculateCenter(items);
-
     return (
       <div id="all-shareables-map-tab">
-        <Map ref={(map) => { this.map = map; }}
-             center={position} zoom={13}>
+        <Map ref={(map) => { this.map = map; }}>
           <TileLayer
             url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

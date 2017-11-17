@@ -74,8 +74,8 @@ class Thing(db.Model):
                                       backref=db.backref('thing', lazy='dynamic'))
   subtypes = association_proxy('subtypes_relation', 'name')
 
-  description_how = db.Column(db.String(140))
-  description_what = db.Column(db.String(140))
+  description_how = db.Column(db.Text)
+  description_what = db.Column(db.Text)
 
   # Thing can have user-defined tags
   # We are going to do this with an association table for now until we figure out how to use GIN indexes

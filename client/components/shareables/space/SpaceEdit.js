@@ -42,7 +42,7 @@ SpaceEdit.propTypes = {
   meta: PropTypes.object,
   headline: PropTypes.string,
   currentPosition: PropTypes.array,
-  input: PropTypes.obect
+  input: PropTypes.object
 };
 
 const selector = formValueSelector('wizard'); // <-- same as form name

@@ -33,6 +33,7 @@ class SpaceSearchPanel extends Component {
       this.map.leafletElement.invalidateSize(false);
     }
   }
+
   render() {
     return (
       <div id="space-search-panel">
@@ -51,6 +52,7 @@ class SpaceSearchPanel extends Component {
                      meta={props.meta}
                      label="Choose Center">
                      <MapWithGeocoderInput
+                       forceRedraw = {this.state.showPanel}
                        ref={(map) => { this.map = map; }}
                        formInput={props.input}
                      />

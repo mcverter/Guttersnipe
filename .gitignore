@@ -1,10 +1,7 @@
-results_*
+gsnipe-env
 
-
-db/results/
-db/seeds/data_to_be_migrated/
 selenium/
-	
+
 # npm
 node_modules
 

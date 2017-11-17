@@ -20,10 +20,6 @@ class ShareableCreateWizardForm extends Component {
     this.goToPageNumber = this.goToPageNumber.bind(this);
   }
 
-  nextPage() {
-    this.setState({ page: this.state.page + 1 });
-  }
-
   previousPage() {
     this.setState({ page: this.state.page - 1 });
   }

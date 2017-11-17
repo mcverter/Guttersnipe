@@ -10,7 +10,7 @@ const FrontPage = (props) => {
   if (__DEV__) {
     piaf_image = <img src={imgsrc} id="piaf-img"/>
   } else {
-    const piafSrc = SERVER_URL + '/sta' + 'tic/img/piafGutterCropped.png'
+    const piafSrc = SERVER_URL + '/sta' + 'tic/img/piafGutterCropped.png';
     piaf_image = <img src={piafSrc} clasidsName="piaf-img"/>
   }
 
@@ -41,7 +41,7 @@ const FrontPage = (props) => {
 
     </section>
   );
-}
+};
 export default FrontPage;
 
 

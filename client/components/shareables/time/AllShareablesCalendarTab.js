@@ -10,8 +10,15 @@ export const AllShareablesCalendarTabComponent = (props) => {
     return <div>Loading...</div>;
   }
 
+  const itemHasEvents = (item) => {
+    return item && item.time && item.time.schedule
+      && item.time.schedule.events
+  };
+
   const allEvents = items.map((item)=>
-    ({calendarEvents: item.time.schedule.events, headline: item.headline}));
+    ({calendarEvents: itemHasEvents(item) ?
+      item.time.schedule.events : [],
+      headline: item.headline}));
 
   return (
     <div className="all-shareables-calendar-tab">
