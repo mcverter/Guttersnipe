@@ -42,7 +42,6 @@ module.exports = {
   'Create Page is navigable': (client) => {
     client
       .url('http://localhost:3000/shareables/create')
-      .find('.')
   }
 }
 /*
