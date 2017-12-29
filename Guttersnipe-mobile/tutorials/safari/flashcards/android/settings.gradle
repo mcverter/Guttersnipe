@@ -1,0 +1,3 @@
+rootProject.name = 'flashcards'
+
+include ':app'
