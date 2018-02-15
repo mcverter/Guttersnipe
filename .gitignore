@@ -1,6 +1,9 @@
 gsnipe-env
 
 selenium/
+tutorials/
+
+package-lock.json
 
 # npm
 node_modules
