@@ -3,7 +3,7 @@ module.exports = {
     client: 'pg',
     user: 'postgres',
     password: 'postgres',
-    connection: 'postgres://postgres:postgres@localhost:5433/guttersnipeKnex',
+    connection: 'postgres://postgres:postgres@localhost/guttersnipeKnex',
 
     migrations: {
       directory: __dirname + '/migrations'

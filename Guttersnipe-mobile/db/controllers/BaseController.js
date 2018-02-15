@@ -1,6 +1,9 @@
+
 module.exports =
-  class BaseModel{
-    insertRecord(recordJSON) {}
+  class BaseController{
+    selectOneRecord(id) {}
+    selectAllRecords(){}
+    insertOneRecord(recordJSON) {}
     insertManyRecords(manyRecordsJSON) {}
     createDBTable(knex, Promise) {}
     dropDBTable(knex, Promise) {}

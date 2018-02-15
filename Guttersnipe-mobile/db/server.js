@@ -8,17 +8,15 @@ var app = express();
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))
 
+app.get('/shareables', function(req, res){
+  res.send('hello');
+})
+
 app.get('/todos', function(req, res) {
   knex.select().from('todos').where({id: 1})
     .then(todos=>{res.send(todos)});
-  /*
-  knex.raw('select * from todos')
-    .then(data=>{
-      res.send(data.rows);
-      }
-
-    )*/
 })
+
 
 app.post('/todos', function(req, res) {
   knex('todos').insert({title: 'hi', user_id: 1})
@@ -28,10 +26,11 @@ app.post('/todos', function(req, res) {
  .then(()=>{
       knex.select().from('todos')
         .then(todos=>{res.send(todos)});
-
     })
 
 })
+
+
 app.listen(port, ()=>{
   console.log('listening on port', port)
 });
