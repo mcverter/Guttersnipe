@@ -6,4 +6,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+router.get('/shareables', function(req, res, next){
+  res.render('shareables');
+})
 module.exports = router;
