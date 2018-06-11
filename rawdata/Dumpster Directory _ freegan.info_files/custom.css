@@ -1,0 +1,332 @@
+BODY
+{
+	color: #FFF;
+	background: #000 url(bg.png) repeat-x center top;
+	font: 62.5%/130% Verdana, Geneva, Verdana, "Lucida Grande", Arial, sans-serif;
+}
+DIV#sidebar FORM
+{
+	overflow: hidden;
+}
+/*focus*/
+#INVALID-RULE
+{
+	outline: none;
+	margin: 0;
+	padding: 0;
+}
+.center
+{
+	text-align: center;
+}
+BLOCKQUOTE
+{
+	color: #DDD;
+}
+.postbody
+{
+	margin: 10px 16px 50px;
+}
+/*--------------------------------------------------*/
+#footer
+{
+	border-top: 1px solid #333;
+	color: #333;
+	float: left;
+	font-size: 12px;
+	font-style: italic;
+	font-weight: normal;
+	line-height: 1.7em;
+	text-align: left;
+	width: 100%;
+}
+#footer .container
+{
+	width: 980px;
+	margin: 0 auto;
+}
+#footer P
+{
+	margin: 0 0 10px;
+	padding: 0 0 0 5px;
+}
+#footer .center
+{
+	margin: 0 auto;
+	text-align: center;
+	display: block;
+	color: #999;
+}
+#footer .disclaimer
+{
+	border-top: 1px solid #333;
+	padding: 10px 0;
+	float: left;
+	color: #333;
+	background: transparent;
+	width: 100%;
+}
+/*--------------------------------------------------*/
+#commentform INPUT
+{
+	border: 1px solid #444;
+	padding: 5px;
+}
+TEXTAREA#comment
+{
+	width: 100%;
+	background: #F0F0F0;
+}
+OL.commentlist CITE
+{
+	font-weight: normal;
+	font-size: 1.5em;
+	font-style: normal;
+}
+/*--------------------------------------------------*/
+#main
+{
+	padding-top: 0;
+	font-size: 14px;
+	line-height: 1.35;
+}
+/*--------------------------------------------------*/
+FIELDSET
+{
+	border: 0 solid #FFFFFF;
+	margin: 0;
+	padding: 0;
+	line-height: 1.75;
+}
+/*---------------------------------------------*/
+#logo
+{
+	float: left;
+	margin-left: 30px;
+}
+#logo A
+{
+	background: none;
+}
+/*---------------------------------------------*/
+#mailing-address
+{
+	float: left;
+}
+#general-inquiries
+{
+	float: left;
+}
+#media-inquiries
+{
+	float: left;
+}
+/*---------------------------------------------*/
+DIV.span-1, DIV.span-2, DIV.span-3, DIV.span-4, DIV.span-5, DIV.span-6, DIV.span-7, DIV.span-8, DIV.span-9, DIV.span-10, DIV.span-11, DIV.span-12, DIV.span-13, DIV.span-14, DIV.span-15, DIV.span-16, DIV.span-17, DIV.span-18, DIV.span-19, DIV.span-20, DIV.span-21, DIV.span-22, DIV.span-23, DIV.span-24
+{
+	float: left;
+	margin-right: 0;
+}
+DIV.last
+{
+	margin-right: 0;
+}
+.span-1
+{
+	width: 30px;
+}
+.span-2
+{
+	width: 360px;
+}
+.span-3
+{
+	width: 133px;
+}
+.span-4
+{
+	width: 525px;
+}
+#col1
+{
+	width: 310px;
+	float: left;
+	line-height: 4.25;
+}
+#col2
+{
+	width: 390px;
+	float: left;
+	line-height: 2.75;
+}
+#col3
+{
+	width: 163px;
+}
+/*---------------------------------------------*/
+P
+{
+	margin: 0 0 1.5em;
+	padding: 0;
+}
+P IMG
+{
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+P IMG.right
+{
+	float: right;
+	margin: 0 0 1.5em 1.5em;
+}
+/*--------------------------------------------------*/
+UL
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 330px;
+}
+UL LI
+{
+	font: bold 11px/16px arial, helvetica, sans-serif;
+	height: 100%;
+	border-bottom: 0px solid #FFF;
+	position: relative;
+	float: left;
+	width: 100%;
+	padding: 0px 0;
+	list-style-type: none;
+}
+UL LI A
+{
+	display: block;
+	padding: 0px;
+}
+/*--------------------------------------------------*/
+.byline
+{
+	font-size: 0.8em;
+	font-style: italic;
+	line-height: 1em;
+	text-align: center;
+}
+.timestamp
+{
+	font-size: 0.8em;
+	line-height: 1.2em;
+}
+.commentnum
+{
+	font-size: 0.8em;
+	line-height: 1.2em;
+}
+.incategory
+{
+	font-size: 1em;
+	line-height: 1.2em;
+}
+/*--------------------------------------------------*/
+A, A:visited
+{
+	color: #FF9966;
+	text-decoration: none;
+}
+A:focus, A:hover
+{
+	background: #FF9966;
+}
+H1 A, H2 A, H3 A, H4 A, H5 A, H6 A
+{
+	border-bottom: none;
+}
+H2
+{
+	color: #FFF;
+	font-variant: small-caps;
+	font-size: 32px;
+}
+DIV#found H2
+{
+	color: #F7D28D;
+	padding-bottom: 6px;
+	line-height: 1.2;
+}
+DIV#found
+{
+	float: right;
+	width: 580px;
+	color: #C4F78D;
+	font-size: 17pt;
+	line-height: 1.7;
+}
+H3, H4
+{
+	color: #D4FFF2;
+	font-variant: small-caps;
+}
+/*--------------------------------------------------*/
+#sidebar
+{
+	margin-bottom: 40px;
+}
+#sidebar H2
+{
+	font-size: 1em;
+	font-weight: bold;
+	margin-bottom: 0.5em;
+	margin-top: 1.8em;
+}
+DIV#sidebar UL LI
+{
+	margin-top: 2px;
+	padding-left: 6px;
+	margin-bottom: 2px;
+}
+DIV#sidebar A
+{
+	font-size: 13pt;
+	text-decoration: none;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+DIV#sidebar LI:hover
+{
+	border-right: 6px solid #386707;
+	background-color: #AA5400;
+}
+DIV#sidebar A:hover
+{
+	font-size: 13pt;
+	color: #AC5600;
+	background-color: #233311;
+}
+/*--------------------------------------------------*/
+.container #main
+{
+	padding-top: -5px;
+	margin-top: -5px;
+}
+.pic
+{
+	float: left;
+	border: 5px solid #630;
+	margin: 0 1.5em 1.5em 0;
+}
+#inset
+{
+	background: #6B9999;
+	border: 1px solid #000000;
+	margin-bottom: 40px;
+	padding: 15px;
+}
+.addtoany_share_save_container
+{
+	text-align: center;
+	padding-bottom: 10px;
+}
+.plain UL LI
+{
+	border: 0 solid #000000;
+}
