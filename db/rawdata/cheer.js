@@ -5,17 +5,65 @@ const frontMarkerString = `const Content = () => (`;
 let xml = fileContents.substring(fileContents.indexOf(frontMarkerString));
 xml = xml.substring(frontMarkerString.length, xml.indexOf(');'))
 let $ = cheerio.load(xml);
+import knex from 'knex';
 
 const shareables = $('Shareable');
 console.log(shareables.length);
-for (i=0; i < shareables.length; i++) {
+for (let i=0; i < shareables.length; i++) {
   parse_shareable(shareables[i])
 }
 
-function parseComment(comment, {shareable_id, author_id}) {
+function parse_comment(comment, {shareable_id, author_id}) {
   let commentTitle,
     commentText;
 }
+
+function insert_comment() {
+
+}
+
+function insert_user() {
+
+}
+
+function insert_admin() {
+
+}
+
+function get_shareable_id() {
+
+}
+function insert_shareable({subclass, name, description, address, longitude, latitude, time}) {
+
+  console.log(`IF NOT EXISTS (
+        SELECT id FROM shareables
+        WHERE
+          subclass=${subclass},
+          name=${name},
+          description =${description},
+          address =${address},
+          longitude =${longitude},
+          latitude =${latitude},
+          time =${time});)
+
+  THEN
+  INSERT INTO shareables (subclass, name, description, address, longitude, latitude, time)
+    VALUES(${subclass}, ${name}, ${description}, ${address}, ${longitude}, ${latitude}, ${time})
+    RETURNING id)
+  ELSE
+        SELECT id FROM shareables
+        WHERE
+          subclass=${subclass},
+          name=${name},
+          description =${description},
+          address =${address},
+          longitude =${longitude},
+          latitude =${latitude},
+          time =${time});)
+`)
+
+}
+
 
 
 function parse_shareable(shareable, index) {
@@ -32,6 +80,7 @@ function parse_shareable(shareable, index) {
     latitude = $('Latitude').text(),
     address = $('Address').text(),
     // time
+    time = $('Time').text(),
 
     // Comments
     comments = $('Comments').text(),
@@ -43,9 +92,9 @@ function parse_shareable(shareable, index) {
   for (i=0;i<comments.length;i++) {
     parse_comment(comments[i], {shareable_id, author_id});
   }
+  insert_shareable({subclass, name, description, address, longitude, latitude, time})
 
-
-  console.log(description, address);
+//  console.log(`${subclass} ${name} ${description} ${address} ${longitude} ${latitude} ${time}`);
 
 }
 
@@ -63,6 +112,7 @@ function parse_shareable(shareable, index) {
 
  <roadrunneratwast> Is it possible to get a field from a newly inserted row?  EG: SELECT id FROM(INSERT values('foo') INTO table))
  <zelest> RETURNING :)
+ √INSERT INTO table VALUES('foo') RETURNING id
  <roadrunneratwast> thanks
       Comments= childrenComponent,
       AuthorDate = childrenComponent,
