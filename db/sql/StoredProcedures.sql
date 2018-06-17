@@ -58,8 +58,6 @@ BEGIN
                       shareable.s_time = shareable_time AND
                       shareable.s_geolocation = shareable_geometry;
 
-  RAISE notice 'done select into';
-
   if (shareable_id is null)
     THEN
     INSERT INTO shareable (s_geolocation, s_subclass, s_name,
