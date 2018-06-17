@@ -26,10 +26,10 @@ LANGUAGE plpgsql;
 
 DROP FUNCTION IF EXISTS insert_shareable(text, text, text, text, double precision, double precision, text );
 DROP FUNCTION if exists insert_shareable(text,text,text,text,text,double precision,double precision);
+DROP FUNCTION IF EXISTS SELECT_OR_INSERT_SHAREABLE(TEXT, TEXT, TEXT, TEXT, TEXT, FLOAT, FLOAT);
 
 
-
-CREATE OR REPLACE FUNCTION INSERT_SHAREABLE(
+CREATE OR REPLACE FUNCTION SELECT_OR_INSERT_SHAREABLE(
   shareable_time TEXT,
   subclass       TEXT,
   name           TEXT,
@@ -76,4 +76,4 @@ $$
 LANGUAGE plpgsql;
 
 SELECT get_sum(a := 10, b := 20);
-SELECT insert_shareable(shareable_time := 'bluetzot', subclass := 'foo', name := 'moo', description := 'moo', address := 'moo', longitude := 40.0, latitude := 40.0);
+SELECT SELECT_OR_INSERT_SHAREABLE(shareable_time := 'bluetzot', subclass := 'foo', name := 'moo', description := 'moo', address := 'moo', longitude := 40.0, latitude := 40.0);
