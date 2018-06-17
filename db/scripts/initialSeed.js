@@ -46,14 +46,19 @@ function parse_shareable(shareable, index) {
 
 
   knex.raw(`SELECT SELECT_OR_INSERT_SHAREABLE(shareable_time := '${time}', subclass := '${subclass}', name := '${name}', description := '${description}', address := '${address}', longitude := '${longitude}', latitude := '${latitude}');`)
-    .then(response=>{
-      console.log('response', response.rows[0]['select_or_insert_shareable']);
-      let shareable_id = response.rows[0]['select_or_insert_shareable'];
-      let author_id = ()=>1
-      for (i=0;i<comments.length;i++) {
-        parse_comment(comments[i], {shareable_id, author_id});
-      }
-
+    .then(shareable_response=>{
+      console.log('response', shareable_response.rows[0]['select_or_insert_shareable']);
+      let shareable_id = shareable_response.rows[0]['select_or_insert_shareable'];
+      knex.raw(`SELECT SELECT_OR_INSERT_AUTHOR(shareable_time := '${time}', subclass := '${subclass}', name := '${name}', description := '${description}', address := '${address}', longitude := '${longitude}', latitude := '${latitude}');`)
+        .then((author_response)=>{
+          let author_id = ()=>1
+          for (i=0;i<comments.length;i++) {
+            parse_comment(comments[i], {shareable_id, author_id});
+            knex.raw(`SELECT SELECT_OR_INSERT_COMMENT(shareable_time := '${time}', subclass := '${subclass}', name := '${name}', description := '${description}', address := '${address}', longitude := '${longitude}', latitude := '${latitude}');`)
+              .then(comment_response=>{
+              })
+          }
+        })
     })
     .catch(error=>{
       console.log('error', error)
