@@ -43,48 +43,25 @@ function parse_shareable(shareable, index) {
     author = $('Author').text();
 
   console.log(subclass, name, description, longitude, latitude, address, time);
-
-
   knex.raw(`SELECT SELECT_OR_INSERT_SHAREABLE(shareable_time := '${time}', subclass := '${subclass}', name := '${name}', description := '${description}', address := '${address}', longitude := '${longitude}', latitude := '${latitude}');`)
     .then(shareable_response=>{
-      console.log('response', shareable_response.rows[0]['select_or_insert_shareable']);
+      console.log('s_response', shareable_response.rows[0]['select_or_insert_shareable']);
       let shareable_id = shareable_response.rows[0]['select_or_insert_shareable'];
-      knex.raw(`SELECT SELECT_OR_INSERT_AUTHOR(shareable_time := '${time}', subclass := '${subclass}', name := '${name}', description := '${description}', address := '${address}', longitude := '${longitude}', latitude := '${latitude}');`)
+      knex.raw(`SELECT SELECT_OR_INSERT_USER(email := 'mitchell.verter@gmail.com', name := 'mitchell', expiration := NULL, role := 'superadmin');`)
         .then((author_response)=>{
-          let author_id = ()=>1
+          console.log('a_response', author_response.rows[0]['select_or_insert_user']);
+          let author_id = author_response.rows[0]['select_or_insert_user'];
           for (i=0;i<comments.length;i++) {
-            parse_comment(comments[i], {shareable_id, author_id});
+
+/*
             knex.raw(`SELECT SELECT_OR_INSERT_COMMENT(shareable_time := '${time}', subclass := '${subclass}', name := '${name}', description := '${description}', address := '${address}', longitude := '${longitude}', latitude := '${latitude}');`)
               .then(comment_response=>{
               })
+*/
           }
         })
     })
     .catch(error=>{
       console.log('error', error)
     });
-
-}
-
-
-
-function parse_comment(comment, {shareable_id, author_id}) {
-  let commentTitle,
-    commentText;
-}
-
-function insert_comment() {
-
-}
-
-function insert_user() {
-
-}
-
-function insert_admin() {
-
-}
-
-function get_shareable_id() {
-
 }

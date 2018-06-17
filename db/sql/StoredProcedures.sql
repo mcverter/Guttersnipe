@@ -1,35 +1,9 @@
-CREATE OR REPLACE FUNCTION get_sum(
-  a NUMERIC,
-  b NUMERIC)
-  RETURNS NUMERIC AS $$
-BEGIN
-  RETURN a + b;
-END; $$
-LANGUAGE plpgsql;
-
-CREATE OR REPLACE FUNCTION TEST_ARGUMENT_LIST(
-  subclass    TEXT,
-  name        TEXT,
-  description TEXT,
-  address     TEXT,
-  longitude   FLOAT,
-  latitude    FLOAT,
-  s_time      TEXT)
-  RETURNS NUMERIC AS $$
-BEGIN
-  RETURN 5;
-
-end;
-
-$$
-LANGUAGE plpgsql;
-
-
 CREATE OR REPLACE FUNCTION SELECT_OR_INSERT_COMMENT(
   c_text  TEXT,
   c_title TEXT,
   c_s_id  uuid,
-  c_u_id  uuid)
+  c_u_id  uuid,
+c_posted TIMESTAMP)
   RETURNS uuid
 AS $$
 DECLARE
@@ -41,6 +15,7 @@ BEGIN
   WHERE shareable_comment.comment_text = c_text AND
         shareable_comment.title = c_title AND
         shareable_comment.shareable_id = c_s_id AND
+    shareable_comment.date_posted = c_posted AND
         shareable_comment.user_id = c_u_id;
 
 
@@ -48,7 +23,7 @@ BEGIN
   THEN
     INSERT INTO shareable_comment (comment_text, title, shareable_id, user_id, date_posted, created_on, updated_on)
     VALUES (c_text,
-            c_title, c_s_id, c_u_id, now(), now(), now())
+            c_title, c_s_id, c_u_id, c_posted, now(), now())
     returning id
       into comment_id;
   end if;
@@ -58,10 +33,9 @@ $$
 LANGUAGE plpgsql;
 
 CREATE OR REPLACE FUNCTION SELECT_OR_INSERT_USER(
-  shareable_time TEXT,
   email       TEXT,
-  name           TIMESTAMP,
-  expiration    TEXT,
+  name           TEXT,
+  expiration    timestamp,
   role        TEXT)
   RETURNS uuid
 AS $$
@@ -73,7 +47,7 @@ BEGIN
   FROM guttersnipe_user
   WHERE guttersnipe_user.u_email = email AND
     guttersnipe_user.u_name = name AND
-    guttersnipe_user.u_expiration = expiration AND
+    /* guttersnipe_user.u_expiration = expiration AND */
     guttersnipe_user.u_role = role;
 
   if (user_id is null)
@@ -138,6 +112,6 @@ end;
 $$
 LANGUAGE plpgsql;
 
-SELECT get_sum(a := 10, b := 20);
 SELECT SELECT_OR_INSERT_SHAREABLE(shareable_time := 'bluetzot', subclass := 'foo', name := 'moo', description := 'moo',
                                   address := 'moo', longitude := 40.0, latitude := 40.0);
+SELECT SELECT_OR_INSERT_USER(email := 'mitchell.verter@gmail.com', name := 'mitchell', expiration := NULL, role := 'superadmin');
