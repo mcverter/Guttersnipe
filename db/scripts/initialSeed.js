@@ -80,10 +80,10 @@ function parse_shareable(shareable, index) {
           for (i=0;i<comments.length;i++) {
             let $comment = cheerio.load(comments[i]);
             if ($('CommentTitle').text()) {
-              title = escape($('CommentTitle').text());
-              text = escape($('CommentText').text());
+              title = escape($('CommentTitle').text().trim());
+              text = escape($('CommentText').text().trim());
             } else {
-              text = escape($.text());
+              text = escape($.text().trim());
               title = text.substring(0, 20);
             }
             knex.raw(`
