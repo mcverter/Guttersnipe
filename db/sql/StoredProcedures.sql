@@ -41,7 +41,14 @@ CREATE OR REPLACE FUNCTION INSERT_SHAREABLE(
 AS $$
 DECLARE
   shareable_id uuid;
+  shareable_geometry geometry;
+  geometry_string Text;
 BEGIN
+
+  geometry_string := 'POINT('  || longitude || ' ' || latitude || ')';
+
+  SELECT ST_GeomFromText(geometry_string) into shareable_geometry;
+
   SELECT id INTO shareable_id
                 FROM shareable
                 WHERE shareable.s_subclass = subclass AND
@@ -49,29 +56,24 @@ BEGIN
                       shareable.s_description = description AND
                       shareable.s_address = address AND
                       shareable.s_time = shareable_time AND
-                      1 = 1;
+                      shareable.s_geolocation = shareable_geometry;
 
   RAISE notice 'done select into';
 
   if (shareable_id is null)
     THEN
-    INSERT INTO shareable (s_subclass, s_name,
+    INSERT INTO shareable (s_geolocation, s_subclass, s_name,
                            s_description, s_address,
                           s_time, created_on, updated_on)
-    VALUES (subclass, name, description,
+    VALUES (shareable_geometry,
+            subclass, name, description,
             address, shareable_time, now(), now())
     returning id into shareable_id;
   end if;
   return shareable_id;
-
-  /*            shareable.s_geolocation
-              = ST_GeomFromText('50.0, 50.0', 4326)
-
-  */
-
 end;
 $$
 LANGUAGE plpgsql;
 
 SELECT get_sum(a := 10, b := 20);
-SELECT insert_shareable(shareable_time := 'bluetzo', subclass := 'foo', name := 'moo', description := 'moo', address := 'moo', longitude := 40.0, latitude := 40.0);
+SELECT insert_shareable(shareable_time := 'bluetzot', subclass := 'foo', name := 'moo', description := 'moo', address := 'moo', longitude := 40.0, latitude := 40.0);
