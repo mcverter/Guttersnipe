@@ -4,27 +4,30 @@
   "private": true,
   "scripts": {
     "start": "node ./server/bin/www",
-    "seed": "node ./db/seeders/initialSeed.js",
+    "seed": "node ./db/seeders/initialSeed.js"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
     "bookshelf": "^0.12.1",
     "bookshelf-postgis": "^0.2.2",
+    "cheerio": "^1.0.0-rc.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "^4.15.5",
-    "hstore": "0.0.1",
     "jade": "~1.11.0",
     "knex": "^0.13.0",
     "knex-postgis": "^0.5.0",
     "lodash": "^4.17.4",
     "md5": "^2.2.1",
+    "moment": "^2.22.2",
     "morgan": "~1.9.0",
     "pg": "^6.4.2",
+    "pg-escape": "^0.2.0",
     "recursive-readdir": "^2.2.1",
     "redux-logger": "^3.0.6",
     "sequelize": "^4.22.5",
     "sequelize-cli": "^3.0.0",
-    "serve-favicon": "~2.4.5"
+    "serve-favicon": "~2.4.5",
+    "xml2js": "^0.4.19"
   }
 }
