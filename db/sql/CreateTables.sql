@@ -12,8 +12,8 @@ CREATE TABLE shareable
   s_address     TEXT,
   s_geolocation geometry,
   s_time        TEXT,
-  created_on    TIMESTAMP NOT NULL,
-  updated_on    TIMESTAMP NOT NULL
+  created_on    TIMESTAMP WITH TIME ZONE NOT NULL,
+  updated_on    TIMESTAMP WITH TIME ZONE NOT NULL
 );
 
 DROP TABLE IF EXISTS kropotkin CASCADE;
@@ -29,11 +29,10 @@ CREATE TABLE guttersnipe_user
   id           uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
   u_email      TEXT,
   u_name       TEXT,
-  u_expiration TIMESTAMP,
+  u_expiration TIMESTAMP WITH TIME ZONE,
   u_role       TEXT,
-  created_on   TIMESTAMP NOT NULL,
-  updated_on   TIMESTAMP NOT NULL
-
+  created_on   TIMESTAMP WITH TIME ZONE NOT NULL,
+  updated_on   TIMESTAMP WITH TIME ZONE NOT NULL
 );
 
 DROP TABLE IF EXISTS shareable_comment CASCADE;
@@ -44,8 +43,7 @@ CREATE TABLE shareable_comment
   comment_text TEXT,
   shareable_id uuid REFERENCES shareable (id),
   user_id      uuid REFERENCES guttersnipe_user (id),
-  date_posted  TIMESTAMP NOT NULL,
-  created_on   TIMESTAMP NOT NULL,
-  updated_on   TIMESTAMP NOT NULL
-
+  date_posted  TIMESTAMP WITH TIME ZONE NOT NULL,
+  created_on   TIMESTAMP WITH TIME ZONE NOT NULL,
+  updated_on   TIMESTAMP WITH TIME ZONE NOT NULL
 );
