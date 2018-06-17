@@ -1,9 +1,9 @@
 CREATE OR REPLACE FUNCTION SELECT_OR_INSERT_COMMENT(
-  c_text  TEXT,
-  c_title TEXT,
-  c_s_id  uuid,
-  c_u_id  uuid,
-c_posted TIMESTAMP)
+  c_text   TEXT,
+  c_title  TEXT,
+  c_s_id   uuid,
+  c_u_id   uuid,
+  c_posted TIMESTAMP WITH TIME ZONE)
   RETURNS uuid
 AS $$
 DECLARE
@@ -15,7 +15,7 @@ BEGIN
   WHERE shareable_comment.comment_text = c_text AND
         shareable_comment.title = c_title AND
         shareable_comment.shareable_id = c_s_id AND
-    shareable_comment.date_posted = c_posted AND
+        shareable_comment.date_posted = c_posted AND
         shareable_comment.user_id = c_u_id;
 
 
@@ -33,22 +33,22 @@ $$
 LANGUAGE plpgsql;
 
 CREATE OR REPLACE FUNCTION SELECT_OR_INSERT_USER(
-  email       TEXT,
-  name           TEXT,
-  expiration    timestamp,
-  role        TEXT)
+  email      TEXT,
+  name       TEXT,
+  expiration TIMESTAMP WITH TIME ZONE,
+  role       TEXT)
   RETURNS uuid
 AS $$
 DECLARE
-  user_id       uuid;
+  user_id uuid;
 BEGIN
   SELECT id
   INTO user_id
   FROM guttersnipe_user
   WHERE guttersnipe_user.u_email = email AND
-    guttersnipe_user.u_name = name AND
-    /* guttersnipe_user.u_expiration = expiration AND */
-    guttersnipe_user.u_role = role;
+        guttersnipe_user.u_name = name AND
+        /* guttersnipe_user.u_expiration = expiration AND */
+        guttersnipe_user.u_role = role;
 
   if (user_id is null)
   THEN
@@ -114,4 +114,5 @@ LANGUAGE plpgsql;
 
 SELECT SELECT_OR_INSERT_SHAREABLE(shareable_time := 'bluetzot', subclass := 'foo', name := 'moo', description := 'moo',
                                   address := 'moo', longitude := 40.0, latitude := 40.0);
-SELECT SELECT_OR_INSERT_USER(email := 'mitchell.verter@gmail.com', name := 'mitchell', expiration := NULL, role := 'superadmin');
+SELECT SELECT_OR_INSERT_USER(email := 'mitchell.verter@gmail.com', name := 'mitchell', expiration := NULL,
+                             role := 'superadmin');

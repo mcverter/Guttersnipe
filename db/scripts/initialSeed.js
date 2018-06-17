@@ -73,7 +73,7 @@ function parse_shareable(shareable, index) {
         .then((author_response)=>{
           console.log('a_response', author_response.rows[0]['select_or_insert_user']);
           var date =
-            moment().format('YYYY-MM-DD hh:mm:ssZ');
+            moment('06 Mar 2012 21:22:23 +0500').format('YYYY-MM-DD hh:mm:ssZ');
           console.log('date', date);
           let author_id = author_response.rows[0]['select_or_insert_user'];
           let title, text;
