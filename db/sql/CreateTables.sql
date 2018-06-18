@@ -27,7 +27,7 @@ DROP TABLE IF EXISTS guttersnipe_user CASCADE;
 CREATE TABLE guttersnipe_user
 (
   id           uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
-  u_email      TEXT,
+  u_email      TEXT ,
   u_name       TEXT,
   u_expiration TIMESTAMP WITH TIME ZONE,
   u_role       TEXT,

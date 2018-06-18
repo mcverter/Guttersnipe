@@ -20,13 +20,22 @@ function seedFregans(knex, Promise) {
   xml = xml.substring(frontMarkerString.length, xml.indexOf(');'))
   let $ = cheerio.load(xml);
 
-  const shareables = $('Shareable');
-  for (let i = 0; i < shareables.length; i++) {
-    parse_shareable(knex, shareables[i])
-  }
+  knex.raw(`
+        SELECT SELECT_OR_INSERT_USER(
+          email := 'mitchell.verter@gmail.com',
+          name := 'mitchell', 
+          expiration := NULL, 
+          role := 'superadmin');`)
+    .then((author_response)=>{
+      console.log('a_response', author_response.rows[0]['select_or_insert_user']);
+      let author_id = author_response.rows[0]['select_or_insert_user'];
+      const shareables = $('Shareable');
+      for (let i = 0; i < shareables.length; i++) {
+        parse_shareable(knex, shareables[i], author_id)
+      }})
 
 }
-function parse_shareable(knex, shareable) {
+function parse_shareable(knex, shareable, author_id) {
   let $ = cheerio.load(shareable);
   let
     // thing
@@ -56,29 +65,20 @@ function parse_shareable(knex, shareable) {
     .then(shareable_response=>{
       console.log('s_response', shareable_response.rows[0]['select_or_insert_shareable']);
       let shareable_id = shareable_response.rows[0]['select_or_insert_shareable'];
-      knex.raw(`
-        SELECT SELECT_OR_INSERT_USER(
-          email := 'mitchell.verter@gmail.com',
-          name := 'mitchell', 
-          expiration := NULL, 
-          role := 'superadmin');`)
-        .then((author_response)=>{
-          console.log('a_response', author_response.rows[0]['select_or_insert_user']);
-          var date =
-            moment('06 Mar 2012 21:22:23 +0500').format('YYYY-MM-DD hh:mm:ssZ');
-          console.log('date', date);
-          let author_id = author_response.rows[0]['select_or_insert_user'];
-          let title, text;
-          for (i=0;i<comments.length;i++) {
-            let $comment = cheerio.load(comments[i]);
-            if ($('CommentTitle').text()) {
-              title = escape($('CommentTitle').text().trim());
-              text = escape($('CommentText').text().trim());
-            } else {
-              text = escape($.text().trim());
-              title = text.substring(0, 20);
-            }
-            knex.raw(`
+      var date =
+        moment('06 Mar 2012 21:22:23 +0500').format('YYYY-MM-DD hh:mm:ssZ');
+      console.log('date', date);
+      let title, text;
+      for (i=0;i<comments.length;i++) {
+        let $comment = cheerio.load(comments[i]);
+        if ($('CommentTitle').text()) {
+          title = escape($('CommentTitle').text().trim());
+          text = escape($('CommentText').text().trim());
+        } else {
+          text = escape($.text().trim());
+          title = text.substring(0, 20);
+        }
+        knex.raw(`
             SELECT SELECT_OR_INSERT_COMMENT(
               text := '${text}', 
               title := '${title}', 
@@ -86,12 +86,11 @@ function parse_shareable(knex, shareable) {
               c_u_id := '${author_id}', 
               c_posted := '${date}');
               `)
-              .then(comment_response=>{
-                console.log('c_response', comment_response.rows[0]['select_or_insert_comment']);
-              })
+          .then(comment_response=>{
+            console.log('c_response', comment_response.rows[0]['select_or_insert_comment']);
+          })
 
-          }
-        })
+      }
     })
     .catch(error=>{
       console.log('error', error)
