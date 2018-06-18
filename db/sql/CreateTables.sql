@@ -19,7 +19,7 @@ CREATE TABLE shareable
 DROP TABLE IF EXISTS kropotkin CASCADE;
 CREATE TABLE kropotkin
 (
-  id          uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
+  id          SERIAL PRIMARY KEY,
   k_paragraph TEXT
 );
 

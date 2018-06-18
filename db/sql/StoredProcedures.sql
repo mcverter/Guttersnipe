@@ -112,7 +112,36 @@ end;
 $$
 LANGUAGE plpgsql;
 
+
+CREATE OR REPLACE FUNCTION SELECT_OR_INSERT_KROPOTKIN(
+  paragraph      TEXT)
+  RETURNS INT
+AS $$
+DECLARE
+  kropotkin_id INT;
+BEGIN
+  SELECT id
+  INTO kropotkin_id
+  FROM kropotkin
+  WHERE kropotkin.paragraph = paragraph;
+
+  if (kropotkin_id is null)
+  THEN
+    INSERT INTO kropotkin (paragraph)
+    VALUES (paragraph)
+    returning id
+      into kropotkin_id;
+  end if;
+  return kropotkin_id;
+end;
+$$
+LANGUAGE plpgsql;
+
+
+
+/*
 SELECT SELECT_OR_INSERT_SHAREABLE(shareable_time := 'bluetzot', subclass := 'foo', name := 'moo', description := 'moo',
                                   address := 'moo', longitude := 40.0, latitude := 40.0);
 SELECT SELECT_OR_INSERT_USER(email := 'mitchell.verter@gmail.com', name := 'mitchell', expiration := NULL,
                              role := 'superadmin');
+*/
