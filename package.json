@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./server/bin/www",
-    "seed": " ./node_modules/.bin/knex seed:run --knexfile './config/knexfile.js'"
+    "seed": "(node ./db/seeds/02_kropotkin_seed.js) & (node ./db/seeds/01_freegan_seed.js) "
   },
   "dependencies": {
     "body-parser": "^1.18.2",

@@ -39,11 +39,11 @@ DROP TABLE IF EXISTS shareable_comment CASCADE;
 CREATE TABLE shareable_comment
 (
   id           uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
-  title        TEXT,
-  comment_text TEXT,
-  shareable_id uuid REFERENCES shareable (id),
-  user_id      uuid REFERENCES guttersnipe_user (id),
-  date_posted  TIMESTAMP WITH TIME ZONE NOT NULL,
+  c_title        TEXT,
+  c_text TEXT,
+  c_shareable_id uuid REFERENCES shareable (id),
+  c_user_id      uuid REFERENCES guttersnipe_user (id),
+  c_date_posted  TIMESTAMP WITH TIME ZONE NOT NULL,
   created_on   TIMESTAMP WITH TIME ZONE NOT NULL,
   updated_on   TIMESTAMP WITH TIME ZONE NOT NULL
 );

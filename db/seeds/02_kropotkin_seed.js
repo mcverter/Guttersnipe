@@ -2,8 +2,10 @@
 const gsnipeJSON = require(__dirname + '/../data/json/01_guttersnipeOld.json')
 const kropotkins = gsnipeJSON.find(el=>el.name==="kropotkin").records
 
-exports.seed = function(knex, Promise) {
+function seedKropotkins(knex, Promise) {
+  console.log('wanna seed mr seedy')
   kropotkins.forEach(kropotkin => {
+    console.log('inserting');
     knex.raw(`
     SELECT SELECT_OR_INSERT_KROPOTKIN(
       paragraph := '${kropotkin.paragraph}');`)
@@ -12,3 +14,19 @@ exports.seed = function(knex, Promise) {
       })
   });
 }
+
+
+
+var knex = require('knex')({
+  client: 'postgres',
+  connection: {
+    host : '127.0.0.1',
+    user : 'postgres',
+    password : 'postgres',
+    database : 'guttersnipeSimple'
+  }
+});
+
+exports.seed = seedKropotkins;
+
+seedKropotkins(knex);

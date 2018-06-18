@@ -80,8 +80,8 @@ function parse_shareable(knex, shareable) {
             }
             knex.raw(`
             SELECT SELECT_OR_INSERT_COMMENT(
-              c_text := '${text}', 
-              c_title := '${title}', 
+              text := '${text}', 
+              title := '${title}', 
               c_s_id := '${shareable_id}', 
               c_u_id := '${author_id}', 
               c_posted := '${date}');
@@ -100,4 +100,15 @@ function parse_shareable(knex, shareable) {
 
 exports.seed = seedFregans;
 
-seedFreegans();
+var knex = require('knex')({
+  client: 'postgres',
+  connection: {
+    host : '127.0.0.1',
+    user : 'postgres',
+    password : 'postgres',
+    database : 'guttersnipeSimple'
+  }
+});
+
+
+seedFregans(knex);

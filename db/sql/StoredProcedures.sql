@@ -1,6 +1,9 @@
+DROP FUNCTION IF EXISTS select_or_insert_comment(text,text,uuid,uuid,timestamp with time zone);
+
+
 CREATE OR REPLACE FUNCTION SELECT_OR_INSERT_COMMENT(
-  c_text   TEXT,
-  c_title  TEXT,
+  text   TEXT,
+  title  TEXT,
   c_s_id   uuid,
   c_u_id   uuid,
   c_posted TIMESTAMP WITH TIME ZONE)
@@ -12,18 +15,18 @@ BEGIN
   SELECT id
   INTO comment_id
   FROM shareable_comment
-  WHERE shareable_comment.comment_text = c_text AND
-        shareable_comment.title = c_title AND
-        shareable_comment.shareable_id = c_s_id AND
-        shareable_comment.date_posted = c_posted AND
-        shareable_comment.user_id = c_u_id;
+  WHERE shareable_comment.c_text = text AND
+        shareable_comment.c_title = title AND
+        shareable_comment.c_shareable_id = c_s_id AND
+        shareable_comment.c_date_posted = c_posted AND
+        shareable_comment.c_user_id = c_u_id;
 
 
   if (comment_id is null)
   THEN
-    INSERT INTO shareable_comment (comment_text, title, shareable_id, user_id, date_posted, created_on, updated_on)
-    VALUES (c_text,
-            c_title, c_s_id, c_u_id, c_posted, now(), now())
+    INSERT INTO shareable_comment (c_text, c_title, c_shareable_id, c_user_id, c_date_posted, created_on, updated_on)
+    VALUES (text,
+            title, c_s_id, c_u_id, c_posted, now(), now())
     returning id
       into comment_id;
   end if;
@@ -123,11 +126,11 @@ BEGIN
   SELECT id
   INTO kropotkin_id
   FROM kropotkin
-  WHERE kropotkin.paragraph = paragraph;
+  WHERE kropotkin.k_paragraph = paragraph;
 
   if (kropotkin_id is null)
   THEN
-    INSERT INTO kropotkin (paragraph)
+    INSERT INTO kropotkin (k_paragraph)
     VALUES (paragraph)
     returning id
       into kropotkin_id;
