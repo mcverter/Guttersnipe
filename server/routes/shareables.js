@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var shareableDB = require('./../../db/controllers/Shareable');
+var shareableDB = require(__dirname + '/../controllers/ShareableController');
 
 const shareableController = new shareableDB();
 /* GET users listing. */

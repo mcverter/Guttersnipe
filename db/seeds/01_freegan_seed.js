@@ -13,6 +13,9 @@ var knex = require('knex')({
   }
 });
 */
+function superescape(string) {
+  return escape(string.trim().replace(/\s+/g, ' '));
+}
 function seedFregans(knex, Promise) {
   const fileContents = fs.readFileSync(__dirname + '/../data/html/BrooklynDirectory.xml.html', 'utf8');
   const frontMarkerString = `const Content = () => (`;
@@ -40,17 +43,17 @@ function parse_shareable(knex, shareable, author_id) {
   let
     // thing
     subclass = escape('dumpster'),
-    name = escape($('Name').text()),
-    description = escape($('Description').text()),
+    name = superescape($('Name').text()),
+    description = superescape($('Description').text()),
     // space
-    address = escape($('Address').text()),
+    address = superescape($('Address').text()),
     longitude = $('Longitude').text(),
     latitude = $('Latitude').text(),
     // time
-    time = escape($('Time').text()),
+    time = superescape($('Time').text()),
 
     // Comments
-    comments = $('Comments'),
+    comments = $('Comment'),
     author = $('Author').text();
   console.log(subclass, name, description, longitude, latitude, address, time);
   knex.raw(`
@@ -71,13 +74,14 @@ function parse_shareable(knex, shareable, author_id) {
       let title, text;
       for (i=0;i<comments.length;i++) {
         let $comment = cheerio.load(comments[i]);
-        if ($('CommentTitle').text()) {
-          title = escape($('CommentTitle').text().trim());
-          text = escape($('CommentText').text().trim());
+        if ($comment('CommentTitle').text()) {
+          title = superescape($comment('CommentTitle').text());
+          text = superescape($comment('CommentText').text());
         } else {
-          text = escape($.text().trim());
+          text = superescape($comment.text());
           title = text.substring(0, 20);
         }
+        console.log('about to insert comment', 'title', title, 'text', text)
         knex.raw(`
             SELECT SELECT_OR_INSERT_COMMENT(
               text := '${text}', 

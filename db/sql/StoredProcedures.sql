@@ -1,9 +1,9 @@
-DROP FUNCTION IF EXISTS select_or_insert_comment(text,text,uuid,uuid,timestamp with time zone);
+DROP FUNCTION IF EXISTS select_or_insert_comment( text, text, uuid, uuid, timestamp with time zone );
 
 
 CREATE OR REPLACE FUNCTION SELECT_OR_INSERT_COMMENT(
-  text   TEXT,
-  title  TEXT,
+  text     TEXT,
+  title    TEXT,
   c_s_id   uuid,
   c_u_id   uuid,
   c_posted TIMESTAMP WITH TIME ZONE)
@@ -115,9 +115,8 @@ end;
 $$
 LANGUAGE plpgsql;
 
-
 CREATE OR REPLACE FUNCTION SELECT_OR_INSERT_KROPOTKIN(
-  paragraph      TEXT)
+  paragraph TEXT)
   RETURNS INT
 AS $$
 DECLARE
@@ -139,8 +138,6 @@ BEGIN
 end;
 $$
 LANGUAGE plpgsql;
-
-
 
 /*
 SELECT SELECT_OR_INSERT_SHAREABLE(shareable_time := 'bluetzot', subclass := 'foo', name := 'moo', description := 'moo',

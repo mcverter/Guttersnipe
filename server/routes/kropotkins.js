@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var kropotkinDB = require('./../../db/controllers/Kropotkin');
+var kropotkinDB = require(__dirname + '/../controllers/KropotkinController');
+
 const kropotkinController = new kropotkinDB()
 
 router.get('/', function(req, res, next) {
