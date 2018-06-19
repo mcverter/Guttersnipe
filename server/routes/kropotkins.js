@@ -7,9 +7,10 @@ const kropotkinController = new kropotkinDB()
 router.get('/', function(req, res, next) {
   kropotkinController.selectRandomRecord()
     .then(function(collection){
+      console.log('collection', collection);
       res.json({
         error:false,
-        paragraph: collection.rows[0].paragraph
+        paragraph: collection.rows[0].k_paragraph
       })
     })
 });
