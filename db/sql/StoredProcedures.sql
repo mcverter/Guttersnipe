@@ -92,7 +92,7 @@ BEGIN
   SELECT id
   INTO shareable_id
   FROM shareable
-  WHERE shareable.s_subclass = subclass AND
+  WHERE shareable.s_subcategory = subclass AND
         shareable.s_name = name AND
         shareable.s_description = description AND
         shareable.s_address = address AND
@@ -101,7 +101,7 @@ BEGIN
 
   if (shareable_id is null)
   THEN
-    INSERT INTO shareable (s_geolocation, s_subclass, s_name,
+    INSERT INTO shareable (s_geolocation, s_subcategory, s_name,
                            s_description, s_address,
                            s_time, created_on, updated_on)
     VALUES (shareable_geometry,

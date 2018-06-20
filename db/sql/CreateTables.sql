@@ -6,7 +6,7 @@ DROP TABLE IF EXISTS shareable CASCADE;
 CREATE TABLE shareable
 (
   id            uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
-  s_subclass    TEXT,
+  s_subcategory    TEXT,
   s_name        TEXT,
   s_description TEXT,
   s_address     TEXT,
@@ -47,4 +47,10 @@ CREATE TABLE shareable_comment
   c_date_posted  TIMESTAMP WITH TIME ZONE NOT NULL,
   created_on   TIMESTAMP WITH TIME ZONE NOT NULL,
   updated_on   TIMESTAMP WITH TIME ZONE NOT NULL
+);
+
+DROP TABLE IF EXISTS Category_Subcategory;
+create TABLE Category_Subcategory (
+  category  TEXT,
+  subcategory TEXT
 );
