@@ -139,9 +139,47 @@ end;
 $$
 LANGUAGE plpgsql;
 
-/*
+select row_to_json(shareable)
+from shareable
+where shareable.id = (
+  SELECT id
+  from shareable
+  where shareable.s_name = 'Gristedes');
+
+select json_agg(shareable)
+FROM (
+       SELECT
+         id,
+         s_name,
+         s_description,
+         s_address,
+         s_time
+       FROM shareable)
+  as shareable;
+
+select json_agg(shareable_comment)
+from (
+       select
+         gu.id as authorId,
+         gu.u_name as authorName,
+         gu.u_role as authorRole,
+
+         sc.id as commentId,
+         sc.c_title as commentTitle,
+         sc.c_text as commentText,
+         sc.c_date_posted as datePosted,
+         sc.c_shareable_id as shareableId
+
+       from shareable_comment sc
+         inner join guttersnipe_user gu
+           on sc.c_user_id = gu.id
+       where sc.c_shareable_id = (
+         SELECT id
+         from shareable s
+         where s.s_name = 'Gristedes'))
+  as shareable_comment;
+
 SELECT SELECT_OR_INSERT_SHAREABLE(shareable_time := 'bluetzot', subclass := 'foo', name := 'moo', description := 'moo',
                                   address := 'moo', longitude := 40.0, latitude := 40.0);
 SELECT SELECT_OR_INSERT_USER(email := 'mitchell.verter@gmail.com', name := 'mitchell', expiration := NULL,
                              role := 'superadmin');
-*/
