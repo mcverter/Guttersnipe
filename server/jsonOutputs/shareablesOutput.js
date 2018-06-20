@@ -1,3 +1,16 @@
+const full_shareable = {
+  "id":"41ae831e-ff57-464f-b62d-57d35cef4648",
+  "s_subclass":"dumpster",
+  "s_name":"Gristedes",
+  "s_description":"Supermarket",
+  "s_address":"101%20Clark%20St%20Brooklyn%2C%20NY%2011201",
+  "s_geolocation":"0101000000B50474BA877F52C0751A0EF049594440",
+  "s_time":"",
+  "ical": "",
+  "created_on":"2018-06-18T21:07:29.516934-04:00",
+  "updated_on":"2018-06-18T21:07:29.516934-04:00"
+};
+
 const allShareableListItems = [{
   "id": "96ce431b-89ea-4b93-b79b-ff0c1bae4954",
   "s_name": "La%20Bagel%20Delight",
@@ -242,4 +255,6 @@ const allShareableListItems = [{
     "s_description": "",
     "s_address": "242%20Wythe%20Ave%2C%20Brooklyn%2C%20NY%2011249",
     "s_time": ""
-  }]
+  }];
+
+export {full_shareable, allShareableListItems};

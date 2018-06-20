@@ -18,7 +18,7 @@ class ShareableController {
 
     const shareableQuery = `
       select row_to_json(shareable) 
-      from from shareable
+      from shareable
       where shareable.id = ${id}`;
     Promise.all([
       () => {
@@ -38,8 +38,11 @@ class ShareableController {
 
   selectShareablesList() {
     const shareableListQuery = `
+     select json_agg(shareable)
+        FROM (
       SELECT id, s_name, s_description, s_address, s_time
-      FROM shareable`;
+      FROM shareable)
+      as shareable`;
     knex.raw(shareableListQuery);
   }
 }
