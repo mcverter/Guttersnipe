@@ -12,6 +12,7 @@ CREATE TABLE shareable
   s_address     TEXT,
   s_geolocation geometry,
   s_time        TEXT,
+  s_ical        TEXT, /* https://tools.ietf.org/html/rfc5545 */
   created_on    TIMESTAMP WITH TIME ZONE NOT NULL,
   updated_on    TIMESTAMP WITH TIME ZONE NOT NULL
 );
