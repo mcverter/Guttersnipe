@@ -1,5 +1,10 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {
+  Text,
+  View,
+  Image,
+  StyleSheet
+} from 'react-native';
 
 const Calendar = () => (
   <View>
