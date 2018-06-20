@@ -1,6 +1,6 @@
 const full_shareable = {
   "id":"41ae831e-ff57-464f-b62d-57d35cef4648",
-  "s_subclass":"dumpster",
+  "s_subcategory":"dumpster",
   "s_name":"Gristedes",
   "s_description":"Supermarket",
   "s_address":"101%20Clark%20St%20Brooklyn%2C%20NY%2011201",
