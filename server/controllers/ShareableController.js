@@ -1,6 +1,13 @@
 const knex = require(__dirname + '/../../config/knex');
 const Promise = require('bluebird');
 
+/*
+ned ##javascript
+ <roadrunneratwast> How can a node program call a Postgres query that is defined within an.sql file, especially one with parameters. EG:  getRecord.sql = "SELECT * from RECORDS where index=?" .  How would you load that and execute it in node?  How would you replace the ? Token with a local variable?
+ <buu> roadrunneratwast: connection.query(fs.readFileSync("getRecord.sql"),[index])
+ <buu> roadrunneratwast: connection.query(fs.readFileSync("getRecord.sql"),[index])
+
+ */
 
 class ShareableController {
   selectShareableWithComments(id) {
