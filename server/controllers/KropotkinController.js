@@ -1,17 +1,26 @@
-const Promise = require('bluebird');
-const knex = require(__dirname + '/../../config/knex');
+const fs = require('fs');
+const {Client } = require('pg')
+
+const client = new Client({
+  user: 'postgres',
+  host: 'localhost',
+  database: 'guttersnipeSimple',
+  password: 'postgres',
+  port: 5432,
+});
+
+client.connect();
 
 class KropotkinController {
-  selectRandomRecord() {
-    const kropotkinQuery =`
-       SELECT k_paragraph
-       FROM kropotkin
-       OFFSET floor(random() * (select count(*)
-                           from kropotkin))
-       LIMIT 1;
-`;
-    return knex.raw(kropotkinQuery);
+  async selectRandomKropotkin() {
+    const kropotkinRandomQueryFromFile = fs.readFileSync(__dirname + '/../../db/sql/KropotkinRandomQuery.sql', 'utf8');
+    const kropotkinRandomQueryResult = await client.query(kropotkinRandomQueryFromFile);
+    const kropotkinParagraph = kropotkinRandomQueryResult.rows[0].paragraph;
+    console.log('k paragraph', kropotkinParagraph);
   }
 }
 
 module.exports = KropotkinController;
+
+const kc = new KropotkinController();
+kc.selectRandomKropotkin();
