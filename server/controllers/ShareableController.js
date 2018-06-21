@@ -1,5 +1,5 @@
 const fs = require('fs');
-const {Client } = require('pg')
+const {Client} = require('pg')
 
 const client = new Client({
   user: 'postgres',
@@ -17,9 +17,17 @@ class ShareableController {
       shareableJSON;
 
     const commentsQueryFromFile = fs.readFileSync(__dirname + '/../../db/sql/CommentsQuery.sql', 'utf8');
-    const shareableQueryFromFile = fs.readFileSync(__dirname + '/../../db/sql/ShareableFullQuery.sql', 'utf8');
 
-    let commentsQueryResult = await client.query(commentsQueryFromFile);
+    const shareableQueryFromFile = {
+      name: 'fetch-shareable-full',
+      text: fs.readFileSync(__dirname + '/../../db/sql/ShareableFullQuery.sql', 'utf8'),
+      values: [id]
+    }
+
+    client.query(shareableQueryFromFile)
+      .then(res => console.log('query result', res.rows[0]))
+      .catch(e => console.error(e.stack))
+    let commentsQueryResult = await client.query(commentsQueryFromFile, [id]);
     commentsJSON = commentsQueryResult.rows[0].json_agg;
 
     let shareableQueryResult = await client.query(shareableQueryFromFile);
@@ -31,7 +39,7 @@ class ShareableController {
   async selectShareablesList() {
     const shareableListQueryFromFile = fs.readFileSync(__dirname + '/../../db/sql/ShareableListQuery.sql', 'utf8');
     let shareableListQueryResult = await
-    client.query(shareableListQueryFromFile);
+      client.query(shareableListQueryFromFile);
     let shareableListJSON = shareableListQueryResult.rows[0].json_agg;
     console.log('shareable list json', shareableListJSON);
   }
@@ -44,8 +52,8 @@ module.exports = ShareableController;
  */
 
 const sc = new ShareableController();
-sc.selectShareablesList();
-sc.selectShareableWithComments()
+// sc.selectShareablesList();
+sc.selectShareableWithComments('887c141e-7c72-4b73-bd8b-d068c74ca071')
 
 
 /*

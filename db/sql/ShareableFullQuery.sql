@@ -15,5 +15,5 @@ FROM (
          s_geolocation AS geolocation,
          s_ical AS icalendar
        FROM shareable
-         WHERE shareable.s_name = 'Gristedes')
+         WHERE shareable.id = $1)
   AS shareable;

@@ -1,4 +1,4 @@
-SELECT k_paragraph as paragraph 
+SELECT k_paragraph as paragraph
 FROM kropotkin
 OFFSET floor(random() * (select count(*)
                          from kropotkin))

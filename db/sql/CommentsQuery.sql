@@ -14,8 +14,5 @@ FROM (
        FROM shareable_comment sc
          INNER JOIN guttersnipe_user gu
            ON sc.c_user_id = gu.id
-       WHERE sc.c_shareable_id = (
-         SELECT id
-         FROM shareable s
-         WHERE s.s_name = 'Gristedes'))
+       WHERE sc.c_shareable_id =  $1)
   AS shareable_comment;
