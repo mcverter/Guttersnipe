@@ -153,7 +153,8 @@ FROM (
          s_name,
          s_description,
          s_address,
-         s_time
+         s_time,
+         s_ical
        FROM shareable)
   as shareable;
 
