@@ -1,5 +1,17 @@
 const knex = require(__dirname + '/../../config/knex');
 const Promise = require('bluebird');
+const fs = require('fs');
+const {Client } = require('pg')
+
+const client = new Client({
+  user: 'postgres',
+  host: 'localhost',
+  database: 'guttersnipeSimple',
+  password: 'postgres',
+  port: 5432,
+});
+
+client.connect();
 
 /*
 ned ##javascript
@@ -10,48 +22,37 @@ ned ##javascript
  */
 
 class ShareableController {
-  selectShareableWithComments(id) {
+  async selectShareableWithComments(id) {
     let commentsJSON,
       shareableJSON;
 
-    const commentsQuery = `
-      select json_agg(shareable_comment)
-        from (
-              select * from shareable_comment
-              inner join guttersnipe_user gu 
-                on shareable_comment.c_user_id = gu.id
-        where shareable_comment.c_shareable_id = ${id}) 
-        as shareable_comment`;
+    const commentsQueryFromFile = fs.readFileSync(__dirname + '/../../db/sql/CommentsQuery.sql', 'utf8');
+    const shareableQueryFromFile = fs.readFileSync(__dirname + '/../../db/sql/ShareableFullQuery.sql', 'utf8');
 
-    const shareableQuery = `
-      select row_to_json(shareable) 
-      from shareable
-      where shareable.id = ${id}`;
-    Promise.all([
-      () => {
-        commentsJSON = knex.raw(commentsQuery)
-      },
-      () => {
-        shareableJSON = knex.raw(shareableQuery)
-      }])
-      .then((results) => {
-        console.log('results', results);
-        console.log('comments json', commentsJSON, 'shareable json', shareableJSON)
-      })
-      .catch((error) => {
-        console.error(error);
-      })
+    let commentsQueryResult = await client.query(commentsQueryFromFile);
+    commentsJSON = commentsQueryResult.rows[0].json_agg;
+
+    let shareableQueryResult = await client.query(shareableQueryFromFile);
+    shareableJSON = shareableQueryResult.rows[0].json_agg;
+
+    console.log('comments json', commentsJSON, 'shareable json', shareableJSON);
   }
 
-  selectShareablesList() {
-    const shareableListQuery = `
-     select json_agg(shareable)
-        FROM (
-      SELECT id, s_name, s_description, s_address, s_time
-      FROM shareable)
-      as shareable`;
-    knex.raw(shareableListQuery);
+  async selectShareablesList() {
+    const shareableListQueryFromFile = fs.readFileSync(__dirname + '/../../db/sql/ShareableListQuery.sql', 'utf8');
+    let shareableListQueryResult = await
+    client.query(shareableListQueryFromFile);
+    let shareableListJSON = shareableListQueryResult.rows[0].json_agg;
+    console.log('shareable list json', shareableListJSON);
   }
 }
 
 module.exports = ShareableController;
+
+/**
+ * MAIN TEST FUNCTION
+ */
+
+const sc = new ShareableController();
+sc.selectShareablesList();
+sc.selectShareableWithComments()
