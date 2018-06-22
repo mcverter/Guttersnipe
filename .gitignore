@@ -29,3 +29,5 @@ phantomjsdriver.log
 
 # Personal Study
 z_slingshot_src/
+
+.DS_Store
