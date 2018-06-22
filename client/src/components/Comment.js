@@ -13,14 +13,22 @@ const Comment = ({author_id, author_name, author_role,
                    date_posted, shareable_id}) => {
     return (
         <View>
-            <View>
-              <Text></Text>
+            <View style={styles.title}>
+              <Text>{comment_title}</Text>
             </View>
+          <View style={styles.text}>
+            <Text>{comment_text}</Text>
+          </View>
+          <View style={styles.author}>
+            <Text> Posted by {author_name} on {date_posted}</Text>
+          </View>
         </View>
     );
 };
 const styles = new StyleSheet({
-
+  author,
+  title,
+  text
 });
 
 Comment.propTypes = {
