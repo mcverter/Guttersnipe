@@ -1,14 +1,8 @@
-const fs = require('fs');
-const {Client } = require('pg')
+import fs from 'fs';
+import {Client} from 'pg';
+import guttersnipeSimpleConfig from '../../config/dbConfig'
 
-const client = new Client({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'guttersnipeSimple',
-  password: 'postgres',
-  port: 5432,
-});
-
+const client = new Client(guttersnipeSimpleConfig);
 client.connect();
 
 class KropotkinController {

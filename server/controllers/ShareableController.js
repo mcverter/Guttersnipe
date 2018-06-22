@@ -1,13 +1,9 @@
-import guttersnipeSimpleConfig from "../../config/dbConfig";
-
-const fs = require('fs');
-const {Client} = require('pg')
+import fs from 'fs';
+import {Client} from 'pg';
 import guttersnipeSimpleConfig from '../../config/dbConfig'
 
-const fs = require('fs');
-const {Client} = require('pg')
 const client = new Client(guttersnipeSimpleConfig);
-client.connect(guttersnipeSimpleConfig);
+client.connect();
 
 class ShareableController {
   async selectShareableWithComments(id) {
