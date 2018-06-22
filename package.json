@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./server/bin/www",
-    "seed": "(node ./db/seeds/02_kropotkin_seed.js) & (node ./db/seeds/01_freegan_seed.js) "
+    "seed": "(node ./db/seeds/02_kropotkin_seed.js) & (node ./db/seeds/01_freegan_seed.js) ",
+    "test": "mocha './test/**/*.spec.js'"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
@@ -19,6 +20,7 @@
     "knex-postgis": "^0.5.0",
     "lodash": "^4.17.4",
     "md5": "^2.2.1",
+    "mocha": "^5.2.0",
     "moment": "^2.22.2",
     "morgan": "~1.9.0",
     "pg": "^7.4.3",
