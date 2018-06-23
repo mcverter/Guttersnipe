@@ -1,38 +1,30 @@
-import * as types from '../../types';
+import * as types from '../actions/kropotkins/kropotkinActionTypes.js';
+import initialState from './initialState';
 
-/** Initial State */
-const initialState = {
-  showCarousel: false,
-  gdprError: false,
-  data: {},
-  globalShowDeleteModal: false,
-  globalShowConsentModal: false
-};
+export const KROPOTKIN_SINGLE_REQUEST = 'KROPOTKIN_SINGLE_REQUEST';
+export const KROPOTKIN_SINGLE_REQUEST_SUCCESS = 'KROPOTKIN_SINGLE_REQUEST_SUCCESS';
+export const KROPOTKIN_SINGLE_REQUEST_ERROR = 'KROPOTKIN_SINGLE_REQUEST_ERROR';
 
-const defaultAction = {
-  type: '',
-  data: {}
-};
-
-export function registry(state = initialState, action = defaultAction) {
-  switch (action.type) {
-    case types.REGISTRY_DATA_REQUEST:
-      return {...state, showCarousel: false};
-    case types.REGISTRY_DATA_SUCCESS:
-      return {...state, showCarousel: true, data: action.data};
-    case types.REGISTRY_DATA_OVER_THRESHOLD:
-      return {...state, showCarousel: false, data: action.data};
-    case types.GDPR_ERROR:
-      return {...state, gdprError: true, globalShowDeleteModal: false, globalShowConsentModal: false};
-    case types.REGISTRY_DELETE_REQUEST:
-      return {...state, globalShowDeleteModal: true};
-    case types.REGISTRY_DELETE_SUCCESS:
-      return {...state, globalShowDeleteModal: false};
-    case types.REGISTRY_WITHDRAW_SUCCESS:
-      return {...state, globalShowConsentModal: false};
-    case types.REGISTRY_WITHDRAW_REQUEST:
-      return {...state, globalShowConsentModal: true};
+export default function kropotkin(
+  kropotkin = initialState.kropotkin, action={}) {
+  switch(action.type) {
+    case types.KROPOTKIN_SINGLE_REQUEST:
+      return Object.assign({}, kropotkin, {
+        isFetchingKropotkin: true,
+        kropotkinFetchError: false
+      });
+    case types.KROPOTKIN_SINGLE_REQUEST_SUCCESS:
+      return Object.assign({}, kropotkin, {
+        isFetchingKropotkin: false,
+        kropotkinFetchError: false,
+        paragraph: action.kropotkin.paragraph
+      });
+    case types.KROPOTKIN_SINGLE_REQUEST_ERROR:
+      return Object.assign({}, kropotkin, {
+        isFetchingKropotkin: false,
+        kropotkinFetchError: true
+      });
     default:
-      return state;
+      return kropotkin;
   }
 }
