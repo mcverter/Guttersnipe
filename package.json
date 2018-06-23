@@ -4,13 +4,14 @@
   "private": true,
   "scripts": {
     "start": "node ./server/bin/www",
-    "seed": "(node ./db/seeds/02_kropotkin_seed.js) & (node ./db/seeds/01_freegan_seed.js) ",
+    "seed": "(node ./db/seeds/02_kropotkin_seed.js) & (node ./db/seeds/01_SeedFreegans.js) ",
     "test": "mocha './test/**/*.spec.js'"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
     "bookshelf": "^0.12.1",
     "bookshelf-postgis": "^0.2.2",
+    "chai": "^4.1.2",
     "cheerio": "^1.0.0-rc.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",

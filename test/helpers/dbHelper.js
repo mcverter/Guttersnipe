@@ -25,4 +25,4 @@ client.query(createStoredProceduresSQL)
 const fseeder = new FreeganSeeder();
 fseeder.seedFreegans();
 
-
+module.exports = {client};
