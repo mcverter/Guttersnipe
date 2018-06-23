@@ -5,19 +5,11 @@ const {client} = require("./helpers/dbHelper");
 let gristedesId;
 before(async function () {
   const gristedesIdQueryResult = await client.query(`
-    SELECT id FROM shareable WHERE s_name='Gristedes';
+    SELECT id FROM shareable WHERE name='Gristedes';
   `);
   gristedesId = gristedesIdQueryResult.rows[0].id;
   console.log('GRISTEDES ID', gristedesId)
 });
-
-
-function foo() {
-  const dQueryResult = client.query(`
-    SELECT id FROM shareable WHERE name='Gristedes';
-  `);
-  expect(dQueryResult.rows[0].id).to.be.defined();
-}
 
 describe('Database', function () {
   it('is populated', function (done) {
@@ -32,7 +24,7 @@ describe('Database', function () {
 
   describe('Gristedes', function () {
     it('is in DB', function () {
-      client.query("SELECT * FROM shareable WHERE name='Gristedes'")
+      client.query("SELECT * FROM shareable WHERE nawefaweawefame='Gristedes'")
         .then(results => {
           console.error("SELECT RESULTS", results);
           expect(results.rows.length).to.be.above(0);
@@ -44,14 +36,19 @@ describe('Database', function () {
         })
     });
     it('has a subcategory', function () {
-      client.query(`SELECT subcategory FROM shareable WHERE id=${gristedesId}`)
-        .then(results => {
-          console.error("SELECT RESULTS", results);
-          expect(results.rows.length).to.be.above(0);
-          done()
-        })
-        .catch(error=>{console.error("SELECT ERROR", error);})
-    });
+      try {
+        client.query(`SELECT subcategory FROM shareable WHERE id=${gristedesId}`)
+          .then(results => {
+            console.error("SELECT RESULTS", results);
+            expect(results.rows.length).to.be.above(0);
+            done()
+          })
+          .catch(error=>{console.error("SELECT ERROR", error);})
+      }
+      catch (error) {
+        console.error(console.error("SELECT ERROR", error));
+      }
+     });
     it('has a category', function () {
       client.query(`SELECT category FROM shareable WHERE id=${gristedesId}`)
         .then(results => {

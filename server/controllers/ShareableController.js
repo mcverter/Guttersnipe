@@ -2,7 +2,7 @@ const fs = require('fs');
 const {Client} = require('pg');
 const dbConfig = require('../../config/dbConfig');
 // NODE_ENV
-const client = new Client(dbConfig['dev']);
+const client = new Client(dbConfig['test']);
 
 client.connect();
 

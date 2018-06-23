@@ -41,10 +41,10 @@ CREATE TABLE shareable_comment
 (
   id           uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
   title        TEXT,
-  text TEXT,
+  "text" TEXT,
   shareable_id uuid REFERENCES shareable (id),
   user_id      uuid REFERENCES guttersnipe_user (id),
-  
+
   /* date_posted is probably redundant with created_on */
   date_posted  TIMESTAMP WITH TIME ZONE NOT NULL,
   created_on   TIMESTAMP WITH TIME ZONE NOT NULL,

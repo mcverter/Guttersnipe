@@ -1,12 +1,10 @@
-DROP FUNCTION IF EXISTS select_or_insert_comment( text, text, uuid, uuid, timestamp with time zone );
-
-
+DROP FUNCTION IF EXISTS select_or_insert_comment( TEXT, TEXT, uuid, uuid, TIMESTAMP WITH TIME ZONE );
 CREATE OR REPLACE FUNCTION SELECT_OR_INSERT_COMMENT(
-  text     TEXT,
-  title    TEXT,
-  shareable_id   uuid,
-  user_id   uuid,
-  posted TIMESTAMP WITH TIME ZONE)
+  c_text     TEXT,
+  c_title    TEXT,
+  c_shareable_id   uuid,
+  c_user_id   uuid,
+  c_posted TIMESTAMP WITH TIME ZONE)
   RETURNS uuid
 AS $$
 DECLARE
@@ -15,18 +13,16 @@ BEGIN
   SELECT id
   INTO comment_id
   FROM shareable_comment
-  WHERE shareable_comment.text = text AND
-        shareable_comment.title = title AND
-        shareable_comment.shareable_id = shareable_id AND
-        shareable_comment.date_posted = posted AND
-        shareable_comment.user_id = user_id;
+  WHERE shareable_comment."title" = c_title AND
+        shareable_comment."shareable_id" = c_shareable_id AND
+        shareable_comment."date_posted" = c_posted AND
+        shareable_comment."user_id" = c_user_id;
 
 
   if (comment_id is null)
   THEN
-    INSERT INTO shareable_comment (text, title, shareable_id, user_id, date_posted, created_on, updated_on)
-    VALUES (text,
-            title, shareable_id, user_id, posted, now(), now())
+    INSERT INTO shareable_comment ("title", "shareable_id", "user_id", date_posted, created_on, updated_on)
+    VALUES (c_title, c_shareable_id, c_user_id, c_posted, now(), now())
     returning id
       into comment_id;
   end if;
@@ -35,11 +31,12 @@ end;
 $$
 LANGUAGE plpgsql;
 
+DROP FUNCTION IF EXISTS select_or_insert_user(TEXT,TEXT,TIMESTAMP WITH TIME ZONE,TEXT);
 CREATE OR REPLACE FUNCTION SELECT_OR_INSERT_USER(
-  email      TEXT,
-  name       TEXT,
-  expiration TIMESTAMP WITH TIME ZONE,
-  role       TEXT)
+  u_email      TEXT,
+  u_name       TEXT,
+  u_expiration TIMESTAMP WITH TIME ZONE,
+  u_role       TEXT)
   RETURNS uuid
 AS $$
 DECLARE
@@ -48,15 +45,15 @@ BEGIN
   SELECT id
   INTO user_id
   FROM guttersnipe_user
-  WHERE guttersnipe_user.email = email AND
-        guttersnipe_user.name = name AND
+  WHERE guttersnipe_user."email" = u_email AND
+        guttersnipe_user."name" = u_name AND
         /* guttersnipe_user.u_expiration = expiration AND */
-        guttersnipe_user.role = role;
+        guttersnipe_user."role" = u_role;
 
   if (user_id is null)
   THEN
-    INSERT INTO guttersnipe_user (email, name, expiration, role, created_on, updated_on)
-    VALUES (email, name, expiration, role, now(), now())
+    INSERT INTO guttersnipe_user ("email", "name", "expiration", "role", "created_on", "updated_on")
+    VALUES (u_email, u_name, u_expiration, u_role, now(), now())
     returning id
       into user_id;
   end if;
@@ -65,17 +62,17 @@ end;
 $$
 LANGUAGE plpgsql;
 
-DROP FUNCTION IF EXISTS insert_shareable( text, text, text, text, double precision, double precision, text );
-DROP FUNCTION if exists insert_shareable( text, text, text, text, text, double precision, double precision );
+DROP FUNCTION IF EXISTS select_or_insert_shareable( TEXT, TEXT, TEXT, TEXT, DOUBLE PRECISION, DOUBLE PRECISION, TEXT );
+DROP FUNCTION IF EXISTS select_or_insert_shareable( TEXT, TEXT, TEXT, TEXT, TEXT, DOUBLE PRECISION, DOUBLE PRECISION );
 DROP FUNCTION IF EXISTS SELECT_OR_INSERT_SHAREABLE( TEXT, TEXT, TEXT, TEXT, TEXT, FLOAT, FLOAT );
 CREATE OR REPLACE FUNCTION SELECT_OR_INSERT_SHAREABLE(
-  shareable_time TEXT,
-  subclass       TEXT,
-  name           TEXT,
-  description    TEXT,
-  address        TEXT,
-  longitude      FLOAT,
-  latitude       FLOAT)
+  s_time TEXT,
+  s_subclass       TEXT,
+  s_name           TEXT,
+  s_description    TEXT,
+  s_address        TEXT,
+  s_longitude      FLOAT,
+  s_latitude       FLOAT)
   RETURNS uuid
 AS $$
 DECLARE
@@ -84,7 +81,7 @@ DECLARE
   geometry_string    Text;
 BEGIN
 
-  geometry_string := 'POINT(' || longitude || ' ' || latitude || ')';
+  geometry_string := 'POINT(' || s_longitude || ' ' || s_latitude || ')';
 
   SELECT ST_GeomFromText(geometry_string)
   into shareable_geometry;
@@ -92,11 +89,11 @@ BEGIN
   SELECT id
   INTO shareable_id
   FROM shareable
-  WHERE shareable.subcategory = subclass AND
-        shareable.name = name AND
-        shareable.description = description AND
-        shareable.address = address AND
-        shareable.time = shareable_time AND
+  WHERE shareable.subcategory = s_subclass AND
+        shareable.name = s_name AND
+        shareable.description = s_description AND
+        shareable.address = s_address AND
+        shareable.time = s_time AND
         shareable.geolocation = shareable_geometry;
 
   if (shareable_id is null)
@@ -105,8 +102,8 @@ BEGIN
                            description, address,
                            time, created_on, updated_on)
     VALUES (shareable_geometry,
-            subclass, name, description,
-            address, shareable_time, now(), now())
+            s_subclass, s_name, s_description,
+            s_address, s_time, now(), now())
     returning id
       into shareable_id;
   end if;
@@ -115,8 +112,9 @@ end;
 $$
 LANGUAGE plpgsql;
 
+DROP FUNCTION IF EXISTS select_or_insert_kropotkin(TEXT);
 CREATE OR REPLACE FUNCTION SELECT_OR_INSERT_KROPOTKIN(
-  paragraph TEXT)
+  k_paragraph TEXT)
   RETURNS INT
 AS $$
 DECLARE
@@ -125,12 +123,12 @@ BEGIN
   SELECT id
   INTO kropotkin_id
   FROM kropotkin
-  WHERE kropotkin.k_paragraph = paragraph;
+  WHERE kropotkin.paragraph = k_paragraph;
 
   if (kropotkin_id is null)
   THEN
-    INSERT INTO kropotkin (k_paragraph)
-    VALUES (paragraph)
+    INSERT INTO kropotkin (paragraph)
+    VALUES (k_paragraph)
     returning id
       into kropotkin_id;
   end if;
@@ -143,54 +141,65 @@ TEST BLOCK BELOW
  */
 
 
-select row_to_json(shareable)
-from shareable
-where shareable.id = (
+SELECT row_to_json(shareable)
+FROM shareable
+WHERE shareable.id = (
   SELECT id
-  from shareable
-  where shareable.name = 'Gristedes');
+  FROM shareable
+  WHERE shareable.name = 'Gristedes');
 
-select json_agg(shareable)
+SELECT json_agg(shareable)
 FROM (
        SELECT
          id,
-         name,
+         NAME,
          description,
          address,
-         time,
+         TIME,
          icalendar
        FROM shareable)
-  as shareable;
+  AS shareable;
 
-select json_agg(shareable_comment)
-from (
-       select
-         gu.id as authorId,
-         gu.name as authorName,
-         gu.role as authorRole,
+SELECT json_agg(shareable_comment)
+FROM (
+       SELECT
+         gu.id AS authorId,
+         gu.name AS authorName,
+         gu.role AS authorRole,
 
-         sc.id as commentId,
-         sc.title as commentTitle,
-         sc.text as commentText,
-         sc.date_posted as datePosted,
-         sc.shareable_id as shareableId
+         sc.id AS commentId,
+         sc.title AS commentTitle,
+         sc.text AS commentText,
+         sc.date_posted AS datePosted,
+         sc.shareable_id AS shareableId
 
-       from shareable_comment sc
-         inner join guttersnipe_user gu
-           on sc.user_id = gu.id
-       where sc.shareable_id = (
+       FROM shareable_comment sc
+         INNER JOIN guttersnipe_user gu
+           ON sc.user_id = gu.id
+       WHERE sc.shareable_id = (
          SELECT id
-         from shareable s
-         where s.name = 'Gristedes'))
-  as shareable_comment;
+         FROM shareable s
+         WHERE s.name = 'Gristedes'))
+  AS shareable_comment;
 
-SELECT SELECT_OR_INSERT_SHAREABLE(shareable_time := 'bluetzot', subclass := 'foo', name := 'moo', description := 'moo',
-                                  address := 'moo', longitude := 40.0, latitude := 40.0);
-SELECT SELECT_OR_INSERT_USER(email := 'mitchell.verter@gmail.com', name := 'mitchell', expiration := NULL,
-                             role := 'superadmin');
+
+SELECT SELECT_OR_INSERT_SHAREABLE(s_time := 'bluetzot',
+                                  s_subclass := 'foo',
+                                  s_name := 'moo',
+                                  s_description := 'moo',
+                                  s_address := 'moo',
+                                  s_longitude := 40.0,
+                                  s_latitude := 40.0);
+
+SELECT SELECT_OR_INSERT_USER(u_email := 'mitchell.verter@gmail.com',
+                             u_name := 'mitchell',
+                             u_expiration := NULL,
+                             u_role := 'superadmin');
+
 SELECT SELECT_OR_INSERT_COMMENT(
-              text := '8%3A45%20when%20all%20the%20employees%20leave%20the%20store.%20Trash%20is%20collected%20between%2010%3A30%20p%20and%2012%3A30a.%20One%20source%20says%20nothing%20is%20out%20on%20Saturdays.',
-              title := 'When%20to%20look%3A',
-              c_s_id := '091ffbea-c56d-47bc-b9fc-cf0a195f5a73',
-              c_u_id := '696ccc09-863b-408c-a1cc-4b359bbd0230',
+              c_text := 'kosher%20supermarket', 
+              c_title := 'kosher%20supermarket', 
+              c_shareable_id := '2b44d4fe-6acb-42ab-8e29-74d80857ee23', 
+              c_user_id := '82dd1198-60cf-4e05-bbcc-8bb25f42c53e', 
               c_posted := '2012-03-06 11:22:23-05:00');
+              
