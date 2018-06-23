@@ -3,7 +3,7 @@ var router = express.Router();
 var shareableDB = require(__dirname + '/../controllers/ShareableController');
 
 const shareableController = new shareableDB();
-/* GET users listing. */
+/* GET shareables listing. */
 router.get('/', function(req, res, next) {
   console.log('Hello Shareable Router')
   shareableController.selectShareablesList()
@@ -16,4 +16,16 @@ router.get('/', function(req, res, next) {
     })
 });
 
+/* GET single shareable with comments. */
+router.get('/:id', function(req, res, next) {
+  console.log('Hello Shareable Router')
+  shareableController.selectShareableWithComments(req.params.id)
+    .then(function(collection){
+      console.log('collection', collection);
+      res.json({
+        error:false,
+        data: collection
+      })
+    })
+});
 module.exports = router;

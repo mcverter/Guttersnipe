@@ -1,6 +1,6 @@
-var express = require('express');
-var router = express.Router();
-var kropotkinDB = require(__dirname + '/../controllers/KropotkinController');
+const express = require('express');
+const router = express.Router();
+const kropotkinDB = require(__dirname + '/../controllers/KropotkinController');
 
 const kropotkinController = new kropotkinDB()
 

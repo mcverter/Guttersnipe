@@ -8,27 +8,20 @@ client.connect();
 
 class ShareableController {
   async selectShareableWithComments(id) {
+    console.error("ID IS ", id)
     let commentsJSON,
       shareableJSON;
 
     const commentsQueryFromFile = fs.readFileSync(__dirname + '/../../db/sql/CommentsQuery.sql', 'utf8');
-
-    const shareableQueryFromFile = {
-      name: 'fetch-shareable-full',
-      text: fs.readFileSync(__dirname + '/../../db/sql/ShareableFullQuery.sql', 'utf8'),
-      values: [id]
-    }
-
-    client.query(shareableQueryFromFile)
-      .then(res => console.log('query result', res.rows[0]))
-      .catch(e => console.error(e.stack))
     let commentsQueryResult = await client.query(commentsQueryFromFile, [id]);
     commentsJSON = commentsQueryResult.rows[0].json_agg;
 
-    let shareableQueryResult = await client.query(shareableQueryFromFile);
+    const shareableFullQuery = fs.readFileSync(__dirname + '/../../db/sql/ShareableFullQuery.sql', 'utf8');
+    let shareableQueryResult = await client.query(shareableFullQuery, [id]);
     shareableJSON = shareableQueryResult.rows[0].json_agg;
 
     console.log('comments json', commentsJSON, 'shareable json', shareableJSON);
+    return {commentsJSON, shareableJSON};
   }
 
   async selectShareablesList() {
@@ -47,6 +40,6 @@ module.exports = ShareableController;
  * MAIN TEST FUNCTION
  */
 
-// const sc = new ShareableController();
+ const sc = new ShareableController();
 // sc.selectShareablesList();
-// sc.selectShareableWithComments('887c141e-7c72-4b73-bd8b-d068c74ca071')
+ sc.selectShareableWithComments('887c141e-7c72-4b73-bd8b-d068c74ca071')
