@@ -1,6 +1,7 @@
+/*
+
 import * as types from '../../types';
 
-/** Initial State */
 const initialState = {
   showCarousel: false,
   gdprError: false,
@@ -36,3 +37,5 @@ export function registry(state = initialState, action = defaultAction) {
       return state;
   }
 }
+
+*/

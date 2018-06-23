@@ -1,5 +1,5 @@
 import {AUTH_USER, AUTH_ERROR, UNAUTH_USER} from '../types';
-import {SERVER_URL} from '../../config';
+import {SERVER_URL} from '../../../../config/api';
 import {browserHistory} from 'react-router';
 
 export function signInUser({email, password}) {
