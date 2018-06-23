@@ -188,3 +188,9 @@ SELECT SELECT_OR_INSERT_SHAREABLE(shareable_time := 'bluetzot', subclass := 'foo
                                   address := 'moo', longitude := 40.0, latitude := 40.0);
 SELECT SELECT_OR_INSERT_USER(email := 'mitchell.verter@gmail.com', name := 'mitchell', expiration := NULL,
                              role := 'superadmin');
+SELECT SELECT_OR_INSERT_COMMENT(
+              text := '8%3A45%20when%20all%20the%20employees%20leave%20the%20store.%20Trash%20is%20collected%20between%2010%3A30%20p%20and%2012%3A30a.%20One%20source%20says%20nothing%20is%20out%20on%20Saturdays.',
+              title := 'When%20to%20look%3A',
+              c_s_id := '091ffbea-c56d-47bc-b9fc-cf0a195f5a73',
+              c_u_id := '696ccc09-863b-408c-a1cc-4b359bbd0230',
+              c_posted := '2012-03-06 11:22:23-05:00');
