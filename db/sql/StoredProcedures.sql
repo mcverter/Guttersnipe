@@ -4,9 +4,9 @@ DROP FUNCTION IF EXISTS select_or_insert_comment( text, text, uuid, uuid, timest
 CREATE OR REPLACE FUNCTION SELECT_OR_INSERT_COMMENT(
   text     TEXT,
   title    TEXT,
-  c_s_id   uuid,
-  c_u_id   uuid,
-  c_posted TIMESTAMP WITH TIME ZONE)
+  shareable_id   uuid,
+  user_id   uuid,
+  posted TIMESTAMP WITH TIME ZONE)
   RETURNS uuid
 AS $$
 DECLARE
@@ -15,18 +15,18 @@ BEGIN
   SELECT id
   INTO comment_id
   FROM shareable_comment
-  WHERE shareable_comment.c_text = text AND
-        shareable_comment.c_title = title AND
-        shareable_comment.c_shareable_id = c_s_id AND
-        shareable_comment.c_date_posted = c_posted AND
-        shareable_comment.c_user_id = c_u_id;
+  WHERE shareable_comment.text = text AND
+        shareable_comment.title = title AND
+        shareable_comment.shareable_id = shareable_id AND
+        shareable_comment.date_posted = posted AND
+        shareable_comment.user_id = user_id;
 
 
   if (comment_id is null)
   THEN
-    INSERT INTO shareable_comment (c_text, c_title, c_shareable_id, c_user_id, c_date_posted, created_on, updated_on)
+    INSERT INTO shareable_comment (text, title, shareable_id, user_id, date_posted, created_on, updated_on)
     VALUES (text,
-            title, c_s_id, c_u_id, c_posted, now(), now())
+            title, shareable_id, user_id, posted, now(), now())
     returning id
       into comment_id;
   end if;
@@ -48,14 +48,14 @@ BEGIN
   SELECT id
   INTO user_id
   FROM guttersnipe_user
-  WHERE guttersnipe_user.u_email = email AND
-        guttersnipe_user.u_name = name AND
+  WHERE guttersnipe_user.email = email AND
+        guttersnipe_user.name = name AND
         /* guttersnipe_user.u_expiration = expiration AND */
-        guttersnipe_user.u_role = role;
+        guttersnipe_user.role = role;
 
   if (user_id is null)
   THEN
-    INSERT INTO guttersnipe_user (u_email, u_name, u_expiration, u_role, created_on, updated_on)
+    INSERT INTO guttersnipe_user (email, name, expiration, role, created_on, updated_on)
     VALUES (email, name, expiration, role, now(), now())
     returning id
       into user_id;
@@ -92,18 +92,18 @@ BEGIN
   SELECT id
   INTO shareable_id
   FROM shareable
-  WHERE shareable.s_subcategory = subclass AND
-        shareable.s_name = name AND
-        shareable.s_description = description AND
-        shareable.s_address = address AND
-        shareable.s_time = shareable_time AND
-        shareable.s_geolocation = shareable_geometry;
+  WHERE shareable.subcategory = subclass AND
+        shareable.name = name AND
+        shareable.description = description AND
+        shareable.address = address AND
+        shareable.time = shareable_time AND
+        shareable.geolocation = shareable_geometry;
 
   if (shareable_id is null)
   THEN
-    INSERT INTO shareable (s_geolocation, s_subcategory, s_name,
-                           s_description, s_address,
-                           s_time, created_on, updated_on)
+    INSERT INTO shareable (geolocation, subcategory, name,
+                           description, address,
+                           time, created_on, updated_on)
     VALUES (shareable_geometry,
             subclass, name, description,
             address, shareable_time, now(), now())
@@ -148,17 +148,17 @@ from shareable
 where shareable.id = (
   SELECT id
   from shareable
-  where shareable.s_name = 'Gristedes');
+  where shareable.name = 'Gristedes');
 
 select json_agg(shareable)
 FROM (
        SELECT
          id,
-         s_name,
-         s_description,
-         s_address,
-         s_time,
-         s_ical
+         name,
+         description,
+         address,
+         time,
+         icalendar
        FROM shareable)
   as shareable;
 
@@ -166,22 +166,22 @@ select json_agg(shareable_comment)
 from (
        select
          gu.id as authorId,
-         gu.u_name as authorName,
-         gu.u_role as authorRole,
+         gu.name as authorName,
+         gu.role as authorRole,
 
          sc.id as commentId,
-         sc.c_title as commentTitle,
-         sc.c_text as commentText,
-         sc.c_date_posted as datePosted,
-         sc.c_shareable_id as shareableId
+         sc.title as commentTitle,
+         sc.text as commentText,
+         sc.date_posted as datePosted,
+         sc.shareable_id as shareableId
 
        from shareable_comment sc
          inner join guttersnipe_user gu
-           on sc.c_user_id = gu.id
-       where sc.c_shareable_id = (
+           on sc.user_id = gu.id
+       where sc.shareable_id = (
          SELECT id
          from shareable s
-         where s.s_name = 'Gristedes'))
+         where s.name = 'Gristedes'))
   as shareable_comment;
 
 SELECT SELECT_OR_INSERT_SHAREABLE(shareable_time := 'bluetzot', subclass := 'foo', name := 'moo', description := 'moo',

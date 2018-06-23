@@ -2,17 +2,17 @@ SELECT json_agg(shareable_comment)
 FROM (
        SELECT
          gu.id AS author_id,
-         gu.u_name AS author_name,
-         gu.u_role AS author_role,
+         gu.name AS author_name,
+         gu.role AS author_role,
 
          sc.id AS comment_id,
-         sc.c_title AS comment_title,
-         sc.c_text AS comment_text,
-         sc.c_date_posted AS date_posted,
-         sc.c_shareable_id AS shareable_id
+         sc.title AS comment_title,
+         sc.text AS comment_text,
+         sc.date_posted AS date_posted,
+         sc.shareable_id AS shareable_id
 
        FROM shareable_comment sc
          INNER JOIN guttersnipe_user gu
-           ON sc.c_user_id = gu.id
-       WHERE sc.c_shareable_id =  $1)
+           ON sc.user_id = gu.id
+       WHERE sc.shareable_id =  $1)
   AS shareable_comment;
