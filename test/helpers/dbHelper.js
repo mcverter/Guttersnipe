@@ -1,5 +1,6 @@
 const fs = require('fs');
 const {Client} = require('pg');
+const FreeganSeeder = require('../../db/seeds/01_SeedFreegans');
 
 const client = new Client({
   user: 'postgres',
@@ -13,12 +14,15 @@ client.connect();
 
 // create database
 
-const createDatabaseSQL = fs.readFileSync(__dirname + '/../../db/sql/ShareableListQuery.sql', 'utf8');
+const createDatabaseSQL = fs.readFileSync(__dirname + '/../../db/sql/CreateTables.sql', 'utf8');
+client.query(createDatabaseSQL)
 
 // run stored procedures
-const createStoredProceduresSQL = fs.readFileSync(__dirname + '/../../db/sql/ShareableListQuery.sql', 'utf8');
+const createStoredProceduresSQL = fs.readFileSync(__dirname + '/../../db/sql/StoredProcedures.sql', 'utf8');
+client.query(createStoredProceduresSQL)
 
 // populate database
-const populateDBScript = fs.readFileSync(__dirname + '/../../db/sql/ShareableListQuery.sql', 'utf8');
+const fseeder = new FreeganSeeder();
+fseeder.seedFreegans();
 
 

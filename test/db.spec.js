@@ -1,5 +1,9 @@
+const Helpers = require("./helpers/dbHelper");
+
 describe('Database', function () {
-  it('is populated', function(){});
+  it('is populated', function(
+
+  ){});
   describe('Gristedes', function () {
     it('is in DB', function () {});
     it('has a subcategory', function () {});
