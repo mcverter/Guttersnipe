@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import PropTypes from 'prop-types';
 
-class AboutScreen extends Component {
+class $componentName$ extends Component {
   constructor(props) {
     super(props);
   }
@@ -16,7 +16,7 @@ class AboutScreen extends Component {
   render() {
     return (
       <View>
-
+        $END$
       </View>
     );
   }
@@ -32,8 +32,8 @@ const styles = new StyleSheet({
 
 });
 
-AboutScreen.propTypes = {
-
+$componentName$.propTypes = {
+  $END$
 };
 
 const mapStateToProps = (state) => {
@@ -46,6 +46,6 @@ const mapStateToProps = (state) => {
 
 @connect(mapStateToProps, {
   /* requestRegistryData, */
-})(AboutScreen)
+})($componentName$)
 
-export default AboutScreen;
+export default $componentName$;
