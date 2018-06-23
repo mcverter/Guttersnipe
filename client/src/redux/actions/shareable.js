@@ -1,4 +1,4 @@
-import * as types from "./shareableActionTypes";
+import * as types from "../types";
 import _ from "lodash";
 import {SERVER_URL} from "../../config";
 import {browserHistory} from 'react-router';

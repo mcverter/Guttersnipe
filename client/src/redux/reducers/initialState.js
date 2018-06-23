@@ -1,5 +1,5 @@
-import commentsJSON from '../../../db/data/json/commentsOutput';
-import shareablesJSON from '../../../db/data/json/shareablesOutput';
+import commentsJSON from   '../../../../db/data/json/commentsOutput';
+import shareablesJSON from '../../../../db/data/json/shareablesOutput';
 
 const initialState = {
   shareables : {

@@ -1,4 +1,4 @@
-import {STORE_BROWSER_LOCATION} from './browserEnvActionTypes';
+import {STORE_BROWSER_LOCATION} from '../types';
 
 function getBrowserLocationAsPromise() {
   return new Promise(function (resolve, reject) {

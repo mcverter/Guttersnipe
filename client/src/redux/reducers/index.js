@@ -1,14 +1,15 @@
 import { combineReducers } from 'redux';
 import shareables from './shareable';
 import kropotkin from './kropotkin';
- import auth from './authReducer';
-// import location from './locationReducer';
+import auth from './auth';
+import location from './location';
 
 const rootReducer = combineReducers({
   auth,
   location,
   shareables,
-  kropotkin
+  kropotkin,
+  auth
 });
 
 export default rootReducer;

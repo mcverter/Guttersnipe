@@ -1,4 +1,4 @@
-import * as types from './kropotkinActionTypes';
+import * as types from '../types';
 import {SERVER_URL} from '../../config';
 
 

@@ -2,7 +2,7 @@ import {
   AUTH_USER,
   AUTH_ERROR,
   UNAUTH_USER
-} from '../actions/auth/authActionTypes';
+} from '../types';
 import initialState from './initialState';
 
 

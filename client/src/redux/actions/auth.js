@@ -1,4 +1,4 @@
-import {AUTH_USER, AUTH_ERROR, UNAUTH_USER} from './authActionTypes';
+import {AUTH_USER, AUTH_ERROR, UNAUTH_USER} from '../types';
 import {SERVER_URL} from '../../config';
 import {browserHistory} from 'react-router';
 

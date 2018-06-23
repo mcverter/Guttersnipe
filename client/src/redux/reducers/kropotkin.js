@@ -1,4 +1,4 @@
-import * as types from '../actions/kropotkins/kropotkinActionTypes.js';
+import * as types from '../types';
 import initialState from './initialState';
 
 export const KROPOTKIN_SINGLE_REQUEST = 'KROPOTKIN_SINGLE_REQUEST';
