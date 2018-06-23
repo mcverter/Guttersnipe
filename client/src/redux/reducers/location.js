@@ -1,14 +1,14 @@
 import {
   STORE_BROWSER_LOCATION
-} from '../actions/browserEnv/browserEnvActionTypes';
+} from '../actions/location/locationActionTypes';
 import initialState from './initialState';
 
-export default function browserEnv(
-  browserEnv=initialState.browserEnv, action={}) {
+export default function location(
+  location=initialState.location, action={}) {
   switch(action.type) {
     case STORE_BROWSER_LOCATION:
-      return {...browserEnv, location: action.location};
+      return {...location, location: action.location};
     default:
-      return browserEnv;
+      return location;
   }
 }

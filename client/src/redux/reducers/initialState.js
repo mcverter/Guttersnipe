@@ -34,7 +34,7 @@ const initialState = {
     error: '',
     username: ''
   },
-  browserEnv: {
+  location: {
     location: [18.135228, -97.0901879],
     latitude: 18.135228,
     longitude: -97.0901879
