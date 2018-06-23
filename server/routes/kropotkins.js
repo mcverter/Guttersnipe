@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 const kropotkinDB = require(__dirname + '/../controllers/KropotkinController');
 
-const kropotkinController = new kropotkinDB()
+const kropotkinController = new kropotkinDB();
 
 router.get('/', function(req, res, next) {
-  console.log('Hello Kropotkin Router')
+  console.log('Hello Kropotkin Router');
   kropotkinController.selectRandomKropotkin()
     .then(function(paragraph){
       console.log('paragraph', paragraph);

@@ -9,8 +9,7 @@ class KropotkinController {
   async selectRandomKropotkin() {
     const kropotkinRandomQueryFromFile = fs.readFileSync(__dirname + '/../../db/sql/KropotkinRandomQuery.sql', 'utf8');
     const kropotkinRandomQueryResult = await client.query(kropotkinRandomQueryFromFile);
-    const kropotkinParagraph = kropotkinRandomQueryResult.rows[0].paragraph;
-    return kropotkinParagraph;
+    return kropotkinRandomQueryResult.rows[0].paragraph;
   }
 }
 
