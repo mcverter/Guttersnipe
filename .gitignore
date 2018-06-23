@@ -31,3 +31,9 @@ phantomjsdriver.log
 z_slingshot_src/
 
 .DS_Store
+
+notes.txt
+yarn-error.log
+yarn.lock
+client/yarn.lock
+
