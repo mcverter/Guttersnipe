@@ -9,7 +9,6 @@ const rootReducer = combineReducers({
   location,
   shareables,
   kropotkin,
-  auth
 });
 
 export default rootReducer;

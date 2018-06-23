@@ -1,7 +1,7 @@
 import * as types from "../types";
 import _ from "lodash";
 import {SERVER_URL} from "../../config";
-import {browserHistory} from 'react-router';
+// import {browserHistory} from 'react-router';
 
 export function fetchAllShareablesIfNeeded(forceFetch=false, page_num=1) {
   return (dispatch, getState) => {
@@ -38,11 +38,8 @@ function setCurrentShareable(id) {
 
 
 function shouldFetchSingleShareable(state, id) {
-  if(!state.shareables || !state.shareables.items ||
-    _.find(state.shareables.items, {id: parseInt(id)})) {
-    return false;
-  }
-  return true;
+  return !(state.shareables || !state.shareables.items ||
+    _.find(state.shareables.items, {id: parseInt(id)}));
 }
 
 
@@ -138,7 +135,7 @@ export function searchShareablesWithParametersAndPagination(options){
       .then(response=>response.json())
       .then(json=> {
         dispatch(receiveAllShareables(json));
-        browserHistory.push('/shareables');
+   //     browserHistory.push('/shareables');
       });
   };
 }

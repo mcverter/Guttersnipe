@@ -1,6 +1,6 @@
 import {AUTH_USER, AUTH_ERROR, UNAUTH_USER} from '../types';
 import {SERVER_URL} from '../../../../config/api';
-import {browserHistory} from 'react-router';
+// import {browserHistory} from 'react-router';
 
 export function signInUser({email, password}) {
   return function(dispatch) {
@@ -20,7 +20,7 @@ export function signInUser({email, password}) {
       .then (data => {
         localStorage.setItem('token', data.access_token);
         dispatch({type: AUTH_USER, username: data.username});
-        browserHistory.push('/welcome');
+   //     browserHistory.push('/welcome');
       })
       .catch(errorMsg => {
         dispatch(authError(errorMsg));
@@ -46,7 +46,7 @@ export function signUpUser({email, password}) {
       .then (data => {
         localStorage.setItem('token', data.access_token);
         dispatch({type: AUTH_USER, username: data.username});
-        browserHistory.push('/welcome');
+       // browserHistory.push('/welcome');
       })
       .catch(errorMsg => {
         dispatch(authError(errorMsg));
