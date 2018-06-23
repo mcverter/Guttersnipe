@@ -5,13 +5,17 @@ var kropotkinDB = require(__dirname + '/../controllers/KropotkinController');
 const kropotkinController = new kropotkinDB()
 
 router.get('/', function(req, res, next) {
-  kropotkinController.selectRandomRecord()
-    .then(function(collection){
-      console.log('collection', collection);
+  console.log('Hello Kropotkin Router')
+  kropotkinController.selectRandomKropotkin()
+    .then(function(paragraph){
+      console.log('paragraph', paragraph);
       res.json({
         error:false,
-        paragraph: collection.rows[0].k_paragraph
+        paragraph
       })
+    })
+    .catch(function(error){
+      console.error('ERROR', error)
     })
 });
 

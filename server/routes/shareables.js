@@ -5,14 +5,15 @@ var shareableDB = require(__dirname + '/../controllers/ShareableController');
 const shareableController = new shareableDB();
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  shareableController.selectOneRecord(1)
+  console.log('Hello Shareable Router')
+  shareableController.selectShareablesList()
     .then(function(collection){
+      console.log('collection', collection);
       res.json({
         error:false,
         data: collection
       })
     })
-
 });
 
 module.exports = router;

@@ -1,20 +1,22 @@
-import fs from 'fs';
-import {Client} from 'pg';
-import guttersnipeSimpleConfig from '../../config/dbConfig'
+const fs = require('fs');
+const {Client} = require('pg');
+const dbConfig = require('../../config/dbConfig');
+// NEED NODE_ENV
+const client = new Client(dbConfig['dev']);
 
-const client = new Client(guttersnipeSimpleConfig);
 client.connect();
-
 class KropotkinController {
   async selectRandomKropotkin() {
     const kropotkinRandomQueryFromFile = fs.readFileSync(__dirname + '/../../db/sql/KropotkinRandomQuery.sql', 'utf8');
     const kropotkinRandomQueryResult = await client.query(kropotkinRandomQueryFromFile);
     const kropotkinParagraph = kropotkinRandomQueryResult.rows[0].paragraph;
-    console.log('k paragraph', kropotkinParagraph);
+    return kropotkinParagraph;
   }
 }
 
 module.exports = KropotkinController;
 
+/*
 const kc = new KropotkinController();
 kc.selectRandomKropotkin();
+ */

@@ -1,8 +1,9 @@
-import fs from 'fs';
-import {Client} from 'pg';
-import guttersnipeSimpleConfig from '../../config/dbConfig'
+const fs = require('fs');
+const {Client} = require('pg');
+const dbConfig = require('../../config/dbConfig');
+// NODE_ENV
+const client = new Client(dbConfig['dev']);
 
-const client = new Client(guttersnipeSimpleConfig);
 client.connect();
 
 class ShareableController {
@@ -36,6 +37,7 @@ class ShareableController {
       client.query(shareableListQueryFromFile);
     let shareableListJSON = shareableListQueryResult.rows[0].json_agg;
     console.log('shareable list json', shareableListJSON);
+    return shareableListJSON;
   }
 }
 
@@ -45,6 +47,6 @@ module.exports = ShareableController;
  * MAIN TEST FUNCTION
  */
 
-const sc = new ShareableController();
+// const sc = new ShareableController();
 // sc.selectShareablesList();
-sc.selectShareableWithComments('887c141e-7c72-4b73-bd8b-d068c74ca071')
+// sc.selectShareableWithComments('887c141e-7c72-4b73-bd8b-d068c74ca071')
