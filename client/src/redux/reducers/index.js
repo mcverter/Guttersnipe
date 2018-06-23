@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
-import shareables from './reducers/shareable';
-import kropotkin from './reducers/kropotkin';
-// import auth from './authReducer';
+import shareables from './shareable';
+import kropotkin from './kropotkin';
+ import auth from './authReducer';
 // import browserEnv from './browserEnvReducer';
 
 const rootReducer = combineReducers({
-//  auth,
-//  browserEnv,
+  auth,
+  browserEnv,
   shareables,
   kropotkin
 });
