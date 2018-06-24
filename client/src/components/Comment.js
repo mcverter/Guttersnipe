@@ -26,9 +26,9 @@ const Comment = ({author_id, author_name, author_role,
     );
 };
 const styles = StyleSheet.create({
-  author,
-  title,
-  text
+  author:{},
+  title: {},
+  text : {}
 });
 
 Comment.propTypes = {
