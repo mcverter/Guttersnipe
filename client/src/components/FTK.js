@@ -19,7 +19,7 @@ const FTK = ({}) => {
         </View>
     );
 };
-const styles = new StyleSheet({
+const styles = StyleSheet.create({
 
 });
 

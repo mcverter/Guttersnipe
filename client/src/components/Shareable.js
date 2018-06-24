@@ -16,7 +16,7 @@ const Shareable = ({id, subcategory, category, name, description,
         </View>
     );
 };
-const styles = new StyleSheet({
+const styles = StyleSheet.create({
 
 });
 

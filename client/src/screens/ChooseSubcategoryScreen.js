@@ -21,7 +21,7 @@ const ChooseSubCategoryScreen = ({categories}) => {
     </View>
   );
 };
-const styles = new StyleSheet({
+const styles = StyleSheet.create({
 
 });
 

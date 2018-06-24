@@ -6,7 +6,6 @@ import {
   Image,
   StyleSheet
 } from 'react-native';
-import PropTypes from 'prop-types';
 
 class AboutScreen extends Component {
   constructor(props) {
@@ -28,7 +27,7 @@ function mapStateToProps(state) {
   };
 }
 
-const styles = new StyleSheet({
+const styles = StyleSheet.create({
 
 });
 
@@ -44,8 +43,4 @@ const mapStateToProps = (state) => {
   return {};
 };
 
-@connect(mapStateToProps, {
-  /* requestRegistryData, */
-})(AboutScreen)
-
-export default AboutScreen;
+export default connect(mapStateToProps, { /* requestRegistryData */ })(AboutScreen)

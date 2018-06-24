@@ -28,4 +28,6 @@ const comments = [
     "comment_text": "After%209%3A30p",
     "date_posted": "2012-03-06T11:22:23-05:00",
     "shareable_id": "8ec50395-3e16-43a6-b74b-586fe6de25f1"
-  }]
+  }];
+
+export default comments;

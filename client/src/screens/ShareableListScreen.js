@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import PropTypes from 'prop-types';
 
-class $componentName$ extends Component {
+class ShareableListItem extends Component {
   constructor(props) {
     super(props);
   }
@@ -28,11 +28,11 @@ function mapStateToProps(state) {
   };
 }
 
-const styles = new StyleSheet({
+const styles = StyleSheet.create({
 
 });
 
-$componentName$.propTypes = {
+ShareableListItem.propTypes = {
   $END$
 };
 
@@ -44,8 +44,10 @@ const mapStateToProps = (state) => {
   return {};
 };
 
-@connect(mapStateToProps, {
+connect(mapStateToProps, {
   /* requestRegistryData, */
-})($componentName$)
+})(ShareableListItem)
 
-export default $componentName$;
+export default connect(mapStateToProps, {
+  /* requestRegistryData, */
+})(ShareableListItem);

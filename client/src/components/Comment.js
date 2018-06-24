@@ -25,7 +25,7 @@ const Comment = ({author_id, author_name, author_role,
         </View>
     );
 };
-const styles = new StyleSheet({
+const styles = StyleSheet.create({
   author,
   title,
   text
