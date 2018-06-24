@@ -4,15 +4,16 @@ import reduxImmutableStateInvariant from 'redux-immutable-state-invariant';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 
-//const logger = createLogger();
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 export default function configureStore(initialState) {
+  console.log('initial state', initialState);
+
   return createStore(
-    rootReducer,
-    initialState,
-    composeEnhancers( applyMiddleware(thunk, reduxImmutableStateInvariant()
-      , logger
-    ))
+rootReducer,
+    // initialState,
+    composeEnhancers(
+      applyMiddleware(thunk, reduxImmutableStateInvariant(),
+        logger))
   );
 }
