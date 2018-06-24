@@ -1,7 +1,6 @@
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
- * @flow
  */
 
 import React, { Component } from 'react';
@@ -11,23 +10,14 @@ import {
   Text,
   View
 } from 'react-native';
-
-import Router from './src/navigation/routes';
 import {Provider} from 'react-redux';
-import configureStore from './src/store/configureStore'
 
-const store = configureStore();
+import Router from './src/routes';
+import configureStore from './src/redux/store/configureStore'
+const initialState = require('./src/redux/store/initialState')
+const store = configureStore(initialState);
 
-
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component {
   render() {
     return (
       <Provider store={store}>

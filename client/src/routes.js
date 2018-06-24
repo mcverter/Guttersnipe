@@ -1,13 +1,13 @@
 import React from 'react';
 import { StackNavigator } from 'react-navigation';
-import LandingScreen from './LandingScreen';
-import KropotkinScreen from './KropotkinScreen';
-import MapScreen from './MapScreen';
-import AboutScreen from './AboutScreen';
-import ChooseCategoryScreen from './ChooseCategoryScreen';
-import ChooseSubcategoryScreen from './ChooseSubcategoryScreen';
-import ShareableDetailScreen from './ShareableDetailScreen';
-import ShareableListScreen from './ShareableListScreen';
+import LandingScreen from './screens/LandingScreen';
+import KropotkinScreen from './screens/KropotkinScreen';
+import MapScreen from './screens/MapScreen';
+import AboutScreen from './screens/AboutScreen';
+import ChooseCategoryScreen from './screens/ChooseCategoryScreen';
+import ChooseSubcategoryScreen from './screens/ChooseSubcategoryScreen';
+import ShareableDetailScreen from './screens/ShareableDetailScreen';
+import ShareableListScreen from './screens/ShareableListScreen';
 
 const RootNavigator = StackNavigator({
   initialRouteName : {

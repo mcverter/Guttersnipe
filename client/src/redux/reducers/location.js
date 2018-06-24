@@ -1,7 +1,7 @@
 import {
   STORE_BROWSER_LOCATION
 } from '../types';
-import initialState from './initialState';
+import initialState from '../store/initialState';
 
 export default function location(
   location=initialState.location, action={}) {

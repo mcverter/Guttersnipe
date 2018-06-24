@@ -1,5 +1,5 @@
 import * as types from '../types';
-import initialState from './initialState';
+import initialState from '../store/initialState';
 
 export default function shareables(
   shareables = initialState.shareables, action={}) {

@@ -1,4 +1,4 @@
-import commentsJSON from   '../../../../db/data/json/commentsOutput';
+import commentsJSON from '../../../../db/data/json/commentsOutput';
 import {allShareableListItems as shareablesJSON} from '../../../../db/data/json/shareablesOutput';
 
 const initialState = {

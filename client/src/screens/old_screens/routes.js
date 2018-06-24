@@ -30,6 +30,6 @@ const RootNavigator = StackNavigator({
     screen: SearchScreen
   }
 
-})
+});
 
 export default RootNavigator;

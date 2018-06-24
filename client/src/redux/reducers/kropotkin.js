@@ -1,5 +1,5 @@
 import * as types from '../types';
-import initialState from './initialState';
+import initialState from '../store/initialState';
 
 export const KROPOTKIN_SINGLE_REQUEST = 'KROPOTKIN_SINGLE_REQUEST';
 export const KROPOTKIN_SINGLE_REQUEST_SUCCESS = 'KROPOTKIN_SINGLE_REQUEST_SUCCESS';

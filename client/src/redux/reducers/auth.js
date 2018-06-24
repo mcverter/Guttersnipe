@@ -3,7 +3,7 @@ import {
   AUTH_ERROR,
   UNAUTH_USER
 } from '../types';
-import initialState from './initialState';
+import initialState from '../store/initialState';
 
 
 export default function auth(

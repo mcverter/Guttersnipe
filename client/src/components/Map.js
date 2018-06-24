@@ -10,7 +10,7 @@ import MapView from 'react-native-maps';
 import {connect} from 'react-redux';
 
 
-class Map extends Component {
+class Map extends React.Component {
   constructor(props) {
     super(props);
   }
