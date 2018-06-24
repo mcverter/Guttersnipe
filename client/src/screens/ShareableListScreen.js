@@ -16,7 +16,6 @@ class ShareableListItem extends Component {
   render() {
     return (
       <View>
-        $END$
       </View>
     );
   }
@@ -33,7 +32,6 @@ const styles = StyleSheet.create({
 });
 
 ShareableListItem.propTypes = {
-  $END$
 };
 
 const mapStateToProps = (state) => {
