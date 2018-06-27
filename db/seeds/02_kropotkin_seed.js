@@ -1,6 +1,6 @@
 // const knex = require('knex');
-const gsnipeJSON = require(__dirname + '/../data/json/01_guttersnipeOld.json')
-const kropotkins = gsnipeJSON.find(el=>el.name==="kropotkin").records
+const gsnipeJSON = require(__dirname + '/../data/json/older/01_guttersnipeOld.json');
+const kropotkins = gsnipeJSON.find(el=>el.name==="kropotkin").records;
 
 function seedKropotkins(knex, Promise) {
   console.log('wanna seed mr seedy')

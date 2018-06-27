@@ -1,21 +1,27 @@
 var expect = require('chai').expect; //actually call the function
 const {client} = require("./helpers/dbHelper");
 
+class UUID {
+  constructor() {
+    this._uuid = null;
+  }
+  get uuid () {
+    return this._uuid;
 
-let gristedesId;
-before(async function () {
-  const gristedesIdQueryResult = await client.query(`
-    SELECT id FROM shareable WHERE name='Gristedes';
-  `);
-  gristedesId = gristedesIdQueryResult.rows[0].id;
-  console.log('GRISTEDES ID', gristedesId)
-});
+  }
+  set uuid (val) {
+    this._uuid = val;
+  }
+}
+
+
+let gristedesId = new UUID(); //
 
 describe('Database', function () {
   it('is populated', function (done) {
     client.query("SELECT * FROM shareable")
       .then(results => {
-        console.error("SELECT RESULTS", results);
+        console.info("SELECT RESULTS", results);
         expect(results.rows.length).to.be.above(0);
         done()
       })
@@ -24,9 +30,11 @@ describe('Database', function () {
 
   describe('Gristedes', function () {
     it('is in DB', function () {
-      client.query("SELECT * FROM shareable WHERE nawefaweawefame='Gristedes'")
+      client.query("SELECT * FROM shareable WHERE name='Gristedes'")
         .then(results => {
-          console.error("SELECT RESULTS", results);
+          console.info("SELECT RESULTS", results);
+          gristedesId = results.rows[0].id;
+          console.log('Gristedes ID', gristedesId);
           expect(results.rows.length).to.be.above(0);
           done()
         })
@@ -37,9 +45,10 @@ describe('Database', function () {
     });
     it('has a subcategory', function () {
       try {
-        client.query(`SELECT subcategory FROM shareable WHERE id=${gristedesId}`)
+//        let query =
+        client.query(`SELECT subcategory FROM shareable WHERE id='${gristedesId}'`)
           .then(results => {
-            console.error("SELECT RESULTS", results);
+            console.info("SELECT RESULTS", results);
             expect(results.rows.length).to.be.above(0);
             done()
           })
@@ -50,9 +59,9 @@ describe('Database', function () {
       }
      });
     it('has a category', function () {
-      client.query(`SELECT category FROM shareable WHERE id=${gristedesId}`)
+      client.query(`SELECT category FROM shareable WHERE id='${gristedesId}'`)
         .then(results => {
-          console.error("SELECT RESULTS", results);
+          console.info("SELECT RESULTS", results);
           expect(results.rows.length).to.be.above(0);
           done()
         })
@@ -60,9 +69,9 @@ describe('Database', function () {
 
     });
     it('has a name', function () {
-      client.query(`SELECT name FROM shareable WHERE id=${gristedesId}`)
+      client.query(`SELECT name FROM shareable WHERE id='${gristedesId}'`)
         .then(results => {
-          console.error("SELECT RESULTS", results);
+          console.info("SELECT RESULTS", results);
           expect(results.rows.length).to.be.above(0);
           done()
         })
@@ -70,27 +79,27 @@ describe('Database', function () {
 
     });
     it('may have a description', function () {
-      client.query(`SELECT description FROM shareable WHERE id=${gristedesId}`)
+      client.query(`SELECT description FROM shareable WHERE id='${gristedesId}'`)
         .then(results => {
-          console.error("SELECT RESULTS", results);
+          console.info("SELECT RESULTS", results);
           // expect(results.rows.length).to.be.above(0);
           done()
         })
         .catch(error=>{console.error("SELECT ERROR", error);})
     });
     it('has an address', function () {
-      client.query(`SELECT address FROM shareable WHERE id=${gristedesId}`)
+      client.query(`SELECT address FROM shareable WHERE id='${gristedesId}'`)
         .then(results => {
-          console.error("SELECT RESULTS", results);
+          console.info("SELECT RESULTS", results);
           expect(results.rows.length).to.be.above(0);
           done()
         })
         .catch(error=>{console.error("SELECT ERROR", error);})
     });
     it('has a geolocation', function () {
-      client.query(`SELECT geolocation FROM shareable WHERE id=${gristedesId}`)
+      client.query(`SELECT geolocation FROM shareable WHERE id='${gristedesId}'`)
         .then(results => {
-          console.error("SELECT RESULTS", results);
+          console.info("SELECT RESULTS", results);
           expect(results.rows.length).to.be.above(0);
           done()
         })
@@ -98,27 +107,27 @@ describe('Database', function () {
 
     });
     it('may have a time', function () {
-      client.query(`SELECT time FROM shareable WHERE id=${gristedesId}`)
+      client.query(`SELECT time FROM shareable WHERE id='${gristedesId}'`)
         .then(results => {
-          console.error("SELECT RESULTS", results);
+          console.info("SELECT RESULTS", results);
           // expect(results.rows.length).to.be.above(0);
           done()
         })
         .catch(error=>{console.error("SELECT ERROR", error);})
     });
     it('may have an icalendar', function () {
-      client.query(`SELECT ical FROM shareable WHERE id=${gristedesId}`)
+      client.query(`SELECT ical FROM shareable WHERE id='${gristedesId}'`)
         .then(results => {
-          console.error("SELECT RESULTS", results);
+          console.info("SELECT RESULTS", results);
           // expect(results.rows.length).to.be.above(0);
           done()
         })
         .catch(error=>{console.error("SELECT ERROR", error);})
     });
     it('has three comments', function () {
-      client.query(`SELECT comments FROM shareable WHERE id=${gristedesId}`)
+      client.query(`SELECT comments FROM shareable WHERE id='${gristedesId}'`)
         .then(results => {
-          console.error("SELECT RESULTS", results);
+          console.info("SELECT RESULTS", results);
           expect(results.rows.length).to.equal(3);
           done()
         })

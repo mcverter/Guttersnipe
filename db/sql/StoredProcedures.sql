@@ -19,8 +19,12 @@ BEGIN
         shareable_comment."user_id" = c_user_id;
 
 
+  RAISE NOTICE 'comment id is %', comment_id;
+
   if (comment_id is null)
   THEN
+      RAISE NOTICE 'inserting comment with shareable id %', c_shareable_id;
+
     INSERT INTO shareable_comment ("title", "shareable_id", "user_id", date_posted, created_on, updated_on)
     VALUES (c_title, c_shareable_id, c_user_id, c_posted, now(), now())
     returning id
@@ -197,9 +201,8 @@ SELECT SELECT_OR_INSERT_USER(u_email := 'mitchell.verter@gmail.com',
                              u_role := 'superadmin');
 
 SELECT SELECT_OR_INSERT_COMMENT(
-              c_text := 'kosher%20supermarket', 
-              c_title := 'kosher%20supermarket', 
-              c_shareable_id := '2b44d4fe-6acb-42ab-8e29-74d80857ee23', 
-              c_user_id := '82dd1198-60cf-4e05-bbcc-8bb25f42c53e', 
+              c_text := 'kosher%20supermarket',
+              c_title := 'kosher%20supermarket',
+              c_shareable_id := (select id from shareable where name='moo'),
+              c_user_id := (select id from guttersnipe_user where name='mitchell'),
               c_posted := '2012-03-06 11:22:23-05:00');
-              
