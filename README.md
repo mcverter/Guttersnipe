@@ -18,30 +18,37 @@ The basic intention is to promote a society based on mutual aid and the sharing 
 This will be implemented through an app that will enable people to post and comment upon resources that are freely available.  
 
 SHAREABLES are characterized by 
-"	Name
-"	(optional) Description
-"	Category (eg:  FOOD, MEDICINE, SHELTER)
-"	Subcategory (eg: Dumpsters, Food Not Bombs, Church meals)
-"	Street Address
-"	Geolocation 
-"	(optional) Availability Time
+*	Name
+*	(optional) Description
+*	Category (eg:  FOOD, MEDICINE, SHELTER)
+*	Subcategory (eg: Dumpsters, Food Not Bombs, Church meals)
+*	Street Address
+*	Geolocation 
+*	(optional) Availability Time
 
 SEARCHABLES are viewable in
-"	Lists
-"	Maps
-"	Detail View (All info, including map and comments)
-"	Calendar Date 
+*	Lists
+*	Maps
+*	Detail View (All info, including map and comments)
+*	Calendar Date 
 
 SEARCHABLES are searchable by
-"	Category / subcategory 
-"	Geography
+*	Category / subcategory 
+*	Geography
 
 USER ACCOUNTS are not required to search or browse SHAREABLES.  They are characterized by
-"	Username
-"	Password 
-"	(optional) Email
+*	Username
+*	(optional) Password 
+*	(optional) Email
+* (suggested -- identities should be temporary) Expiration date
  
- 
+COMMENTS are characterized by
+* Shareable ID
+* User ID
+* Author name
+* Date Posted
+* Comment Title
+* Comment Text 
 
 REGISTERED USERS have the capacity to 
 "	Add comments to Shareables
