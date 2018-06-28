@@ -1,46 +1,61 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import {
-  Text,
-  View,
-  Image,
-  StyleSheet
-} from 'react-native';
+import React, {Component} from 'react';
+import {Text, View, Button, Icon} from 'react-native';
+import {connect} from 'react-redux'
+import {fetchKropotkin} from './../redux/actions/kropotkin'
 
-class KropotkinScreen extends Component {
-  constructor(props) {
-    super(props);
+console.log(fetchKropotkin);
+const foo = function(){console.log('foo')};
+class Kroptkin extends Component {
+  /*  fetchKropotkin() {
+    fetch('http://192.168.56.1:3000/kropotkins')
+      .then(response => {
+        console.log(response);
+        return response.json()
+      })
+      .then(data=>{
+        console.log(data);
+        return this.setState({paragraph: data.paragraph})
+      })
+      .catch (e=>this.setState({paragraph: 'nothing'}));
+  }
+  */
+  _onButtonPress(){
+    this.props.fetchK();
+  }
+  componentWillMount () {
+    this.props.fetchK();
   }
 
-  render() {
+  render(){
     return (
       <View>
-
+        <Text>{this.props.paragraph}</Text>
+        <Button
+          transparent
+          title="New Quote"
+          onPress={() => this._onButtonPress()}>
+        </Button>
       </View>
-    );
+    )
+
   }
 }
+
+
+function mapDispatchToProps(dispatch){
+  return {
+    fetchK: () => {
+      dispatch(fetchKropotkin());
+    }
+  };
+};
 
 function mapStateToProps(state) {
   return {
-
+    paragraph: state.kropotkin.paragraph,
   };
 }
 
-const styles = StyleSheet.create({
+export default connect(mapStateToProps, mapDispatchToProps)(Kroptkin);
 
-});
 
-KropotkinScreen.propTypes = {
-
-};
-
-const mapStateToProps = (state) => {
-  /*  const {
-      data,
-    } = state.value;
-    return {data}; */
-  return {};
-};
-
-export default connect(mapStateToProps, { /* requestRegistryData */ })(KropotkinScreen)
