@@ -16,6 +16,8 @@ import Router from './src/routes';
 import configureStore from './src/redux/store/configureStore'
 const initialState = require('./src/redux/store/initialState')
 const store = configureStore(initialState);
+// import {fetchRandomKropotkin} from './src/redux/actions/kropotkin';
+import {fetchAllShareables} from './src/redux/actions/shareable';
 
 export default class App extends Component {
   render() {
