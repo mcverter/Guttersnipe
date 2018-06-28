@@ -1,46 +1,22 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import {
-  Text,
-  View,
-  Image,
-  StyleSheet
-} from 'react-native';
+import Map from '../components/Map';
 
-class MapScreen extends Component {
-  constructor(props) {
-    super(props);
-  }
+import React, {Component} from 'react';
+import {View, Text, Button} from 'react-native';
+export default class MapScreen extends Component {
+  static navigationOptions = {
+    title: 'Map',
+  };
 
   render() {
+    const { navigate } = this.props.navigation;
     return (
       <View>
-
+        <Map/>
+        <Button
+          onPress={() => navigate('KropotkinScreen')}
+          title="Conquest of Bread"
+        />
       </View>
-    );
+    )
   }
 }
-
-function mapStateToProps(state) {
-  return {
-
-  };
-}
-
-const styles = StyleSheet.create({
-
-});
-
-MapScreen.propTypes = {
-
-};
-
-const mapStateToProps = (state) => {
-  /*  const {
-      data,
-    } = state.value;
-    return {data}; */
-  return {};
-};
-
-export default connect(mapStateToProps, { /* requestRegistryData */ })(MapScreen)
