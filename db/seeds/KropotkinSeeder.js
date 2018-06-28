@@ -35,4 +35,4 @@ class KropotkinSeeder {
     });
   }
 }
-exports.seed = KropotkinSeeder;
+module.exports = KropotkinSeeder;

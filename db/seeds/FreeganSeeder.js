@@ -117,7 +117,3 @@ class FreeganSeeder {
 }
 
 module.exports = FreeganSeeder;
-
-const fseeder = new FreeganSeeder();
-fseeder.seedFreegans();
-
