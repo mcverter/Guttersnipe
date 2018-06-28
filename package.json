@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./server/bin/www",
-    "seed": "(node ./db/seeds/02_kropotkin_seed.js) & (node ./db/seeds/01_SeedFreegans.js) ",
+    "seed": "node ./db/seeds/SeederController.js",
     "test": "mocha './test/**/*.spec.js'"
   },
   "dependencies": {
