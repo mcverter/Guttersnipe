@@ -10,13 +10,16 @@ import Button from '../components/Button';
 
 import PropTypes from 'prop-types';
 
-const ChooseSubCategoryScreen = ({categories}) => {
+const ChooseSubCategoryScreen = ({subcategories}) => {
   return (
     <View>
       <View>
         <PageTitle>Choose a Category</PageTitle>
       </View>
-      {categories.map(c=><Button>{c}</Button>)
+      {subcategories.map(s=>
+        <Button
+          onClick={()=>goToSubcategory(s)}
+        >{s}</Button>)
       }
     </View>
   );

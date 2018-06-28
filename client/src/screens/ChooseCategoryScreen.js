@@ -16,8 +16,11 @@ const ChooseCategoryScreen = ({categories}) => {
           <View>
             <PageTitle>Choose a Category</PageTitle>
           </View>
-          {categories.map(c=><Button>{c}</Button>)
-          }
+          {categories.map(c=>
+            <Button
+              onClick={()=>goToCategory(c)}
+            >{c}
+            </Button>)}
         </View>
     );
 };
