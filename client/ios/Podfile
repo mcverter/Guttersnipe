@@ -25,6 +25,8 @@ target 'client' do
 
   pod 'GoogleMaps'  # Remove this line if you don't want to support Google Maps on iOS
   pod 'react-native-google-maps', path: rn_maps_path  # Remove this line if you don't want to support Google Maps on iOS
+  pod 'react-native-video', :path => '../node_modules/react-native-video'
+
 end
 
 post_install do |installer|
