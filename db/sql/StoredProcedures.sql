@@ -140,6 +140,31 @@ BEGIN
 end;
 $$
 LANGUAGE plpgsql;
+
+DROP FUNCTION IF EXISTS select_or_insert_category_subcategory(TEXT, TEXT);
+CREATE OR REPLACE FUNCTION SELECT_OR_INSERT_category_subcategory(
+  cat TEXT,
+  subcat TEXT)
+  RETURNS void
+AS $$
+DECLARE
+  cat_id TEXT;
+BEGIN
+  SELECT category
+  INTO cat_id
+  FROM category_subcategory
+  WHERE category_subcategory.subcategory = subcat;
+
+  if (cat_id is null)
+  THEN
+    INSERT INTO category_subcategory (category, subcategory)
+    VALUES (cat, subcat);
+  end if;
+end;
+$$
+LANGUAGE plpgsql;
+
+
 /**
 TEST BLOCK BELOW
  */

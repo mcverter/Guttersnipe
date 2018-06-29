@@ -54,5 +54,5 @@ CREATE TABLE shareable_comment
 DROP TABLE IF EXISTS Category_Subcategory;
 create TABLE Category_Subcategory (
   category  TEXT,
-  subcategory TEXT
+  subcategory TEXT UNIQUE
 );
