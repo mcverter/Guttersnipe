@@ -79,7 +79,6 @@ class AboutScreen extends Component {
               style={{width: '80%', height: 50}}
               source={require('./../assets/images/roadrunnerAtWaste.png')}
             />
-
             <Text>email: roadrunner [at] waste [dot] org</Text>
           </TouchableOpacity>
         </View>
