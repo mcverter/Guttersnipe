@@ -1,6 +1,9 @@
 const fs = require('fs');
 const {Client} = require('pg');
-const FreeganSeeder = require('../../db/seeds/01_SeedFreegans');
+const FreeganSeeder = require('../../db/seeds/FreeganSeeder');
+const KropotkinSeeder = require('../../db/seeds/KropotkinSeeder');
+const CategorySeeder = require('../../db/seeds/CategorySeeder');
+
 
 const client = new Client({
   user: 'postgres',
@@ -22,7 +25,12 @@ const createStoredProceduresSQL = fs.readFileSync(__dirname + '/../../db/sql/Sto
 client.query(createStoredProceduresSQL)
 
 // populate database
-const fseeder = new FreeganSeeder();
+const fseeder = new FreeganSeeder(client);
+const kseeder = new KropotkinSeeder(client);
+const cseeder = new CategorySeeder(client);
 fseeder.seedFreegans();
+kseeder.seedKropotkins();
+cseeder.seedCategories();
+
 
 module.exports = {client};
