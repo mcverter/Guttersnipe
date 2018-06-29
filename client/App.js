@@ -9,20 +9,26 @@ import {
   Text,
   View
 } from 'react-native';
-import {Provider} from 'react-redux';
+import {Provider, connect} from 'react-redux';
 
 import Router from './src/routes';
 import configureStore from './redux/store/configureStore'
 const initialState = require('./redux/store/initialState');
 const store = configureStore(initialState);
-// import {fetchRandomKropotkin} from './src/redux/actions/kropotkin';
 import {fetchAllShareables} from './redux/actions/shareable';
+import {fetchShareableCategorizations} from './redux/actions/category';
 
-export default class App extends Component {
+class App extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  componentWillMount() {
+
+  }
   render() {
     return (
       <Provider store={store}>
-
         <Router/>
       </Provider>
     );
@@ -47,3 +53,25 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
+
+
+function mapDispatchToProps(dispatch){
+  return {
+    /*
+    fetchAllShareables: () => {
+      dispatch(fetchAllShareables());
+    },*/
+    fetchShareableCategorizations: () => {
+      dispatch(fetchShareableCategorizations());
+    }
+  };
+}
+function mapStateToProps(state) {
+  return {
+    categories: state.categories.categories,
+    shareables: state.shareables.shareables
+  };
+}
+
+export default App;
+// export default connect(mapStateToProps, mapDispatchToProps)(App);

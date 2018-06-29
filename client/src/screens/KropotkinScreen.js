@@ -31,10 +31,10 @@ class Kroptkin extends Component {
   }
 
   _onButtonPress(){
-    this.props.fetchK();
+    this.props.fetchRandomKropotkin();
   }
   componentWillMount () {
-    this.props.fetchK();
+    this.props.fetchRandomKropotkin();
   }
 
   render(){
@@ -55,7 +55,7 @@ class Kroptkin extends Component {
 
 function mapDispatchToProps(dispatch){
   return {
-    fetchK: () => {
+    fetchRandomKropotkin: () => {
       dispatch(fetchRandomKropotkin());
     }
   };
@@ -67,19 +67,3 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Kroptkin);
-
-
-
-/*  fetchRandomKropotkin() {
-  fetch('http://192.168.56.1:3000/kropotkins')
-    .then(response => {
-      console.log(response);
-      return response.json()
-    })
-    .then(data=>{
-      console.log(data);
-      return this.setState({paragraph: data.paragraph})
-    })
-    .catch (e=>this.setState({paragraph: 'nothing'}));
-}
-*/
