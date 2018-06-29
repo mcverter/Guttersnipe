@@ -220,6 +220,6 @@ const allShareableListItems = [
     "time": "",
     "geolocation": "010100000055055905A07D52C0DE3AFF76D95B4440",
     "icalendar": null
-  }]
+  }];
 
 export {full_shareable, allShareableListItems};

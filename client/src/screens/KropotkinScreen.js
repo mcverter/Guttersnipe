@@ -59,8 +59,7 @@ function mapDispatchToProps(dispatch){
       dispatch(fetchRandomKropotkin());
     }
   };
-};
-
+}
 function mapStateToProps(state) {
   return {
     paragraph: state.kropotkin.paragraph,

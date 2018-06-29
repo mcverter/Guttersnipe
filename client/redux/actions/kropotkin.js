@@ -1,7 +1,6 @@
 import * as types from '../types';
 import {SERVER_URL} from '../../config/api';
 
-
 export function fetchRandomKropotkin() {
   return dispatch => {
     dispatch( {type: types.KROPOTKIN_SINGLE_REQUEST});

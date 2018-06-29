@@ -5,7 +5,6 @@
 
 import React, { Component } from 'react';
 import {
-  Platform,
   StyleSheet,
   Text,
   View
@@ -14,7 +13,7 @@ import {Provider} from 'react-redux';
 
 import Router from './src/routes';
 import configureStore from './redux/store/configureStore'
-const initialState = require('./redux/store/initialState')
+const initialState = require('./redux/store/initialState');
 const store = configureStore(initialState);
 // import {fetchRandomKropotkin} from './src/redux/actions/kropotkin';
 import {fetchAllShareables} from './redux/actions/shareable';

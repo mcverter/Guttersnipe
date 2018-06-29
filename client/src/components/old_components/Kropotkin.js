@@ -47,8 +47,7 @@ function mapDispatchToProps(dispatch){
       dispatch(fetchKropotkin());
     }
   };
-};
-
+}
 function mapStateToProps(state) {
   return {
     paragraph: state.kropotkin.paragraph,
