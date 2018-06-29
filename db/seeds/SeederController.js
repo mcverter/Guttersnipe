@@ -11,6 +11,7 @@ const client = new Client({
   port: 5432,
 });
 
+client.connect();
 
 // populate database
 const fseeder = new FreeganSeeder(client);

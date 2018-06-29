@@ -28,9 +28,13 @@ class KropotkinSeeder {
           SELECT SELECT_OR_INSERT_KROPOTKIN(
             k_paragraph := '${kropotkin.paragraph}');
             `;
+      console.log('kropotkinInsertStatement', kropotkinInsertStatement);
       this.client.query(kropotkinInsertStatement)
         .then(shareable_response => {
           console.log('k_response', shareable_response.rows[0]['select_or_insert_kropotkin']);
+        })
+        .catch(error=>{
+          console.error('KROPOTKIN INSERT ERROR:', error)
         })
     });
   }

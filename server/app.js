@@ -15,10 +15,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use('/shareable', shareableRouter);
-app.use('/kropotkin', kropotkinRouter);
-app.use('/shareables', shareableRouter);
-app.use('/kropotkins', kropotkinRouter);
+app.use('/api/shareable', shareableRouter);
+app.use('/api/kropotkin', kropotkinRouter);
+app.use('/api/shareables', shareableRouter);
+app.use('/api/kropotkins', kropotkinRouter);
+
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler
