@@ -5,7 +5,7 @@ const List = () => (
   <View>
     <Text>Hello List</Text>
   </View>
-)
+);
 
 
 export default List;

@@ -5,7 +5,7 @@ const Details = () => (
   <View>
     <Text>Hello Details</Text>
   </View>
-)
+);
 
 
 export default Details;

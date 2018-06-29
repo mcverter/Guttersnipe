@@ -5,7 +5,7 @@ const ListItem = () => (
   <View>
     <Text>Hello ListItem</Text>
   </View>
-)
+);
 
 
 export default ListItem;
