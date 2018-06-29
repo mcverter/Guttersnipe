@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Text, View, Button, Icon} from 'react-native';
 import {connect} from 'react-redux'
-import {fetchKropotkin} from './../redux/actions/kropotkin'
+import {fetchKropotkin} from './../../redux/actions/kropotkin'
 
 console.log(fetchKropotkin);
 class Kroptkin extends Component {
@@ -35,8 +35,7 @@ class Kroptkin extends Component {
           onPress={() => this._onButtonPress()}>
         </Button>
       </View>
-    )
-
+    );
   }
 }
 

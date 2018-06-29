@@ -1,17 +1,22 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import {
   Text,
   View,
   Image,
-  StyleSheet
+  StyleSheet,
+  Button,
+  TouchableOpacity
 } from 'react-native';
 import Video from 'react-native-video';
-import strummerVid from './../../assets/video/Guttersnipe.mp4';
 import FTK from "../components/FTK";
-import strummerImage from './../../assets/images/JoeStrummerGuttersnipe.png';
-import roadrunnerImage from './../../assets/images/roadrunnerAtWaste.JPG';
+import Utils from './../utils';
 
+
+const strummerVideoPath = './../../assets/video/Guttersnipe.mp4';
+const strummerImagePath = './../../assets/images/JoeStrummerGuttersnipe.png';
+
+const videoIsVisible = false;
 
 class AboutScreen extends Component {
   constructor(props) {
@@ -23,17 +28,31 @@ class AboutScreen extends Component {
       <View style={styles.aboutScreenContainer}>
         <View style={styles.videoPanel}>
           <View style={styles.videoContainer}>
-            <Video source={{guttervid: strummerVid} }
-                   ref={(ref) => {this.player = ref}}
-                   style={styles.video} />
+            {videoIsVisible ?
+              <Video source={{uri: strummerVideoPath}} ref={(ref) => {
+                this.player = ref
+              }} style={styles.video}/> :
+              <View>
+                <Text>NO VIDEO</Text>
+                <Image
+                  style={{width: '100%', height: 200}}
+                  source={require('./../assets/images/JoeStrummerGuttersnipe.png')}
+                />
+
+              </View>
+              }
           </View>
         </View>
+
         <View style={styles.ftkPanel}>
           <FTK/>
         </View>
-        <View aboutScreenContainer>
-          <Button onClick={goToKropotkinScreen}> Read Kropotkin </Button>
+
+        <View style={styles.kropotkin}>
+          <Button title="Read Kropotkin"
+                  onPress={() => this.props.navigation.navigate('KropotkinScreen')}/>
         </View>
+
         <View style={styles.legalPanel}>
           <View style={styles.legalHeading}>
             <Text>LEGAL NOTICE</Text>
@@ -45,21 +64,24 @@ class AboutScreen extends Component {
             <Text>
               You are free to use Guttersnipe as you wish.
             </Text>
-            <Text>
-              All Wrongs Righted <br />
-              All Rites Reversed
-            </Text>
-          </View> {/* end legal body */}
-        </View> {/* end legal panel */}
+            <Text>All Wrongs Righted </Text>
+            <Text>All Rites Reversed</Text>
+          </View>
+        </View>
 
         <View style={styles.contactPanel}>
           <View>
-            Contact
+            <Text>Contact</Text>
           </View>
-          <View>
-            <Image source={roadrunnerImage} />
+          <TouchableOpacity
+            onPress={Utils.openURL("mailto:roadrunner@waste.org")}>
+            <Image
+              style={{width: '80%', height: 50}}
+              source={require('./../assets/images/roadrunnerAtWaste.png')}
+            />
+
             <Text>email: roadrunner [at] waste [dot] org</Text>
-          </View>
+          </TouchableOpacity>
         </View>
       </View>
     );
@@ -68,14 +90,13 @@ class AboutScreen extends Component {
 
 
 const styles = StyleSheet.create({
-  videoPanel : {},
+  videoPanel: {},
   videoContainer: {},
   video: {},
   aboutScreenContainer: {},
   ftkPanel: {},
   legalPanel: {},
   contactPanel: {}
-
 });
 
 AboutScreen.propTypes = {};
@@ -88,6 +109,7 @@ const mapStateToProps = (state) => {
   return {};
 };
 
-const mapDispatchToProps = () => {}
+const mapDispatchToProps = () => {
+};
 
-export default connect(mapStateToProps, { /* requestRegistryData */ })(AboutScreen)
+export default connect(mapStateToProps, {/* requestRegistryData */})(AboutScreen)

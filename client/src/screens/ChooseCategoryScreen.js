@@ -3,10 +3,10 @@ import {
   Text,
   View,
   Image,
+  Button,
   StyleSheet
 } from 'react-native';
 import PageTitle from '../components/PageTitle';
-import Button from '../components/Button';
 
 import PropTypes from 'prop-types';
 
@@ -16,7 +16,8 @@ class ChooseCategoryScreen extends Component {
   }
 
   render() {
-    const categories = this.props.categories
+    const categories = this.props.categories;
+
     return (
       <View>
         <View>

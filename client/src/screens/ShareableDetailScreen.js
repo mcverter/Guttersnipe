@@ -1,15 +1,13 @@
 import React, {Component} from 'react';
 import {
-  Text,
   View,
-  Image,
-  StyleSheet
+  StyleSheet,
+  Button
 } from 'react-native';
 import CommentList from '../components/CommentList'
 import Shareable from '../components/Shareable';
 import PageTitle from "../components/PageTitle";
 import Map from "../components/Map";
-import Button from "../components/Button";
 import PropTypes from 'prop-types';
 
 

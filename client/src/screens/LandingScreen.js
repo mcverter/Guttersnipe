@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {
   Text,
   View,
-  Image,
+  TouchableOpacity,
   StyleSheet,
   Button
 } from 'react-native';
@@ -17,26 +17,30 @@ class LandingScreen extends Component {
   }
 
   render() {
+    const {user, navigation} = this.props;
     return (
       <View>
         <View>
-          <PageTitle>Welcome to Guttersnipe</PageTitle>
+          <PageTitle>
+            <Text>Welcome to Guttersnipe</Text>
+          </PageTitle>
         </View>
         <View>
           <Button
-            onPress={() => {
-            }}
-          >Search Shareables</Button>
+            title="Search Shareables"
+            onPress={() => navigation.navigate('ChooseCategoryScreen')}/>
         </View>
         {user && (user.role === 'admin' || user.role === 'superadmin') &&
         <View>
-          <Button>CreateShareable</Button>
+          <Button title="CreateShareable"/>
         </View>
         }
-        <View>
+        <TouchableOpacity
+        onPress={() => navigation.navigate('AboutScreen')}
+        >
           <FTK
           />
-        </View>
+        </TouchableOpacity>
       </View>
     );
   }

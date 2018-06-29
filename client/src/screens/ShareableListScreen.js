@@ -18,7 +18,7 @@ class ShareableListItem extends Component {
     return (
       <View>
         {this.props.shareables.map(s=>(
-          <Shareable shareable={...s} />
+          <Shareable shareable={s} />
         ))}
       </View>
     );
@@ -48,7 +48,7 @@ const mapStateToProps = (state) => {
 
 connect(mapStateToProps, {
   /* requestRegistryData, */
-})(ShareableListItem)
+})(ShareableListItem);
 
 export default connect(mapStateToProps, {
   /* requestRegistryData, */
