@@ -13,18 +13,18 @@ import {
 import {Provider} from 'react-redux';
 
 import Router from './src/routes';
-import configureStore from './src/redux/store/configureStore'
-const initialState = require('./src/redux/store/initialState')
+import configureStore from './redux/store/configureStore'
+const initialState = require('./redux/store/initialState')
 const store = configureStore(initialState);
 // import {fetchRandomKropotkin} from './src/redux/actions/kropotkin';
-import {fetchAllShareables} from './src/redux/actions/shareable';
+import {fetchAllShareables} from './redux/actions/shareable';
 
 export default class App extends Component {
   render() {
     return (
       <Provider store={store}>
 
-      <Router/>
+        <Router/>
       </Provider>
     );
   }
