@@ -1,5 +1,5 @@
 import * as types from '../types';
-import {SERVER_URL} from '../../config';
+import {SERVER_URL} from '../../config/api';
 
 
 export function fetchRandomKropotkin() {

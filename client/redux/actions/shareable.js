@@ -1,17 +1,15 @@
 import * as types from "../types";
 import find from "lodash.find";
-import {SERVER_URL} from "../../config";
-
+import {SERVER_URL} from "../../config/api";
 
 export function fetchAllShareables(dispatch) {
   return () => {
     dispatch({type: types.SHAREABLES_ALL_REQUEST});
-    return fetch(`${SERVER_URL}/ shareables`)
+    return fetch(`${SERVER_URL}/shareables`)
       .then(response => response.json())
       .then(json => dispatch(receiveAllShareables(json)));
   };
 }
-
 
 function receiveAllShareables(json) {
   return {
