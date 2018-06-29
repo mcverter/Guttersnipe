@@ -21,5 +21,3 @@ export default createStackNavigator({
 }, {
   initialRouteName : 'LandingScreen'
 });
-
-export default RootNavigator;
