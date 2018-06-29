@@ -1,36 +1,46 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {
   Text,
   View,
   Image,
-  StyleSheet
+  StyleSheet,
+  Button
 } from 'react-native';
 import FTK from '../components/FTK';
-import Button from '../components/Button';
 import PageTitle from '../components/PageTitle';
 
 import PropTypes from 'prop-types';
 
-const LandingScreen = ({user}) => {
+class LandingScreen extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
     return (
+      <View>
         <View>
-          <View>
-            <PageTitle>Welcome to Guttersnipe</PageTitle>
-          </View>
-          <View>
-            <Button>Search Shareables</Button>
-          </View>
-          { user && (user.role === 'admin' || user.role === 'superadmin') &&
-            <View>
-              <Button>CreateShareable</Button>
-            </View>
-          }
-          <View>
-            <FTK/>
-          </View>
+          <PageTitle>Welcome to Guttersnipe</PageTitle>
         </View>
+        <View>
+          <Button
+            onPress={() => {
+            }}
+          >Search Shareables</Button>
+        </View>
+        {user && (user.role === 'admin' || user.role === 'superadmin') &&
+        <View>
+          <Button>CreateShareable</Button>
+        </View>
+        }
+        <View>
+          <FTK
+          />
+        </View>
+      </View>
     );
-};
+  }
+}
 const styles = StyleSheet.create({
 
 });

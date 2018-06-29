@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {
   Text,
   View,
@@ -10,20 +10,27 @@ import Button from '../components/Button';
 
 import PropTypes from 'prop-types';
 
-const ChooseCategoryScreen = ({categories}) => {
+class ChooseCategoryScreen extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    const categories = this.props.categories
     return (
+      <View>
         <View>
-          <View>
-            <PageTitle>Choose a Category</PageTitle>
-          </View>
-          {categories.map(c=>
-            <Button
-              onClick={()=>goToCategory(c)}
-            >{c}
-            </Button>)}
+          <PageTitle>Choose a Category</PageTitle>
         </View>
+        {categories.map(c =>
+          <Button
+            onClick={() => goToCategory(c)}
+          >{c}
+          </Button>)}
+      </View>
     );
-};
+  }
+}
 const styles = StyleSheet.create({
 
 });

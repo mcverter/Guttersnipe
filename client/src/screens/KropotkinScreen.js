@@ -4,7 +4,6 @@ import {connect} from 'react-redux'
 import {fetchKropotkin} from './../redux/actions/kropotkin'
 
 console.log(fetchKropotkin);
-const foo = function(){console.log('foo')};
 class Kroptkin extends Component {
   /*  fetchKropotkin() {
     fetch('http://192.168.56.1:3000/kropotkins')

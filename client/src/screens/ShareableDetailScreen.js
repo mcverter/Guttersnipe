@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {
   Text,
   View,
@@ -10,37 +10,43 @@ import Shareable from '../components/Shareable';
 import PageTitle from "../components/PageTitle";
 import Map from "../components/Map";
 import Button from "../components/Button";
-
 import PropTypes from 'prop-types';
 
 
-const ShareableDetailScreen = ({shareable,
-                               comments}) => {
-    return (
-        <View>
-          <View>
-            <PageTitle>{shareable.name} Detail</PageTitle>
-            <View>
+class ShareableDetailScreen extends Component {
+  constructor(props) {
+    super(props);
+  }
 
-            </View>
-          </View>
-          {/* Image ? */}
+  render() {
+    const {shareable, comments} = this.props;
+    return (
+      <View>
+        <View>
+          <PageTitle>{shareable.name} Detail</PageTitle>
           <View>
-            <Shareable {...shareable} />
-          </View>
-          <View>
-            <Map />
-          </View>
-          <View>
-            <CommentList comments={comments}/>
-          </View>
-          <View>
-            <Button>Search {shareable.category}</Button>
-            <Button>Search {shareable.subcategory}</Button>
+
           </View>
         </View>
+        {/* Image ? */}
+        <View>
+          <Shareable {...shareable} />
+        </View>
+        <View>
+          <Map/>
+        </View>
+        <View>
+          <CommentList comments={comments}/>
+        </View>
+        <View>
+          <Button>Search {shareable.category}</Button>
+          <Button>Search {shareable.subcategory}</Button>
+        </View>
+      </View>
     );
-};
+  }
+}
+
 const styles = StyleSheet.create({
 
 });
