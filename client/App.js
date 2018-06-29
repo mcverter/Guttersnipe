@@ -57,10 +57,9 @@ const styles = StyleSheet.create({
 
 function mapDispatchToProps(dispatch){
   return {
-    /*
     fetchAllShareables: () => {
       dispatch(fetchAllShareables());
-    },*/
+    },
     fetchShareableCategorizations: () => {
       dispatch(fetchShareableCategorizations());
     }
