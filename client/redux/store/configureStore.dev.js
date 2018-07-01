@@ -10,8 +10,8 @@ export default function configureStore(initialState) {
   console.log('initial state', initialState);
 
   return createStore(
-rootReducer,
-    // initialState,
+    rootReducer,
+//    initialState,
     composeEnhancers(
       applyMiddleware(thunk, reduxImmutableStateInvariant(),
         logger))

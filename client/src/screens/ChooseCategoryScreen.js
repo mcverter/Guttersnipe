@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import {
   Text,
   View,
@@ -16,16 +17,18 @@ class ChooseCategoryScreen extends Component {
   }
 
   render() {
-    const categories = this.props.categories;
+    const categorization = this.props.categorization;
 
     return (
       <View>
         <View>
           <PageTitle>Choose a Category</PageTitle>
         </View>
-        {categories.map(c =>
+        {Object.keys(categorization).map(c =>
           <Button
-            onClick={() => goToCategory(c)}
+            key={c}
+            title={c}
+            onPress={()=>{}}
           >{c}
           </Button>)}
       </View>
@@ -40,4 +43,15 @@ ChooseCategoryScreen.propTypes = {
 
 };
 
-export default ChooseCategoryScreen;
+function mapDispatchToProps(dispatch){
+  return {};
+}
+
+function mapStateToProps(state) {
+  return {
+    categorization: state.categorization.categorization,
+  };
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps) (ChooseCategoryScreen);

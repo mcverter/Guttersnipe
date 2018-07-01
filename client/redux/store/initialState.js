@@ -1,5 +1,6 @@
-import commentsJSON from './commentsOutput';
-import {allShareableListItems as shareablesJSON} from './shareablesOutput';
+import commentsJSON from './comments';
+import {allShareableListItems as shareablesJSON} from './shareables';
+import categorizationJSON from './categorizations';
 
 const initialState = {
   shareables : {
@@ -13,15 +14,10 @@ const initialState = {
     isFetchingComments: false,
     shareableCommentsError: false,
   },
-  categories : {
-    categories: undefined,
-    isFetchingCategories: false,
-    categoriesFetchError: false,
-  },
-  subcategories : {
-    subcategories: undefined,
-    isFetchingSubcategories: false,
-    subcategoriesFetchError: false,
+  categorization : {
+    categorization: categorizationJSON,
+    isFetchingCategorization: false,
+    categorizationFetchError: false,
   },
   kropotkin: {
     isFetchingKropotkin: false,
