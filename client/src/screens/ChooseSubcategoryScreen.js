@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import {
   Text,
   View,
@@ -10,13 +11,16 @@ import PageTitle from '../components/PageTitle';
 
 import PropTypes from 'prop-types';
 
-class ChooseSubCategoryScreen extends Component {
+class ChooseSubcategoryScreen extends Component {
   constructor(props) {
     super(props);
   }
 
   render() {
-    const subcategories = this.props.subcategories;
+    const categorization = this.props.categorization;
+    const { navigation } = this.props;
+    const category = navigation.getParam('category', '');
+    const subcategories = categorization[category];
 
     return (
       <View>
@@ -25,9 +29,15 @@ class ChooseSubCategoryScreen extends Component {
         </View>
         {subcategories.map(s =>
           <Button
-            onClick={() => goToSubcategory(s)}
-          >{s}</Button>)
-        }
+            key={s}
+            title={s}
+            onPress={()=>{
+              this.props.navigation.navigate('ShareableListScreen', {
+                subcategory: s
+              });
+            }}
+          >{s}
+          </Button>)}
       </View>
     );
   }
@@ -36,8 +46,19 @@ const styles = StyleSheet.create({
 
 });
 
-ChooseSubCategoryScreen.propTypes = {
+ChooseCategoryScreen.propTypes = {
 
 };
 
-export default ChooseSubCategoryScreen;
+function mapDispatchToProps(dispatch){
+  return {};
+}
+
+function mapStateToProps(state) {
+  return {
+    categorization: state.categorization.categorization,
+  };
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps) (ChooseSubcategoryScreen);

@@ -13,7 +13,7 @@ export default createStackNavigator({
   MapScreen: MapScreen,
   KropotkinScreen: KropotkinScreen,
   AboutScreen: AboutScreen,
-  ListScreen: ShareableListScreen,
+  ShareableListScreen: ShareableListScreen,
   DetailScreen: ShareableDetailScreen,
   ChooseCategoryScreen: ChooseCategoryScreen,
   ChooseSubcategoryScreen: ChooseSubcategoryScreen,

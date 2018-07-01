@@ -28,7 +28,11 @@ class ChooseCategoryScreen extends Component {
           <Button
             key={c}
             title={c}
-            onPress={()=>{}}
+            onPress={()=>{
+              this.props.navigation.navigate('ChooseSubcategoryScreen', {
+                category: c
+              });
+            }}
           >{c}
           </Button>)}
       </View>
