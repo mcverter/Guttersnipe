@@ -9,4 +9,13 @@ export default class Utils {
       console.log(error);
     }
   }
+  static superDecodeURI(string) {
+    if(!string) return string;
+    return decodeURI(string
+      .replace(/%2C/g, ",")
+      .replace(/%3A/g, ":")
+      .replace(/%3B/g, ";"));
+
+
+  }
 }
