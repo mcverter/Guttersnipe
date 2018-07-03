@@ -9,6 +9,8 @@ import {
 } from 'react-native';
 import PageTitle from '../components/PageTitle';
 
+import  categorization  from '../../redux/store/categorizations';
+
 import PropTypes from 'prop-types';
 
 class ChooseSubcategoryScreen extends Component {
@@ -17,7 +19,7 @@ class ChooseSubcategoryScreen extends Component {
   }
 
   render() {
-    const categorization = this.props.categorization;
+//    const categorization = this.props.categorization;
     const { navigation } = this.props;
     const category = navigation.getParam('category', '');
     const subcategories = categorization[category];
@@ -49,7 +51,7 @@ const styles = StyleSheet.create({
 ChooseSubcategoryScreen.propTypes = {
 
 };
-
+/*
 function mapDispatchToProps(dispatch){
   return {};
 }
@@ -60,5 +62,6 @@ function mapStateToProps(state) {
   };
 }
 
-
-export default connect(mapStateToProps, mapDispatchToProps) (ChooseSubcategoryScreen);
+*/
+export default //connect(mapStateToProps, mapDispatchToProps)
+(ChooseSubcategoryScreen);

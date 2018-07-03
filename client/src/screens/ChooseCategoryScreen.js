@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import defaultState from '../../redux/store/initialState';
 import {
-  Text,
   View,
-  Image,
   Button,
   StyleSheet
 } from 'react-native';
 import PageTitle from '../components/PageTitle';
 
-import PropTypes from 'prop-types';
+ import  categorization  from '../../redux/store/categorizations';
+
 
 class ChooseCategoryScreen extends Component {
   constructor(props) {
@@ -17,7 +17,7 @@ class ChooseCategoryScreen extends Component {
   }
 
   render() {
-    const categorization = this.props.categorization;
+//    const {categorization} = this.props;
 
     return (
       <View>
@@ -47,15 +47,19 @@ ChooseCategoryScreen.propTypes = {
 
 };
 
+/*
 function mapDispatchToProps(dispatch){
   return {};
 }
 
-function mapStateToProps(state) {
+function mapStateToProps(defaultState=defaultState) {
+  debugger;
+  console.log('in choose category map state to props');
+ //  TODO  Why does the default key word appear?
+  const state = defaultState.state;
   return {
     categorization: state.categorization.categorization,
   };
-}
+  */
 
-
-export default connect(mapStateToProps, mapDispatchToProps) (ChooseCategoryScreen);
+export default ChooseCategoryScreen;
