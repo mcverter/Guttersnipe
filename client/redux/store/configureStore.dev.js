@@ -10,9 +10,17 @@ export default function configureStore(initialState) {
   console.log('initial state', initialState);
 
   return createStore(
-    rootReducer, )
-//    initialState,)
-/*    composeEnhancers(
+    rootReducer,
+    composeEnhancers(
+      applyMiddleware(thunk))
+  )
+
+
+
+//
+/*  TODO:  InitialState must match rootReducer
+initialState,
+     composeEnhancers(
       applyMiddleware(thunk, reduxImmutableStateInvariant(),
         logger))
   );
