@@ -11,6 +11,7 @@ export default function configureStore(initialState) {
 
   return createStore(
     rootReducer,
+    initialState.default,
     composeEnhancers(
       applyMiddleware(thunk))
   )

@@ -9,11 +9,12 @@ const initialState = {
     shareables: shareablesJSON,
     selectedIndex: -1,
   },
-  comments : {
+/*  comments : {
     comments : commentsJSON,
     isFetchingComments: false,
     shareableCommentsError: false,
   },
+  */
   categorization : {
     categorization: categorizationJSON,
     isFetchingCategorization: false,
@@ -35,12 +36,13 @@ const initialState = {
     latitude: 18.135228,
     longitude: -97.0901879
   },
+  /*
   mapCenter: {
     location: [18.135228, -97.0901879],
     latitude: 18.135228,
     longitude: -97.0901879
   }
-
+*/
 };
 
 export default initialState;
