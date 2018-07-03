@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {
   View,
-  StyleSheet
+  StyleSheet,
+  FlatList,
+  Text
 } from 'react-native';
 import Shareable from '../components/Shareable';
 
@@ -16,12 +18,21 @@ class ShareableListScreen extends Component {
   render() {
 //    const {shareables} = this.props;
 //    const shareableList = shareables.allShareableListItems;
-    return (
-      <View>
-        {shareables.map(s=>(
+    /*
+            {shareables.map(s=>(
           <Shareable shareable={s} key={s.id} />
-        ))}
-      </View>
+        ))}  */
+    console.log(shareables);
+    return (
+        <FlatList
+          data={shareables}
+          renderItem={({item}) => {
+            return <Shareable shareable={item}/>}}
+          keyExtractor={(item, index) => index}
+
+
+          //          renderItem={({item})} => <Text>foo</Text>}
+        />
     );
   }
 }
