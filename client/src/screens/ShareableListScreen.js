@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {
-  Text,
   View,
-  Image,
   StyleSheet
 } from 'react-native';
-import PropTypes from 'prop-types';
 import Shareable from '../components/Shareable';
 
-class ShareableListItem extends Component {
+class ShareableListScreen extends Component {
   constructor(props) {
     super(props);
   }
@@ -18,38 +15,29 @@ class ShareableListItem extends Component {
     return (
       <View>
         {this.props.shareables.map(s=>(
-          <Shareable shareable={s} />
+          <Shareable shareable={s} key={s.id} />
         ))}
       </View>
     );
   }
 }
 
-function mapStateToProps(state) {
-  return {
-
-  };
-}
-
 const styles = StyleSheet.create({
 
 });
 
-ShareableListItem.propTypes = {
+ShareableListScreen.propTypes = {
 };
 
-const mapStateToProps = (state) => {
-  /*  const {
-      data,
-    } = state.value;
-    return {data}; */
+function mapDispatchToProps(dispatch){
   return {};
-};
+}
 
-connect(mapStateToProps, {
-  /* requestRegistryData, */
-})(ShareableListItem);
+function mapStateToProps(state) {
+  return {
+    shareables: state.shareables.shareables,
+  };
+}
 
-export default connect(mapStateToProps, {
-  /* requestRegistryData, */
-})(ShareableListItem);
+
+export default connect(mapStateToProps, mapDispatchToProps) (ShareableListScreen);
