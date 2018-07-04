@@ -3,6 +3,7 @@ import {
   Text,
   View,
   Image,
+  Button,
   StyleSheet
 } from 'react-native';
 import Utils from '../utils'
@@ -10,8 +11,9 @@ import Utils from '../utils'
 import PropTypes from 'prop-types';
 
 
-const Shareable = ({shareable})  => {
+const Shareable = ({shareable, navigation})  => {
   console.log('shareable', shareable);
+  console.log('navigation', navigation);
   const {
     id,
     subcategory,
@@ -44,7 +46,11 @@ const Shareable = ({shareable})  => {
         <Text>{Utils.superDecodeURI(time)}</Text>
       </View>}
       <View>
-        <Text>View Map</Text>
+        <Button
+          title="View Map"
+          onPress={()=>{
+            navigation.navigate('MapScreen', {})}}
+        />
       </View>
       {!!icalendar &&
       <View>

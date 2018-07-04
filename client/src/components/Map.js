@@ -6,8 +6,6 @@ import {
   Text
 } from 'react-native';
 import MapView from 'react-native-maps';
-// import {fetchSingleShareable} from './../actions/shareables/shareableActions';
-import {connect} from 'react-redux';
 
 
 class Map extends React.Component {
@@ -15,11 +13,8 @@ class Map extends React.Component {
     super(props);
   }
 
-  componentWillMount(){
-    this.props.fetchS(1)
-  }
   render() {
-    console.log(this.props);
+    console.log('Map props', this.props);
 
     return (
       <View style={styles.mapContainer}>
@@ -60,22 +55,6 @@ const styles = StyleSheet.create({
 });
 
 
-function mapStateToProps(state) {
-  return {
-    shareableItems: state.shareables.items,
-    selectedIndex: state.shareables.selectedIndex,
-    isFetchingShareables: state.shareables.isFetchingShareables
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    fetchS: (id) => {
-      dispatch(fetchSingleShareable(id))
-    }
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Map);
+export default (Map);
 
 

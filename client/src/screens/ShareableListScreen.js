@@ -27,7 +27,7 @@ class ShareableListScreen extends Component {
         <FlatList
           data={shareables}
           renderItem={({item}) => {
-            return <Shareable shareable={item}/>}}
+            return <Shareable shareable={item} navigation={this.props.navigation}/>}}
           keyExtractor={(item, index) => index}
 
 
