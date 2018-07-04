@@ -44,15 +44,13 @@ const Shareable = ({shareable})  => {
         <Text>{Utils.superDecodeURI(time)}</Text>
       </View>}
       <View>
-        <Text>{Utils.superDecodeURI(address)}</Text>
-      </View>
-      <View>
         <Text>View Map</Text>
       </View>
       {!!icalendar &&
       <View>
         <Text>View Calendar</Text>
       </View>}
+      <View><Text>View Full Detail</Text></View>
     </View>
   );
 };

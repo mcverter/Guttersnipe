@@ -14,8 +14,7 @@ export default class Utils {
     return decodeURI(string
       .replace(/%2C/g, ",")
       .replace(/%3A/g, ":")
+      .replace(/%23/g, "#")
       .replace(/%3B/g, ";"));
-
-
   }
 }
