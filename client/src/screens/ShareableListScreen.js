@@ -38,7 +38,7 @@ console.log('center lt lg', centerLatLng);
           onPress={()=>{
             navigation.navigate('MapScreen', {
               shareables: [shareables],
-              center: {longitude: centerLatLng[1], latitude: centerLatLng[0]},
+              center: {longitude: centerLatLng[0], latitude: centerLatLng[1]},
               zoom: 4
             })}}
         />
