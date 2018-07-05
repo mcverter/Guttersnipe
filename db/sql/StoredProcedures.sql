@@ -1,10 +1,10 @@
 DROP FUNCTION IF EXISTS select_or_insert_comment( TEXT, TEXT, uuid, uuid, TIMESTAMP WITH TIME ZONE );
 CREATE OR REPLACE FUNCTION SELECT_OR_INSERT_COMMENT(
-  c_text     TEXT,
-  c_title    TEXT,
-  c_shareable_id   uuid,
-  c_user_id   uuid,
-  c_posted TIMESTAMP WITH TIME ZONE)
+  c_text         TEXT,
+  c_title        TEXT,
+  c_shareable_id uuid,
+  c_user_id      uuid,
+  c_posted       TIMESTAMP WITH TIME ZONE)
   RETURNS uuid
 AS $$
 DECLARE
@@ -23,7 +23,7 @@ BEGIN
 
   if (comment_id is null)
   THEN
-      RAISE NOTICE 'inserting comment with shareable id %', c_shareable_id;
+    RAISE NOTICE 'inserting comment with shareable id %', c_shareable_id;
 
     INSERT INTO shareable_comment ("title", "shareable_id", "user_id", date_posted, created_on, updated_on)
     VALUES (c_title, c_shareable_id, c_user_id, c_posted, now(), now())
@@ -35,7 +35,7 @@ end;
 $$
 LANGUAGE plpgsql;
 
-DROP FUNCTION IF EXISTS select_or_insert_user(TEXT,TEXT,TIMESTAMP WITH TIME ZONE,TEXT);
+DROP FUNCTION IF EXISTS select_or_insert_user( TEXT, TEXT, TIMESTAMP WITH TIME ZONE, TEXT );
 CREATE OR REPLACE FUNCTION SELECT_OR_INSERT_USER(
   u_email      TEXT,
   u_name       TEXT,
@@ -70,13 +70,13 @@ DROP FUNCTION IF EXISTS select_or_insert_shareable( TEXT, TEXT, TEXT, TEXT, DOUB
 DROP FUNCTION IF EXISTS select_or_insert_shareable( TEXT, TEXT, TEXT, TEXT, TEXT, DOUBLE PRECISION, DOUBLE PRECISION );
 DROP FUNCTION IF EXISTS SELECT_OR_INSERT_SHAREABLE( TEXT, TEXT, TEXT, TEXT, TEXT, FLOAT, FLOAT );
 CREATE OR REPLACE FUNCTION SELECT_OR_INSERT_SHAREABLE(
-  s_time TEXT,
-  s_subclass       TEXT,
-  s_name           TEXT,
-  s_description    TEXT,
-  s_address        TEXT,
-  s_longitude      FLOAT,
-  s_latitude       FLOAT)
+  s_time        TEXT,
+  s_subclass    TEXT,
+  s_name        TEXT,
+  s_description TEXT,
+  s_address     TEXT,
+  s_longitude   FLOAT,
+  s_latitude    FLOAT)
   RETURNS uuid
 AS $$
 DECLARE
@@ -98,14 +98,16 @@ BEGIN
         shareable.description = s_description AND
         shareable.address = s_address AND
         shareable.time = s_time AND
-        shareable.geolocation = shareable_geometry;
+        shareable.geolocation = shareable_geometry AND
+        shareable.longitude = s_longitude AND
+        shareable.latitude = s_latitude;
 
   if (shareable_id is null)
   THEN
-    INSERT INTO shareable (geolocation, subcategory, name,
+    INSERT INTO shareable (longitude, latitude, geolocation, subcategory, name,
                            description, address,
                            time, created_on, updated_on)
-    VALUES (shareable_geometry,
+    VALUES (s_longitude, s_latitude, shareable_geometry,
             s_subclass, s_name, s_description,
             s_address, s_time, now(), now())
     returning id
@@ -116,7 +118,7 @@ end;
 $$
 LANGUAGE plpgsql;
 
-DROP FUNCTION IF EXISTS select_or_insert_kropotkin(TEXT);
+DROP FUNCTION IF EXISTS select_or_insert_kropotkin( TEXT );
 CREATE OR REPLACE FUNCTION SELECT_OR_INSERT_KROPOTKIN(
   k_paragraph TEXT)
   RETURNS INT
@@ -141,9 +143,9 @@ end;
 $$
 LANGUAGE plpgsql;
 
-DROP FUNCTION IF EXISTS select_or_insert_category_subcategory(TEXT, TEXT);
+DROP FUNCTION IF EXISTS select_or_insert_category_subcategory( TEXT, TEXT );
 CREATE OR REPLACE FUNCTION SELECT_OR_INSERT_category_subcategory(
-  cat TEXT,
+  cat    TEXT,
   subcat TEXT)
   RETURNS void
 AS $$
@@ -192,14 +194,14 @@ FROM (
 SELECT json_agg(shareable_comment)
 FROM (
        SELECT
-         gu.id AS authorId,
-         gu.name AS authorName,
-         gu.role AS authorRole,
+         gu.id           AS authorId,
+         gu.name         AS authorName,
+         gu.role         AS authorRole,
 
-         sc.id AS commentId,
-         sc.title AS commentTitle,
-         sc.text AS commentText,
-         sc.date_posted AS datePosted,
+         sc.id           AS commentId,
+         sc.title        AS commentTitle,
+         sc.text         AS commentText,
+         sc.date_posted  AS datePosted,
          sc.shareable_id AS shareableId
 
        FROM shareable_comment sc
@@ -226,8 +228,12 @@ SELECT SELECT_OR_INSERT_USER(u_email := 'mitchell.verter@gmail.com',
                              u_role := 'superadmin');
 
 SELECT SELECT_OR_INSERT_COMMENT(
-              c_text := 'kosher%20supermarket',
-              c_title := 'kosher%20supermarket',
-              c_shareable_id := (select id from shareable where name='moo'),
-              c_user_id := (select id from guttersnipe_user where name='mitchell'),
-              c_posted := '2012-03-06 11:22:23-05:00');
+    c_text := 'kosher%20supermarket',
+    c_title := 'kosher%20supermarket',
+    c_shareable_id := (select id
+                       from shareable
+                       where name = 'moo'),
+    c_user_id := (select id
+                  from guttersnipe_user
+                  where name = 'mitchell'),
+    c_posted := '2012-03-06 11:22:23-05:00');
