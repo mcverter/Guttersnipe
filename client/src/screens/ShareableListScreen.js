@@ -37,7 +37,7 @@ class ShareableListScreen extends Component {
           title="View in Map"
           onPress={()=>{
             navigation.navigate('MapScreen', {
-              shareables: [shareables],
+              shareables: shareables,
               center: {latitude: centerLatLng[0], longitude: centerLatLng[1]},
               zoom: 4
             })}}
