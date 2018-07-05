@@ -13,10 +13,12 @@ public class MainActivity extends ReactActivity {
   protected String getMainComponentName() {
     return "client";
   }
-
-  @Override protected List<ReactPackage> getPackages() {
+/*
+  @Override
+  protected List<ReactPackage> getPackages() {
     return Arrays.asList(
       new MainReactPackage(),
       new MapsPackage());
   }
+  */
 }
