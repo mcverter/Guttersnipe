@@ -12,19 +12,7 @@ const full_shareable = [{
   "longitude": -73.9926592
 }];
 
-const allShareableListItems = [{
-  "id": "e28a0ea9-e9e6-4dc5-8395-804d909165d7",
-  "subcategory": "foo",
-  "category": "food",
-  "name": "moo",
-  "description": "moo",
-  "address": "moo",
-  "time": "bluetzot",
-  "geolocation": "010100000000000000000044400000000000004440",
-  "icalendar": null,
-  "latitude": 40,
-  "longitude": 40
-},
+const allShareableListItems = [
   {
     "id": "dba092ac-124a-4d4d-8111-a5d1e227b097",
     "subcategory": "dumpster",
