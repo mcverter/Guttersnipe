@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {
   View,
+  Button,
   StyleSheet,
   FlatList,
   Text
 } from 'react-native';
 import Shareable from '../components/Shareable';
+import Utils from '../utils'
 
 import {allShareableListItems as shareables}  from '../../redux/store/shareables';
 
@@ -16,14 +18,30 @@ class ShareableListScreen extends Component {
   }
 
   render() {
-//    const {shareables} = this.props;
+    const {navigation} = this.props;
 //    const shareableList = shareables.allShareableListItems;
     /*
             {shareables.map(s=>(
           <Shareable shareable={s} key={s.id} />
         ))}  */
     console.log(shareables);
+    const centerLatLng = Utils.findCenterLatLng(shareables.map(s=> {
+      console.log('finding center', s)
+      return [s.latitude,  s.longitude];
+    }));
+console.log('center lt lg', centerLatLng);
+
     return (
+      <View>
+        <Button
+          title="View in Map"
+          onPress={()=>{
+            navigation.navigate('MapScreen', {
+              shareables: [shareables],
+              center: {longitude: centerLatLng[1], latitude: centerLatLng[0]},
+              zoom: 4
+            })}}
+        />
         <FlatList
           data={shareables}
           renderItem={({item}) => {
@@ -33,6 +51,7 @@ class ShareableListScreen extends Component {
 
           //          renderItem={({item})} => <Text>foo</Text>}
         />
+      </View>
     );
   }
 }
