@@ -14,7 +14,7 @@
     "lodash.find": "^4.6.0",
     "react": "16.0.0",
     "react-native": "0.51.0",
-    "react-native-maps": "^0.20.1",
+    "react-native-maps": "^0.21.0",
     "react-native-video": "^2.3.1",
     "react-navigation": "^2.5.5",
     "react-redux": "^5.0.7",
