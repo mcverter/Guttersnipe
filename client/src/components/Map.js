@@ -5,7 +5,7 @@ import {
   View,
   Text
 } from 'react-native';
-import MapView from 'react-native-maps';
+import MapView, {Marker} from 'react-native-maps';
 
 
 class Map extends React.Component {
@@ -26,6 +26,20 @@ class Map extends React.Component {
                    latitudeDelta: 0.0922,
                    longitudeDelta: 0.0421,
                  }}>
+          {shareables.map(s=> {
+            console.log('mapping shareable', s);
+            const coordinate={lat: s.longitude, lng: s.latitude, latitude: s.longitude, longitude: s.latitude};
+            console.log('coordinate', coordinate);
+             return (
+              <Marker
+                key={s.id}
+                coordinate={coordinate}
+                title={s.name}
+                description={s.name}
+              />
+             );
+            }
+          )}
         </MapView>
       </View>
     );
