@@ -49,7 +49,11 @@ const Shareable = ({shareable, navigation})  => {
         <Button
           title="View Map"
           onPress={()=>{
-            navigation.navigate('MapScreen', {})}}
+            navigation.navigate('MapScreen', {
+              shareables: [shareable],
+              center: {longitude: shareable.longitude, latitude: shareable.latitude},
+              zoom: 4
+            })}}
         />
       </View>
       {!!icalendar &&
