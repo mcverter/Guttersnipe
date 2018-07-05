@@ -15,13 +15,14 @@ class Map extends React.Component {
 
   render() {
     console.log('Map props', this.props);
+    const {center, zoom, shareables, navigation} = this.props;
 
     return (
       <View style={styles.mapContainer}>
         <MapView style={styles.map}
                  initialRegion={{
-                   latitude: 37.78825,
-                   longitude: -122.4324,
+                   latitude: center.longitude,
+                   longitude: center.latitude,
                    latitudeDelta: 0.0922,
                    longitudeDelta: 0.0421,
                  }}>
