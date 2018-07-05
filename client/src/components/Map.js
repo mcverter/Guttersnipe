@@ -21,14 +21,14 @@ class Map extends React.Component {
       <View style={styles.mapContainer}>
         <MapView style={styles.map}
                  initialRegion={{
-                   latitude: center.longitude,
-                   longitude: center.latitude,
+                   latitude: center.latitude,
+                   longitude: center.longitude,
                    latitudeDelta: 0.0922,
                    longitudeDelta: 0.0421,
                  }}>
           {shareables.map(s=> {
             console.log('mapping shareable', s);
-            const coordinate={lat: s.longitude, lng: s.latitude, latitude: s.longitude, longitude: s.latitude};
+            const coordinate={lat: s.latitude, lng: s.longitude, latitude: s.latitude, longitude: s.longitude};
             console.log('coordinate', coordinate);
              return (
               <Marker

@@ -33,6 +33,7 @@ export default class Utils {
     for (var i=0; i<latLngInDegr.length; i++) {
       var lat = degr2rad(latLngInDegr[i][LATIDX]);
       var lng = degr2rad(latLngInDegr[i][LNGIDX]);
+      console.log('finidng center', 'lat', lat, 'lng', lng);
       // sum of cartesian coordinates
       sumX += Math.cos(lat) * Math.cos(lng);
       sumY += Math.cos(lat) * Math.sin(lng);
@@ -48,7 +49,9 @@ export default class Utils {
     var hyp = Math.sqrt(avgX * avgX + avgY * avgY);
     var lat = Math.atan2(avgZ, hyp);
 
+    console.log('center', 'lat', rad2degr(lat), 'lng', rad2degr(lng));
     return ([rad2degr(lat), rad2degr(lng)]);
+
   }
 
 

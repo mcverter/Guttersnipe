@@ -23,8 +23,8 @@ const allShareableListItems = [
     "time": "8%3A45%20when%20all%20the%20employees%20leave%20the%20store.%20Trash%20is%20collected%20between%2010%3A30%20p%20and%2012%3A30a.%20One%20source%20says%20nothing%20is%20out%20on%20Saturdays.",
     "geolocation": "01010000007EAA0A0DC45844406C4084B8727F52C0",
     "icalendar": null,
-    "latitude": -73.991377,
-    "longitude": 40.693483
+    "latitude": 40.693483,
+    "longitude": -73.991377
   },
   {
     "id": "731033f1-d385-4a98-8f3f-f4a0933d6557",

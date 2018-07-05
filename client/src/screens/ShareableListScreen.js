@@ -29,7 +29,7 @@ class ShareableListScreen extends Component {
       console.log('finding center', s)
       return [s.latitude,  s.longitude];
     }));
-console.log('center lt lg', centerLatLng);
+    console.log('center lt lg', centerLatLng);
 
     return (
       <View>
@@ -38,7 +38,7 @@ console.log('center lt lg', centerLatLng);
           onPress={()=>{
             navigation.navigate('MapScreen', {
               shareables: [shareables],
-              center: {longitude: centerLatLng[0], latitude: centerLatLng[1]},
+              center: {latitude: centerLatLng[0], longitude: centerLatLng[1]},
               zoom: 4
             })}}
         />
