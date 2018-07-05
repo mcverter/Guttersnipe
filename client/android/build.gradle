@@ -23,4 +23,11 @@ allprojects {
         }
       google()
     }
+  project.ext {
+    compileSdkVersion = 23
+    buildToolsVersion = "23.0.1"
+
+    minSdkVersion = 16
+    targetSdkVersion = 22
+  }
 }
