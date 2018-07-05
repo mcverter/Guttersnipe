@@ -5,7 +5,7 @@ import {
   View,
   Text
 } from 'react-native';
-import MapView, {Marker} from 'react-native-maps';
+import MapView, {Marker, Callout} from 'react-native-maps';
 
 
 class Map extends React.Component {
@@ -35,8 +35,14 @@ class Map extends React.Component {
                 key={s.id}
                 coordinate={coordinate}
                 title={s.name}
-                description={s.name}
-              />
+                description={'Click for details'}>
+                <Callout
+                  onPress={()=>{
+                    navigation.navigate('ShareableDetailScreen', {
+                      id: s.id,
+                      zoom: 4
+                    })}}/>
+              </Marker>
              );
             }
           )}

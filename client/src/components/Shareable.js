@@ -60,7 +60,6 @@ const Shareable = ({shareable, navigation})  => {
       <View>
         <Text>View Calendar</Text>
       </View>}
-      <View><Text>View Full Detail</Text></View>
     </View>
   );
 };

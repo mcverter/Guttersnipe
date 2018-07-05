@@ -14,7 +14,7 @@ export default createStackNavigator({
   KropotkinScreen: KropotkinScreen,
   AboutScreen: AboutScreen,
   ShareableListScreen: ShareableListScreen,
-  DetailScreen: ShareableDetailScreen,
+  ShareableDetailScreen: ShareableDetailScreen,
   ChooseCategoryScreen: ChooseCategoryScreen,
   ChooseSubcategoryScreen: ChooseSubcategoryScreen,
   LandingScreen: LandingScreen,

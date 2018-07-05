@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {
   View,
   StyleSheet,
-  Button
+  Text
 } from 'react-native';
 import CommentList from '../components/CommentList'
 import Shareable from '../components/Shareable';
@@ -20,26 +20,7 @@ class ShareableDetailScreen extends Component {
     const {shareable, comments} = this.props;
     return (
       <View>
-        <View>
-          <PageTitle>{shareable.name} Detail</PageTitle>
-          <View>
-
-          </View>
-        </View>
-        {/* Image ? */}
-        <View>
-          <Shareable {...shareable} />
-        </View>
-        <View>
-          <Map/>
-        </View>
-        <View>
-          <CommentList comments={comments}/>
-        </View>
-        <View>
-          <Button>Search {shareable.category}</Button>
-          <Button>Search {shareable.subcategory}</Button>
-        </View>
+        <Text>Hello</Text>
       </View>
     );
   }
@@ -54,3 +35,28 @@ ShareableDetailScreen.propTypes = {
 };
 
 export default ShareableDetailScreen;
+
+
+/*
+        <View>
+          <PageTitle>{shareable.name} Detail</PageTitle>
+          <View>
+
+          </View>
+        </View>
+        { Image ? }
+<View>
+  <Shareable {...shareable} />
+</View>
+<View>
+<Map/>
+</View>
+<View>
+  <CommentList comments={comments}/>
+</View>
+<View>
+<Button>Search {shareable.category}</Button>
+<Button>Search {shareable.subcategory}</Button>
+</View>
+
+ */
