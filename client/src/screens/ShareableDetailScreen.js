@@ -9,7 +9,10 @@ import Shareable from '../components/Shareable';
 import PageTitle from "../components/PageTitle";
 import Map from "../components/Map";
 import PropTypes from 'prop-types';
-
+import comments from "../../redux/store/comments";
+import {allShareableListItems as shareables} from "../../redux/store/shareables";
+import categorization from "../../redux/store/categorizations";
+import find from 'lodash.find';
 
 class ShareableDetailScreen extends Component {
   constructor(props) {
@@ -17,10 +20,19 @@ class ShareableDetailScreen extends Component {
   }
 
   render() {
-    const {shareable, comments} = this.props;
+//    const {shareable, comments} = this.props;
+    const { navigation } = this.props;
+    const shareable_id = navigation.getParam('id', '');
+    const shareable = find(shareables, s => {
+      console.log('shareable', s);
+      return s.id === shareable_id
+    });
+
+
     return (
       <View>
-        <Text>Hello</Text>
+        <Shareable shareable={shareable} navigation={navigation}/>
+        <CommentList comments={comments} />
       </View>
     );
   }

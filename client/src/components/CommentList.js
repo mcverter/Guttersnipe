@@ -3,19 +3,26 @@ import {
   Text,
   View,
   Image,
-  StyleSheet
+  StyleSheet,
+  FlatList
 } from 'react-native';
 import Comment from './Comment'
 
 import PropTypes from 'prop-types';
+import comments from "../../redux/store/comments";
+
+console.log("static comments", comments);
 
 const CommentList = ({comments}) => {
+  console.log('prop comments', comments)
   return (
     <View>
-      {
-        comments.map(s=><Comment {...s} />)
-      }
-
+      <FlatList
+        keyExtractor={(item, index) => index}
+        data={comments}
+        renderItem={({item}) => (
+         <Comment comment={item}/>
+        )}/>
     </View>
   );
 };

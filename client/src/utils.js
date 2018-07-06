@@ -57,6 +57,7 @@ export default class Utils {
 
   static superDecodeURI(string) {
     if(!string) return string;
+    if (string==='') return '';
     return decodeURI(string
       .replace(/%2C/g, ",")
       .replace(/%3A/g, ":")

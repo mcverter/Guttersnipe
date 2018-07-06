@@ -5,30 +5,43 @@ import {
   Image,
   StyleSheet
 } from 'react-native';
+/* need new text component */
+import Utils from '../utils';
 
 import PropTypes from 'prop-types';
 
-const Comment = ({author_id, author_name, author_role,
-                   comment_id, comment_title, comment_text,
-                   date_posted, shareable_id}) => {
-    return (
-        <View>
+const Comment = ({comment}) => {
+  console.log('comment props', comment);
+  const {author_id, author_name, author_role,
+    comment_id, comment_title, comment_text,
+    date_posted, shareable_id} = comment;
+
+  return (
+        <View style={styles.commentContainer}>
             <View style={styles.title}>
-              <Text>{comment_title}</Text>
+              <Text>{Utils.superDecodeURI(comment_title)}</Text>
             </View>
           <View style={styles.text}>
-            <Text>{comment_text}</Text>
+            <Text>{Utils.superDecodeURI(comment_text)}</Text>
           </View>
           <View style={styles.author}>
-            <Text> Posted by {author_name} on {date_posted}</Text>
+            <Text> Posted by {Utils.superDecodeURI(author_name)} on {Utils.superDecodeURI(date_posted)}</Text>
           </View>
         </View>
     );
 };
+
+/*
+
+ */
 const styles = StyleSheet.create({
   author:{},
   title: {},
-  text : {}
+  text : {},
+  commentContainer: {
+    borderColor: 'red',
+    borderWidth: 2
+  }
 });
 
 Comment.propTypes = {
