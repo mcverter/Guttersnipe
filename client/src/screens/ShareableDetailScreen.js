@@ -15,31 +15,38 @@ import categorization from "../../redux/store/categorizations";
 import find from 'lodash.find';
 
 class ShareableDetailScreen extends Component {
+  static navigationOptions = {
+    title: 'Shareable Detail',
+  };
+
   constructor(props) {
     super(props);
   }
 
   render() {
-//    const {shareable, comments} = this.props;
     const { navigation } = this.props;
     const shareable_id = navigation.getParam('id', '');
     const shareable = find(shareables, s => {
-      console.log('shareable', s);
       return s.id === shareable_id
     });
 
-
     return (
-      <View>
-        <Shareable shareable={shareable} navigation={navigation}/>
-        <CommentList comments={comments} />
+      <View style={styles.shareableDetailScreenContainer}>
+        <Shareable
+          style={styles.shareableItem}
+          shareable={shareable} navigation={navigation}/>
+        <CommentList
+          style={styles.commentList}
+          comments={comments} />
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-
+  shareableDetailScreenContainer: {},
+  shareableItem: {},
+  commentList: {}
 });
 
 ShareableDetailScreen.propTypes = {
@@ -47,28 +54,3 @@ ShareableDetailScreen.propTypes = {
 };
 
 export default ShareableDetailScreen;
-
-
-/*
-        <View>
-          <PageTitle>{shareable.name} Detail</PageTitle>
-          <View>
-
-          </View>
-        </View>
-        { Image ? }
-<View>
-  <Shareable {...shareable} />
-</View>
-<View>
-<Map/>
-</View>
-<View>
-  <CommentList comments={comments}/>
-</View>
-<View>
-<Button>Search {shareable.category}</Button>
-<Button>Search {shareable.subcategory}</Button>
-</View>
-
- */

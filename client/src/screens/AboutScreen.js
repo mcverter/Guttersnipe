@@ -19,6 +19,9 @@ const strummerImagePath = './../../assets/images/JoeStrummerGuttersnipe.png';
 const videoIsVisible = false;
 
 class AboutScreen extends Component {
+  static navigationOptions = {
+    title: 'About Guttersnipe',
+  };
   constructor(props) {
     super(props);
   }
@@ -40,7 +43,7 @@ class AboutScreen extends Component {
                 />
 
               </View>
-              }
+            }
           </View>
         </View>
 
@@ -50,6 +53,7 @@ class AboutScreen extends Component {
 
         <View style={styles.kropotkin}>
           <Button title="Read Kropotkin"
+                  style={styles.readKropotkinButton}
                   onPress={() => this.props.navigation.navigate('KropotkinScreen')}/>
         </View>
 
@@ -57,15 +61,18 @@ class AboutScreen extends Component {
           <View style={styles.legalHeading}>
             <Text>LEGAL NOTICE</Text>
           </View>
-          <View style={styles.legalBODY}>
+          <View style={styles.legalBody}>
+            <View style={styles.noJeopardy}>
             <Text>Through your usage of Guttersnipe, you agree
               to not put yourself or any other person in legal jeopardy.</Text>
-            <Text>You are free to use Guttersnipe as you wish.</Text>
-            <Text>
-              You are free to use Guttersnipe as you wish.
-            </Text>
-            <Text>All Wrongs Righted </Text>
-            <Text>All Rites Reversed</Text>
+            </View>
+            <View style={styles.freeToUse}>
+              <Text>You are free to use Guttersnipe as you wish.</Text>
+            </View>
+            <View style={styles.rightsRites}>
+              <Text>All Wrongs Righted </Text>
+              <Text>All Rites Reversed</Text>
+            </View>
           </View>
         </View>
 
@@ -95,7 +102,14 @@ const styles = StyleSheet.create({
   aboutScreenContainer: {},
   ftkPanel: {},
   legalPanel: {},
-  contactPanel: {}
+  legalHeading: {},
+  noJeopardy: {},
+  freeToUse: {},
+  rightRites: {},
+  contactPanel: {},
+  readKropotkinButton: {
+    color: 'orange'
+  }
 });
 
 AboutScreen.propTypes = {};

@@ -1,24 +1,21 @@
-import Map from '../components/Map';
-
 import React, {Component} from 'react';
-import {View, Text, Button} from 'react-native';
-// import {allShareableListItems as shareables}  from '../../redux/store/shareables';
+import {View, Text, Button, StyleSheet} from 'react-native';
+
+import Map from '../components/Map';
 
 export default class MapScreen extends Component {
   static navigationOptions = {
-    title: 'Map',
+    title: 'Shareable Map',
   };
 
   render() {
-    console.log('map screen props', this.props);
     const { navigation } = this.props;
     const center = navigation.getParam('center', '');
     const shareables = navigation.getParam('shareables')
     const zoom = navigation.getParam('zoom', 4);
-    console.log('center', center)
 
     return (
-      <View>
+      <View style={styles.mapPageContainer}>
         <Map
           center={center}
           zoom={zoom}
@@ -29,3 +26,7 @@ export default class MapScreen extends Component {
     )
   }
 }
+
+const styles = StyleSheet.create({
+  mapPageContainer: {}
+});

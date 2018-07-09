@@ -47,6 +47,7 @@ const Shareable = ({shareable, navigation})  => {
       </View>}
       <View>
         <Button
+          style={styles.viewMapButton}
           title="View Map"
           onPress={()=>{
             navigation.navigate('MapScreen', {
@@ -76,7 +77,10 @@ const styles = StyleSheet.create({
   subcategory: {},
   description: {},
   address: {},
-  time: {}
+  time: {},
+  viewMapButton: {
+    color: 'purple'
+  }
 });
 
 Shareable.propTypes = {

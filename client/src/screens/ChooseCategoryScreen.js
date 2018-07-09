@@ -12,6 +12,9 @@ import PageTitle from '../components/PageTitle';
 
 
 class ChooseCategoryScreen extends Component {
+  static navigationOptions = {
+    title: 'Choose Category',
+  };
   constructor(props) {
     super(props);
   }
@@ -20,12 +23,14 @@ class ChooseCategoryScreen extends Component {
 //    const {categorization} = this.props;
 
     return (
-      <View>
+      <View style={styles.chooseCategoryScreenContainer}>
         <View>
           <PageTitle>Choose a Category</PageTitle>
         </View>
         {Object.keys(categorization).map(c =>
           <Button
+            style={styles.chooseCategoryButton}
+            color="orange"
             key={c}
             title={c}
             onPress={()=>{
@@ -40,7 +45,8 @@ class ChooseCategoryScreen extends Component {
   }
 }
 const styles = StyleSheet.create({
-
+  chooseCategoryButton : {},
+  chooseCategoryScreenContainer: {}
 });
 
 ChooseCategoryScreen.propTypes = {

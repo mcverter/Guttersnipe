@@ -14,23 +14,28 @@ import  categorization  from '../../redux/store/categorizations';
 import PropTypes from 'prop-types';
 
 class ChooseSubcategoryScreen extends Component {
+  static navigationOptions = {
+    title: 'Choose Subcategory',
+  };
+
   constructor(props) {
     super(props);
   }
 
   render() {
-//    const categorization = this.props.categorization;
     const { navigation } = this.props;
     const category = navigation.getParam('category', '');
     const subcategories = categorization[category];
 
     return (
-      <View>
+      <View style={styles.chooseSubcategoryScreenContainer}>
         <View>
           <PageTitle>Choose a Category</PageTitle>
         </View>
         {subcategories.map(s =>
           <Button
+            style={styles.chooseSubcategoryButton}
+            color="aqua"
             key={s}
             title={s}
             onPress={()=>{
@@ -45,12 +50,12 @@ class ChooseSubcategoryScreen extends Component {
   }
 }
 const styles = StyleSheet.create({
-
+  chooseSubcategoryScreenContainer: {},
+  chooseSubcategoryButton : {}
 });
 
-ChooseSubcategoryScreen.propTypes = {
+ChooseSubcategoryScreen.propTypes = {};
 
-};
 /*
 function mapDispatchToProps(dispatch){
   return {};

@@ -13,28 +13,26 @@ import Utils from '../utils'
 import {allShareableListItems as shareables}  from '../../redux/store/shareables';
 
 class ShareableListScreen extends Component {
+  static navigationOptions = {
+    title: 'Shareable List',
+  };
+
   constructor(props) {
     super(props);
   }
 
   render() {
     const {navigation} = this.props;
-//    const shareableList = shareables.allShareableListItems;
-    /*
-            {shareables.map(s=>(
-          <Shareable shareable={s} key={s.id} />
-        ))}  */
-    console.log(shareables);
     const centerLatLng = Utils.findCenterLatLng(shareables.map(s=> {
-      console.log('finding center', s)
       return [s.latitude,  s.longitude];
     }));
-    console.log('center lt lg', centerLatLng);
 
     return (
-      <View>
+      <View style={styles.shareableListContainer}>
         <Button
-          title="View in Map"
+          style={styles.viewMapButton}
+          color='purple'
+          title="View List in Map"
           onPress={()=>{
             navigation.navigate('MapScreen', {
               shareables: shareables,
@@ -43,14 +41,20 @@ class ShareableListScreen extends Component {
             })}}
         />
         <FlatList
+          style={styles.shareableList}
           data={shareables}
           renderItem={({item}) => {
             return (
-              <View>
+              <View
+                style={styles.shareableItemContainer}
+              >
                 <Shareable
+                  style={styles.shareableItem}
                   shareable={item}
                   navigation={this.props.navigation}/>
                 <Button
+                  style={styles.viewDetailButton}
+                  color="orange"
                   title="View Detail"
                   onPress={()=>{
                     navigation.navigate('ShareableDetailScreen', {
@@ -58,13 +62,9 @@ class ShareableListScreen extends Component {
                       zoom: 4
                     })}}
                 />
-
               </View>
             )}}
           keyExtractor={(item, index) => index}
-
-
-          //          renderItem={({item})} => <Text>foo</Text>}
         />
       </View>
     );
@@ -72,7 +72,12 @@ class ShareableListScreen extends Component {
 }
 
 const styles = StyleSheet.create({
-
+  viewMapButton : {},
+  viewDetailButton : {},
+  shareableListContainer: {},
+  shareableList: {},
+  shareableItemContainer: {},
+  shareableItem: {}
 });
 
 ShareableListScreen.propTypes = {

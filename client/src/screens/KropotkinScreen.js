@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Text, View, Button, Icon} from 'react-native';
+import {Text, View, Button, Icon, StyleSheet} from 'react-native';
 import {connect} from 'react-redux'
 import {fetchRandomKropotkin} from './../../redux/actions/kropotkin'
 
@@ -26,6 +26,9 @@ const defaultParagraph = `
 
 
 class Kroptkin extends Component {
+  static navigationOptions = {
+    title: 'The Conquest of Bread',
+  };
   constructor(props) {
     super(props);
   }
@@ -40,9 +43,11 @@ class Kroptkin extends Component {
   render(){
     const paragraph = this.props.paragraph || defaultParagraph;
     return (
-      <View>
-        <Text>{paragraph}</Text>
+      <View style={styles.kropotkinScreenContainer}>
+        <Text style={styles.kropotkinParagraph}>{paragraph}</Text>
         <Button
+          style={styles.kropotkinQuoteButton}
+          color="green"
           transparent
           title="New Quote"
           onPress={() => this._onButtonPress()}>
@@ -52,6 +57,11 @@ class Kroptkin extends Component {
   }
 }
 
+const styles = StyleSheet.create({
+  kropotkinQuoteButton : {},
+  kropotkinParagraph : {},
+  kropotkinScreenContainer : {}
+});
 
 function mapDispatchToProps(dispatch){
   return {

@@ -6,7 +6,6 @@ import {
   StyleSheet
 } from 'react-native';
 
-import PropTypes from 'prop-types';
 
 const PageTitle = ({title}) => {
     return (
