@@ -14,7 +14,7 @@ import comments from "../../redux/store/comments";
 console.log("static comments", comments);
 
 const CommentList = ({comments}) => {
-  console.log('prop comments', comments)
+  console.log('prop comments', comments);
   return (
     <View>
       <FlatList

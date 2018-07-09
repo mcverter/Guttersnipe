@@ -96,20 +96,26 @@ class AboutScreen extends Component {
 
 
 const styles = StyleSheet.create({
+  aboutScreenContainer: {},
+
   videoPanel: {},
   videoContainer: {},
   video: {},
-  aboutScreenContainer: {},
+
   ftkPanel: {},
+
   legalPanel: {},
   legalHeading: {},
+  legalBody: {},
   noJeopardy: {},
   freeToUse: {},
-  rightRites: {},
-  contactPanel: {},
+  rightsRites: {},
+
   readKropotkinButton: {
     color: 'orange'
-  }
+  },
+
+  contactPanel: {},
 });
 
 AboutScreen.propTypes = {};

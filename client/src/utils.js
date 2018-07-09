@@ -24,13 +24,13 @@ export default class Utils {
    *   degrees.
    */
   static findCenterLatLng(latLngInDegr) {
-    var LATIDX = 0;
-    var LNGIDX = 1;
-    var sumX = 0;
-    var sumY = 0;
-    var sumZ = 0;
+    const LATIDX = 0;
+    const LNGIDX = 1;
+    let sumX = 0;
+    let sumY = 0;
+    let sumZ = 0;
 
-    for (var i=0; i<latLngInDegr.length; i++) {
+    for (let i=0; i<latLngInDegr.length; i++) {
       var lat = degr2rad(latLngInDegr[i][LATIDX]);
       var lng = degr2rad(latLngInDegr[i][LNGIDX]);
       console.log('finidng center', 'lat', lat, 'lng', lng);
@@ -40,13 +40,13 @@ export default class Utils {
       sumZ += Math.sin(lat);
     }
 
-    var avgX = sumX / latLngInDegr.length;
-    var avgY = sumY / latLngInDegr.length;
-    var avgZ = sumZ / latLngInDegr.length;
+    const avgX = sumX / latLngInDegr.length;
+    const avgY = sumY / latLngInDegr.length;
+    const avgZ = sumZ / latLngInDegr.length;
 
     // convert average x, y, z coordinate to latitude and longtitude
     var lng = Math.atan2(avgY, avgX);
-    var hyp = Math.sqrt(avgX * avgX + avgY * avgY);
+    const hyp = Math.sqrt(avgX * avgX + avgY * avgY);
     var lat = Math.atan2(avgZ, hyp);
 
     console.log('center', 'lat', rad2degr(lat), 'lng', rad2degr(lng));

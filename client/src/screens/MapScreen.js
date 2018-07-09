@@ -11,7 +11,7 @@ export default class MapScreen extends Component {
   render() {
     const { navigation } = this.props;
     const center = navigation.getParam('center', '');
-    const shareables = navigation.getParam('shareables')
+    const shareables = navigation.getParam('shareables');
     const zoom = navigation.getParam('zoom', 4);
 
     return (
