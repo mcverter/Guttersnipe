@@ -81,7 +81,7 @@ class AboutScreen extends Component {
             <Text>Contact</Text>
           </View>
           <TouchableOpacity
-            onPress={Utils.openURL("mailto:roadrunner@waste.org")}>
+            onPress={()=>Utils.openURL("mailto:roadrunner@waste.org")}>
             <Image
               style={{width: '80%', height: 50}}
               source={require('./../assets/images/roadrunnerAtWaste.png')}
