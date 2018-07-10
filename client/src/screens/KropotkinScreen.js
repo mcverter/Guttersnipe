@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import {Text, View, Button, Icon, StyleSheet} from 'react-native';
-import {connect} from 'react-redux'
-import {fetchRandomKropotkin} from './../../redux/actions/kropotkin'
-
-console.log(fetchRandomKropotkin);
+console.log('hopt thies parses')
+import kropotkinFN from '../../redux/store/kropotkins';
+const kropotkins = kropotkinFN();
+console.log('kropotkins', kropotkins);
 
 const defaultParagraph = `
         If it be so, can we doubt that work
@@ -31,17 +31,26 @@ class Kroptkin extends Component {
   };
   constructor(props) {
     super(props);
+    this.state={
+      paragraph: defaultParagraph
+    }
+  }
+
+  fetchRandomKropotkin() {
+    this.setState({
+      paragraph: kropotkins[Math.floor(Math.random() * kropotkins.length)]
+    });
   }
 
   _onButtonPress(){
-    this.props.fetchRandomKropotkin();
+    this.fetchRandomKropotkin();
   }
   componentWillMount () {
-    this.props.fetchRandomKropotkin();
+    this.fetchRandomKropotkin();
   }
 
   render(){
-    const paragraph = this.props.paragraph || defaultParagraph;
+    const {paragraph} = this.state;
     return (
       <View style={styles.kropotkinScreenContainer}>
         <Text style={styles.kropotkinParagraph}>{paragraph}</Text>
@@ -62,7 +71,7 @@ const styles = StyleSheet.create({
   kropotkinParagraph : {},
   kropotkinScreenContainer : {}
 });
-
+/*
 function mapDispatchToProps(dispatch){
   return {
     fetchRandomKropotkin: () => {
@@ -74,6 +83,6 @@ function mapStateToProps(state) {
   return {
     paragraph: state.kropotkin.paragraph,
   };
-}
+}*/
 
-export default connect(mapStateToProps, mapDispatchToProps)(Kroptkin);
+export default /*connect(mapStateToProps, mapDispatchToProps)*/(Kroptkin);

@@ -1,4 +1,5 @@
-const kropotkins =
+
+const kropotkinDB =
   {
     "records": [
       {
@@ -3547,3 +3548,7 @@ const kropotkins =
       }
     ]
   };
+
+const kropotkins = () =>  kropotkinDB.records.map(rcd=>rcd.paragraph);
+
+export default kropotkins;
