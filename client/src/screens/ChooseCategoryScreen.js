@@ -30,7 +30,7 @@ class ChooseCategoryScreen extends Component {
         {Object.keys(categorization).map(c =>
           <Button
             style={styles.chooseCategoryButton}
-            color="orange"
+            color="#644141"
             key={c}
             title={c}
             onPress={()=>{
