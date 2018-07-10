@@ -1,12 +1,12 @@
 import React from 'react';
 import {
-  Text,
   View,
   Image,
   Button,
   StyleSheet
 } from 'react-native';
 import Utils from '../utils'
+import GsText from '../components/GsText';
 
 import PropTypes from 'prop-types';
 
@@ -28,22 +28,22 @@ const Shareable = ({shareable, navigation})  => {
   return (
     <View style={styles.shareableContainer}>
       <View>
-        <Text>{Utils.superDecodeURI(name)}</Text>
+        <GsText>{name}</GsText>
       </View>
       <View>
-        <Text style={styles.category}>{Utils.superDecodeURI(category)}</Text>
-        <Text style={styles.subcategory}>{Utils.superDecodeURI(subcategory)}</Text>
+        <GsText style={styles.category}>{category}</GsText>
+        <GsText style={styles.subcategory}>{subcategory}</GsText>
       </View>
       {!!description &&
       <View>
-        <Text>{Utils.superDecodeURI(description)}</Text>
+        <GsText>{description}</GsText>
       </View>}
       <View>
-        <Text>{Utils.superDecodeURI(address)}</Text>
+        <GsText>{address}</GsText>
       </View>
       {!!time &&
       <View>
-        <Text>{Utils.superDecodeURI(time)}</Text>
+        <GsText>{time}</GsText>
       </View>}
       <View>
         <Button
@@ -59,7 +59,7 @@ const Shareable = ({shareable, navigation})  => {
       </View>
       {!!icalendar &&
       <View>
-        <Text>View Calendar</Text>
+        <GsText>View Calendar</GsText>
       </View>}
     </View>
   );

@@ -35,7 +35,7 @@ class ChooseSubcategoryScreen extends Component {
         {subcategories.map(s =>
           <Button
             style={styles.chooseSubcategoryButton}
-            color="aqua"
+            color="#983d3d"
             key={s}
             title={s}
             onPress={()=>{

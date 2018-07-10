@@ -1,17 +1,17 @@
 import React from 'react';
 import {
-  Text,
   View,
-  Image,
   StyleSheet
 } from 'react-native';
-import Shareable from './Shareable'
+import Shareable from './Shareable';
 
 import PropTypes from 'prop-types';
 
 const ShareableList = ({shareables}) => {
     return (
-        <View>
+        <View
+          style={styles.shareableListItems}
+        >
           {
             shareables.map(s=><Shareable {...s} />)
           }
@@ -20,11 +20,11 @@ const ShareableList = ({shareables}) => {
     );
 };
 const styles = StyleSheet.create({
-
+  shareableListItems: {}
 });
 
 ShareableList.propTypes = {
-
+  shareables: PropTypes.object,
 
 };
 

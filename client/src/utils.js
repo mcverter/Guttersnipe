@@ -53,15 +53,4 @@ export default class Utils {
     return ([rad2degr(lat), rad2degr(lng)]);
 
   }
-
-
-  static superDecodeURI(string) {
-    if(!string) return string;
-    if (string==='') return '';
-    return decodeURI(string
-      .replace(/%2C/g, ",")
-      .replace(/%3A/g, ":")
-      .replace(/%23/g, "#")
-      .replace(/%3B/g, ";"));
-  }
 }

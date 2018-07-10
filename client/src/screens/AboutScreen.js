@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {
-  Text,
   View,
   Image,
   StyleSheet,
@@ -11,6 +10,7 @@ import {
 import Video from 'react-native-video';
 import FTK from "../components/FTK";
 import Utils from './../utils';
+import GsText from '../components/GsText';
 
 
 const strummerVideoPath = './../../assets/video/Guttersnipe.mp4';
@@ -36,7 +36,7 @@ class AboutScreen extends Component {
                 this.player = ref
               }} style={styles.video}/> :
               <View>
-                <Text>NO VIDEO</Text>
+                <GsText>NO VIDEO</GsText>
                 <Image
                   style={{width: '100%', height: 200}}
                   source={require('./../assets/images/JoeStrummerGuttersnipe.png')}
@@ -59,26 +59,26 @@ class AboutScreen extends Component {
 
         <View style={styles.legalPanel}>
           <View style={styles.legalHeading}>
-            <Text>LEGAL NOTICE</Text>
+            <GsText>LEGAL NOTICE</GsText>
           </View>
           <View style={styles.legalBody}>
             <View style={styles.noJeopardy}>
-            <Text>Through your usage of Guttersnipe, you agree
-              to not put yourself or any other person in legal jeopardy.</Text>
+            <GsText>Through your usage of Guttersnipe, you agree
+              to not put yourself or any other person in legal jeopardy.</GsText>
             </View>
             <View style={styles.freeToUse}>
-              <Text>You are free to use Guttersnipe as you wish.</Text>
+              <GsText>You are free to use Guttersnipe as you wish.</GsText>
             </View>
             <View style={styles.rightsRites}>
-              <Text>All Wrongs Righted </Text>
-              <Text>All Rites Reversed</Text>
+              <GsText>All Wrongs Righted </GsText>
+              <GsText>All Rites Reversed</GsText>
             </View>
           </View>
         </View>
 
         <View style={styles.contactPanel}>
           <View>
-            <Text>Contact</Text>
+            <GsText>Contact</GsText>
           </View>
           <TouchableOpacity
             onPress={()=>Utils.openURL("mailto:roadrunner@waste.org")}>
@@ -86,7 +86,7 @@ class AboutScreen extends Component {
               style={{width: '80%', height: 50}}
               source={require('./../assets/images/roadrunnerAtWaste.png')}
             />
-            <Text>email: roadrunner [at] waste [dot] org</Text>
+            <GsText>email: roadrunner [at] waste [dot] org</GsText>
           </TouchableOpacity>
         </View>
       </View>
@@ -104,12 +104,26 @@ const styles = StyleSheet.create({
 
   ftkPanel: {},
 
-  legalPanel: {},
-  legalHeading: {},
+  legalPanel: {
+    borderColor: 'black',
+    borderWidth: 1
+  },
+
+  legalHeading: {
+  },
   legalBody: {},
-  noJeopardy: {},
-  freeToUse: {},
-  rightsRites: {},
+  noJeopardy: {
+    borderColor: 'black',
+    borderWidth: 1
+  },
+  freeToUse: {
+    borderColor: 'black',
+    borderWidth: 1
+  },
+  rightsRites: {
+    borderColor: 'black',
+    borderWidth: 1
+  },
 
   readKropotkinButton: {
     color: 'orange'
@@ -119,16 +133,16 @@ const styles = StyleSheet.create({
 });
 
 AboutScreen.propTypes = {};
-
+/*
 const mapStateToProps = (state) => {
   /*  const {
       data,
     } = state.value;
-    return {data}; */
+    return {data};
   return {};
 };
 
 const mapDispatchToProps = () => {
 };
-
-export default connect(mapStateToProps, {/* requestRegistryData */})(AboutScreen)
+*/
+export default /*connect(mapStateToProps, { requestRegistryData })*/(AboutScreen)

@@ -1,12 +1,11 @@
 import React from 'react';
 import {
-  Text,
   View,
   Image,
-  StyleSheet
+  StyleSheet,
 } from 'react-native';
-/* need new text component */
-import Utils from '../utils';
+/* need new GsText component */
+import GsText from '../components/GsText';
 
 import PropTypes from 'prop-types';
 
@@ -19,13 +18,13 @@ const Comment = ({comment}) => {
   return (
         <View style={styles.commentContainer}>
             <View style={styles.title}>
-              <Text>{Utils.superDecodeURI(comment_title)}</Text>
+              <GsText>{comment_title}</GsText>
             </View>
-          <View style={styles.text}>
-            <Text>{Utils.superDecodeURI(comment_text)}</Text>
+          <View style={styles.GsText}>
+            <GsText>{comment_text}</GsText>
           </View>
           <View style={styles.author}>
-            <Text> Posted by {Utils.superDecodeURI(author_name)} on {Utils.superDecodeURI(date_posted)}</Text>
+            <GsText>{`Posted by ${author_name} on ${date_posted}`}</GsText>
           </View>
         </View>
     );
@@ -37,7 +36,7 @@ const Comment = ({comment}) => {
 const styles = StyleSheet.create({
   author:{},
   title: {},
-  text : {},
+  GsText : {},
   commentContainer: {
     borderColor: 'red',
     borderWidth: 2
