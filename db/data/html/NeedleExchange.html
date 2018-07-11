@@ -1,98 +1,111 @@
-<!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <title>Needle Exchange</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
 </head>
-<body>
+<body data-rsssl=1 lang="en">
+<div class="span-4">
 
 
-[
-{
-"headline" : "After Hours Project, Inc",
-"summary"  : "North American Syringe Exchange Network (NASEN)",
-"notes"    : "",
-"number_ratings" : 0,
-"total_ratings" : 0,
-"thing"    : {
-"description_how" : "Talk to Fernando Soto",
-"description_what" : "Needle Exchange",
-"main_type": "medical",
-"subtypes": [ "needle exchage"],
-"tags": [],
-"notes": ''
-},
-"space"    : {
-"longitude" : "-73.92688527703285",
-"latitude": "40.69218456745148",
-"canonical_address": " 1204 Broadway Brooklyn, NY 11221",
-"alternate_names": [],
-"notes": ""
-},
-"time"    : {
-"notes" : "not actual dates",
-"calendar" : {
-"events": [
-{
-"dt_start": "2017-01-01T18:00:00",
-"dt_end": "2017-01-01T22:00:00",
-"tz_id": "American/NewYork",
-"recurrence_rule" : {
-"freq": "weekly",
-"byDay": "mo",
-"interval": "1"
-}
-}
-]
-}
-}
-},
+  <h2><a href="https://freegan.info/freegan-directories/dumpster-directory/brooklyn/" rel="bookmark">Brooklyn</a></h2>
+
+  <div id="react-container"></div>
+
+  <script type="text/babel">
+    import Shareable from "../../../guttersnipe/src/components/Shareable";
+
+    const childrenComponent = (props) => (<div>{props.children}</div>)
+    const Address = childrenComponent
+    const Comment= childrenComponent
+    const Comments= childrenComponent
+    const Author = childrenComponent
+    const Shareable = childrenComponent
+    const Name = childrenComponent
+    const AuthorDate = childrenComponent
+    const AuthorName = childrenComponent
+    const CommentTitle = childrenComponent
+    const CommentText = childrenComponent
+
+    const Content = () => (
+      <div>
+        <Shareable>
+          <Name>After Hours Project, Inc</Name>
+          <Category>medical</Category>
+          <Description>North American Syringe Exchange Network (NASEN)</Description>
+          <Subcategory>needle exchange</Subcategory>
+          <Comments>
+            <Comment>
+              <CommentText>Talk to Fernando Soto</CommentText>
+            </Comment>
+            <Comment>
+              <CommentText>website  http://www.afterhoursproject.org/ phone  718-249-0755 email afterhours748@aol.com</CommentText>
+            </Comment>
+          </Comments>
+          <Address>1204 Broadway Brooklyn, NY 11221</Address>
+          <Longitude>-73.92688527703285</Longitude>
+          <Latitude>40.69218456745148</Latitude>
+        </Shareable>
+
+
+        <Shareable>
+          <Name>Washington Heights CORNER Project</Name>
+          <Category>medical</Category>
+          <Description>North American Syringe Exchange Network (NASEN)</Description>
+          <Subcategory>needle exchange</Subcategory>
+          <Comments>
+            <Comment>
+              <CommentText>Talk to Taeko Frost</CommentText>
+            </Comment>
+            <Comment>
+              <CommentText>website  http://www.cornerproject.org/ phone  (212) 923-7600 email taeko@cornerproject.org</CommentText>
+            </Comment>
+          </Comments>
+          <Address>566 W 181 St 2nd floor New York, NY 10033</Address>
+          <Longitude>-73.93302820622921</Longitude>
+          <Latitude>40.84897041320801</Latitude>
+        </Shareable>
+
+        <Shareable>
+          <Name>New York Harm Reduction Educators, Inc</Name>
+          <Category>medical</Category>
+          <Description>North American Syringe Exchange Network (NASEN)</Description>
+          <Subcategory>needle exchange</Subcategory>
+          <Comments>
+            <Comment>
+              <CommentText>Talk to Carolina Lopez</CommentText>
+            </Comment>
+            <Comment>
+              <CommentText>website  http://www.nyhre.org/ phone  (718) 842-6050 email clopez@nyhre.org</CommentText>
+            </Comment>
+          </Comments>
+          <Address>953 Southern Blvd Ste 302 Bronx, NY 10459</Address>
+          <Longitude>-73.89170944690704</Longitude>
+          <Latitude>40.82145430147648</Latitude>
+        </Shareable>
+
+
+        <Shareable>
+          <Name>St Ann's Corner of Harm Reduction</Name>
+          <Category>medical</Category>
+          <Description>North American Syringe Exchange Network (NASEN)</Description>
+          <Subcategory>needle exchange</Subcategory>
+          <Comments>
+            <Comment>
+              <CommentText>Talk to Carolina Lopez</CommentText>
+            </Comment>
+            <Comment>
+              <CommentText>http://www.sachr.org/  email info@sachr.org</CommentText>
+            </Comment>
+          </Comments>
+          <Address>310 Walton Ave #201 Bronx, NY 10451</Address>
+          <Longitude> -73.92980754375458 </Longitude>
+          <Latitude>40.8148929476738</Latitude>
+        </Shareable>
 
 
 
-{
-"headline" : "Washington Heights CORNER Project",
-"summary"  : "North American Syringe Exchange Network (NASEN)",
-"notes"    : "",
-"number_ratings" : 0,
-"total_ratings" : 0,
-"thing"    : {
-"description_how" : "Talk to Taeko Frost",
-"description_what" : "Needle Exchange",
-"main_type": "medical",
-"subtypes": [ "needle exchage"],
-"tags": [],
-"notes": ''
-},
-"space"    : {
-"longitude" : "-73.93302820622921",
-"latitude": "40.84897041320801",
-"canonical_address": " 566 W 181 St 2nd floor New York, NY 10033",
-"alternate_names": [],
-"notes": ""
-},
-"time"    : {
-"notes" : "not actual dates",
-"calendar" : {
-"events": [
-{
-"dt_start": "2017-01-01T18:00:00",
-"dt_end": "2017-01-01T22:00:00",
-"tz_id": "American/NewYork",
-"recurrence_rule" : {
-"freq": "weekly",
-"byDay": "mo",
-"interval": "1"
-}
-}
-]
-}
-}
-},
-
-
-
-{
+        {
 "headline" : "New York Harm Reduction Educators, Inc",
 "summary"  : "North American Syringe Exchange Network (NASEN)",
 "notes"    : "",
@@ -972,23 +985,7 @@
 }
 }
 ]
-Connected to pydev debugger (build 163.10154.50)
-headline  After Hours Project, Inc  website  http://www.afterhoursproject.org/ phone  718-249-0755 email afterhours748@aol.com
-summary North American Syringe Exchange Network (NASEN) what Needle Exchange how Talk to Fernando Soto
-longitude -73.92688527703285 latitude 40.69218456745148 subtypes ['needle exchange']
-types medical canonical address  1204 Broadway Brooklyn, NY 11221
-headline  Washington Heights CORNER Project  website  http://www.cornerproject.org/ phone  (212) 923-7600 email taeko@cornerproject.org
-summary North American Syringe Exchange Network (NASEN) what Needle Exchange how Talk to Taeko Frost
-longitude -73.93302820622921 latitude 40.84897041320801 subtypes ['needle exchange']
-types medical canonical address  566 W 181 St 2nd floor New York, NY 10033
-headline  New York Harm Reduction Educators, Inc  website  http://www.nyhre.org/ phone  (718) 842-6050 email clopez@nyhre.org
-summary North American Syringe Exchange Network (NASEN) what Needle Exchange how Talk to Carolina Lopez
-longitude -73.89170944690704 latitude 40.82145430147648 subtypes ['needle exchange']
-types medical canonical address  953 Southern Blvd Ste 302 Bronx, NY 10459
-headline  St Ann's Corner of Harm Reduction  website  http://www.sachr.org/ phone  email info@sachr.org
-summary North American Syringe Exchange Network (NASEN) what Needle Exchange how Talk to Sandra Turner
-longitude -73.92980754375458 latitude 40.8148929476738 subtypes ['needle exchange']
-types medical canonical address  310 Walton Ave #201 Bronx, NY 10451
+
 headline  ACQC - Far Rockaway  website  http://www.acqc.org/ phone  (718) 896-2500 email evasquez@acqc.org
 summary North American Syringe Exchange Network (NASEN) what Needle Exchange how Talk to Erika Vasquez
 longitude -73.753844 latitude 40.603406 subtypes ['needle exchange']
@@ -1065,6 +1062,8 @@ headline  FROST'D  website  http://www.frostd.org/ phone  (212) 924-3733 email r
 summary North American Syringe Exchange Network (NASEN) what Needle Exchange how Talk to Becky Smith
 longitude -73.945297 latitude 40.807373 subtypes ['needle exchange']
 types medical canonical address  290 Lenox Ave Lower Level New York, NY 10027
-
+    )
+  </script>
+</div>
 </body>
 </html>
