@@ -12,7 +12,6 @@ CREATE TABLE shareable
   address     TEXT,
   longitude   FLOAT,
   latitude    FLOAT,
-  geolocation geometry,
   time        TEXT,
   icalendar   TEXT, /* https://tools.ietf.org/html/rfc5545 */
   created_on  TIMESTAMP WITH TIME ZONE NOT NULL,
@@ -42,13 +41,10 @@ DROP TABLE IF EXISTS shareable_comment CASCADE;
 CREATE TABLE shareable_comment
 (
   id           uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
-  title        TEXT,
   "text"       TEXT,
   shareable_id uuid REFERENCES shareable (id),
   user_id      uuid REFERENCES guttersnipe_user (id),
 
-  /* date_posted is probably redundant with created_on */
-  date_posted  TIMESTAMP WITH TIME ZONE NOT NULL,
   created_on   TIMESTAMP WITH TIME ZONE NOT NULL,
   updated_on   TIMESTAMP WITH TIME ZONE NOT NULL
 );
