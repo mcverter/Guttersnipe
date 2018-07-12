@@ -12,6 +12,7 @@ node_modules
 *~
 ~*
 \#*
+*#
 
 #error files
 *debug.log
