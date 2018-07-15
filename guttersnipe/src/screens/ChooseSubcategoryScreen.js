@@ -23,7 +23,7 @@ class ChooseSubcategoryScreen extends Component {
   }
 
   render() {
-    const { navigation } = this.props;
+    const navigation = this.props.navigation;
     const category = navigation.getParam('category', '');
     const subcategories = categorization[category];
 

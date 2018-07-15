@@ -8,6 +8,7 @@ import ShareableListScreen from './screens/ShareableListScreen';
 import ShareableDetailScreen from './screens/ShareableDetailScreen';
 import ChooseCategoryScreen from './screens/ChooseCategoryScreen';
 import ChooseSubcategoryScreen from './screens/ChooseSubcategoryScreen';
+import SearchResultsTabContainer from './screens/SearchResultsTabContainer';
 
 export default createStackNavigator({
   MapScreen: MapScreen,
@@ -18,6 +19,7 @@ export default createStackNavigator({
   ChooseCategoryScreen: ChooseCategoryScreen,
   ChooseSubcategoryScreen: ChooseSubcategoryScreen,
   LandingScreen: LandingScreen,
+  SearchResultsTabContainer: SearchResultsTabContainer,
 }, {
   initialRouteName : 'LandingScreen'
 });

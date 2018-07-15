@@ -21,7 +21,8 @@ class LandingScreen extends Component {
   }
 
   render() {
-    const {user, navigation} = this.props;
+    const user = this.props.user;
+    const navigation = this.props.navigation;
     return (
       <View style={styles.landingScreenContainer}>
         <View style={styles.landingScreenTitle}>

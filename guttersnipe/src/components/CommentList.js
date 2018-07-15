@@ -13,15 +13,16 @@ import comments from "../../redux/store/comments";
 
 console.log("static comments", comments);
 
-const CommentList = ({comments}) => {
+const CommentList = (props) => {
+  const comments = props.comments;
   console.log('prop comments', comments);
   return (
     <View>
       <FlatList
         keyExtractor={(item, index) => index}
         data={comments}
-        renderItem={({item}) => (
-         <Comment comment={item}/>
+        renderItem={(element) => (
+         <Comment comment={element.item}/>
         )}/>
     </View>
   );

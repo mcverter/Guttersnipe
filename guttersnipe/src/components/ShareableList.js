@@ -7,7 +7,8 @@ import Shareable from './Shareable';
 
 import PropTypes from 'prop-types';
 
-const ShareableList = ({shareables}) => {
+const ShareableList = (props) => {
+  const shareables = props.shareables;
     return (
         <View
           style={styles.shareableListItems}

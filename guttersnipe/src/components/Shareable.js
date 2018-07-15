@@ -11,19 +11,20 @@ import GsText from '../components/GsText';
 import PropTypes from 'prop-types';
 
 
-const Shareable = ({shareable, navigation})  => {
+const Shareable = (props)  => {
+  const shareable = props.shareable;
+  const navigation = props.navigation;
   console.log('shareable', shareable);
   console.log('navigation', navigation);
-  const {
-    id,
-    subcategory,
-    category,
-    name,
-    description,
-    address,
-    time,
-    geolocation,
-    icalendar} = shareable;
+  const id = shareable.id;
+  const subcategory = shareable.subcategory;
+  const category = shareable.category;
+  const name = shareable.name;
+  const description = shareable.description;
+  const address = shareable.address;
+  const  time = shareable.time;
+  const geolocation = shareable.geolocation;
+  const icalendar = shareable.icalendar;
 
   return (
     <View style={styles.shareableContainer}>

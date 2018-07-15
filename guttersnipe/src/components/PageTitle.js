@@ -7,7 +7,8 @@ import {
 } from 'react-native';
 
 
-const PageTitle = ({title}) => {
+const PageTitle = (props) => {
+  const title = props.title;
     return (
         <View>
             <Text>{title}</Text>

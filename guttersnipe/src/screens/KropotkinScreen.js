@@ -50,7 +50,7 @@ class Kroptkin extends Component {
   }
 
   render(){
-    const {paragraph} = this.state;
+    const paragraph = this.state.paragraph;
     return (
       <View style={styles.kropotkinScreenContainer}>
         <Text style={styles.kropotkinParagraph}>{paragraph}</Text>

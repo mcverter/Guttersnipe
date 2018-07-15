@@ -22,7 +22,7 @@ class ShareableListScreen extends Component {
   }
 
   render() {
-    const {navigation} = this.props;
+    const navigation = this.props.navigation;
     const centerLatLng = Utils.findCenterLatLng(shareables.map(s=> {
       return [s.latitude,  s.longitude];
     }));
@@ -43,7 +43,8 @@ class ShareableListScreen extends Component {
         <FlatList
           style={styles.shareableList}
           data={shareables}
-          renderItem={({item}) => {
+          renderItem={(element) => {
+            const item = element.item;
             return (
               <View
                 style={styles.shareableItemContainer}

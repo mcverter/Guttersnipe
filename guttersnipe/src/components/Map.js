@@ -15,7 +15,10 @@ class Map extends React.Component {
 
   render() {
     console.log('Map props', this.props);
-    const {center, zoom, shareables, navigation} = this.props;
+    const center = this.props.center;
+    const zoom = this.props.zoom;
+    const shareables = this.props.shareables;
+    const navigation = this.props.navigation;
 
     return (
       <View style={styles.mapContainer}>

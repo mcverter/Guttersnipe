@@ -8,7 +8,7 @@ import {
 
 import PropTypes from 'prop-types';
 
-const FTK = ({}) => {
+const FTK = () => {
     return (
         <View>
           <Text>!!!!!!!!!!</Text>
