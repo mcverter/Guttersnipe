@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "babel-eslint": "^8.2.5",
+    "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
     "bookshelf": "^0.12.1",
     "bookshelf-postgis": "^0.2.2",
