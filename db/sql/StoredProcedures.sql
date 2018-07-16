@@ -1,7 +1,6 @@
 DROP FUNCTION IF EXISTS select_or_insert_comment( TEXT, TEXT, uuid, uuid, TIMESTAMP WITH TIME ZONE );
 CREATE OR REPLACE FUNCTION SELECT_OR_INSERT_COMMENT(
   c_text         TEXT,
-  c_title        TEXT,
   c_shareable_id uuid,
   c_user_id      uuid,
   c_posted       TIMESTAMP WITH TIME ZONE)
