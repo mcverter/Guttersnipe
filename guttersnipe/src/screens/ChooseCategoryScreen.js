@@ -8,8 +8,8 @@ import {
 } from 'react-native';
 import PageTitle from '../components/PageTitle';
 
- import  categorization  from '../../redux/store/categorizations';
-
+import  categorization  from '../../redux/store/categorizations';
+import GsButton from "../components/GsButton";
 
 class ChooseCategoryScreen extends Component {
   static navigationOptions = {
@@ -28,9 +28,9 @@ class ChooseCategoryScreen extends Component {
           <PageTitle>Choose a Category</PageTitle>
         </View>
         {Object.keys(categorization).map(c =>
-          <Button
-            style={styles.chooseCategoryButton}
-            color="#644141"
+          <GsButton
+            styleContainer={{backgroundColor: "red", padding: 20, margin: 25, width: "80%"}}
+            styleText={{color: 'black', fontWeight: '900', textAlign: "center"}}
             key={c}
             title={c}
             onPress={()=>{
@@ -39,7 +39,7 @@ class ChooseCategoryScreen extends Component {
               });
             }}
           >{c}
-          </Button>)}
+          </GsButton>)}
       </View>
     );
   }

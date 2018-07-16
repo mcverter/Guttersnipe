@@ -10,6 +10,7 @@ import FTK from '../components/FTK';
 import PageTitle from '../components/PageTitle';
 
 import PropTypes from 'prop-types';
+import GsButton from "../components/GsButton";
 
 class LandingScreen extends Component {
   static navigationOptions = {
@@ -26,7 +27,9 @@ class LandingScreen extends Component {
     return (
       <View style={styles.landingScreenContainer}>
         <View style={styles.searchShareablesButtonContainer}>
-          <Button
+          <GsButton
+            styleContainer={{backgroundColor: "#910f0f", padding: 20}}
+            styleText={{color: 'black', fontWeight: '700'}}
             color="#910f0f"
             accessibilityLabel="Click here to start search"
             title="Search Shareables"
@@ -35,7 +38,7 @@ class LandingScreen extends Component {
 
         <TouchableOpacity
           style={styles.shareablesFTKContainer}
-        onPress={() => navigation.navigate('AboutScreen')} >
+          onPress={() => navigation.navigate('AboutScreen')} >
           <FTK style={styles.shareablesFTKText}/>
         </TouchableOpacity>
       </View>

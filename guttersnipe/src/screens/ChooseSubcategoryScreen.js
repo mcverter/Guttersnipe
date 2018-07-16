@@ -12,6 +12,7 @@ import PageTitle from '../components/PageTitle';
 import  categorization  from '../../redux/store/categorizations';
 
 import PropTypes from 'prop-types';
+import GsButton from "../components/GsButton";
 
 class ChooseSubcategoryScreen extends Component {
   static navigationOptions = {
@@ -33,9 +34,9 @@ class ChooseSubcategoryScreen extends Component {
           <PageTitle>Choose a Category</PageTitle>
         </View>
         {subcategories.map(s =>
-          <Button
-            style={styles.chooseSubcategoryButton}
-            color="#983d3d"
+          <GsButton
+            styleContainer={{backgroundColor: "black", padding: 20, margin: 25, width: "80%"}}
+            styleText={{color: 'red', fontWeight: '900', textAlign: "center"}}
             key={s}
             title={s}
             onPress={()=>{
@@ -44,7 +45,7 @@ class ChooseSubcategoryScreen extends Component {
               });
             }}
           >{s}
-          </Button>)}
+          </GsButton>)}
       </View>
     );
   }

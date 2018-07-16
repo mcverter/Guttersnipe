@@ -49,12 +49,12 @@ function superDecodeURI(string) {
  */
 
 
-const Comment = (props) => {
+const GsText = (props) => {
   return (<Text style={props.style}>{superDecodeURI(props.children)}</Text>);
 };
 
-Comment.propTypes = {
+GsText.propTypes = {
 
 };
 
-export default Comment;
+export default GsText;
