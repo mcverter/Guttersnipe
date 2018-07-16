@@ -1,12 +1,12 @@
 Name: FNB Albany
-Comment: (518) 478-6152
+Comment: 518 478 6152
 Comment: albanyfoodnotbombs@riseup.net
 Comment: www.facebook.com/fnbalbany
 Comment: albanyfoodnotbombs
 
 Name: FNB Binghamton
 Comment: binghamtonfoodnotbombs@ gmail.com
-Description: We cook and share food every Sunday at the Ritchie building, operated by Lutheran Redeemer Church, at 149 Chapin St (the white building behind 72 Main St, across the street from CVS). Meals are shared from 1-2pm inside the Ritchie building (until warm weather brings us outside again). If you would like to help cook, please arrive at 10am. For more info or to get involved, email binghamtonfoodnotbombs@ gmail.com
+Description: We cook and share food every Sunday at the Ritchie building, operated by Lutheran Redeemer Church, at 149 Chapin St the white building behind 72 Main St, across the street from CVS. Meals are shared from 1-2pm inside the Ritchie building until warm weather brings us outside again. If you would like to help cook, please arrive at 10am. For more info or to get involved, email binghamtonfoodnotbombs@ gmail.com
 Address: at 149 Chapin St Ritchie Building
 
 Name: FNB Brooklyn
@@ -15,8 +15,8 @@ Comment: myspace.com/brooklynfnb 
 Comment: brooklynfnb-subscribe@yahoogroups.com. 
 
 Name: FNB Bed-Stuy Chapter
-Description: We share food every Saturday at 3pm at Von King (Tompkins) Park at the corner of Marcy Avenue and Lafayette Avenue. 
-Address: on King (Tompkins) Park at the corner of Marcy Avenue and Lafayette Avenue.
+Description: We share food every Saturday at 3pm at Von King Tompkins Park at the corner of Marcy Avenue and Lafayette Avenue. 
+Address: on King Tompkins Park at the corner of Marcy Avenue and Lafayette Avenue.
 Time:   Saturday at 3pm
 Comment: www.bedstuyfnb.org
 Comment: bedstuyfnb-subscribe@yahoogroups.com 
@@ -51,27 +51,27 @@ Comment: www.myspace.com/ LongIslandFNB
 Comment: 631.223.4370
 Comment: LIFNB to 41411.
 Comment:  www.LIFNB.com/get_involved
-Description: Long Island Food Not Bombs shares groceries, hot food, clothing, books, seedlings and other necessities in towns across Nassau and Suffolk counties. To learn more - contact us (information listed above) or check out our website ( www.LIFNB.com/get_involved) . Locations and times for our Food Shares are listed below. 
-Address: Hempstead train station (on the north end of W Columbia St, one block east of Main St
+Description: Long Island Food Not Bombs shares groceries, hot food, clothing, books, seedlings and other necessities in towns across Nassau and Suffolk counties. To learn more - contact us information listed above or check out our website  www.LIFNB.com/get_involved . Locations and times for our Food Shares are listed below. 
+Address: Hempstead train station on the north end of W Columbia St, one block east of Main St
 Time:  Sunday @ 1:30pm
-Comment: Hempstead Food Share: Every Sunday @ 1:30pm outside the Hempstead train station (on the north end of W Columbia St, one block east of Main St.) for directions or more information check out ( www.lifnb.com/ chapters/hempstead_food_share)
+Comment: Hempstead Food Share: Every Sunday @ 1:30pm outside the Hempstead train station on the north end of W Columbia St, one block east of Main St. for directions or more information check out  www.lifnb.com/ chapters/hempstead_food_share
 
 Address:  E.6th Street & Fairground Av Huntington
 Time: Tuesday @ 6:30pm at the insertion of E.6th Street & Fairground Av
-Comment: Huntington Food Share: Every Tuesday @ 6:30pm at the insertion of E.6th Street & Fairground Ave. (on the East side of the All-Weather Tire shop) for directions or more information check out (www.lifnb.com/chapters/huntington_food_share)
+Comment: Huntington Food Share: Every Tuesday @ 6:30pm at the insertion of E.6th Street & Fairground Ave. on the East side of the All-Weather Tire shop for directions or more information check out www.lifnb.com/chapters/huntington_food_share
 
 Address: Horseblock Rd. & Granny Rd.
 Time:  Thursday @ 6:30pm
-Comment: Farmingville Food Share: Every Thursday @ 6:30pm near the insertion of Horseblock Rd. & Granny Rd. (by the large clock in the traffic tri-angle) for directions or more information check out (www.lifnb. com/ chapters/farmingville_food_share).
+Comment: Farmingville Food Share: Every Thursday @ 6:30pm near the insertion of Horseblock Rd. & Granny Rd. by the large clock in the traffic tri-angle for directions or more information check out www.lifnb. com/ chapters/farmingville_food_share.
 
 Name: FNB: New York City - Lower East Side
 Description: We cook Sundays at the Catholic Worker at 36 East 1st Street, between First and Second Avenues at 1 p.m. and share food in Tompkins Square Park from 4-6 p.m. on Sunday afternoons. The best ways to get there are either the 2nd Ave. F train or the Bleeker Street 6 train. EVERY ONE WELCOME!
 Address:  Tompkins Square Park
 Time:  4-6 p.m. on Sunday
-Comment: fnbnyc@gmail(dot)com 
+Comment: fnbnyc@gmaildotcom 
 Comment: New York City FNB website 
 
-$headling FNB New York City - Harlem
+Name: FNB New York City - Harlem
 Description: Sharing every Wednesday at 4:00 PM at Jacob H. Schiff Park on Amsterdam Ave between 136th and 138th Street.
 Time: Wednesday at 4:00 PM
 Address: Jacob H. Schiff Park on Amsterdam Ave between 136th and 138th Street.
@@ -96,9 +96,9 @@ Comment: foodnotbombs5@aol.com
 
 Name: FNB Suffolk County
 Address: Mike Bruno 66 Avenue E., Holbrook, N.Y. 11741
-Comment:  (631) 877-6090 
-Comment: (631) 258-0455
-Comment: (631) 737-5710
+Comment:  631 877-6090 
+Comment: 631 258-0455
+Comment: 631 737-5710
 Comment: Suffolk County FNB website
 
 Name: FNB Staten Island
@@ -106,14 +106,14 @@ Comment: www.facebook.com/FoodNotBombsStatenIslandChapter
 Comment: www.floodzonenyc.com/statenisland_web.pdf
 
 Name: FNB Syracuse
-Comment: (315) 209-7425
+Comment: 315 209-7425
 Comment: syrfnb@gmail.com
 Comment: FoodNotBombsSyracuse@ riseup. net
 Comment: FoodNotBombsSyracuse @ lists.riseup.net
 Comment: www.myspace.com/ foodnotbombssyracuse 
 Address:  State Tower Building on Warren Street
 Time: 3:00 PM we gather next to the
-Description: We meet to cook together every Saturday at 12:30 PM at Castle Rockmoore (113 West Borden Avenue/Syracuse, NY/13205). At 3:00 PM we gather next to the State Tower Building on Warren Street for the mealshare. We are usually downtown for around two hours. Anyone is welcome to help out in any way they can, rather it be cooking, eating or donating. All donations can be dropped off on the back porch of the house at any time of the day or night.
+Description: We meet to cook together every Saturday at 12:30 PM at Castle Rockmoore 113 West Borden Avenue/Syracuse, NY/13205. At 3:00 PM we gather next to the State Tower Building on Warren Street for the mealshare. We are usually downtown for around two hours. Anyone is welcome to help out in any way they can, rather it be cooking, eating or donating. All donations can be dropped off on the back porch of the house at any time of the day or night.
 
 Name: FNB Utica
 Comment: 315-527-2121 
