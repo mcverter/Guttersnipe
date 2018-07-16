@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/debug/layout/exo_player_view.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/exoplayer-ui-2.7.3.aar/773f937c82b74348640f93df02853eb0/res/layout/exo_player_view.xml"
+    },
+    {
         "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
         "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/layout/abc_action_mode_close_item_material.xml"
     },
@@ -152,6 +156,10 @@
         "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/layout/select_dialog_item_material.xml"
     },
     {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/debug/layout/exo_player_control_view.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/exoplayer-ui-2.7.3.aar/773f937c82b74348640f93df02853eb0/res/layout/exo_player_control_view.xml"
+    },
+    {
         "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",
         "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/layout/abc_action_mode_bar.xml"
     },
@@ -202,6 +210,14 @@
     {
         "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
         "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/layout/abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/debug/layout/exo_simple_player_view.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/exoplayer-ui-2.7.3.aar/773f937c82b74348640f93df02853eb0/res/layout/exo_simple_player_view.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/debug/layout/exo_playback_control_view.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/exoplayer-ui-2.7.3.aar/773f937c82b74348640f93df02853eb0/res/layout/exo_playback_control_view.xml"
     },
     {
         "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/debug/layout/notification_template_lines_media.xml",
