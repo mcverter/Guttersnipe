@@ -25,25 +25,18 @@ class LandingScreen extends Component {
     const navigation = this.props.navigation;
     return (
       <View style={styles.landingScreenContainer}>
-        <View style={styles.searchShareablesButton}>
+        <View style={styles.searchShareablesButtonContainer}>
           <Button
             color="#910f0f"
             accessibilityLabel="Click here to start search"
             title="Search Shareables"
             onPress={() => navigation.navigate('ChooseCategoryScreen')}/>
         </View>
-        {user && (user.role === 'admin' || user.role === 'superadmin') &&
-        <View style={styles.createShareablesButton}>
-          <Button
-            title="CreateShareable"
-            color={styles.createShareablesButton.color}
-            accessibilityLabel="Click here to create a shareable"
-          />
-        </View>
-        }
+
         <TouchableOpacity
+          style={styles.shareablesFTKContainer}
         onPress={() => navigation.navigate('AboutScreen')} >
-          <FTK style={styles.shareablesFTK}/>
+          <FTK style={styles.shareablesFTKText}/>
         </TouchableOpacity>
       </View>
     );
@@ -56,12 +49,21 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center'
   },
-  shareablesFTK: {
-    alignItems: "center",
-    color: 'red'
+
+  shareablesFTKText: {
+    color: 'red',
+    textAlign: "center",
+    fontFamily: "courier",
+    fontWeight: "900"
   },
-  landingScreenTitle: {},
-  searchShareablesButton: {},
+  searchShareablesButtonContainer: {
+    padding: 25,
+    marginBottom: 50
+  },
+  shareablesFTKContainer: {
+    backgroundColor: 'black',
+    padding: 75,
+  },
   createShareablesButton: {}
 });
 
@@ -70,3 +72,17 @@ LandingScreen.propTypes = {
 };
 
 export default LandingScreen;
+
+
+const maybeCreate = () => {
+  return 'goo';
+  /*{user && (user.role === 'admin' || user.role === 'superadmin') &&
+          <View style={styles.createShareablesButton}>
+            <Button
+              title="CreateShareable"
+              color={styles.createShareablesButton.color}
+              accessibilityLabel="Click here to create a shareable"
+            />
+          </View>
+          } */
+}

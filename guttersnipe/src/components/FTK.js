@@ -11,11 +11,11 @@ import PropTypes from 'prop-types';
 const FTK = (props) => {
     return (
         <Text style={props.style}>
-          !!!!!!!!!{"\n"}
-           !! FOR !!{"\n"}
-           !! THE !!{"\n"}
+          *********{"\n"}
+          !!  FOR  !!{"\n"}
+          !!  THE  !!{"\n"}
           !! KIDS !!{"\n"}
-           !!!!!!!!!!
+          *********
         </Text>
     );
 };

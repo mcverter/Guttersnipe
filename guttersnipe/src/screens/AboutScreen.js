@@ -43,8 +43,8 @@ class AboutScreen extends Component {
           </View>
         </View>
 
-        <View style={styles.ftkPanel}>
-          <FTK/>
+        <View style={styles.aboutFTKContainer}>
+          <FTK style={styles.aboutFTKText}/>
         </View>
 
         <View style={styles.kropotkin}>
@@ -72,7 +72,17 @@ const styles = StyleSheet.create({
     width: '100%'
   },
 
-  ftkPanel: {},
+  aboutFTKText: {
+    color: 'black',
+    textAlign: "center",
+    fontFamily: "courier",
+    fontWeight: "900"
+  },
+  aboutFTKContainer: {
+    backgroundColor: 'red',
+    padding: 15,
+  },
+
 
   legalPanel: {
     borderColor: 'black',
