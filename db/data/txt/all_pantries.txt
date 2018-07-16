@@ -1,0 +1,3043 @@
+
+
+Name:St. Luke's Food Pantry
+Address: 623 E. 138th St., 10454
+Comment:718 665 6677
+Time: Food Pantry: Fri 10am-12pm
+Comment:ID required.
+
+Name: St. Ann's Church of Morrisania
+Address: 295 St. Ann's Ave, 10454
+Comment:718 585 5632
+Time: Soup Kitchen: Sun 11am-2pm Food Pantry: Wed, Fri 10:30am-2pm
+Comment:Medicaid card or ID required for pantry.
+
+Name: St. Jerome Community Food Pantry
+Address: 330 E. 138th St., 10454
+Comment:718 402 7866
+Time: Food Pantry: Wed 4pm -6pm
+Address: ID required, serves residents of 10454  .
+
+Name: Abraham house
+Address: 340 Willis Avenue, 10454
+Comment:718 292 2867
+Time: Food Pantry: Sat 6:30am-7:30am
+Comment:ID required.
+
+Name: Every Day is a Miracle
+Address: 411 East 143rd St., 10454
+Comment:347 618 1162
+Time: Food Pantry: Fri 10am-1:30pm
+Comment:ID required.
+
+Name: Way out Church Ministries
+Address: 518 East 148th Street, 10455
+Comment:718 665 8069
+Time: Food Pantry: Tue 8am-10am, fresh produce every day 10am-2pm
+
+Name: United Bronx Parents Food Pantry
+Address: 603 Prospect Ave, 10455
+Comment:347 996 1879
+Time: Food Pantry: Wed, Fri 10am-12pm Wed for last names A-M, Fri for last names N-Z.
+Comment:ID required.
+Comment:Bring cart/bags.
+
+Name: United Bronx Parents Soup Kitchen
+Address: 1006 East 151st St., 10455
+Comment:718 991 7100
+Time: Soup Kitchen: Mon-Fri 2:30pm -4pm
+Comment:First come, first served.
+
+Name: The Relief Bus - Bronx Brook Ave.
+Address: Brook Ave. between 147th and 148th, 10455
+Comment:800 736 2773
+Comment:Mobile Soup Kitchen: Sat 10am -2pm.
+
+Name: City harvest St. Mary's Mobile Market
+Address: 575 Trinity Avenue, parking lot on Cauldwell Avenue, 10455
+Comment:Mobile Market Pantry: 2nd Sat, 4th Tue 9:30am-11:30am
+Address: Residents of the St. Mary's, E.R. Moore, Bronxchester and Adams Houses, members of Urban Health Plan, and the entire 10455   zip code.
+Comment:All food is fresh fruits and vegetables.
+Comment:Families must register to participate - bring proof of address and a photo ID.
+Comment:For further information on registration please call 646 412 0743.
+Comment:For information on available produce and dates of distribution, please call the Mobile Market Hotline at 866 444 0244.
+
+Name: St. Margaret's episcopal Church
+Address: 940 E. 156th St., 10455
+Comment:718 589 4430
+Time: Soup Kitchen: Sun 9am-10am, Wed 6pm-7pm
+
+Name: Give them To eat - Iglesia evangelica espanola
+Address: 800 E. 156th St., 10455
+Comment:718 993 1260
+Time: Soup Kitchen: Tue 1pm-3pm Food Pantry: Fri 12pm-3pm
+Comment:ID prefered.
+
+Name: Transfiguration Lutheran Church
+Address: 763 Prospect Ave, 10455
+Comment:718 378 3588
+Time: Food Pantry: Mon 1pm-3pm
+
+Name: BooM! health harm reduction Center
+Address: 226 East 144th St., 3rd Floor., 10451
+Comment:718 292 7718 x228
+Time: Soup Kitchen: Thu 12:30pm-1:15pm
+
+Name: Grand Central Food Program - Lincoln hospital
+Address: Morris Ave. & 148th St., 10451
+Comment:212 776 2000 Mobile
+Time: Soup Kitchen: every day 8pm
+Comment:Come on time - distribution is mobile.
+
+Name: The Relief Bus - Bronx Courtland Ave.
+Address: Courtlandt Ave. between 151st and 152nd, 10451
+Comment:800 736 2773
+Comment:Mobile Soup Kitchen: Wed 10am-2pm
+
+Name: City Harvest Melrose Mobile Market
+Address: 286 East 156th St. at the Classic Center, 10451
+Comment:Mobile Market Pantry: 2nd Sat, 4th Wed 9:30am-11:30am
+Comment:Residents of Melrose, Morrisania Air Rights, Andrew Jackson Houses and Members of Boricua Community Health Center or Bronx Defenders only.
+Comment:All food is fresh fruits and vegetables.
+Comment:Families must register to participate - bring proof of address and a photo ID. For further information on registration please call 646 412 0743.
+Comment:For information on available produce and dates of distribution, please call the Mobile Market Hotline at 866 444 0244.
+
+Name: Salvation Army Bronx Citadel
+Address: 425 E. 159th St., 10451
+Comment:718 665 8472
+Time: Soup Kitchen: Mon, Wed, Fri 1pm-2pm Food Pantry: Tue 10am-1pm
+Comment:ID and proof of address required to register for pantry, by appointment only.
+Address: Serves residents of 10451, 10452, 10454-10456, 10459, 10465, 10472-10474  .
+
+Name: Missionary Church of Christ
+Address: 937 Teller Avenue, 10451
+Comment:718 588 4545
+Time: Food Pantry: 2nd, 4th Sat 10am-12pm
+
+Name: Grand Central Food Program - 164th St. & ogden
+Address: NE corner of 164th St. & Ogden Ave., 10452
+Comment:212 776 2000
+Comment:Mobile Soup Kitchen: every day 8:25pm
+Comment:Come on time - distribution is mobile.
+
+Name: The Momentum Project at Church of God of Prophecy
+Address: 85 East 165th St at Gerard & Walton Aves, 10452
+Comment:212 691 8100
+Time: Soup Kitchen: Wed 11am-1pm, 4pm-6:30pm
+Comment:Dinner clients must complete intake at 3pm.
+
+Name: Mid-Bronx Food Pantry
+Address: 1125 Grand Concourse, 10452
+Comment:718 410 6735
+Time: Food Pantry: 3rd Fri 9:30am-12pm
+Comment:ID required for all household members.
+
+Name: Bread Basket at Woodycrest United Methodist Church
+Address: 89 West 166th St, 10452
+Comment:718 538 7500
+Time: Soup Kitchen: Wed 12pm -2pm
+
+Name: WheDCo - Women's housing and econ. Dev. Corp.
+Address: 50 East 168th Street, 10452
+Comment:718 839 1100
+Time: Food Pantry: Wed 9:30am
+Comment:Tickets distributed starting at 7:30am to first 30 people.
+Comment:ID and proof of address required.
+Comment:Emergency bags provided as needed Mon-Fri 9am-5pm.
+
+Name: Tolentine Zeiser Community Life Center
+Address: 1261 Shakespeare Ave., 10452
+Comment:917 549 8958
+Time: Food Pantry: Fri 9am-11am
+Comment:Emergencies anytime. Can come once/month.
+
+Name: Grand Central Food Program - 170th & Jerome
+Address: 170th St. & Jerome, 10452
+Comment:212 776 2000
+Comment:Mobile Soup Kitchen: every day 8:30pm
+Comment:Come on time - distribution is mobile.
+
+Name: True Gospel Tabernacle Church
+Address: 1 West Tremont Ave., 10453
+Comment:718 901 2786
+Time: Food Pantry: Tue 1pm, Wed 4pm, Thu 11am
+Comment:Photo ID required.
+Comment:Food distributed by last nAME - A-F starts 1st Thu, G-L 2nd Thu , M-R 3rd Thu , S-Z 4th Thu, 5th Thu no pantry.
+
+Name: Heights Pantry/ Bronxworks, Inc.
+Address: 200 West Tremont Ave., 3rd Fl, 10453
+Comment:718 299 0300
+Time: Food Pantry: 1st, 3rd  Fri 7am-11am 1st Fri is for 60 and under, 3rd Fri for 60+.
+
+Name: St. edmunds Youth Programs, Inc.
+Address: 1905 Morris Avenue, 10453
+Comment:718 466 9370
+Time: Food Pantry: Thu 12pm-2pm
+Comment:Tickets distributed Thu 8am. Occasional Mon distribution, call to check.
+
+Name: Davidson Community Center
+Address: 2038 Davidson Ave., 10453
+Comment:718 731 6360
+Time: Food Pantry: Wed 9am-12pm
+
+Name: Bronx Works Morris Innovative Senior Center
+Address: 80 East 181st St., 10453
+Comment:718 933 5300
+Time: Food Pantry: 2nd Fri 1:30pm-2:30pm (seniors only); last Fri 1:30pm-2:30pm (open to community) Tickets for pantry are distributed at 7:30am.
+
+Name: Libres Por Jesucristo
+Address: 609 E. 182nd St., 10457
+Comment:646 408 3909
+Time: Food Pantry: Wed 1pm-3pm
+Comment:Tickets distributed Wed 9am.
+
+Name: Abrigo Del Altisimo
+Address: 2009 Monterey Ave., 10457
+Comment:718 669 4826
+Time: Food Pantry: Tue 2pm-4pm
+
+Name: Joshua and Caleb Ministry Inc. Food Pantry
+Address: 1688 Webster Avenue, 10457
+Comment:718 328 5900
+Time: Food Pantry: Sat 11am-12pm
+Comment:ID preferred.
+
+Name: Bronx Seventh Day Adventist Church
+Address: 1695 Washington Avenue, 10457
+Comment:917 351 8777
+Time: Food Pantry: Thu 2pm-5pm.
+Comment:ID required for registration.
+Comment:Provide emergency food, clothing pantry, and referrals.
+
+Name: Vineyard Food Pantry
+Address: 1140 Teller Avenue, 10456
+Comment:718 865 4011
+Time: Food Pantry: Sat 10am-12pm
+Comment:Photo ID required.
+
+Name: Inspirational Gospel Assembly
+Address: 1211 Brook Avenue, 10456
+Comment:347 272 0596
+Time: Food Pantry: Sat 11am-1pm
+Comment:Photo ID required.
+
+Name: St. Augustine Food Pantry & Clothing Distribution
+Address: 1183 Franklin Ave., 10456
+Comment:718 893 0072 ext.15
+Time: Food Pantry: Mon 9:30am-1pm, Thu 5pm-7-pm for working people (bring pay stub)
+Comment:ID required.
+
+Name: New Covenant Community Development Corporation
+Address: 1175 Boston Road, 10456
+Comment:718 328 6072 x119
+Time: Food Pantry: Thu 10am-1pm
+Comment:ID required for registration.
+
+Name: New Zion Pilgrim Baptist Church
+Address: 1040 Washington Ave., 10456
+Comment:718 292 4165
+Time: Food Pantry: Fri 9am-12pm
+Comment:Must register first.
+
+Name: Gospel hill Baptist Church
+Address: 3265 3rd Ave., 10456
+Comment:718 585 6730
+Time: Food Pantry: Tue 10am until food runs out
+Comment:ID required.
+Comment:Line forms at 7am.
+Comment:Pantry may be open other days, call to check.
+
+Name: Morrisania revitalization Corp. Food Pantry
+Address: 576 East 165th St., 10456
+Comment:718 541 4597
+Time: Food Pantry: Fri 10am-12pm
+Comment:Photo ID preferred.
+
+Name: Manna of Life/Fellowship Chapel
+Address: 578 East 166 Street, 10456
+Comment:347 577 5788
+Time: Soup Kitchen: Sat 11am-1pm Food Pantry: Thu, Fri - call Mon-Wed for appointment
+
+Name: PAThhSeo at Caldwell Temple AME Zion Church
+Address: 1288 Rev. James A. Polite , 10459
+Comment:844 818 FOOD 3663
+Time: Soup Kitchen: Sat 8am-2:30pm Food Pantry: Sat 8am-2:30pm
+
+Name: The Hope Line
+Address: 884 E. 163rd St., 10459
+Comment:718 402 1212
+Time: Food Pantry: Wed 10:45am-2:30pm, Thu 9:30am-1:30pm
+Comment:By appointment only.
+Comment:Clothing bank available.
+
+Name: Grand Central Food Program - Lafayette & Manida
+Address: NW corner of Lafayette Ave. & Manida St., 10474
+Comment:212 776 2000
+Comment:Mobile Soup Kitchen: every day 7:40pm
+Comment:Come on time - distribution is mobile.
+
+Name: Bright Temple AME Church
+Address: 812 Faile St., 10474
+Comment:718 542 7777
+Time: Food Pantry: Fri 10am-12pm
+
+Name: Grand Central Food Program - Randall & Bryant
+Address: SW corner of Randall Ave. & Bryant Ave., 10474
+Comment:212 776 2000
+Comment:Mobile Soup Kitchen: every day 7:30pm
+Comment:Come on time - distribution is mobile.
+
+Name: Grace Episcopal Church
+Address: 1909 Vyse Ave., 10460
+Comment:718 542 1946
+Time: Soup Kitchen: Tue, Sat 12pm-1:30pm Food Pantry: Thu 9am-1pm
+Comment:ID required for pantry.
+
+Name: 	St. Anthony Catholic Church
+Address: 1496 Commonwealth Ave., 10460
+Comment:718 931 4040
+Time: Soup Kitchen: Sat 11am-2pm (hot meal); Mon-Fri 9am-10am (coffee and donuts)
+
+Name: Saint Joan of Arc Church - Youth Ministries for Peace and Justice
+Address: 1372 Stratford Avenue, 10472
+Time: Soup Kitchen: Sat 10am-1pm or until food runs out
+Comment:Closed July and August.
+
+Name: El Amanecer De La Esperanza
+Address: 1779 East 172nd Street, 10472
+Comment:718 863 4440
+Time: Food Pantry: Mon, Wed 8am-12pm; Fri 9am-12pm
+Comment:Photo ID preferred.
+
+Name: 	Soundview Presbyterian Church
+Address: 760 Soundview Ave., 10473
+Comment:718 842 2287
+Time: Food Pantry: every other Wed 8am-10am
+
+Name: Fellowship Covenant Church
+Address: 720 Castle Hill Ave., 10473
+Comment:718 829-2116
+Time: Soup Kitchen: 1st, 3rd Sat 1pm-3pm Food Pantry: Wed 10am-11:30am
+Comment:ID required, can come once/month.
+Comment:Call on Tue for pick up Wed.
+
+Name: Holy Cross Church
+Address: 600 Soundview Ave., 10473
+Comment:718 893 5550
+Time: Food Pantry: Thu 9am-1pm
+
+Name: 	The Love Kitchen of St. Peter's Church - Westchester Square
+Address: 2500 Westchester Ave, 10461
+Comment:718 931 9270
+Time: Soup Kitchen: Thu 12pm-2pm
+Time: Food Pantry: 3rd Tue 10am-12pm
+Comment:Bring cart for pantry.
+
+Name: St. Paul's Lutheran Church
+Address: 1891 McGraw Avenue, 10462
+Comment:718 822 4535
+Time: Food Pantry: Fri 8am-10am
+Comment:Photo ID, proof of address required on first visit, and birth certificates for all children preferred
+
+Name: Jewish Community Council of Pelham Parkway
+Address: 2157 Holland Avenue, 10462
+Comment:718 792 4744
+Time: Food Pantry: Tue-Thu 1pm -4pm
+Comment:ID preferred.
+
+Name: New St. John Baptist Church
+Address: 2409 Lorillard Place, 10458
+Comment:917 400 4830
+Time: Food Pantry: Fri 8am-10am
+Comment:ID required.
+
+Name: Christ Apostolic Church WoSeM Citadel of God Almighty
+Address: 442 East 183rd Street, 10458
+Comment:718 364 4320
+Time: Food Pantry: Wed 7:30pm-9pm
+
+Name: Louise's Pantry at Park Avenue Thorpe
+Address: 406 East 184th Street, 10458
+Comment:646 713 2732
+Time: Food Pantry: Wed 8:30am-9:30am
+Comment:Served on alternating last nAME basis; A-L or M-Z.
+Comment:Call in advance to see which last names will be served.
+Comment:Provides clothing, toiletries, housing counseling, youth programming and job readiness workshops.
+
+Name: Grand Central Food Program - Fordham & Webster
+Address: Fordham Rd. & Webster Ave., 10458
+Comment:212 776 2000
+Comment:Mobile Soup Kitchen: every day 9:10pm
+Comment:Come on time - distribution is mobile.
+
+Name: BOOM! Health
+Address: 540 E. Fordham Rd., 10458
+Comment:718 295 5605
+Time: Food Pantry: Mon-Fri 9am-4pm
+
+Name: PoTS - Part of the Solution
+Address: 2759 Webster Avenue, 10458
+Comment:718 220 4892
+Time: Soup Kitchen: every day 12:30pm-3:30pm Food Pantry: Mon-Sat 9am-12pm, Sat 3:30pm-5:30pm
+Address: Pantry serves residents of 10453, 10457, 10458, 10460, 10463, 10467  .
+Comment:Showers Mon-Fri 8:15am-10:45am;
+Comment:Haircuts Tue-Thu 9am-12pm; Mail
+Comment:Mon-Fri 12:30pm-4pm;
+Comment:Clothing: Mon, Wed, Fri 10:30am-11:15am, 1:30pm-3pm;
+Comment:Legal Clinic Intake: Mon, Thu, Fri 9am-11:30am;
+Comment:Case management Mon-Wed, Fri 9am -3pm.
+
+Name: Our Lady of refuge
+Address: 290 E. 196th St., 10458
+Comment:718 367 4690
+Time: Food Pantry: Wed 9am-10:30am ID required.
+Comment:Can come once/month.
+
+Name: Grand Central Food Program - Fordham & University
+Address: Fordham Rd. and University Ave., 10468
+Comment:212 776 2000
+Comment:Mobile Soup Kitchen: every day 8:45pm
+Comment:Come on time - distribution is mobile.
+
+Name: Creston Avenue Baptist Church
+Address: 114 E. 188th St., 10468
+Comment:FP 718 367 1754, SK 347 820 6114
+Time: Soup Kitchen: Sat 12pm-2pm Food Pantry: Mon, Wed, Fri 12pm-2pm
+Comment:Photo ID and proof of address (or letter from an agency if homeless) required for food pantry, can come once/month
+
+Name: Heavenly Vision Christian Center
+Address: 2868 Jerome Ave., 10468
+Comment:718 220 8124
+Time: Food Pantry: Tue 9am-11am
+Comment:ID required.
+
+Name: Christ Disciples International Ministries
+Address: 3021-31 Webster Ave., 10467
+Comment:646 294 7726
+Time: Food Pantry: Wed, Sat 10:30am-1pm
+Comment:Bring ID and proof of household size, client-choice pantry
+
+Name: Immaculate Conception Catholic Church
+Address: 754 East Gun Hill Road, 10467
+Time: Soup Kitchen: Mon-Fri 1pm -2pm Food Pantry: 4th Sat 10am-12pm
+Comment:ID and proof of address required for pantry.
+Address: Serves residents of 10467, 10469  .
+
+Name: Astor Family Services
+Address: 750 Tilden St., 10467
+Comment:718 231 3400
+Time: Food Pantry: Thu 2pm-3pm.
+Comment:Call Wed for appt.
+
+Name: Church of Pentecost
+Address: 621 East 216th Street, 10467
+Comment:718 515 5366
+Time: Food Pantry: every other Thu 1pm-2pm
+Comment:Call first to confirm.
+
+Name: Eastchester Presbyterian Church
+Address: 3154 Fish Ave., 10469
+Comment:718 798 1855
+Time: Soup Kitchen: Thu 5:30pm-6:30pm Food Pantry: 3rd Sat 10am
+Comment:ID required for pantry.
+
+Name: Shiloh Temple Pentacostal Church
+Address: 719 E. 223rd St., 10466
+Comment:718 882 8909
+Time: Soup Kitchen: Thu 9am-1pm Food Pantry: Tue 8am-12pm
+
+Name: Faith Apostolic Gospel Temple
+Address: 3956 Bronxwood Avenue, 10466
+Comment:718 882 6717
+Time: Food Pantry: Sat 10am-12pm
+
+Name: Our Lady of Grace Social Outreach
+Address: 3985 Bronxwood Ave., 10466
+Comment:718 652 4817
+Time: Food Pantry: Mon 1pm-2:45pm
+Comment:Serves  residents from 241st St to Gun Hill Rd, between Webster Ave and Co-op City.
+
+Name: Bronx Bethany Community organization
+Address: 971 E. 227th St., 10466
+Comment:718 231 5276
+Time: Food Pantry: Wed 9am-11am
+Comment:Photo ID with address required.
+
+Name: East 233rd Street Senior Center
+Address: 732 E. 233rd St., 10466
+Comment:718 653 2326
+Time: Soup Kitchen: Wed, Thu 9:30am-10:30pm, 12pm-1pm
+Comment:Blood pressure monitoring Thu 9am-12pm;
+Comment:food supplement packages distributed when available.
+
+Name: St. Francis of Rome
+Address: 760 Whitehall Pl., 10466
+Comment:718 324 5340
+Time: Food Pantry: every other Fri 9am-12pm
+Comment:ID required.
+Comment:Family can come once/month.
+
+Name: 105 Iglesia Pentecostal M.I. Ebenezer
+Address: 3801 Dyre Ave., 10466
+Comment:347 843 8930
+Time: Food Pantry: 2nd Thu 9am-1pm
+Comment:ID required.
+
+Name: 106 Co-op City SDA Church
+Address: 1010 Baychester Avenue, 10475
+Comment:646 851 8591
+Time: Food Pantry: 1st, 3rd Wed 4:30pm-6pm
+
+Name:
+Comment:Black Forum of Co-op City, Inc.
+Address: 177 Dreiser Loop, 10475
+Comment:718 320 8035
+Time: Food Pantry: Tue-Fri 11am-12:45pm
+Comment:Photo ID with address required.
+Address: Serves residents of 10475  .
+Address: Will offer non 10475   residents a one-time only food supply and a referral to a food pantry nearest to them.
+Comment:Bring 2 clean grocery bags & shopping cart to carry heavy items.
+Comment:Free healthy cooking workshops offered - call for details.
+
+Name: All Nations Baptist Church of Woodhaven
+Address: 86-7 4 80th St., 11421
+Comment:718 847 4229
+Time: Food Pantry: Sat 1pm (Sept-May]. 11am (Jun-Aug]
+Comment:Sign up 8am-9am.
+
+Name: St. Mary Gate of Heaven
+Address: 101-18104thSt., 11416
+Comment:718 847 6260
+Time: Food Pantry: Every other Thu 11 am-1 pm
+Comment:ID with address required
+Address: Serves residents of 11416 and 11417  .
+
+Name: Elohim Community Development and Outreach
+Address: 87-47 111th Street, 11418
+Comment:917 418 7906
+Time: Food Pantry: Fri 9am-11 am
+Comment:Bring ID and proof of address first time to register.
+
+Name: Richmond Hill SDA Community services
+Address: 114-08 Jamaica Ave, 11418
+Comment:718 301 3179
+Time: Food Pantry: sun 8am-9am
+
+Name: The river Fund
+Address: 89-11 Lefferts Blvd., 11418
+Comment:718 441 1125
+Time: Food Pantry: sat 7am-11am
+Comment:Benefits Enrollment and Recertification Mon-Fri 9am-2:30pm.
+
+Name: Saint Benedict Joseph Labre Church Food Pantry
+Address: 94-40 118th St., 11419
+Comment:718 849 4048
+Time: Food Pantry: 3rd thu 10am-11:30am
+Comment:Photo ID and proof of address required.
+
+Name: Christina Home Care Food Pantry
+Address: 120-13 Liberty Ave., 11419
+Comment:917 592 8686
+Time: Food Pantry: Fri 2pm-5pm.
+Comment:Occasionally opens at 11am Services for employment training, job placement, home care available.
+
+Name: St. theresa of avila Church Community services
+Address: 109-26 130th Street, 11420
+Comment:718 322 5547
+Time: Food Pantry:  Mon, thu 9am-11am ID required.
+
+Name: Leviticus Church of God in Christ
+Address: 114-12 Van Wycke Expressway, 11420
+Comment:718 322 1095
+Time: Food Pantry: Wed 1pm-2pm, sat 12pm-1pm
+
+Name: Our Lady of Grace Parish Ministries
+Address: 158-10 101st Street, 11414
+Comment:718 845 6635
+Time: Food Pantry: tue, thu 10:30am-1pm ID required.
+
+Name: Brooks Memorial united Methodist Church
+Address: 143-22 109th Ave., 11435
+Comment:718 658 8822
+Time: Food Pantry: thu 6pm-8pm; 1st, 3rd sat 10am-12pm
+Comment:Photo ID required.
+
+Name: Blanche Memorial Church
+Address: 109-74 Sutphin Blvd., 11435
+Comment:718 298 8335
+Time: Food Pantry: tue 9am-9:45am
+Comment:ID required.
+
+Name: Christ Apostolic Church
+Address: 108-02 Sutphin Blvd., 11435
+Comment:718 658 8981
+Time: Food Pantry: sat 10am-12pm
+Comment:Clothing pantry, food stamps screening, and counseling services available.
+
+Name: ACQC (AIDS Center of Queens County), Jamaica
+Address: 89-74 162nd St., 11432
+Comment:718 896 2500
+Time: Food Pantry: tue, thu 8:30am-11am
+Comment:Get there early to get a ticket, first come first served, only 75 people will be served.
+Comment:ID required.
+
+Name: Salvation Army Jamaica Citadel
+Address: 90-23 161st  Street, 11432
+Comment:718 297 4860
+Time: Soup Kitchen: Mon-Wed 12pm-1pm
+Time: Food Pantry: thu 10am-11am
+Comment:For food pantry, must register in person for food pantry with valid photo ID and proof of address.
+Comment:Must register ahead of time on Mon, Tue, or Wed 2pm.
+
+Name: First Reformed Church of Jamaica
+Address: 159-29 90th Ave., 11432
+Comment:718 658 6333
+Time: Soup Kitchen:  Mon 5pm-6pm
+
+Name: First Presbyterian Church in Jamaica
+Address: 89-60 164th St., 11432
+Comment:718 526 4775 x29
+Time: Soup Kitchen: Wed 5:30pm-6:30pm Food Pantry: tue 10am-12pm; 4th sat 9am-11am
+Comment:Photo ID and proof of address required for pantry, clients can pick up once per month.
+
+Name: Presentation of the Blessed Virgin Mary
+Address: 88-19 Parsons Blvd., 11432
+Comment:718 739 0241
+Time: Soup Kitchen: thu 5:30pm-7pm
+
+Name: Jamaica Hispanic SDA Church
+Address: 88-28 161st St., 11432
+Comment:718 736 5291
+Time: Food Pantry: sun 8am-9am
+Comment:Sign in required.
+
+Name: First united Methodist Church of Jamaica
+Address: 162-10 Highland Ave, 11432
+Comment:718 739 2269
+Time: Food Pantry: Mon 8:30am-9:30am
+Comment:Current ID and proof of address required.
+Comment:Closed on holidays
+
+Name: St. Nicholas of Tolentine Church
+Address: 150-75 Goethals Ave., 11432
+Comment:718 969 3226
+Time: Food Pantry: Mon-Fri 9am-12pm, 1pm-4pm (referral required); thu 9am-12pm (no referral required)
+
+Name: Tabernacle of Prayer
+Address: 90-07 Merrick Blvd., between 90th & 91st, 11432
+Comment:718 657 4210
+Time: Food Pantry:  Fri 10am-11:15am
+Comment:ID required.
+
+Name: River Fund Mobile Unit - Queens
+Address: Rufus King Park, 150 St between 89 Ave. & Jamaica Ave., 11432
+Time: Food Pantry: 1st, 3rd tue 11am-12:30pm
+
+Name:
+Comment:Jamaica service Program for Older adults
+Address: 92-47 165th St., 11433
+Comment:718 657 6618
+Time: Food Pantry: Mon-Fri 8:30am-4:30pm
+Comment:Serves seniors (60+) but will provide pantry bag first time for those under 60 and refer to other pantries.
+
+Name: The Harding Ford Vision, Inc
+Address: 157-22 South Road, 11433
+Comment:347 661 7382
+Time: Soup Kitchen: Wed 10am-12pm.  Food Pantry: Wed 10am-12pm, sat 2pm-4pm
+Comment:Bring cart or bags.
+
+Name: St. Bonaventure-st. Benedict the Moor Food Pantry
+Address: 171-17 110th Avenue, 11433
+Comment:718 526 0040
+Time: Food Pantry: 2nd, 4th tue 10am-12pm
+Comment:ID required.
+
+Name: Bethany Baptist Church of Jamaica
+Address: 157-11 111th Ave, 11433
+Comment:718 659 1091
+Time: Soup Kitchen: Wed 12pm-3pm
+Time: Food Pantry: tue 11am-1pm
+
+Name: Calvary Baptist Church Food Pantry
+Address: 111-10 Guy R. Brewer Blvd., 11433
+Comment:718 523 8986
+Time: Food Pantry: Wed 10am-12pm, thu 11:30am-1:30pm
+Comment:ID required.
+
+Name: Greater Allen a.M.E. Cathedral of new York
+Address: 110-31 Merrick Blvd., 11433
+Comment:718 206 4600
+Time: Soup Kitchen: Mon, thu 11am-1pm
+Time: Food Pantry: Mon, thu 11am-1pm
+
+Name: 41 st. Clement Pope roman Catholic Church
+Address: 141-11 123rd Ave., 11436
+Comment:718 529 0273
+Time: Food Pantry:  1st, 3rd thu 5pm-6pm
+
+Name: Morris Brown AME Church - Helping Hand
+Address: 145-03 Rockaway Blvd., 11436
+Comment:718 322 7596
+Time: soup Kitchen: sat 1pm-2pm Food Pantry: Wed 10am-12pm
+Comment:ID preferred for pantry.
+
+Name: Union united Methodist Church
+Address: 126-22 150th Street, 11436
+Comment:718 529 3691
+Time: soup Kitchen: tue 6:30pm-7:30pm Food Pantry: Fri 4pm-5:30pm
+Comment:Call for emergency food.
+
+Name: Holy Ghost Upper Room Filling Station Ministry
+Address: 146-17 133rd Ave., 11436
+Comment:718 529 2060
+Time: Food Pantry: sat 10am-11am ID and proof of address needed for all household members.
+
+Name: National Sorority Phi Delta Kappa "Big sister"/Phi Delta Kappa ruby s. Couche Big sister Center
+Address: 117-08 Merrick Blvd., 11434
+Comment:718 723 1119
+Time: Food Pantry:  tue, thu 4pm-6pm
+
+Name: Christ Church International
+Address: 122-20 Merrill St., 11434
+Comment:516 860 4432
+Time: Food Pantry: 2nd, 3rd, 4th sat 10am-12pm
+Comment:ID required.
+
+Name: Project Hope Charities Inc.
+Address: 170-20 140th Ave., 11434
+Comment:718 529 0005
+Time: Food Pantry: sat 11am-1pm
+
+Name: Church of Christ the King Pantry
+Address: 145-39 Farmers Blvd., 11434
+Comment:718 528 6010
+Time: Food Pantry: tue 2pm-3pm
+Comment:ID preferred.
+
+Name: Walk in Love Family Center
+Address: 202-11 Jamaica Avenue, 11423
+Time: Food Pantry: Wed 1pm-3:30pm, thu 5pm-6:30pm, sun 1pm-3pm.
+Comment:Distribution is while supplies last.
+
+Name: Catholic Charities Church of the Incarnation/Incarnation Parish Pantry
+Address: 89-28 207th Street, 11427
+Comment:718 726 9790
+Time: Food Pantry: Fri 1pm-3pm
+Comment:ID required.
+
+Name: International Shining Stars Family Inc.
+Address: 220-20 94th Drive, 11428
+Address: 646 4097146
+Time: Food Pantry: sat 11am-3pm
+
+Name: Hollis Avenue Congregational Church
+Address: 211-04 Hollis Ave., 11429
+Comment:718 468 1498
+Time: Food Pantry: tue 11:30am-1pm
+Comment:ID preferred, serves residents of Hollis Ave/Cambria Heights.
+
+Name: Genesis transitional Housing Ministries Inc.
+Address: 195-12 Hollis Ave, 11412
+Comment:718 217 6530
+Time: Food Pantry: 2nd, 4th Fri 9am-1pm
+
+Name: Second Chance Deliverance Church
+Address: 200-12 Hollis Avenue, 11412
+Comment:917 767 6262
+Time: Food Pantry: tue 11am-2pm
+
+Name: Grace United Methodist Church
+Address: 200-08 Murdock Ave, 11412
+Comment:718 465 5621
+Time: Food Pantry: sat 1pm-finished
+
+Name:
+Comment:First Church of God in Christ
+Address: 187-10 Baisley Blvd., 11412
+Comment:718 712 4831
+Time: soup Kitchen: Wed 12pm-1:30pm Food Pantry: thu 1:30pm-3pm
+Comment:Photo ID required for pantry, tickets handed out at 12pm.
+
+Name: Our Lady of Light Food Pantry
+Address: 118-22 Riverton St., 11412
+Comment:718 528 1220
+Time: Food Pantry: every other Wed 12:30pm-1:30pm
+
+Name: St. albans Baptist Church
+Address: 196-20 119 Ave., 11412
+Comment:718 723 8005
+Time: Food Pantry: 1st, 3rd sat 10am-12pm
+
+Name: Queens Tabernacle Church
+Address: 114-03 Colfax St., 11411
+Comment:718 465 4448
+Time: Food Pantry: tue 3pm, sat 11am (often starts earlier in the winter)
+
+Name: Kerith SDA Church
+Address: 230-11 Linden Blvd., 11411
+Comment:917 523 7476
+Time: Food Pantry: Wed 5:30pm-7:30pm
+
+Name: Queens Faith temple Outreach Center
+Address: 217-03 Merrick Blvd., 11413
+Comment:917 603 9295
+Time: Food Pantry: sun 2pm-4pm
+
+Name: St. Luke Baptist Church Food Pantry
+Address: 133-28 232nd St., 11413
+Comment:718 276 7066
+Time: Food Pantry: Mon-Wed 9am-3pm; periodically open Thu, Fri - call/visit to confirm.
+
+Name: First Presbyterian Church of Springfield Gardens
+Address: 216-02 137th Ave., ramp to basement, 11413
+Comment:718 528 7744
+Time: Food Pantry: Wed 11am-12pm ID required.
+
+Name: Gethsemane soul saving Outreach
+Address: 145-41 228th Street, 11413
+Comment:917 519 6051
+Time: Food Pantry: Wed 1pm-2pm
+
+Name: St. Camillus RC Church
+Address: 99-15 Rockaway Beach Blvd., 11694
+Comment:718 634 8229
+Time: Food Pantry: Wed 10am-2pm ID required.
+Comment:Serves residents from Beach 95th St and above
+
+Name: Beach Church
+Address: 224 Beach 97th St., 11693
+Comment:718 634 2424
+Time: Food Pantry: sat 10am-2pm
+
+Name: Catholic Charities BFFY - St. Vincent de Paul at St. Rose of Lima
+Address: 130 Beach 84th Street, 11693
+Comment:718 634 7394
+Time: Food Pantry: tue, Fri 10am-12pm
+Comment:Must live between Beach 54th to Beach 94th St.
+Comment:Photo ID and proof of address required first visit.
+Comment:Can visit once/month.
+
+Name: The action Center Food Pantry
+Address: 57-10 Beach Channel Drive, 11692
+Comment:718 869 0031
+Time: Food Pantry: every other Wed 11:30am-12:30pm, sat 10am-1:30pm
+Comment:ID required for registration.
+
+Name: Full Gospel tabernacle Food Pantry
+Address: 361 Beach 42nd St., 11691
+Comment:718 327 2221
+Time: Food Pantry: 3rd sat 10am-12pm
+Comment:Photo ID required.
+
+Name: J.u.s.t.I.C.E. Organization/Jesus is Justice Mission Inc.
+Address: 219 Beach 28 St., 11691
+Comment:718 772 7951
+Time: Food Pantry: Wed 12pm-2pm
+
+Name: 71 	st. Mary star of the sea
+Address: 1920 New Haven Avenue, 11691
+Comment:718 327 1133
+Time: Food Pantry: tue or Fri 1pm-2:30pm Call to confirm day.
+Comment:Photo ID and proof of address required. 1st, 3rd week for non-seniors; 2nd, 4th week for seniors; 5th week open to all.
+
+Name: ACQC (AIDS Center of Queens County), Far rockaway
+Address: 1139 Foam Place, 11691
+Comment:718 868 8645
+Time: Food Pantry: Wed, Fri 1pm-3pm
+Comment:Can come once/month.
+Comment:Photo ID required.
+
+Name: Jewish Community Council of the rockaway Peninsula
+Address: 1525 Central Avenue, 11691
+Comment:718 327 7755
+Time: Food Pantry: tue, thu 9:30am-1:30pm ID required, can come once/month, serves residents of the Rockaways.
+
+Name: First Church of God
+Address: 21-23 Birdsall Ave., 11691
+Comment:718 327 1114
+Time: Food Pantry: 2nd, 4th Sat 1pm-3pm.
+
+Name: First Baptist Church/H.O. Scott Education and Community Center
+Address: 15-10 Redfern Avenue, 11691
+Comment:718 327 2208
+Time: Food Pantry: Mon, Wed 12pm-2pm
+
+Name: First Presbyterian russell sage Memorial Food Pantry
+Address: 896 Central Avenue, 11691
+Comment:718 909 5953
+Time: Food Pantry: sat 9am-10:30am
+Comment:Must be 18 yrs or older.
+
+Name:
+Comment:Sunset Park Emergency Food Program I The Centerfor Family Life
+Address: 443-39th St., 11220
+Comment:718 492 3585
+Time: Food Pantry: Tue 10am-1 pm; Wed, Thu 1 lam-1 pm
+Comment:ID required after first visit.
+
+Name: Salvation Army Sunset Park Corp.
+Address: 520 50th St., 11220
+Address: 718 4381771
+Time: Soup Kitchen: Mon-Fri 12pm-1 pm Food Pantry: Mon-Thu 1 :30pm-4:30pm, Fri emergencies only.
+Address: For pantry only: Appointment necessary, call or visit office Mon-Fri 9am-5pm first to make appointment. 10 and proof of residence in 11215, 11218-11220, 11231, 11232   required.
+Comment:No requirements for soup kitchen.
+
+Name: Basilica of our Lady of Perpetual Help
+Address: 526 60th Street, 11220
+Comment:718 439 5100
+Time: Food Pantry: 1st, 2nd Sat 10am-12pm
+Comment:Must live between Ft. Hamilton Pkway and the waterfront, from 54th St to 65th St.
+Comment:Photo ID and proof of address required for adults, birth certificate or health plus card for children.
+
+Name: Bay ridge Center
+Address: 411 Ovington Ave., 11209
+Comment:718 748 0650
+Time: Soup kitchen: Mon, wed 12pm - 2pm (brown bag meal)
+Time: Food Pantry: Last wed of the month 10am-3pm
+Comment:ID and proof of address in Brooklyn required for pantry.
+
+Name: Catholic Charities our Lady of Angels
+Address: 336 73rd St., 11209
+Comment:718 680 6344
+Time: Food Pantry: Mon, wed 9:30am-1:30pm
+Comment:ID required for all household members.
+Comment:Proof of residence in Brooklyn required
+
+Name: Zichron Acheinu Levy Menachem Tzion
+Address: 928 44th St., 11219
+Comment:718 774 0741
+Time: Food Pantry:  Fri 11:30am-12:30pm ID preferred.
+Comment:Call 347 742 0552.
+Comment:Must live in the neighborhood.
+
+Name: Masbia of Boro Park
+Address: 5402 New Utrecht Ave., 11219
+Comment:718 972 4446
+Time: Soup kitchen: Sun-Thu 6:30pm-8pm
+Time: Food Pantry: Fri 7am-11am.
+Comment:Meals are kosher.
+
+Name:
+Comment:Catholic Charities Holy Spirit Church
+Address: 1712 47th St., 11204
+Comment:718 436 5565
+Time: Food Pantry: every other Fri 9am-10:30am
+
+Name: reaching out Community Services Inc.
+Address: 7708 New Utrecht Ave., 11214
+Comment:718 373 4565
+Time: Food Pantry: Mon-Fri 9am-5pm
+Comment:Call first to confirm.
+Comment:SNAP assistance available - to apply bring photo ID, benefits card, and utility bill (any kind).
+Comment:Call first for appointment, 718 373 4565 ext 101.
+
+Name: bensonhurst CoJo / kosher Food Program
+Address: 8635 21st Ave., Ste. 1B, 11214
+Comment:718 333 1834
+Time: Food Pantry:Tue 10am-4pm
+Comment:All food is kosher.
+
+Name:
+Comment:Calvary Pentecostal Church
+Address: 151 Woodruff Ave., 11226
+Comment:718 469 8252
+Time: Food Pantry: Thu 11am-1pm
+Comment:Photo ID required.
+Comment:Can come to pantry twice per month.
+
+Name:
+Comment:FAoG Food Pantry Program
+Address: 2170 Bedford Ave., 11226
+Comment:718 974 0107
+Time: Food Pantry: Mon 12pm-2pm
+Comment:ID required.
+
+Name:
+Comment:CAMBA Beyond Hunger emergency Food Pantry
+Address: 2241 Church Ave., 3rd Floor, 11226
+Comment:718 282 3082
+Time: Food Pantry: Tue, Thu 10am-12:30pm
+Comment:ID required after first visit.
+Comment:Please bring your own bags and/or cart.
+Comment:Can visit once per month - 1st week last names A-F, 2nd week last names G-L, 3rd week last names M-S, 4th week last names T-Z.
+
+Name: Holy Cross Church Food Pantry
+Address: 2530 Church Ave., 11226
+Comment:718 469 5900
+Time: Food Pantry: Tue, Thu 2pm-3:30pm
+
+Name:
+Comment:Gospel Tabernacle Church of Jesus Christ
+Address: 2314 Snyder Ave., 11226
+Comment:718 284 3497
+Time: Food Pantry: every other Sat 10am-12pm, call to confirm week
+
+Name: Flatbush SDA Church
+Address: 261 East 21st  Street, 11226
+Comment:718 693 9180
+Time: Soup kitchen: Mon 11am-1pm
+Comment:ID required after first visit.
+
+Name: CAMBA
+Address: 1720 Church Ave., 2nd Fl., 11226
+Comment:718 287-2600
+Time: Food Pantry: Tue, wed, Thu 10am-1pm
+
+Name: Fernande Valme Ministries
+Address: 1120 Flatbush Ave, 11226
+Comment:718 284 1809
+Time: Food Pantry: Thu 10am-11am
+
+Name: Worldwide Evangelical Outreach
+Address: 3102 Clarendon Road, 11226
+Comment:718 284 3551
+Time: Food Pantry:  Thu 1pm-3pm
+Comment:Register first visit, can come every other week.
+
+Name:
+Comment:Hazel Brooks Senior Ctr.
+Address: 961 Ocean Ave., 11226
+Comment:347 435 3287
+Time: Soup kitchen: Mon-Fri 9am-10am, 12:30 pm-1:30 pm
+Comment:Free for seniors (60+).
+Comment:Under 60: $1 for breakfast, $4 for lunch.
+
+Name: Our Lady of refuge Pantry
+Address: 2020 Foster Ave., 11210
+Comment:718 434 2090
+Time: Food Pantry: wed 10am-1pm
+Comment:Bring photo ID.
+
+Name: Admirable Church
+Address: 1910 Flatbush Ave., 11210
+Comment:347 779 7192
+Time: Food Pantry: Sat 9am-12pm
+
+Name: Masbia of Flatbush
+Address: 1372 Coney Island Ave., 11230
+Comment:718 972 4446
+Time: Soup kitchen: Sun-Thu 3pm-7:30pm
+Time: Food Pantry: Fri 7am-11am
+Comment:Meals are Kosher
+
+Name:
+Comment:Shalom Senior Center
+Address: 483 Albany Ave., 11203
+Comment:718-774 9213
+Time: Food Pantry: Mon-Fri 2pm-3pm
+
+Name:
+Comment:Breakthrough Pantry/Triumphant Full Gospel Assembly
+Address: 889 Rutland Rd., 11203
+Comment:718 774 4696
+Time: Food Pantry: Thu 4pm-6pm
+Comment:Photo ID required. No pantry on holidays.
+
+Name:
+Comment:United Community Baptist kitchen
+Address: 545 Utica Ave., 11203
+Comment:718 467 7708
+Time: Soup kitchen: Sat 10am-12pm
+Comment:ucbonline.com
+
+Name:
+Comment:Society of St. Vincent de Paul at Saint Catherine of Genoa Church
+Address: 520 Linden Boulevard, 11203
+Comment:718 282 7162
+Time: Food Pantry: Thu 10:30am-2pm
+
+Name:
+Comment:God's Battalion Prayer Church
+Address: 661 Linden Blvd., 11203
+Comment:718 773 9249
+Time: Food Pantry: Tue, Thu 9am-12pm
+
+Name:
+Comment:Brooklyn Faith SDA Church
+Address: 5518 Church Avenue, 11203
+Comment:718 342 8421
+Time: Soup Kitchen: Fri 1pm until food runs out (by 4pm) Food Pantry: Thu 2pm-4pm
+
+Name: 16 Neighborhood Guide to Food and Assistance - Lower Brooklyn edition
+Comment:43 Bread of Life Food Pantry
+Address: 781 East 93rd Street, 11236
+Comment:347 955 4403
+Time: Food Pantry: Sat 1pm-3pm
+Comment:ID required.
+
+Name:
+Comment:44 Light House of Hope Food Pantry
+Address: 602 E. 89th St., 11236
+Comment:347 742 7651
+Time: Food Pantry: Sat 10am-1pm.
+Comment:ID required.
+
+Name:
+Comment:45 our Lady of Miracles Parish-Canarsie Food Pantry
+Address: 757 E. 86th St., 11236
+Comment:718 257 2400
+Time: Food Pantry: Sat 10am-11:30am
+Comment:ID required.
+
+Name:
+Comment:46 Zion Church of the Truth
+Address: 8315 Flatlands Ave., 11236
+Comment:718 241 8167
+Time: Food Pantry: Sat 1pm-3pm
+Comment:Must sign in and provide proof of household.
+
+Name: Sephardic Bikur Holim
+Address: 425 Kings Hwy, 11223
+Comment:718 787 1100 x354
+Time: Food Pantry: Mon 9am-12pm; Tue-Thu 9am-12:30pm; Thu 2pm­3:30pm, Fri 9am-11am Kosher food.
+Comment:ID required first time.
+
+Name: Salt and Sea Mission
+Address: 2417 Stillwell Ave., 11223
+Comment:718 372 3576
+Time: Food Pantry: Tue, Thu 12pm-2pm
+Comment:ID and proof of residence required.
+
+Name:
+Comment:River Fund Mobile Unit - Brooklyn
+Address: 2002 Neptune Avenue, 11224
+Time: Food Pantry: 2nd, 4th Sat 12pm-1:30pm
+
+Name:
+Comment:St. John's Bread and Life Mobile Soup kitchen - Coney Island
+Address: Corner of West 20th and Mermaid Ave., 11224
+Comment:Mobile Soup kitchen: Mon 10am-12pm, Thu 10:30am-12pm
+
+Name: Coney Island Lighthouse Mission
+Address: 2114 Mermaid Ave., 11224
+Comment:718 415 1170
+Time: Soup kitchen: wed, Fri 6:30pm-7:30pm Food Pantry: Tue 6pm-7pm, Thu 11am-12pm
+Comment:ID required for food pantry, must register beforehand.
+Comment:Registration Mon, Wed, Fri 10am-2pm.
+
+Name: Haber House Senior Center
+Address: 3024 W. 24th St., 11224
+Comment:718 372 5775
+Time: Food Pantry: Mon-Fri 9am-11:30am
+Comment:Upon availability - call first to confirm.
+Comment:ID required after first visit.
+Comment:Kosher.
+
+Name: Shorefront Jewish Community Council
+Address: 128 Brighton Beach Avenue, 4th floor, 11235
+Comment:718 743-0575
+Time: Food Pantry: Mon-Thu 9am-5pm, Fri 9am-2pm
+Comment:Food is kosher.
+
+Name: Catholic Charities St. Marks
+Address: 2609 E. 19th St., 11235
+Comment:718 891 0443
+Time: Food Pantry: Tue-Thu 9:30am-11:30am
+
+Name: kings Bay yM-ywHA
+Address: 3495 Nostrand Avenue, 11229
+Comment:718 648 7703
+Time: Food Pantry: Mon-Fri 9am-5pm
+Comment:Proof of address for all household members required.
+
+Name: Church of St. Paul the Apostle Loaves and Fishes
+Address: 405 West 59th Street, 10019
+Comment:212 265 3495
+Time: Soup Kitchen: Tue, Thu 11 :30am-12:15pm Food Pantry: Tue, Thu 11:30am-12:15pm
+
+Name: St. Paul's House
+Address: 335W. 51st St., 10019
+Comment:212 265 5433
+Time: Soup Kitchen: Mon, Wed, Fri 7:15am-8:30am Food Pantry: Tue 10am-11am
+Comment:Must live between 10th St. and 89th St. on the West Side.
+Comment: ID and proof of residence required for pantry.
+
+Name: Encore Senior Center
+Address: 239 W 49th Street, 10019
+Comment:212 581 2910
+Time: Soup Kitchen: Mon-Fri 9am-10am, 11am-1pm
+Comment:For seniors (60+) only.
+
+Name:
+Comment:Grand Central Food Program - 51st & Broadway
+Address: SW corner of 51st St. and Broadway, 10019
+Comment:212 776 2000
+Comment:Mobile Soup Kitchen: everyday 7:15pm
+Comment:Come on time - distribution is mobile.
+
+Name:
+Comment:Grand Central Food Program - SonY Building
+Address: 55th St. between Madison and 5th Ave., 10022
+Comment:212 776 2000
+Comment:Mobile Soup Kitchen: everyday 9:15pm
+Comment:Come on time - distribution is mobile.
+
+Name:
+Comment:Central Synagogue Breakfast Program
+Address: 123 E. 55th St, 10022
+Comment:212 838 5122
+Time: Soup Kitchen: thu, Fri 6am-7:30am
+Comment:Hot meal with bagged lunch to go.
+
+Name:
+Comment: St. Peter's Lutheran Church
+Address: 619 Lexington Ave. at 54th St, 10022
+Comment:212 935 2200
+Time: Soup Kitchen: tue 7am-8:30am
+Comment:Doors open at 7am, service starts at 7:15am.
+
+Name:
+Comment:Momentum Project at St. Peter's Lutheran Church
+Address: 619 Lexington Ave. at 54th St., 10022
+Comment:212 691 8100
+Time: Soup Kitchen: tue 4pm-6:30pm
+Comment:Clients must complete intake at 3pm.
+
+Name:
+Comment:Grand Central Food Program (Coalition for the homeless)
+Address: 108 E. 51st St, 10022
+Comment:212 776 2000
+Comment:Mobile Soup Kitchen: everyday 5:30pm-7pm
+Comment:At St. Bartholomew's Church
+
+Name: Crossroads Community Services at St. Bartholomew's Church
+Address: 108 E. 51st Street, 10022
+Comment:212 378 0231
+Time: Soup Kitchen: Sun, Mon, wed 7am-8:30am; Sat 9:30am-11am Food Pantry: thu 10am-2pm
+Comment:For pantry can come once/month, appointment required, call to make appointment 212-378-0234
+
+Name: St. Luke's Lutheran Church
+Address: 308 W. 46th St., 10036
+Comment:212 246 3540
+Time: Soup Kitchen: tue, thu 1pm-2pm
+
+Name: The Relief Bus - Port authority
+Address: 9th Ave. between 40th and 41st, 10036
+Comment:800 736 2773
+Time: Soup Kitchen: Sat 7:30pm-10:30pm
+
+Name: Crossroads Food Pantry
+Address: 329 W. 42nd St, 10036
+Comment:212 246 4732
+Time: Food Pantry: every other Sat 11am-1pm
+Comment:Proof of residence and income required.
+
+Name: The Dwelling Place of n.Y., Inc.
+Address: 409 W. 40th St., 10018
+Comment:212 564 7887
+Time: Soup Kitchen: wed 5:30pm-6:30pm
+Comment:For women age 30+ only.
+
+Name: Rauschenbusch Metro Ministries - Metro Baptist Church
+Address: 410 W. 40th St, 10018
+Comment:212 594 4464
+Time: Food Pantry: Sat 11am-11:30am (no pantry 5th Sat)
+Comment:One visit per month.
+Comment:ID and proof of address for all household members required.
+
+Name: Sylvia Tivera Food Pantry
+Address: 446 W. 36th St., 10018
+Comment:212 629 7440
+Time: Food Pantry: tue-Fri 2pm-3pm (snack bags); thu 9am-10am (groceries - for all); tue-Fri 2pm-3pm (groceries - for people living with AIDS); tue-Fri 10am-3pm emergency pantry
+Comment:Bring your own bag for pantry.
+
+Name: Grand Central Food Program - Port authority
+Address: 40th St., between Dyer and 10th Ave., 10018
+Comment:212 776 2000
+Comment:Mobile Soup Kitchen: everyday 7:30pm Come on time - distribution is mobile.
+
+Name: Gay Men's health Crisis
+Address: 446 West 33 Street, 10001
+Comment:212 367 1000
+Time: Food Pantry: tue, wed, Fri 1pm-4pm; thu 11am-2pm
+Comment:After first visit, must become a member - call 212 367 1057 to make an appt.
+
+Name: AIDS Service Center nYC
+Address: 64 W. 35th St., 3rd Fl., 10001
+Comment:212 645 0875
+Time: Food Pantry: Fri 10am-3pm ID required.
+
+Name: Grand Central Food Program - Penn Station
+Address: West side 8th Ave. at 33rd St., 10001
+Comment:212 776 2000
+Comment:Mobile Soup Kitchen: everyday 9pm Come on time - distribution is mobile.
+
+Name: The Relief Bus - Chelsea Park
+Address: 28th St., between 9th & 10th Ave., 10001
+Comment:800 736 2773
+Time: Soup Kitchen: wed, Fri 10am-2pm
+
+Name: Holy Apostles Soup Kitchen
+Address: 296 9th Ave., 10001
+Comment:212 924 0167
+Time: Soup Kitchen: Mon-Fri 10:30am-12:30pm
+Comment:Social Services Office open during Soup Kitchen hours with mail and phone facilities, free hair cut referrals, toiletries, and counselors.
+
+Name: St. Francis of assisi
+Address: 135 W. 31st St., 10001
+Comment:212 736 8500
+Time: Soup Kitchen: everyday 7am-7:30am (Sandwiches and coffee,line starts at around 6:30am) Food pantry: Fri, Sat 9am
+Comment:Must register for pantry by calling 212-471-4246.
+
+Name: Grand Central Food Program - Madison Square Park
+Address: 5th Ave. and 27th St., 10001
+Comment:212 776 2000
+Comment:Mobile Soup Kitchen: everyday 8:35pm
+Comment:Come on time - distribution is mobile.
+
+Name: New alternatives for Children
+Address: 37 West 26th Street, 6th Floor, 10010
+Comment:212 994 7919
+Time: Food Pantry: Mon, tue 2pm-5pm
+
+Name: Grand Central Food Program - 35th & FDr
+Address: 35th Street under FDR Drive, 10016
+Comment:212 776 2000
+Comment:Mobile Soup Kitchen: everyday 7:15pm
+Comment:Come on time - distribution is mobile.
+
+Name: 36 St. Peter's episcopal Church
+Address: 346 W. 20th St., 10011
+Comment:212 929 2390
+Time: Food Pantry: Sat 10:30am-11:30am
+Comment:Referrals requested when available.
+
+Name: Hope for our neighbors in need at Church of the Village
+Address: 201 W. 13 St., 10011
+Comment:212 243 5470
+Time: Soup Kitchen: tue 1pm-2:30pm, Sat 12pm-1:30pm Food Pantry: tue 1pm-2:30pm, Sat 12pm-1:30pm Doors open 30 minutes before food service begins.
+
+Name: Salvation Army New York Temple
+Address: 132 W. 14th St., 10011
+Comment:212 337 7469
+Address: Soup Kitchen: Mon-thu 12pm-1pm Food Pantry: Mon-Fri 9:30am-11am, 1:30pm-3pm. Food pantry requires photo ID and proof of address in 10002-10007, 10009-10014, 10038, 10041, 10047, or 10048   at first visit. Please call 212-337-7469 for an appt.
+
+Name: Xavier Mission at the Church of St. Francis Xavier
+Address: 55 W 15th St., 10011
+Comment:212 627 2100
+Address: Soup Kitchen: Sun 12:45pm-3pm Seniors and disabled line up on 15 St., all others on 16th St. (elevator for those unable to navigate stairs on 15th St) Food Pantry: 2nd Sat 10am-11:30am; Pantry is client choice; open only to residents of 10001-10003, 10009-10014, 10016  .
+Comment:ID and proof of address for all adult household members required for pantry.
+
+Name: Church of the Ascension
+Address: 12 West 11th St., 10011
+Comment:212 254 8620
+Time: Food Pantry: 2nd, 4th Sat 8:30am Arrive early to get in line.
+Comment:First come first served.
+Comment:Often 200+ people in line. Line up on north side of West 11th Street starting at 5th Ave.
+
+Name: Church of St. Joseph in Greenwich Village
+Address: 371 6th Ave, 10014
+Comment:212 741 1274
+Time: Soup Kitchen: Sat 1:30pm-3pm
+
+Name: Judson Memorial Church
+Address: 55 Washington Square South, 10012
+Comment:212 477 0351
+Time: Soup Kitchen: 1st wed 7:15pm Potluck meal, doors open 7pm, meal followed by a performance.
+
+Name: Hebrew Union College-Jewish Institute of religion
+Address: 1 West 4th St., 10012
+Comment:212 674 5300
+Time: Soup Kitchen: Mon 5pm-6pm Entrance on Mercer Street.
+Comment:During the school year, warm balanced meals, clothing, toiletries, music, and free legal advice from NYU law students inside.
+Comment:In summer months, service is 5pm-5:30pm outside.
+
+Name: New York City rescue Mission
+Address: 90 Lafayette Street, 10013
+Comment:212 226 6214
+Time: Soup Kitchen: everyday 6:30am-7am, 5pm-6:30pm Food Pantry: every other Mon, wed, Fri 1:30pm-2:30pm ID required for pantry.
+Comment:Medical and Social Worker (complete at front desk) Fri 7am-11am,
+Comment:SNAP and Medicaid Enrollment Mon, Wed 3pm-5:30pm; Fri 2:15pm-4pm,
+Comment:New women's shelter intake every day 3pm-4pm,
+Comment:New men's shelter intake every day 4pm-5:30pm
+
+Name: Grand Central Food Program - Lafayette & Leonard
+Address: Lafayette St. and Leonard St., 10013
+Comment:212 776 2000
+Comment:Mobile Soup Kitchen: everyday 7:45pm
+Comment:Come on time - distribution is mobile.
+
+Name: Village temple Soup Kitchen
+Address: 33 East 12th Street, 10003
+Comment:212 674 2340
+Time: Soup Kitchen: Sat 2:30pm-4pm
+
+Name: St. George's Common table
+Address: 209 East 16th Street, 10003
+Comment:646 723 4178
+Time: Soup Kitchen: thu 12pm-12:45pm Doors open at 11:30am.
+
+Name: The Hetrick-Martin Institute
+Address: 2 Astor Pl., 3rd Fl., 10003
+Comment:212 674 2400
+Time: Soup Kitchen: Mon-Fri 6pm-7:15pm; Sat 1pm-2pm, 4pm-5pm
+Comment:For youth only (13-24).
+Comment:Must complete intake to become client (Mon-Fri 5:30pm, Sat 12pm) with photo ID, proof of age.
+Comment:Provide academic enrichment, arts and culture, health and wellness, counseling, job readiness, and homeless services.
+Comment:www.hmi.org
+
+Name: Momentum Project at Middle Collegiate Church
+Address: 50 E. 7th St., 10003
+Comment:212 477 0666
+Time: Soup Kitchen: Mon 11am-1pm, 4pm-6:30pm Intake at 3pm for evening clients.
+
+Name: St. Joseph house/Catholic worker
+Address: 36 East 1st St., 10003
+Comment:212 254 1640
+Time: Soup Kitchen: tue-Fri 10am-11:30am
+Comment:Men only,
+Comment:Clothing rummage room Mon-Fri 2:30pm-4pm
+
+Name: Father's heart Ministries
+Address: 543-545 East 11th Street, 10009
+Comment:212 375 1765
+Time: Soup Kitchen: tue 6pm-7pm (only for KidZone attendees), Sat 10am-11am (except 1st Sat) Food Pantry: tue 6pm-6:30pm (only for KidZone attendees), Sat 10am-11am (except 1st Sat) SNAP (food stamps) pre-screening available.
+Comment:Free GED and ESL classes Sat 10am-11:30am, Tue 6pm-7:30pm;
+Comment:Legal aid desk 2nd Sat.
+
+Name: Chilis on wheels
+Address: Tompkins Square Park (E 9th St and Ave A), 10009
+Comment:303 618 0528
+Time: Soup Kitchen: Sat 1pm-3pm Clothing distribution once/month,
+Comment:Care package distribution seasonally.
+
+Name: Trinity Services and Food for the homeless
+Address: 602 E 9th St., 10009
+Comment:212 228 5254
+Time: Soup Kitchen: Mon-Fri 11am-12pm
+Time: Food Pantry: Mon-Fri 12:30pm-1:30pm
+Comment:ID for all household members required for pantry.
+Comment:Pantry is client choice, may be received once a calendar month.
+Comment:www.safhnyc.org
+
+Name: University Community Social Services
+Address: 137 East 2nd St., 10009
+Comment:347 850 2230
+Time: Soup Kitchen: Sat 8am-2:30pm  Food Pantry: Sat 1pm-2:30pm
+
+Name: The Bowery Mission
+Address: 227 Bowery, 10002
+Comment:212 674 3456
+Time: Soup Kitchen: everyday 8am-9am, 1pm-2pm, 6pm-7pm Food Pantry: Mon-Fri 9am-11am
+Comment:Other social services provided,
+Comment:Call or visit for details.
+
+Name: Grand Central Food Program - Bowery Mission
+Address: Bowery Mission-Bowery between Stanton & Rivington, 10002
+Comment:212 776 2000
+Comment:Mobile Soup Kitchen: everyday 8:20PM
+Comment:Come on time - distribution is mobile.
+
+Name: Grand Coalition of Seniors-Grand Street Settlement
+Address: 80 Pitt St, 10002
+Comment:646 201 4251
+Time: Soup Kitchen: Mon-Fri 9am-10 am, 12pm-1pm
+Comment:Seniors (60+) only,
+Comment:ID required.
+
+Name: Dewitt reformed Church Food Pantry
+Address: 280 Rivington St., 10002
+Comment:212 674 3341
+Time: Food Pantry: Mon, thu 10am-12pm
+
+Name:
+Comment: UJC of the east Side
+Address: 7 Willett St, 10002
+Time: Soup Kitchen: Mon-Fri 12pm-1pm, doors open 11:30am. Food Pantry: Mon-Fri 9:30am-2pm
+Comment:For seniors (60+) only.
+Comment:ID required.
+
+Name:
+Comment:Primitive Christian Church
+Address: 207 East Broadway, 10002
+Comment:212 673 7868
+Time: Food Pantry: 1st thu 8am-finish
+Comment:ID required.
+
+Name:
+Comment:Grand Central Food Program - Allen St.
+Address: 25 Allen St. (Lower East Side Harm Reduction), 10002
+Comment:212 776 2000
+Comment:Mobile Soup Kitchen: everyday 7:30pm
+Comment:Come on time - distribution is mobile.
+
+Name:
+Comment:Cabrini Immigrant Services of nYC
+Address: 139 Henry St., 10002
+Time: Food Pantry: tue 9:30am-12:30pm Bring photo ID.
+Comment:Emergency pantry walk-ins as necessary M-F 9am-5pm.
+
+Name:
+Comment:Trinity Church Brown Bag
+Address: 75 Broadway, 10271
+Comment:212 602 0800
+Time: Soup Kitchen: Sun 2pm, Mon-Sat 12:45pm-1:15pm (Fri and Sat at St. Pauls Chapel 209 Broadway)
+Comment:Brown bag meal.
+
+Name: Grand Central Food Program - Staten Island Ferry terminal
+Address: Staten Island Ferry, 10004
+Comment:212 776 2000
+Comment:Mobile Soup Kitchen: everyday 8:00pm
+Comment:Come on time - distribution is mobile.
+
+Name:
+Comment:City Harvest Mariner's Harbor Mobile Market
+Address: Basketball court at 22 Rockbury St., 10303
+Comment:646 412 0600
+Comment:Mobile Market Pantry: 1st Wed, 3rd Sat 9:30am-11 :30a
+Address: Open only to residents of the Mariner's Harbor Houses, Todt Hill or West Brighton Houses, Arlington Terrace Apartments, Zip codes 10302, 10303, 10310 and 10314   only.
+Comment:All food is fresh fruits and vegetables.
+Comment:Families must register to participate -bring proof of address and a photo ID.
+Comment:For further information on registration please call 646 412 0743. For information on available produce and dates of distribution, please call the MobileMarket Hotline at 866 444 0244.
+
+Name: Project Hospitality Mobile Pantry -St. Michael's Church
+Address: 207 Harbor Road, 10303
+Time: Food Pantry: 4th Sun 1 :OOpm Come on time, pantry is mobile.
+
+Name: Catholic Charities Mobile Food Pantry - anderson avenue
+Address: 120 Anderson Avenue, 10302
+Comment:718 448 5757 x17
+Time: Mobile Food Pantry: tue 1pm-3pm
+
+Name: Faith United Methodist Church
+Address: 221 Heberton Ave, 10302
+Comment:718 442 5684
+Time: Food Pantry: Call for an appt. Ask for Bill or Norcie Morris
+
+Name: Project Hospitality - el Centro de Hospitalidad
+Address: 1546 Castleton Ave, 10302
+Comment:718 815 5538
+Time: Food Pantry: thu 4pm-5:30pm, Sat 9am-10:30am
+Comment:Please bring your own bags.
+
+Name: Community Health action of Staten Island
+Address: 2134 Richmond Terrace, 10302
+Comment:718 808 1870
+Time: Food Pantry: tue 10am-2pm (Seniors' Day), Wed 12pm-4pm, Fri 2pm-6pm, Sat 10am-2pm
+Comment:Photo ID and proof of family size required. Please bring bags as they are not always available.
+
+Name: Rescue Ministries/Ministerio Rescate
+Address: 2083 Richmond Terrace, 10302
+Comment:718 448 4454
+Time: Soup Kitchen: tue, thu 11:30am-1pm  Food Pantry: tue, thu 8:30am-1pm
+Comment:Closed major holidays.
+
+Name: Salvation army Port Richmond Corps
+Address: 1295 Forest Ave, 10302
+Comment:718 442 2145 x203
+Time: Soup Kitchen: tue-thu 11:30am-1pm Food Pantry: Mon, tue, thu 10am-2pm
+Comment:Photo ID and proof of address required.
+Comment:Appointment necessary
+Comment:Pick up is once/month.
+Address: Serves zip codes 10301-10303, 10310, 10311, 10313, 10314  .
+
+Name: Project Hospitality Mobile Pantry - Shiloh AME Zion Church
+Address: 779 Henderson Ave., 10310
+Comment:718 447 0261
+Time: Food Pantry: 1st Sun 1:00pm
+Comment:Come on time, pantry is mobile.
+
+Name: Catholic Charities Mobile Food Pantry at St. Peter's Church
+Address: 53 St. Mark's Place, 10301
+Comment:718 448 5757
+Time: Mobile Food Pantry: tue 1pm-2pm
+
+Name: Council of Jewish Organizations
+Address: 382 Jersey St., 10301
+Comment:718 720 4047
+Time: Food Pantry: Mon, tue, thu, Fri 10am-2pm
+Comment:ID and proof of residence required.
+
+Name: New Brighton Church of God in Christ
+Address: 386 Jersey Street, 10301
+Time: Food Pantry: Sat 10am-1pm
+Comment:ID preferred.
+Comment:One bag of food per family.
+
+Name: Project Hospitality Mobile Pantry - Jersey St. & Benziger ave.
+Address: Jersey St. & Benziger Ave., 10301
+Time: Food Pantry: Mon 12:30pm
+Comment:Come on time, pantry is mobile.
+
+Name: Our Lady of Good Counsel Church
+Address: 42 Austin Place, 10304
+Comment:718 447 1503
+Time: Food Pantry: Sat 10am-11am
+Comment:Photo ID and proof of address for household members required first time.
+
+Name: Trinity lutheran Church
+Address: 309 St. Pauls Ave., entrance at 175 Beach St., 10304
+Comment:718 447 0526
+Time: Food Pantry: Sat 11am-1 pm Soup Kitchen: Sat 12pm-1 pm
+
+Name: Project Hospitality
+Address: 514 Bay St., 10304
+Comment:718 815 0800
+Time: Soup Kitchen: tue, thu 12pm-1pm Food Pantry: tue 9am-11am, 1pm-3pm; thu 9am-11am
+Comment:Photo ID and proof of address required, bring your own bags.
+
+Name: United Church of Praise Healthy Heart
+Address: 32 Sands Street, 10304   Food Pantry: Sun, Fri 1pm-3pm
+Comment:ID and proof of address for family members required.
+
+Name: Project Hospitality Mobile Pantry - Family Restoration Ministries
+Address: 70 Beach St., 10304
+Time: Food Pantry: 3rd Sun 9:30am
+Comment:Come on time, pantry is mobile.
+
+Name: Salvation army Stapleton
+Address: 15 Broad Street, 10304
+Comment:718 448 8480
+Time: Soup Kitchen: Mon, Fri 11:30am-1pm Food Pantry: tue-thu 12:30pm-3pm by appointment (appt. not needed first visit).
+Comment:ID with proof of address required.
+Comment:Closed all major federal holidays.
+
+Name: Catholic Charities/Rusty Staub Mobile Food Pantry at Immaculate Conception Church
+Address: 128 Targee St., 10304
+Comment:718 447 6330
+Time: Food Pantry: tue 10am-11am
+
+Name: Stapleton Union AME Church
+Address: 49 Tompkins Ave, 10304
+Comment:718 273 2857
+Time: Soup Kitchen: Mon 3pm-4pm, Wed 12pm-1pm Food Pantry: tue, Fri 10am-1pm
+Comment:ID required for all household members for pantry. Kids afterschool program Tue, Wed 3pm-5pm with pantry bag to take home after. Clothing distribution Thu 7am.
+
+Name: City Harvest Stapleton Houses Mobile Market
+Address: Tennis Courts behind 75 Hill Street in Stapleton Houses, 10304
+Comment:866 444 0244
+Comment:Mobile Pantry: 1st tue, 3rd Sat 9:30am-11:30am
+Address: Open only to participants in programs at the Stapleton Houses Sr Ctr, those w/ a student at ID, residents in Berry, Cassidy Coles, New Lane, Richmond Terrace, South Beach, or Stapleton Houses, or residents of 10301, 10304, 10305, 10310  .
+Comment:All food is fresh fruits and vegetables.
+Comment:Families must register to participate
+Comment:Bring proof of address and a photo ID.
+Comment:For further information on registration please call 646 412 0743.
+Comment:For information on available produce and dates of distribution, please call the MobileMarket Hotline at 866 444 0244.
+
+Name: Project Hospitality Mobile Pantry - Vanderbilt ave. Moravian Church
+Address: 285 Vanderbilt Ave., 10304
+Time: Food Pantry: thu 12:30pm
+Comment:Come on time, pantry is mobile.
+
+Name: Project Hospitality Mobile Pantry - African Refuge Center
+Address: 185 Park Hill Ave., 10304
+Time: Food Pantry: Wed 12:30pm
+Comment:Come on time, pantry is mobile.
+
+Name: Staten Island Liberian Community
+Address: 180 Park Hill Ave., Lobby C, 10304
+Comment:718 496 7492
+Time: Food Pantry: Wed 2pm-4pm
+Comment:ID preferred.
+
+Name: Christian Pentecostal Church
+Address: 910 Richmond Rd. (entrance in rear), 10304
+Comment:718 273 5850
+Time: Food Pantry: tue, Wed 6pm-8pm
+Comment:Photo ID required for registration.
+Comment:Serves residents of Staten Island.
+
+Name: All Saints Church episcopal Ministry
+Address: 2329 Victory Blvd., 10314
+Comment:718 698 1338
+Time: Food Pantry: Mon-Wed, Fri 10am-12pm
+
+Name: Jewish Community Center of Staten Island
+Address: 1466 Manor Rd., 10314
+Comment:718 475 5242
+Time: Food Pantry: Mon-thu 10:30am-6:30pm; Fri 10am-12pm All pantry pick-up by appointment only,
+Comment:ID required.
+
+Name: 	Project Hospitality Mobile Pantry - Our lady of lourdes Chapel
+Address: 130 Cedar Grove Ave., 10306
+Time: Food Pantry: 3rd Sun 10:30am
+Comment:Come on time, pantry is mobile.
+
+Name: 	St. edward's Food Pantry
+Address: 6581 Hylan Blvd., 10309
+Comment:718 984 1625
+Time: Food Pantry: Mon, Wed, Sat 10am-1pm
+Comment:Photo ID, proof of address and proof of household required first time.
+Comment:Can come to pantry once every two weeks.
+
+Name: 	St. Paul's Methodist Church South Shore Food Pantry
+Address: 7558 Amboy Road, 10307
+Comment:718 227 2485
+Time: Food Pantry: Wed, thu 9am-1pm
+Comment:Call first for appointment.
+Comment:Proof of address required.
+
+Name: Project Hospitality Mobile Pantry - St. Stephen's episcopal Church
+Address: 7516 Amboy Rd., 10307
+Time: Food Pantry: 2nd Sun 1:00pm
+Comment:Come on time, pantry is mobile.
+
+Name:
+Address: Greenpolnt Reformed Church 136 Milton Street, 11222
+Comment:718 383 5941
+Time: Soup Kitchen: Wed 6pm-7pm Food Pantry: Thu 8am-11am
+Comment:ID preferred for food pantry.
+
+Name: Southside United HDFC (Los Sures)
+Address: 145 S. 3rd St., Basement Office. 11211
+Comment:718 599 1940
+Time: Food Pantry: Tue 9am-5pm
+
+Name: St. John's Bread and Life Mobile Soup Kitchen
+Address: Division & Marcy 240 Division St. & Marcy Ave.. 11211
+Comment:Mobile Soup Kitchen: Wed 9:30am-11am
+
+Name: Transfiguration Church
+Address: 280 Marcy Ave., 11211
+Comment:718 782 8181
+Time: Food pantry: Mon-Fri 9am-12pm
+Comment:Photo ID required for registration (at 250 Hooper St).
+Comment:Food provided once a month.
+Address: Serves clients from 11211 and 11206  .
+
+Name: Act of Faith Ministries
+Address: 141 Manhattan Avenue, 11206
+Comment:718 570 8277
+Time: Food pantry: 1st, 3rd Thu 12pm-2pm
+
+Name: Trinity Human Services Corp.
+Address: 153 Johnson Avenue, 11206
+Comment:718 388 3176
+Time: Food pantry: Tue-Fri 9am-12pm (come early to line up), 1pm-4pm
+Comment:ID and proof of address required.
+
+Name: City Harvest Bed-Stuy Mobile Market
+Address: Handball court of the Tompkins Houses on Myrtle between Throop Ave and Tompkins, 11206
+Comment:Mobile Market pantry: 1st Sat, 3rd Wed 9:30am-11:30am.
+Address: Residents of Sumner, Tompkins, Marcy, 303 Vernon Houses and immediate neighbors in zip code 11206   only.
+Comment:All food is fresh fruits and vegetables.
+Comment:Families must register to participate - bring proof of address and a photo ID.
+Comment:For further information on registration please call 646 412 0743.
+Comment:For information on available produce and dates of distribution, please call the Mobile Market Hotline at 866 444 0244.
+
+Name: St. Stephen outreach
+Address: 874 Myrtle Ave., 11206
+Comment:718 384 5975
+Time: Soup Kitchen: Tue-Fri 11am-1pm Food pantry:  Wed, Fri 9am-10:30am
+Comment:Photo ID, proof of address, and proof of household required for pantry registration.
+
+Name: Black Veterans for Social Justice
+Address: 665 Willoughby Avenue, 11206
+Comment:718 852 6004
+Time: Food pantry: 2nd, 4th Fri 9am-3:30pm
+
+Name: Overcoming love Ministries - pulaski Family residence
+Address: 228 Pulaski St., 11206
+Comment:718 443 2267
+Time: Food pantry: Tue, Fri 1pm-2:30pm
+
+Name: 	Catholic Charities St. John's Food pantry
+Address: 75 Lewis Ave., 11206
+Comment:718 455 6864
+Time: Food pantry: Tue 8:30am-12pm
+
+Name: 	Cathedral of Joy CDC
+Address: 43 George Street, 11206
+Comment:718 386 8151
+Time: Soup Kitchen: Sat 9am-10:30am, Tue 9am-10:30am, 12pm-1pm Food pantry: Tue, Thu 9am-11:30am
+Comment:Photo ID and proof of address required.
+
+Name:  	St. John's Bread and life Mobile Soup kitchen - Maria Hernandez park
+Address: Starr St and Knickerbocker Ave, 11237
+Comment:Mobile Soup kitchen: Fri 1pm-2:30pm, except 1st Fri of month
+
+Name: 	Make the Road By Walking
+Address: 301 Grove St., 11237
+Comment:718 418 7690
+Time: Food pantry: Fri 8am-11am (or until finished)
+
+Name: 	First Presbyterian Church
+Address: 124 Henry St, 11201
+Comment:718 624 3770
+Time: Food pantry: Thu 10am-11am
+Comment:Client choice pantry, bring bags.
+Comment:Closed Thanksgiving.
+
+Name: Catholic Charities Brooklyn Community Center
+Address: 191 Joralemon St., 1st Floor, 11201
+Comment:718 722 6002
+Time: Food pantry: Thu 9:30am-12pm, 1:30pm-3pm
+Comment:ID required for all household members.
+Comment:Proof of residence in Brooklyn required.
+
+Name: Christian Fellowship life Center
+Address: 16 Fleet Walk, 11201
+Comment:718 314-1165
+Time: Food pantry: Thu 2pm-5pm
+Comment:ID required, can come once/month.
+
+Name: Food First
+Address: 165 Conover St., entrance on Wolcott St., 11231
+Comment:718 624 1950
+Time: Food pantry: Wed 11am-1pm, Fri 10am-12pm
+Comment:Photo ID required.
+
+Name: St. John's Bread and life Mobile Soup kitchen - Red Hook
+Address: 98 Richard St., 11231
+Time: Soup Kitchen: Fri 10:30am-12pm, except 1st Fri
+
+Name: CHIpS - park Slope Christian Help
+Address: 200 4th Ave., 11217
+Comment:718 237 2962
+Time: Soup Kitchen: Mon-Sat 9am-11am (light breakfast), 11:30am-1pm (hot meal), 1pm-3:30pm (sandwiches) Food pantry: Fri 1pm-3:30pm
+
+Name: Helping Hands Food pantry/St. Augustine Church
+Address: 116 Sixth Ave., 11217
+Comment:718 783 3132 x42
+Time: Food pantry: Sat 10am-12pm
+Address: Serves households with children, elderly, disabled in zip codes 11215, 11217, and 11238  .
+Comment:Bags are available every four weeks (size of bags determined by number of people in household).
+Comment:Registration with proof of ID and residence of all members required.
+Comment: Registration takes place in St. Monica Hall (under the church) on Sterling Place.
+Comment:  Bag delivery available for registered homebound clients in zip codes listed above.
+Comment:  Information on affordable housing, education, job training and placement, advocacy, and other community services is available.
+
+Name: Colony-South Brooklyn Houses
+Address: 297 Dean St., 11217
+Comment:929 352 8121
+Time: Food pantry: Wed 11am-1pm Referral and photo ID required.
+Comment:Emergency food available, holiday packages available.
+
+Name: Recovery House of Worship (rHoW)
+Address: 360 Schermerhorn St., 11217
+Comment:718 875 1858 x108
+Time: Soup Kitchen: Mon, Tue, Fri 9am-10am, doors open 8am Food pantry: 2nd, 3rd, 4th Sat 9am-10:30am
+Comment:ID preferred for food pantry.
+
+Name: Hanson place SDA
+Address: 150 South Portland Avenue, 11217
+Comment:718 230 0229
+Time: Soup Kitchen: Sun 1pm-2pm, Wed 11am-2pm Food pantry: Sun 4pm-6pm, Thu 3pm-5pm
+Comment:Photo ID required for pantry.
+Comment:Call in summer for pantry days/hrs.
+
+Name: Brooklyn Teen Challenge, Inc
+Address: 444 Clinton Ave., 11238
+Comment:718 789 1414
+Time: Soup Kitchen: Mon-Thu 3:30pm-4:45pm Food pantry: 1st, 2nd Sat 10am-12pm.
+
+Name: Brown Memorial Baptist Church
+Address: 52 Gates Ave, 11238
+Comment:718 638 6121
+Time: Food pantry: Tue 10am-12pm
+Comment:ID required.
+
+Name: Child Development Support Corporation
+Address: 352-358 Classon Avenue, 11238
+Comment:718 398 2050
+Address: Food pantry: Thu 12pm-2pm Serve zip codes 11205, 11216, 11238  .
+Comment:ID with proof of address required after first visit.
+Comment:Can come once a month.
+Comment:Other services include: child care resources and referral, parenting skills training, NYC Infant and Toddler Resource Center,  early childhood training for child care providers, food stamps application submission, and business attire for job readiness.
+
+Name: Hope City empowerment Center
+Address: 650-656 Washington Ave., 11238
+Comment:718 857 5698
+Time: Soup Kitchen: Tue, Thu, Fri 12:30pm-1:30pm; Sat 9am-11am Food pantry: every other Fri 9am-11am, call first to check dates
+
+Name: Church of God Feeding the Hungry
+Address: 836 Classon Ave., 11238
+Comment:718 230 5955
+Time: Food pantry: Thu 11:30am-1:30pm.
+
+Name: Full Gospel Food pantry
+Address: 131 Sullivan Place, 11225
+Comment:718 940 9687
+Time: Food pantry: Wed 5pm-6pm
+Comment:ID required.
+
+Name: Horeb Community Services
+Address: 520 Kingston Ave., 11225
+Comment:718 778 7373
+Time: Food pantry: Tue 12pm-1:30pm, occasionally begins distribution earlier.
+
+Name: New Haven SDA Church
+Address: 634 Prospect Place, 11216
+Comment:917 667 6378
+Time: Soup kitchen: Sun 11am-2pm Food pantry: every other Thu 11am-1:30pm
+
+Name: Family life Development Center
+Address: 1476 Bedford Avenue, 11216
+Comment:718 636 4938
+Time: Food pantry: Mon 4pm Must come with ID for ticket distribution at 9am - first 150 get bags.
+Comment:Additional 50 available afterwards on first come, first served basis.
+
+Name: Ebenezer Wesleyan Methodist Church
+Address: 47 Rogers St., Church Annex Building, 11216
+Comment:718 467 3624
+Time: Food pantry: Sat twice/month 8am-12pm
+Comment:ID required.
+
+Name: Bedford Central Presbyterian
+Address: 1200 Dean St., 11216
+Comment:718 467 0740
+Time: Food pantry: 1st, 2nd Thu 1pm-2:30pm Proof of address required.
+Comment:Tickets for pantry distributed 12pm.
+
+Name: Hebron SDA Church
+Address: 1256 Dean St., 11216
+Comment:718 778 6454
+Time: Soup Kitchen: Sun 12:30pm-2pm Food pantry: Wed 9am-10:30am, no distribution 5th Wed
+
+Name: Agape Social Services Beulah
+Address: 929 Marcy Ave. or 956, 11216
+Comment:718 636 8500 x16
+Time: Soup Kitchen: Wed 12pm-2pm Food pantry: 2nd, 4th Tue 10:30am-2pm
+Comment:ID required for pantry.
+
+Name: Stuyvesant Heights Christian Church
+Address: 69 MacDonough St., 11216
+Comment:718 783 5383
+Time: Food pantry: every other Thu 5pm-6pm
+
+Name: Newman Memorial MC
+Address: 257 Macon St., 11216
+Comment:718 622 7955
+Time: Soup Kitchen: Tue 9am-10:30am, 12pm-1:30pm Food pantry: Tue 10am-2pm
+Comment:Photo ID required for pantry, can come once/month.
+
+Name: Siloam presbyterian Church Food pantry
+Address: 260 Jefferson Avenue, 11216
+Comment:718 789 7050
+Time: Food pantry: Wed 10am, first come first served
+Comment:Photo ID and proof of address required.
+
+Name: St. George Episcopal Church
+Address: 800 Marcy Ave, 11216
+Comment:718 789 6036
+Time: Food pantry: Tue 10:30am-12pm
+
+Name: Salvation Army Bedford Temple Corps
+Address: 601 Lafayette Ave., 11216
+Comment:718 622 9020
+Time: Food pantry: Wed 10am-12pm Photo
+Comment:ID required, proof of address required first visit.
+
+Name: neBHDCo Golden Harvest Food pantry
+Address: 376 Throop Avenue, 11221
+Comment:718 453 9490 x224
+Time: Food pantry: Tue, Thu 10am-12pm
+Comment:ID and proof of household required first time.
+Comment:Client choice.
+Comment:Can come once/month.
+Comment:Referrals available for SNAP, legal services, tax preparation, health insurance, health and dental care, housing services, veterans services, free tax preparation, and workforce.
+
+Name: St. Philip's Christian Church
+Address: 765 Lafayette Ave., 11221
+Comment:718 453 0691
+Time: Food pantry: Thu 12pm-2pm
+Comment:ID required.
+
+Name: Open Door Family life Center
+Address: 999 Greene Ave., 11221
+Comment:718 455 3545
+Time: Soup Kitchen: Sun 9am-10:30am Food pantry:  Sat 8:30am-10:30am
+
+Name: St. John's Bread and life
+Address: 795 Lexington Avenue, 11221
+Comment:718 574 0058 x240
+Time: Soup Kitchen: Mon-Fri 8am-9:30am, 10:30am-12:30pm Food pantry: Mon-Thu 8am-11:30am; Tue, Thu 3pm-6:30; Fri 9am-11:30am
+Comment:Client choice pantry.
+Comment:Photo ID and proof of address requested for all members of household.
+
+Name: Brooklyn Rescue Mission Urban  Harvest Center Inc
+Address: 919 Gates Ave., 11221
+Comment:917 426 3001
+Time: Food pantry: Tue 11am-1pm, Thu 1pm-3pm
+Comment:By appointment only.
+Comment: Can visit once/month.
+
+Name: Salvation Army Bushwick
+Address: 1151 Bushwick Ave, 11221
+Comment:718 455 4102 x100
+Time: Soup Kitchen: Mon, Tue, Thu, Fri 12:30pm-2pm Food pantry: Mon, Tue, Thu, Fri 10am-12pm
+Comment:Photo ID and proof of address required for registration.
+Address: Serves residents of 11206, 11213, 11221, 11233, 11237  .
+
+Name: Trinity United Presbyterian Church
+Address: 243 Weirfield St., 11221
+Comment:718 574 6010
+Time: Food pantry: Thu 9am-11am, closed July and Aug
+
+Name: Church of God of Prophecy (Thurston Memorial outreach Ministries)
+Address: 1243 Bushwick Avenue, 11221
+Comment:718 452 3646
+Time: Soup Kitchen: Fri 5pm-7:30pm Food pantry: Fri 5pm-7:30pm
+
+Name: Cornerstone Baptist Church
+Address: 574 Madison Street, 11221
+Comment:718 574 5900
+Time: Food pantry: Tue 11am-12:30pm Arrive by 12:20pm.
+Comment:ID for adults and birth certificates for children required.
+
+Name: Bridge St. AME Missionary
+Address: 277 Stuyvesant Ave, 11221
+Comment:718 452 3936
+Time: Soup Kitchen: Wed 11am-1:30pm
+
+Name: Berean Baptist Church
+Address: 1635-49 Bergen St. (Dr. Hylton L. James Boulevard), 11213
+Comment:718 774 0466
+Time: Food pantry: For emergencies, by appointment only, call x118
+
+Name: Manna Ministries - The Church of God Seventh Day (pentecostal) Inc.
+Address: 922 St. Marks Avenue, 11213
+Comment:718 693 7968
+Time: Food pantry: Tue 4pm-6:30pm
+Comment:Photo ID and proof of address required.
+Comment:No Pantry on the 5th week of the month.
+
+Name: First Mary Magdalene Temple
+Address: 202 Albany Ave, 11213
+Comment:718 953 3048
+Time: Food pantry: 1st Tue 12pm until finished
+
+Name: Catholic Charities St. Gregory the Great
+Address: 244 Brooklyn Ave., 11213
+Comment:718 733 0100
+Time: Food pantry: Wed 1pm-3pm
+
+Name: Bethany United Methodist Church
+Address: 1208 St. John's Pl., 11213
+Comment:718 774 5689
+Time: Soup Kitchen: Tue 12:30pm-2:30pm
+
+Name: National Committee on the Furtherance of Jewish education
+Address: 824 Eastern Pkwy, 11213
+Comment:718 735 0200
+Time: Food pantry: Fri 12pm-1pm
+Comment:Photo ID required and must be a resident of community board 9 in Brooklyn.
+
+Name: Bible Faith Tabernacle Ministries
+Address: 1368 St. Johns Place, 11213
+Comment:718 467 3040
+Time: Food pantry: Wed or Thu 12pm-1:30pm Call to confirm which day.
+
+Name: St. Matthews Roman Church
+Address: 1351 Lincoln Pl., 4th Fl., 11213
+Comment:718 774 6747
+Time: Food pantry:  Tue 9am-12pm Ring buzzer.
+
+Name: St. Augustine American Catholic Church
+Address: 298 Schenectady Ave., 11213
+Comment:718 773 1338
+Time: Food pantry: Fri 1pm-3pm
+
+Name: Mt. Moriah Church of God in Christ
+Address: 1149 Eastern Pkwy, 11213
+Comment:718 953 4364
+Time: Food pantry: Sat 11am-12pm and emergency pick-up
+
+Name: St. Anthony Baptist Church
+Address: 425 Utica Avenue, 11213
+Comment:718 778 3459
+Time: Soup Kitchen: Tue-Thu 12pm-1:30pm
+
+Name: St. John's Bread and life Mobile Soup kitchen - Holy House of prayer
+Address: 1768 St. John's Place at Eastern Parkway, 11233
+Comment:Mobile Soup kitchen: Mon, Thu 1pm-2:30pm
+
+Name: God's Deliverance Temple
+Address: 438 Ralph Ave., 11233
+Comment:347 234 3828
+Time: Food pantry: Tue 11am-12pm
+Comment:ID required after first visit.
+Comment:Must be 18 yrs or older.
+
+Name: St. Mark's Church of Christ
+Address: 439 Ralph Avenue, 11233
+Comment:718 468 8643
+Time: Soup Kitchen: Mon, Wed, Fri 12pm-1pm
+
+Name: Calvary Fellowship AME Church
+Address: 790 Herkimer Street, 11233
+Comment:718 467 0987
+Time: Soup Kitchen: Tue 12:30pm-2pm
+
+Name: King emmanuel Community Services
+Address: 340-44 Malcolm X Blvd, 11233
+Comment:718 773 1650
+Time: Food pantry: Thu, Fri 10:30am-12pm
+
+Name: Union Baptist Church Community Feeding program
+Address: 461 Decatur St., 11233
+Comment:718 452 7248
+Time: Soup Kitchen: Wed 12pm-2pm Food pantry: Wed 12pm-2pm
+Comment:ID and proof of household required if family has 3+ children.
+
+Name: Chance for Children youth Information Center
+Address: 11 McKeever Place, Lower Level, 11233
+Comment:718 756 0968
+Time: Food pantry: Fri 10am-1pm
+
+Name: Bed-Stuy Campaign Against Hunger
+Address: 2004 Fulton St., 11233
+Comment:718 773 3551
+Time: Food pantry: Mon, Wed 10am-3pm; Tue, Thu, Fri 10am-6:30pm
+Comment:ID required.
+
+Name: Neighbors Together
+Address: 2094 Fulton St., 11233
+Comment:718 498 7256
+Time: Soup Kitchen: Mon-Fri 12pm-2pm; Mon-Thu 4pm-6pm; Fri 9am (seniors only) Social service hours: Mon-Fri 10am-3pm.
+Comment:Case managers provide numerous social services, including assistance with housing, public benefits, SNAP, taxes, health and mental health care, legal services, job training, and more.
+Comment:On-site clinics provide benefits, health and legal services.
+
+Name: True Holy Church of God and Christ Jesus
+Address: 2336 Atlantic Avenue, 11233
+Comment:718 385 0248
+Time: Food pantry:  Sat 10am-1pm
+Comment:ID required.
+
+Name: Mt. Hebron Food for life pantry
+Address: 167 Chester St., 11212
+Comment:646 220 1826
+Time: Food pantry: Sat 9am-10:30am
+Comment:Photo ID required.
+
+Name: St. James Holiness Church
+Address: 89 Legion St, 11212
+Comment:718 723 0138
+Time: Food pantry: Thu 10am-11am, Sun 3pm-4pm for emergencies, by appointment only
+Comment:Photo ID required.
+
+Name: Catholic Charities at Riverdale-Osborne Towers
+Address: 440 Watkins Street (between Riverdale and Osborne), 11212
+Comment:718 722 6001
+Time: Food pantry: Wed 9:30am-1pm
+Comment:ID required for all household members.
+
+Name: Brownsville SDA Church/ Food For Survival
+Address: 1085 Clarkson Ave., 11212
+Comment:718 345 3689
+Time: Food pantry: Sun 11am-1pm, Tue 12pm-2pm
+
+Name: Urban Strategies Inc
+Address: 61-71 Riverdale Avenue, 11212
+Comment:718 346 2118
+Time: Food pantry: Tue 8am-10am
+Comment:Photo ID required
+
+Name: The Hope Center Development Corporation
+Address: 409 E. 95th St, 11212
+Comment:718 385 7305
+Time: Soup Kitchen: Sat 11am-1:30pm Food pantry: Sat 11am-1:30pm
+Comment:Photo ID required first time.
+
+Name: Gethsemane Outreach Ministries Inc
+Address: 144 Newport St., 11212
+Comment:718 346 4899
+Time: Soup Kitchen: Fri 1pm
+
+Name: Salvation Army Brownsville Corps
+Address: 280 Riverdale Avenue, 11212
+Comment:718 345 7050
+Time: Food pantry: every other Fri 10am-12pm by appointment
+Comment:Photo ID, proof of address and proof of income required for registration.
+Comment:Emergency food available.
+
+Name: Our lady of Mercy roman Catholic Church
+Address: 680 Mother Gaston Blvd., 11212
+Comment:718 346 3166
+Time: Food pantry: Mon, Fri 9am-11am
+Comment:ID, proof of address and proof of household required.
+
+Name: Church of God of prophecy
+Address: 71 Malta St., 11207
+Comment:718 649 5533
+Time: Soup Kitchen: Tue 5:30pm - 7pm Food pantry: Tue 5:30pm - 7pm
+
+Name: East new york Wesleyan Church/new Hope Family Worship Center
+Address: 817 Livonia Ave, 11207
+Comment:718 342 1305
+Time: Soup Kitchen: Tue-Fri 12:30pm-2pm Food pantry: Sat 10am-12pm
+
+Name: Overcoming love Ministries - Liberty Cafe
+Address: 275 Liberty Ave., 11207
+Comment:718 235 1464
+Time: Soup Kitchen: Mon-Fri 10:30am-1:30pm
+
+Name: Love Fellowship Tabernacle
+Address: 464 Liberty Ave., 11207
+Comment:718 235 2266
+Time: Food pantry: Tue 2pm - 5pm
+Comment:Photo ID required for first visit.
+
+Name: Mt. Paran Baptist Church
+Address: 1665 Broadway, 11207
+Comment:718 443 8217
+Time: Soup Kitchen: Tue, Wed, Fri 12pm-1pm Food pantry: Tue 10:30am-11:30am
+Comment:ID required.
+
+Name: Family Service Network of new york
+Address: 1420 Bushwick Ave., 11207
+Comment:718 455 6010
+Time: Food pantry: Mon, Wed 9am-1pm
+Comment:ID and proof of Brooklyn address required.
+
+Name: Door to life Ministry Inc.
+Address: 155 Jamaica Ave., 11207
+Comment:718 484 7370
+Time: Food pantry: Wed 10am-12pm Clothing available
+
+Name: Overcoming love Ministries - Van Siclen Family residence
+Address: 246 Jamaica Ave., 11207
+Comment:718 235 1464
+Time: Food pantry: Mon, Thu-Sat 4:30pm
+
+Name: Iglesia Cristiana pentecostal la Hermosa
+Address: 3161 Fulton Street, 11208
+Comment:718 909 4525
+Time: Food pantry: every other Wed 11am-1pm
+Comment:ID required for registration.
+
+Name: Blessed Sacrament Church
+Address: 198 Euclid Avenue, 11208
+Comment:718 827 1200
+Time: Food pantry: every other Wed 11:30am-12:30pm
+Comment:ID preferred.
+Comment:Call first to confirm.
+Comment:All food is non-perishable.
+Comment:Come early to get a number and line up.
+
+Name: Las Maravillas Del exodo
+Address: 302 Elton St., 11208
+Comment:347 242 6337
+Time: Food pantry: Wed 11am-12pm
+Comment:Photo ID required.
+
+Name: Pentecostal Rescue House of prayer
+Address: 2415 Pitkin Avenue, 11208
+Comment:718 277 7315
+Time: Food pantry: Tue 9am-11am
+
+Name: Isaiah's Temple of Mt. Hope
+Address: 862 Glenmore Ave., 11208
+Comment:718 850 1499
+Time: Soup Kitchen: Tue 2pm-4pm (light lunch), Thu 2pm-4pm (hot meal) Food pantry: Thu 2pm-4pm
+
+Name: Second St. Paul Disciples of Christ
+Address: 1048 Sutter Ave., 11208
+Comment:929 370 7383
+Time: Food pantry: Sat 10am-11am
+
+Name:  St. John's Bread and life Mobile Soup kitchen - St. Gabriel's
+Address: Essex St. at New Lots Avenue, 11208
+Comment:Mobile Soup kitchen: Tue, Wed 1pm-2:30pm
+
+Name: Church of St. Paul the Apostle Loaves and Fishes
+Address: 405 West 59th Street, 10019
+Comment:212 265 3495
+Time: Soup Kitchen: Tue, Thu 11:30am-12:1 Spm Food Pantry: Tue, Thu 11:30am-12:1 Spm
+
+Name: Christ and St. Stephen's Church
+Address: 120 W. 69th St., 10023
+Comment:212 580 8179
+Time: Soup Kitchen: Mon-Fri 9:30am-10:30am
+Comment:Brown bag meal
+Comment:Including all holidays.
+
+Name: Blessed Sacrament Church
+Address: 14 7 W. 70th St., 10023
+Comment:212 877 3111
+Time: Soup Kitchen: Sun 2pm until done
+
+Name: National Council of Jewish Women
+Address: 241 West 72nd Street, 10023
+Comment:212 687 5030
+Time: Soup Kitchen: Wed 4:30pm-5:30pm, Sun 11:30am-12:30pm Food pantry: Mon 10am-2pm, start lining up at 9am
+Comment:Photo ID and proof of address for all household members required first time.
+
+Name: Rutgers Thursday Nighters
+Address: 236 West 73rd Street, 10023
+Comment:212 877 8227
+Time: Soup Kitchen thu 6pm-7pm,
+Comment:Movie follows at 7pm
+
+Name: Grand Central Food program - 79th St. Boat Basin
+Address: 79th St. Boat Basin - 79st St. at West Side Highway, 10024
+Comment:212 776 2000
+Comment:Mobile Soup Kitchen: every day 7:55pm
+Comment:Come on time - distribution is mobile.
+
+Name: St. Matthew's-St. Timothy's Church
+Address: 26 W. 84th St., 10024
+Comment:212 362 6750
+Time: Soup Kitchen: Sun 2pm-3pm, October to June
+Comment:First come, first served
+
+Name: Holy Trinity Church Breakfast Line
+Address: 213 W. 82nd St., 10024
+Comment:212 787 0634
+Time: Soup Kitchen: every day 8:30am-9am Food pantry: 3rd Sat 10:30am-11am
+
+Name: West End Collegiate Church
+Address: 245 W. 77th St. between Broadway & West End Ave., 10024
+Comment:212 787 1566
+Time: Soup Kitchen: tue 4:30-5:30
+Comment:Optional Bible Study and Prayer 4pm-4:30pm.
+Comment:Social Worker on site.
+Comment:Closed in August.
+
+Name: West Side Campaign Against Hunger
+Address: 263 W. 86th St., 10024
+Comment:212 362 3662
+Time: Food pantry: Mon 8am-6:30pm; Wed, thu, Fri 8am-3pm
+Comment:Photo ID required.
+Comment:Services for SNAP, SS, domestic violence, vocational training, ESL, HIV/AIDS support, child nutrition, health insurance enrollment, job placement assistance, homeless , legal assistance, mental health, and tax preparation available.
+
+Name: St. Ignatius of Antioch Episcopal Church
+Address: 552 West End Ave. at 87th St., 10024
+Comment:212 874 1050
+Time: Soup Kitchen: Mon 7pm, Sat 4pm
+Comment:Brown bag meal
+Comment: Arrive early as food goes fast.
+
+Name: The Judith Bernstein Lunch program
+Address: 257 West 88th St., 10024
+Comment:212 787 7600 x272
+Time: Soup Kitchen: thu 12pm-1pm Food is kosher.
+
+Name: Advent Lutheran Church
+Address: 2504 Broadway, 10025
+Comment:212 665 2504
+Time: Soup Kitchen: 4th Sat 12pm-1pm Food pantry: 1st Sat 12pm-1pm
+
+Name: Franciscan Community Center, Holy NAME Church
+Address: 207 West 96th Street, 10025
+Comment:212 749 0276
+Time: Food pantry: Mon 1pm-4pm
+Comment:Photo ID required.
+Comment:Clients may come once a month.
+Comment:Bring own bag/shopping cart.
+Comment:Intake by social worker required annually.
+
+Name: St. Michael's episcopal Church
+Address: 225 W. 99th St., 10025
+Comment:212 222 2700
+Time: Soup Kitchen: Sat 10am-11:30am
+Comment:Volunteers available for information on shelters, laundry.
+Comment:Medivan available outside
+
+Name: West End presbyterian Church
+Address: 165 W. 105th St, 10025
+Comment:212 663 2900
+Time: Food pantry: tue or thu once/month 11:30am-12:30pm
+Comment:Photo ID and referral required each time.
+Comment:Call to confirm day.
+
+Name: Southern Baptist Church
+Address: 12-16 W. 108 St., 10025
+Comment:212 678 9769
+Time: Soup Kitchen: Wed 12:30pm-1:30pm
+
+Name: Mother's Kitchen at ascension Church
+Address: 221 W 107th St, 10025)  (in basement of Ascension Church
+Comment:212 222 0666
+Time: Soup Kitchen: 1st Sat 11am-4pm
+
+Name: Grand Central Food program - Cathedral of St. John the Divine
+Address: 112th St. & Amsterdam, 10025
+Comment:212 776 2000
+Comment:Mobile Soup Kitchen: every day 8:30pm
+Comment:Come on time - distribution is mobile.
+
+Name: Cathedral Community Cares at Cathedral of St. John the Divine
+Address: 1047 Amsterdam Ave, 10025
+Comment:212 316 7581
+Time: Soup Kitchen: Sun 10am,12:30pm Take home bagged supper served after meal service has ended.
+
+Name: Broadway Community Inc
+Address: 610 W. 114th St., 10025
+Comment:212 222 6257
+Time: Soup Kitchen: Mon, Wed, Fri 10:30m-11:45am (doors open 10:15am), 12:30pm-2pm Food pantry: Mon 3pm (produce pantry, no referral required), emergencies Mon, Wed 4pm (referral required - see Hakim for referral Mon, Wed 10:30am-1:30pm, can come once/month).
+Comment:Showers, medical services, social services referrals and advocacy, and culinary training program available.
+
+Name: Community Impact
+Address: 616 W. 114 St., 10025
+Comment:212 854 6310
+Time: Food pantry: Mon, thu 12:30pm-2pm
+Comment:ID, proof of address and referral required after first visit for everyone in household.
+Comment:Serves residents of Manhattan.
+
+Name: Church of notre Dame
+Address: 405 West 114th St, 10025
+Comment:212 866 1500
+Time: Food pantry: tue 2pm-4pm
+Comment:ID required.
+
+Name: all Saints episcopal Church
+Address: 230 E. 60th St., 10022
+Comment:212 758 0447
+Time: Soup Kitchen: Sat 4:30pm-5:30pm
+
+Name: Christ Church United Methodist
+Address: 524 Park Avenue, 10065
+Comment:212 838 3036
+Time: Soup Kitchen: Sun 4:30pm-6:30pm
+
+Name: Temple Shaaray Tefila
+Address: 250 E. 79th St. (entrance on Second Ave), 10021
+Comment:212 535 8008
+Time: Soup Kitchen: Wed 9am-1pm, arrive at 11am
+Comment:Food is kosher.
+
+Name: Church of the epiphany
+Address: 1393 York Ave., 10021
+Comment:212 737 2720
+Time: Soup Kitchen: Wed 7pm (doors open 6pm, check-in 6:45pm
+Comment:Social worker available Wed 6pm-7pm.
+
+Name: Jan Hus Presbyterian Church homeless Outreach & advocacy program (hOap)
+Address: 351 E. 74th St., 10021
+Comment:212 288 6743
+Time: Soup Kitchen: tue 6pm, line up at 5:45pm.  Food pantry: Mon-Fri 10am-11:45am, 2pm-3:45pm.
+Comment:Bring your own bags.
+Comment:ID and proof of address required first time for pantry.
+Comment:Clothing available Mon, Wed, Fri 10am-11:45pm, 2pm-3:45pm.
+Comment:Mail distribution Mon-Fri 8am-5pm (registration required).
+Comment:Outreach office open Mon-Fri 10am-4pm.
+Comment:Shower facilities Tue, Thu 10am-11:45am, 2pm-3:45pm, towels, soap and shampoo
+Comment:provided.
+
+Name: The Carter Burden Luncheon Club
+Address: 351 E. 74th St., 10021
+Comment:212 535 5235
+Time: Soup Kitchen: Mon-Fri 12pm Arrive before 12:30pm, meals for seniors 60+.
+Comment:ID and proof of address required, must live between E. 70th and E. 79th St.
+
+Name: Grand Central Food program - Central Park
+Address: 5th Ave. and 72nd St., 10021
+Comment:212 776 2000
+Comment:Mobile Soup Kitchen: every day 9pm
+Comment:Come on time - distribution is mobile.
+
+Name: Madison avenue presbyterian Church
+Address: 921 Madison Ave., 10021
+Comment:212 288 8920
+Time: Soup Kitchen: thu 6:30 pm-7:30 pm
+Comment:No service on Thanksgiving.
+
+Name: 	Church of the holy trinity
+Address: 316 E. 88th St., 10128
+Comment:212 289 4100
+Time: Soup Kitchen: Sat 5:15pm-6pm (neighborhood meal)
+
+Name: 	Our Lady of Good Counsel
+Address: 230 East 90th Street, 10128
+Time: Soup Kitchen: Sat 6am-7:30am
+
+Name:
+Comment:Stanley M. Isaacs neighborhood Center
+Address: 415 E. 93rd St., 10128
+Comment:212 360 7620
+Time: Soup Kitchen: Mon-Fri 8:15am-9:15 am, 11:45am-12:30pm Must be member of a senior center, meals for seniors (60+) only
+
+Name: Children's aid Society-east harlem
+Address: 130 E. 101st St., 10029
+Comment:212 348 2343
+Time: Food pantry: Mon, tue 11:30am-1:30pm
+Comment:Call first to check availability of food
+
+Name: Catholic Charities St. Cecilia's parish Services
+Address: 125 East 105th St., 10029
+Comment:212 348 0488
+Address: Food pantry: Wed, thu 9:30am-11am Serves clients from zip codes 10029 10035  , case management services M-F 9am-5pm
+
+Name: Good neighbor presbyterian Church
+Address: 115 E. 106th St., 10029
+Comment:212 369 0505
+Time: Food pantry: 1st, 2nd thu 8am-11am
+Comment:Photo ID required
+
+Name:
+Comment:New York Common pantry
+Address: 8 E. 109 St., 10029
+Address: 9177209710
+Time: Soup Kitchen:  Mon-Fri 8am-9:15am; Mon, Wed, Fri 4:30pm-6pm Food pantry: Wed-Sat 10am-2:30pm, seniors only Mon 10am-2pm Intake for new pantry members Mon-Sat 9am-6pm, Sun, holidays 2pm-6pm.
+Comment:ID for all household members and proof of need required for intake. Pantry is client choice.
+
+Name: Mt. Zion AME Church
+Address: 1765 Madison Ave, 10029
+Comment:212 369 6643
+Time: Soup Kitchen: Wed 12pm-1pm Food pantry: Fri 10am-11am
+Comment:Photo ID and proof of address required.
+Comment:Can come to pantry once per month.
+Comment:SNAP application services available in English and Spanish.
+
+Name: Liberation healing pentecostal Church
+Address: 214 E. 111th St., 10029
+Comment:646 294 2306
+Time: Food pantry: Fri 11am, Sat 9am
+Comment:ID required.
+
+Name: Little Sisters of the Assumption Family health Service
+Address: 333 E. 115th Street, 10029
+Comment:646 672 5200
+Comment: Food pantry: Mon 9am-11am; tue 9am-11am, 1pm-3pm; Wed 1:30pm-3:30pm; thu 9am-11am,1pm-3pm
+Comment:  Clients can come once a month.
+Address: ID, proof of address in 10029 or 10025  , and proof of household composition required.
+Comment:Parenting and early childhood development program, nursing, environmental health, early intervention, advocacy, and preventive services available.
+
+Name: Fraternite Notre Dame
+Address: 2290 First Ave., 10035
+Comment:212 876 5855
+Time: Soup Kitchen: tue-Fri 10:30am-1pm Food pantry: Fri 2pm-4pm
+Comment:ID and proof of household required for pantry.
+Comment:Bring your own cart and bags for pantry.
+
+Name: Iris house east Side
+Address: 2271 2nd Ave, 10035
+Comment:212 423 9049
+Time: Food pantry: tue, thu 1pm-4pm Registration Mon, Wed, Fri.
+Comment:Emergency food available at other times.
+
+Name: Friendly Hands Ministry Inc.
+Address: 229 E. 118th St, 10035
+Comment:347 380 1436
+Time: Soup Kitchen: Mon, tue, thu 12pm-2pm Food pantry: Wed 9am-12pm
+Comment:ID required
+
+Name: Chambers Memorial Baptist Church
+Address: 219 E. 123rd St., 10035
+Time: Food pantry: Wed 10am-finish
+Comment:Must bring ID on Tue 12pm-1pm to register
+
+Name: Bailey house
+Address: 1751 Park Avenue, 3rd Floor, 10035
+Comment:212 633 2500 x363
+Comment: Food pantry: Wed 1:30pm-3pm Photo
+Comment:ID or Benefits card required.
+
+Name: Beth Hark Christian Counseling Center
+Address: 2-26 E. 120th St., 10035
+Comment:212 860 1520/1523
+Time: Soup Kitchen: Wed, thu 12pm-2pm Food pantry: tue 1pm-5pm
+Comment:Bring ID for first visit to pantry.
+Comment:Proof of address required for all members of household.
+Comment: Provide case management, pastoral care, advocacy, clothing closet, benefits screening, job placement assistance, volunteer income tax assistance.
+
+Name: Salvation Army Manhattan Citadel
+Address: 145 E. 125th St., 10035
+Comment:212 860 3200
+Time: Soup Kitchen: Mon-Fri 1pm Food pantry: Mon-Fri 9am-4pm
+
+Name: The Relief Bus - Harlem
+Address: Park Ave. between 124th and 125th, 10035
+Comment:Mobile Soup Kitchen: Fri, Sat 10am-2pm
+
+Name: First Corinthian Baptist Church
+Address: 1912 Adam Clayton Powell, Jr. Blvd., 10026
+Comment:212 864 5976
+Time: Food pantry: Fri 1pm-3pm, 3rd Sat 10am-12pm
+Comment:Photo ID with address required to register, registration only on 3rd Sat. No registration needed for fresh produce.
+
+Name: Project Create-Anthony House
+Address: 73 Lenox Ave., 3rd Fl., 10026
+Comment:212 663 1975
+Time: Food pantry: Wed 10am-12pm
+Comment:Photo ID required
+
+Name: Food Bank for nYC Community Kitchen
+Address: 252 W. 116 Street, 10026
+Comment:212 566 7855
+Time: Soup Kitchen: Mon-Fri 9am-10am (seniors only), 2pm-3pm (seniors only), 4pm-6pm (open to all) Food pantry: tue, thu, Fri 11am-3:30pm; Wed 1pm-8pm
+Time: Food pantry registration Mon, Tue, Thu, Fri 3:30pm-5pm, Wed 11am-1pm.
+Comment:ID and proof of address required for registration.
+Comment:Can come to pantry once/month.
+Comment:Tax assistance offered at 71 St. Nicholas Ave.
+
+Name: Mt. Olivet Baptist Church Community Meals program
+Address: 201 Lenox Ave, 10027
+Comment:212 864 1155
+Time: Soup Kitchen: Mon 12:30pm-1:30pm Food pantry: tue, Wed 10am-11am, line up at 9:30am
+
+Name: Emmaus House
+Address: 160 W 120 Street, 10027
+Comment:212 749 9404
+Time: Food pantry Sun 2pm-5pm
+Comment:Call for emergencies.
+Comment:ID required.
+
+Name: harlem Dowling West Side Center for Children and Family Services
+Address: 2090 Adam Clayton Powell Jr. Blvd, Suite 108, 10027
+Comment:212 749 3656
+Time: Food pantry: tue 12pm-2pm; Fri 2pm-4pm
+Comment:Photo ID with proof of address for household members required first time.
+
+Name: Harlem Community Nutritional Pantry
+Address: 132 W. 125 St., 10027
+Comment:212 666 7538
+Time: Food pantry: Mon-thu 10am-12pm
+Comment:ID and proof of household required after first visit.
+
+Name: Antioch Outreach Ministries
+Address: 41 W. 124th St., 10027
+Comment:212 534 5715
+Time: Food pantry: Sat 8:30am-10:30am
+
+Name: Shiloh Church of Christ
+Address: 5 -7 West 128 Street, 10027
+Comment:201 960 8100
+Time: Soup Kitchen: thu 12pm-2pm Food pantry thu 12pm-2pm
+
+Name: Christ temple of the apostolic Faith
+Address: 13-17 West 128th Street, 10027
+Comment:212 534 4832
+Time: Food pantry: Fri 2pm-3pm Closed July/August.
+
+Name: Department of probation Manhattan Office
+Address: 127 West 127th Street, 2nd Floor, 10027
+Comment:212 280 4804
+Time: Food pantry: Mon 11am-2pm Can come once every two weeks.
+
+Name: Salem United Methodist Church
+Address: 2190 Adam Clayton Powell Jr., Blvd., 10027
+Comment:212 678 2700
+Time: Soup Kitchen: Wed 12:30pm-2:30pm Food Pantry: Fri 11am-1pm.
+Comment:ID required.
+
+Name: Momentum project at St. Joseph of the holy Family
+Address: 405 West 125th Street, 10027
+Time: Soup Kitchen: Fri 11am-12:30pm, 3pm-5:30pm Intake at 2pm for afternoon clients.
+
+Name: St. Joseph of the holy Family
+Address: 405 West 125th Street, 10027   Food pantry: Sat 8am-12pm
+
+Name: The riverside Church Food pantry
+Address: 91 Claremont Avenue, 10027
+Comment:212 870 6733
+Time: Food pantry: tue-Fri 9:30am-1pm
+Comment:ID and proof of address required for all household members.
+Comment:Only serves the first 60 people.
+Comment: Only serves those who live between 96th - 179th on the West Side.
+
+Name: African Services Committee
+Address: 429 W. 127th St., 2nd Fl., 10027
+Comment:212 222 3882
+Time: Food pantry: Mon-Fri 9am-5pm Must have letterhead referral from an agency to receive a pantry
+Comment:ID card,
+Comment:Can come once/month.
+
+Name: St. Mary's episcopal Church
+Address: 521 West 126 Street, 10027
+Comment:212 864 4013
+Comment:Mobile Soup Kitchen: Sat 2pm-3pm, typical stops include 125th St under Metro North station and Marcus Garvey Park. Food pantry: Mon 4:30pm-6pm
+Comment:Photo ID and proof of address required for pantry.
+
+Name: Church of the annunciation
+Address: 88 Convent Ave., 10027
+Comment:212 234 1919
+Time: Food pantry: tue 10:30am-11:30am
+
+Name: Greater Central Baptist Church
+Address: 2152-58 5th Ave., 10037
+Comment:212 234 3828
+Time: Food pantry: Once a month, day varies 10am-finish
+Comment: Call first to get date or check sign posted outside church.
+
+Name: Rusty Staub Food pantry at the Joseph p. Kennedy Center
+Address: 34 West 134th St., entrance on Lenox Terrace off 135th St., 10037
+Comment:212 862 6401
+Time: Food pantry: Wed 2pm-5pm Serves residents of Harlem. Walk-in services for eviction prevention and youth services Mon-Fri 9am-5pm.
+Comment:Emergency food available through case managers.
+
+Name: St. Mark the evangelist Church
+Address: 65 W 138th St., 10037
+Comment:212 690 2763
+Time: Food pantry: Sat 10-11am (seniors); 12-1pm (adults)
+Comment:ID required.
+Comment:Must live in the area.
+
+Name: Salvation army harlem temple
+Address: 540 Lenox Avenue, 10037
+Comment:212 862 3900
+Address: Soup Kitchen: Mon-Fri 11:30am-12:30pm Food pantry: Mon-Fri 10am-3pm For pantry: serves residents of zip codes 10027-10045  .
+Comment:Referral, ID and proof of address required.
+Comment:By appointment only.
+
+Name: Grand Central Food program - harlem hospital
+Address: 137th St. and Lenox Ave., 10030
+Comment:212 776 2000
+Comment:Mobile Soup Kitchen: every day 8:45pm
+Comment:Come on time - distribution is mobile.
+
+Name: Iris house West Side
+Address: 2348 Adam Clayton Powell Blvd., 10030
+Comment:646 548 0100
+Time: Soup Kitchen: tue-Fri 12pm-1:30pm  Food pantry: thu 2pm-4pm.
+
+Name: St. Charles Borromeo Church
+Address: 211 West 141 Street, 10030
+Comment:212 281 2100
+Time: Food pantry: Sat 9am-10:30am
+Comment:Photo ID and proof of address required
+
+Name:
+Comment:Father Creavin's Food pantry - St. Charles Borromeo Church
+Address: 211 W. 141st, 10030
+Comment:212 281 2100
+Time: Food pantry: Sat 8:30am-10:30am
+Comment:Photo ID and proof of address required
+
+Name: Convent ave Baptist Church
+Address: 425 W. 144th St., 10031
+Comment:212 234 6767 x102
+Time: Food pantry: Mon, thu 9am-12pm
+Comment:Photo ID and proof of address required first time.
+
+Name: Greater tabernacle Baptist Church
+Address: 340 Convent Ave., 10031
+Comment:212 368 4754
+Time: Food pantry: Sat twice/month 9am-11am
+Comment:See website www.greatertabernaclebc.org or call for dates.
+
+Name: Upper Manhattan Mental health Center
+Address: 1727 Amsterdam Ave., 10031
+Comment:212 694 9200 x519
+Time: Food pantry: tue (seniors only 58+) 2pm-4pm; Wed, thu (families and singles) 2pm-4pm
+Comment:ID required, emergencies food available Mon-Fri 9am-5pm. Can come once a month (seniors twice)
+
+Name: Church of the Crucifixion
+Address: 459 W. 149 St., 10031
+Time: Food pantry: Wed 10am-1pm
+Comment:Referral and 2 forms of ID required
+
+Name: Union Baptist Church
+Address: 240 W. 145th St., 10039
+Comment:212 862 3002
+Time: Soup Kitchen: Wed 1:30pm-2:30pm
+
+Name: Father Creavin's Food pantry - 151st St.
+Address: 276 W. 151st St., 10039
+Comment:212 281 2100
+Time: Food pantry: tue 9am-10am, except 1st Tue of month
+
+Name: City harvest Washington heights - prince hall Mobile Market
+Address: 454 West 155th Street (St. Nicholas, curbside on 155th street), 10032
+Address: Mobile Market pantry: 2nd  thu, 4th  Sat 9:30am-11:30am Residents of 10032)  and members of the  Community League of the Heights (C.L.O.T.H.  only.
+Comment: All food is fresh fruits and vegetables.
+Comment: Families must register to participate - bring proof of address and a photo ID.
+Comment: For further information on registration please call 646 412 0743.
+Comment: For information on available produce and dates of distribution, please call the Mobile Market Hotline at 866 444 0244.
+
+Name: Community League of the heights
+Address: 508 W. 159th St., 10032
+Comment:212 795 4779
+Time: Food pantry: Wed, Sat 9am-11am
+Comment:Photo ID required. Can come once per week.
+
+Name: Catholic Charities Washington heights ecumenical Food pantry
+Address: 4111 Broadway, 10033
+Comment:212 795 6860
+Time: Food pantry: Wed, thu 2pm-3:30pm
+Comment:Photo ID and proof of address for all household members required for registration.
+
+Name: Jewish Community Council of Washington heights - Inwood
+Address: 121 Bennett Ave. #11A, 10033
+Comment:212 568 5450
+Time: Food pantry: tue-thu 11am-1pm
+Comment:Photo ID and proof of address required, clients must live in Inwood-Washington Heights.
+Comment:Each family unit can receive one food package per month.
+Comment: Kosher
+
+Name: new York City Love Kitchen
+Address: 3816 9th Ave., 10034
+Comment:212 942 4204
+Time: Soup Kitchen: Mon-Fri 4:30pm-6:30pm Food pantry: 1st, 2nd, 3rd thu 2pm-3pm
+Comment:Photo ID and proof of address required for pantry registration.
+
+Name:  City harvest Washington heights/Inwood Mobile Market
+Address: Dyckman Houses, walkway between Nagle and 10th Avenue, 10034
+Comment:Mobile Market pantry: 2nd Wed, 4th Sat 9:30am-11:30am
+Comment:Residents of the Dyckman Houses and members of the Dyckman Senior Center only.
+Comment:All food is fresh fruits and vegetables.
+Comment: Families must register to participate - bring proof of address and a photo ID.
+Comment: For further information on registration please call 646 412 0743.
+Comment: For information on available produce and dates of distribution, please call the Mobile Market Hotline at 866 444 0244.
+
+Name: Church of the Good Shepherd
+Address: 104 Cooper Street, 10034
+Comment:212 567 1300
+Time: Food pantry: Sat 7:30am-9am
+Comment:ID required.
+Comment: Call on Fri to confirm if pantry will be open.
+
+Name: St. Raphael's Food Pantry
+Address: 35-20 Greenpoint Ave., Rectory basement, 11101
+Comment:718 729 8957
+Time: Food Pantry: Thu 10:30am-12pm, Sat 1 :30pm-3pm.
+Comment:Photo ID required 1st time. Ory food only. Can come twice/month.
+
+Name:
+Comment:City Harvest Queensbridge Mobile Market
+Address: Basketball court behind 10-25 41 st Avenue, 11101
+Comment:646 412 0600
+Comment:Mobile Market Pantry: 2nd Tue, 4th Sat 9:30am-11 :30am
+Comment:Residents of the Queensbridge, Ravenswood Houses and members of the Jacob Riis Settlement House.
+Comment:All food is fresh fruits and vegetables.
+Comment:Families must register to participate -bring proof of address and a photo ID.
+Comment:For further information on registration please call 646 412 0743.
+Comment:For information on available produce and dates of distribution, please call the Mobile Market Hotline at 866 444 0244.
+
+Name:
+
+Name: Catholic Charities st. Patrick
+Address: 39-38 29th Street, 11101
+Comment:347 731 1065
+Time: Food Pantry: 2nd sat 10am-12pm
+
+Name: Iglesia Alianza Cristiana Misionera ebenezer
+Address: 43-02 38th St., 11101
+Comment:718 729 1944
+Time: Food Pantry: sat 11am-12pm, sun 3pm-4pm
+
+Name: sunnyside Community services
+Address: 43-31 39th Street, 11104
+Time: Soup Kitchen: Mon-sat 12pm-1pm For seniors (60+) only.
+
+Name: Hour Children Food Pantry
+Address: In parking lot on 11th St. between 36th & 37th Avenues (look for a green awning towards right), 11106
+Comment:718 482 8226
+Time: Food Pantry: Mon 2pm-4pm, tue 10:30am-12:30pm, thu 3pm-5pm
+Comment:Call before going.
+Comment:Photo ID and proof of address required first visit.
+Comment:Bring your own bag.
+
+Name: Goodwill tenant Association Inc.
+Address: 4-21 27th Ave, Community Room, 11102
+Comment:718 932 4200
+Time: Food Pantry: tue 2pm-4pm, seniors only; Fri 2pm-4pm open to all
+Comment:Photo ID with address required.
+
+Name: st. Margaret Mary Church Food Pantry
+Address: 9-18 27th Ave., 11102
+Comment:718 721 9020
+Time: Food Pantry: tue, Wed, Fri 11am
+Comment:Photo ID and proof of address required.
+Address: Serves residents of 11102  .
+
+Name: Catholic Charities Queens north Community Center
+Address: 23-40 Astoria Blvd., 11102
+Comment:718 726 9790
+Time: Food Pantry: tue, Fri 9:30am-12pm
+Comment:ID required for all household members.
+
+Name: City Harvest Astoria Mobile Market
+Address: Basketball court in Astoria Houses (4-20 Astoria Blvd.), 11102
+Comment:646 412 0600
+Address: Mobile Market Pantry: 1st sat, 3rd thu 9:30-11:30am Residents of zip code 11102   and Astoria Houses only.
+Comment:All food is fresh fruits and vegetables.
+Comment:Families must register to participate
+Comment:bring proof of address and a photo ID.
+Comment:For further information on registration please call 646 412 0743.
+Comment:For information on available produce and dates of distribution, please call the Mobile Market Hotline at 866 444 0244.
+
+Name: st. Joseph roman Catholic Church
+Address: 43-19 30th Avenue, 11103
+Time: Food Pantry: thu 8am-9:30am
+Comment:ID required.
+
+Name:
+Comment:new York school of urban Ministry
+Address: 31-65 46th Street, 11103
+Comment:718 204 6471
+Time: Food Pantry: Fri 10am-12pm
+Comment:ID preferred.
+
+Name:
+Comment:salvation Army Astoria Food Pantry
+Address: 45-18 Broadway, 11103
+Comment:718 721 9046
+Time: Food Pantry: Wed 8am-10am
+Comment:ID and proof of address required.
+
+Name:
+Comment:St. teresa Church saint Vincent DePaul society
+Address: 50-20 45th Street, 11377
+Comment:718 784 2123
+Time: Food Pantry: tue 6pm-7pm
+
+Name:
+Comment:Blessed Virgin Mary/st. Mary's Church Winfield
+Address: 70-31 48th Ave, 11377
+Time: Food Pantry: thu 9:30am-12pm
+
+Name:
+Comment:ACQC (AIDS Center of Queens County), Woodside
+Address: 62-07 Woodside Ave., 3rd Floor, 11377
+Comment:718 472 9400
+Time: Food Pantry: tue, thu 10am-12pm Arrive early to get a ticket..
+Comment:Photo ID required.
+
+Name: st. John's Bread and Life Mobile Soup Kitchen - Woodside
+Address: 65th & Broadway, 11377
+Comment:718 574 0058
+Comment:Mobile Soup Kitchen: tue 9:30am-11am
+
+Name: Corpus Christi Food Pantry
+Address: 31-31 60 Street, 11377
+Comment:718 278 8114
+Time: Food Pantry: Wed 11am-1pm
+Comment:Photo ID and proof of address required for first visit.
+
+Name: Atonement Lutheran Church
+Address: 30-61 87th St., 11369
+Comment:718 639 6074
+Time: Food Pantry: thu 9am-10am www.alcqueens.com
+
+Name: First Baptist Church
+Address: 100-10 Astoria Blvd., 11369
+Comment:718 446 0200
+Time: Soup Kitchen: Wed 12pm-2pm Food Pantry: sat 12pm-3pm Closed in July and August.
+
+Name: st. Mark AME Church - the Voices of Hagar Food Pantry
+Address: 95-18 Northern Blvd., 11372
+Comment:718 205 0506
+Time: Food Pantry: tue 12pm-3pm
+Comment:Closed July and Aug, reopens after Labor Day.
+Comment:Photo ID required; will be served without first time but must bring one next time.
+
+Name: salvation Army-Queens temple
+Address: 86-07 35th Ave., 11372
+Comment:718 335 3693
+Time: Soup Kitchen: tue-thu 12pm-1pm  Food Pantry: Wed 9am-10am
+Comment:ID and proof of address required for pantry.
+
+Name: Mt. Olivet Gospel Church
+Address: 33-27 97 St., 11368
+Comment:718 478 0780
+Time: Food Pantry: Wed 5:30pm-6:30pm
+Comment:ID required, bring bags, client choice.
+
+Name: elmcor Youth & Adult Activities Inc
+Address: 107-20 Northern Blvd., 11368
+Comment:718 651 0096
+Time: Food Pantry: Wed 1pm Tickets distributed 6am-7am.
+Comment:No ticket required if you have a referral.
+Comment:First 50 people served.
+
+Name: Mt. Horeb Baptist Church
+Address: 109-20 34th Ave., 11368
+Comment:718 639 9066
+Time: Soup Kitchen: tue 12pm-2pm
+
+Name: Corona SDA Church
+Address: 35-30 103rd Street, 11368
+Comment:718 429 7050
+Time: Soup Kitchen: sun 12pm-2pm
+Time: Food Pantry: Mon 9am-11am
+
+Name: evangelical Church Christ is the Light, Inc
+Address: 89-16 48th Ave, 11373
+Comment:347 742 7614
+Time: Food Pantry: Fri 9am-11am Pantry is client choice. Bring your own bag.
+
+Name: new Life Food & Clothing Pantry
+Address: 82-10 Queens Blvd, 11373
+Comment:718 424 0122
+Time: Soup Kitchen: tue, thu 6pm-8pm, sat 10am-12pm  Food Pantry: tue 6pm-8pm, sat 10am-12pm
+Comment:Photo ID required. Soup Kitchen for homeless.
+Comment:Inside New Life Fellowship Church, located in Old Elks Club.
+
+Name: Jewish Institute of Queens
+Address: 60-05 Woodhaven Blvd., 11373
+Comment:718 426 9369 x229
+Time: Food Pantry: Fri 10:30am-12pm
+
+Name: 	La Jornada
+Address: 135-32 38th Ave., 11354
+Comment:917 880 5693
+Time: Soup Kitchen: sat 12pm-2pm  Food Pantry: Wed 1pm-3pm
+Comment:ID required after first visit.
+
+Name: south Asian Council for social services (sACss) south Asian Food Pantry
+Address: 143-06 45th Ave., 11355
+Comment:718 321 7929
+Time: Food Pantry: Fri 11am-4pm
+
+Name: st. Michael's Church Food Pantry
+Address: 136-76 41st Ave., 11355
+Comment:718 353 4180
+Time: Food Pantry: tue, Wed 9:30am-12pm, thu 9:30am-1pm
+
+Name: 	Murray Hill neighborhood Association/emmanuel Community Church
+Address: 150-20 Barclay Ave., 11355
+Comment:718 762 5905
+Time: Food Pantry: sat 11am-12pm
+Comment:Entrance at 41-54 Murray St.
+
+Name: 	Grace episcopal Church/Flushing JCC Food Pantry
+Address: 14-15 Clintonville St., 11357
+Comment:718 699 1010
+Time: Food Pantry: Mon 5pm-6pm, Fri 10am-11am
+
+Name: 	Forest Hills senior Center/Queens Community House
+Address: 108-25 62nd Drive, 11375
+Comment:718 699 1010
+Time: Food Pantry: thu (except 1st Thu of month) 8:30am-9:30am
+Comment:Only for those disabled, on Medicaid, or unemployed and their children.
+
+Name: Catholic Charities Our Lady of the Angelus
+Address: 63-63 98th Street, 11374
+Comment:718 897 4444
+Time: Food Pantry: 1st sat 10am-11:30am
+
+Name: Masbia of rego Park
+Address: 98-08 Queens Blvd., 11374
+Comment:718 972 4446
+Time: Soup Kitchen: sun-thu 2pm-5pm (dinner to go)  Food Pantry: Fri 7am-11am Meals are Kosher.
+
+Name: Central Queens Y/esther Grunblatt russian service Center
+Address: 66-05 108th St. (early 2017)/67-09 108 St. (later 2017), 11375
+Comment:718 268 5011
+Time: Food Pantry: every other Wed 9am-2pm Emergency food available other days 9am-2pm at 67-09 108th St.
+Comment:Bring proof of need such as Medicaid card, EBT card, proof of unemployment.
+Comment:Call to confirm location.
+
+Name: Kehilat sephardim of Ahavat Achim
+Address: 150-62 78 Rd., 11367
+Comment:718 591 9574
+Time: Food Pantry: Mon, Wed 10am-2pm; sun 10am-4pm
+Comment:Photo ID and proof of address required.
+Comment:Food is kosher.
+Comment:http:// www.KehilatSephardim.org
+
+Name: Our Lady of the Miraculous Medal
+Address: 62-81 60th Place, 11385
+Comment:718 366 3360
+Time: Food Pantry: Mon-Fri by appt. only, for emergencies
+
+Name: the salvation Army ridgewood Citadel Corps
+Address: 69-23 Cypress Hills St., 11385
+Comment:718 497 4356
+Time: Food Pantry:  Wed 10am-1pm, by appointment Must live in area.
+Comment: For appointments please bring photo ID, proof of address, and proof of income.
+Comment:  If you have children under 18 years old please bring their birth certificate.
+
+Name: Ridgewood Older Adult Center and services
+Address: 59-14 70 Avenue, 11385
+Comment:718 456 2000
+Time: Food Pantry: tue-thu 10:30am-12:30pm
+Comment:Photo ID and proof of address required.
+Comment:Serves residents of Community Board 5.
+
+Name: Agape Christian Center
+Address: 5902 Summerfield St., 11385
+Comment:718 635 0674  Soup Kitchen: sat 12pm-2pm
+Time: Food Pantry: sat 12pm-2pm
+
+Name:
+Comment:Sacred Heart r.C.
+Address: 77-05 84th St. (enter through entrance on 77th Ave. between 84th and 85th), 11385
+Comment:718 821 3285
+Time: Food Pantry: Mon-thu 9am-4pm Open to Glendale residents only.
+Comment:Proof of address, photo ID, and proof of SNAP required.
+Comment:Follows Catholic school schedule - closed summers, winter break, spring break.
+
+Name:
