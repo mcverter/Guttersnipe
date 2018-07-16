@@ -10,16 +10,31 @@ import PropTypes from 'prop-types';
 
 const FTK = () => {
     return (
-        <View>
-          <Text>!!!!!!!!!!</Text>
-          <Text> !! FOR !!</Text>
-          <Text> !! THE !!</Text>
-          <Text>!! KIDS !!</Text>
-          <Text> !!!!!!!!!!</Text>
+        <View style={styles.ftkContainer}>
+          <Text style={styles.ftkText}>!!!!!!!!!</Text>
+          <Text style={styles.ftkText}> !! FOR !!</Text>
+          <Text style={styles.ftkText}> !! THE !!</Text>
+          <Text style={styles.ftkText}>!! KIDS !!</Text>
+          <Text style={styles.ftkText}> !!!!!!!!!!</Text>
         </View>
     );
 };
 const styles = StyleSheet.create({
+  ftkText: {
+    color: 'red',
+    fontStyle: 'italic',
+    fontWeight: 'bold',
+    fontSize: 10
+  },
+  ftkContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    borderColor: 'purple',
+    borderWidth: 1,
+    borderRadius: 5,
+    padding: 2,
+    margin: 2
+  }
 
 });
 
