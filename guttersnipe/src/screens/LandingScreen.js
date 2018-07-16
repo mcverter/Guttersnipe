@@ -25,11 +25,6 @@ class LandingScreen extends Component {
     const navigation = this.props.navigation;
     return (
       <View style={styles.landingScreenContainer}>
-        <View style={styles.landingScreenTitle}>
-          <PageTitle>
-            <Text>Welcome to Guttersnipe</Text>
-          </PageTitle>
-        </View>
         <View style={styles.searchShareablesButton}>
           <Button
             color="#910f0f"
@@ -47,11 +42,8 @@ class LandingScreen extends Component {
         </View>
         }
         <TouchableOpacity
-          style={styles.shareablesFTK}
-        onPress={() => navigation.navigate('AboutScreen')}
-        >
-          <FTK
-          />
+        onPress={() => navigation.navigate('AboutScreen')} >
+          <FTK style={styles.shareablesFTK}/>
         </TouchableOpacity>
       </View>
     );
@@ -64,7 +56,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center'
   },
-  shareablesFTK: {},
+  shareablesFTK: {
+    alignItems: "center",
+    color: 'red'
+  },
   landingScreenTitle: {},
   searchShareablesButton: {},
   createShareablesButton: {}

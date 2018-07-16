@@ -8,15 +8,15 @@ import {
 
 import PropTypes from 'prop-types';
 
-const FTK = () => {
+const FTK = (props) => {
     return (
-        <View style={styles.ftkContainer}>
-          <Text style={styles.ftkText}>!!!!!!!!!</Text>
-          <Text style={styles.ftkText}> !! FOR !!</Text>
-          <Text style={styles.ftkText}> !! THE !!</Text>
-          <Text style={styles.ftkText}>!! KIDS !!</Text>
-          <Text style={styles.ftkText}> !!!!!!!!!!</Text>
-        </View>
+        <Text style={props.style}>
+          !!!!!!!!!{"\n"}
+           !! FOR !!{"\n"}
+           !! THE !!{"\n"}
+          !! KIDS !!{"\n"}
+           !!!!!!!!!!
+        </Text>
     );
 };
 const styles = StyleSheet.create({
