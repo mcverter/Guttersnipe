@@ -38,3 +38,6 @@ yarn-error.log
 yarn.lock
 client/yarn.lock
 
+android/app/build/
+guttersnipe/android/.gradle/
+guttersnipe/android/app/build/
