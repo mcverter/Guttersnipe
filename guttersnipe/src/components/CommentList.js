@@ -9,13 +9,20 @@ import {
 import Comment from './Comment'
 
 import PropTypes from 'prop-types';
-import comments from "../../redux/store/comments";
+//import comments from "../../redux/store/comments";
 
-console.log("static comments", comments);
+//console.log("static comments", comments);
 
 const CommentList = (props) => {
   const comments = props.comments;
   console.log('prop comments', comments);
+  if (!comments || comments.length < 1) {
+    return (
+      <View>
+        <Text>No Comments</Text>
+      </View>
+    )
+  }
   return (
     <View>
       <FlatList

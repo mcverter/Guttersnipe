@@ -35,14 +35,14 @@ class Map extends React.Component {
             console.log('coordinate', coordinate);
              return (
               <Marker
-                key={s.id}
+                key={`${s.name}${s.longitude}${s.latitude}`}
                 coordinate={coordinate}
                 title={s.name}
                 description={'Click for details'}>
                 <Callout
                   onPress={()=>{
                     navigation.navigate('ShareableDetailScreen', {
-                      id: s.id,
+                      shareable: s,
                       zoom: 4
                     })}}/>
               </Marker>

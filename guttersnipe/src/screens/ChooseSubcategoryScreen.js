@@ -51,7 +51,10 @@ class ChooseSubcategoryScreen extends Component {
   }
 }
 const styles = StyleSheet.create({
-  chooseSubcategoryScreenContainer: {},
+  chooseSubcategoryScreenContainer: {
+    backgroundColor: 'red',
+    height: '100%'
+  },
   chooseSubcategoryButton : {}
 });
 

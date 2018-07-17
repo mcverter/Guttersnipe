@@ -10,7 +10,9 @@ import {
 import Shareable from '../components/Shareable';
 import Utils from '../utils'
 
-import {allShareableListItems as shareables}  from '../../redux/store/shareables';
+// import {allShareableListItems as shareables}  from '../../redux/store/shareables';
+
+import geoShareables from '../../redux/store/geocodedJSON';
 
 class ShareableListScreen extends Component {
   static navigationOptions = {
@@ -23,6 +25,8 @@ class ShareableListScreen extends Component {
 
   render() {
     const navigation = this.props.navigation;
+    const subcategory = navigation.getParam('subcategory', 'dumpster');
+    const shareables = geoShareables.filter(s=>s.subcategory === subcategory);
     const centerLatLng = Utils.findCenterLatLng(shareables.map(s=> {
       return [s.latitude,  s.longitude];
     }));
@@ -59,7 +63,7 @@ class ShareableListScreen extends Component {
                   title="View Detail"
                   onPress={()=>{
                     navigation.navigate('ShareableDetailScreen', {
-                      id: item.id,
+                      shareable: item,
                       zoom: 4
                     })}}
                 />

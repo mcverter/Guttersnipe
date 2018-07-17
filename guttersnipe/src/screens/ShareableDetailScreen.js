@@ -25,11 +25,12 @@ class ShareableDetailScreen extends Component {
 
   render() {
     const navigation  = this.props.navigation;
-    const shareable_id = navigation.getParam('id', '');
+    const shareable = navigation.getParam('shareable', '');
+    /*
     const shareable = find(shareables, s => {
       return s.id === shareable_id
     });
-
+*/
     return (
       <View style={styles.shareableDetailScreenContainer}>
         <Shareable
@@ -37,7 +38,7 @@ class ShareableDetailScreen extends Component {
           shareable={shareable} navigation={navigation}/>
         <CommentList
           style={styles.commentList}
-          comments={comments} />
+          comments={shareable.comments} />
       </View>
     );
   }

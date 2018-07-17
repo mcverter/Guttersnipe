@@ -10,8 +10,17 @@ import GsText from '../components/GsText';
 import PropTypes from 'prop-types';
 
 const Comment = (props) => {
-  const comment = props.comment;
+  const commentText = props.comment;
   console.log('comment props', comment);
+  const comment = {
+    comment_text: commentText,
+    author_id: 5,
+    author_name: 'mitchell',
+    author_role: 'admin',
+    comment_id: '2',
+    date_posted: "November 26 1998",
+    comment_title: commentText.split(' ').slice(0,3).join(' ')
+  }
   const author_id = comment.author_id;
   const author_name = comment.author_name;
   const author_role = comment.author_role;
@@ -22,18 +31,15 @@ const Comment = (props) => {
   const shareable_id = comment.shareable_id;
 
   return (
-        <View style={styles.commentContainer}>
-            <View style={styles.title}>
-              <GsText>{comment_title}</GsText>
-            </View>
-          <View style={styles.GsText}>
-            <GsText>{comment_text}</GsText>
-          </View>
-          <View style={styles.author}>
-            <GsText>{`Posted by ${author_name} on ${date_posted}`}</GsText>
-          </View>
-        </View>
-    );
+    <View style={styles.commentContainer}>
+      <View style={styles.GsText}>
+        <GsText>{comment_text}</GsText>
+      </View>
+      <View style={styles.author}>
+        <GsText>{`Posted by ${author_name} on ${date_posted}`}</GsText>
+      </View>
+    </View>
+  );
 };
 
 /*

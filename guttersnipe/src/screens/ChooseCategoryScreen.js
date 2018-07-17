@@ -46,7 +46,10 @@ class ChooseCategoryScreen extends Component {
 }
 const styles = StyleSheet.create({
   chooseCategoryButton : {},
-  chooseCategoryScreenContainer: {}
+  chooseCategoryScreenContainer: {
+    backgroundColor: 'black',
+    height: '100%'
+  }
 });
 
 ChooseCategoryScreen.propTypes = {
