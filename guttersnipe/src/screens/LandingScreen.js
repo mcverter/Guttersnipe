@@ -28,7 +28,7 @@ class LandingScreen extends Component {
       <View style={styles.landingScreenContainer}>
         <View style={styles.searchShareablesButtonContainer}>
           <GsButton
-            styleContainer={{backgroundColor: "#910f0f", padding: 20}}
+            styleContainer={{backgroundColor: "red", padding: 20}}
             styleText={{color: 'black', fontWeight: '700'}}
             color="#910f0f"
             accessibilityLabel="Click here to start search"
@@ -50,7 +50,9 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-around',
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor: "#910f0f",
+    height: '100%'
   },
 
   shareablesFTKText: {
@@ -61,7 +63,7 @@ const styles = StyleSheet.create({
   },
   searchShareablesButtonContainer: {
     padding: 25,
-    marginBottom: 50
+//    marginBottom: 50
   },
   shareablesFTKContainer: {
     backgroundColor: 'black',
