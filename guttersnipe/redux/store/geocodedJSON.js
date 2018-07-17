@@ -1,5 +1,6 @@
 const shareables = [
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Bravo Supermarket",
     "address": "4261 Broadway, New York, NY 10033, USA",
@@ -8,6 +9,7 @@ const shareables = [
     "latitude": 40.8506464
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Mike's Bagels",
     "address": "4003 Broadway, New York, NY 10032, USA",
@@ -15,6 +17,7 @@ const shareables = [
     "latitude": 40.8413659
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Morton-Williams",
     "address": "2941 Broadway, New York, NY 10027, USA",
@@ -24,6 +27,7 @@ const shareables = [
     "latitude": 40.8076824
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "D'Agostino",
     "address": "2828 Broadway, New York, NY 10025, USA",
@@ -36,6 +40,7 @@ const shareables = [
     "latitude": 40.8038844
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Absolute Bagel",
     "address": "2788 Broadway, New York, NY 10025, USA",
@@ -47,6 +52,7 @@ const shareables = [
     "latitude": 40.8025115
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Garden of Eden",
     "address": "2780 Broadway, New York, NY 10025, USA",
@@ -56,6 +62,7 @@ const shareables = [
     "latitude": 40.8023844
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Silver Moon Bakery",
     "address": "2740 Broadway, New York, NY 10025, USA",
@@ -65,6 +72,7 @@ const shareables = [
     "latitude": 40.800518
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Hot and Crusty",
     "address": "2393 Broadway, New York, NY 10024, USA",
@@ -74,6 +82,7 @@ const shareables = [
     "latitude": 40.789525
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Gristedes",
     "address": "2704 Broadway, New York, NY 10025, USA",
@@ -82,6 +91,7 @@ const shareables = [
     "latitude": 40.799248
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Health Nuts",
     "address": "2611 Broadway, New York, NY 10025, USA",
@@ -90,6 +100,7 @@ const shareables = [
     "latitude": 40.796465
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Gary Null's Uptown Whole Foods",
     "address": "2421 Broadway, New York, NY 10024, USA",
@@ -99,6 +110,7 @@ const shareables = [
     "latitude": 40.7904631
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Barzini's",
     "address": "2451 Broadway, New York, NY 10024, USA",
@@ -107,6 +119,7 @@ const shareables = [
     "latitude": 40.7913671
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Supersol",
     "address": "661 Amsterdam Ave, New York, NY 10025, USA",
@@ -115,6 +128,7 @@ const shareables = [
     "latitude": 40.791748
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Godiva",
     "address": "200 Broadway Suite 1035, New York, NY 10038, USA",
@@ -125,6 +139,7 @@ const shareables = [
     "latitude": 40.7104473
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Barnes & Noble",
     "address": "2289 Broadway, New York, NY 10024, USA",
@@ -133,6 +148,7 @@ const shareables = [
     "latitude": 40.7860836
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Gracefully",
     "address": "101 West End Ave, New York, NY 10023, USA",
@@ -141,6 +157,7 @@ const shareables = [
     "latitude": 40.7753114
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Western Beef",
     "address": "75 West End Ave, New York, NY 10023, USA",
@@ -152,6 +169,7 @@ const shareables = [
     "latitude": 40.7736686
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Dunkin Donuts",
     "description": "Reliable source of high-fat, low nutrition calories.",
@@ -160,6 +178,7 @@ const shareables = [
     "latitude": 40.7772573
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Dunkin Donuts",
     "address": "1392 Lexington Ave, New York, NY 10128, USA",
@@ -168,6 +187,7 @@ const shareables = [
     "latitude": 40.7831345
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Key Food",
     "address": "1769 2nd Ave, New York, NY 10029, USA",
@@ -176,6 +196,7 @@ const shareables = [
     "latitude": 40.7819943
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Eli's Vinegar Factory",
     "address": "431 E 91st St, New York, NY 10128, USA",
@@ -184,6 +205,7 @@ const shareables = [
     "latitude": 40.779493
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Patak's *Gourmet Deli*",
     "address": "Madison Ave, New York, NY, USA",
@@ -192,6 +214,7 @@ const shareables = [
     "latitude": 40.7785833
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Gristedes",
     "address": "1343 Lexington Ave, New York, NY 10128, USA",
@@ -200,6 +223,7 @@ const shareables = [
     "latitude": 40.781502
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "C Town",
     "address": "1721 1st Avenue, New York, NY 10128, USA",
@@ -208,6 +232,7 @@ const shareables = [
     "latitude": 40.7790727
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Elm Health & Pharmacy",
     "address": "1695 1st Avenue, New York, NY 10128, USA",
@@ -216,6 +241,7 @@ const shareables = [
     "latitude": 40.7781467
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Food Emporium",
     "address": "10 Union Square E, New York, NY 10003, USA",
@@ -224,6 +250,7 @@ const shareables = [
     "latitude": 40.7344949
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Bagel Bob's",
     "address": "1641 York Ave, New York, NY 10028, USA",
@@ -232,6 +259,7 @@ const shareables = [
     "latitude": 40.776459
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Tal Bagels",
     "address": "333 East 86th St #1, New York, NY 10028, USA",
@@ -240,6 +268,7 @@ const shareables = [
     "latitude": 40.777536
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Gristedes",
     "address": "355 East 86th St, New York, NY 10028, USA",
@@ -248,6 +277,7 @@ const shareables = [
     "latitude": 40.7772573
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Duane Reade",
     "address": "401 East 86th St, New York, NY 10028, USA",
@@ -256,6 +286,7 @@ const shareables = [
     "latitude": 40.7769566
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Eli's",
     "address": "1411 3rd Ave, New York, NY 10028, USA",
@@ -264,6 +295,7 @@ const shareables = [
     "latitude": 40.7749995
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Associated",
     "address": "1569 1st Avenue, New York, NY 10028, USA",
@@ -272,6 +304,7 @@ const shareables = [
     "latitude": 40.774251
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Gristedes",
     "address": "1446 2nd Ave, New York, NY 10075, USA",
@@ -280,6 +313,7 @@ const shareables = [
     "latitude": 40.7708656
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Food Emporium",
     "address": "1331 1st Avenue, New York, NY 10021, USA",
@@ -288,6 +322,7 @@ const shareables = [
     "latitude": 40.7676386
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Grace's Market",
     "address": "1299 2nd Ave, New York, NY 10065, USA",
@@ -296,6 +331,7 @@ const shareables = [
     "latitude": 40.7665174
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Walgreen",
     "address": "1328 2nd Ave, New York, NY 10021, USA",
@@ -304,6 +340,7 @@ const shareables = [
     "latitude": 40.7676276
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Gourmet Garage",
     "address": "301 E 64th St, New York, NY 10065, USA",
@@ -312,6 +349,7 @@ const shareables = [
     "latitude": 40.7636925
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Morton Williams",
     "address": "917 9th Ave, New York, NY 10019, USA",
@@ -320,6 +358,7 @@ const shareables = [
     "latitude": 40.7689721
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Morton Williams",
     "address": "140 W 57th St, New York, NY 10019, USA",
@@ -331,6 +370,7 @@ const shareables = [
     "latitude": 40.764753
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Dunkin Donuts",
     "address": "200 W 54th St, New York, NY 10019, USA",
@@ -339,6 +379,7 @@ const shareables = [
     "latitude": 40.7634911
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Gristedes",
     "address": "907 8th Ave, New York, NY 10019, USA",
@@ -347,6 +388,7 @@ const shareables = [
     "latitude": 40.7648189
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Pick a Bagel",
     "address": "891 8th Ave, New York, NY 10019, USA",
@@ -355,6 +397,7 @@ const shareables = [
     "latitude": 40.7643573
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Duane Reade",
     "address": "900 8th Ave, New York, NY 10019, USA",
@@ -363,6 +406,7 @@ const shareables = [
     "latitude": 40.7645097
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Food Emporium",
     "address": "452 W 43rd St, New York, NY 10036, USA",
@@ -371,6 +415,7 @@ const shareables = [
     "latitude": 40.7598589
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Dunkin Donuts",
     "address": "210 W 50th St, New York, NY 10019, USA",
@@ -381,6 +426,7 @@ const shareables = [
     "latitude": 40.7614519
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Hale and Hearty Soup",
     "address": "49 W 42nd St, New York, NY 10036, USA",
@@ -391,6 +437,7 @@ const shareables = [
     "latitude": 40.754718
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Pret A Manger",
     "address": "135 W 50th St, New York, NY 10020, USA",
@@ -400,6 +447,7 @@ const shareables = [
     "latitude": 40.761032
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Pax",
     "address": "225 W 42nd St, New York, NY 10036, USA",
@@ -411,6 +459,7 @@ const shareables = [
     "latitude": 40.756719
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Walgreens",
     "address": "1471 Broadway, New York, NY 10036, USA",
@@ -419,6 +468,7 @@ const shareables = [
     "latitude": 40.7563598
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Godiva Chocolates",
     "address": "745 7th Ave, New York, NY 10019, USA",
@@ -428,6 +478,7 @@ const shareables = [
     "latitude": 40.7608899
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Pax",
     "address": "80 W 40th St, New York, NY 10018, USA",
@@ -436,6 +487,7 @@ const shareables = [
     "latitude": 40.753361
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Midtown Comics",
     "address": "200 W 40th St, New York, NY 10018, USA",
@@ -444,6 +496,7 @@ const shareables = [
     "latitude": 40.7548718
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Pax",
     "address": "966 6th Ave, New York, NY 10018, USA",
@@ -452,6 +505,7 @@ const shareables = [
     "latitude": 40.7506178
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Hale and Hearty Soup",
     "address": "462 7th Ave, New York, NY 10018, USA",
@@ -460,6 +514,7 @@ const shareables = [
     "latitude": 40.751897
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "D'Agostino",
     "address": "966 1st Avenue, New York, NY 10022, USA",
@@ -468,6 +523,7 @@ const shareables = [
     "latitude": 40.7557951
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Dunkin Donuts",
     "address": "1024 1st Avenue, New York, NY 10022, USA",
@@ -476,6 +532,7 @@ const shareables = [
     "latitude": 40.757652
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Cosi",
     "address": "60 E 56th St, New York, NY 10022, USA",
@@ -484,6 +541,7 @@ const shareables = [
     "latitude": 40.761269
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Tal Bagels",
     "address": "977 1st Avenue, New York, NY 10022, USA",
@@ -492,6 +550,7 @@ const shareables = [
     "latitude": 40.756288
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Walgreens",
     "address": "866 3rd Ave, New York, NY 10022, USA",
@@ -500,6 +559,7 @@ const shareables = [
     "latitude": 40.7576022
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Pain Quotidien",
     "address": "937 2nd Ave, New York, NY 10022, USA",
@@ -508,6 +568,7 @@ const shareables = [
     "latitude": 40.7547304
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Associated",
     "address": "908 2nd Ave, New York, NY 10017, USA",
@@ -516,6 +577,7 @@ const shareables = [
     "latitude": 40.7538034
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Café Europa",
     "address": "717 5th Ave, New York, NY 10022, USA",
@@ -524,6 +586,7 @@ const shareables = [
     "latitude": 40.7619026
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Bread Factory",
     "address": "470 Fashion Avenue A, New York, NY 10018, United States",
@@ -532,6 +595,7 @@ const shareables = [
     "latitude": 40.75204799999999
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "International Grocery",
     "address": "543 9th Ave, New York, NY 10018, USA",
@@ -540,6 +604,7 @@ const shareables = [
     "latitude": 40.7573977
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Nice & Natural",
     "address": "46th St, Queens, NY, USA",
@@ -548,6 +613,7 @@ const shareables = [
     "latitude": 40.7383999
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Stiles Market",
     "address": "352 W 52nd St, New York, NY 10019, USA",
@@ -556,6 +622,7 @@ const shareables = [
     "latitude": 40.7641981
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Zaro's",
     "address": "E 41st St, New York, NY, USA",
@@ -564,6 +631,7 @@ const shareables = [
     "latitude": 40.7501523
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Pain Quotidien",
     "address": "70 W 40th St, New York, NY 10018, USA",
@@ -572,6 +640,7 @@ const shareables = [
     "latitude": 40.7531506
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Daniel's Bagels",
     "address": "569 3rd Ave, New York, NY 10016, USA",
@@ -580,6 +649,7 @@ const shareables = [
     "latitude": 40.7478735
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Dunkin Donuts",
     "address": "567 3rd Ave, New York, NY 10016, USA",
@@ -588,6 +658,7 @@ const shareables = [
     "latitude": 40.7478209
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Hotel Tuscany,  used to be the W",
     "address": "120 E 39th St, New York, NY 10016, USA",
@@ -596,6 +667,7 @@ const shareables = [
     "latitude": 40.7496437
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Courtyard Marriott",
     "address": "3 E 40th St, New York, NY 10016, USA",
@@ -604,6 +676,7 @@ const shareables = [
     "latitude": 40.752124
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Guy and Gallard",
     "address": "339 7th Ave # 1, New York, NY 10001, USA",
@@ -615,6 +688,7 @@ const shareables = [
     "latitude": 40.7476975
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Flower market",
     "address": "150 W 28th St, New York, NY 10001, USA",
@@ -623,6 +697,7 @@ const shareables = [
     "latitude": 40.7467744
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "CVS",
     "address": "750 6th Ave, New York, NY 10010, USA",
@@ -634,6 +709,7 @@ const shareables = [
     "latitude": 40.7437269
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Gristedes",
     "address": "225 9th Ave, New York, NY 10011, USA",
@@ -642,6 +718,7 @@ const shareables = [
     "latitude": 40.7472138
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Gristedes",
     "address": "307 W 26th St, New York, NY 10001, USA",
@@ -650,6 +727,7 @@ const shareables = [
     "latitude": 40.747637
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Murray's Bagels",
     "address": "242 8th Ave, New York, NY 10011, USA",
@@ -658,6 +736,7 @@ const shareables = [
     "latitude": 40.74479880000001
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Garden of Eden",
     "address": "162 W 23rd St, New York, NY 10011, USA",
@@ -666,6 +745,7 @@ const shareables = [
     "latitude": 40.743646
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Krispy Creme",
     "address": "2 Pennsylvania Plaza, New York, NY 10001, USA",
@@ -674,6 +754,7 @@ const shareables = [
     "latitude": 40.7499128
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Duane Reade",
     "address": "131 8th Ave, New York, NY 10011, USA",
@@ -683,6 +764,7 @@ const shareables = [
     "latitude": 40.7415406
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Le Pain Quotidien",
     "address": "124 7th Ave, New York, NY 10011, USA",
@@ -691,6 +773,7 @@ const shareables = [
     "latitude": 40.7408862
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Le Pain Quotidien",
     "address": "52 9th Ave, New York, NY 10011, USA",
@@ -699,6 +782,7 @@ const shareables = [
     "latitude": 40.7411921
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Manhattan Fruit Exchange",
     "address": "West Side Hwy, New York, NY, USA",
@@ -707,6 +791,7 @@ const shareables = [
     "latitude": 40.7754616
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Western Beef",
     "address": "431 W 16th St, New York, NY 10011, USA",
@@ -715,6 +800,7 @@ const shareables = [
     "latitude": 40.7430826
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Associated",
     "address": "2444 7th Ave, New York, NY 10030, USA",
@@ -723,6 +809,7 @@ const shareables = [
     "latitude": 40.8200489
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Zaro's",
     "address": "W 21st St, New York, NY, USA",
@@ -731,6 +818,7 @@ const shareables = [
     "latitude": 40.744009
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Associated Supermarket",
     "address": "216 5th Ave, Brooklyn, NY 11215, USA",
@@ -739,6 +827,7 @@ const shareables = [
     "latitude": 40.6762738
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Natural Green Market",
     "address": "162 3rd Ave, New York, NY 10003, USA",
@@ -748,6 +837,7 @@ const shareables = [
     "latitude": 40.7346328
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "David's Bagels",
     "address": "273 1st Avenue, New York, NY 10003, USA",
@@ -755,6 +845,7 @@ const shareables = [
     "latitude": 40.7324991
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Gramercy Bagels",
     "address": "246 3rd Ave, New York, NY 10010, USA",
@@ -762,6 +853,7 @@ const shareables = [
     "latitude": 40.7372198
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Manhattan Carpets",
     "address": "1460 3rd Ave, New York, NY 10028, USA",
@@ -770,6 +862,7 @@ const shareables = [
     "latitude": 40.7768529
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Whole Foods",
     "address": "808 Columbus Ave, New York, NY 10025, USA",
@@ -778,6 +871,7 @@ const shareables = [
     "latitude": 40.7944513
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Trader Joe's",
     "address": "142 E 14th St, New York, NY 10003, USA",
@@ -786,6 +880,7 @@ const shareables = [
     "latitude": 40.7333727
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Garden of Eden",
     "address": "7 E 14th St, New York, NY 10003, USA",
@@ -794,6 +889,7 @@ const shareables = [
     "latitude": 40.73596089999999
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Petco",
     "address": "860 Broadway, New York, NY 10003, USA",
@@ -802,6 +898,7 @@ const shareables = [
     "latitude": 40.7371348
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Bagelry",
     "address": "139 West 14th Street, New York10011, NY 10011, USA",
@@ -810,6 +907,7 @@ const shareables = [
     "latitude": 40.7382679
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Food Emporium",
     "address": "12th Ave, New York, NY, USA",
@@ -818,6 +916,7 @@ const shareables = [
     "latitude": 40.7607296
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Lifethyme Natural Market",
     "address": "410 6th Ave, New York, NY 10011, USA",
@@ -826,6 +925,7 @@ const shareables = [
     "latitude": 40.73381819999999
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Citarella",
     "address": "424 6th Ave, New York, NY 10011, USA",
@@ -834,6 +934,7 @@ const shareables = [
     "latitude": 40.734238
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Gristedes",
     "address": "7th Avenue South & West 4th Street, New York, NY 10014, USA",
@@ -842,6 +943,7 @@ const shareables = [
     "latitude": 40.73371789999999
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Le Pain Quotidien",
     "address": "10 5th Ave, New York, NY 10011, USA",
@@ -850,6 +952,7 @@ const shareables = [
     "latitude": 40.7324784
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Integral Yoga",
     "address": "227 W 13th St, New York, NY 10011, USA",
@@ -858,6 +961,7 @@ const shareables = [
     "latitude": 40.7385097
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Peanut Butter and Co.",
     "address": "240 Sullivan St # C, New York, NY 10012, USA",
@@ -866,6 +970,7 @@ const shareables = [
     "latitude": 40.7298925
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "produce market *large, I forget the name*",
     "address": "Varick St & Carmine St, New York, NY 10014, USA",
@@ -874,6 +979,7 @@ const shareables = [
     "latitude": 40.7294095
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Agata and Valentina",
     "address": "64 University Pl, New York, NY 10003, USA",
@@ -883,6 +989,7 @@ const shareables = [
     "latitude": 40.7330772
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Bagel Bob's",
     "address": "51 University Pl, New York, NY 10003, USA",
@@ -891,6 +998,7 @@ const shareables = [
     "latitude": 40.7324039
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Gristedes",
     "address": "25 University Pl, New York, NY 10003, USA",
@@ -899,6 +1007,7 @@ const shareables = [
     "latitude": 40.7319034
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Au Bon Pain",
     "address": "625 8th Ave, New York, NY 10018, USA",
@@ -907,6 +1016,7 @@ const shareables = [
     "latitude": 40.7569545
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Gristedes",
     "address": "246 Mercer St, New York, NY 10012, USA",
@@ -915,6 +1025,7 @@ const shareables = [
     "latitude": 40.728217
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Pain Quotidien",
     "address": "65 Bleecker St, New York, NY 10012, USA",
@@ -923,6 +1034,7 @@ const shareables = [
     "latitude": 40.7262963
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Taylors",
     "address": "Manhattan, New York, NY, USA",
@@ -931,6 +1043,7 @@ const shareables = [
     "latitude": 40.7830603
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Dunkin Donuts",
     "address": "E 13th St, New York, NY, USA",
@@ -939,6 +1052,7 @@ const shareables = [
     "latitude": 40.7311553
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Commodities",
     "address": "165 1st Avenue, New York, NY 10003, USA",
@@ -947,6 +1061,7 @@ const shareables = [
     "latitude": 40.729033
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Lime Tree",
     "address": "148 1st Avenue, New York, NY 10009, USA",
@@ -955,6 +1070,7 @@ const shareables = [
     "latitude": 40.7280186
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Gourmet Deli",
     "address": "1274 1st Avenue, New York, NY 10065, USA",
@@ -963,6 +1079,7 @@ const shareables = [
     "latitude": 40.765414
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Produce stand",
     "address": "A Ave, New York, NY 10009, USA",
@@ -970,6 +1087,7 @@ const shareables = [
     "latitude": 40.7226415
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Caravan of Dreams",
     "address": "405 E 6th St, New York, NY 10009, USA",
@@ -978,6 +1096,7 @@ const shareables = [
     "latitude": 40.7263767
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "4th Street Food Co-op",
     "address": "58 E 4th St, New York, NY 10003, USA",
@@ -987,6 +1106,7 @@ const shareables = [
     "latitude": 40.7265971
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Houston Village Farm",
     "address": "61 1st Avenue, New York, NY 10009, USA",
@@ -995,6 +1115,7 @@ const shareables = [
     "latitude": 40.725184
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Union Market",
     "address": "240 E Houston St, New York, NY 10002, USA",
@@ -1003,6 +1124,7 @@ const shareables = [
     "latitude": 40.7223878
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Gourmet Garage",
     "address": "489 Broome St, New York, NY 10013, USA",
@@ -1011,6 +1133,7 @@ const shareables = [
     "latitude": 40.7229593
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Dean & Deluca",
     "address": "560 Broadway, New York, NY 10012, USA",
@@ -1019,6 +1142,7 @@ const shareables = [
     "latitude": 40.7240671
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Housing Works",
     "address": "130 Crosby St, New York, NY 10012, USA",
@@ -1027,6 +1151,7 @@ const shareables = [
     "latitude": 40.7247093
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Bari",
     "address": "Broadway & Spring Street, New York, NY 10012, USA",
@@ -1035,6 +1160,7 @@ const shareables = [
     "latitude": 40.7230414
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "produce stand",
     "address": "375 W Broadway, New York, NY 10012, USA",
@@ -1043,6 +1169,7 @@ const shareables = [
     "latitude": 40.7234637
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Soho Garden",
     "address": "40 Prince St, New York, NY 10012, USA",
@@ -1051,6 +1178,7 @@ const shareables = [
     "latitude": 40.7230771
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "unnamed grocery store",
     "address": "40 Prince St, New York, NY 10012, USA",
@@ -1059,6 +1187,7 @@ const shareables = [
     "latitude": 40.7230771
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Whole Foods",
     "address": "95 E Houston St, New York, NY 10002, USA",
@@ -1067,6 +1196,7 @@ const shareables = [
     "latitude": 40.7238471
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Finest Produce",
     "address": "119 Chrystie St, New York, NY 10002, USA",
@@ -1075,6 +1205,7 @@ const shareables = [
     "latitude": 40.7187779
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Essex Street Market",
     "address": "3211, 120 Essex St, New York, NY 10002, United States",
@@ -1084,6 +1215,7 @@ const shareables = [
     "latitude": 40.719113
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Economy Candy",
     "address": "108 Rivington St, New York, NY 10002, USA",
@@ -1092,6 +1224,7 @@ const shareables = [
     "latitude": 40.720105
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Fay Da Bakery",
     "address": "83 Mott St, New York, NY 10013, USA",
@@ -1100,6 +1233,7 @@ const shareables = [
     "latitude": 40.71668469999999
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Food Emporium",
     "address": "316 Greenwich St, New York, NY 10013, USA",
@@ -1108,6 +1242,7 @@ const shareables = [
     "latitude": 40.71794879999999
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Wichcraft",
     "address": "397 Greenwich St, New York, NY 10013, USA",
@@ -1116,6 +1251,7 @@ const shareables = [
     "latitude": 40.72060099999999
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Pain Quotidien",
     "address": "81 W Broadway, New York, NY 10007, USA",
@@ -1124,6 +1260,7 @@ const shareables = [
     "latitude": 40.7150161
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Gristedes",
     "address": "90 Maiden Ln, New York, NY 10038, USA",
@@ -1135,6 +1272,7 @@ const shareables = [
     "latitude": 40.7068769
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Duane Reade",
     "address": "95 Wall St, New York, NY 10005, USA",
@@ -1146,6 +1284,7 @@ const shareables = [
     "latitude": 40.7049254
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Jubilee Marketplace",
     "address": "99 John St, New York, NY 10038, USA",
@@ -1157,6 +1296,7 @@ const shareables = [
     "latitude": 40.7082609
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Pain Quotidien",
     "address": "2 River Terrace, New York, NY 10282, USA",
@@ -1165,6 +1305,7 @@ const shareables = [
     "latitude": 40.7155131
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Izzy & Nats",
     "address": "311 South End Ave, New York, NY 10280, USA",
@@ -1173,6 +1314,7 @@ const shareables = [
     "latitude": 40.7105297
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Hudson Produce",
     "address": "300 Albany St, New York, NY 10280, USA",
@@ -1184,6 +1326,7 @@ const shareables = [
     "latitude": 40.7100228
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Gristedes",
     "address": "315 South End Ave, New York, NY 10280, USA",
@@ -1192,6 +1335,7 @@ const shareables = [
     "latitude": 40.7106778
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Pret a Manger",
     "address": "179 Broadway, New York, NY 10007, USA",
@@ -1200,6 +1344,7 @@ const shareables = [
     "latitude": 40.7101224
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Hale & Hearty",
     "address": "110 Maiden Ln, New York, NY 10005, USA",
@@ -1208,6 +1353,7 @@ const shareables = [
     "latitude": 40.7065101
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Starbucks",
     "address": "80 Pine St, New York, NY 10005, USA",
@@ -1216,6 +1362,7 @@ const shareables = [
     "latitude": 40.706318
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Dunkin Donuts",
     "address": "49 Nassau St, New York, NY 10038, USA",
@@ -1224,6 +1371,7 @@ const shareables = [
     "latitude": 40.7089198
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Kosher market",
     "address": "700 Myrtle Ave, Brooklyn, NY 11205, USA",
@@ -1235,6 +1383,7 @@ const shareables = [
     "latitude": 40.6945586
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Bakery",
     "address": "574 Marcy Ave, Brooklyn, NY 11206, USA",
@@ -1243,6 +1392,7 @@ const shareables = [
     "latitude": 40.6950882
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Perelandra",
     "address": "175 Remsen St, Brooklyn, NY 11201, USA",
@@ -1255,6 +1405,7 @@ const shareables = [
     "latitude": 40.6933555
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Trader Joe's",
     "address": "130 Court St, Brooklyn, NY 11201, USA",
@@ -1268,6 +1419,7 @@ const shareables = [
     "latitude": 40.6895601
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "La Bagel Delight",
     "comments": [
@@ -1281,6 +1433,7 @@ const shareables = [
     "latitude": 40.691158
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Garden of Eden",
     "description": "Yuppie grocery",
@@ -1294,6 +1447,7 @@ const shareables = [
     "latitude": 40.694027
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Gristedes",
     "description": "Supermarket",
@@ -1307,6 +1461,7 @@ const shareables = [
     "latitude": 40.6975251
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Key Foods",
     "description": "Grocery store",
@@ -1320,6 +1475,7 @@ const shareables = [
     "latitude": 40.69500559999999
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Associated Supermarket",
     "address": "2401, 229 Knickerbocker Ave, Brooklyn, NY 11237, United States",
@@ -1328,6 +1484,7 @@ const shareables = [
     "latitude": 40.703138
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Kim's Millenium Market",
     "address": "260 Bushwick Ave, Brooklyn, NY 11206, USA",
@@ -1335,6 +1492,7 @@ const shareables = [
     "latitude": 40.7071634
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Caputo's Bakery",
     "description": "Italian bakery",
@@ -1348,6 +1506,7 @@ const shareables = [
     "latitude": 40.6828628
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Union Market",
     "address": "288 Court St, Brooklyn, NY 11231, USA",
@@ -1360,6 +1519,7 @@ const shareables = [
     "latitude": 40.6843262
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Bagel World",
     "address": "Brooklyn, NY, USA",
@@ -1369,6 +1529,7 @@ const shareables = [
     "latitude": 40.6781784
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "New Utica Produce",
     "address": "282 Utica Ave, Brooklyn, NY 11213, USA",
@@ -1377,6 +1538,7 @@ const shareables = [
     "latitude": 40.6683591
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Brooklyn Fare",
     "address": "200 Schermerhorn St, Brooklyn, NY 11201, USA",
@@ -1387,6 +1549,7 @@ const shareables = [
     "latitude": 40.6888487
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Pathmark at",
     "address": "139 Flatbush Ave, Brooklyn, NY 11217, USA",
@@ -1399,6 +1562,7 @@ const shareables = [
     "latitude": 40.6845878
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Associated Supermarket",
     "address": "E 14th St, New York, NY, USA",
@@ -1410,6 +1574,7 @@ const shareables = [
     "latitude": 40.7313474
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Fruit Palace",
     "address": "Brooklyn, NY 11230, USA",
@@ -1420,6 +1585,7 @@ const shareables = [
     "latitude": 40.6252595
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "New Banana King",
     "address": "Brooklyn, NY 11230, USA",
@@ -1428,6 +1594,7 @@ const shareables = [
     "latitude": 40.6252595
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Isaac's bake shop",
     "address": "1419 Avenue J, Brooklyn, NY 11230, USA",
@@ -1436,6 +1603,7 @@ const shareables = [
     "latitude": 40.6253238
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Pom distributor",
     "address": "Pulaski Bridge, Pulaski Bridge, Long Island City, NY 11101, USA",
@@ -1444,6 +1612,7 @@ const shareables = [
     "latitude": 40.7394677
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Lowell Importers",
     "address": "West St, Brooklyn, NY 11222, USA",
@@ -1453,6 +1622,7 @@ const shareables = [
     "latitude": 40.7318418
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Garden of Eden Warehouse",
     "address": "7 E 14th St, New York, NY 10003, USA",
@@ -1465,6 +1635,7 @@ const shareables = [
     "latitude": 40.73596089999999
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Jewish Bakery",
     "address": "5011 13th Ave, Brooklyn, NY 11219, USA",
@@ -1476,6 +1647,7 @@ const shareables = [
     "latitude": 40.6341144
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Haltzlacha Supermarket",
     "address": "414 Flushing Ave, Brooklyn, NY 11205, USA",
@@ -1488,6 +1660,7 @@ const shareables = [
     "latitude": 40.6985763
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Union Market",
     "address": "Brooklyn, NY, USA",
@@ -1502,6 +1675,7 @@ const shareables = [
     "latitude": 40.6781784
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Associated",
     "address": "216 5th Ave, Brooklyn, NY 11215, USA",
@@ -1513,6 +1687,7 @@ const shareables = [
     "latitude": 40.6762738
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Bageltique",
     "description": "Bagel and fast food joint",
@@ -1525,6 +1700,7 @@ const shareables = [
     "latitude": 40.675494
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Nature Plus",
     "description": "Convenience and some health food",
@@ -1537,6 +1713,7 @@ const shareables = [
     "latitude": 40.6717475
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Back to the Land",
     "description": "Small natural foods store",
@@ -1550,6 +1727,7 @@ const shareables = [
     "latitude": 40.6727737
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Key Foods",
     "description": "Supermarket",
@@ -1562,6 +1740,7 @@ const shareables = [
     "latitude": 40.6731253
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "D'Vine Taste",
     "address": "150 7th Ave, Brooklyn, NY 11215, USA",
@@ -1572,6 +1751,7 @@ const shareables = [
     "latitude": 40.6726263
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Northside Health Food",
     "address": "149 S 8th St, Brooklyn, NY 11211, USA",
@@ -1583,6 +1763,7 @@ const shareables = [
     "latitude": 40.718714
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Sunac Natural Foods",
     "address": "150 N 7th St, Brooklyn, NY 11249, USA",
@@ -1594,6 +1775,7 @@ const shareables = [
     "latitude": 40.718028
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Food Town/Williamsburg Food Market",
     "address": "159 N 3rd St, Brooklyn, NY 11211, USA",
@@ -1602,6 +1784,7 @@ const shareables = [
     "latitude": 40.71532699999999
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Duane Reade",
     "address": "250 Bedford Ave, Brooklyn, NY 11249, USA",
@@ -1610,6 +1793,7 @@ const shareables = [
     "latitude": 40.7158396
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "The Bagel Store",
     "address": "247 Bedford Ave, Brooklyn, NY 11211, USA",
@@ -1618,6 +1802,7 @@ const shareables = [
     "latitude": 40.7155938
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Khim's Market *at least we think the trash was from there*",
     "address": "460 Driggs Ave, Brooklyn, NY 11211, USA",
@@ -1626,6 +1811,7 @@ const shareables = [
     "latitude": 40.7191713
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "South Side Food Plaza",
     "description": "kosher supermarket",
@@ -1637,6 +1823,7 @@ const shareables = [
     "latitude": 40.7092491
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Food Bazaar",
     "address": "Lorimer St, Brooklyn, NY, USA",
@@ -1648,6 +1835,7 @@ const shareables = [
     "latitude": 40.71477300000001
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Depanneur",
     "address": "242 Wythe Ave, Brooklyn, NY 11249, USA",
@@ -1660,6 +1848,7 @@ const shareables = [
     "latitude": 40.7174161
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Associated Supermarket",
     "address": "44-07 Greenpoint Ave, Sunnyside, NY 11104, USA",
@@ -1670,6 +1859,7 @@ const shareables = [
     "latitude": 40.741567
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Sunnyside Pharmacy",
     "address": "4310 Queens Blvd, Sunnyside, NY 11104, USA",
@@ -1680,6 +1870,7 @@ const shareables = [
     "latitude": 40.7431522
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Key Food",
     "address": "108-16 Liberty Ave, Jamaica, NY 11419, USA",
@@ -1690,6 +1881,7 @@ const shareables = [
     "latitude": 40.6836977
   },
   {
+    "category": "food",
     "subcategory": "dumpster",
     "name": "Health food store on",
     "address": "955 Manor Rd, Staten Island, NY 10314, USA",
@@ -1700,6 +1892,7 @@ const shareables = [
     "latitude": 40.6036571
   },
   {
+    "category": "food",
     "subcategory": "food not bombs",
     "name": "FNB Binghamton",
     "comments": [
@@ -1711,6 +1904,7 @@ const shareables = [
     "latitude": 42.1002071
   },
   {
+    "category": "food",
     "subcategory": "food not bombs",
     "name": "FNB Bed-Stuy Chapter",
     "description": "We share food every Saturday at 3pm at Von King Tompkins Park at the corner of Marcy Avenue and Lafayette Avenue. ",
@@ -1725,6 +1919,7 @@ const shareables = [
     "latitude": 40.689612
   },
   {
+    "category": "food",
     "subcategory": "food not bombs",
     "name": "FNB Bushwick Chapter ",
     "description": "We serve every Wednesday at 3:00 pm at Bushwick Park which is located at Knickerbocker & Starr St in Brooklyn. Email us for details on the cooking location and times.",
@@ -1739,6 +1934,7 @@ const shareables = [
     "latitude": 40.7028088
   },
   {
+    "category": "food",
     "subcategory": "food not bombs",
     "name": "FNB Buffalo",
     "address": "160 Winspear Ave, Buffalo, NY 14215, USA",
@@ -1752,6 +1948,7 @@ const shareables = [
     "latitude": 42.9493316
   },
   {
+    "category": "food",
     "subcategory": "food not bombs",
     "name": "FNB Hempstead",
     "comments": [
@@ -1771,6 +1968,7 @@ const shareables = [
     "latitude": 40.6648201
   },
   {
+    "category": "food",
     "subcategory": "food not bombs",
     "name": "FNB Huntington",
     "address": "Granny Road & Horseblock Road, Farmingville, NY 11738, USA",
@@ -1798,6 +1996,7 @@ const shareables = [
     "latitude": 40.830952
   },
   {
+    "category": "food",
     "subcategory": "food not bombs",
     "name": "FNB: New York City - Lower East Side",
     "description": "We cook Sundays at the Catholic Worker at 36 East 1st Street, between First and Second Avenues at 1 p.m. and share food in Tompkins Square Park from 4-6 p.m. on Sunday afternoons. The best ways to get there are either the 2nd Ave. F train or the Bleeker Street 6 train. EVERY ONE WELCOME!",
@@ -1811,6 +2010,7 @@ const shareables = [
     "latitude": 40.72642949999999
   },
   {
+    "category": "food",
     "subcategory": "food not bombs",
     "name": "FNB New York City - Harlem",
     "description": "Sharing every Wednesday at 4:00 PM at Jacob H. Schiff Park on Amsterdam Ave between 136th and 138th Street.",
@@ -1825,6 +2025,7 @@ const shareables = [
     "latitude": 40.8204702
   },
   {
+    "category": "food",
     "subcategory": "food not bombs",
     "name": "FNB Rochester",
     "comments": [
@@ -1838,6 +2039,7 @@ const shareables = [
     "latitude": 43.1508737
   },
   {
+    "category": "food",
     "subcategory": "food not bombs",
     "name": "FNB Syracuse",
     "comments": [
@@ -1854,6 +2056,7 @@ const shareables = [
     "latitude": 43.050309
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "St. Luke's Food Pantry",
     "address": "623 E 138th St, Bronx, NY 10454, USA",
@@ -1866,6 +2069,7 @@ const shareables = [
     "latitude": 40.8064289
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "St. Ann's Church of Morrisania",
     "address": "295 St Ann's Ave, Bronx, NY 10454, USA",
@@ -1878,6 +2082,7 @@ const shareables = [
     "latitude": 40.8085413
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "St. Jerome Community Food Pantry",
     "address": "Bronx, NY 10454, USA",
@@ -1889,6 +2094,7 @@ const shareables = [
     "latitude": 40.8022594
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Abraham house",
     "address": "340 Willis Ave, Bronx, NY 10454, USA",
@@ -1901,6 +2107,7 @@ const shareables = [
     "latitude": 40.8113404
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Every Day is a Miracle",
     "address": "c/o House of the Almond Tree Church, 411 E 143rd St, Bronx, NY 10454, United States",
@@ -1913,6 +2120,7 @@ const shareables = [
     "latitude": 40.812134
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Way out Church Ministries",
     "address": "518 E 148th St, Bronx, NY 10455, USA",
@@ -1924,6 +2132,7 @@ const shareables = [
     "latitude": 40.81397219999999
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "United Bronx Parents Food Pantry",
     "address": "966 Prospect Ave, Bronx, NY 10459, USA",
@@ -1937,6 +2146,7 @@ const shareables = [
     "latitude": 40.8179615
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "United Bronx Parents Soup Kitchen",
     "address": "966 Prospect Ave, Bronx, NY 10459, USA",
@@ -1949,6 +2159,7 @@ const shareables = [
     "latitude": 40.8179615
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "The Relief Bus - Bronx Brook Ave.",
     "address": "455 E 148th St, Bronx, NY 10455, USA",
@@ -1960,6 +2171,7 @@ const shareables = [
     "latitude": 40.8146116
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "City harvest St. Mary's Mobile Market",
     "address": "1400 Waters Pl, Bronx, NY 10461, USA",
@@ -1974,6 +2186,7 @@ const shareables = [
     "latitude": 40.84760780000001
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "St. Margaret's episcopal Church",
     "address": "940 E 156th St, Bronx, NY 10455, USA",
@@ -1985,6 +2198,7 @@ const shareables = [
     "latitude": 40.8163614
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Give them To eat - Iglesia evangelica espanola",
     "address": "Española, NM, USA",
@@ -1997,6 +2211,7 @@ const shareables = [
     "latitude": 35.9910383
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Transfiguration Lutheran Church",
     "address": "763 Prospect Ave, Bronx, NY 10455, USA",
@@ -2008,6 +2223,7 @@ const shareables = [
     "latitude": 40.8176378
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "BooM! health harm reduction Center",
     "address": "226 E 144th St, Bronx, NY 10451, USA",
@@ -2019,6 +2235,7 @@ const shareables = [
     "latitude": 40.815676
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Grand Central Food Program - Lincoln hospital",
     "address": "89 E 42nd St, New York, NY 10017, USA",
@@ -2031,6 +2248,7 @@ const shareables = [
     "latitude": 40.7527262
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "The Relief Bus - Bronx Courtland Ave.",
     "address": "628 Courtlandt Ave, Bronx, NY 10451, USA",
@@ -2042,6 +2260,7 @@ const shareables = [
     "latitude": 40.8183842
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "City Harvest Melrose Mobile Market",
     "address": "286 E 156th St, Bronx, NY 10451, USA",
@@ -2056,6 +2275,7 @@ const shareables = [
     "latitude": 40.8217281
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Salvation Army Bronx Citadel",
     "address": "425 E 159th St, Bronx, NY 10451, USA",
@@ -2068,6 +2288,7 @@ const shareables = [
     "latitude": 40.8228155
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Missionary Church of Christ",
     "address": "937 Teller Ave, Bronx, NY 10451, USA",
@@ -2079,6 +2300,7 @@ const shareables = [
     "latitude": 40.8260896
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Grand Central Food Program - 164th St. & ogden",
     "address": "89 E 42nd St, New York, NY 10017, USA",
@@ -2091,6 +2313,7 @@ const shareables = [
     "latitude": 40.7527262
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "The Momentum Project at Church of God of Prophecy",
     "address": "85 E 165th St, Bronx, NY 10452, USA",
@@ -2103,6 +2326,7 @@ const shareables = [
     "latitude": 40.8316526
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Mid-Bronx Food Pantry",
     "address": "1125 Grand Concourse, Bronx, NY 10452, USA",
@@ -2115,6 +2339,7 @@ const shareables = [
     "latitude": 40.832748
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Bread Basket at Woodycrest United Methodist Church",
     "address": "4513, 89 W 166th St, Bronx, NY 10452, United States",
@@ -2126,6 +2351,7 @@ const shareables = [
     "latitude": 40.8353888
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "WheDCo - Women's housing and econ. Dev. Corp.",
     "address": "50 E 168th St, Bronx, NY 10452, USA",
@@ -2140,6 +2366,7 @@ const shareables = [
     "latitude": 40.836315
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Tolentine Zeiser Community Life Center",
     "address": "2345 University Ave, Bronx, NY 10468, USA",
@@ -2152,6 +2379,7 @@ const shareables = [
     "latitude": 40.8622731
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Grand Central Food Program - 170th & Jerome",
     "address": "89 E 42nd St, New York, NY 10017, USA",
@@ -2164,6 +2392,7 @@ const shareables = [
     "latitude": 40.7527262
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "True Gospel Tabernacle Church",
     "address": "1 W Tremont Ave, Bronx, NY 10453, USA",
@@ -2177,6 +2406,7 @@ const shareables = [
     "latitude": 40.8519926
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Heights Pantry/ Bronxworks, Inc.",
     "address": "200 W Tremont Ave, Bronx, NY 10453, USA",
@@ -2188,6 +2418,7 @@ const shareables = [
     "latitude": 40.8518332
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "St. edmunds Youth Programs, Inc.",
     "address": "1905 Morris Ave, Bronx, NY 10453, USA",
@@ -2200,6 +2431,7 @@ const shareables = [
     "latitude": 40.8499543
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Davidson Community Center",
     "address": "2038 Davidson Ave, Bronx, NY 10453, USA",
@@ -2211,6 +2443,7 @@ const shareables = [
     "latitude": 40.8535877
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Bronx Works Morris Innovative Senior Center",
     "address": "80 E 181st St, Bronx, NY 10453, USA",
@@ -2222,6 +2455,7 @@ const shareables = [
     "latitude": 40.8550714
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Libres Por Jesucristo",
     "address": "609 E 182nd St, Bronx, NY 10457, USA",
@@ -2234,6 +2468,7 @@ const shareables = [
     "latitude": 40.852108
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Abrigo Del Altisimo",
     "address": "2058 2nd Ave, New York, NY 10029, USA",
@@ -2245,6 +2480,7 @@ const shareables = [
     "latitude": 40.790235
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Joshua and Caleb Ministry Inc. Food Pantry",
     "address": "1688 Webster Ave, Bronx, NY 10457, USA",
@@ -2257,6 +2493,7 @@ const shareables = [
     "latitude": 40.8428161
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Bronx Seventh Day Adventist Church",
     "address": "1695 Washington Ave, Bronx, NY 10457, USA",
@@ -2270,6 +2507,7 @@ const shareables = [
     "latitude": 40.8422403
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Vineyard Food Pantry",
     "address": "1140 Teller Ave, Bronx, NY 10456, USA",
@@ -2282,6 +2520,7 @@ const shareables = [
     "latitude": 40.833475
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Inspirational Gospel Assembly",
     "address": "1211 Brook Ave, Bronx, NY 10456, USA",
@@ -2294,6 +2533,7 @@ const shareables = [
     "latitude": 40.8314004
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "St. Augustine Food Pantry & Clothing Distribution",
     "address": "St Augustine, FL, USA",
@@ -2306,6 +2546,7 @@ const shareables = [
     "latitude": 29.9012437
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "New Covenant Community Development Corporation",
     "address": "1163 Boston Rd, Bronx, NY 10456, USA",
@@ -2318,6 +2559,7 @@ const shareables = [
     "latitude": 40.828823
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "New Zion Pilgrim Baptist Church",
     "address": "1040 Washington Ave, Bronx, NY 10456, USA",
@@ -2330,6 +2572,7 @@ const shareables = [
     "latitude": 40.8270549
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Gospel hill Baptist Church",
     "address": "3265 Third Ave, Bronx, NY 10456, USA",
@@ -2344,6 +2587,7 @@ const shareables = [
     "latitude": 40.82473239999999
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Morrisania revitalization Corp. Food Pantry",
     "address": "576 E 165th St, Bronx, NY 10456, USA",
@@ -2356,6 +2600,7 @@ const shareables = [
     "latitude": 40.825512
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Manna of Life/Fellowship Chapel",
     "address": "1101 Boston Rd, Bronx, NY 10456, USA",
@@ -2367,6 +2612,7 @@ const shareables = [
     "latitude": 40.8274358
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "PAThhSeo at Caldwell Temple AME Zion Church",
     "address": "1281 Chisholm St, Bronx, NY 10459, USA",
@@ -2378,6 +2624,7 @@ const shareables = [
     "latitude": 40.8296171
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "The Hope Line",
     "address": "884 E 163rd St, Bronx, NY 10459, USA",
@@ -2391,6 +2638,7 @@ const shareables = [
     "latitude": 40.8209419
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Grand Central Food Program - Lafayette & Manida",
     "address": "89 E 42nd St, New York, NY 10017, USA",
@@ -2403,6 +2651,7 @@ const shareables = [
     "latitude": 40.7527262
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Bright Temple AME Church",
     "address": "812 Faile St, Bronx, NY 10474, USA",
@@ -2414,6 +2663,7 @@ const shareables = [
     "latitude": 40.8172196
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Grand Central Food Program - Randall & Bryant",
     "address": "89 E 42nd St, New York, NY 10017, USA",
@@ -2426,6 +2676,7 @@ const shareables = [
     "latitude": 40.7527262
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Grace Episcopal Church",
     "address": "Bronx, NY 10460, USA",
@@ -2438,6 +2689,7 @@ const shareables = [
     "latitude": 40.8404569
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "St. Anthony Catholic Church",
     "address": "1496 Commonwealth Ave, Bronx, NY 10460, USA",
@@ -2449,6 +2701,7 @@ const shareables = [
     "latitude": 40.8378857
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Saint Joan of Arc Church - Youth Ministries for Peace and Justice",
     "address": "1372 Stratford Ave, Bronx, NY 10472, USA",
@@ -2460,6 +2713,7 @@ const shareables = [
     "latitude": 40.8332797
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "El Amanecer De La Esperanza",
     "address": "2222, 1779 E 172nd St, Bronx, NY 10472, United States",
@@ -2472,6 +2726,7 @@ const shareables = [
     "latitude": 40.832986
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Soundview Presbyterian Church",
     "address": "760 Sound View Ave, Bronx, NY 10473, USA",
@@ -2483,6 +2738,7 @@ const shareables = [
     "latitude": 40.8207992
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Fellowship Covenant Church",
     "address": "720 Castle Hill Ave, Bronx, NY 10473, USA",
@@ -2496,6 +2752,7 @@ const shareables = [
     "latitude": 40.8216652
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Holy Cross Church",
     "address": "600 Sound View Ave, Bronx, NY 10473, USA",
@@ -2507,6 +2764,7 @@ const shareables = [
     "latitude": 40.8177247
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "The Love Kitchen of St. Peter's Church - Westchester Square",
     "address": "2500 Westchester Ave, Bronx, NY 10461, USA",
@@ -2519,6 +2777,7 @@ const shareables = [
     "latitude": 40.8381832
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "St. Paul's Lutheran Church",
     "address": "1891 McGraw Ave, Bronx, NY 10462, USA",
@@ -2531,6 +2790,7 @@ const shareables = [
     "latitude": 40.8346829
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Jewish Community Council of Pelham Parkway",
     "address": "2157 Holland Ave, Bronx, NY 10462, USA",
@@ -2543,6 +2803,7 @@ const shareables = [
     "latitude": 40.8553213
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "New St. John Baptist Church",
     "address": "2409 Lorillard Pl, Bronx, NY 10458, USA",
@@ -2555,6 +2816,7 @@ const shareables = [
     "latitude": 40.8566061
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Christ Apostolic Church WoSeM Citadel of God Almighty",
     "address": "442 E 183rd St, Bronx, NY 10457, USA",
@@ -2566,6 +2828,7 @@ const shareables = [
     "latitude": 40.8555793
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Louise's Pantry at Park Avenue Thorpe",
     "address": "406 E 184th St, Bronx, NY 10458, USA",
@@ -2580,6 +2843,7 @@ const shareables = [
     "latitude": 40.8563931
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Grand Central Food Program - Fordham & Webster",
     "address": "2759 Webster Ave, Bronx, NY 10458, USA",
@@ -2592,6 +2856,7 @@ const shareables = [
     "latitude": 40.8658039
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "BOOM! Health",
     "address": "540 E Fordham Rd, Bronx, NY 10458, USA",
@@ -2603,6 +2868,7 @@ const shareables = [
     "latitude": 40.859199
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "PoTS - Part of the Solution",
     "address": "2759 Webster Ave, Bronx, NY 10458, USA",
@@ -2620,6 +2886,7 @@ const shareables = [
     "latitude": 40.8658039
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Our Lady of refuge",
     "address": "290 E 196th St, Bronx, NY 10458, USA",
@@ -2632,6 +2899,7 @@ const shareables = [
     "latitude": 40.8663622
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Grand Central Food Program - Fordham & University",
     "address": "Bronx, NY 10458, USA",
@@ -2644,6 +2912,7 @@ const shareables = [
     "latitude": 40.8620404
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Creston Avenue Baptist Church",
     "address": "114 E 188th St, Bronx, NY 10468, USA",
@@ -2656,6 +2925,7 @@ const shareables = [
     "latitude": 40.861678
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Heavenly Vision Christian Center",
     "address": "2868 Jerome Ave, Bronx, NY 10468, USA",
@@ -2668,6 +2938,7 @@ const shareables = [
     "latitude": 40.871493
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Christ Disciples International Ministries",
     "address": "399 Mosholu Pkwy, Bronx, NY 10467, USA",
@@ -2680,6 +2951,7 @@ const shareables = [
     "latitude": 40.869829
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Immaculate Conception Catholic Church",
     "address": "Bronx, NY 10467, USA",
@@ -2691,6 +2963,7 @@ const shareables = [
     "latitude": 40.8723987
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Astor Family Services",
     "address": "750 Tilden St, Bronx, NY 10467, USA",
@@ -2703,6 +2976,7 @@ const shareables = [
     "latitude": 40.8766914
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Church of Pentecost",
     "address": "621 E 216th St, Bronx, NY 10467, USA",
@@ -2715,6 +2989,7 @@ const shareables = [
     "latitude": 40.882401
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Eastchester Presbyterian Church",
     "address": "3154 Fish Ave, Bronx, NY 10469, USA",
@@ -2727,6 +3002,7 @@ const shareables = [
     "latitude": 40.871234
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Shiloh Temple Pentacostal Church",
     "address": "719 E 223rd St, Bronx, NY 10466, USA",
@@ -2738,6 +3014,7 @@ const shareables = [
     "latitude": 40.886368
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Faith Apostolic Gospel Temple",
     "address": "3956 Bronxwood Ave, Bronx, NY 10466, USA",
@@ -2749,6 +3026,7 @@ const shareables = [
     "latitude": 40.8854772
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Our Lady of Grace Social Outreach",
     "address": "3981 Bronxwood Ave, Bronx, NY 10466, USA",
@@ -2761,6 +3039,7 @@ const shareables = [
     "latitude": 40.8862643
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Bronx Bethany Community organization",
     "address": "964 E 227th St, Bronx, NY 10466, USA",
@@ -2773,6 +3052,7 @@ const shareables = [
     "latitude": 40.8865215
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "East 233rd Street Senior Center",
     "address": "600 E 233rd St, Bronx, NY 10466, USA",
@@ -2786,6 +3066,7 @@ const shareables = [
     "latitude": 40.89421249999999
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "St. Francis of Rome",
     "address": "4307 Barnes Ave, Bronx, NY 10466, USA",
@@ -2799,6 +3080,7 @@ const shareables = [
     "latitude": 40.89525099999999
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "105 Iglesia Pentecostal M.I. Ebenezer",
     "address": "857 Freeman St, Bronx, NY 10459, USA",
@@ -2811,6 +3093,7 @@ const shareables = [
     "latitude": 40.8306426
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "106 Co-op City SDA Church",
     "address": "230 S Columbus Ave, Mt Vernon, NY 10553, USA",
@@ -2822,6 +3105,7 @@ const shareables = [
     "latitude": 40.9087019
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Black Forum of Co-op City, Inc.",
     "address": "2705, 177 Dreiser Loop room 20, Bronx, NY 10475, United States",
@@ -2836,6 +3120,7 @@ const shareables = [
     "latitude": 40.8777838
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "All Nations Baptist Church of Woodhaven",
     "address": "86-76 80th St, Woodhaven, NY 11421, USA",
@@ -2848,6 +3133,7 @@ const shareables = [
     "latitude": 40.6915057
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "St. Mary Gate of Heaven",
     "address": "103-12 101st Ave, Ozone Park, NY 11416, USA",
@@ -2860,6 +3146,7 @@ const shareables = [
     "latitude": 40.6855909
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Elohim Community Development and Outreach",
     "address": "87-47 111th St, Richmond Hill, NY 11418, USA",
@@ -2872,6 +3159,7 @@ const shareables = [
     "latitude": 40.6956807
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Richmond Hill SDA Community services",
     "address": "1148 Jamaica Ave, Richmond Hill, NY 11418, USA",
@@ -2883,6 +3171,7 @@ const shareables = [
     "latitude": 40.69825489999999
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "The river Fund",
     "address": "8911 Lefferts Blvd, Jamaica, NY 11418, USA",
@@ -2895,6 +3184,7 @@ const shareables = [
     "latitude": 40.69701200000001
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Saint Benedict Joseph Labre Church Food Pantry",
     "address": "94-40 118th St, South Richmond Hill, NY 11419, USA",
@@ -2907,6 +3197,7 @@ const shareables = [
     "latitude": 40.6927931
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Christina Home Care Food Pantry",
     "address": "120-13 Liberty Ave, South Richmond Hill, NY 11419, USA",
@@ -2919,6 +3210,7 @@ const shareables = [
     "latitude": 40.6870025
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "St. theresa of avila Church Community services",
     "address": "109-55 128th St, South Ozone Park, NY 11420, USA",
@@ -2930,6 +3222,7 @@ const shareables = [
     "latitude": 40.68317589999999
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Leviticus Church of God in Christ",
     "address": "114-12 Van Wyck Expy, South Ozone Park, NY 11420, USA",
@@ -2941,6 +3234,7 @@ const shareables = [
     "latitude": 40.6823904
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Our Lady of Grace Parish Ministries",
     "address": "158-20 101st St, Howard Beach, NY 11414, USA",
@@ -2952,6 +3246,7 @@ const shareables = [
     "latitude": 40.6612215
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Brooks Memorial united Methodist Church",
     "address": "143-22 109th Ave, Jamaica, NY 11435, USA",
@@ -2964,6 +3259,7 @@ const shareables = [
     "latitude": 40.688481
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Blanche Memorial Church",
     "address": "10974 Sutphin Blvd, Jamaica, NY 11435, USA",
@@ -2976,6 +3272,7 @@ const shareables = [
     "latitude": 40.6899987
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Christ Apostolic Church",
     "address": "10802 Sutphin Blvd, Jamaica, NY 11435, USA",
@@ -2988,6 +3285,7 @@ const shareables = [
     "latitude": 40.6928709
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "ACQC (AIDS Center of Queens County), Jamaica",
     "address": "161-21 Jamaica Ave, Jamaica, NY 11432, USA",
@@ -3001,6 +3299,7 @@ const shareables = [
     "latitude": 40.704557
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Salvation Army Jamaica Citadel",
     "address": "9023 161st St, Jamaica, NY 11432, USA",
@@ -3014,6 +3313,7 @@ const shareables = [
     "latitude": 40.7048592
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "First Reformed Church of Jamaica",
     "address": "159-29 90th Ave, Jamaica, NY 11432, USA",
@@ -3025,6 +3325,7 @@ const shareables = [
     "latitude": 40.705466
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "First Presbyterian Church in Jamaica",
     "address": "89-60 164th St, Jamaica, NY 11432, USA",
@@ -3037,6 +3338,7 @@ const shareables = [
     "latitude": 40.7057777
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Presentation of the Blessed Virgin Mary",
     "address": "88-19 Parsons Blvd, Jamaica, NY 11432, USA",
@@ -3048,6 +3350,7 @@ const shareables = [
     "latitude": 40.7061026
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Jamaica Hispanic SDA Church",
     "address": "8828 161st St, Jamaica, NY 11432, USA",
@@ -3060,6 +3363,7 @@ const shareables = [
     "latitude": 40.707286
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "First united Methodist Church of Jamaica",
     "address": "16210 Highland Ave, Jamaica, NY 11432, USA",
@@ -3073,6 +3377,7 @@ const shareables = [
     "latitude": 40.70978789999999
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "St. Nicholas of Tolentine Church",
     "address": "150-75 Goethals Ave, Jamaica, NY 11432, USA",
@@ -3084,6 +3389,7 @@ const shareables = [
     "latitude": 40.7185401
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Tabernacle of Prayer",
     "address": "90-07 Merrick Blvd, Jamaica, NY 11432, USA",
@@ -3096,6 +3402,7 @@ const shareables = [
     "latitude": 40.70688759999999
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "River Fund Mobile Unit - Queens",
     "address": "Rufus King Park, 150-29 Jamaica Ave, Jamaica, NY 11435, USA",
@@ -3104,6 +3411,7 @@ const shareables = [
     "latitude": 40.7036801
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Jamaica service Program for Older adults",
     "address": "92-47 165th St, Jamaica, NY 11433, USA",
@@ -3116,6 +3424,7 @@ const shareables = [
     "latitude": 40.704328
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "The Harding Ford Vision, Inc",
     "address": "157-22 Tuskegee Airmen Way, Jamaica, NY 11433, USA",
@@ -3128,6 +3437,7 @@ const shareables = [
     "latitude": 40.6981415
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "St. Bonaventure-st. Benedict the Moor Food Pantry",
     "address": "17117 Brinkerhoff Ave, Jamaica, NY 11433, USA",
@@ -3140,6 +3450,7 @@ const shareables = [
     "latitude": 40.6965391
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Bethany Baptist Church of Jamaica",
     "address": "157-11 111th Ave, Jamaica, NY 11433, USA",
@@ -3151,6 +3462,7 @@ const shareables = [
     "latitude": 40.690409
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Calvary Baptist Church Food Pantry",
     "address": "111-10 Guy R Brewer Blvd, Jamaica, NY 11433, USA",
@@ -3163,6 +3475,7 @@ const shareables = [
     "latitude": 40.691401
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Greater Allen a.M.E. Cathedral of new York",
     "address": "110-31 Merrick Blvd, Jamaica, NY 11433, USA",
@@ -3174,6 +3487,7 @@ const shareables = [
     "latitude": 40.6951415
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "41 st. Clement Pope roman Catholic Church",
     "address": "141st St, Jamaica, NY 11436, USA",
@@ -3185,6 +3499,7 @@ const shareables = [
     "latitude": 40.6793831
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Morris Brown AME Church - Helping Hand",
     "address": "14503 Rockaway Blvd, Jamaica, NY 11436, USA",
@@ -3197,6 +3512,7 @@ const shareables = [
     "latitude": 40.6738113
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Union united Methodist Church",
     "address": "126-22 150th Street, South Ozone Park, NY 11436, South Ozone Park, NY 11436, United States",
@@ -3209,6 +3525,7 @@ const shareables = [
     "latitude": 40.671955
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Holy Ghost Upper Room Filling Station Ministry",
     "address": "146-17 133rd Ave, Jamaica, NY 11435, USA",
@@ -3220,6 +3537,7 @@ const shareables = [
     "latitude": 40.668864
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "National Sorority Phi Delta Kappa \"Big sister\"/Phi Delta Kappa ruby s. Couche Big sister Center",
     "address": "11708 Merrick Blvd, Jamaica, NY 11434, USA",
@@ -3231,6 +3549,7 @@ const shareables = [
     "latitude": 40.6867025
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Christ Church International",
     "address": "12220 Merrill St, Jamaica, NY 11434, USA",
@@ -3243,6 +3562,7 @@ const shareables = [
     "latitude": 40.6827337
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Project Hope Charities Inc.",
     "address": "17020 140th Ave, Jamaica, NY 11434, USA",
@@ -3254,6 +3574,7 @@ const shareables = [
     "latitude": 40.670814
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Church of Christ the King Pantry",
     "address": "145-39 Farmers Blvd, Jamaica, NY 11434, USA",
@@ -3266,6 +3587,7 @@ const shareables = [
     "latitude": 40.6653368
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Walk in Love Family Center",
     "address": "215-32 Jamaica Ave, Queens Village, NY 11428, USA",
@@ -3277,6 +3599,7 @@ const shareables = [
     "latitude": 40.7172028
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Catholic Charities Church of the Incarnation/Incarnation Parish Pantry",
     "address": "89-28 207th St, Jamaica, NY 11427, USA",
@@ -3289,6 +3612,7 @@ const shareables = [
     "latitude": 40.719116
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Hollis Avenue Congregational Church",
     "address": "211-04 Hollis Ave, Queens Village, NY 11429, USA",
@@ -3301,6 +3625,7 @@ const shareables = [
     "latitude": 40.7087729
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Genesis transitional Housing Ministries Inc.",
     "address": "12227 192nd St, Springfield Gardens, NY 11413, USA",
@@ -3312,6 +3637,7 @@ const shareables = [
     "latitude": 40.6849555
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Second Chance Deliverance Church",
     "address": "109-12 200th St, Jamaica, NY 11412, USA",
@@ -3323,6 +3649,7 @@ const shareables = [
     "latitude": 40.706832
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Grace United Methodist Church",
     "address": "200-08 Murdock Ave, Jamaica, NY 11412, USA",
@@ -3334,6 +3661,7 @@ const shareables = [
     "latitude": 40.69986979999999
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "First Church of God in Christ",
     "address": "18710 Baisley Blvd, St. Albans, NY 11412, USA",
@@ -3346,6 +3674,7 @@ const shareables = [
     "latitude": 40.6901644
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Our Lady of Light Food Pantry",
     "address": "118-22 Riverton St, St. Albans, NY 11412, USA",
@@ -3357,6 +3686,7 @@ const shareables = [
     "latitude": 40.689738
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "St. albans Baptist Church",
     "address": "196-02 119th Ave, St. Albans, NY 11412, USA",
@@ -3368,6 +3698,7 @@ const shareables = [
     "latitude": 40.6905858
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Queens Tabernacle Church",
     "address": "86-03 96th St, Woodhaven, NY 11421, USA",
@@ -3379,6 +3710,7 @@ const shareables = [
     "latitude": 40.6957617
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Kerith SDA Church",
     "address": "1-230 Linden Blvd, Cambria Heights, NY 11411, USA",
@@ -3390,6 +3722,7 @@ const shareables = [
     "latitude": 40.6921746
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Queens Faith temple Outreach Center",
     "address": "217-03 Merrick Blvd, Laurelton, NY 11413, USA",
@@ -3401,6 +3734,7 @@ const shareables = [
     "latitude": 40.680039
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "St. Luke Baptist Church Food Pantry",
     "address": "13328 232nd St, Laurelton, NY 11413, USA",
@@ -3412,6 +3746,7 @@ const shareables = [
     "latitude": 40.67584859999999
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "First Presbyterian Church of Springfield Gardens",
     "address": "Laurelton, NY 11413, USA",
@@ -3423,6 +3758,7 @@ const shareables = [
     "latitude": 40.676147
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Gethsemane soul saving Outreach",
     "address": "145-41 228th St, Springfield Gardens, NY 11413, USA",
@@ -3434,6 +3770,7 @@ const shareables = [
     "latitude": 40.6608661
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "St. Camillus RC Church",
     "address": "99-15 Rockaway Beach Blvd, Rockaway Park, NY 11694, USA",
@@ -3446,6 +3783,7 @@ const shareables = [
     "latitude": 40.583894
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Beach Church",
     "address": "2-24 Beach 97th St, Rockaway Beach, NY 11693, USA",
@@ -3457,6 +3795,7 @@ const shareables = [
     "latitude": 40.5857249
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Catholic Charities BFFY - St. Vincent de Paul at St. Rose of Lima",
     "address": "130 Beach 84th St, Rockaway Beach, NY 11693, USA",
@@ -3471,6 +3810,7 @@ const shareables = [
     "latitude": 40.5861848
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "The action Center Food Pantry",
     "address": "57-10 Beach Channel Dr, Arverne, NY 11692, USA",
@@ -3483,6 +3823,7 @@ const shareables = [
     "latitude": 40.5950484
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Full Gospel tabernacle Food Pantry",
     "address": "361 Beach 42nd St, Far Rockaway, NY 11691, USA",
@@ -3495,6 +3836,7 @@ const shareables = [
     "latitude": 40.595401
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "J.u.s.t.I.C.E. Organization/Jesus is Justice Mission Inc.",
     "address": "219 Beach 28th St, Far Rockaway, NY 11691, USA",
@@ -3506,6 +3848,7 @@ const shareables = [
     "latitude": 40.5955128
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "71 \tst. Mary star of the sea",
     "address": "1920 New Haven Ave, Far Rockaway, NY 11691, USA",
@@ -3518,6 +3861,7 @@ const shareables = [
     "latitude": 40.600749
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "ACQC (AIDS Center of Queens County), Far rockaway",
     "address": "11-39 Foam Pl, Far Rockaway, NY 11691, USA",
@@ -3531,6 +3875,7 @@ const shareables = [
     "latitude": 40.6049491
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Jewish Community Council of the rockaway Peninsula",
     "address": "1525 Central Ave #1, Far Rockaway, NY 11691, USA",
@@ -3542,6 +3887,7 @@ const shareables = [
     "latitude": 40.605211
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "First Church of God",
     "address": "1425 Beach Channel Dr, Far Rockaway, NY 11691, USA",
@@ -3553,6 +3899,7 @@ const shareables = [
     "latitude": 40.60896
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "First Baptist Church/H.O. Scott Education and Community Center",
     "address": "15-10 Redfern Ave, Far Rockaway, NY 11691, USA",
@@ -3564,6 +3911,7 @@ const shareables = [
     "latitude": 40.6084986
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "First Presbyterian russell sage Memorial Food Pantry",
     "address": "896 Central Ave, Far Rockaway, NY 11691, USA",
@@ -3576,6 +3924,7 @@ const shareables = [
     "latitude": 40.6096769
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Sunset Park Emergency Food Program I The Centerfor Family Life",
     "address": "443 39th St, Brooklyn, NY 11232, USA",
@@ -3588,6 +3937,7 @@ const shareables = [
     "latitude": 40.6519847
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Salvation Army Sunset Park Corp.",
     "address": "520 50th St, Brooklyn, NY 11220, USA",
@@ -3599,6 +3949,7 @@ const shareables = [
     "latitude": 40.6446242
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Basilica of our Lady of Perpetual Help",
     "address": "526 59th St, Brooklyn, NY 11220, USA",
@@ -3612,6 +3963,7 @@ const shareables = [
     "latitude": 40.6395922
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Bay ridge Center",
     "address": "411 Ovington Ave, Brooklyn, NY 11209, USA",
@@ -3624,6 +3976,7 @@ const shareables = [
     "latitude": 40.63378050000001
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Catholic Charities our Lady of Angels",
     "address": "336 73rd St, Brooklyn, NY 11209, USA",
@@ -3637,6 +3990,7 @@ const shareables = [
     "latitude": 40.632344
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Zichron Acheinu Levy Menachem Tzion",
     "address": "Zikhron Ya'akov, Israel",
@@ -3650,6 +4004,7 @@ const shareables = [
     "latitude": 32.573905
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Masbia of Boro Park",
     "address": "5402 New Utrecht Ave, Brooklyn, NY 11219, USA",
@@ -3662,6 +4017,7 @@ const shareables = [
     "latitude": 40.63236
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Catholic Charities Holy Spirit Church",
     "address": "1712 45th St, Brooklyn, NY 11204, USA",
@@ -3673,6 +4029,7 @@ const shareables = [
     "latitude": 40.6311998
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "reaching out Community Services Inc.",
     "address": "7708 New Utrecht Ave, Brooklyn, NY 11214, USA",
@@ -3687,6 +4044,7 @@ const shareables = [
     "latitude": 40.613981
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "bensonhurst CoJo / kosher Food Program",
     "address": "8635 21st Ave #1b, Brooklyn, NY 11214, USA",
@@ -3699,6 +4057,7 @@ const shareables = [
     "latitude": 40.6023906
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Calvary Pentecostal Church",
     "address": "151 Woodruff Ave, Brooklyn, NY 11226, USA",
@@ -3712,6 +4071,7 @@ const shareables = [
     "latitude": 40.6545479
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "FAoG Food Pantry Program",
     "address": "2241 Church Ave, Brooklyn, NY 11226, USA",
@@ -3724,6 +4084,7 @@ const shareables = [
     "latitude": 40.6507569
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "CAMBA Beyond Hunger emergency Food Pantry",
     "address": "2241 Church Ave, Brooklyn, NY 11226, USA",
@@ -3738,6 +4099,7 @@ const shareables = [
     "latitude": 40.6507569
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Holy Cross Church Food Pantry",
     "address": "2530 Church Ave, Brooklyn, NY 11226, USA",
@@ -3749,6 +4111,7 @@ const shareables = [
     "latitude": 40.6503206
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Gospel Tabernacle Church of Jesus Christ",
     "address": "2314 Snyder Avenue, (Between Bedford and Rogers), Brooklyn, NY 11226, United States",
@@ -3760,6 +4123,7 @@ const shareables = [
     "latitude": 40.64857749999999
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Flatbush SDA Church",
     "address": "261 E 21st St, Brooklyn, NY 11226, USA",
@@ -3772,6 +4136,7 @@ const shareables = [
     "latitude": 40.648056
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "CAMBA",
     "address": "1720 Church Ave, Brooklyn, NY 11226, USA",
@@ -3783,6 +4148,7 @@ const shareables = [
     "latitude": 40.6491597
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Fernande Valme Ministries",
     "address": "1120 Flatbush Ave, Brooklyn, NY 11226, USA",
@@ -3794,6 +4160,7 @@ const shareables = [
     "latitude": 40.6431486
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Worldwide Evangelical Outreach",
     "address": "3102 Clarendon Rd, Brooklyn, NY 11226, USA",
@@ -3806,6 +4173,7 @@ const shareables = [
     "latitude": 40.6430285
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Hazel Brooks Senior Ctr.",
     "address": "961 Ocean Ave, Brooklyn, NY 11226, USA",
@@ -3819,6 +4187,7 @@ const shareables = [
     "latitude": 40.6389946
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Our Lady of refuge Pantry",
     "address": "2020 Foster Ave, Brooklyn, NY 11210, USA",
@@ -3831,6 +4200,7 @@ const shareables = [
     "latitude": 40.6362335
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Admirable Church",
     "address": "1910 Church Ave, Brooklyn, NY 11226, USA",
@@ -3842,6 +4212,7 @@ const shareables = [
     "latitude": 40.6497269
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Masbia of Flatbush",
     "address": "1372 Coney Island Ave, Brooklyn, NY 11230, USA",
@@ -3854,6 +4225,7 @@ const shareables = [
     "latitude": 40.624081
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Shalom Senior Center",
     "address": "483 Albany Ave, Brooklyn, NY 11203, USA",
@@ -3865,6 +4237,7 @@ const shareables = [
     "latitude": 40.6634051
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Breakthrough Pantry/Triumphant Full Gospel Assembly",
     "address": "892 Rutland Rd, Brooklyn, NY 11203, USA",
@@ -3877,6 +4250,7 @@ const shareables = [
     "latitude": 40.6605171
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "United Community Baptist kitchen",
     "address": "Brooklyn, NY 11203, USA",
@@ -3889,6 +4263,7 @@ const shareables = [
     "latitude": 40.6602052
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Society of St. Vincent de Paul at Saint Catherine of Genoa Church",
     "address": "520 Linden Blvd, Brooklyn, NY 11203, USA",
@@ -3900,6 +4275,7 @@ const shareables = [
     "latitude": 40.65295260000001
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "God's Battalion Prayer Church",
     "address": "661 Linden Blvd, Brooklyn, NY 11203, USA",
@@ -3911,6 +4287,7 @@ const shareables = [
     "latitude": 40.6538877
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Brooklyn Faith SDA Church",
     "address": "5518 Church Ave, Brooklyn, NY 11203, USA",
@@ -3922,6 +4299,7 @@ const shareables = [
     "latitude": 40.652274
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "16 Neighborhood Guide to Food and Assistance - Lower Brooklyn edition",
     "comments": [
@@ -3935,6 +4313,7 @@ const shareables = [
     "latitude": 40.7230084
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "44 Light House of Hope Food Pantry",
     "address": "602 E 89th St, Brooklyn, NY 11236, USA",
@@ -3947,6 +4326,7 @@ const shareables = [
     "latitude": 40.64242340000001
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "45 our Lady of Miracles Parish-Canarsie Food Pantry",
     "address": "757 E 86th St, Brooklyn, NY 11236, USA",
@@ -3959,6 +4339,7 @@ const shareables = [
     "latitude": 40.6388359
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "46 Zion Church of the Truth",
     "address": "1074 Nostrand Ave, Brooklyn, NY 11225, USA",
@@ -3971,6 +4352,7 @@ const shareables = [
     "latitude": 40.661776
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Sephardic Bikur Holim",
     "address": "425 Kings Hwy, Brooklyn, NY 11223, USA",
@@ -3983,6 +4365,7 @@ const shareables = [
     "latitude": 40.6046061
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Salt and Sea Mission",
     "address": "1530 Mermaid Ave, Brooklyn, NY 11224, USA",
@@ -3995,6 +4378,7 @@ const shareables = [
     "latitude": 40.576512
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "River Fund Mobile Unit - Brooklyn",
     "address": "8911 Lefferts Blvd, Jamaica, NY 11418, USA",
@@ -4003,6 +4387,7 @@ const shareables = [
     "latitude": 40.69701200000001
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "St. John's Bread and Life Mobile Soup kitchen - Coney Island",
     "address": "795 Lexington Ave, Brooklyn, NY 11221, USA",
@@ -4013,6 +4398,7 @@ const shareables = [
     "latitude": 40.6903437
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Coney Island Lighthouse Mission",
     "address": "2114 Mermaid Ave, Brooklyn, NY 11224, USA",
@@ -4026,6 +4412,7 @@ const shareables = [
     "latitude": 40.5760998
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Haber House Senior Center",
     "address": "3024 W 24th St, Brooklyn, NY 11224, USA",
@@ -4040,6 +4427,7 @@ const shareables = [
     "latitude": 40.5735571
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Shorefront Jewish Community Council",
     "address": "128 Brighton Beach Ave. 4th Floor, Brooklyn, NY 11235, United States",
@@ -4052,6 +4440,7 @@ const shareables = [
     "latitude": 40.576149
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Catholic Charities St. Marks",
     "address": "2609 E 19th St, Brooklyn, NY 11235, USA",
@@ -4063,6 +4452,7 @@ const shareables = [
     "latitude": 40.5881863
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "kings Bay yM-ywHA",
     "address": "3495 Nostrand Ave, Brooklyn, NY 11229, USA",
@@ -4075,6 +4465,7 @@ const shareables = [
     "latitude": 40.5988563
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Church of St. Paul the Apostle Loaves and Fishes",
     "address": "405 W 59th St, New York, NY 10019, USA",
@@ -4086,6 +4477,7 @@ const shareables = [
     "latitude": 40.7699132
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "St. Paul's House",
     "address": "335 W 51st St, New York, NY 10019, USA",
@@ -4099,6 +4491,7 @@ const shareables = [
     "latitude": 40.7636768
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Encore Senior Center",
     "address": "220 W 49th St, New York, NY 10019, USA",
@@ -4111,6 +4504,7 @@ const shareables = [
     "latitude": 40.760978
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Grand Central Food Program - 51st & Broadway",
     "address": "89 E 42nd St, New York, NY 10017, USA",
@@ -4123,6 +4517,7 @@ const shareables = [
     "latitude": 40.7527262
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Grand Central Food Program - SonY Building",
     "address": "89 E 42nd St, New York, NY 10017, USA",
@@ -4135,6 +4530,7 @@ const shareables = [
     "latitude": 40.7527262
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Central Synagogue Breakfast Program",
     "address": "652 Lexington Ave, New York, NY 10022, USA",
@@ -4147,6 +4543,7 @@ const shareables = [
     "latitude": 40.75958
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "St. Peter's Lutheran Church",
     "address": "619 Lexington Ave, New York, NY 10022, USA",
@@ -4159,6 +4556,7 @@ const shareables = [
     "latitude": 40.758814
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Momentum Project at St. Peter's Lutheran Church",
     "address": "619 Lexington Ave, New York, NY 10022, USA",
@@ -4171,6 +4569,7 @@ const shareables = [
     "latitude": 40.758814
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Grand Central Food Program (Coalition for the homeless)",
     "address": "129 Fulton St, New York, NY 10038, USA",
@@ -4183,6 +4582,7 @@ const shareables = [
     "latitude": 40.7102655
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Crossroads Community Services at St. Bartholomew's Church",
     "address": "108 E 51st St, New York, NY 10022, USA",
@@ -4195,6 +4595,7 @@ const shareables = [
     "latitude": 40.7573397
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "St. Luke's Lutheran Church",
     "address": "308 West 46th St, New York, NY 10036, USA",
@@ -4206,6 +4607,7 @@ const shareables = [
     "latitude": 40.7600066
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "The Relief Bus - Port authority",
     "address": "572 9th Ave, New York, NY 10036, USA",
@@ -4217,6 +4619,7 @@ const shareables = [
     "latitude": 40.7580266
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Crossroads Food Pantry",
     "address": "329 W 42nd St, New York, NY 10036, USA",
@@ -4229,6 +4632,7 @@ const shareables = [
     "latitude": 40.7581788
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "The Dwelling Place of n.Y., Inc.",
     "address": "409 W 40th St, New York, NY 10018, USA",
@@ -4241,6 +4645,7 @@ const shareables = [
     "latitude": 40.7575945
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Rauschenbusch Metro Ministries - Metro Baptist Church",
     "address": "410 W 40th St, New York, NY 10018, USA",
@@ -4254,6 +4659,7 @@ const shareables = [
     "latitude": 40.757203
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Sylvia Tivera Food Pantry",
     "address": "446 W 36th St, New York, NY 10018, USA",
@@ -4266,6 +4672,7 @@ const shareables = [
     "latitude": 40.7553583
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Grand Central Food Program - Port authority",
     "address": "W 40th St, New York, NY 10018, USA",
@@ -4277,6 +4684,7 @@ const shareables = [
     "latitude": 40.7563649
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Gay Men's health Crisis",
     "address": "307 W 38th St, New York, NY 10018, USA",
@@ -4289,6 +4697,7 @@ const shareables = [
     "latitude": 40.7551433
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "AIDS Service Center nYC",
     "address": "64 West 35th Street, 3rd Floor, New York, NY 10001, United States",
@@ -4300,6 +4709,7 @@ const shareables = [
     "latitude": 40.7501422
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Grand Central Food Program - Penn Station",
     "address": "133 West 33rd Street, New York, NY 10001, USA",
@@ -4311,6 +4721,7 @@ const shareables = [
     "latitude": 40.749966
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "The Relief Bus - Chelsea Park",
     "address": "Park Ave. between 124th and, W 125th St, New York, NY 10027, United States",
@@ -4322,6 +4733,7 @@ const shareables = [
     "latitude": 40.8046251
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Holy Apostles Soup Kitchen",
     "address": "296 9th Ave, New York, NY 10001, USA",
@@ -4334,6 +4746,7 @@ const shareables = [
     "latitude": 40.7492653
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "St. Francis of assisi",
     "address": "St. Francis of Assisi Church, 135 W 31st St, New York, NY 10001, USA",
@@ -4346,6 +4759,7 @@ const shareables = [
     "latitude": 40.7488781
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Grand Central Food Program - Madison Square Park",
     "address": "89 E 42nd St, New York, NY 10017, USA",
@@ -4358,6 +4772,7 @@ const shareables = [
     "latitude": 40.7527262
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "New alternatives for Children",
     "address": "37 W 26th St #6, New York, NY 10010, USA",
@@ -4369,6 +4784,7 @@ const shareables = [
     "latitude": 40.7445603
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Grand Central Food Program - 35th & FDr",
     "address": "89 E 42nd St, New York, NY 10017, USA",
@@ -4381,6 +4797,7 @@ const shareables = [
     "latitude": 40.7527262
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "36 St. Peter's episcopal Church",
     "address": "346 W 20th St, New York, NY 10011, USA",
@@ -4393,6 +4810,7 @@ const shareables = [
     "latitude": 40.74411629999999
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Hope for our neighbors in need at Church of the Village",
     "address": "201 W 13th St, New York, NY 10011, USA",
@@ -4404,6 +4822,7 @@ const shareables = [
     "latitude": 40.73813699999999
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Salvation Army New York Temple",
     "address": "145 E 39th St, New York, NY 10016, USA",
@@ -4414,6 +4833,7 @@ const shareables = [
     "latitude": 40.7493526
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Xavier Mission at the Church of St. Francis Xavier",
     "address": "55 W 15th St, New York, NY 10011, USA",
@@ -4425,6 +4845,7 @@ const shareables = [
     "latitude": 40.737877
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Church of the Ascension",
     "address": "5th Ave & W 10th St, New York, NY 10011, United States",
@@ -4438,6 +4859,7 @@ const shareables = [
     "latitude": 40.73375060000001
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Church of St. Joseph in Greenwich Village",
     "address": "371 6th Ave, New York, NY 10014, USA",
@@ -4449,6 +4871,7 @@ const shareables = [
     "latitude": 40.7326297
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Judson Memorial Church",
     "address": "55 Washington Square S, New York, NY 10012, USA",
@@ -4460,6 +4883,7 @@ const shareables = [
     "latitude": 40.73034029999999
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Hebrew Union College-Jewish Institute of religion",
     "address": "1 West 4th Street, New York, NY 10012, USA",
@@ -4473,6 +4897,7 @@ const shareables = [
     "latitude": 40.7288738
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "New York City rescue Mission",
     "address": "90 Lafayette St, New York, NY 10013, USA",
@@ -4488,6 +4913,7 @@ const shareables = [
     "latitude": 40.7174328
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Grand Central Food Program - Lafayette & Leonard",
     "address": "89 E 42nd St, New York, NY 10017, USA",
@@ -4500,6 +4926,7 @@ const shareables = [
     "latitude": 40.7527262
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Village temple Soup Kitchen",
     "address": "33 E 12th St, New York, NY 10003, USA",
@@ -4511,6 +4938,7 @@ const shareables = [
     "latitude": 40.7338461
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "St. George's Common table",
     "address": "4 Rutherford Pl, New York, NY 10003, USA",
@@ -4522,6 +4950,7 @@ const shareables = [
     "latitude": 40.7344128
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "The Hetrick-Martin Institute",
     "address": "2 Astor Pl, New York, NY 10003, USA",
@@ -4537,6 +4966,7 @@ const shareables = [
     "latitude": 40.729798
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Momentum Project at Middle Collegiate Church",
     "address": "112 2nd Ave, New York, NY 10003, USA",
@@ -4548,6 +4978,7 @@ const shareables = [
     "latitude": 40.7276533
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "St. Joseph house/Catholic worker",
     "address": "36 E 1st St, New York, NY 10003, USA",
@@ -4561,6 +4992,7 @@ const shareables = [
     "latitude": 40.7241491
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Father's heart Ministries",
     "address": "545 E 11th St, New York, NY 10009, USA",
@@ -4574,6 +5006,7 @@ const shareables = [
     "latitude": 40.7278207
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Trinity Services and Food for the homeless",
     "address": "602 E 9th St, New York, NY 10009, USA",
@@ -4588,6 +5021,7 @@ const shareables = [
     "latitude": 40.726091
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "University Community Social Services",
     "address": "137 E 2nd St, New York, NY 10009, USA",
@@ -4599,6 +5033,7 @@ const shareables = [
     "latitude": 40.7230138
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "The Bowery Mission",
     "address": "227 Bowery, New York, NY 10002, USA",
@@ -4612,6 +5047,7 @@ const shareables = [
     "latitude": 40.7219763
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Grand Central Food Program - Bowery Mission",
     "address": "89 E 42nd St, New York, NY 10017, USA",
@@ -4624,6 +5060,7 @@ const shareables = [
     "latitude": 40.7527262
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Grand Coalition of Seniors-Grand Street Settlement",
     "address": "80 Pitt St, New York, NY 10002, USA",
@@ -4637,6 +5074,7 @@ const shareables = [
     "latitude": 40.718302
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Dewitt reformed Church Food Pantry",
     "address": "280 Rivington St, New York, NY 10002, USA",
@@ -4648,6 +5086,7 @@ const shareables = [
     "latitude": 40.7174796
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "UJC of the east Side",
     "address": "15 Willett St, New York, NY 10002, USA",
@@ -4660,6 +5099,7 @@ const shareables = [
     "latitude": 40.7158448
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Primitive Christian Church",
     "address": "209 E Broadway, New York, NY 10002, USA",
@@ -4672,6 +5112,7 @@ const shareables = [
     "latitude": 40.7140338
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Grand Central Food Program - Allen St.",
     "address": "25 Allen St, New York, NY 10002, USA",
@@ -4684,6 +5125,7 @@ const shareables = [
     "latitude": 40.715706
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Cabrini Immigrant Services of nYC",
     "address": "139 Henry St, New York, NY 10002, USA",
@@ -4695,6 +5137,7 @@ const shareables = [
     "latitude": 40.71341169999999
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Trinity Church Brown Bag",
     "address": "75 Broadway, New York, NY 10006, USA",
@@ -4707,6 +5150,7 @@ const shareables = [
     "latitude": 40.7080624
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Grand Central Food Program - Staten Island Ferry terminal",
     "address": "49 E 42nd St, New York, NY 10017, USA",
@@ -4719,6 +5163,7 @@ const shareables = [
     "latitude": 40.7526349
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "City Harvest Mariner's Harbor Mobile Market",
     "address": "1 Broadway, Kingston, NY 12401, USA",
@@ -4733,6 +5178,7 @@ const shareables = [
     "latitude": 41.9181579
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Project Hospitality Mobile Pantry -St. Michael's Church",
     "address": "207 Harbor Rd, Staten Island, NY 10303, USA",
@@ -4741,6 +5187,7 @@ const shareables = [
     "latitude": 40.6313378
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Catholic Charities Mobile Food Pantry - anderson avenue",
     "address": "120 Anderson Ave, Staten Island, NY 10302, USA",
@@ -4752,6 +5199,7 @@ const shareables = [
     "latitude": 40.6346984
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Faith United Methodist Church",
     "address": "221 Heberton Ave, Staten Island, NY 10302, USA",
@@ -4763,6 +5211,7 @@ const shareables = [
     "latitude": 40.6350941
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Project Hospitality - el Centro de Hospitalidad",
     "address": "1546 Castleton Ave, Staten Island, NY 10302, USA",
@@ -4775,6 +5224,7 @@ const shareables = [
     "latitude": 40.63572449999999
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Community Health action of Staten Island",
     "address": "2134 Richmond Terrace, Staten Island, NY 10302, USA",
@@ -4787,6 +5237,7 @@ const shareables = [
     "latitude": 40.6401964
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Rescue Ministries/Ministerio Rescate",
     "address": "2083 Richmond Terrace, Staten Island, NY 10302, USA",
@@ -4799,6 +5250,7 @@ const shareables = [
     "latitude": 40.6404954
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Salvation army Port Richmond Corps",
     "address": "1295 Forest Ave, Staten Island, NY 10302, USA",
@@ -4813,6 +5265,7 @@ const shareables = [
     "latitude": 40.626592
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Project Hospitality Mobile Pantry - Shiloh AME Zion Church",
     "address": "779 Henderson Ave, Staten Island, NY 10310, USA",
@@ -4825,6 +5278,7 @@ const shareables = [
     "latitude": 40.6370296
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Catholic Charities Mobile Food Pantry at St. Peter's Church",
     "address": "53 St Marks Pl, Staten Island, NY 10301, USA",
@@ -4836,6 +5290,7 @@ const shareables = [
     "latitude": 40.6471017
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Council of Jewish Organizations",
     "address": "382 Jersey St, Staten Island, NY 10301, USA",
@@ -4848,6 +5303,7 @@ const shareables = [
     "latitude": 40.639067
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "New Brighton Church of God in Christ",
     "address": "New Brighton, MN 55112, USA",
@@ -4860,6 +5316,7 @@ const shareables = [
     "latitude": 45.0655212
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Project Hospitality Mobile Pantry - Jersey St. & Benziger ave.",
     "address": "385 Jersey St, Staten Island, NY 10301, USA",
@@ -4871,6 +5328,7 @@ const shareables = [
     "latitude": 40.638808
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Our Lady of Good Counsel Church",
     "address": "10 Austin Pl, Staten Island, NY 10304, USA",
@@ -4883,6 +5341,7 @@ const shareables = [
     "latitude": 40.631737
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Trinity lutheran Church",
     "address": "309 St Pauls Ave, Staten Island, NY 10304, USA",
@@ -4894,6 +5353,7 @@ const shareables = [
     "latitude": 40.6301011
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Project Hospitality",
     "address": "514 Bay St, Staten Island, NY 10304, USA",
@@ -4906,6 +5366,7 @@ const shareables = [
     "latitude": 40.6293985
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "United Church of Praise Healthy Heart",
     "address": "32 Sands St, Staten Island, NY 10304, USA",
@@ -4916,6 +5377,7 @@ const shareables = [
     "latitude": 40.6292119
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Project Hospitality Mobile Pantry - Family Restoration Ministries",
     "address": "514 Bay St, Staten Island, NY 10304, USA",
@@ -4927,6 +5389,7 @@ const shareables = [
     "latitude": 40.6293985
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Salvation army Stapleton",
     "address": "15 Broad St, Staten Island, NY 10304, USA",
@@ -4940,6 +5403,7 @@ const shareables = [
     "latitude": 40.6258144
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Catholic Charities/Rusty Staub Mobile Food Pantry at Immaculate Conception Church",
     "address": "128 Targee St, Staten Island, NY 10304, USA",
@@ -4951,6 +5415,7 @@ const shareables = [
     "latitude": 40.6239727
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Stapleton Union AME Church",
     "address": "2628, 49 Tompkins Ave, Staten Island, NY 10304, United States",
@@ -4963,6 +5428,7 @@ const shareables = [
     "latitude": 40.623399
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "City Harvest Stapleton Houses Mobile Market",
     "address": "Staten Island, NY 10301, USA",
@@ -4979,6 +5445,7 @@ const shareables = [
     "latitude": 40.6274394
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Project Hospitality Mobile Pantry - Vanderbilt ave. Moravian Church",
     "address": "285 Vanderbilt Ave, Staten Island, NY 10304, USA",
@@ -4990,6 +5457,7 @@ const shareables = [
     "latitude": 40.618548
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Project Hospitality Mobile Pantry - African Refuge Center",
     "address": "185 Park Hill Ave, Staten Island, NY 10304, USA",
@@ -5001,6 +5469,7 @@ const shareables = [
     "latitude": 40.6151566
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Staten Island Liberian Community",
     "address": "180 Park Hill Ave, Suite LG, Staten Island, NY 10304, United States",
@@ -5013,6 +5482,7 @@ const shareables = [
     "latitude": 40.6149688
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Christian Pentecostal Church",
     "address": "900 Richmond Rd, Staten Island, NY 10304, USA",
@@ -5026,6 +5496,7 @@ const shareables = [
     "latitude": 40.6048583
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "All Saints Church episcopal Ministry",
     "address": "2329 Victory Blvd, Staten Island, NY 10314, USA",
@@ -5037,6 +5508,7 @@ const shareables = [
     "latitude": 40.6116248
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Jewish Community Center of Staten Island",
     "address": "1466 Manor Rd, Staten Island, NY 10314, USA",
@@ -5049,6 +5521,7 @@ const shareables = [
     "latitude": 40.594786
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Project Hospitality Mobile Pantry - Our lady of lourdes Chapel",
     "address": "130 Cedar Grove Ave, Staten Island, NY 10306, USA",
@@ -5060,6 +5533,7 @@ const shareables = [
     "latitude": 40.5614959
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "St. edward's Food Pantry",
     "address": "6581 Hylan Blvd, Staten Island, NY 10309, USA",
@@ -5073,6 +5547,7 @@ const shareables = [
     "latitude": 40.51030919999999
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "St. Paul's Methodist Church South Shore Food Pantry",
     "address": "7558 Amboy Rd, Staten Island, NY 10307, USA",
@@ -5086,6 +5561,7 @@ const shareables = [
     "latitude": 40.508747
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Project Hospitality Mobile Pantry - St. Stephen's episcopal Church",
     "address": "514 Bay St, Staten Island, NY 10304, USA",
@@ -5097,6 +5573,7 @@ const shareables = [
     "latitude": 40.6293985
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Greenpolnt Reformed Church",
     "address": "136 Milton St, Brooklyn, NY 11222, USA",
@@ -5109,6 +5586,7 @@ const shareables = [
     "latitude": 40.7291861
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Southside United HDFC (Los Sures)",
     "address": "434 S 5th St, Brooklyn, NY 11211, USA",
@@ -5120,6 +5598,7 @@ const shareables = [
     "latitude": 40.7068974
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "St. John's Bread and Life Mobile Soup Kitchen",
     "address": "795 Lexington Ave, Brooklyn, NY 11221, USA",
@@ -5130,6 +5609,7 @@ const shareables = [
     "latitude": 40.6903437
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Transfiguration Church",
     "address": "Brooklyn, NY 11211, USA",
@@ -5143,6 +5623,7 @@ const shareables = [
     "latitude": 40.7093358
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Act of Faith Ministries",
     "address": "141 Manhattan Ave, Brooklyn, NY 11206, USA",
@@ -5154,6 +5635,7 @@ const shareables = [
     "latitude": 40.70764690000001
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Trinity Human Services Corp.",
     "address": "153 Johnson Ave, Brooklyn, NY 11206, USA",
@@ -5166,6 +5648,7 @@ const shareables = [
     "latitude": 40.7066091
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "City Harvest Bed-Stuy Mobile Market",
     "address": "Tompkins Ave, Brooklyn, NY, USA",
@@ -5180,6 +5663,7 @@ const shareables = [
     "latitude": 40.6901658
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "St. Stephen outreach",
     "address": "874 Myrtle Ave, Brooklyn, NY 11206, USA",
@@ -5192,6 +5676,7 @@ const shareables = [
     "latitude": 40.695374
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Black Veterans for Social Justice",
     "address": "665 Willoughby Ave, Brooklyn, NY 11206, USA",
@@ -5203,6 +5688,7 @@ const shareables = [
     "latitude": 40.6948859
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Overcoming love Ministries - pulaski Family residence",
     "address": "228 Pulaski St, Brooklyn, NY 11206, USA",
@@ -5214,6 +5700,7 @@ const shareables = [
     "latitude": 40.692919
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Catholic Charities St. John's Food pantry",
     "address": "333 Hart St, Brooklyn, NY 11206, USA",
@@ -5225,6 +5712,7 @@ const shareables = [
     "latitude": 40.695008
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Cathedral of Joy CDC",
     "address": "43 George St, Brooklyn, NY 11206, USA",
@@ -5237,6 +5725,7 @@ const shareables = [
     "latitude": 40.7014794
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "St. John's Bread and life Mobile Soup kitchen - Maria Hernandez park",
     "address": "795 Lexington Ave, Brooklyn, NY 11221, USA",
@@ -5247,6 +5736,7 @@ const shareables = [
     "latitude": 40.6903437
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Make the Road By Walking",
     "address": "301 Grove St, Brooklyn, NY 11237, USA",
@@ -5258,6 +5748,7 @@ const shareables = [
     "latitude": 40.6984083
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "First Presbyterian Church",
     "address": "124 Henry St, Brooklyn, NY 11201, USA",
@@ -5271,6 +5762,7 @@ const shareables = [
     "latitude": 40.69704309999999
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Catholic Charities Brooklyn Community Center",
     "address": "191 Joralemon St, Brooklyn, NY 11201, USA",
@@ -5284,6 +5776,7 @@ const shareables = [
     "latitude": 40.6926509
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Christian Fellowship life Center",
     "address": "75 Maiden Ln, New York, NY 10038, USA",
@@ -5296,6 +5789,7 @@ const shareables = [
     "latitude": 40.7076012
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Food First",
     "address": "165 Conover St, Brooklyn, NY 11231, USA",
@@ -5308,6 +5802,7 @@ const shareables = [
     "latitude": 40.67827219999999
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "St. John's Bread and life Mobile Soup kitchen - Red Hook",
     "address": "795 Lexington Ave, Brooklyn, NY 11221, USA",
@@ -5316,6 +5811,7 @@ const shareables = [
     "latitude": 40.6903437
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "CHIpS - park Slope Christian Help",
     "address": "200 4th Ave, Brooklyn, NY 11217, USA",
@@ -5327,6 +5823,7 @@ const shareables = [
     "latitude": 40.678204
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Helping Hands Food pantry/St. Augustine Church",
     "address": "Brooklyn, NY 11215, USA",
@@ -5343,6 +5840,7 @@ const shareables = [
     "latitude": 40.6681669
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Colony-South Brooklyn Houses",
     "address": "297 Dean St, Brooklyn, NY 11217, USA",
@@ -5355,6 +5853,7 @@ const shareables = [
     "latitude": 40.6843832
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Recovery House of Worship (rHoW)",
     "address": "360 Schermerhorn St, Brooklyn, NY 11217, USA",
@@ -5367,6 +5866,7 @@ const shareables = [
     "latitude": 40.6865079
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Hanson place SDA",
     "address": "88 Hanson Pl, Brooklyn, NY 11217, USA",
@@ -5380,6 +5880,7 @@ const shareables = [
     "latitude": 40.6850033
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Brooklyn Teen Challenge, Inc",
     "address": "444 Clinton Ave, Brooklyn, NY 11238, USA",
@@ -5391,6 +5892,7 @@ const shareables = [
     "latitude": 40.6849814
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Brown Memorial Baptist Church",
     "address": "484 Washington Ave, Brooklyn, NY 11238, USA",
@@ -5403,6 +5905,7 @@ const shareables = [
     "latitude": 40.684223
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Child Development Support Corporation",
     "address": "802 Kent Ave # 804, Brooklyn, NY 11205, USA",
@@ -5416,6 +5919,7 @@ const shareables = [
     "latitude": 40.6971083
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Hope City empowerment Center",
     "address": "650 Washington Ave, Brooklyn, NY 11238, USA",
@@ -5427,6 +5931,7 @@ const shareables = [
     "latitude": 40.6788157
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Church of God Feeding the Hungry",
     "address": "999 Greene Ave, Brooklyn, NY 11221, USA",
@@ -5438,6 +5943,7 @@ const shareables = [
     "latitude": 40.691273
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Full Gospel Food pantry",
     "address": "131 Sullivan Pl, Brooklyn, NY 11225, USA",
@@ -5450,6 +5956,7 @@ const shareables = [
     "latitude": 40.664662
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Horeb Community Services",
     "address": "520 Kingston Ave # A, Brooklyn, NY 11225, USA",
@@ -5461,6 +5968,7 @@ const shareables = [
     "latitude": 40.6610592
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "New Haven SDA Church",
     "address": "634 Prospect Pl, Brooklyn, NY 11216, USA",
@@ -5472,6 +5980,7 @@ const shareables = [
     "latitude": 40.6746755
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Family life Development Center",
     "address": "1476 Bedford Ave, Brooklyn, NY 11216, USA",
@@ -5484,6 +5993,7 @@ const shareables = [
     "latitude": 40.6729206
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Ebenezer Wesleyan Methodist Church",
     "address": "1024 Bergen St, Brooklyn, NY 11216, USA",
@@ -5496,6 +6006,7 @@ const shareables = [
     "latitude": 40.6759658
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Bedford Central Presbyterian",
     "address": "1200 Dean St, Brooklyn, NY 11216, USA",
@@ -5508,6 +6019,7 @@ const shareables = [
     "latitude": 40.67650010000001
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Hebron SDA Church",
     "address": "1256 Dean St, Brooklyn, NY 11216, USA",
@@ -5519,6 +6031,7 @@ const shareables = [
     "latitude": 40.676511
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Agape Social Services Beulah",
     "address": "929 Marcy Ave # 1, Brooklyn, NY 11216, USA",
@@ -5531,6 +6044,7 @@ const shareables = [
     "latitude": 40.6809518
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Stuyvesant Heights Christian Church",
     "address": "69 MacDonough St, Brooklyn, NY 11216, USA",
@@ -5542,6 +6056,7 @@ const shareables = [
     "latitude": 40.6811052
   },
   {
+    "category": "food",
     "subcategory": "pantry/kitchen",
     "name": "Newman Memorial MC",
     "address": "257 Macon St, Brooklyn, NY 11216, USA",
