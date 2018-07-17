@@ -127,7 +127,6 @@ Description: Like all Bagel Bob's, no shortage of bagels of all varieties. Alex 
 Name: Tal Bagels
 Address: E 86th Street east of 1st Ave., Manhattan, NY
 Description: Here you will find…bagels!
-Name: Eli's
 
 Name: Gristedes
 Address: E 86th St west of 1st Ave, across street from the Dunkin D's, Manhattan, NY
@@ -162,7 +161,6 @@ Address: 2nd Ave and 70th St, Manhattan, NY
 Description: Our group has found loads of stuff on 2 recent occasions *autumn 2010*. Everything from halloween costumes to sodas and bottled water to a surprising amount of deli-type packaged:   food, as well as some produce.
 
 Name:  Gourmet Garage
-Name: Eli's
 Address:  301 E 64th Street between 1st and 2nd Ave, Manhattan, NY
 Description: At other locations in the city, this retailer has been locking its dumpsters or has disappeared them from the street. Comment:ever, as of April 2010 we have reports that good food is accessible in the morning. A contributor writes: I pass at 8:00am on weekdays. Two days in a row there has been a clear bag with rolls/bread, and varying packages of ready made salads *some with chicken added, etc*.  The expiration date is of the day before. This is a mini Gourmet Garbage; in several passes in 2012, Freegan.info members haven't found anything in the evening, although morning may still be fine.
 
@@ -171,7 +169,8 @@ Address: 917 9th Avenue, between 58th and 59th Streets, Manhattan, NY
 Description: Produce, bagels, bread, sweets, packaged goods, clean packaged sandwiches. *updated October 2012*.
 
 Name: Morton Williams
-Address: 58th Street just east of Broadway *store entrance is on 57th, but the trash is on 58th*, Manhattan, NY
+Address: 58th Street just east of Broadway , Manhattan, NY
+Comment: store entrance is on 57th, but the trash is on 58th
 Description: On the messy side, but on a pretty quiet street, so a good place for the shy. In October 2012 we found a bunch of produce and bread, some dairy products and a whole heap of cookies.
 
 Name: Dunkin Donuts
