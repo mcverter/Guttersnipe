@@ -38,7 +38,7 @@ Promise.all([
       function findGeocodes() {
         if (shareables.length === 0) {
           // console.log(allShareablesWithGeocode);
-          fs.writeFile(__dirname + '/geocodedShareables.json', allShareablesWithGeocode);
+          fs.writeFileSync(__dirname + '/geocodedShareables.json', JSON.stringify(allShareablesWithGeocode, null, 2), 'utf-8');
           return allShareablesWithGeocode;
         }
         else {

@@ -546,7 +546,7 @@ Comment:718 322 5547
 Time: Food Pantry:  Mon, thu 9am-11am ID required.
 
 Name: Leviticus Church of God in Christ
-Address: 114-12 Van Wycke Expressway, 11420
+Address: 114-12 Van Wycke Expressway, New York, 11420
 Comment:718 322 1095
 Time: Food Pantry: Wed 1pm-2pm, sat 12pm-1pm
 
@@ -713,7 +713,7 @@ Time: Food Pantry: tue 2pm-3pm
 Comment:ID preferred.
 
 Name: Walk in Love Family Center
-Address: 202-11 Jamaica Avenue, 11423
+Address: 202-11 Jamaica Avenue, Queens, NY 11423
 Time: Food Pantry: Wed 1pm-3:30pm, thu 5pm-6:30pm, sun 1pm-3pm.
 Comment:Distribution is while supplies last.
 
@@ -724,7 +724,7 @@ Time: Food Pantry: Fri 1pm-3pm
 Comment:ID required.
 
 Name: International Shining Stars Family Inc.
-Address: 220-20 94th Drive, 11428
+Address: 220-20 94th Drive,  New York, 11428
 Address: 646 4097146
 Time: Food Pantry: sat 11am-3pm
 
@@ -1236,7 +1236,7 @@ Comment:212 776 2000
 Comment:Mobile Soup Kitchen: everyday 9pm Come on time - distribution is mobile.
 
 Name: The Relief Bus - Chelsea Park
-Address: 28th St., between 9th & 10th Ave., 10001
+Address: 28th St., between 9th & 10th Ave., New York, 10001
 Comment:800 736 2773
 Time: Soup Kitchen: wed, Fri 10am-2pm
 
