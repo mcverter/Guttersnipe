@@ -7,8 +7,12 @@ import {
 import PropTypes from 'prop-types';
 
 function superDecodeURI(string) {
-  if(!string) return '';
-  if (string==='') return '';
+  if(!string // ||
+//    typeof string !== "string" ||
+  //  (! string.search(/\w/))
+  ) {
+    return '';
+  }
   return string
     .replace(/%27/g, "'")
     .replace(/%28/g, "(")

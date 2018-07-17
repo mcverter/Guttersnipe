@@ -3,7 +3,8 @@ import {
   View,
   Image,
   Button,
-  StyleSheet
+  StyleSheet,
+  Text
 } from 'react-native';
 import Utils from '../utils'
 import GsText from '../components/GsText';
@@ -28,23 +29,29 @@ const Shareable = (props)  => {
 
   return (
     <View style={styles.shareableContainer}>
-      <View>
-        <GsText>{name}</GsText>
-      </View>
-      <View>
-        <GsText style={styles.category}>{category}</GsText>
-        <GsText style={styles.subcategory}>{subcategory}</GsText>
+      <View style={styles.shareableTitleContainer}>
+        <View style={{flexGrow: 5}}>
+          <GsText style={styles.shareableName}>{name}</GsText>
+        </View>
+        <View style={{flexGrow: 2, display: 'flex', flexDirection: 'row'}}>
+          <View>
+            <Text style={styles.category}>{category + '   ' }</Text>
+          </View>
+          <View>
+            <Text style={styles.subcategory}>{'(' + subcategory + ')'}</Text>
+          </View>
+        </View>
       </View>
       {!!description &&
       <View>
-        <GsText>{description}</GsText>
+        <GsText style={styles.description}>{description}</GsText>
       </View>}
       <View>
-        <GsText>{address}</GsText>
+        <GsText style={styles.address}>{address}</GsText>
       </View>
       {!!time &&
       <View>
-        <GsText>{time}</GsText>
+        <GsText style={styles.time}>{time}</GsText>
       </View>}
       <View>
         <Button
@@ -73,14 +80,35 @@ const styles = StyleSheet.create({
     borderColor: '#000',
     borderStyle: 'solid'
   },
-  name: {},
-  category: {},
-  subcategory: {},
-  description: {},
-  address: {},
-  time: {},
+  shareableName: {
+    fontWeight: '700',
+  },
+  category: {
+    color: '#b24040'
+  },
+  subcategory: {
+    color: '#e8a2a2'
+  },
+  description: {
+    color: '#000',
+    fontWeight: '800'
+  },
+  address: {
+    fontStyle: 'italic',
+    color: '#4F0010',
+    fontWeight: '500'
+  },
+  time: {
+    fontStyle: 'italic',
+    color: '#9B4D8A',
+    fontWeight: '500'
+  },
   viewMapButton: {
     color: 'purple'
+  },
+  shareableTitleContainer: {
+    display: 'flex',
+    flexDirection: 'row'
   }
 });
 

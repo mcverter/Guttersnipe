@@ -32,11 +32,11 @@ const Comment = (props) => {
 
   return (
     <View style={styles.commentContainer}>
-      <View style={styles.GsText}>
-        <GsText>{comment_text}</GsText>
+      <View >
+        <GsText style={styles.commentText}>{comment_text}</GsText>
       </View>
-      <View style={styles.author}>
-        <GsText>{`Posted by ${author_name} on ${date_posted}`}</GsText>
+      <View >
+        <GsText style={styles.commentAuthor}>{`Posted by ${author_name} on ${date_posted}`}</GsText>
       </View>
     </View>
   );
@@ -46,11 +46,16 @@ const Comment = (props) => {
 
  */
 const styles = StyleSheet.create({
-  author:{},
-  title: {},
-  GsText : {},
+  commentAuthor:{
+    fontStyle: 'italic',
+    fontSize: 10
+  },
+  commentText : {
+    color: 'black',
+    fontWeight: "500"
+  },
   commentContainer: {
-    borderColor: 'red',
+    borderColor: '#74132D',
     borderWidth: 2
   }
 });
