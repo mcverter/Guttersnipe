@@ -1,7 +1,7 @@
 const categorizations = {
-  'food': ['dumpster', 'food not bombs', 'pantry/kitchen'],
-  'medical': ['needle exchange', 'free clinic (western)', "free clinic (eastern)"],
-  'shelter': ['squat', 'abandoned building', 'infoshop']
+  'food': ['dumpster',  'pantry/kitchen', 'food not bombs',],
+  'medical': [ "clinic", 'std testing', 'needle exchange', ],
+  'shelter': ['occupation', 'infoshop', 'squat',]
 };
 
 export default categorizations;
