@@ -8,6 +8,7 @@
     "test": "mocha './test/**/*.spec.js'"
   },
   "dependencies": {
+    "@google/maps": "^0.5.4",
     "babel-eslint": "^8.2.5",
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
@@ -29,6 +30,7 @@
     "mocha": "^5.2.0",
     "moment": "^2.22.2",
     "morgan": "~1.9.0",
+    "node-geocoder": "^3.22.0",
     "pg": "^7.4.3",
     "pg-escape": "^0.2.0",
     "serve-favicon": "~2.4.5",
