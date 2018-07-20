@@ -56,19 +56,5 @@ ChooseCategoryScreen.propTypes = {
 
 };
 
-/*
-function mapDispatchToProps(dispatch){
-  return {};
-}
-
-function mapStateToProps(defaultState=defaultState) {
-  debugger;
-  console.log('in choose category map state to props');
- //  TODO  Why does the default key word appear?
-  const state = defaultState.state;
-  return {
-    categorization: state.categorization.categorization,
-  };
-  */
 
 export default ChooseCategoryScreen;

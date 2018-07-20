@@ -36,6 +36,17 @@ class LandingScreen extends Component {
             onPress={() => navigation.navigate('ChooseCategoryScreen')}/>
         </View>
 
+        <View style={styles.searchShareablesButtonContainer}>
+          <GsButton
+            styleContainer={{backgroundColor: "red", padding: 20}}
+            styleText={{color: 'black', fontWeight: '700'}}
+            color="#910f0f"
+            accessibilityLabel="Click here to add shareable"
+            title="Add Shareables"
+            onPress={() => navigation.navigate('AddShareableScreen')}/>
+        </View>
+
+
         <TouchableOpacity
           style={styles.shareablesFTKContainer}
           onPress={() => navigation.navigate('AboutScreen')} >
