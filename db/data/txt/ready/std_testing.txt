@@ -1,0 +1,203 @@
+Name:Charles B Wang Community Health Center
+Address:125 Walker St 2nd Fl New York, NY 10013 United States
+Comment:212-226-3888
+Time:Monday: 9:00am - 7:00pm
+Description:Clinic
+Subcategory:std testing
+Category:medical
+
+Name:Apicha Community Health Center
+Address:400 Broadway New York, NY 10013 United States
+Time:Monday: 9:30am - 5:30pm
+Description:Clinic
+Subcategory:std testing
+Category:medical
+
+Name:Charles B Wang Community Health Center
+Address:268 Canal St New York, NY 10013 United States
+Comment:212-379-6998
+Time:Monday: 8:00am - 6:00pm
+Description:Clinic
+Subcategory:std testing
+Category:medical
+
+Name:Exponents
+Address:2 Washington St 4th Fl New York, NY 10004 United States
+Comment:212-243-3434
+Time:Monday: 8:00am - 5:00pm
+Description:Community Based Organization
+
+Name:Lower East Side Harm Reduction Center
+Address:25 Allen St New York, NY 10002 United States
+Comment:212-226-6333
+Time:Monday: 9:00am - 8:00pm
+Description:Community Based Organization
+
+Name:The Door
+Address:555 Broome St New York, NY 10013 United States
+Comment:212-941-9090
+Time:Monday: 11:00am - 7:00pm | Tuesday: 2:00pm - 7:00pm | Wednesday: 11:00am - 7:00pm | Thursday: 11:00am - 7:00pm | Friday: 11:00am - 6:00pm
+Description:Clinic
+Subcategory:std testing
+Category:medical
+
+Name:Daniel C Leicht Center
+Address:227 Madison St New York, NY 10002 United States
+Comment:212-238-7897
+Time:Monday: 9:00am - 5:00pm
+Description:Clinic
+Subcategory:std testing
+Category:medical
+
+Name:Henry Street Settlement
+Address:40 Montgomery St New York, NY 10002 United States
+Comment:212-233-5033
+Time:Monday: 8:00am - 4:00pm
+Description:Clinic
+Subcategory:std testing
+Category:medical
+
+Name:Project Renewal Incorporated
+Address:200 Varick St 9th floor New York, NY 10014 United States
+Comment:212-620-0340
+Time:Monday: 8:00am - 8:00pm
+Description:Clinic
+Subcategory:std testing
+Category:medical
+
+Name:Planned Parenthood of New York City Incorporated
+Address:26 Bleecker St New York, NY 10012 United States
+Comment:212-965-7000
+Time:Monday: 8:00am - 6:30pm
+Description:Clinic
+Subcategory:std testing
+Category:medical
+
+Name:Community Healthcare Network
+Address:150 Essex St New York, NY 10002 United States
+Comment:212-477-1120
+Time:Monday: 9:00am - 5:00pm
+Description:Clinic
+Subcategory:std testing
+Category:medical
+
+Name:Betances Health Center
+Address:280 Henry St New York, NY 10002 United States
+Comment:212-227-8401
+Time:Monday: 8:00am - 8:00pm
+Description:Clinic
+Subcategory:std testing
+Category:medical
+
+Name:Hetrick-Martin Institute
+Address:2 Astor Pl New York, NY 10003 United States
+Comment:212-674-2400
+Time:Monday: 3:15pm - 6:45pm
+Description:Community Based Organization
+
+Name:Ryan-NENA Community Health Center
+Address:279 E 3rd St New York, NY 10009 United States
+Comment:212-477-8500
+Time:Monday: 8:30am - 7:00pm
+Description:Clinic
+Subcategory:std testing
+Category:medical
+
+Name:Planned Parenthood of New York City Incorporated
+Address:44 Court St 6th Fl Brooklyn, NY 11201 United States
+Comment:212-965-7000
+Time:Monday: 8:00am - 4:30pm
+Description:Clinic
+Subcategory:std testing
+Category:medical
+
+Name:Housing Works Incorporated
+Address:57 Willoughby St 2nd Fl Brooklyn, NY 11201 United States
+Comment:347-473-7400
+Time:Monday: 9:00am - 5:00pm
+Description:Clinic
+Subcategory:std testing
+Category:medical
+
+Name:Lesbian Gay Bisexual Transgender Community Center
+Address:208 W 13th St New York, NY 10011 United States
+Comment:646-556-9300
+Time:Monday: 9:00am - 10:00pm
+Description:Community Based Organization
+
+Name:Keith D Cylar House Health Center
+Address:743-749 E 9th St New York, NY 10009 United States
+Comment:212-677-7999
+Time:Monday: 9:00am - 5:00pm
+Description:Community Based Organization
+
+Name:Sidney Hillman/Phillips Family Practice
+Address:16 E 16th St New York, NY 10003 United States
+Comment:212-206-5200
+Time:Monday: 8:00am - 10:00pm
+Description:Clinic
+Subcategory:std testing
+Category:medical
+
+Name:Peter Krueger Center for Immunological Disorders
+Address:317 E 17th St Fierman Hall 1st Fl New York, NY 10003 United States
+Comment:212-844-1329
+Time:Monday: 8:30am - 6:00pm
+Description:Clinic
+Subcategory:std testing
+Category:medical
+
+Name:New York City Department of Health and Mental Hygiene
+Address:295 Flatbush Ave Ext Floor 2 Brooklyn, NY 11201 United States
+Time:Monday: 8:30am - 3:30pm
+Description:Clinic
+Subcategory:std testing
+Category:medical
+
+Name:MIC Womens Health Services
+Address:295 Flatbush Ave Ext 3rd Fl Brooklyn, NY 11201 United States
+Comment:718-522-1144
+Time:Monday: 9:00am - 4:30pm
+Description:Clinic
+Subcategory:std testing
+Category:medical
+
+Name:Cumberland Diagnostic and Treatment Center
+Address:100 N Portland Ave Room B 102 Brooklyn, NY 11205 United States
+Comment:718-260-7500
+Time:Monday: 8:00am - 6:00pm
+Description:Clinic
+Subcategory:std testing
+Category:medical
+
+Name:Alliance Community Healthcare
+Address:115 Christopher Columbus Dr Jersey City, NJ 07302 United States
+Comment:201-451-6300
+Time:Monday: 9:00am - 7:00pm
+Description:Clinic
+Subcategory:std testing
+Category:medical
+
+Name:Callen-Lorde Community Health Center
+Address:356 W 18th St New York, NY 10011 United States
+Comment:212-271-7200
+Time:Monday: 8:15am - 8:15pm
+Description:Clinic
+Subcategory:std testing
+Category:medical
+
+Name:Brooklyn Hospital Center
+Address:121 Dekalb Ave Brooklyn, NY 11201 United States
+Comment:718-250-6552
+Time:Monday: 9:00am - 5:00pm
+Description:Clinic
+Subcategory:std testing
+Category:medical
+
+Name:Brooklyn Hospital Center
+Address:99 Division Ave Brooklyn, NY 11249 United States
+Comment:718-599-6200
+Time:Monday: 9:00am - 5:00pm
+Description:Clinic
+Subcategory:std testing
+Category:medical

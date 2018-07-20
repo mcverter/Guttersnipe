@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Occupy ICE NYC",
+    "category": "shelter",
+    "subcategory": "occupation",
+    "address": "Thomas Paine Park, Lafayette St &, Worth St, New York, NY 10007, United States",
+    "longitude": -74.00266169999999,
+    "latitude": 40.71503209999999
+  },
+  {
+    "name": "C Squat",
+    "category": "shelter",
+    "subcategory": "squat",
+    "address": "155 Avenue C, New York, NY 10009, USA",
+    "longitude": -73.97794619999999,
+    "latitude": 40.7257661
+  },
+  {
+    "name": "The Base",
+    "category": "shelter",
+    "subcategory": "infoshop",
+    "address": "1286 Myrtle Ave, Brooklyn, NY 11221, USA",
+    "longitude": -73.92456109999999,
+    "latitude": 40.6980311
+  }
+]

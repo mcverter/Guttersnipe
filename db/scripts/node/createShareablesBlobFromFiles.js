@@ -19,14 +19,10 @@ const geocoder = NodeGeocoder(options);
 });
 */
 // list files in text/ready directory
-const freeganShareablesFile = __dirname + '/../../data/txt/ready/dumpstersNY.txt';
-const fnbShareablesFile = __dirname + '/../../data/txt/ready/fnbNY.txt'
-const pantryShareablesFile = __dirname + '/../../data/txt/ready/all_pantries.txt'
+const std = __dirname + '/../../data/txt/ready/spaces.txt';
 
 Promise.all([
-  processSubcategoryFile(freeganShareablesFile, 'freegan'),
-  processSubcategoryFile(fnbShareablesFile, 'food not bombs'),
-  processSubcategoryFile(pantryShareablesFile, 'pantry'),
+  processSubcategoryFile(std, 'spaces'),
 ])
   .then(results=>{
     const allShareables = results.reduce((acc, curr)=>acc.concat(curr.slice(1)), []);
@@ -38,7 +34,7 @@ Promise.all([
       function findGeocodes() {
         if (shareables.length === 0) {
           // console.log(allShareablesWithGeocode);
-          fs.writeFileSync(__dirname + '/geocodedShareables.json', JSON.stringify(allShareablesWithGeocode, null, 2), 'utf-8');
+          fs.writeFileSync(__dirname + '/geocodedSpaces.json', JSON.stringify(allShareablesWithGeocode, null, 2), 'utf-8');
           return allShareablesWithGeocode;
         }
         else {
@@ -52,22 +48,28 @@ Promise.all([
           } else {
             timeoutDuration = 2000
           }
-          setTimeout(function(){
-            geocoder.geocode(`${shareable.name}, ${shareable.address}`)
-              .then(result=>{
-                const resultAddress = result[0].formattedAddress;
-                const latitude = result[0].latitude;
-                const longitude = result[0].longitude;
-                allShareablesWithGeocode.push({...shareable, address: resultAddress, longitude, latitude});
-                console.log('shareables remaining', shareables.length);
-                return findGeocodes();
-              })
-              .catch(error=>{
-                console.error('error', error, 'shareable', shareable);
-                return findGeocodes();
-              })
+          if (shareable.longitude && shareable.longitude) {
+            allShareablesWithGeocode.push(shareable);
+            return findGeocodes()
+          }
+          else {
+            setTimeout(function () {
+              geocoder.geocode(`${shareable.name}, ${shareable.address}`)
+                .then(result => {
+                  const resultAddress = result[0].formattedAddress;
+                  const latitude = result[0].latitude;
+                  const longitude = result[0].longitude;
+                  allShareablesWithGeocode.push({...shareable, address: resultAddress, longitude, latitude});
+                  console.log('shareables remaining', shareables.length);
+                  return findGeocodes();
+                })
+                .catch(error => {
+                  console.error('error', error, 'shareable', shareable);
+                  return findGeocodes();
+                })
 
-          }, timeoutDuration)
+            }, timeoutDuration)
+          }
         }
       }
       return findGeocodes();
@@ -79,7 +81,7 @@ function getKVFromLine(line) {
     return key.toLowerCase().replace(/:/g, '')
   }
 
-  const regExp = /^\s*(.*?:+)\s*(\w.*)\s*/
+  const regExp = /^\s*(.*?:+)\s*(.*)\s*/
   const kvPair = line.match(regExp);
   if (!kvPair) {
     console.warn("ERROR no match for line", line);
@@ -108,7 +110,7 @@ function processSubcategoryFile(filepath, subcategory) {
         if (line.startsWith('Name')) {
           subcategoryShareables.push(shareable);
           shareable = new Object();
-          shareable['subcategory'] = subcategory;
+//          shareable['subcategory'] = subcategory;
           shareable['name'] = getKVFromLine(line).value;
         }
 
@@ -124,25 +126,6 @@ function processSubcategoryFile(filepath, subcategory) {
         else {
           kv = getKVFromLine(line);
           shareable[kv.key] = kv.value;
-
-
-          /*          if (kv.key === 'address') {
-                      setTimeout(function () {
-                          geocoder.geocode({address: `${shareable.address}`},
-                            function (err, response) {
-                            if (err) {
-                              console.error("error", err)
-                            } else {
-                              let location = response.json.results[0].geometry.location
-                              shareable.latitude = location.lat;
-                              shareable.longitude = location.lng;
-                              console.log('shareable', shareable)
-                              subcategoryShareables.push(shareable);
-                            }
-                            })
-                        }, 5000);
-
-                    } */
         }
       }
       resolve(subcategoryShareables);

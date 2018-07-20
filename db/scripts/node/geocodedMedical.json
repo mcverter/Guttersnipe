@@ -1,0 +1,736 @@
+[
+  {
+    "name": "Charles B Wang Community Health Center",
+    "address": "2, 125 Walker St, New York, NY 10013, USA",
+    "comments": [
+      "212-226-3888"
+    ],
+    "time": "Monday: 9:00am - 7:00pm",
+    "description": "Clinic",
+    "subcategory": "std testing",
+    "category": "medical",
+    "longitude": -73.999945,
+    "latitude": 40.71732
+  },
+  {
+    "name": "Apicha Community Health Center",
+    "address": "400 Broadway, New York, NY 10013, USA",
+    "time": "Monday: 9:30am - 5:30pm",
+    "description": "Clinic",
+    "subcategory": "std testing",
+    "category": "medical",
+    "longitude": -74.00235359999999,
+    "latitude": 40.7186431
+  },
+  {
+    "name": "Charles B Wang Community Health Center",
+    "address": "268 Canal St, New York, NY 10013, USA",
+    "comments": [
+      "212-379-6998"
+    ],
+    "time": "Monday: 8:00am - 6:00pm",
+    "description": "Clinic",
+    "subcategory": "std testing",
+    "category": "medical",
+    "longitude": -74.0013705,
+    "latitude": 40.7186786
+  },
+  {
+    "name": "Exponents",
+    "address": "2 Washington St, New York, NY 10004, USA",
+    "comments": [
+      "212-243-3434"
+    ],
+    "time": "Monday: 8:00am - 5:00pm",
+    "description": "Community Based Organization",
+    "longitude": -74.01556289999999,
+    "latitude": 40.7056603
+  },
+  {
+    "name": "Lower East Side Harm Reduction Center",
+    "address": "25 Allen St, New York, NY 10002, USA",
+    "comments": [
+      "212-226-6333"
+    ],
+    "time": "Monday: 9:00am - 8:00pm",
+    "description": "Community Based Organization",
+    "longitude": -73.99261,
+    "latitude": 40.715706
+  },
+  {
+    "name": "The Door",
+    "address": "555 Broome St, New York, NY 10013, USA",
+    "comments": [
+      "212-941-9090"
+    ],
+    "time": "Monday: 11:00am - 7:00pm | Tuesday: 2:00pm - 7:00pm | Wednesday: 11:00am - 7:00pm | Thursday: 11:00am - 7:00pm | Friday: 11:00am - 6:00pm",
+    "description": "Clinic",
+    "subcategory": "std testing",
+    "category": "medical",
+    "longitude": -74.0055799,
+    "latitude": 40.7241207
+  },
+  {
+    "name": "Daniel C Leicht Center",
+    "address": "227 Madison St, New York, NY 10002, USA",
+    "comments": [
+      "212-238-7897"
+    ],
+    "time": "Monday: 9:00am - 5:00pm",
+    "description": "Clinic",
+    "subcategory": "std testing",
+    "category": "medical",
+    "longitude": -73.9877319,
+    "latitude": 40.7131072
+  },
+  {
+    "name": "Henry Street Settlement",
+    "address": "265 Henry St, New York, NY 10002, USA",
+    "comments": [
+      "212-233-5033"
+    ],
+    "time": "Monday: 8:00am - 4:00pm",
+    "description": "Clinic",
+    "subcategory": "std testing",
+    "category": "medical",
+    "longitude": -73.9845066,
+    "latitude": 40.713953
+  },
+  {
+    "name": "Project Renewal Incorporated",
+    "address": "200 Varick St, New York, NY 10014, USA",
+    "comments": [
+      "212-620-0340"
+    ],
+    "time": "Monday: 8:00am - 8:00pm",
+    "description": "Clinic",
+    "subcategory": "std testing",
+    "category": "medical",
+    "longitude": -74.00471859999999,
+    "latitude": 40.72826
+  },
+  {
+    "name": "Planned Parenthood of New York City Incorporated",
+    "address": "26 Bleecker St, New York, NY 10012, USA",
+    "comments": [
+      "212-965-7000"
+    ],
+    "time": "Monday: 8:00am - 6:30pm",
+    "description": "Clinic",
+    "subcategory": "std testing",
+    "category": "medical",
+    "longitude": -73.99363199999999,
+    "latitude": 40.7254315
+  },
+  {
+    "name": "Community Healthcare Network",
+    "address": "150 Essex St, New York, NY 10002, USA",
+    "comments": [
+      "212-477-1120"
+    ],
+    "time": "Monday: 9:00am - 5:00pm",
+    "description": "Clinic",
+    "subcategory": "std testing",
+    "category": "medical",
+    "longitude": -73.98691,
+    "latitude": 40.7205898
+  },
+  {
+    "name": "Betances Health Center",
+    "address": "280 Henry St # A, New York, NY 10002, USA",
+    "comments": [
+      "212-227-8401"
+    ],
+    "time": "Monday: 8:00am - 8:00pm",
+    "description": "Clinic",
+    "subcategory": "std testing",
+    "category": "medical",
+    "longitude": -73.9837398,
+    "latitude": 40.7136702
+  },
+  {
+    "name": "Hetrick-Martin Institute",
+    "address": "2 Astor Pl, New York, NY 10003, USA",
+    "comments": [
+      "212-674-2400"
+    ],
+    "time": "Monday: 3:15pm - 6:45pm",
+    "description": "Community Based Organization",
+    "longitude": -73.9926904,
+    "latitude": 40.729798
+  },
+  {
+    "name": "Ryan-NENA Community Health Center",
+    "address": "279 E 3rd St, New York, NY 10009, USA",
+    "comments": [
+      "212-477-8500"
+    ],
+    "time": "Monday: 8:30am - 7:00pm",
+    "description": "Clinic",
+    "subcategory": "std testing",
+    "category": "medical",
+    "longitude": -73.98013139999999,
+    "latitude": 40.7215506
+  },
+  {
+    "name": "Planned Parenthood of New York City Incorporated",
+    "address": "44 Court St, Brooklyn, NY 11201, USA",
+    "comments": [
+      "212-965-7000"
+    ],
+    "time": "Monday: 8:00am - 4:30pm",
+    "description": "Clinic",
+    "subcategory": "std testing",
+    "category": "medical",
+    "longitude": -73.99120409999999,
+    "latitude": 40.6927144
+  },
+  {
+    "name": "Housing Works Incorporated",
+    "address": "57 Willoughby St, Brooklyn, NY 11201, USA",
+    "comments": [
+      "347-473-7400"
+    ],
+    "time": "Monday: 9:00am - 5:00pm",
+    "description": "Clinic",
+    "subcategory": "std testing",
+    "category": "medical",
+    "longitude": -73.9864314,
+    "latitude": 40.6925112
+  },
+  {
+    "name": "Lesbian Gay Bisexual Transgender Community Center",
+    "address": "208 W 13th St, New York, NY 10011, USA",
+    "comments": [
+      "646-556-9300"
+    ],
+    "time": "Monday: 9:00am - 10:00pm",
+    "description": "Community Based Organization",
+    "longitude": -74.0010738,
+    "latitude": 40.7380309
+  },
+  {
+    "name": "Keith D Cylar House Health Center",
+    "address": "743-749 E 9th St, New York, NY 10009, USA",
+    "comments": [
+      "212-677-7999"
+    ],
+    "time": "Monday: 9:00am - 5:00pm",
+    "description": "Community Based Organization",
+    "longitude": -73.9760153,
+    "latitude": 40.7246023
+  },
+  {
+    "name": "Sidney Hillman/Phillips Family Practice",
+    "address": "16 E 16th St, New York, NY 10003, USA",
+    "comments": [
+      "212-206-5200"
+    ],
+    "time": "Monday: 8:00am - 10:00pm",
+    "description": "Clinic",
+    "subcategory": "std testing",
+    "category": "medical",
+    "longitude": -73.9918837,
+    "latitude": 40.73676090000001
+  },
+  {
+    "name": "Peter Krueger Center for Immunological Disorders",
+    "address": "317 E 17th St, New York, NY 10003, USA",
+    "comments": [
+      "212-844-1329"
+    ],
+    "time": "Monday: 8:30am - 6:00pm",
+    "description": "Clinic",
+    "subcategory": "std testing",
+    "category": "medical",
+    "longitude": -73.9822555,
+    "latitude": 40.7339125
+  },
+  {
+    "name": "New York City Department of Health and Mental Hygiene",
+    "address": "295 Flatbush Ave Ext, Brooklyn, NY 11201, USA",
+    "time": "Monday: 8:30am - 3:30pm",
+    "description": "Clinic",
+    "subcategory": "std testing",
+    "category": "medical",
+    "longitude": -73.9820962,
+    "latitude": 40.6917729
+  },
+  {
+    "name": "MIC Womens Health Services",
+    "address": "295 Flatbush Ave Ext, Brooklyn, NY 11201, USA",
+    "comments": [
+      "718-522-1144"
+    ],
+    "time": "Monday: 9:00am - 4:30pm",
+    "description": "Clinic",
+    "subcategory": "std testing",
+    "category": "medical",
+    "longitude": -73.982033,
+    "latitude": 40.6917994
+  },
+  {
+    "name": "Cumberland Diagnostic and Treatment Center",
+    "address": "100 N Portland Ave, Brooklyn, NY 11205, USA",
+    "comments": [
+      "718-260-7500"
+    ],
+    "time": "Monday: 8:00am - 6:00pm",
+    "description": "Clinic",
+    "subcategory": "std testing",
+    "category": "medical",
+    "longitude": -73.9765603,
+    "latitude": 40.6950751
+  },
+  {
+    "name": "Alliance Community Healthcare",
+    "address": "115 Christopher Columbus Dr, Jersey City, NJ 07302, USA",
+    "comments": [
+      "201-451-6300"
+    ],
+    "time": "Monday: 9:00am - 7:00pm",
+    "description": "Clinic",
+    "subcategory": "std testing",
+    "category": "medical",
+    "longitude": -74.044079,
+    "latitude": 40.7195816
+  },
+  {
+    "name": "Callen-Lorde Community Health Center",
+    "address": "356 W 18th St, New York, NY 10011, USA",
+    "comments": [
+      "212-271-7200"
+    ],
+    "time": "Monday: 8:15am - 8:15pm",
+    "description": "Clinic",
+    "subcategory": "std testing",
+    "category": "medical",
+    "longitude": -74.0031578,
+    "latitude": 40.7430191
+  },
+  {
+    "name": "Brooklyn Hospital Center",
+    "address": "121 Dekalb Ave, Brooklyn, NY 11201, USA",
+    "comments": [
+      "718-250-6552"
+    ],
+    "time": "Monday: 9:00am - 5:00pm",
+    "description": "Clinic",
+    "subcategory": "std testing",
+    "category": "medical",
+    "longitude": -73.9784143,
+    "latitude": 40.6904961
+  },
+  {
+    "name": "After Hours Project, Inc",
+    "subcategory": "needle exchange",
+    "category": "medical",
+    "description": "North American Syringe Exchange Network (NASEN)",
+    "longitude": "-73.926885277",
+    "latitude": "40.6921845675",
+    "address": "1204 Broadway Brooklyn, NY 11221",
+    "comments": [
+      "http://www.afterhoursproject.org/",
+      "718-249-0755",
+      "afterhours748@aol.com",
+      "Talk to Fernando Soto"
+    ]
+  },
+  {
+    "name": "Washington Heights CORNER Project",
+    "subcategory": "needle exchange",
+    "category": "medical",
+    "description": "North American Syringe Exchange Network (NASEN)",
+    "longitude": "-73.9330282062",
+    "latitude": "40.8489704132",
+    "address": "566 W 181 St 2nd floor New York, NY 10033",
+    "comments": [
+      "http://www.cornerproject.org/",
+      "(212) 923Longitude:-7600",
+      "taeko@cornerproject.org",
+      "Talk to Taeko Frost"
+    ]
+  },
+  {
+    "name": "New York Harm Reduction Educators, Inc",
+    "subcategory": "needle exchange",
+    "category": "medical",
+    "description": "North American Syringe Exchange Network (NASEN)",
+    "longitude": "-73.8917094469",
+    "latitude": "40.8214543015",
+    "address": "953 Southern Blvd Ste 302 Bronx, NY 10459",
+    "comments": [
+      "http://www.nyhre.org/",
+      "(718) 842-6050",
+      "clopez@nyhre.org",
+      "Talk to Carolina Lopez"
+    ]
+  },
+  {
+    "name": "St Ann's Corner of Harm Reduction",
+    "subcategory": "needle exchange",
+    "category": "medical",
+    "description": "North American Syringe Exchange Network (NASEN)",
+    "longitude": "-73.9298075438",
+    "latitude": "40.8148929477",
+    "address": "310 Walton Ave #201 Bronx, NY 10451",
+    "comments": [
+      "http://www.sachr.org/",
+      "info@sachr.org",
+      "Talk to Sandra Turner"
+    ]
+  },
+  {
+    "name": "ACQC - Far Rockaway",
+    "subcategory": "needle exchange",
+    "category": "medical",
+    "description": "North American Syringe Exchange Network (NASEN)",
+    "longitude": "-73.753844",
+    "latitude": "40.603406",
+    "address": "Beach 21st Far Rockaway, NY 11691",
+    "comments": [
+      "http://www.acqc.org/",
+      "(718) 896-2500",
+      "evasquez@acqc.org",
+      "Talk to Erika Vasquez"
+    ]
+  },
+  {
+    "name": "ACQC - Woodside",
+    "subcategory": "needle exchange",
+    "category": "medical",
+    "description": "North American Syringe Exchange Network (NASEN)",
+    "longitude": "-73.90226",
+    "latitude": "40.744682",
+    "address": "6207 Woodside Ave 3rd floor Woodside, NY 11377",
+    "comments": [
+      "http://www.acqc.org/",
+      "(718) 896-2500",
+      "evasquez@acqc.org",
+      "Talk to Erika Vasquez"
+    ]
+  },
+  {
+    "name": "Lower East Side Harm Reduction",
+    "subcategory": "needle exchange",
+    "category": "medical",
+    "description": "North American Syringe Exchange Network (NASEN)",
+    "longitude": "-73.992607",
+    "latitude": "40.715706",
+    "address": "25 Allen St New York, NY 10002-5311",
+    "comments": [
+      "http://www.leshrc.org/",
+      "212-226-6333",
+      "monique@leshrc.org",
+      "Talk to Monique Wright"
+    ]
+  },
+  {
+    "name": "Streetwork Project",
+    "subcategory": "needle exchange",
+    "category": "medical",
+    "description": "North American Syringe Exchange Network (NASEN)",
+    "longitude": "-73.989815",
+    "latitude": "40.716042",
+    "address": "33 Essex St New York, NY 10002",
+    "comments": [
+      "http://www.safehorizon.org/",
+      "(646) 602-6404",
+      "jwelch@safehorizon.org",
+      "Talk to John Welch"
+    ]
+  },
+  {
+    "name": "Housing Works, Inc",
+    "subcategory": "needle exchange",
+    "category": "medical",
+    "description": "North American Syringe Exchange Network (NASEN)",
+    "longitude": "-73.9962498844",
+    "latitude": "40.7247995585",
+    "address": "130 Crosby St New York, NY 10012",
+    "comments": [
+      "http://www.housingworks.org/",
+      "(347) 473Longitude:-7404",
+      "Talk to Linney Smith"
+    ]
+  },
+  {
+    "name": "Harm Reduction Program",
+    "subcategory": "needle exchange",
+    "category": "medical",
+    "description": "North American Syringe Exchange Network (NASEN)",
+    "longitude": "-73.839394",
+    "latitude": "40.911457",
+    "address": "100 Stevens Ave Mt Vernon, NY 10550",
+    "comments": [
+      "http://nul.iamempowered.com/",
+      "SThomas0203@hotmail.com",
+      "Talk to Sharon Thomas"
+    ]
+  },
+  {
+    "name": "Positive Health Project",
+    "subcategory": "needle exchange",
+    "category": "medical",
+    "description": "North American Syringe Exchange Network (NASEN)",
+    "longitude": "-73.9922091365",
+    "latitude": "40.7541958988",
+    "address": "301 W 37th St 2nd floor New York, NY 10018",
+    "comments": [
+      "http://www.positivehealthproject.org/",
+      "(212) 465-8304",
+      "Talk to Amu Ptah-Riojas"
+    ]
+  },
+  {
+    "name": "BOOM! Health",
+    "subcategory": "needle exchange",
+    "category": "medical",
+    "description": "North American Syringe Exchange Network (NASEN)",
+    "longitude": "-73.9253195375",
+    "latitude": "40.8157385141",
+    "address": "226 E 144th St Bronx, NY 10451",
+    "comments": [
+      "http://www.citiwidehr.org/",
+      "fjohnson@citiwidehr.org",
+      "Talk to Charles Bolds"
+    ]
+  },
+  {
+    "name": "Tompkins County Prevention Point",
+    "subcategory": "needle exchange",
+    "category": "medical",
+    "description": "North American Syringe Exchange Network (NASEN)",
+    "longitude": "-76.507706",
+    "latitude": "42.435242",
+    "address": "501 S Meadow St Ithaca, NY 14850",
+    "comments": [
+      "http://www.stapinc.org/",
+      "(607) 272-4098",
+      "lfan@stapinc.org",
+      "Talk to Lillian Fan"
+    ]
+  },
+  {
+    "name": "AIDS Rochester Harm Reduction Program",
+    "subcategory": "needle exchange",
+    "category": "medical",
+    "description": "North American Syringe Exchange Network (NASEN)",
+    "longitude": "-77.605949",
+    "latitude": "43.163074",
+    "address": "416 Central Ave Rochester, NY 14605",
+    "comments": [
+      "http://www.aidsrochester.org/",
+      "(585) 545-5556",
+      "lcastro@acrochester.org",
+      "Talk to Lisette Castro"
+    ]
+  },
+  {
+    "name": "Access Care and Resources Health",
+    "subcategory": "needle exchange",
+    "category": "medical",
+    "description": "North American Syringe Exchange Network (NASEN)",
+    "longitude": "-76.161606",
+    "latitude": "43.052895",
+    "address": "637 West Genesee Street Syracuse, NY 13204",
+    "comments": [
+      "(315) 475-2430",
+      "Talk to Nathan Barron"
+    ]
+  },
+  {
+    "name": "ACQC - Long Island City",
+    "subcategory": "needle exchange",
+    "category": "medical",
+    "description": "North American Syringe Exchange Network (NASEN)",
+    "longitude": "-73.9412821404",
+    "latitude": "40.7498246924",
+    "address": "42nd Road between 27th & Crescent Street Long Island City, NY 11101",
+    "comments": [
+      "http://www.acqc.org/",
+      "(718) 896-2500",
+      "evasquez@acqc.org",
+      "Talk to Erika Vasquez"
+    ]
+  },
+  {
+    "name": "Broome County Prevention Point",
+    "subcategory": "needle exchange",
+    "category": "medical",
+    "description": "North American Syringe Exchange Network (NASEN)",
+    "longitude": "-75.958176",
+    "latitude": "42.111889",
+    "address": "122 Baldwin St Johnson City, NY 13790",
+    "comments": [
+      "http://www.stapinc.org/",
+      "(607) 798-1706",
+      "lfan@stapinc.org",
+      "Talk to Lillian Fan"
+    ]
+  },
+  {
+    "name": "Vocal-NY",
+    "subcategory": "needle exchange",
+    "category": "medical",
+    "description": "North American Syringe Exchange Network (NASEN)",
+    "longitude": "-73.980209",
+    "latitude": "40.682205",
+    "address": "80-A Fourth Avenue Brooklyn, NY 11217",
+    "comments": [
+      "(718) 802-9540",
+      "Talk to Sean Barry"
+    ]
+  },
+  {
+    "name": "Long Island Minority AIDS Coalition",
+    "subcategory": "needle exchange",
+    "category": "medical",
+    "description": "North American Syringe Exchange Network (NASEN)",
+    "longitude": "-73.6265999079",
+    "latitude": "40.7126102597",
+    "address": "Main Street & Bedell Street Hempstead, NY 11550",
+    "comments": [
+      "(631) 624-3357",
+      "Talk to Rabia Aziz"
+    ]
+  },
+  {
+    "name": "Project Safe",
+    "subcategory": "needle exchange",
+    "category": "medical",
+    "description": "North American Syringe Exchange Network (NASEN)",
+    "longitude": "-78.8784483075",
+    "latitude": "42.8907497227",
+    "address": "206 S Elmwood Ave Buffalo, NY 14201",
+    "comments": [
+      "http://www.evergreenhs.org/",
+      "lindsay.a.roth@gmail.com",
+      "Talk to Lindsay Roth"
+    ]
+  },
+  {
+    "name": "ACQC - Jamaica",
+    "subcategory": "needle exchange",
+    "category": "medical",
+    "description": "North American Syringe Exchange Network (NASEN)",
+    "longitude": "-73.8070005924",
+    "latitude": "40.7007944584",
+    "address": "147-23 Archer Avenue Jamaica, NY 11432",
+    "comments": [
+      "http://www.acqc.org/",
+      "(718) 896-2500",
+      "evasquez@acqc.org",
+      "Talk to Erika Vasquez"
+    ]
+  },
+  {
+    "name": "Family Services Network of NY",
+    "subcategory": "needle exchange",
+    "category": "medical",
+    "description": "North American Syringe Exchange Network (NASEN)",
+    "longitude": "-73.913864",
+    "latitude": "40.685135",
+    "address": "1639 Broadway Brooklyn, NY 11207",
+    "comments": [
+      "http://www.fsnny.org/",
+      "(718) 573-3358",
+      "lbobb@fsnny.org",
+      "Talk to Leslie Bobb"
+    ]
+  },
+  {
+    "name": "New York City Free Clinic",
+    "comments": [
+      "917.544.0735"
+    ],
+    "category": "medical",
+    "subcategory": "clinic",
+    "address": "230 W 17th St, New York, NY 10011, USA",
+    "longitude": -73.9997854,
+    "latitude": 40.7409347
+  },
+  {
+    "name": "Weill Cornell Community Clinic",
+    "comments": [
+      "646.962.9222"
+    ],
+    "category": "medical",
+    "subcategory": "clinic",
+    "address": "505 E 70th St, New York, NY 10021, USA",
+    "longitude": -73.954109,
+    "latitude": 40.7656944
+  },
+  {
+    "name": "Mount Sinai Adolescent Health Care Clinic",
+    "comments": [
+      "212.423.3000"
+    ],
+    "category": "medical",
+    "subcategory": "clinic",
+    "address": "312 E 94th St, New York, NY 10128, USA",
+    "longitude": -73.9471957,
+    "latitude": 40.7823722
+  },
+  {
+    "name": "East Harlem Health Outreach Program - Mount Sinai",
+    "comments": [
+      "626.942.6519"
+    ],
+    "category": "medical",
+    "subcategory": "clinic",
+    "address": "17 E 102nd St, New York, NY 10029, USA",
+    "longitude": -73.9520122,
+    "latitude": 40.791484
+  },
+  {
+    "name": "Columbia Student Medical Outreach",
+    "comments": [
+      "212.342.4719"
+    ],
+    "category": "medical",
+    "subcategory": "clinic",
+    "address": "21 Audubon Ave, New York, NY 10032, USA",
+    "longitude": -73.938839,
+    "latitude": 40.839408
+  },
+  {
+    "name": "Columbia-Harlem Homeless Medical Partnership",
+    "comments": [
+      "347.614.2121"
+    ],
+    "category": "medical",
+    "subcategory": "clinic",
+    "address": "521 W 126th St, New York, NY 10027, USA",
+    "longitude": -73.956065,
+    "latitude": 40.8148946
+  },
+  {
+    "name": "St. Mary's Episcopal Church,",
+    "address": "521 W 126th St, New York, NY 10027, USA",
+    "longitude": -73.95603419999999,
+    "latitude": 40.8149314
+  },
+  {
+    "name": "St. Anthony's Free Clinic",
+    "comments": [
+      "718.401.9705"
+    ],
+    "category": "medical",
+    "subcategory": "clinic",
+    "address": "410 E 156th St, Bronx, NY 10455, USA",
+    "longitude": -73.915165,
+    "latitude": 40.82053459999999
+  },
+  {
+    "name": "ECHO Free Clinic",
+    "comments": [
+      "800.836.1316"
+    ],
+    "category": "medical",
+    "subcategory": "clinic",
+    "address": "1894 Walton Ave, Bronx, NY 10453, USA",
+    "longitude": -73.90902489999999,
+    "latitude": 40.84961
+  }
+]

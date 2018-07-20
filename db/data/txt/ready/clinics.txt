@@ -1,0 +1,56 @@
+Name: New York City Free Clinic
+Comment:917.544.0735
+Category:medical
+Subcategory:clinic
+Address:230 West 17th Street, New York, NY 10003
+
+Name:Weill Cornell Community Clinic
+Comment:646.962.9222
+Category:medical
+Subcategory:clinic
+Address:505 East 70th Street, 1st Floor, New York, NY 10021
+
+Name:Mount Sinai Adolescent Health Care Clinic
+Comment:212.423.3000
+Category:medical
+Subcategory:clinic
+Address:312 East 94th Street, New York, NY 10128
+
+Name:East Harlem Health Outreach Program - Mount Sinai
+Comment:626.942.6519
+Category:medical
+Subcategory:clinic
+Address:17 East 102nd Street, 7th Floor, New York, NY 10029
+
+Name:Columbia Student Medical Outreach
+Comment:212.342.4719
+Category:medical
+Subcategory:clinic
+Address:21 Audubon Avenue, New York, NY 10033
+
+Name:Columbia-Harlem Homeless Medical Partnership
+Comment:347.614.2121
+Category:medical
+Subcategory:clinic
+
+Name: St. Mary's Episcopal Church,
+Address:521 West 126th Street, New York, NY 10027
+
+Name:St. Anthony's Free Clinic
+Comment:718.401.9705
+Category:medical
+Subcategory:clinic
+Address:421 East 155th Street, Bronx, NY 10455
+
+Name:ECHO Free Clinic
+Comment:800.836.1316
+Category:medical
+Subcategory:clinic
+Address:1894 Walton Ave, Bronx, NY 10453
+
+Name:Al Hirschfeld Free Health Clinic
+Comment:Exclusively for people in the entertainment industry
+Comment:212.489.1939
+Category:medical
+Subcategory:clinic
+Address:475 West 57th Street, New York, NY 10019

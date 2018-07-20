@@ -1,0 +1,19 @@
+Name:Occupy ICE NYC
+Category:shelter
+Subcategory:occupation
+Address:Thomas Paine Park, Foley Square, Manhattan, NY
+
+Name:C Squat
+Category:shelter
+Subcategory:squat
+Address:155 Avenue C, New York, NY
+
+Name:The Base
+Category:shelter
+Subcategory:infoshop
+Address:1286 Myrtle Ave, Brooklyn, NY 11221
+
+Name:Occupy ICE NYC
+Category:shelter
+Subcategory:occupation
+Address:Thomas Paine Park, Foley Square, Manhattan, NY

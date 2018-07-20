@@ -1,0 +1,241 @@
+Name:After Hours Project, Inc
+Subcategory:needle exchange
+Category:medical
+Description:North American Syringe Exchange Network (NASEN)
+Longitude:-73.926885277
+Latitude:40.6921845675
+Address:1204 Broadway Brooklyn, NY 11221
+Comment:  http://www.afterhoursproject.org/
+Comment:  718-249-0755
+Comment: afterhours748@aol.com
+Comment:Talk to Fernando Soto
+Name:Washington Heights CORNER Project
+Subcategory:needle exchange
+Category:medical
+Description:North American Syringe Exchange Network (NASEN)
+Longitude:-73.9330282062
+Latitude:40.8489704132
+Address:566 W 181 St 2nd floor New York, NY 10033
+Comment:  http://www.cornerproject.org/
+Comment:  (212) 923Longitude:-7600
+Comment: taeko@cornerproject.org
+Comment:Talk to Taeko Frost
+Name:New York Harm Reduction Educators, Inc
+Subcategory:needle exchange
+Category:medical
+Description:North American Syringe Exchange Network (NASEN)
+Longitude:-73.8917094469
+Latitude:40.8214543015
+Address:953 Southern Blvd Ste 302 Bronx, NY 10459
+Comment:  http://www.nyhre.org/
+Comment:  (718) 842-6050
+Comment: clopez@nyhre.org
+Comment:Talk to Carolina Lopez
+Name:St Ann's Corner of Harm Reduction
+Subcategory:needle exchange
+Category:medical
+Description:North American Syringe Exchange Network (NASEN)
+Longitude:-73.9298075438
+Latitude:40.8148929477
+Address:310 Walton Ave #201 Bronx, NY 10451
+Comment:  http://www.sachr.org/
+Comment: info@sachr.org
+Comment:Talk to Sandra Turner
+Name:ACQC - Far Rockaway
+Subcategory:needle exchange
+Category:medical
+Description:North American Syringe Exchange Network (NASEN)
+Longitude:-73.753844
+Latitude:40.603406
+Address: Beach 21st Far Rockaway, NY 11691
+Comment:  http://www.acqc.org/
+Comment:  (718) 896-2500
+Comment: evasquez@acqc.org
+Comment:Talk to Erika Vasquez
+Name:ACQC - Woodside
+Subcategory:needle exchange
+Category:medical
+Description:North American Syringe Exchange Network (NASEN)
+Longitude:-73.90226
+Latitude:40.744682
+Address:6207 Woodside Ave 3rd floor Woodside, NY 11377
+Comment:  http://www.acqc.org/
+Comment:  (718) 896-2500
+Comment: evasquez@acqc.org
+Comment:Talk to Erika Vasquez
+Name:Lower East Side Harm Reduction
+Subcategory:needle exchange
+Category:medical
+Description:North American Syringe Exchange Network (NASEN)
+Longitude:-73.992607
+Latitude:40.715706
+Address: 25 Allen St New York, NY 10002-5311
+Comment:  http://www.leshrc.org/
+Comment:  212-226-6333
+Comment: monique@leshrc.org
+Comment:Talk to Monique Wright
+Name:Streetwork Project
+Subcategory:needle exchange
+Category:medical
+Description:North American Syringe Exchange Network (NASEN)
+Longitude:-73.989815
+Latitude:40.716042
+Address:33 Essex St New York, NY 10002
+Comment:  http://www.safehorizon.org/
+Comment:  (646) 602-6404
+Comment: jwelch@safehorizon.org
+Comment:Talk to John Welch
+Name:Housing Works, Inc
+Subcategory:needle exchange
+Category:medical
+Description:North American Syringe Exchange Network (NASEN)
+Longitude:-73.9962498844
+Latitude:40.7247995585
+Address:130 Crosby St New York, NY 10012
+Comment:  http://www.housingworks.org/
+Comment:  (347) 473Longitude:-7404
+Comment:Talk to Linney Smith
+Name:Harm Reduction Program
+Subcategory:needle exchange
+Category:medical
+Description:North American Syringe Exchange Network (NASEN)
+Longitude:-73.839394
+Latitude:40.911457
+Address:100 Stevens Ave Mt Vernon, NY 10550
+Comment:  http://nul.iamempowered.com/
+Comment: SThomas0203@hotmail.com
+Comment:Talk to Sharon Thomas
+Name:Positive Health Project
+Subcategory:needle exchange
+Category:medical
+Description:North American Syringe Exchange Network (NASEN)
+Longitude:-73.9922091365
+Latitude:40.7541958988
+Address:301 W 37th St 2nd floor New York, NY 10018
+Comment:  http://www.positivehealthproject.org/
+Comment:  (212) 465-8304
+Comment:Talk to Amu Ptah-Riojas
+Name:BOOM! Health
+Subcategory:needle exchange
+Category:medical
+Description:North American Syringe Exchange Network (NASEN)
+Longitude:-73.9253195375
+Latitude:40.8157385141
+Address:226 E 144th St Bronx, NY 10451
+Comment:  http://www.citiwidehr.org/
+Comment: fjohnson@citiwidehr.org
+Comment:Talk to Charles Bolds
+Name:Tompkins County Prevention Point
+Subcategory:needle exchange
+Category:medical
+Description:North American Syringe Exchange Network (NASEN)
+Longitude:-76.507706
+Latitude:42.435242
+Address:501 S Meadow St Ithaca, NY 14850
+Comment:  http://www.stapinc.org/
+Comment:  (607) 272-4098
+Comment: lfan@stapinc.org
+Comment:Talk to Lillian Fan
+Name:AIDS Rochester Harm Reduction Program
+Subcategory:needle exchange
+Category:medical
+Description:North American Syringe Exchange Network (NASEN)
+Longitude:-77.605949
+Latitude:43.163074
+Address:416 Central Ave Rochester, NY 14605
+Comment:  http://www.aidsrochester.org/
+Comment:  (585) 545-5556
+Comment: lcastro@acrochester.org
+Comment:Talk to Lisette Castro
+Name:Access Care and Resources Health
+Subcategory:needle exchange
+Category:medical
+Description:North American Syringe Exchange Network (NASEN)
+Longitude:-76.161606
+Latitude:43.052895
+Address:637 West Genesee Street Syracuse, NY 13204
+Comment:  (315) 475-2430
+Comment:Talk to Nathan Barron
+Name:ACQC - Long Island City
+Subcategory:needle exchange
+Category:medical
+Description:North American Syringe Exchange Network (NASEN)
+Longitude:-73.9412821404
+Latitude:40.7498246924
+Address:42nd Road between 27th & Crescent Street Long Island City, NY 11101
+Comment:  http://www.acqc.org/
+Comment:  (718) 896-2500
+Comment: evasquez@acqc.org
+Comment:Talk to Erika Vasquez
+Name:Broome County Prevention Point
+Subcategory:needle exchange
+Category:medical
+Description:North American Syringe Exchange Network (NASEN)
+Longitude:-75.958176
+Latitude:42.111889
+Address:122 Baldwin St Johnson City, NY 13790
+Comment:  http://www.stapinc.org/
+Comment:  (607) 798-1706
+Comment: lfan@stapinc.org
+Comment:Talk to Lillian Fan
+Name:Vocal-NY
+Subcategory:needle exchange
+Category:medical
+Description:North American Syringe Exchange Network (NASEN)
+Longitude:-73.980209
+Latitude:40.682205
+Address:80-A Fourth Avenue Brooklyn, NY 11217
+Comment:  (718) 802-9540
+Comment:Talk to Sean Barry
+Name:Long Island Minority AIDS Coalition
+Subcategory:needle exchange
+Category:medical
+Description:North American Syringe Exchange Network (NASEN)
+Longitude:-73.6265999079
+Latitude:40.7126102597
+Address:Main Street & Bedell Street Hempstead, NY 11550
+Comment:  (631) 624-3357
+Comment:Talk to Rabia Aziz
+Name:Project Safe
+Subcategory:needle exchange
+Category:medical
+Description:North American Syringe Exchange Network (NASEN)
+Longitude:-78.8784483075
+Latitude:42.8907497227
+Address:206 S Elmwood Ave Buffalo, NY 14201
+Comment:  http://www.evergreenhs.org/
+Comment: lindsay.a.roth@gmail.com
+Comment:Talk to Lindsay Roth
+Name:ACQC - Jamaica
+Subcategory:needle exchange
+Category:medical
+Description:North American Syringe Exchange Network (NASEN)
+Longitude:-73.8070005924
+Latitude:40.7007944584
+Address:147-23 Archer Avenue Jamaica, NY 11432
+Comment:  http://www.acqc.org/
+Comment:  (718) 896-2500
+Comment: evasquez@acqc.org
+Comment:Talk to Erika Vasquez
+Name:Family Services Network of NY
+Subcategory:needle exchange
+Category:medical
+Description:North American Syringe Exchange Network (NASEN)
+Longitude:-73.913864
+Latitude:40.685135
+Address:1639 Broadway Brooklyn, NY 11207
+Comment:  http://www.fsnny.org/
+Comment:  (718) 573-3358
+Comment: lbobb@fsnny.org
+Comment:Talk to Leslie Bobb
+Name:FROST'D
+Subcategory:needle exchange
+Category:medical
+Description:North American Syringe Exchange Network (NASEN)
+Longitude:-73.945297
+Latitude:40.807373
+Address:290 Lenox Ave Lower Level New York, NY 10027
+Comment:  http://www.frostd.org/
+Comment:  (212) 924-3733
+Comment: rsmith@frostd.org
+Comment:Talk to Becky Smith
