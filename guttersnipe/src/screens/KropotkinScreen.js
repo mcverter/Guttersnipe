@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {Text, View, Button, Icon, StyleSheet} from 'react-native';
 import kropotkinFN from '../../redux/store/kropotkins';
 const kropotkins = kropotkinFN();
-console.log('kropotkins', kropotkins);
 
 const defaultParagraph = `
         If it be so, can we doubt that work

@@ -15,8 +15,6 @@ import PropTypes from 'prop-types';
 const Shareable = (props)  => {
   const shareable = props.shareable;
   const navigation = props.navigation;
-  console.log('shareable', shareable);
-  console.log('navigation', navigation);
   const id = shareable.id;
   const subcategory = shareable.subcategory;
   const category = shareable.category;

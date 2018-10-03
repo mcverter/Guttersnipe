@@ -30,7 +30,6 @@ class Map extends React.Component {
                    longitudeDelta: 0.0421,
                  }}>
           {shareables.map(s=> {
-            console.log('mapping shareable', s);
             const coordinate={lat: s.latitude, lng: s.longitude, latitude: s.latitude, longitude: s.longitude};
             console.log('coordinate', coordinate);
              return (

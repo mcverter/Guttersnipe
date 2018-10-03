@@ -8,7 +8,6 @@ import {
   StyleSheet
 } from 'react-native';
 
-import  categorization  from '../../redux/store/categorizations';
 import GsButton from "../components/GsButton";
 
 class ChooseCategoryScreen extends Component {
@@ -20,7 +19,6 @@ class ChooseCategoryScreen extends Component {
   }
 
   render() {
-    console.log('categorizations props', this.props);
     return (
       <View style={styles.chooseCategoryScreenContainer}>
         <View>
@@ -56,7 +54,7 @@ ChooseCategoryScreen.propTypes = {
 };
 
 const mapDispatchToProps = {};
-const mapStateToProps = state => state.shareables;
+const mapStateToProps = state => state.categorization;
 export default
  connect(mapStateToProps, mapDispatchToProps)
 (ChooseCategoryScreen);
