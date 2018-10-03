@@ -9,7 +9,11 @@ import {Provider} from 'react-redux';
 import Router from './src/routes';
 import configureStore from './redux/store/configureStore'
 const initialState = require('./redux/store/initialState');
-const store = configureStore(initialState);
+// const store = configureStore(initialState);  REVIEW THIS CODE PATH
+import { createStore } from 'redux';
+import rootReducer from './redux/reducers';
+
+const reduxStore = createStore(rootReducer);
 
 class App extends Component {
   constructor(props) {
@@ -21,7 +25,7 @@ class App extends Component {
   }
   render() {
     return (
-      <Provider store={store}>
+      <Provider store={reduxStore}>
         <Router/>
       </Provider>
     );

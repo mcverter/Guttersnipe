@@ -2,11 +2,11 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import defaultState from '../../redux/store/initialState';
 import {
+  Text,
   View,
   Button,
   StyleSheet
 } from 'react-native';
-import PageTitle from '../components/PageTitle';
 
 import  categorization  from '../../redux/store/categorizations';
 import GsButton from "../components/GsButton";
@@ -20,12 +20,11 @@ class ChooseCategoryScreen extends Component {
   }
 
   render() {
-//    const {categorization} = this.props;
-
+    console.log('categorizations props', this.props);
     return (
       <View style={styles.chooseCategoryScreenContainer}>
         <View>
-          <PageTitle>Choose a Category</PageTitle>
+          <Text>Choose a Category</Text>
         </View>
         {Object.keys(categorization).map(c =>
           <GsButton
@@ -56,5 +55,9 @@ ChooseCategoryScreen.propTypes = {
 
 };
 
+const mapDispatchToProps = {};
+const mapStateToProps = state => state.shareables;
+export default
+ connect(mapStateToProps, mapDispatchToProps)
+(ChooseCategoryScreen);
 
-export default ChooseCategoryScreen;

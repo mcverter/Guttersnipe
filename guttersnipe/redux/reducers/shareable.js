@@ -34,7 +34,6 @@ export default function shareables(
         shareableFetchError: false
       });
     case types.SHAREABLE_SINGLE_REQUEST_SUCCESS:
-      debugger;
       return Object.assign({}, {...shareables,
         isFetchingShareables: false,
         shareableFetchError: false,

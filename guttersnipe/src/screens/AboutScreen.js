@@ -14,8 +14,6 @@ import GsText from '../components/GsText';
 import LegalNotice from '../components/LegalNotice';
 import ContactPanel from '../components/ContactPanel';
 
-
-
 const videoIsVisible = false;
 
 class AboutScreen extends Component {
