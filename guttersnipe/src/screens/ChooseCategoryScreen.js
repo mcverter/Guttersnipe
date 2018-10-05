@@ -19,6 +19,8 @@ class ChooseCategoryScreen extends Component {
   }
 
   render() {
+    const categorization = this.props.categorization;
+
     return (
       <View style={styles.chooseCategoryScreenContainer}>
         <View>
