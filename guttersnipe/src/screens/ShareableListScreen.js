@@ -9,9 +9,6 @@ import {
 } from 'react-native';
 import Shareable from '../components/Shareable';
 import Utils from '../utils'
-
-// import {allShareableListItems as shareables}  from '../../redux/store/shareables';
-
 import geoShareables from '../../redux/store/geocodedJSON';
 
 class ShareableListScreen extends Component {

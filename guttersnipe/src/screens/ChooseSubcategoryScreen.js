@@ -23,7 +23,6 @@ class ChooseSubcategoryScreen extends Component {
   render() {
     const navigation = this.props.navigation;
     const category = navigation.getParam('category', '');
-    debugger
     const subcategories = this.props.categorization[category];
 
     return (
@@ -38,7 +37,7 @@ class ChooseSubcategoryScreen extends Component {
             key={s}
             title={s}
             onPress={()=>{
-              this.props.navigation.navigate('ShareableListScreen', {
+              this.props.navigation.navigate('SearchResultsTabContainer', {
                 subcategory: s
               });
             }}

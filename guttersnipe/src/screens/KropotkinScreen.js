@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Text, View, Button, Icon, StyleSheet} from 'react-native';
-// import kropotkinFN from '../../redux/store/kropotkins';
-//const kropotkins = kropotkinFN();
 
 const defaultParagraph = `
         If it be so, can we doubt that work
@@ -36,7 +34,6 @@ class Kroptkin extends Component {
   }
 
   fetchRandomKropotkin() {
-    debugger;
     const kropotkins = this.props.kropotkin;
     this.setState({
       paragraph: kropotkins[Math.floor(Math.random() * kropotkins.length)]
@@ -46,6 +43,7 @@ class Kroptkin extends Component {
   _onButtonPress(){
     this.fetchRandomKropotkin();
   }
+
   componentWillMount () {
     this.fetchRandomKropotkin();
   }

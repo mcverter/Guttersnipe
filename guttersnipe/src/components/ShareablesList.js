@@ -1,32 +1,54 @@
 import React from 'react';
 import {
+  StyleSheet,
+  FlatList,
   View,
-  StyleSheet
-} from 'react-native';
+  Button,
+  Text
+} from "react-native";
 import Shareable from './Shareable';
 
-import PropTypes from 'prop-types';
+export default ShareablesList = ({shareables}) => {
+  console.log(shareables);
 
-const ShareableList = (props) => {
-  const shareables = props.shareables;
-    return (
-        <View
-          style={styles.shareableListItems}
-        >
-          {
-            shareables.map(s=><Shareable {...s} />)
-          }
-
-        </View>
-    );
-};
+  return (
+    <View>
+    <FlatList
+      style={styles.shareableList}
+      data={shareables}
+      renderItem={(element) => {
+        const item = element.item;
+        return (
+          <View
+            style={styles.shareableItemContainer}
+          >
+            <Shareable
+              style={styles.shareableItem}
+              shareable={item}
+              navigation={this.props.navigation}/>
+            <Button
+              style={styles.viewDetailButton}
+              color="orange"
+              title="View Detail"
+              onPress={() => {
+                navigation.navigate('ShareableDetailScreen', {
+                  shareable: item,
+                })
+              }}
+            />
+          </View>
+        )
+      }}
+      keyExtractor={(item, index) => index}
+    />
+    </View>
+  )
+}
 const styles = StyleSheet.create({
-  shareableListItems: {}
+  viewMapButton: {},
+  viewDetailButton: {},
+  shareableListContainer: {},
+  shareableList: {},
+  shareableItemContainer: {},
+  shareableItem: {}
 });
-
-ShareableList.propTypes = {
-  shareables: PropTypes.object,
-
-};
-
-export default ShareableList;
