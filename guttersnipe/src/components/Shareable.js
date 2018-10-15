@@ -13,7 +13,6 @@ import PropTypes from 'prop-types';
 
 
 const Shareable = (props)  => {
-  console.log('in shareable');
   const shareable = props.shareable;
   const navigation = props.navigation;
   const id = shareable.id;

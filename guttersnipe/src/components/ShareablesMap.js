@@ -1,36 +1,76 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {
+  StyleSheet,
   View,
-  StyleSheet
+  Text
 } from 'react-native';
-import Map from './Map';
-import Shareable from './Shareable';
+import MapView, {Marker, Callout} from 'react-native-maps';
+import Utils from "../utils";
 
-import PropTypes from 'prop-types';
 
-const ShareableMap = (props) => {
-  const shareables = props.shareables;
-  return (
-    <Map
-      shareables={shareables}
-    />
-    <View
-      style={styles.shareableListItems}
-    >
-      {
-        shareables.map(s=><Shareable {...s} />)
-      }
+class Map extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
-    </View>
-  );
-};
+  render() {
+    const {shareables, navigation} = this.props;
+    const [latitude, longitude] = Utils.findCenterLatLng(shareables.map(s=> {return [s.latitude,  s.longitude];}));
+    const zoom = 4;
+
+    return (
+      <View style={styles.mapContainer}>
+        <MapView style={styles.map}
+                 initialRegion={{
+                   latitude: latitude,
+                   longitude: longitude,
+                   latitudeDelta: 0.0922,
+                   longitudeDelta: 0.0421,
+                 }}>
+          {shareables.map(s=> {
+              const coordinate={lat: s.latitude, lng: s.longitude, latitude: s.latitude, longitude: s.longitude};
+              return (
+                <Marker
+                  key={`${s.name}${s.longitude}${s.latitude}`}
+                  coordinate={coordinate}
+                  title={s.name}
+                  description={'Click for details'}>
+                  <Callout
+                    onPress={()=>{
+                      navigation.navigate('ShareableDetailScreen', {
+                        shareable: s,
+                        zoom: 4
+                      })}}/>
+                </Marker>
+              );
+            }
+          )}
+        </MapView>
+      </View>
+    );
+  }
+}
+
+
+
 const styles = StyleSheet.create({
-  shareableListItems: {}
+  mapContainer: {
+    display: "flex",
+    flex: 1,
+    top: 0,
+    left: 0,
+  },
+  map: {
+    top: 0,
+    left: 0,
+    width: 500,
+    height: 500,
+
+
+  },
 });
 
-ShareableMap.propTypes = {
-  shareables: PropTypes.object,
 
-};
+export default (Map);
 
-export default ShareableMap;
+

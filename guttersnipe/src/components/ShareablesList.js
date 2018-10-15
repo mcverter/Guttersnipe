@@ -8,9 +8,7 @@ import {
 } from "react-native";
 import Shareable from './Shareable';
 
-export default ShareablesList = ({shareables}) => {
-  console.log(shareables);
-
+export default ShareablesList = ({shareables, navigation}) => {
   return (
     <View>
     <FlatList
@@ -25,7 +23,7 @@ export default ShareablesList = ({shareables}) => {
             <Shareable
               style={styles.shareableItem}
               shareable={item}
-              navigation={this.props.navigation}/>
+              navigation={navigation}/>
             <Button
               style={styles.viewDetailButton}
               color="orange"
@@ -39,7 +37,7 @@ export default ShareablesList = ({shareables}) => {
           </View>
         )
       }}
-      keyExtractor={(item, index) => index}
+      keyExtractor={(item, index) => `${index}`}
     />
     </View>
   )

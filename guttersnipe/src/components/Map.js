@@ -14,7 +14,6 @@ class Map extends React.Component {
   }
 
   render() {
-    console.log('Map props', this.props);
     const center = this.props.center;
     const zoom = this.props.zoom;
     const shareables = this.props.shareables;
@@ -31,7 +30,6 @@ class Map extends React.Component {
                  }}>
           {shareables.map(s=> {
             const coordinate={lat: s.latitude, lng: s.longitude, latitude: s.latitude, longitude: s.longitude};
-            console.log('coordinate', coordinate);
              return (
               <Marker
                 key={`${s.name}${s.longitude}${s.latitude}`}

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text, Button, StyleSheet} from 'react-native';
 import ShareablesList from '../components/ShareablesList';
+import ShareablesMap from '../components/ShareablesMap'
 import {connect} from "react-redux";
 
 class ShareableResultsTabContainer extends Component {
@@ -15,19 +16,36 @@ class ShareableResultsTabContainer extends Component {
     }
   }
 
+  switchTab = (tabName) => {
+    debugger;
+    this.setState({currentTab: tabName});
+  }
+
   render() {
     const {currentTab} = this.state;
     const {shareables, navigation} = this.props;
+    const zoom = 4;
 
-    const center = navigation.getParam('center', '');
-    const zoom = navigation.getParam('zoom', 4);
 
     return (
       <View style={styles.mapPageContainer}>
         {
           currentTab === 'list' ?
-            (<ShareablesList shareables={shareables} />) :
-            (<ShareablesMap shareables={shareables} />)
+            (<View>
+              <Button
+                onPress={()=>{this.switchTab("map")}}
+                title={"Switch to Map View"} />
+              <ShareablesList
+                shareables={shareables}
+                navigation={navigation} />
+            </View>)
+            :
+            (<View>
+              <Button
+                onPress={()=>{this.switchTab("list")}}
+                title={"Switch to List awfaw View"} />
+              <ShareablesMap shareables={shareables} navigation={navigation}/>
+            </View>)
         }
       </View>
     )

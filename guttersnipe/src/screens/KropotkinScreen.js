@@ -74,10 +74,7 @@ const styles = StyleSheet.create({
 const mapDispatchToProps = {
 
 };
-const mapStateToProps = state => {
-  console.log(state);
-  return state.kropotkin
-};
+const mapStateToProps = state => state.kropotkin;
 
 export default
 connect(mapStateToProps, mapDispatchToProps)

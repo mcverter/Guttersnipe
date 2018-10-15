@@ -3,8 +3,6 @@ import {Linking} from 'react-native';
 function rad2degr(rad) { return rad * 180 / Math.PI; }
 function degr2rad(degr) { return degr * Math.PI / 180; }
 
-
-
 export default class Utils {
 // Opens a link
   static async openURL(url) {
@@ -33,7 +31,6 @@ export default class Utils {
     for (let i=0; i<latLngInDegr.length; i++) {
       var lat = degr2rad(latLngInDegr[i][LATIDX]);
       var lng = degr2rad(latLngInDegr[i][LNGIDX]);
-      console.log('finidng center', 'lat', lat, 'lng', lng);
       // sum of cartesian coordinates
       sumX += Math.cos(lat) * Math.cos(lng);
       sumY += Math.cos(lat) * Math.sin(lng);
@@ -49,7 +46,6 @@ export default class Utils {
     const hyp = Math.sqrt(avgX * avgX + avgY * avgY);
     var lat = Math.atan2(avgZ, hyp);
 
-    console.log('center', 'lat', rad2degr(lat), 'lng', rad2degr(lng));
     return ([rad2degr(lat), rad2degr(lng)]);
 
   }
