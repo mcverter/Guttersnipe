@@ -37,10 +37,8 @@ class Map extends React.Component {
                   description={'Click for details'}>
                   <Callout
                     onPress={()=>{
-                      navigation.navigate('ShareableDetailScreen', {
-                        shareable: s,
-                        zoom: 4
-                      })}}/>
+                      navigation.navigate('ShareableDetailScreen',
+                        {shareable: s})}}/>
                 </Marker>
               );
             }

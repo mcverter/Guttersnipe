@@ -51,18 +51,6 @@ const Shareable = (props)  => {
       <View>
         <GsText style={styles.time}>{time}</GsText>
       </View>}
-      <View>
-        <Button
-          style={styles.viewMapButton}
-          title="View Map"
-          onPress={()=>{
-            navigation.navigate('MapScreen', {
-              shareables: [shareable],
-              center: {longitude: shareable.longitude, latitude: shareable.latitude},
-              zoom: 4
-            })}}
-        />
-      </View>
       {!!icalendar &&
       <View>
         <GsText>View Calendar</GsText>

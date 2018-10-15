@@ -16,10 +16,7 @@ class ShareableResultsTabContainer extends Component {
     }
   }
 
-  switchTab = (tabName) => {
-    debugger;
-    this.setState({currentTab: tabName});
-  }
+  switchTab = (tabName) => {this.setState({currentTab: tabName});}
 
   render() {
     const {currentTab} = this.state;
@@ -43,7 +40,7 @@ class ShareableResultsTabContainer extends Component {
             (<View>
               <Button
                 onPress={()=>{this.switchTab("list")}}
-                title={"Switch to List awfaw View"} />
+                title={"Switch to List View"} />
               <ShareablesMap shareables={shareables} navigation={navigation}/>
             </View>)
         }

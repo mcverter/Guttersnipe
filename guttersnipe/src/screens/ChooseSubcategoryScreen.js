@@ -28,7 +28,7 @@ class ChooseSubcategoryScreen extends Component {
     return (
       <View style={styles.chooseSubcategoryScreenContainer}>
         <View>
-          <PageTitle>Choose a Category</PageTitle>
+          <PageTitle>Choose a Subcategory</PageTitle>
         </View>
         {subcategories.map(s =>
           <GsButton
@@ -37,7 +37,7 @@ class ChooseSubcategoryScreen extends Component {
             key={s}
             title={s}
             onPress={()=>{
-              this.props.navigation.navigate('SearchResultsTabContainer', {
+              this.props.navigation.navigate('ShareablesScreen', {
                 subcategory: s
               });
             }}

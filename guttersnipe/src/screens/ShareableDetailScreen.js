@@ -4,15 +4,12 @@ import {
   StyleSheet,
   Text
 } from 'react-native';
-import CommentList from '../components/CommentList'
-import Shareable from '../components/Shareable';
-import PageTitle from "../components/PageTitle";
-import Map from "../components/Map";
 import PropTypes from 'prop-types';
 import comments from "../../redux/store/comments";
-import {allShareableListItems as shareables} from "../../redux/store/shareables";
-import categorization from "../../redux/store/categorizations";
-import find from 'lodash.find';
+import MapView, {Marker, Callout} from 'react-native-maps';
+import Shareable from "../components/Shareable";
+import CommentList from "../components/CommentList";
+
 
 class ShareableDetailScreen extends Component {
   static navigationOptions = {
@@ -32,6 +29,20 @@ class ShareableDetailScreen extends Component {
         <Shareable
           style={styles.shareableItem}
           shareable={shareable} navigation={navigation}/>
+        <View style={styles.mapContainer}>
+          <MapView style={styles.map}
+                   initialRegion={{
+                     latitudeDelta: 0.0052,
+                     longitudeDelta: 0.0051,
+                     latitude: shareable.latitude,
+                     longitude: shareable.longitude
+                   }}>
+            <Marker
+              coordinate={{latitude: shareable.latitude, longitude: shareable.longitude, lat: shareable.latitude, longitude: shareable.longitude}}
+              title={shareable.name}
+              description={shareable.name} />
+          </MapView>
+        </View>
         <CommentList
           style={styles.commentList}
           comments={shareable.comments} />
@@ -40,10 +51,25 @@ class ShareableDetailScreen extends Component {
   }
 }
 
+/*
+
+
+ */
 const styles = StyleSheet.create({
   shareableDetailScreenContainer: {},
   shareableItem: {},
-  commentList: {}
+  commentList: {},
+  mapContainer: {
+  borderWidth: 2,
+  margin: 2,
+  padding: 2,
+  borderColor: '#000',
+  borderStyle: 'solid'
+  },
+  map: {
+    height: 200,
+    width: '100%'
+  }
 });
 
 ShareableDetailScreen.propTypes = {
