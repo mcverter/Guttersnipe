@@ -1,26 +1,16 @@
-import React from 'react';
-import {
-  Text,
-  StyleSheet,
-  TouchableOpacity
-} from 'react-native';
+import React from "react";
+import { Text, StyleSheet, TouchableOpacity } from "react-native";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-const GsButton = (props) => {
+const GsButton = ({ onPress, title, styleText, styleContainer }) => {
   return (
-    <TouchableOpacity
-      onPress={props.onPress}
-      style={props.styleContainer}>
-      <Text style={props.styleText}>
-        {props.title}
-      </Text>
+    <TouchableOpacity onPress={onPress} style={styleContainer}>
+      <Text style={styleText}>{title}</Text>
     </TouchableOpacity>
   );
 };
 
-GsButton.propTypes = {
-
-};
+GsButton.propTypes = {};
 
 export default GsButton;

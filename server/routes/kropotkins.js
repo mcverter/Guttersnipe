@@ -1,23 +1,24 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const kropotkinDB = require(__dirname + '/../controllers/KropotkinController');
+const kropotkinDB = require(__dirname + "/../controllers/KropotkinController");
 
 const kropotkinController = new kropotkinDB();
 
-router.get('/', function(req, res, next) {
-  console.log('Hello Kropotkin Router');
-  kropotkinController.selectRandomKropotkin()
-    .then(function(paragraph){
-      console.log('paragraph', paragraph);
+router.get("/", function(req, res, next) {});
+router.get("/random", function(req, res, next) {
+  console.log("Hello Kropotkin Router");
+  kropotkinController
+    .selectRandomKropotkin()
+    .then(function(paragraph) {
+      console.log("paragraph", paragraph);
       res.json({
-        error:false,
+        error: false,
         paragraph
-      })
+      });
     })
-    .catch(function(error){
-      console.error('ERROR', error)
-    })
+    .catch(function(error) {
+      console.error("ERROR", error);
+    });
 });
-
 
 module.exports = router;

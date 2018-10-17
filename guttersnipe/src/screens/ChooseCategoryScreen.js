@@ -1,18 +1,14 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import defaultState from '../../redux/store/initialState';
-import {
-  Text,
-  View,
-  Button,
-  StyleSheet
-} from 'react-native';
+import React, { Component } from "react";
+import { Text, View, Button, StyleSheet } from "react-native";
 
 import GsButton from "../components/GsButton";
 
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+
 class ChooseCategoryScreen extends Component {
   static navigationOptions = {
-    title: 'Choose Category',
+    title: "Choose Category"
   };
   constructor(props) {
     super(props);
@@ -26,38 +22,47 @@ class ChooseCategoryScreen extends Component {
         <View>
           <Text>Choose a Category</Text>
         </View>
-        {Object.keys(categorization).map(c =>
+        {Object.keys(categorization).map(c => (
           <GsButton
-            styleContainer={{backgroundColor: "red", padding: 20, margin: 25, width: "80%"}}
-            styleText={{color: 'black', fontWeight: '900', textAlign: "center"}}
+            styleContainer={{
+              backgroundColor: "red",
+              padding: 20,
+              margin: 25,
+              width: "80%"
+            }}
+            styleText={{
+              color: "black",
+              fontWeight: "900",
+              textAlign: "center"
+            }}
             key={c}
             title={c}
-            onPress={()=>{
-              this.props.navigation.navigate('ChooseSubcategoryScreen', {
+            onPress={() => {
+              this.props.navigation.navigate("ChooseSubcategoryScreen", {
                 category: c
               });
             }}
-          >{c}
-          </GsButton>)}
+          >
+            {c}
+          </GsButton>
+        ))}
       </View>
     );
   }
 }
 const styles = StyleSheet.create({
-  chooseCategoryButton : {},
+  chooseCategoryButton: {},
   chooseCategoryScreenContainer: {
-    backgroundColor: 'black',
-    height: '100%'
+    backgroundColor: "black",
+    height: "100%"
   }
 });
 
-ChooseCategoryScreen.propTypes = {
-
-};
+ChooseCategoryScreen.propTypes = {};
 
 const mapDispatchToProps = {};
 const mapStateToProps = state => state.categorization;
-export default
- connect(mapStateToProps, mapDispatchToProps)
-(ChooseCategoryScreen);
-
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ChooseCategoryScreen);

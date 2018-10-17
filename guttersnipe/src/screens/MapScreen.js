@@ -1,18 +1,18 @@
-import React, {Component} from 'react';
-import {View, Text, Button, StyleSheet} from 'react-native';
+import React, { Component } from "react";
+import { View, Text, Button, StyleSheet } from "react-native";
 
-import Map from '../components/Map';
+import Map from "../components/Map";
 
 export default class MapScreen extends Component {
   static navigationOptions = {
-    title: 'Shareable Map',
+    title: "Shareable Map"
   };
 
   render() {
-    const navigation  = this.props.navigation;
-    const center = navigation.getParam('center', '');
-    const shareables = navigation.getParam('shareables');
-    const zoom = navigation.getParam('zoom', 4);
+    const navigation = this.props.navigation;
+    const center = navigation.getParam("center", "");
+    const shareables = navigation.getParam("shareables");
+    const zoom = navigation.getParam("zoom", 4);
 
     return (
       <View style={styles.mapPageContainer}>
@@ -23,7 +23,7 @@ export default class MapScreen extends Component {
           navigation={navigation}
         />
       </View>
-    )
+    );
   }
 }
 

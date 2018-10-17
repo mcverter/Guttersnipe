@@ -1,13 +1,8 @@
-import React from 'react';
-import {
-  Text,
-  View,
-  Image,
-  StyleSheet
-} from 'react-native';
-import GsText from './GsText';
+import React from "react";
+import { Text, View, Image, StyleSheet } from "react-native";
+import GsText from "./GsText";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const LegalNotice = () => {
   return (
@@ -17,11 +12,15 @@ const LegalNotice = () => {
       </View>
       <View style={styles.legalBody}>
         <View>
-          <Text  style={styles.noJeopardy}>Through your usage of Guttersnipe, you agree
-            to not put yourself or any other person in legal jeopardy.</Text>
+          <Text style={styles.noJeopardy}>
+            Through your usage of Guttersnipe, you agree to not put yourself or
+            any other person in legal jeopardy.
+          </Text>
         </View>
-        <View >
-          <GsText style={styles.freeToUse}>You are free to use Guttersnipe as you wish.</GsText>
+        <View>
+          <GsText style={styles.freeToUse}>
+            You are free to use Guttersnipe as you wish.
+          </GsText>
         </View>
         <View>
           <Text style={styles.rightsRites}>All Wrongs Righted </Text>
@@ -32,35 +31,30 @@ const LegalNotice = () => {
   );
 };
 const styles = StyleSheet.create({
-
   legalPanel: {
-    borderColor: 'black',
+    borderColor: "black",
     borderWidth: 1,
-    display: 'flex'
+    display: "flex"
   },
 
   legalHeading: {
     fontWeight: "700"
   },
-  legalBody: {
-  },
+  legalBody: {},
   noJeopardy: {
-    color: '#800000',
+    color: "#800000",
     textAlign: "center"
   },
   freeToUse: {
-    color: 'red',
+    color: "red",
     textAlign: "center"
   },
   rightsRites: {
     textAlign: "center",
-    color: '#ff9933'
-
-  },
+    color: "#ff9933"
+  }
 });
 
-LegalNotice.propTypes = {
-
-};
+LegalNotice.propTypes = {};
 
 export default LegalNotice;

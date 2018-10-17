@@ -1,6 +1,8 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {Text, View, Button, Icon, StyleSheet} from 'react-native';
+import React, { Component } from "react";
+import { Text, View, Button, StyleSheet } from "react-native";
+
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
 const defaultParagraph = `
         If it be so, can we doubt that work
@@ -21,16 +23,15 @@ const defaultParagraph = `
         the rule of to-morrow.
 `;
 
-
 class Kroptkin extends Component {
   static navigationOptions = {
-    title: 'The Conquest of Bread',
+    title: "The Conquest of Bread"
   };
   constructor(props) {
     super(props);
-    this.state={
+    this.state = {
       paragraph: defaultParagraph
-    }
+    };
   }
 
   fetchRandomKropotkin() {
@@ -40,15 +41,15 @@ class Kroptkin extends Component {
     });
   }
 
-  _onButtonPress(){
+  _onButtonPress() {
     this.fetchRandomKropotkin();
   }
 
-  componentWillMount () {
+  componentWillMount() {
     this.fetchRandomKropotkin();
   }
 
-  render(){
+  render() {
     const paragraph = this.state.paragraph;
     return (
       <View style={styles.kropotkinScreenContainer}>
@@ -58,24 +59,23 @@ class Kroptkin extends Component {
           color="green"
           transparent
           title="New Quote"
-          onPress={() => this._onButtonPress()}>
-        </Button>
+          onPress={() => this._onButtonPress()}
+        />
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  kropotkinQuoteButton : {},
-  kropotkinParagraph : {},
-  kropotkinScreenContainer : {}
+  kropotkinQuoteButton: {},
+  kropotkinParagraph: {},
+  kropotkinScreenContainer: {}
 });
 
-const mapDispatchToProps = {
-
-};
+const mapDispatchToProps = {};
 const mapStateToProps = state => state.kropotkin;
 
-export default
-connect(mapStateToProps, mapDispatchToProps)
-(Kroptkin);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Kroptkin);

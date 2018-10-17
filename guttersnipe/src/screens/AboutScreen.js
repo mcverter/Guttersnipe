@@ -1,24 +1,26 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import React, { Component } from "react";
 import {
   View,
   Image,
   StyleSheet,
   Button,
   TouchableOpacity
-} from 'react-native';
-import Video from 'react-native-video';
+} from "react-native";
+
+import Video from "react-native-video";
 import FTK from "../components/FTK";
-import Utils from './../utils';
-import GsText from '../components/GsText';
-import LegalNotice from '../components/LegalNotice';
-import ContactPanel from '../components/ContactPanel';
+import GsText from "../components/GsText";
+import LegalNotice from "../components/LegalNotice";
+import ContactPanel from "../components/ContactPanel";
+
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
 const videoIsVisible = false;
 
 class AboutScreen extends Component {
   static navigationOptions = {
-    title: 'About Guttersnipe',
+    title: "About Guttersnipe"
   };
   constructor(props) {
     super(props);
@@ -30,35 +32,36 @@ class AboutScreen extends Component {
         <View style={styles.videoPanel}>
           <View style={styles.videoContainer}>
             <Video
-              source={require('../assets/video/Guttersnipe.mp4')}
+              source={require("../assets/video/Guttersnipe.mp4")}
               rate={1.0}
               volume={1.0}
               muted={false}
               resizeMode="cover"
-              style={{ width: '100%', height: 200 }}
-              poster={'../assets/images/JoeStrummerGuttersnipe.png'}
+              style={{ width: "100%", height: 200 }}
+              poster={"../assets/images/JoeStrummerGuttersnipe.png"}
             />
           </View>
         </View>
 
         <View style={styles.aboutFTKContainer}>
-          <FTK style={styles.aboutFTKText}/>
+          <FTK style={styles.aboutFTKText} />
         </View>
 
         <View style={styles.kropotkin}>
-          <Button title="Read Kropotkin"
-                  style={styles.readKropotkinButton}
-                  color={"black"}
-                  onPress={() => this.props.navigation.navigate('KropotkinScreen')}/>
+          <Button
+            title="Read Kropotkin"
+            style={styles.readKropotkinButton}
+            color={"black"}
+            onPress={() => this.props.navigation.navigate("KropotkinScreen")}
+          />
         </View>
 
-        <LegalNotice/>
-       <ContactPanel/>
+        <LegalNotice />
+        <ContactPanel />
       </View>
     );
   }
 }
-
 
 const styles = StyleSheet.create({
   aboutScreenContainer: {},
@@ -67,31 +70,30 @@ const styles = StyleSheet.create({
   videoContainer: {},
   video: {
     height: 200,
-    width: '100%'
+    width: "100%"
   },
 
   aboutFTKText: {
-    color: 'black',
+    color: "black",
     textAlign: "center",
     fontFamily: "courier",
     fontWeight: "900"
   },
   aboutFTKContainer: {
-    backgroundColor: 'red',
-    padding: 15,
+    backgroundColor: "red",
+    padding: 15
   },
 
-
   legalPanel: {
-    borderColor: 'black',
+    borderColor: "black",
     borderWidth: 1
   },
 
   readKropotkinButton: {
-    color: 'orange'
+    color: "orange"
   },
 
-  contactPanel: {},
+  contactPanel: {}
 });
 
 AboutScreen.propTypes = {};
@@ -107,4 +109,4 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = () => {
 };
 */
-export default /*connect(mapStateToProps, { requestRegistryData })*/(AboutScreen)
+export default /*connect(mapStateToProps, { requestRegistryData })*/ AboutScreen;

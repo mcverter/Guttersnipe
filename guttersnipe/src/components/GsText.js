@@ -1,17 +1,11 @@
-import React from 'react';
-import {
-  Text,
-  StyleSheet,
-} from 'react-native';
+import React from "react";
+import { Text, StyleSheet } from "react-native";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 function superDecodeURI(string) {
-  if(!string // ||
-//    typeof string !== "string" ||
-  //  (! string.search(/\w/))
-  ) {
-    return '';
+  if (!string) {
+    return "";
   }
   return string
     .replace(/%27/g, "'")
@@ -28,7 +22,6 @@ function superDecodeURI(string) {
     .replace(/%3B/g, ";")
     .replace(/%3F/g, "?")
     .replace(/%40/g, "@")
-
 
     .replace(/%7B/g, "{")
     .replace(/%7D/g, "}")
@@ -49,16 +42,10 @@ function superDecodeURI(string) {
     .replace(/%25/g, "%");
 }
 
-/*
- */
-
-
-const GsText = (props) => {
-  return (<Text style={props.style}>{superDecodeURI(props.children)}</Text>);
+const GsText = props => {
+  return <Text style={props.style}>{superDecodeURI(props.children)}</Text>;
 };
 
-GsText.propTypes = {
-
-};
+GsText.propTypes = {};
 
 export default GsText;

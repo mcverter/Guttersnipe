@@ -1,26 +1,24 @@
-import React from 'react';
-import {
-  View,
-  Image,
-  StyleSheet,
-} from 'react-native';
-/* need new GsText component */
-import GsText from '../components/GsText';
+import React from "react";
+import { View, Image, StyleSheet } from "react-native";
+import GsText from "../components/GsText";
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-const Comment = (props) => {
+const Comment = props => {
   const commentText = props.comment;
-  console.log('comment props', comment);
+  console.log("comment props", comment);
   const comment = {
     comment_text: commentText,
     author_id: 5,
-    author_name: 'mitchell',
-    author_role: 'admin',
-    comment_id: '2',
+    author_name: "mitchell",
+    author_role: "admin",
+    comment_id: "2",
     date_posted: "November 26 1998",
-    comment_title: commentText.split(' ').slice(0,3).join(' ')
-  }
+    comment_title: commentText
+      .split(" ")
+      .slice(0, 3)
+      .join(" ")
+  };
   const author_id = comment.author_id;
   const author_name = comment.author_name;
   const author_role = comment.author_role;
@@ -32,11 +30,13 @@ const Comment = (props) => {
 
   return (
     <View style={styles.commentContainer}>
-      <View >
+      <View>
         <GsText style={styles.commentText}>{comment_text}</GsText>
       </View>
-      <View >
-        <GsText style={styles.commentAuthor}>{`Posted by ${author_name} on ${date_posted}`}</GsText>
+      <View>
+        <GsText
+          style={styles.commentAuthor}
+        >{`Posted by ${author_name} on ${date_posted}`}</GsText>
       </View>
     </View>
   );
@@ -46,22 +46,20 @@ const Comment = (props) => {
 
  */
 const styles = StyleSheet.create({
-  commentAuthor:{
-    fontStyle: 'italic',
+  commentAuthor: {
+    fontStyle: "italic",
     fontSize: 10
   },
-  commentText : {
-    color: 'black',
+  commentText: {
+    color: "black",
     fontWeight: "500"
   },
   commentContainer: {
-    borderColor: '#74132D',
+    borderColor: "#74132D",
     borderWidth: 2
   }
 });
 
-Comment.propTypes = {
-
-};
+Comment.propTypes = {};
 
 export default Comment;

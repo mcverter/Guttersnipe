@@ -1,35 +1,45 @@
-const fs = require('fs');
-const {Client} = require('pg');
-const dbConfig = require('../../config/dbConfig');
+const fs = require("fs");
+const { Client } = require("pg");
+const dbConfig = require("../../config/dbConfig");
 // NODE_ENV
-const client = new Client(dbConfig['test']);
+const client = new Client(dbConfig["test"]);
 
 client.connect();
 
 class ShareableController {
   async selectShareableWithComments(id) {
     console.error("ID IS ", id);
-    let commentsJSON,
-      shareableJSON;
+    let commentsJSON, shareableJSON;
 
-    const commentsQueryFromFile = fs.readFileSync(__dirname + '/../../db/sql/CommentsQuery.sql', 'utf8');
+    const commentsQueryFromFile = fs.readFileSync(
+      __dirname + "/../../db/sql/CommentsQuery.sql",
+      "utf8"
+    );
     let commentsQueryResult = await client.query(commentsQueryFromFile, [id]);
-    commentsJSON = commentsQueryResult.rows[0]['json_agg'];
+    commentsJSON = commentsQueryResult.rows[0]["json_agg"];
 
-    const shareableFullQuery = fs.readFileSync(__dirname + '/../../db/sql/ShareableFullQuery.sql', 'utf8');
+    const shareableFullQuery = fs.readFileSync(
+      __dirname + "/../../db/sql/ShareableFullQuery.sql",
+      "utf8"
+    );
     let shareableQueryResult = await client.query(shareableFullQuery, [id]);
-    shareableJSON = shareableQueryResult.rows[0]['json_agg'];
+    shareableJSON = shareableQueryResult.rows[0]["json_agg"];
 
-    console.log('comments json', commentsJSON, 'shareable json', shareableJSON);
-    return {commentsJSON, shareableJSON};
+    console.log("comments json", commentsJSON, "shareable json", shareableJSON);
+    return { commentsJSON, shareableJSON };
   }
 
   async selectShareablesList() {
-    const shareableListQueryFromFile = fs.readFileSync(__dirname + '/../../db/sql/ShareableListQuery.sql', 'utf8');
-    let shareableListQueryResult = await
-      client.query(shareableListQueryFromFile);
-    let shareableListJSON = shareableListQueryResult.rows[0]['json_agg'];
-    console.log('shareable list json', shareableListJSON);
+    const shareableListQueryFromFile = fs.readFileSync(
+      __dirname + "/../../db/sql/ShareableListQuery.sql",
+      "utf8"
+    );
+    console.log(shareableListQueryFromFile);
+    let shareableListQueryResult = await client.query(
+      shareableListQueryFromFile
+    );
+    let shareableListJSON = shareableListQueryResult.rows[0]["json_agg"];
+    console.log("shareable list json", shareableListJSON);
     return shareableListJSON;
   }
 }
