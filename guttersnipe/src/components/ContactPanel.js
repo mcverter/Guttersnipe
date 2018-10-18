@@ -13,15 +13,17 @@ import { utilOpenURL } from "../utils";
 
 import PropTypes from "prop-types";
 
+const sendMailToAdmin = () => {
+  utilOpenURL("mailto:roadrunner@waste.org");
+};
+
 const ContactPanel = () => {
   return (
     <View>
       <View>
         <GsText style={styles.contactPanel}>Contact</GsText>
       </View>
-      <TouchableOpacity
-        onPress={() => utilOpenURL("mailto:roadrunner@waste.org")}
-      >
+      <TouchableOpacity onPress={sendMailToAdmin}>
         <Image
           style={{ height: 50, alignSelf: "center" }}
           source={require("../assets/images/roadrunnerAtWaste.png")}

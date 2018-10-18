@@ -1,6 +1,6 @@
-function * getCurrentLocation() {
+function* getCurrentLocation() {
   let coordinates = yield navigator.geolocation.getCurrentPosition();
-  yield put({type: 'BROWSER_LOCATION', coordinates})
+  yield put({ type: "BROWSER_LOCATION", coordinates });
 }
 
 /**

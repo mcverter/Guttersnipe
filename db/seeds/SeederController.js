@@ -1,14 +1,14 @@
-const FreeganSeeder = require('./FreeganSeeder');
-const KropotkinSeeder = require('./KropotkinSeeder');
-const CategorySeeder = require('./CategorySeeder');
-const {Client} =  require('pg');
+const FreeganSeeder = require("./FreeganSeeder");
+const KropotkinSeeder = require("./KropotkinSeeder");
+const CategorySeeder = require("./CategorySeeder");
+const { Client } = require("pg");
 
 const client = new Client({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'guttersnipeTest',
-  password: 'postgres',
-  port: 5432,
+  user: "postgres",
+  host: "localhost",
+  database: "guttersnipeTest",
+  password: "postgres",
+  port: 5432
 });
 
 client.connect();

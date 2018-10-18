@@ -1,41 +1,41 @@
-import commentsJSON from './comments';
-import {allShareableListItems as shareablesJSON} from './shareables';
-import categorizationJSON from './categorizations';
+import commentsJSON from "./comments";
+import { allShareableListItems as shareablesJSON } from "./shareables";
+import categorizationJSON from "./categorizations";
 
 const initialState = {
-  shareables : {
+  shareables: {
     isFetchingShareables: false,
     shareableFetchError: false,
     shareables: shareablesJSON,
-    selectedIndex: -1,
+    selectedIndex: -1
   },
-/*  comments : {
+  /*  comments : {
     comments : commentsJSON,
     isFetchingComments: false,
     shareableCommentsError: false,
   },
   */
-  categorization : {
+  categorization: {
     categorization: categorizationJSON,
     isFetchingCategorization: false,
-    categorizationFetchError: false,
+    categorizationFetchError: false
   },
   kropotkin: {
     isFetchingKropotkin: false,
     kropotkinFetchError: false,
-    paragraph: ''
+    paragraph: ""
   },
-/* Not implemented yet */
-  auth : {
+  /* Not implemented yet */
+  auth: {
     authenticated: false,
-    error: '',
-    username: ''
+    error: "",
+    username: ""
   },
   location: {
     location: [18.135228, -97.0901879],
     latitude: 18.135228,
     longitude: -97.0901879
-  },
+  }
   /*
   mapCenter: {
     location: [18.135228, -97.0901879],

@@ -42,8 +42,8 @@ function superDecodeURI(string) {
     .replace(/%25/g, "%");
 }
 
-const GsText = props => {
-  return <Text style={props.style}>{superDecodeURI(props.children)}</Text>;
+const GsText = ({ style, children }) => {
+  return <Text style={style}>{superDecodeURI(children)}</Text>;
 };
 
 GsText.propTypes = {};

@@ -3,9 +3,9 @@ import { Text, View, Image, StyleSheet } from "react-native";
 
 import PropTypes from "prop-types";
 
-const FTK = props => {
+const FTK = ({ style }) => {
   return (
-    <Text style={props.style}>
+    <Text style={style}>
       *********
       {"\n"}
       !! FOR !!
@@ -36,6 +36,8 @@ const styles = StyleSheet.create({
   }
 });
 
-FTK.propTypes = {};
+FTK.propTypes = {
+  style: PropTypes.object
+};
 
 export default FTK;

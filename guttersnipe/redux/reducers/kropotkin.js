@@ -1,13 +1,16 @@
-import * as types from '../types';
-import initialState from '../store/initialState';
+import * as types from "../types";
+import initialState from "../store/initialState";
 
-export const KROPOTKIN_SINGLE_REQUEST = 'KROPOTKIN_SINGLE_REQUEST';
-export const KROPOTKIN_SINGLE_REQUEST_SUCCESS = 'KROPOTKIN_SINGLE_REQUEST_SUCCESS';
-export const KROPOTKIN_SINGLE_REQUEST_ERROR = 'KROPOTKIN_SINGLE_REQUEST_ERROR';
+export const KROPOTKIN_SINGLE_REQUEST = "KROPOTKIN_SINGLE_REQUEST";
+export const KROPOTKIN_SINGLE_REQUEST_SUCCESS =
+  "KROPOTKIN_SINGLE_REQUEST_SUCCESS";
+export const KROPOTKIN_SINGLE_REQUEST_ERROR = "KROPOTKIN_SINGLE_REQUEST_ERROR";
 
 export default function kropotkin(
-  kropotkin = initialState.kropotkin, action={}) {
-  switch(action.type) {
+  kropotkin = initialState.kropotkin,
+  action = {}
+) {
+  switch (action.type) {
     case types.KROPOTKIN_SINGLE_REQUEST:
       return Object.assign({}, kropotkin, {
         isFetchingKropotkin: true,

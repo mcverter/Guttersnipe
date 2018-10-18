@@ -1,8 +1,8 @@
-import {STORE_BROWSER_LOCATION} from '../types';
+import { STORE_BROWSER_LOCATION } from "../types";
 
 function getBrowserLocationAsPromise() {
-  return new Promise(function (resolve, reject) {
-    navigator.geolocation.getCurrentPosition(function (position) {
+  return new Promise(function(resolve, reject) {
+    navigator.geolocation.getCurrentPosition(function(position) {
       resolve([position.coords.latitude, position.coords.longitude]);
     });
   });
@@ -10,9 +10,8 @@ function getBrowserLocationAsPromise() {
 
 export function setBrowserLocation() {
   return function(dispatch) {
-    getBrowserLocationAsPromise()
-      .then(coords=>{
-        dispatch({type: STORE_BROWSER_LOCATION, location: coords});
-      });
+    getBrowserLocationAsPromise().then(coords => {
+      dispatch({ type: STORE_BROWSER_LOCATION, location: coords });
+    });
   };
 }

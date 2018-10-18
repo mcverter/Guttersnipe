@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, View, Text } from "react-native";
 import MapView, { Marker, Callout } from "react-native-maps";
+import PropTypes from "prop-types";
 
 class Map extends React.Component {
   constructor(props) {
@@ -8,10 +9,7 @@ class Map extends React.Component {
   }
 
   render() {
-    const center = this.props.center;
-    const zoom = this.props.zoom;
-    const shareables = this.props.shareables;
-    const navigation = this.props.navigation;
+    const { center, zoom, shareables, navigation } = this.props;
 
     return (
       <View style={styles.mapContainer}>
@@ -41,8 +39,7 @@ class Map extends React.Component {
                 <Callout
                   onPress={() => {
                     navigation.navigate("ShareableDetailScreen", {
-                      shareable: s,
-                      zoom: 4
+                      shareable: s
                     });
                   }}
                 />
@@ -54,6 +51,12 @@ class Map extends React.Component {
     );
   }
 }
+
+Map.propTypes = {
+  center: PropTypes.array,
+  shareables: PropTypes.array,
+  navigation: PropTypes.object
+};
 
 const styles = StyleSheet.create({
   mapContainer: {

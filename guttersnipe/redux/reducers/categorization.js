@@ -1,9 +1,11 @@
-import * as types from '../types';
-import initialState from '../store/initialState';
+import * as types from "../types";
+import initialState from "../store/initialState";
 
 export default function categorization(
-  categorization = initialState.categorization, action={}) {
-  switch(action.type) {
+  categorization = initialState.categorization,
+  action = {}
+) {
+  switch (action.type) {
     case types.CATEGORIZATION_REQUEST:
       return Object.assign({}, categorization, {
         isFetchingCategorization: true,

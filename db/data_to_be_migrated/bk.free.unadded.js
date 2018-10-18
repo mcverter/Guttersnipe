@@ -1,137 +1,234 @@
-var Brooklyn = [
-//     "updated":"2015-03-07T18:27:32.065Z",
-
+let Brooklyn = [
+  //     "updated":"2015-03-07T18:27:32.065Z",
 
   {
     thing: {
       taxonomy: {
-        type: 'food',
-        subtypes: ['dumpster']
+        type: "food",
+        subtypes: ["dumpster"]
       },
       description: {
-        headline: 'Gristedes',
-        notes: 'Clear garbage bags out front.',
-        summary: 'Routinely hit or miss, but the hits can be great: dozens of eggs, bags of chocolate chips, cheese. '
+        headline: "Gristedes",
+        notes: "Clear garbage bags out front.",
+        summary:
+          "Routinely hit or miss, but the hits can be great: dozens of eggs, bags of chocolate chips, cheese. "
       }
     },
     place: {
-      coordinates : {
+      coordinates: {
         lat: 40.6975689,
         lng: -73.9926592
       },
-      address: '101 Clark St Brooklyn, NY 11201'
+      address: "101 Clark St Brooklyn, NY 11201"
     },
-    time : {
-      schedules : [{recurringDay: 'all', recurrenceType: 'A', startTime: 2130,duration: 120}],
-      notes:'After 9:30p'
+    time: {
+      schedules: [
+        {
+          recurringDay: "all",
+          recurrenceType: "A",
+          startTime: 2130,
+          duration: 120
+        }
+      ],
+      notes: "After 9:30p"
     }
   },
   {
     thing: {
-      taxonomy: {type: 'food', subtypes: ['dumpster']},
+      taxonomy: { type: "food", subtypes: ["dumpster"] },
       description: {
-        summary: 'Italian Bakery.  Excellent bread and cookies. Baker is on site all night long; move fast. Also, vegetarians beware the sausage bread. ',
-        headline: 'Caputo\'s Bakery'
+        summary:
+          "Italian Bakery.  Excellent bread and cookies. Baker is on site all night long; move fast. Also, vegetarians beware the sausage bread. ",
+        headline: "Caputo's Bakery"
       }
     },
     place: {
-      coordinates : {
+      coordinates: {
         lat: 40.682846,
         lng: -73.99549
       },
-      address: '329 Court St Brooklyn, NY 11231',
-      notes: 'Four garbage cans.'
+      address: "329 Court St Brooklyn, NY 11231",
+      notes: "Four garbage cans."
     },
-    time : {
-      schedules : [{recurringDay: 'mon', recurrenceType: 'A', startTime: 2200,duration: 120},
-        {recurringDay: 'tue', recurrenceType: 'A', startTime: 2200,duration: 120},
-        {recurringDay: 'wed', recurrenceType: 'A', startTime: 2200,duration: 120},
-        {recurringDay: 'thu', recurrenceType: 'A', startTime: 2200,duration: 120},
-        {recurringDay: 'fri', recurrenceType: 'A', startTime: 2200,duration: 120},
-        {recurringDay: 'sun', recurrenceType: 'A', startTime: 2200,duration: 120}]
+    time: {
+      schedules: [
+        {
+          recurringDay: "mon",
+          recurrenceType: "A",
+          startTime: 2200,
+          duration: 120
+        },
+        {
+          recurringDay: "tue",
+          recurrenceType: "A",
+          startTime: 2200,
+          duration: 120
+        },
+        {
+          recurringDay: "wed",
+          recurrenceType: "A",
+          startTime: 2200,
+          duration: 120
+        },
+        {
+          recurringDay: "thu",
+          recurrenceType: "A",
+          startTime: 2200,
+          duration: 120
+        },
+        {
+          recurringDay: "fri",
+          recurrenceType: "A",
+          startTime: 2200,
+          duration: 120
+        },
+        {
+          recurringDay: "sun",
+          recurrenceType: "A",
+          startTime: 2200,
+          duration: 120
+        }
+      ]
     }
   },
   {
     thing: {
-      taxonomy: {type: 'food', subtypes: ['dumpster']},
+      taxonomy: { type: "food", subtypes: ["dumpster"] },
       description: {
-        headline: 'Union Market',
-        summary: 'For those on bicycle or who don’t mind a little walk, this is a great alternative to the Trader Joe’s at Atlantic and Court. It’s a high-end supermarket mini-chain that is just far enough from other stores that it gets few dumpster divers. Finds have included loads of packaged and unpackaged bread, produce, dairy products, quarts of prepared soup (generally not vegetarian), fancy desserts, fancy fresh pasta. '
+        headline: "Union Market",
+        summary:
+          "For those on bicycle or who don’t mind a little walk, this is a great alternative to the Trader Joe’s at Atlantic and Court. It’s a high-end supermarket mini-chain that is just far enough from other stores that it gets few dumpster divers. Finds have included loads of packaged and unpackaged bread, produce, dairy products, quarts of prepared soup (generally not vegetarian), fancy desserts, fancy fresh pasta. "
       }
     },
     place: {
-      coordinates : {
+      coordinates: {
         lat: 40.684389,
         lng: -73.995308
       },
-      address: '288 Court St Brooklyn, NY 11231',
-      notes: 'Black plastic garbage bags on the curb.'
+      address: "288 Court St Brooklyn, NY 11231",
+      notes: "Black plastic garbage bags on the curb."
     },
-    time : {
-      schedules : [{recurringDay: 'mon', recurrenceType: 'A', startTime: 2100,duration: 120},
-        {recurringDay: 'tue', recurrenceType: 'A', startTime: 2100,duration: 120},
-        {recurringDay: 'wed', recurrenceType: 'A', startTime: 2100,duration: 120},
-        {recurringDay: 'thu', recurrenceType: 'A', startTime: 2100,duration: 120},
-        {recurringDay: 'fri', recurrenceType: 'A', startTime: 2100,duration: 120},
-        {recurringDay: 'sun', recurrenceType: 'A', startTime: 2100,duration: 120}]
+    time: {
+      schedules: [
+        {
+          recurringDay: "mon",
+          recurrenceType: "A",
+          startTime: 2100,
+          duration: 120
+        },
+        {
+          recurringDay: "tue",
+          recurrenceType: "A",
+          startTime: 2100,
+          duration: 120
+        },
+        {
+          recurringDay: "wed",
+          recurrenceType: "A",
+          startTime: 2100,
+          duration: 120
+        },
+        {
+          recurringDay: "thu",
+          recurrenceType: "A",
+          startTime: 2100,
+          duration: 120
+        },
+        {
+          recurringDay: "fri",
+          recurrenceType: "A",
+          startTime: 2100,
+          duration: 120
+        },
+        {
+          recurringDay: "sun",
+          recurrenceType: "A",
+          startTime: 2100,
+          duration: 120
+        }
+      ]
     }
   },
   {
     thing: {
-      taxonomy: {type: 'food', subtypes: ['dumpster']},
+      taxonomy: { type: "food", subtypes: ["dumpster"] },
       description: {
-        headline: ' Associated Supermarket',
-        summary: ' Loads of black bags of fruit and vegetables There’s also generally 1 very heavy bag of raw meat that’s been taken out of the packages. The managers are generally friendly but customers sometimes complain, so try to come after dark and be fairly discreet.'
+        headline: " Associated Supermarket",
+        summary:
+          " Loads of black bags of fruit and vegetables There’s also generally 1 very heavy bag of raw meat that’s been taken out of the packages. The managers are generally friendly but customers sometimes complain, so try to come after dark and be fairly discreet."
       }
     },
     place: {
-      coordinates : {
+      coordinates: {
         lat: 40.6253213,
         lng: -73.9618105
       },
-      address: '1413 Avenue J Brooklyn, NY 11230'
+      address: "1413 Avenue J Brooklyn, NY 11230"
     },
-    time : {
-      schedules : [{recurringDay: 'all', recurrenceType: 'A', startTime: 1900,duration: 120}],
-      notes:'As early as 7pm, but later means less hassle.'
+    time: {
+      schedules: [
+        {
+          recurringDay: "all",
+          recurrenceType: "A",
+          startTime: 1900,
+          duration: 120
+        }
+      ],
+      notes: "As early as 7pm, but later means less hassle."
     }
   },
   {
     thing: {
-      taxonomy: {type: 'food', subtypes: ['dumpster']},
+      taxonomy: { type: "food", subtypes: ["dumpster"] },
       description: {
-        headline: 'New Banana King',
-        summary: 'As late at night as you can stand, on E 12th Street, big black plastic bags. This store stays open very late and some of the managers will diligently shoo you away. They throw out huge quantities of produce, seemingly entire cases of stuff not up to their standard. My partner and I have made gallons of cider from a single night’s pickup of apples and pears, for instance. Other typical mass dumps include bananas and tomatoes. Be prepared to can, dry, freeze or ferment. '
+        headline: "New Banana King",
+        summary:
+          "As late at night as you can stand, on E 12th Street, big black plastic bags. This store stays open very late and some of the managers will diligently shoo you away. They throw out huge quantities of produce, seemingly entire cases of stuff not up to their standard. My partner and I have made gallons of cider from a single night’s pickup of apples and pears, for instance. Other typical mass dumps include bananas and tomatoes. Be prepared to can, dry, freeze or ferment. "
       }
     },
     place: {
-      coordinates : {
+      coordinates: {
         lat: 40.625042,
         lng: -73.964342
       },
-      address: '1123 Avenue J Brooklyn, NY 11230'
+      address: "1123 Avenue J Brooklyn, NY 11230"
     },
-    time : {
-      schedules : [{recurringDay: 'all', recurrenceType: 'A', startTime: 2300,duration: 120}]
+    time: {
+      schedules: [
+        {
+          recurringDay: "all",
+          recurrenceType: "A",
+          startTime: 2300,
+          duration: 120
+        }
+      ]
     }
   },
   {
     thing: {
-      taxonomy: {type: 'food', subtypes: ['dumpster']},
+      taxonomy: { type: "food", subtypes: ["dumpster"] },
       description: {
-        headline: 'Isaac\'s Bake Shop',
-        summary: 'Bags on the street of bread and pastries, particularly on Friday evening. '
+        headline: "Isaac's Bake Shop",
+        summary:
+          "Bags on the street of bread and pastries, particularly on Friday evening. "
       }
     },
     place: {
-      coordinates : {
+      coordinates: {
         lat: 40.62539,
         lng: -73.961645
       },
-      address: '1419 Avenue J Brooklyn, NY 11230'
+      address: "1419 Avenue J Brooklyn, NY 11230"
     },
-    time : {
-      schedules : [{recurringDay: 'fri', recurrenceType: 'A', startTime: 2100,duration: 120}]
+    time: {
+      schedules: [
+        {
+          recurringDay: "fri",
+          recurrenceType: "A",
+          startTime: 2100,
+          duration: 120
+        }
+      ]
     }
   }
   /*

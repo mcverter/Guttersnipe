@@ -1,17 +1,17 @@
-const {Client} = require('pg');
+const { Client } = require("pg");
 
 const defaultClient = new Client({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'guttersnipeTest',
-  password: 'postgres',
-  port: 5432,
+  user: "postgres",
+  host: "localhost",
+  database: "guttersnipeTest",
+  password: "postgres",
+  port: 5432
 });
 
 const categoriesToSubcategories = {
-  'food': ['dumpster', 'food not bombs', 'free meal', 'food pantry'],
-  'medical': ['needle exchange', 'free clinic (western)'],
-  'shelter': ['squat', 'abandoned building', 'infoshop']
+  food: ["dumpster", "food not bombs", "free meal", "food pantry"],
+  medical: ["needle exchange", "free clinic (western)"],
+  shelter: ["squat", "abandoned building", "infoshop"]
 };
 
 class CategorySeeder {
@@ -33,7 +33,7 @@ class CategorySeeder {
            subcat := '${subcategory}'
           );`;
         this.client.query(insertCategoryQuery);
-      })
+      });
     }
   }
 }

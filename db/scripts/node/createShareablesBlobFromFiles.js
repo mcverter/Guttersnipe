@@ -1,87 +1,93 @@
-const fs = require('fs');
-const rl = require('readline');
-const Promise = require('bluebird');
-const NodeGeocoder = require('node-geocoder');
+const fs = require("fs");
+const rl = require("readline");
+const Promise = require("bluebird");
+const NodeGeocoder = require("node-geocoder");
 
-var options = {
-  provider: 'google',
+let options = {
+  provider: "google",
 
   // Optional depending on the providers
-  httpAdapter: 'https', // Default
-  apiKey: 'AIzaSyDh9h2rdiMnuvj3k5Ok82QsXufA5HuTkjs', // for Mapquest, OpenCage, Google Premier
-  formatter: null         // 'gpx', 'string', ...
+  httpAdapter: "https", // Default
+  apiKey: "AIzaSyDh9h2rdiMnuvj3k5Ok82QsXufA5HuTkjs", // for Mapquest, OpenCage, Google Premier
+  formatter: null // "gpx", "string", ...
 };
 
 const geocoder = NodeGeocoder(options);
 
-/*const geocoder = require('@google/maps').createClient({
-  key: 'AIzaSyDh9h2rdiMnuvj3k5Ok82QsXufA5HuTkjs'
+/*const geocoder = require("@google/maps").createClient({
+  key: "AIzaSyDh9h2rdiMnuvj3k5Ok82QsXufA5HuTkjs"
 });
 */
 // list files in text/ready directory
-const std = __dirname + '/../../data/txt/ready/spaces.txt';
+const std = __dirname + "/../../data/txt/ready/spaces.txt";
 
-Promise.all([
-  processSubcategoryFile(std, 'spaces'),
-])
-  .then(results=>{
-    const allShareables = results.reduce((acc, curr)=>acc.concat(curr.slice(1)), []);
+Promise.all([processSubcategoryFile(std, "spaces")])
+  .then(results => {
+    const allShareables = results.reduce(
+      (acc, curr) => acc.concat(curr.slice(1)),
+      []
+    );
     return allShareables;
   })
-  .then(shareables =>{
-      let allShareablesWithGeocode = []
-      //console.log(shareables);
-      function findGeocodes() {
-        if (shareables.length === 0) {
-          // console.log(allShareablesWithGeocode);
-          fs.writeFileSync(__dirname + '/geocodedSpaces.json', JSON.stringify(allShareablesWithGeocode, null, 2), 'utf-8');
-          return allShareablesWithGeocode;
+  .then(shareables => {
+    let allShareablesWithGeocode = [];
+    //console.log(shareables);
+    function findGeocodes() {
+      if (shareables.length === 0) {
+        // console.log(allShareablesWithGeocode);
+        fs.writeFileSync(
+          __dirname + "/geocodedSpaces.json",
+          JSON.stringify(allShareablesWithGeocode, null, 2),
+          "utf-8"
+        );
+        return allShareablesWithGeocode;
+      } else {
+        const shareable = shareables.shift();
+        let timeoutDuration;
+        if (shareables.length % 50 === 0) {
+          timeoutDuration = 60000;
+        } else if (shareables.length % 7 === 0) {
+          timeoutDuration = 10000;
+        } else {
+          timeoutDuration = 2000;
         }
-        else {
-          const shareable = shareables.shift();
-          let timeoutDuration;
-          if (shareables.length % 50 === 0) {
-            timeoutDuration = 60000
-          }
-          else if (shareables.length % 7 === 0) {
-            timeoutDuration = 10000
-          } else {
-            timeoutDuration = 2000
-          }
-          if (shareable.longitude && shareable.longitude) {
-            allShareablesWithGeocode.push(shareable);
-            return findGeocodes()
-          }
-          else {
-            setTimeout(function () {
-              geocoder.geocode(`${shareable.name}, ${shareable.address}`)
-                .then(result => {
-                  const resultAddress = result[0].formattedAddress;
-                  const latitude = result[0].latitude;
-                  const longitude = result[0].longitude;
-                  allShareablesWithGeocode.push({...shareable, address: resultAddress, longitude, latitude});
-                  console.log('shareables remaining', shareables.length);
-                  return findGeocodes();
-                })
-                .catch(error => {
-                  console.error('error', error, 'shareable', shareable);
-                  return findGeocodes();
-                })
-
-            }, timeoutDuration)
-          }
+        if (shareable.longitude && shareable.longitude) {
+          allShareablesWithGeocode.push(shareable);
+          return findGeocodes();
+        } else {
+          setTimeout(function() {
+            geocoder
+              .geocode(`${shareable.name}, ${shareable.address}`)
+              .then(result => {
+                const resultAddress = result[0].formattedAddress;
+                const latitude = result[0].latitude;
+                const longitude = result[0].longitude;
+                allShareablesWithGeocode.push({
+                  ...shareable,
+                  address: resultAddress,
+                  longitude,
+                  latitude
+                });
+                console.log("shareables remaining", shareables.length);
+                return findGeocodes();
+              })
+              .catch(error => {
+                console.error("error", error, "shareable", shareable);
+                return findGeocodes();
+              });
+          }, timeoutDuration);
         }
       }
-      return findGeocodes();
     }
-  )
+    return findGeocodes();
+  });
 
 function getKVFromLine(line) {
   function cleanKey(key) {
-    return key.toLowerCase().replace(/:/g, '')
+    return key.toLowerCase().replace(/:/g, "");
   }
 
-  const regExp = /^\s*(.*?:+)\s*(.*)\s*/
+  const regExp = /^\s*(.*?:+)\s*(.*)\s*/;
   const kvPair = line.match(regExp);
   if (!kvPair) {
     console.warn("ERROR no match for line", line);
@@ -89,33 +95,32 @@ function getKVFromLine(line) {
   return {
     key: cleanKey(kvPair[1]),
     value: kvPair[2]
-  }
+  };
 }
 
 function processSubcategoryFile(filepath, subcategory) {
-  return new Promise(function (resolve) {
+  return new Promise(function(resolve) {
     let subcategoryShareables = [];
 
     const subcategoryLineInterface = rl.createInterface({
       input: fs.createReadStream(filepath)
-    })
+    });
     let shareable = new Object();
     let kv;
 
-    subcategoryLineInterface.on('line', function (line) {
+    subcategoryLineInterface.on("line", function(line) {
       // if blank line, skip regex
       if (line.match(/\w/)) {
-
         //   end old Shareable Record && start new Shareable Record
-        if (line.startsWith('Name')) {
+        if (line.startsWith("Name")) {
           subcategoryShareables.push(shareable);
           shareable = new Object();
-//          shareable['subcategory'] = subcategory;
-          shareable['name'] = getKVFromLine(line).value;
+          //          shareable["subcategory"] = subcategory;
+          shareable["name"] = getKVFromLine(line).value;
         }
 
-        // if Key === 'Comment', add to comments array
-        else if (line.startsWith('Comment')) {
+        // if Key === "Comment", add to comments array
+        else if (line.startsWith("Comment")) {
           if (!shareable.comments) {
             shareable.comments = new Array();
           }
@@ -130,14 +135,13 @@ function processSubcategoryFile(filepath, subcategory) {
       }
       resolve(subcategoryShareables);
     });
-  })
+  });
 }
-
 
 /*
 // Geocode an address.
 googleMapsClient.geocode({
-  address: '1600 Amphitheatre Parkway, Mountain View, CA'
+  address: "1600 Amphitheatre Parkway, Mountain View, CA"
 }, function(err, response) {
   if (!err) {
     console.log(response.json.results);
@@ -145,7 +149,7 @@ googleMapsClient.geocode({
 });
  */
 /*
-(06:28:08 PM) The topic for ##javascript is: JavaScript is *not* Java. | Just ask your question. | Say "!mdn abc" for docs on "abc". | Don't paste code in the channel.
+(06:28:08 PM) The topic for ##javascript is: JavaScript is *not* Java. | Just ask your question. | Say "!mdn abc" for docs on "abc". | Don"t paste code in the channel.
 (06:28:08 PM) Topic for ##javascript set by Maxdamantus at 03:32:03 AM on 05/05/2018
 (06:28:19 PM) jhaenchen: mk
 (06:28:45 PM) nomic left the room (quit: Quit: Leaving).
@@ -162,7 +166,7 @@ googleMapsClient.geocode({
 (06:33:16 PM) progysm: roadrunneratwast, if you enter the geocode(..) callback, you need to call the resolve()
 (06:33:35 PM) roadrunneratwast: call the resolve from within the callback?
 (06:33:50 PM) roadrunneratwast: call the Promise resolve() from the geocoder callback?
-(06:34:15 PM) progysm: that's where you have access to the data
+(06:34:15 PM) progysm: that"s where you have access to the data
 (06:34:24 PM) roadrunneratwast: yes
 (06:35:14 PM) Sharaal left the room (quit: Ping timeout: 256 seconds).
 (06:35:26 PM) Shogil left the room (quit: Quit: Leaving).

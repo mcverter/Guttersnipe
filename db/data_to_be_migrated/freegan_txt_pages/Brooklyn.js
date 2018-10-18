@@ -1,306 +1,640 @@
-var Brooklyn = [
-
-//Perelandra
+let Brooklyn = [
+  //Perelandra
   {
-    thing : {
-      headline: 'Perelandra',
-      description: ' Lots of locals count on finding greens and produce in particular. Fewer go thru the bags, which contain health bread, and often assorted packaged health foods, and small amounts of bulk foods (grains, beans, nuts, coffee) that can be gleaned from the not-quite-emptied heavy brown bags.'
+    thing: {
+      headline: "Perelandra",
+      description:
+        " Lots of locals count on finding greens and produce in particular. Fewer go thru the bags, which contain health bread, and often assorted packaged health foods, and small amounts of bulk foods (grains, beans, nuts, coffee) that can be gleaned from the not-quite-emptied heavy brown bags."
     },
     place: {
-      coordinates : {
+      coordinates: {
         lat: 40.693483,
         lng: -73.991377
       },
-      address: '175 Remsen St    Brooklyn, NY 11201',
-      notes: 'Remsen St across from Borough Hall, between Court and Clinton Sts, Brooklyn'
+      address: "175 Remsen St    Brooklyn, NY 11201",
+      notes:
+        "Remsen St across from Borough Hall, between Court and Clinton Sts, Brooklyn"
     },
-    time : {
-      schedules : [{day: 'Monday, March 2', recurrence: 'Every', start: 2045,duration: 120},
-        {day: 'Tuesday, March 3', recurrence: 'Every', start: 2045,duration: 120},
-        {day: 'Wednesday, March 4', recurrence: 'Every', start: 2045,duration: 120},
-        {day: 'Thursday, March 5', recurrence: 'Every', start: 2045,duration: 120},
-        {day: 'Friday, March 6', recurrence: 'Every', start: 2045,duration: 120},
-        {day: 'Sunday, March 8', recurrence: 'Every', start: 2045,duration: 120}],
-      notes:'8:45 when all the employees leave the store. Trash is collected between 10:30 p and 12:30a. One source says nothing is out on Saturdays.'
+    time: {
+      schedules: [
+        {
+          day: "Monday, March 2",
+          recurrence: "Every",
+          start: 2045,
+          duration: 120
+        },
+        {
+          day: "Tuesday, March 3",
+          recurrence: "Every",
+          start: 2045,
+          duration: 120
+        },
+        {
+          day: "Wednesday, March 4",
+          recurrence: "Every",
+          start: 2045,
+          duration: 120
+        },
+        {
+          day: "Thursday, March 5",
+          recurrence: "Every",
+          start: 2045,
+          duration: 120
+        },
+        {
+          day: "Friday, March 6",
+          recurrence: "Every",
+          start: 2045,
+          duration: 120
+        },
+        {
+          day: "Sunday, March 8",
+          recurrence: "Every",
+          start: 2045,
+          duration: 120
+        }
+      ],
+      notes:
+        "8:45 when all the employees leave the store. Trash is collected between 10:30 p and 12:30a. One source says nothing is out on Saturdays."
     },
-    method: 'Regular curbside bags, plus cardboard boxes set to the side with most of the produce (what foragers don’t take gets composted).'
+    method:
+      "Regular curbside bags, plus cardboard boxes set to the side with most of the produce (what foragers don’t take gets composted)."
   },
   {
-    thing : {
-      headline: 'Trader Joe\'s',
-      description: ' Dumpster divers from all 4 boroughs have been known to make the trip. On some nights TJs puts out upwards of 6 dumpsters, at least half of which are filled top to bottom with quality food. Sometimes the scene gets weirdly competitive, with dumpster divers seeming to forget that the area is packed with other wasteful stores.Lots of locals count on finding greens and produce in particular. Fewer go thru the bags, which contain health bread, and often assorted packaged health foods, and small amounts of bulk foods (grains, beans, nuts, coffee) that can be gleaned from the not-quite-emptied heavy brown bags.'
+    thing: {
+      headline: "Trader Joe's",
+      description:
+        " Dumpster divers from all 4 boroughs have been known to make the trip. On some nights TJs puts out upwards of 6 dumpsters, at least half of which are filled top to bottom with quality food. Sometimes the scene gets weirdly competitive, with dumpster divers seeming to forget that the area is packed with other wasteful stores.Lots of locals count on finding greens and produce in particular. Fewer go thru the bags, which contain health bread, and often assorted packaged health foods, and small amounts of bulk foods (grains, beans, nuts, coffee) that can be gleaned from the not-quite-emptied heavy brown bags."
     },
     place: {
-      coordinates : {
+      coordinates: {
         lat: 40.689613,
         lng: -73.99243
       },
-      address: '  130 Court St  Brooklyn, NY 11201',
-      notes: 'On the south side of Atlantic Avenue near Court St in big dumpsters.'
+      address: "  130 Court St  Brooklyn, NY 11201",
+      notes:
+        "On the south side of Atlantic Avenue near Court St in big dumpsters."
     },
-    time : {schedule: [{day: 'Monday, March 2', recurrence: 'Every', start: 2400,duration: 120},
-      {day: 'Tuesday, March 3', recurrence: 'Every', start: 2400,duration: 120},
-      {day: 'Wednesday, March 4', recurrence: 'Every', start: 2400,duration: 120},
-      {day: 'Thursday, March 5', recurrence: 'Every', start: 2400,duration: 120},
-      {day: 'Friday, March 6', recurrence: 'Every', start: 2400,duration: 120},
-      {day: 'Saturday, March 7', recurrence: 'Every', start: 2400,duration: 120},
-      {day: 'Sunday, March 8', recurrence: 'Every', start: 2400,duration: 120}],
-      notes: 'time. *When:* Lately (fall 2012), usually not until about midnight; sometimes earlier.'
+    time: {
+      schedule: [
+        {
+          day: "Monday, March 2",
+          recurrence: "Every",
+          start: 2400,
+          duration: 120
+        },
+        {
+          day: "Tuesday, March 3",
+          recurrence: "Every",
+          start: 2400,
+          duration: 120
+        },
+        {
+          day: "Wednesday, March 4",
+          recurrence: "Every",
+          start: 2400,
+          duration: 120
+        },
+        {
+          day: "Thursday, March 5",
+          recurrence: "Every",
+          start: 2400,
+          duration: 120
+        },
+        {
+          day: "Friday, March 6",
+          recurrence: "Every",
+          start: 2400,
+          duration: 120
+        },
+        {
+          day: "Saturday, March 7",
+          recurrence: "Every",
+          start: 2400,
+          duration: 120
+        },
+        {
+          day: "Sunday, March 8",
+          recurrence: "Every",
+          start: 2400,
+          duration: 120
+        }
+      ],
+      notes:
+        "time. *When:* Lately (fall 2012), usually not until about midnight; sometimes earlier."
     },
 
-    method: 'On the south side of Atlantic Avenue near Court St in big dumpsters.',
-    notes: 'Be forewarned, the initial reaction of this store’s management was to have the police ticket dumpster divers for trespass or littering'
+    method:
+      "On the south side of Atlantic Avenue near Court St in big dumpsters.",
+    notes:
+      "Be forewarned, the initial reaction of this store’s management was to have the police ticket dumpster divers for trespass or littering"
   },
   {
-    thing : {
-      headline: '  La Bagel Delight',
-      description: 'Plenty of fresh, soft and delicious bagels of all varieties. Some sweets like scones and croissants, and a few sandwiches too. '
+    thing: {
+      headline: "  La Bagel Delight",
+      description:
+        "Plenty of fresh, soft and delicious bagels of all varieties. Some sweets like scones and croissants, and a few sandwiches too. "
     },
     place: {
-      coordinates : {
+      coordinates: {
         lat: 40.702392,
         lng: -73.98872
       },
-      address: '  104 Front St  Brooklyn, NY 11201',
-      notes: 'Large black bags out front.'
+      address: "  104 Front St  Brooklyn, NY 11201",
+      notes: "Large black bags out front."
     },
-    time : {
-      time : {
-        schedules : [{day: 'Monday, March 2', recurrence: 'Every', start: 2200,duration: 120},
-          {day: 'Tuesday, March 3', recurrence: 'Every', start: 2200,duration: 120},
-          {day: 'Wednesday, March 4', recurrence: 'Every', start: 2200,duration: 120},
-          {day: 'Thursday, March 5', recurrence: 'Every', start: 2200,duration: 120},
-          {day: 'Friday, March 6', recurrence: 'Every', start: 2200,duration: 120},
-          {day: 'Sunday, March 8', recurrence: 'Every', start: 2200,duration: 120}],
-        notes:''
+    time: {
+      time: {
+        schedules: [
+          {
+            day: "Monday, March 2",
+            recurrence: "Every",
+            start: 2200,
+            duration: 120
+          },
+          {
+            day: "Tuesday, March 3",
+            recurrence: "Every",
+            start: 2200,
+            duration: 120
+          },
+          {
+            day: "Wednesday, March 4",
+            recurrence: "Every",
+            start: 2200,
+            duration: 120
+          },
+          {
+            day: "Thursday, March 5",
+            recurrence: "Every",
+            start: 2200,
+            duration: 120
+          },
+          {
+            day: "Friday, March 6",
+            recurrence: "Every",
+            start: 2200,
+            duration: 120
+          },
+          {
+            day: "Sunday, March 8",
+            recurrence: "Every",
+            start: 2200,
+            duration: 120
+          }
+        ],
+        notes: ""
       }
-
     },
-    method: '',
-    notes: ''
+    method: "",
+    notes: ""
   },
   {
-    thing : {
-      headline: 'Garden of Eden Gourmet',
-      description: 'Messy and hit-or-miss, but can yield a surprising amount of fresh vegetables,  prepared foods, yogurts and so forth. The “compost” bins are well worth digging down a ways, as they’ve yielded lots of whole fruit and veg.'
+    thing: {
+      headline: "Garden of Eden Gourmet",
+      description:
+        "Messy and hit-or-miss, but can yield a surprising amount of fresh vegetables,  prepared foods, yogurts and so forth. The “compost” bins are well worth digging down a ways, as they’ve yielded lots of whole fruit and veg."
     },
     place: {
-      coordinates : {
+      coordinates: {
         lat: 40.693922,
         lng: -73.991764
       },
-      address: '180 Montague St #1 Brooklyn, NY 11201 ',
-      notes: ''
+      address: "180 Montague St #1 Brooklyn, NY 11201 ",
+      notes: ""
     },
-    time : {
-      schedules : [{day: 'Monday, March 2', recurrence: 'Every', start: 2200,duration: 120},
-        {day: 'Tuesday, March 3', recurrence: 'Every', start: 2200,duration: 120},
-        {day: 'Wednesday, March 4', recurrence: 'Every', start: 2200,duration: 120},
-        {day: 'Thursday, March 5', recurrence: 'Every', start: 2200,duration: 120},
-        {day: 'Friday, March 6', recurrence: 'Every', start: 2200,duration: 120},
-        {day: 'Sunday, March 8', recurrence: 'Every', start: 2200,duration: 120}],
-      notes:''
+    time: {
+      schedules: [
+        {
+          day: "Monday, March 2",
+          recurrence: "Every",
+          start: 2200,
+          duration: 120
+        },
+        {
+          day: "Tuesday, March 3",
+          recurrence: "Every",
+          start: 2200,
+          duration: 120
+        },
+        {
+          day: "Wednesday, March 4",
+          recurrence: "Every",
+          start: 2200,
+          duration: 120
+        },
+        {
+          day: "Thursday, March 5",
+          recurrence: "Every",
+          start: 2200,
+          duration: 120
+        },
+        {
+          day: "Friday, March 6",
+          recurrence: "Every",
+          start: 2200,
+          duration: 120
+        },
+        {
+          day: "Sunday, March 8",
+          recurrence: "Every",
+          start: 2200,
+          duration: 120
+        }
+      ],
+      notes: ""
     },
-    method: 'Three dumpsters on the curb plus “compost” mini dumpsters.',
-    notes: ''
+    method: "Three dumpsters on the curb plus “compost” mini dumpsters.",
+    notes: ""
   },
   {
-    thing : {
-      headline: 'Gristedes',
-      description: 'Routinely hit or miss, but the hits can be great: dozens of eggs, bags of chocolate chips, cheese. '
+    thing: {
+      headline: "Gristedes",
+      description:
+        "Routinely hit or miss, but the hits can be great: dozens of eggs, bags of chocolate chips, cheese. "
     },
     place: {
-      coordinates : {
+      coordinates: {
         lat: 40.6975689,
         lng: -73.9926592
       },
-      address: '101 Clark St Brooklyn, NY 11201',
-      notes: ''
+      address: "101 Clark St Brooklyn, NY 11201",
+      notes: ""
     },
-    time : {
-      schedules : [{day: 'Monday, March 2', recurrence: 'Every', start: 2130,duration: 120},
-        {day: 'Tuesday, March 3', recurrence: 'Every', start: 2130,duration: 120},
-        {day: 'Wednesday, March 4', recurrence: 'Every', start: 2130,duration: 120},
-        {day: 'Thursday, March 5', recurrence: 'Every', start: 2130,duration: 120},
-        {day: 'Friday, March 6', recurrence: 'Every', start: 2130,duration: 120},
-        {day: 'Saturday, March 7', recurrence: 'Every', start: 2130,duration: 120},
-        {day: 'Sunday, March 8', recurrence: 'Every', start: 2130,duration: 120}],
-      notes:'After 9:30p'
+    time: {
+      schedules: [
+        {
+          day: "Monday, March 2",
+          recurrence: "Every",
+          start: 2130,
+          duration: 120
+        },
+        {
+          day: "Tuesday, March 3",
+          recurrence: "Every",
+          start: 2130,
+          duration: 120
+        },
+        {
+          day: "Wednesday, March 4",
+          recurrence: "Every",
+          start: 2130,
+          duration: 120
+        },
+        {
+          day: "Thursday, March 5",
+          recurrence: "Every",
+          start: 2130,
+          duration: 120
+        },
+        {
+          day: "Friday, March 6",
+          recurrence: "Every",
+          start: 2130,
+          duration: 120
+        },
+        {
+          day: "Saturday, March 7",
+          recurrence: "Every",
+          start: 2130,
+          duration: 120
+        },
+        {
+          day: "Sunday, March 8",
+          recurrence: "Every",
+          start: 2130,
+          duration: 120
+        }
+      ],
+      notes: "After 9:30p"
     },
-    method: '',
-    notes: 'Clear garbage bags out front.'
+    method: "",
+    notes: "Clear garbage bags out front."
   },
   {
-    thing : {
-      headline: 'Caputo\'s Bakery',
-      description: 'Italian Bakery.  Excellent bread and cookies. Baker is on site all night long; move fast. Also, vegetarians beware the sausage bread. '
+    thing: {
+      headline: "Caputo's Bakery",
+      description:
+        "Italian Bakery.  Excellent bread and cookies. Baker is on site all night long; move fast. Also, vegetarians beware the sausage bread. "
     },
     place: {
-      coordinates : {
+      coordinates: {
         lat: 40.682846,
         lng: -73.99549
       },
-      address: '329 Court St Brooklyn, NY 11231',
-      notes: 'Four garbage cans.'
+      address: "329 Court St Brooklyn, NY 11231",
+      notes: "Four garbage cans."
     },
-    time : {
-      schedules : [{day: 'Monday, March 2', recurrence: 'Every', start: 2200,duration: 120},
-        {day: 'Tuesday, March 3', recurrence: 'Every', start: 2200,duration: 120},
-        {day: 'Wednesday, March 4', recurrence: 'Every', start: 2200,duration: 120},
-        {day: 'Thursday, March 5', recurrence: 'Every', start: 2200,duration: 120},
-        {day: 'Friday, March 6', recurrence: 'Every', start: 2200,duration: 120},
-        {day: 'Sunday, March 8', recurrence: 'Every', start: 2200,duration: 120}],
-      notes:''
+    time: {
+      schedules: [
+        {
+          day: "Monday, March 2",
+          recurrence: "Every",
+          start: 2200,
+          duration: 120
+        },
+        {
+          day: "Tuesday, March 3",
+          recurrence: "Every",
+          start: 2200,
+          duration: 120
+        },
+        {
+          day: "Wednesday, March 4",
+          recurrence: "Every",
+          start: 2200,
+          duration: 120
+        },
+        {
+          day: "Thursday, March 5",
+          recurrence: "Every",
+          start: 2200,
+          duration: 120
+        },
+        {
+          day: "Friday, March 6",
+          recurrence: "Every",
+          start: 2200,
+          duration: 120
+        },
+        {
+          day: "Sunday, March 8",
+          recurrence: "Every",
+          start: 2200,
+          duration: 120
+        }
+      ],
+      notes: ""
     },
-    method: '',
-    notes: ''
+    method: "",
+    notes: ""
   },
   {
-    thing : {
-      headline: 'Union Market',
-      description: 'For those on bicycle or who don’t mind a little walk, this is a great alternative to the Trader Joe’s at Atlantic and Court. It’s a high-end supermarket mini-chain that is just far enough from other stores that it gets few dumpster divers. Finds have included loads of packaged and unpackaged bread, produce, dairy products, quarts of prepared soup (generally not vegetarian), fancy desserts, fancy fresh pasta. '
+    thing: {
+      headline: "Union Market",
+      description:
+        "For those on bicycle or who don’t mind a little walk, this is a great alternative to the Trader Joe’s at Atlantic and Court. It’s a high-end supermarket mini-chain that is just far enough from other stores that it gets few dumpster divers. Finds have included loads of packaged and unpackaged bread, produce, dairy products, quarts of prepared soup (generally not vegetarian), fancy desserts, fancy fresh pasta. "
     },
     place: {
-      coordinates : {
+      coordinates: {
         lat: 40.684389,
         lng: -73.995308
       },
-      address: '288 Court St Brooklyn, NY 11231',
-      notes: 'Black plastic garbage bags on the curb.'
+      address: "288 Court St Brooklyn, NY 11231",
+      notes: "Black plastic garbage bags on the curb."
     },
-    time : {
-      schedules : [{day: 'Monday, March 2', recurrence: 'Every', start: 2100,duration: 120},
-        {day: 'Tuesday, March 3', recurrence: 'Every', start: 2100,duration: 120},
-        {day: 'Wednesday, March 4', recurrence: 'Every', start: 2100,duration: 120},
-        {day: 'Thursday, March 5', recurrence: 'Every', start: 2100,duration: 120},
-        {day: 'Friday, March 6', recurrence: 'Every', start: 2100,duration: 120},
-        {day: 'Sunday, March 8', recurrence: 'Every', start: 2100,duration: 120}],
-      notes:''
+    time: {
+      schedules: [
+        {
+          day: "Monday, March 2",
+          recurrence: "Every",
+          start: 2100,
+          duration: 120
+        },
+        {
+          day: "Tuesday, March 3",
+          recurrence: "Every",
+          start: 2100,
+          duration: 120
+        },
+        {
+          day: "Wednesday, March 4",
+          recurrence: "Every",
+          start: 2100,
+          duration: 120
+        },
+        {
+          day: "Thursday, March 5",
+          recurrence: "Every",
+          start: 2100,
+          duration: 120
+        },
+        {
+          day: "Friday, March 6",
+          recurrence: "Every",
+          start: 2100,
+          duration: 120
+        },
+        {
+          day: "Sunday, March 8",
+          recurrence: "Every",
+          start: 2100,
+          duration: 120
+        }
+      ],
+      notes: ""
     },
-    method: '',
-    notes: ''
+    method: "",
+    notes: ""
   },
   {
-    thing : {
-      headline: ' Associated Supermarket',
-      description: ' Loads of black bags of fruit and vegetables There’s also generally 1 very heavy bag of raw meat that’s been taken out of the packages. The managers are generally friendly but customers sometimes complain, so try to come after dark and be fairly discreet.'
+    thing: {
+      headline: " Associated Supermarket",
+      description:
+        " Loads of black bags of fruit and vegetables There’s also generally 1 very heavy bag of raw meat that’s been taken out of the packages. The managers are generally friendly but customers sometimes complain, so try to come after dark and be fairly discreet."
     },
     place: {
-      coordinates : {
+      coordinates: {
         lat: 40.6253213,
         lng: -73.9618105
       },
-      address: '1413 Avenue J Brooklyn, NY 11230',
-      notes: ''
+      address: "1413 Avenue J Brooklyn, NY 11230",
+      notes: ""
     },
-    time : {
-      schedules : [{day: 'Monday, March 2', recurrence: 'Every', start: 1900,duration: 120},
-        {day: 'Tuesday, March 3', recurrence: 'Every', start: 1900,duration: 120},
-        {day: 'Wednesday, March 4', recurrence: 'Every', start: 1900,duration: 120},
-        {day: 'Thursday, March 5', recurrence: 'Every', start: 1900,duration: 120},
-        {day: 'Friday, March 6', recurrence: 'Every', start: 1900,duration: 120},
-        {day: 'Saturday, March 7', recurrence: 'Every', start: 1900,duration: 120},
-        {day: 'Sunday, March 8', recurrence: 'Every', start: 1900,duration: 120}],
-      notes:'As early as 7pm, but later means less hassle.'
+    time: {
+      schedules: [
+        {
+          day: "Monday, March 2",
+          recurrence: "Every",
+          start: 1900,
+          duration: 120
+        },
+        {
+          day: "Tuesday, March 3",
+          recurrence: "Every",
+          start: 1900,
+          duration: 120
+        },
+        {
+          day: "Wednesday, March 4",
+          recurrence: "Every",
+          start: 1900,
+          duration: 120
+        },
+        {
+          day: "Thursday, March 5",
+          recurrence: "Every",
+          start: 1900,
+          duration: 120
+        },
+        {
+          day: "Friday, March 6",
+          recurrence: "Every",
+          start: 1900,
+          duration: 120
+        },
+        {
+          day: "Saturday, March 7",
+          recurrence: "Every",
+          start: 1900,
+          duration: 120
+        },
+        {
+          day: "Sunday, March 8",
+          recurrence: "Every",
+          start: 1900,
+          duration: 120
+        }
+      ],
+      notes: "As early as 7pm, but later means less hassle."
     },
-    method: '',
-    notes: ''
+    method: "",
+    notes: ""
   },
 
   {
-    thing : {
-      headline: 'New Banana King',
-      description: 'As late at night as you can stand, on E 12th Street, big black plastic bags. This store stays open very late and some of the managers will diligently shoo you away. They throw out huge quantities of produce, seemingly entire cases of stuff not up to their standard. My partner and I have made gallons of cider from a single night’s pickup of apples and pears, for instance. Other typical mass dumps include bananas and tomatoes. Be prepared to can, dry, freeze or ferment. '
+    thing: {
+      headline: "New Banana King",
+      description:
+        "As late at night as you can stand, on E 12th Street, big black plastic bags. This store stays open very late and some of the managers will diligently shoo you away. They throw out huge quantities of produce, seemingly entire cases of stuff not up to their standard. My partner and I have made gallons of cider from a single night’s pickup of apples and pears, for instance. Other typical mass dumps include bananas and tomatoes. Be prepared to can, dry, freeze or ferment. "
     },
     place: {
-      coordinates : {
+      coordinates: {
         lat: 40.625042,
         lng: -73.964342
       },
-      address: '1123 Avenue J Brooklyn, NY 11230',
-      notes: ''
+      address: "1123 Avenue J Brooklyn, NY 11230",
+      notes: ""
     },
-    time : {
-      schedules : [{day: 'Monday, March 2', recurrence: 'Every', start: 2300,duration: 120},
-        {day: 'Tuesday, March 3', recurrence: 'Every', start: 2300,duration: 120},
-        {day: 'Wednesday, March 4', recurrence: 'Every', start: 2300,duration: 120},
-        {day: 'Thursday, March 5', recurrence: 'Every', start: 2300,duration: 120},
-        {day: 'Friday, March 6', recurrence: 'Every', start: 2300,duration: 120},
-        {day: 'Saturday, March 7', recurrence: 'Every', start: 2300,duration: 120},
-        {day: 'Sunday, March 8', recurrence: 'Every', start: 2300,duration: 120}],
-      notes:''
+    time: {
+      schedules: [
+        {
+          day: "Monday, March 2",
+          recurrence: "Every",
+          start: 2300,
+          duration: 120
+        },
+        {
+          day: "Tuesday, March 3",
+          recurrence: "Every",
+          start: 2300,
+          duration: 120
+        },
+        {
+          day: "Wednesday, March 4",
+          recurrence: "Every",
+          start: 2300,
+          duration: 120
+        },
+        {
+          day: "Thursday, March 5",
+          recurrence: "Every",
+          start: 2300,
+          duration: 120
+        },
+        {
+          day: "Friday, March 6",
+          recurrence: "Every",
+          start: 2300,
+          duration: 120
+        },
+        {
+          day: "Saturday, March 7",
+          recurrence: "Every",
+          start: 2300,
+          duration: 120
+        },
+        {
+          day: "Sunday, March 8",
+          recurrence: "Every",
+          start: 2300,
+          duration: 120
+        }
+      ],
+      notes: ""
     },
-    method: '',
-    notes: ''
+    method: "",
+    notes: ""
   },
   {
-    thing : {
-      headline: 'Isaac\'s Bake Shop',
-      description: 'Bags on the street of bread and pastries, particularly on Friday evening. '
+    thing: {
+      headline: "Isaac's Bake Shop",
+      description:
+        "Bags on the street of bread and pastries, particularly on Friday evening. "
     },
     place: {
-      coordinates : {
+      coordinates: {
         lat: 40.62539,
         lng: -73.961645
       },
-      address: '1419 Avenue J Brooklyn, NY 11230',
-      notes: ''
+      address: "1419 Avenue J Brooklyn, NY 11230",
+      notes: ""
     },
-    time : {
-      schedules : [{day: 'Friday, March 6', recurrence: 'Every', start: 2100,duration: 120}],
-      notes:''
+    time: {
+      schedules: [
+        {
+          day: "Friday, March 6",
+          recurrence: "Every",
+          start: 2100,
+          duration: 120
+        }
+      ],
+      notes: ""
     },
-    method: '',
-    notes: ''
+    method: "",
+    notes: ""
   },
 
-
-
-
   {
-    thing : {
-      headline: 'Lowell Importers',
-      description: 'Bags on the street of bread and pastries, particularly on Friday evening. '
+    thing: {
+      headline: "Lowell Importers",
+      description:
+        "Bags on the street of bread and pastries, particularly on Friday evening. "
     },
     place: {
-      coordinates : {
+      coordinates: {
         lat: 40.62539,
         lng: -73.961645
       },
-      address: '1419 Avenue J Brooklyn, NY 11230',
-      notes: ''
+      address: "1419 Avenue J Brooklyn, NY 11230",
+      notes: ""
     },
-    time : {
-      schedules : [{day: 'Friday, March 6', recurrence: 'Every', start: 2100,duration: 120}],
-      notes:''
+    time: {
+      schedules: [
+        {
+          day: "Friday, March 6",
+          recurrence: "Every",
+          start: 2100,
+          duration: 120
+        }
+      ],
+      notes: ""
     },
-    method: '',
-    notes: ''
+    method: "",
+    notes: ""
   },
 
-
-
   {
-    thing : {
-      headline: 'Garden of Eden Warehouse',
-      description: ' Messy with big clear bags of food waste. Some fresh produce, a little prepared food, and good sweet and savory bread.'
+    thing: {
+      headline: "Garden of Eden Warehouse",
+      description:
+        " Messy with big clear bags of food waste. Some fresh produce, a little prepared food, and good sweet and savory bread."
     },
     place: {
-      coordinates : {
+      coordinates: {
         lat: 40.6808716,
         lng: -73.9837334
       },
-      address: '  3rd Ave & Butler St Brooklyn, NY 11217',
-      notes: 'Three to five dumpsters.'
+      address: "  3rd Ave & Butler St Brooklyn, NY 11217",
+      notes: "Three to five dumpsters."
     },
-    time : {
+    time: {
       schedules: [],
-      notes:'Sunday-Friday 10p'
+      notes: "Sunday-Friday 10p"
     },
-    method: '',
-    notes: ''
+    method: "",
+    notes: ""
   },
-
 
   /* Union Market
    Union St & 6th Ave
@@ -353,279 +687,283 @@ var Brooklyn = [
 
    */
   {
-    thing : {
-      headline: 'Associated Supermarket',
-      description: ' Chain supermarket. modest amount of produce in good condition.'
+    thing: {
+      headline: "Associated Supermarket",
+      description:
+        " Chain supermarket. modest amount of produce in good condition."
     },
     place: {
-      coordinates : {
+      coordinates: {
         lat: 40.6757759,
         lng: -73.9808862
       },
-      address: '5th Ave & President St Brooklyn, NY 11215',
-      notes: ' On 5th Avenue, but the bags are in cardboard boxes to the north side of the store entrance.'
+      address: "5th Ave & President St Brooklyn, NY 11215",
+      notes:
+        " On 5th Avenue, but the bags are in cardboard boxes to the north side of the store entrance."
     },
-    time : {
+    time: {
       schedules: [],
-      notes:''
+      notes: ""
     },
-    method: '',
-    notes: ''
+    method: "",
+    notes: ""
   },
   {
-    thing : {
-      headline: 'Bageltique',
-      description: 'A reasonable number of bagels, but mixed with a bit of paper trash.'
+    thing: {
+      headline: "Bageltique",
+      description:
+        "A reasonable number of bagels, but mixed with a bit of paper trash."
     },
     place: {
-      coordinates : {
+      coordinates: {
         lat: 40.675511,
         lng: -73.981314
       },
-      address: '242 5th Ave #1 Brooklyn, NY 11215',
-      notes: 'Regular curbside bags'
-
+      address: "242 5th Ave #1 Brooklyn, NY 11215",
+      notes: "Regular curbside bags"
     },
-    time : {
+    time: {
       schedules: [],
-      notes:''
+      notes: ""
     },
-    method: '',
-    notes: ''
-  }, {
-    thing : {
-      headline: 'Back to the Land',
-      description: 'Health food store stuff; besides the regular slabs of wheatgrass and assorted greens, I found a bag full of all sorts of veg/vegan prepared foods, including packages of curry tofu, sweet and sour tofu, meatless chicken salad, macrobiotic noodle and vegetable salads, etc. Good for yogurt, eggs, and packaged goods.'
+    method: "",
+    notes: ""
+  },
+  {
+    thing: {
+      headline: "Back to the Land",
+      description:
+        "Health food store stuff; besides the regular slabs of wheatgrass and assorted greens, I found a bag full of all sorts of veg/vegan prepared foods, including packages of curry tofu, sweet and sour tofu, meatless chicken salad, macrobiotic noodle and vegetable salads, etc. Good for yogurt, eggs, and packaged goods."
     },
     place: {
-      coordinates : {
+      coordinates: {
         lat: 40.6728246,
         lng: -73.9769372
       },
-      address: '142 7th Ave Brooklyn, NY 11215',
-      notes: 'Regular curbside bags'
+      address: "142 7th Ave Brooklyn, NY 11215",
+      notes: "Regular curbside bags"
     },
-    time : {
+    time: {
       schedules: [],
-      notes:'Sunday-Friday 10p. On at least one occasion, food was still there after midnight.'
+      notes:
+        "Sunday-Friday 10p. On at least one occasion, food was still there after midnight."
     },
-    method: '',
-    notes: ''
+    method: "",
+    notes: ""
   },
   {
-    thing : {
-      headline: 'Key Foods',
-      description: ' We don’t know this location very well; needs more exploration. On latest visit (Jan 2011), some produce and bakery goods, but hard to get at. Location is super well lit, there is a lot of foot traffic and there is not much room to work, as the dumpsters are directly outside the store entrance.'
+    thing: {
+      headline: "Key Foods",
+      description:
+        " We don’t know this location very well; needs more exploration. On latest visit (Jan 2011), some produce and bakery goods, but hard to get at. Location is super well lit, there is a lot of foot traffic and there is not much room to work, as the dumpsters are directly outside the store entrance."
     },
     place: {
-      coordinates : {
+      coordinates: {
         lat: 40.673134,
         lng: -73.976827
       },
-      address: ' 130 7th Ave Brooklyn, NY 11215',
-      notes: '2 big dumpsters on 7th'
+      address: " 130 7th Ave Brooklyn, NY 11215",
+      notes: "2 big dumpsters on 7th"
     },
-    time : {
+    time: {
       schedules: [],
-      notes:''
+      notes: ""
     },
-    method: '',
-    notes: ''
+    method: "",
+    notes: ""
   },
   {
-    thing : {
-      headline: 'D\'Vine Taste',
-      description: 'We found cheese, bread and some tofu on the night we went. '
+    thing: {
+      headline: "D'Vine Taste",
+      description: "We found cheese, bread and some tofu on the night we went. "
     },
     place: {
-      coordinates : {
+      coordinates: {
         lat: 40.672699,
         lng: -73.977096
       },
-      name: '',
-      address: '  148 7th Ave Brooklyn, NY 11215',
-      notes: ''
+      name: "",
+      address: "  148 7th Ave Brooklyn, NY 11215",
+      notes: ""
     },
-    time : {
+    time: {
       schedules: [],
-      notes:''
+      notes: ""
     },
-    method: '',
-    notes: ''
+    method: "",
+    notes: ""
   },
   {
-    thing : {
-      headline: 'Northside Health Food',
-      description: ' Hit or miss, but on a recent Sunday night, loads of packaged sandwiches and salads. Only two or three bags, so it’s easy to check. '
+    thing: {
+      headline: "Northside Health Food",
+      description:
+        " Hit or miss, but on a recent Sunday night, loads of packaged sandwiches and salads. Only two or three bags, so it’s easy to check. "
     },
     place: {
-      coordinates : {
+      coordinates: {
         lat: 40.7184061,
         lng: -73.9571523
       },
-      address: 'Bedford Ave & N 8th St Brooklyn, NY 11249',
-      notes: ''
+      address: "Bedford Ave & N 8th St Brooklyn, NY 11249",
+      notes: ""
     },
-    time : {
-      schedules: [{
-        day: 'Monday, March 2',
-        recurrence: 'Every',
-        start: 2230,
-        duration: 360
-      },
+    time: {
+      schedules: [
         {
-          day: 'Tuesday, March 3',
-          recurrence: 'Every',
+          day: "Monday, March 2",
+          recurrence: "Every",
           start: 2230,
           duration: 360
-
         },
         {
-          day: 'Wednesday, March 4',
-          recurrence: 'Every',
+          day: "Tuesday, March 3",
+          recurrence: "Every",
           start: 2230,
           duration: 360
-
-        }
-        ,
+        },
         {
-          day: 'Thursday, March 5',
-          recurrence: 'Every',
+          day: "Wednesday, March 4",
+          recurrence: "Every",
           start: 2230,
           duration: 360
-
-        } , {
-          day: 'Friday, March 6',
-          recurrence: 'Every',
+        },
+        {
+          day: "Thursday, March 5",
+          recurrence: "Every",
           start: 2230,
           duration: 360
-
+        },
+        {
+          day: "Friday, March 6",
+          recurrence: "Every",
+          start: 2230,
+          duration: 360
         }
       ],
-      notes:' Trash is usually out by 10:30'
+      notes: " Trash is usually out by 10:30"
     },
-    method: '',
-    notes: ''
+    method: "",
+    notes: ""
   },
   {
-    thing : {
-      headline: 'Sunac Natural Food',
-      description: ' '
+    thing: {
+      headline: "Sunac Natural Food",
+      description: " "
     },
     place: {
-      coordinates : {
+      coordinates: {
         lat: 40.7371675,
         lng: -73.975101
       },
-      address: '40 Union Ave Brooklyn, NY 11211',
-      notes: ''
+      address: "40 Union Ave Brooklyn, NY 11211",
+      notes: ""
     },
-    time : {
+    time: {
       schedules: [],
-      notes:''
+      notes: ""
     },
-    method: '',
-    notes: ''
+    method: "",
+    notes: ""
   },
   {
-    thing : {
-      headline: 'Foodtown of Williamsburg',
-      description: ' '
+    thing: {
+      headline: "Foodtown of Williamsburg",
+      description: " "
     },
     place: {
-      coordinates : {
+      coordinates: {
         lat: 40.715355,
         lng: -73.959544
       },
-      address: '159 N 3rd St Brooklyn, NY 11211',
-      notes: ''
+      address: "159 N 3rd St Brooklyn, NY 11211",
+      notes: ""
     },
-    time : {
+    time: {
       schedules: [],
-      notes:''
+      notes: ""
     },
-    method: '',
-    notes: ''
+    method: "",
+    notes: ""
   },
   {
-    thing : {
-      headline: 'Duane Reade',
-      description: ' '
+    thing: {
+      headline: "Duane Reade",
+      description: " "
     },
     place: {
-      coordinates : {
+      coordinates: {
         lat: 40.7169419,
         lng: -73.962249
       },
-      address: '250 Bedford Ave Brooklyn, NY 11249',
-      notes: ''
+      address: "250 Bedford Ave Brooklyn, NY 11249",
+      notes: ""
     },
-    time : {
+    time: {
       schedules: [],
-      notes:''
+      notes: ""
     },
-    method: '',
-    notes: ''
+    method: "",
+    notes: ""
   },
   {
-    thing : {
-      headline: 'The Bagel Store',
-      description: ' '
+    thing: {
+      headline: "The Bagel Store",
+      description: " "
     },
     place: {
-      coordinates : {
+      coordinates: {
         lat: 40.711928,
         lng: -73.962864
       },
-      address: '349 Bedford Avenue Brooklyn, NY 11211',
-      notes: ''
+      address: "349 Bedford Avenue Brooklyn, NY 11211",
+      notes: ""
     },
-    time : {
+    time: {
       schedules: [],
-      notes:''
+      notes: ""
     },
-    method: '',
-    notes: ''
+    method: "",
+    notes: ""
   },
   {
-    thing : {
-      headline: 'Khim\'s Millenium Market',
-      description: ' '
+    thing: {
+      headline: "Khim's Millenium Market",
+      description: " "
     },
     place: {
-      coordinates : {
+      coordinates: {
         lat: 40.7159651,
         lng: -73.962978
       },
-      address: '460 Driggs Avenue Brooklyn, NY 11211',
-      notes: ''
+      address: "460 Driggs Avenue Brooklyn, NY 11211",
+      notes: ""
     },
-    time : {
+    time: {
       schedules: [],
-      notes:''
+      notes: ""
     },
-    method: '',
-    notes: ''
+    method: "",
+    notes: ""
   },
   {
-    thing : {
-      headline: 'Food Bazaar',
-      description: ' '
+    thing: {
+      headline: "Food Bazaar",
+      description: " "
     },
     place: {
-      coordinates : {
+      coordinates: {
         lat: 40.703151,
         lng: -73.945048
       },
-      address: '21 Manhattan Ave Brooklyn, NY 11206',
-      notes: ''
+      address: "21 Manhattan Ave Brooklyn, NY 11206",
+      notes: ""
     },
-    time : {
+    time: {
       schedules: [],
-      notes:''
+      notes: ""
     },
-    method: '',
-    notes: ''
+    method: "",
+    notes: ""
   }
 ];
 /**
