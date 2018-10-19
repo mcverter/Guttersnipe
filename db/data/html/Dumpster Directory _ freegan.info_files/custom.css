@@ -192,17 +192,17 @@ UL LI
 {
 	font: bold 11px/16px arial, helvetica, sans-serif;
 	height: 100%;
-	border-bottom: 0px solid #FFF;
+	border-bottom: 0 solid #FFF;
 	position: relative;
 	float: left;
 	width: 100%;
-	padding: 0px 0;
+	padding: 0 0;
 	list-style-type: none;
 }
 UL LI A
 {
 	display: block;
-	padding: 0px;
+	padding: 0;
 }
 /*--------------------------------------------------*/
 .byline
