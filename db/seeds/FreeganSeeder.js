@@ -3,6 +3,15 @@ const fs = require("fs");
 const moment = require("moment");
 require("pg-escape");
 const { Client } = require("pg");
+const { XMLInputParser, JSONInputParser } = require("./parsers");
+const XML_MODE = false;
+
+let parser;
+if (XML_MODE) {
+  parser = new XMLInputParser();
+} else {
+  parser = new JSONInputParser();
+}
 
 const defaultClient = new Client({
   user: "postgres",
@@ -11,10 +20,6 @@ const defaultClient = new Client({
   password: "postgres",
   port: 5432
 });
-
-function superescape(string) {
-  return escape(string.trim().replace(/\s+/g, " "));
-}
 
 class FreeganSeeder {
   constructor(client) {
@@ -27,29 +32,18 @@ class FreeganSeeder {
   }
 
   parseShareable(shareable, author_id) {
-    let $ = cheerio.load(shareable);
-    let // thing
-      subclass = escape("dumpster"),
-      name = superescape($("Name").text()),
-      description = superescape($("Description").text()),
-      // space
-      address = superescape($("Address").text()),
-      longitude = $("Longitude").text(),
-      latitude = $("Latitude").text(),
-      // time
-      time = superescape($("Time").text()),
-      // Comments
-      comments = $("Comment"),
-      author = $("Author").text();
-    console.log(
+    let {
       subclass,
       name,
       description,
+      address,
       longitude,
       latitude,
-      address,
-      time
-    );
+      time,
+      // Comments
+      comments,
+      author
+    } = parser.parseShareable(shareable);
     const insertShareableQuery = `
     SELECT SELECT_OR_INSERT_SHAREABLE(
       s_time := '${time}', 
@@ -72,18 +66,20 @@ class FreeganSeeder {
           "YYYY-MM-DD hh:mm:ssZ"
         );
         console.log("date", date);
-        let title, text;
-        for (let i = 0; i < 1; i++) {
-          let $comment = cheerio.load(comments[i]);
-          if ($comment("CommentTitle").text()) {
-            title = superescape($comment("CommentTitle").text());
-            text = superescape($comment("CommentText").text());
-          } else {
-            text = superescape($comment.text());
-            title = text.substring(0, 20);
-          }
-          console.log("about to insert comment", "title", title, "text", text);
-          const insertCommentQuery = `
+        if (comments) {
+          for (let i = 0; i < comments.length; i++) {
+            let { title, text } = parser.parseComment(comments, i);
+            if (text && !title) {
+              title = text.substring(0, 20);
+            }
+            console.log(
+              "about to insert comment",
+              "title",
+              title,
+              "text",
+              text
+            );
+            const insertCommentQuery = `
             SELECT SELECT_OR_INSERT_COMMENT(
               c_text := '${text}', 
               c_title := '${title}', 
@@ -91,29 +87,28 @@ class FreeganSeeder {
               c_user_id := '${author_id}', 
               c_posted := '${date}');
               `;
-          console.log("sql statemebt", insertCommentQuery);
-          this.client.query(insertCommentQuery).then(comment_response => {
-            console.log(
-              "c_response",
-              comment_response.rows[0]["select_or_insert_comment"]
-            );
-          });
+            console.log("sql statemebt", insertCommentQuery);
+            this.client
+              .query(insertCommentQuery)
+              .then(comment_response => {
+                console.log(
+                  "c_response",
+                  comment_response.rows[0]["select_or_insert_comment"]
+                );
+              })
+              .catch(error => {
+                console.error("aaaaaa", error);
+              });
+          }
         }
       })
       .catch(error => {
         console.log("error", error);
       });
   }
-  seedFreegans() {
-    const fileContents = fs.readFileSync(
-      __dirname + "/../data/html/BrooklynDirectory.xml.html",
-      "utf8"
-    );
-    const frontMarkerString = `const Content = () => (`;
-    let xml = fileContents.substring(fileContents.indexOf(frontMarkerString));
-    xml = xml.substring(frontMarkerString.length, xml.indexOf(");"));
-    let $ = cheerio.load(xml);
 
+  seedFreegans() {
+    let shareables = parser.parseShareablesList();
     const insertUserQuery = `
         SELECT SELECT_OR_INSERT_USER(
           u_email := 'mitchell.verter@gmail.com',
@@ -126,7 +121,6 @@ class FreeganSeeder {
         author_response.rows[0]["select_or_insert_user"]
       );
       let author_id = author_response.rows[0]["select_or_insert_user"];
-      const shareables = $("Shareable");
       for (let i = 0; i < shareables.length; i++) {
         this.parseShareable(shareables[i], author_id);
       }

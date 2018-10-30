@@ -2,16 +2,14 @@ import * as types from "../types";
 import find from "lodash.find";
 // import { SERVER_URL } from "../../config/api";
 let SERVER_URL = "http:/localhost:3000";
-// import fetch from "isomorphic-fetch";
 
-export function* currentShareablesSaga() {
-  console.log("Hello World");
-
-  const response = yield call(fetch, `${SERVER_URL}/api/shareables`);
-  const data = yield apply(response, response.json);
-  yield put(setCurrentUser(data));
-
-  console.log(data);
+export function fetchAllShareables(dispatch) {
+  return () => {
+    dispatch({ type: types.SHAREABLES_ALL_REQUEST });
+    return fetch(`${SERVER_URL}/shareables`)
+      .then(response => response.json())
+      .then(json => dispatch(receiveAllShareables(json)));
+  };
 }
 
 function receiveAllShareables(json) {

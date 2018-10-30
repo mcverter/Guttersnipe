@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node $NODE_DEBUG_OPTION ./server/bin/www",
-    "seed": "node ./db/seeds/SeederController.js",
-    "test": "mocha './test/**/*.spec.js'"
+    "seed": "node $NODE_DEBUG_OPTION ./db/seeds/SeederController.js",
+    "test": "mocha $NODE_DEBUG_OPTION './test/**/*.spec.js'"
   },
   "dependencies": {
     "@google/maps": "^0.5.4",

@@ -7,13 +7,20 @@ import React, { Component } from "react";
 import { Provider } from "react-redux";
 
 import Router from "./src/routes";
-import configureStore from "./redux/store/configureStore";
-const initialState = require("./redux/store/initialState");
-// const store = configureStore(initialState);  REVIEW THIS CODE PATH
-import { createStore } from "redux";
-import rootReducer from "./redux/reducers";
+import { createStore, applyMiddleware } from "redux";
+import createSagaMiddleware from "redux-saga";
+import { helloSaga } from "./sagas";
+import reducer from "./redux/reducers";
 
-const reduxStore = createStore(rootReducer);
+//import configureStore from "./redux/store/configureStore";
+// import rootReducer from "./redux/reducers";
+//const initialState = require("./redux/store/initialState");
+// const store = configureStore(initialState);  REVIEW THIS CODE PATH
+// const reduxStore = createStore(rootReducer);
+
+const sagaMiddleware = createSagaMiddleware();
+const store = createStore(reducer, applyMiddleware(sagaMiddleware));
+sagaMiddleware.run(helloSaga);
 
 class App extends Component {
   constructor(props) {
@@ -23,7 +30,7 @@ class App extends Component {
   componentWillMount() {}
   render() {
     return (
-      <Provider store={reduxStore}>
+      <Provider store={store}>
         <Router />
       </Provider>
     );

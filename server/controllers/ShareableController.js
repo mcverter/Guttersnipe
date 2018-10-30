@@ -31,7 +31,8 @@ class ShareableController {
 
   async selectShareablesList() {
     const shareableListQueryFromFile = fs.readFileSync(
-      __dirname + "/../../db/sql/ShareableListQuery.sql",
+      __dirname + "/../../db/sql/AllShareablesQuery.sql",
+      //"/../../db/sql/ShareableListQuery.sql",
       "utf8"
     );
     console.log(shareableListQueryFromFile);

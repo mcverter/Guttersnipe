@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { Text, View, TouchableOpacity, StyleSheet, Button } from "react-native";
+import { connect } from "react-redux";
 
 import FTK from "../components/FTK";
 import GsButton from "../components/GsButton";
-
+// import { currentShareablesSaga } from "../../redux/actions/shareable";
 import PropTypes from "prop-types";
 
 class LandingScreen extends Component {
@@ -15,6 +16,11 @@ class LandingScreen extends Component {
     super(props);
   }
 
+  componentDidMount() {
+    // debugger;
+    // const result = this.props.currentShareablesSaga();
+    console.log("foo");
+  }
   render() {
     const user = this.props.user;
     const navigation = this.props.navigation;
@@ -81,7 +87,24 @@ const styles = StyleSheet.create({
 
 LandingScreen.propTypes = {};
 
-export default LandingScreen;
+const mapDispatchToProps = dispatch => ({
+  //  currentShareablesSaga: currentShareablesSaga
+});
+
+/*
+const mapDispatchToProps = (dispatch) => ( { // <- forgot the wrapping with ( here
+    loginDefault: (username , password) => {
+        dispatch(AUTH_ACTIONS.actions.loginDefault(username, password))
+    }
+} )
+ */
+
+const mapStateToProps = state => state;
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(LandingScreen);
 
 const maybeCreate = () => {
   return "goo";

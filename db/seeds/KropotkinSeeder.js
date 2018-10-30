@@ -32,12 +32,7 @@ class KropotkinSeeder {
       console.log("kropotkinInsertStatement", kropotkinInsertStatement);
       this.client
         .query(kropotkinInsertStatement)
-        .then(shareable_response => {
-          console.log(
-            "k_response",
-            shareable_response.rows[0]["select_or_insert_kropotkin"]
-          );
-        })
+        .then(shareable_response => {})
         .catch(error => {
           console.error("KROPOTKIN INSERT ERROR:", error);
         });
