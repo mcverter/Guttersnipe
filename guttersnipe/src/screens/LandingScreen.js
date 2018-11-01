@@ -6,6 +6,7 @@ import FTK from "../components/FTK";
 import GsButton from "../components/GsButton";
 // import { currentShareablesSaga } from "../../redux/actions/shareable";
 import PropTypes from "prop-types";
+import { helloSaga } from "../../sagas";
 
 class LandingScreen extends Component {
   static navigationOptions = {
@@ -17,9 +18,8 @@ class LandingScreen extends Component {
   }
 
   componentDidMount() {
-    // debugger;
-    // const result = this.props.currentShareablesSaga();
     console.log("foo");
+    this.props.onRequestDog();
   }
   render() {
     const user = this.props.user;
@@ -87,17 +87,11 @@ const styles = StyleSheet.create({
 
 LandingScreen.propTypes = {};
 
-const mapDispatchToProps = dispatch => ({
-  //  currentShareablesSaga: currentShareablesSaga
-});
-
-/*
-const mapDispatchToProps = (dispatch) => ( { // <- forgot the wrapping with ( here
-    loginDefault: (username , password) => {
-        dispatch(AUTH_ACTIONS.actions.loginDefault(username, password))
-    }
-} )
- */
+const mapDispatchToProps = dispatch => {
+  return {
+    onRequestDog: () => dispatch({ type: "API_CALL_REQUEST" })
+  };
+};
 
 const mapStateToProps = state => state;
 

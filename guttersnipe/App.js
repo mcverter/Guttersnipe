@@ -9,7 +9,7 @@ import { Provider } from "react-redux";
 import Router from "./src/routes";
 import { createStore, applyMiddleware } from "redux";
 import createSagaMiddleware from "redux-saga";
-import { helloSaga } from "./sagas";
+import { helloSaga, watcherSaga } from "./sagas";
 import reducer from "./redux/reducers";
 
 //import configureStore from "./redux/store/configureStore";
@@ -20,6 +20,7 @@ import reducer from "./redux/reducers";
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(reducer, applyMiddleware(sagaMiddleware));
+sagaMiddleware.run(watcherSaga);
 sagaMiddleware.run(helloSaga);
 
 class App extends Component {
