@@ -35,7 +35,7 @@ class ShareableController {
 
   async selectShareablesList() {
     // NO DB YET
-    return defaultState.shareables.shareables;
+    //    return defaultState.shareables.shareables;
     const shareableListQueryFromFile = fs.readFileSync(
       __dirname + "/../../db/sql/AllShareablesQuery.sql",
       //"/../../db/sql/ShareableListQuery.sql",
