@@ -1,6 +1,7 @@
-import commentsJSON from "./comments";
-import { allShareableListItems as shareablesJSON } from "./shareables";
-import categorizationJSON from "./categorizations";
+const commentsJSON = require("./comments");
+const { allShareableListItems } = require("./shareables");
+const shareablesJSON = allShareableListItems;
+const categorizationJSON = require("./categorizations");
 
 const initialState = {
   shareables: {
@@ -45,4 +46,4 @@ const initialState = {
 */
 };
 
-export default initialState;
+module.exports = initialState;

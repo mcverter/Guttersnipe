@@ -293,4 +293,4 @@ const allShareableListItems = [
   }
 ];
 
-export { full_shareable, allShareableListItems };
+module.exports = { full_shareable, allShareableListItems };

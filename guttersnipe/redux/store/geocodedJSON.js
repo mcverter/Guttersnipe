@@ -6382,4 +6382,4 @@ const shareables = [
   }
 ];
 
-export default shareables;
+module.exports = shareables;

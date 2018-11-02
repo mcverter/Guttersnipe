@@ -3,12 +3,16 @@ const { Client } = require("pg");
 const dbConfig = require("../../config/dbConfig");
 // NODE_ENV
 const client = new Client(dbConfig["test"]);
+const defaultState = require("../../guttersnipe/redux/store/initialState");
 
 client.connect();
 
 class ShareableController {
   async selectShareableWithComments(id) {
     console.error("ID IS ", id);
+    // NO DB YET
+    return defaultState.shareables.shareables;
+
     let commentsJSON, shareableJSON;
 
     const commentsQueryFromFile = fs.readFileSync(
@@ -30,6 +34,8 @@ class ShareableController {
   }
 
   async selectShareablesList() {
+    // NO DB YET
+    return defaultState.shareables.shareables;
     const shareableListQueryFromFile = fs.readFileSync(
       __dirname + "/../../db/sql/AllShareablesQuery.sql",
       //"/../../db/sql/ShareableListQuery.sql",

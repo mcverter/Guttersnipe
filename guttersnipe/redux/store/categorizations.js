@@ -4,4 +4,4 @@ const categorizations = {
   shelter: ["occupation", "infoshop", "squat"]
 };
 
-export default categorizations;
+module.exports = categorizations;

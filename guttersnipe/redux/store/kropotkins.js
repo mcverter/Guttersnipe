@@ -4432,4 +4432,4 @@ const kropotkinDB = {
 
 const kropotkins = () => kropotkinDB.records.map(rcd => rcd.paragraph);
 
-export default kropotkins;
+module.exports = kropotkins;

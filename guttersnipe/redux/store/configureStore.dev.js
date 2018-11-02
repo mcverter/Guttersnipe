@@ -6,7 +6,7 @@ import logger from "redux-logger";
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-export default function configureStore(initialState) {
+module.exports = function configureStore(initialState) {
   console.log("initial state", initialState);
 
   return createStore(
@@ -23,4 +23,4 @@ initialState,
         logger))
   );
   */
-}
+};

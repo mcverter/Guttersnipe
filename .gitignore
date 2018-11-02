@@ -2,6 +2,7 @@ gsnipe-env
 
 selenium/
 tutorials/
+__tutorials__/
 
 package-lock.json
 

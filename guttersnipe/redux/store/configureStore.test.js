@@ -7,7 +7,7 @@ import logger from "redux-logger";
 //const logger = createLogger();
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-export default function configureStore(initialState) {
+module.exports = function configureStore(initialState) {
   return createStore(
     rootReducer,
     initialState,
@@ -15,4 +15,4 @@ export default function configureStore(initialState) {
       applyMiddleware(thunk, reduxImmutableStateInvariant(), logger)
     )
   );
-}
+};
