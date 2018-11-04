@@ -12,6 +12,10 @@ const dbConfig = {
     database: "guttersnipeTest",
     password: "postgres",
     port: 5432
+  },
+  production: {
+    connectionString: process.env.DATABASE_URL,
+    ssl: true
   }
 };
 module.exports = dbConfig;

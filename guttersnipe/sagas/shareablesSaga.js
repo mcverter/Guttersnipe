@@ -1,14 +1,15 @@
 import { takeLatest, call, put } from "redux-saga/effects";
 import axios from "axios";
 import * as types from "../redux/types";
+import { SERVER_URL } from "../config";
 
 // watcher saga: watches for actions dispatched to the store, starts worker saga
-export function* watchShareablesFetch() {
+export function* shareableListSaga() {
   yield takeLatest(types.SHAREABLE_LIST_REQUEST, shareableFetchSaga);
 }
 
 // function that makes the api request and returns a Promise for response
-function fetchDog() {
+function fetchShareables() {
   return axios({
     method: "get",
     url: "https://dog.ceo/api/breeds/image/random"

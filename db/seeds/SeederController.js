@@ -3,13 +3,18 @@ const KropotkinSeeder = require("./KropotkinSeeder");
 const CategorySeeder = require("./CategorySeeder");
 const { Client } = require("pg");
 
-const client = new Client({
-  user: "postgres",
-  host: "localhost",
-  database: "guttersnipeTest",
-  password: "postgres",
-  port: 5432
-});
+let client = process.env.DATABASE_URL
+  ? new Client({
+      connectionString: process.env.DATABASE_URL,
+      ssl: true
+    })
+  : new Client({
+      user: "postgres",
+      host: "localhost",
+      database: "guttersnipeTest",
+      password: "postgres",
+      port: 5432
+    });
 
 client.connect();
 
