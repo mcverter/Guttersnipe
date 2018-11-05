@@ -5,6 +5,7 @@ tutorials/
 __tutorials__/
 
 package-lock.json
+yarn.lock
 
 # npm
 node_modules
