@@ -20,7 +20,24 @@ app.use("/api/kropotkin", kropotkinRouter);
 app.use("/api/shareables", shareableRouter);
 app.use("/api/kropotkins", kropotkinRouter);
 
-app.use("/", indexRouter);
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'client/web/public')));
+
+
+// The "catchall" handler: for any request that doesn't
+// match one above, send back React's index.html file.
+/*app.get('*', (req, res) => {
+   //res.send('hello world');
+  res.sendFile(path.join(__dirname+'/../client/web/public/index.html'));
+});
+*/
+// The "catchall" handler: for any request that doesn't
+// match one above, send back React's index.html file.
+app.get('*', (req, res) => {
+  console.log('hello')
+//  path.basename(path.dirname(__dirname))
+  res.sendFile(path.join(__dirname,  '/../client/web/build', req.url));
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

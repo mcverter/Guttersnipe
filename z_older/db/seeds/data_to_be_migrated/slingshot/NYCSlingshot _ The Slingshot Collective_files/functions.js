@@ -9,7 +9,7 @@
 	var body    = $( 'body' ),
 		_window = $( window );
 
-	// Enable menu toggle for small screens.
+	// Enable menu toggle for small pages.
 	( function() {
 		var nav = $( '#primary-navigation' ), button, menu;
 		if ( ! nav ) {
