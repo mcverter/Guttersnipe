@@ -28,10 +28,11 @@ export function findCenterLatLng(latLngInDegr) {
   let sumX = 0;
   let sumY = 0;
   let sumZ = 0;
+  let lat, lng;
 
   for (let i = 0; i < latLngInDegr.length; i++) {
-    var lat = degr2rad(latLngInDegr[i][LATIDX]);
-    var lng = degr2rad(latLngInDegr[i][LNGIDX]);
+    lat = degr2rad(latLngInDegr[i][LATIDX]);
+    lng = degr2rad(latLngInDegr[i][LNGIDX]);
     // sum of cartesian coordinates
     sumX += Math.cos(lat) * Math.cos(lng);
     sumY += Math.cos(lat) * Math.sin(lng);
@@ -43,9 +44,9 @@ export function findCenterLatLng(latLngInDegr) {
   const avgZ = sumZ / latLngInDegr.length;
 
   // convert average x, y, z coordinate to latitude and longtitude
-  var lng = Math.atan2(avgY, avgX);
+  lng = Math.atan2(avgY, avgX);
   const hyp = Math.sqrt(avgX * avgX + avgY * avgY);
-  var lat = Math.atan2(avgZ, hyp);
+  lat = Math.atan2(avgZ, hyp);
 
   return [rad2degr(lat), rad2degr(lng)];
 }

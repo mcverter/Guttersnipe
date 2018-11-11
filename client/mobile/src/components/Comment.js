@@ -4,29 +4,31 @@ import GsText from "../components/GsText";
 
 import PropTypes from "prop-types";
 
+const mitchell_comment = {
+  comment_text: commentText,
+  author_id: 5,
+  author_name: "mitchell",
+  author_role: "admin",
+  comment_id: "2",
+  date_posted: "November 26 1998",
+  comment_title: commentText
+    .split(" ")
+    .slice(0, 3)
+    .join(" ")
+};
+
 const Comment = props => {
-  const commentText = props.comment;
-  console.log("comment props", comment);
-  const comment = {
-    comment_text: commentText,
-    author_id: 5,
-    author_name: "mitchell",
-    author_role: "admin",
-    comment_id: "2",
-    date_posted: "November 26 1998",
-    comment_title: commentText
-      .split(" ")
-      .slice(0, 3)
-      .join(" ")
-  };
-  const author_id = comment.author_id;
-  const author_name = comment.author_name;
-  const author_role = comment.author_role;
-  const comment_id = comment.comment_id;
-  const comment_title = comment.comment_title;
-  const comment_text = comment.comment_text;
-  const date_posted = comment.date_posted;
-  const shareable_id = comment.shareable_id;
+  const comment = props.comment || mitchell_comment;
+  const {
+    author_id,
+    author_name,
+    author_role,
+    comment_id,
+    comment_title,
+    comment_text,
+    date_posted,
+    shareable_id
+  } = comment;
 
   return (
     <View style={styles.commentContainer}>

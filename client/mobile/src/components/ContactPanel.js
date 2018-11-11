@@ -26,7 +26,7 @@ const ContactPanel = () => {
       <TouchableOpacity onPress={sendMailToAdmin}>
         <Image
           style={{ height: 50, alignSelf: "center" }}
-          source={require("../assets/images/roadrunnerAtWaste.png")}
+          source={require("../otherassets/images/roadrunnerAtWaste.png")}
         />
         <GsText style={styles.contactPanel}>
           email: roadrunner [at] waste [dot] org

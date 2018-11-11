@@ -45,7 +45,7 @@ class ShareableDetailPage extends Component {
                 latitude: shareable.latitude,
                 longitude: shareable.longitude,
                 lat: shareable.latitude,
-                longitude: shareable.longitude
+                long: shareable.longitude
               }}
               title={shareable.name}
               description={shareable.name}

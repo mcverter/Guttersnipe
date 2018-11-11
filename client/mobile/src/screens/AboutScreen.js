@@ -32,7 +32,7 @@ class AboutScreen extends Component {
         <View style={styles.videoPanel}>
           <View style={styles.videoContainer}>
             <Video
-              source={require("../assets/video/Guttersnipe.mp4")}
+              source={require("../otherassets/video/Guttersnipe.mp4")}
               rate={1.0}
               volume={1.0}
               muted={false}

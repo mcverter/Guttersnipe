@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import RaisedButton from "material-ui/RaisedButton"
+import RaisedButton from "material-ui/RaisedButton";
 
 import FTK from "../components/FTK";
 import GsButton from "../components/GsButton";
