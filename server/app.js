@@ -26,13 +26,6 @@ app.use(express.static(path.join(__dirname, 'client/web/public')));
 
 // The "catchall" handler: for any request that doesn't
 // match one above, send back React's index.html file.
-/*app.get('*', (req, res) => {
-   //res.send('hello world');
-  res.sendFile(path.join(__dirname+'/../client/web/public/index.html'));
-});
-*/
-// The "catchall" handler: for any request that doesn't
-// match one above, send back React's index.html file.
 app.get('*', (req, res) => {
   let sentFilePath = req.url.startsWith("index.html") ?
     "/index.html" : req.url;

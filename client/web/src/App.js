@@ -1,4 +1,22 @@
 import React, { Component } from "react";
+// import { Provider } from "react-redux";
+
+/*
+// compose routes
+import Router from "./src/routes";
+
+// compose redux saga
+import { createStore, applyMiddleware } from "redux";
+import createSagaMiddleware from "redux-saga";
+import reducer from "./redux/reducers";
+import initSagas from "./initSagas";
+
+const sagaMiddleware = createSagaMiddleware();
+const store = createStore(reducer, applyMiddleware(sagaMiddleware));
+initSagas(sagaMiddleware);
+
+ */
+
 import logo from "./logo.svg";
 import "./App.css";
 
@@ -19,3 +37,26 @@ class App extends Component {
 }
 
 export default App;
+
+
+
+/*
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  componentWillMount() {}
+  render() {
+    return (
+      <Provider store={store}>
+        <Router />
+      </Provider>
+    );
+  }
+}
+
+export default App;
+
+ */
