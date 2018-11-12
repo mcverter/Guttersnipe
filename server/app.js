@@ -34,9 +34,9 @@ app.use(express.static(path.join(__dirname, 'client/web/public')));
 // The "catchall" handler: for any request that doesn't
 // match one above, send back React's index.html file.
 app.get('*', (req, res) => {
-  console.log('hello')
-//  path.basename(path.dirname(__dirname))
-  res.sendFile(path.join(__dirname,  '/../client/web/build', req.url));
+  let sentFilePath = req.url.startsWith("index.html") ?
+    "/index.html" : req.url;
+  res.sendFile(path.join(__dirname,  '/../client/web/build', sentFilePath));
 });
 
 // catch 404 and forward to error handler
