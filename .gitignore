@@ -1,5 +1,8 @@
 gsnipe-env
 
+ios/
+doc/
+android/
 z_older/
 .z_older/
 older/
