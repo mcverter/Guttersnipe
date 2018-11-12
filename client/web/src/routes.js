@@ -1,5 +1,6 @@
 import React from "react";
-import { createStackNavigator } from "react-navigation";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 import LandingPage from "./pages/LandingPage";
 import MapPage from "./pages/MapPage";
 import KropotkinPage from "./pages/KropotkinPage";
@@ -10,6 +11,19 @@ import ChooseSubcategoryPage from "./pages/ChooseSubcategoryPage";
 import ShareablesPage from "./pages/ShareablesPage";
 import AddShareablePage from "./pages/AddShareablePage";
 
+const Router = () => (
+ <Router>
+	<Route exact path="/" component={LandingPage} />
+	<Route path="/map" component={MapPage} />
+	<Route path="/kropotkin" component={KropotkinPage} />
+	<Route path="about" component={AboutPage} />
+	<Route path="/shareable/:id" component={ShareableDetailPage} />
+	<Route path="/category" component={ChooseCategoryPage} />
+	<Route path="/subcategory" component={ChooseSubcategorylPage} />
+	<Route path="/shareables" component={ShareablesPage} />
+	<Route path="/add" component={AddShareablePage} />
+</Router>
+)
 export default createStackNavigator(
   {
     MapPage: MapPage,
