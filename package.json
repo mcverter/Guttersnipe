@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "(yarn build-client) && yarn start-server",
+    "start": "(npm run build-client) && npm run start-server",
     "start-server": "node $NODE_DEBUG_OPTION ./server/bin/www",
-    "build-client": "cd ./client/web && yarn build",
+    "build-client": "cd ./client/web && npm run-script build",
     "seed": "node $NODE_DEBUG_OPTION ./db/seeds/SeederController.js",
     "test": "mocha $NODE_DEBUG_OPTION './test/**/*.spec.js'"
   },
