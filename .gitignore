@@ -1,5 +1,9 @@
 gsnipe-env
 
+z_older/
+.z_older/
+older/
+
 selenium/
 tutorials/
 __tutorials__/
