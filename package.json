@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "(npm run build-client) && npm run start-server",
+    "start": "npm run start-server",
     "start-server": "node $NODE_DEBUG_OPTION ./server/bin/www",
     "build-client": "cd ./client/web && npm run-script build",
     "seed": "node $NODE_DEBUG_OPTION ./db/seeds/SeederController.js",
