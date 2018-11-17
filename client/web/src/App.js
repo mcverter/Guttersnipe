@@ -5,10 +5,10 @@ import React, { Component } from "react";
 // compose routes
 import Router from "./src/routes";
 
-// compose redux saga
-import { createStore, applyMiddleware } from "redux";
-import createSagaMiddleware from "redux-saga";
-import reducer from "./redux/reducers";
+// compose reduz saga
+import { createStore, applyMiddleware } from "reduz";
+import createSagaMiddleware from "reduz-saga";
+import reducer from "./reduz/reducers";
 import initSagas from "./initSagas";
 
 const sagaMiddleware = createSagaMiddleware();

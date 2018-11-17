@@ -9,19 +9,21 @@ import { Provider } from "react-redux";
 import Router from "./src/routes";
 import { createStore, applyMiddleware } from "redux";
 import createSagaMiddleware from "redux-saga";
-import reducer from "./redux/reducers";
-import initSagas from "./initSagas";
+import zoo from "./src/shared/redux";
 
-//import configureStore from "./redux/store/configureStore";
+import rootReducer from "./src/shared/redux/reducers";
+// import initSagas from "./initSagas";
+
+import configureStore from "./src/shared/redux/store/configureStore";
 // import rootReducer from "./redux/reducers";
 //const initialState = require("./redux/store/initialState");
 // const store = configureStore(initialState);  REVIEW THIS CODE PATH
-// const reduxStore = createStore(rootReducer);
+const store = createStore(rootReducer);
 // import { helloSaga, watcherSaga } from "./sagas";
 
 const sagaMiddleware = createSagaMiddleware();
-const store = createStore(reducer, applyMiddleware(sagaMiddleware));
-initSagas(sagaMiddleware);
+//const store = createStore(reducer, applyMiddleware(sagaMiddleware));
+// initSagas(sagaMiddleware);
 
 class App extends Component {
   constructor(props) {

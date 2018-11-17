@@ -6,7 +6,7 @@ import FTK from "../components/FTK";
 import GsButton from "../components/GsButton";
 // import { currentShareablesSaga } from "../../redux/actions/shareable";
 import PropTypes from "prop-types";
-import { helloSaga } from "../../sagas";
+// import { helloSaga } from "../../sagas";
 
 class LandingScreen extends Component {
   static navigationOptions = {

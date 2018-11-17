@@ -32,13 +32,13 @@ class AboutScreen extends Component {
         <View style={styles.videoPanel}>
           <View style={styles.videoContainer}>
             <Video
-              source={require("../otherassets/video/Guttersnipe.mp4")}
+              source={require("./zideo/Guttersnipe.mp4")}
               rate={1.0}
               volume={1.0}
               muted={false}
               resizeMode="cover"
               style={{ width: "100%", height: 200 }}
-              poster={"../assets/images/JoeStrummerGuttersnipe.png"}
+              poster={"../shared/assets/images/JoeStrummerGuttersnipe.png"}
             />
           </View>
         </View>

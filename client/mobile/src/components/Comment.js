@@ -4,6 +4,8 @@ import GsText from "../components/GsText";
 
 import PropTypes from "prop-types";
 
+let commentText = "foo bar";
+
 const mitchell_comment = {
   comment_text: commentText,
   author_id: 5,
@@ -44,9 +46,6 @@ const Comment = props => {
   );
 };
 
-/*
-
- */
 const styles = StyleSheet.create({
   commentAuthor: {
     fontStyle: "italic",
