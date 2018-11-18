@@ -9,7 +9,6 @@ import { Provider } from "react-redux";
 import Router from "./src/routes";
 import { createStore, applyMiddleware } from "redux";
 import createSagaMiddleware from "redux-saga";
-import zoo from "./src/shared/redux";
 
 import rootReducer from "./src/shared/redux/reducers";
 // import initSagas from "./initSagas";
