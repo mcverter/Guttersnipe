@@ -1,7 +1,7 @@
 import { takeLatest, call, put } from "redux-saga/effects";
 import axios from "axios";
-import * as types from "../redux/types";
-import { SERVER_URL } from "../config";
+import * as types from "../types";
+// import { SERVER_URL } from "../config";
 
 // watcher saga: watches for actions dispatched to the store, starts worker saga
 export function* shareableListSaga() {
