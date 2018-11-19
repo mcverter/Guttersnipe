@@ -10,7 +10,7 @@ export default function shareables(
       return Object.assign(
         {},
         {
-          ...shareables,
+          shareables,
           isFetchingShareables: true
         }
       );
@@ -18,7 +18,7 @@ export default function shareables(
       return Object.assign(
         {},
         {
-          ...shareables,
+          shareables,
           searchParams: action.searchParams
         }
       );
@@ -26,7 +26,7 @@ export default function shareables(
       return Object.assign(
         {},
         {
-          ...shareables,
+          shareables,
           categorizationMeta: action.categorizationMeta
         }
       );
@@ -34,7 +34,7 @@ export default function shareables(
       return Object.assign(
         {},
         {
-          ...shareables,
+          shareables,
           isFetchingShareables: true,
           shareableFetchError: false
         }
@@ -43,7 +43,7 @@ export default function shareables(
       return Object.assign(
         {},
         {
-          ...shareables,
+          shareables,
           selectedIndex: action.selectedIndex,
           isFetchingShareables: false,
           shareableFetchError: false
@@ -53,7 +53,7 @@ export default function shareables(
       return Object.assign(
         {},
         {
-          ...shareables,
+          shareables,
           isFetchingShareables: true,
           shareableFetchError: false
         }
@@ -62,7 +62,7 @@ export default function shareables(
       return Object.assign(
         {},
         {
-          ...shareables,
+          shareables,
           isFetchingShareables: false,
           shareableFetchError: false,
           items: shareables.items.concat(action.shareables),
@@ -73,7 +73,7 @@ export default function shareables(
       return Object.assign(
         {},
         {
-          ...shareables,
+          shareables,
           isFetchingShareables: false,
           shareableFetchError: true
         }
@@ -82,7 +82,7 @@ export default function shareables(
       return Object.assign(
         {},
         {
-          ...shareables,
+          shareables,
           isFetchingShareables: false,
           shareableFetchError: false,
           points: action.shareables.points,
@@ -94,7 +94,7 @@ export default function shareables(
       return Object.assign(
         {},
         {
-          ...shareables,
+          shareables,
           isFetchingShareables: false,
           shareableFetchError: true
         }

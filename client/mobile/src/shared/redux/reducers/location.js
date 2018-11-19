@@ -7,7 +7,7 @@ export default function location(
 ) {
   switch (action.type) {
     case STORE_BROWSER_LOCATION:
-      return { ...location, location: action.location };
+      return Object.assign({}, {location: action.longitude});
     default:
       return location;
   }

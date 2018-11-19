@@ -1,5 +1,13 @@
 import React, { Component } from "react";
-// import { Provider } from "react-redux";
+import { Provider } from "react-redux";
+import { createStore, applyMiddleware } from "redux";
+import rootReducer from "./shared/redux/reducers";
+import createSagaMiddleware from "redux-saga";
+import logo from "./logo.svg";
+import "./App.css";
+
+const sagaMiddleware = createSagaMiddleware();
+const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
 
 /*
 // compose routes
@@ -8,7 +16,6 @@ import Router from "./src/routes";
 // compose reduz saga
 import { createStore, applyMiddleware } from "reduz";
 import createSagaMiddleware from "reduz-saga";
-import reducer from "./reduz/reducers";
 import initSagas from "./initSagas";
 
 const sagaMiddleware = createSagaMiddleware();
@@ -17,8 +24,6 @@ initSagas(sagaMiddleware);
 
  */
 
-import logo from "./logo.svg";
-import "./App.css";
 
 class App extends Component {
   render() {
