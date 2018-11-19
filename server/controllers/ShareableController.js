@@ -3,7 +3,7 @@ const { Client } = require("pg");
 const dbConfig = require("../../config/dbConfig");
 // NODE_ENV
 const client = new Client(dbConfig["test"]);
-const defaultState = require("../../client/shared/redux/store/initialState");
+const defaultState = require("../../client/mobile/src/shared/redux/store/initialState");
 
 client.connect();
 
