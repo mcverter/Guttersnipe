@@ -26,6 +26,6 @@ export default class MapPage extends Component {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = {
   mapPageContainer: {}
-});
+};

@@ -17,7 +17,7 @@ const FTK = ({ style }) => {
     </div>
   );
 };
-const styles = StyleSheet.create({
+const styles = {
   ftkText: {
     color: "red",
     fontStyle: "italic",
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     padding: 2,
     margin: 2
   }
-});
+};
 
 FTK.propTypes = {
   style: PropTypes.object

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Video from "react-native-video";
+//import Video from "react-native-video";
 import FTK from "../components/FTK";
 import GsText from "../components/GsText";
 import LegalNotice from "../components/LegalNotice";
@@ -9,7 +9,7 @@ import ContactPanel from "../components/ContactPanel";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import RaisedButton from "material-ui/RaisedButton";
-
+const vid = require("../shared/assets/video/Guttersnipe.mp4")
 const videoIsVisible = false;
 
 class AboutPage extends Component {
@@ -25,14 +25,14 @@ class AboutPage extends Component {
       <div style={styles.aboutPageContainer}>
         <div style={styles.videoPanel}>
           <div style={styles.videoContainer}>
-            <Video
-              source={require("../otherassets/video/Guttersnipe.mp4")}
+            <video
+              source={vid}
               rate={1.0}
               volume={1.0}
               muted={false}
               resizeMode="cover"
               style={{ width: "100%", height: 200 }}
-              poster={"../assets/images/JoeStrummerGuttersnipe.png"}
+              poster={"../../shared/assets/images/JoeStrummerGuttersnipe.png"}
             />
           </div>
         </div>
@@ -57,7 +57,7 @@ class AboutPage extends Component {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = {
   aboutPageContainer: {},
 
   videoPanel: {},
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
   },
 
   contactPanel: {}
-});
+};
 
 AboutPage.propTypes = {};
 /*

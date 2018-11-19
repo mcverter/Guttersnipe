@@ -56,7 +56,7 @@ class LandingPage extends Component {
     );
   }
 }
-const styles = StyleSheet.create({
+const styles = {
   landingPageContainer: {
     display: "flex",
     flexDirection: "column",
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     padding: 75
   },
   createShareablesButton: {}
-});
+};
 
 LandingPage.propTypes = {};
 

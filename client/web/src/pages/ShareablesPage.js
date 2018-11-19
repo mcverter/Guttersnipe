@@ -57,9 +57,9 @@ class ShareableResultsTabContainer extends Component {
 /*
 
  */
-const styles = StyleSheet.create({
+const styles = {
   mapPageContainer: {}
-});
+};
 
 const mapDispatchToProps = {};
 const mapStateToProps = state => state.shareables;

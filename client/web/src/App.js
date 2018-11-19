@@ -5,38 +5,21 @@ import rootReducer from "./shared/redux/reducers";
 import createSagaMiddleware from "redux-saga";
 import logo from "./logo.svg";
 import "./App.css";
+import Router from "./routes";
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
-
-/*
-// compose routes
-import Router from "./src/routes";
-
-// compose reduz saga
-import { createStore, applyMiddleware } from "reduz";
-import createSagaMiddleware from "reduz-saga";
-import initSagas from "./initSagas";
-
-const sagaMiddleware = createSagaMiddleware();
-const store = createStore(reducer, applyMiddleware(sagaMiddleware));
-initSagas(sagaMiddleware);
-
- */
-
+// initSagas(sagaMiddleware);
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Provider store={store}>
+        <MuiThemeProvider>
+        <Router/>
+        </MuiThemeProvider>
+      </Provider>
     );
   }
 }

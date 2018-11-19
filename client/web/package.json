@@ -8,6 +8,7 @@
     "react-dom": "^16.4.1",
     "react-material-ui": "^0.0.1",
     "react-redux": "^5.1.1",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
     "redux": "^4.0.1",
     "redux-saga": "^0.16.2"

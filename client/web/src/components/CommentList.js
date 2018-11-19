@@ -13,15 +13,14 @@ const CommentList = ({ comments }) => {
   }
   return (
     <div>
-      <FlatList
-        keyExtractor={(item, index) => index}
-        data={comments}
-        renderItem={element => <Comment comment={element.item} />}
-      />
+      <ul>
+        {comments.map(c => (
+          <li><Comment comment={c}/></li>))}
+      </ul>
     </div>
   );
 };
-const styles = StyleSheet.create({});
+const styles = {};
 
 CommentList.propTypes = {};
 

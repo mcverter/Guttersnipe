@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Mapdiv, { Marker, Callout } from "react-native-maps";
+// import Mapdiv, { Marker, Callout } from "react-native-maps";
 import PropTypes from "prop-types";
 
 class Map extends React.Component {
@@ -10,8 +10,8 @@ class Map extends React.Component {
 
   render() {
     const { center, zoom, shareables, navigation } = this.props;
-
-    return (
+    return (<div></div>);
+   /* return (
       <div style={styles.mapContainer}>
         <Mapdiv
           style={styles.map}
@@ -48,7 +48,7 @@ class Map extends React.Component {
           })}
         </Mapdiv>
       </div>
-    );
+    ); */
   }
 }
 
@@ -58,7 +58,7 @@ Map.propTypes = {
   navigation: PropTypes.object
 };
 
-const styles = StyleSheet.create({
+const styles = {
   mapContainer: {
     display: "flex",
     flex: 1,
@@ -75,6 +75,6 @@ const styles = StyleSheet.create({
     width: 500,
     height: 500
   }
-});
+};
 
 export default Map;

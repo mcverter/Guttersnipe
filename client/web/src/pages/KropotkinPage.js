@@ -66,11 +66,11 @@ class Kroptkin extends Component {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = {
   kropotkinQuoteButton: {},
   kropotkinParagraph: {},
   kropotkinPageContainer: {}
-});
+};
 
 const mapDispatchToProps = {};
 const mapStateToProps = state => state.kropotkin;

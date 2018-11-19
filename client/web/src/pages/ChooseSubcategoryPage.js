@@ -45,13 +45,13 @@ class ChooseSubcategoryPage extends Component {
     );
   }
 }
-const styles = StyleSheet.create({
+const styles = {
   chooseSubcategoryPageContainer: {
     backgroundColor: "red",
     height: "100%"
   },
   chooseSubcategoryButton: {}
-});
+};
 
 ChooseSubcategoryPage.propTypes = {};
 

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Mapdiv, { Marker, Callout } from "react-native-maps";
+//import Mapdiv, { Marker, Callout } from "react-native-maps";
 import { findCenterLatLng } from "../utils";
 
 class Map extends React.Component {
@@ -16,8 +16,8 @@ class Map extends React.Component {
       })
     );
     const zoom = 4;
-
-    return (
+return (<div></div>)
+  /*  return (
       <div style={styles.mapContainer}>
         <Mapdiv
           style={styles.map}
@@ -54,11 +54,11 @@ class Map extends React.Component {
           })}
         </Mapdiv>
       </div>
-    );
+    );*/
   }
 }
 
-const styles = StyleSheet.create({
+const styles = {
   mapContainer: {
     display: "flex",
     flex: 1,
@@ -71,6 +71,6 @@ const styles = StyleSheet.create({
     width: 500,
     height: 500
   }
-});
+};
 
 export default Map;

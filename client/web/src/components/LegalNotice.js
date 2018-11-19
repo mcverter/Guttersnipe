@@ -30,7 +30,7 @@ const LegalNotice = () => {
     </div>
   );
 };
-const styles = StyleSheet.create({
+const styles = {
   legalPanel: {
     borderColor: "black",
     borderWidth: 1,
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "#ff9933"
   }
-});
+};
 
 LegalNotice.propTypes = {};
 

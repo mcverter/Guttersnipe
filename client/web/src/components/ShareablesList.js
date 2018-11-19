@@ -3,45 +3,39 @@ import RaisedButton from "material-ui/RaisedButton";
 
 import Shareable from "./Shareable";
 
-export default (ShareablesList = ({ shareables, navigation }) => {
+const ShareablesList = ({ shareables, navigation }) => {
   return (
     <div>
-      <FlatList
-        style={styles.shareableList}
-        data={shareables}
-        renderItem={element => {
-          const item = element.item;
-          return (
-            <div style={styles.shareableItemContainer}>
-              <Shareable
-                style={styles.shareableItem}
-                shareable={item}
-                navigation={navigation}
-              />
-              <RaisedButton
-                style={styles.divDetailButton}
-                color="orange"
-                title="div Detail"
-                onPress={() => {
-                  navigation.navigate("ShareableDetailScreen", {
-                    shareable: item
-                  });
-                }}
-              />
-            </div>
-          );
-        }}
-        keyExtractor={(item, index) => `${index}`}
-      />
+      <ul>
+        {shareables.map(s=>(
+          <li>
+            <Shareable
+              style={styles.shareableItem}
+              navigation={navigation}
+              shareable={s}/>
+            <RaisedButton
+              style={styles.divDetailButton}
+              color="orange"
+              title="div Detail"
+              onPress={() => {
+                navigation.navigate("ShareableDetailScreen", {
+                  shareable: s
+                });
+              }}
+            />
+          </li>))}
+      </ul>
     </div>
   );
-});
+};
 
-const styles = StyleSheet.create({
+const styles = {
   divMapButton: {},
   divDetailButton: {},
   shareableListContainer: {},
   shareableList: {},
   shareableItemContainer: {},
   shareableItem: {}
-});
+};
+
+export default ShareablesList;

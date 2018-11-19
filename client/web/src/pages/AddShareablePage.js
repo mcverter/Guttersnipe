@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import RaisedButton from "material-ui/RaisedButton";
 
-import { utilOpenURL } from "../utils";
+//import { utilOpenURL } from "../utils";
 import GsText from "../components/GsText";
 
 import { connect } from "react-redux";
@@ -15,7 +15,7 @@ class addShareablePage extends Component {
     super(props);
   }
   _handlePress(url) {
-    Linking.canOpenURL(url)
+  /*  Linking.canOpenURL(url)
       .then(supported => {
         if (!supported) {
           console.log("Can't handle url: " + url);
@@ -24,6 +24,7 @@ class addShareablePage extends Component {
         }
       })
       .catch(err => console.error("An error occurred", err));
+      */
   }
 
   render() {
@@ -65,7 +66,7 @@ class addShareablePage extends Component {
   }
 }
 
-const styles = StyleSheet.create({
+const styles = {
   addShareablePageContainer: {
     backgroundColor: "black",
     height: "100%",
@@ -99,7 +100,7 @@ const styles = StyleSheet.create({
     fontWeight: "900",
     textAlign: "center"
   }
-});
+};
 
 addShareablePage.propTypes = {};
 export default addShareablePage;

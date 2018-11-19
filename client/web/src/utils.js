@@ -5,15 +5,6 @@ function degr2rad(degr) {
   return (degr * Math.PI) / 180;
 }
 
-// Opens a link
-export async function utilOpenURL(url) {
-  try {
-    await Linking.openURL(url);
-  } catch (error) {
-    console.log(error);
-  }
-}
-
 /**
  * @param latLngInDeg array of arrays with latitude and longtitude
  *   pairs in degrees. e.g. [[latitude1, longtitude1], [latitude2

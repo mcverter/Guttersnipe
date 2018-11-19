@@ -49,13 +49,13 @@ class ChooseCategoryPage extends Component {
     );
   }
 }
-const styles = StyleSheet.create({
+const styles = {
   chooseCategoryButton: {},
   chooseCategoryPageContainer: {
     backgroundColor: "black",
     height: "100%"
   }
-});
+};
 
 ChooseCategoryPage.propTypes = {};
 

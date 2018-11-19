@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 
-import Mapdiv, { Marker, Callout } from "react-native-maps";
+//import Mapdiv, { Marker, Callout } from "react-native-maps";
 import Shareable from "../components/Shareable";
 import CommentList from "../components/CommentList";
 
 /** TODO  remove comments */
-import comments from "../../redux/store/comments";
+import comments from "../shared/redux/store/comments";
 
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
@@ -22,7 +22,8 @@ class ShareableDetailPage extends Component {
   render() {
     const navigation = this.props.navigation;
     const shareable = navigation.getParam("shareable", "");
-
+  return (<div></div>);
+    /*
     return (
       <div style={styles.shareableDetailPageContainer}>
         <Shareable
@@ -55,10 +56,11 @@ class ShareableDetailPage extends Component {
         <CommentList style={styles.commentList} comments={shareable.comments} />
       </div>
     );
+    */
   }
 }
 
-const styles = StyleSheet.create({
+const styles = {
   shareableDetailPageContainer: {},
   shareableItem: {},
   commentList: {},
@@ -74,7 +76,7 @@ const styles = StyleSheet.create({
     height: 200,
     width: "100%"
   }
-});
+};
 
 ShareableDetailPage.propTypes = {};
 

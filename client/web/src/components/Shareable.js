@@ -53,7 +53,7 @@ const Shareable = ({ shareable, navigation }) => {
     </div>
   );
 };
-const styles = StyleSheet.create({
+const styles = {
   shareableContainer: {
     borderWidth: 2,
     margin: 2,
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row"
   }
-});
+};
 
 Shareable.propTypes = {};
 
