@@ -7,7 +7,6 @@ const shareableController = new shareableDB();
 router.get("/", function(req, res, next) {
   console.log("Hello Shareable Router");
   shareableController.selectShareablesList().then(function(collection) {
-    console.log("collection", collection);
     res.json({
       error: false,
       data: collection
@@ -21,7 +20,6 @@ router.get("/:id", function(req, res, next) {
   shareableController
     .selectShareableWithComments(req.params.id)
     .then(function(collection) {
-      console.log("collection", collection);
       res.json({
         error: false,
         data: collection
