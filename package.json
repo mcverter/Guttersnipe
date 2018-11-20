@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "npm run start-server",
-    "start-server": "node $NODE_DEBUG_OPTION ./server/bin/www",
+    "start-server": "node ./server/bin/www",
     "build-client": "cd ./client/web && npm run-script build",
     "seed": "node $NODE_DEBUG_OPTION ./db/seeds/SeederController.js",
     "test": "mocha $NODE_DEBUG_OPTION './test/**/*.spec.js'"
