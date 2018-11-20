@@ -4,8 +4,13 @@ const dbConfig = require("../../config/dbConfig");
 // NODE_ENV
 const client = new Client(dbConfig["test"]);
 const defaultState = require("./initialState");
-
-// client.connect();
+client.connect((err) => {
+  if (err) {
+    console.error('connection error', err.stack)
+  } else {
+    console.log('connected')
+  }
+})
 
 class ShareableController {
   async selectShareableWithComments(id) {
