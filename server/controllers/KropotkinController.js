@@ -4,7 +4,14 @@ const dbConfig = require("../../config/dbConfig");
 // NEED NODE_ENV
 const client = new Client(dbConfig["test"]);
 
-// client.connect();
+client.connect((err) => {
+  if (err) {
+    console.error('connection error', err.stack)
+  } else {
+    console.log('connected')
+  }
+})
+
 class KropotkinController {
   async selectRandomKropotkin() {
     const kropotkinRandomQueryFromFile = fs.readFileSync(
