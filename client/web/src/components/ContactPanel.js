@@ -1,6 +1,6 @@
 import React from "react";
 import RaisedButton from "material-ui/RaisedButton";
-
+import roadrunnerImage from "@assets/images/roadrunnerAtWaste.png";
 import GsText from "./GsText";
 
 // import { utilOpenURL } from "../utils";
@@ -20,8 +20,8 @@ const ContactPanel = () => {
       <RaisedButton onPress={sendMailToAdmin}>
         <img
           style={{ height: 50, alignSelf: "center" }}
-          source={require("../shared/assets/images/roadrunnerAtWaste.png")}
-        />
+          source={roadrunnerImage}
+        />qho
         <GsText style={styles.contactPanel}>
           email: roadrunner [at] waste [dot] org
         </GsText>

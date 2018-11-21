@@ -1,17 +1,15 @@
 {
   "presets": [
-    "latest",
-    "react",
-    "stage-1"
+    "@babel/env",
+    "@babel/react",
   ],
   "plugins": [
     "transform-object-rest-spread",
-    "transform-runtime"
+    "@babel/plugin-proposal-class-properties"
   ],
   "env": {
     "development": {
       "presets": [
-        "react-hmre"
       ]
     },
     "production": {

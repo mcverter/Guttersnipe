@@ -5,11 +5,12 @@ import FTK from "../components/FTK";
 import GsText from "../components/GsText";
 import LegalNotice from "../components/LegalNotice";
 import ContactPanel from "../components/ContactPanel";
+import guttersnipeVideo from "@assets/video/Guttersnipe.mp4";
 
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import RaisedButton from "material-ui/RaisedButton";
-const vid = require("../shared/assets/video/Guttersnipe.mp4")
+const vid = require("@assets/video/Guttersnipe.mp4")
 const videoIsVisible = false;
 
 class AboutPage extends Component {
