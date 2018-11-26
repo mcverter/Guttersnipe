@@ -3,5 +3,9 @@
     "sdkVersion": "27.0.0"
   },
   "name": "guttersnipe",
-  "displayName": "guttersnipe"
+  "displayName": "guttersnipe",
+  "packagerOpts": {
+    "projectRoots": "",
+    "config": "rn-cli.config.js"
+  }
 }

@@ -1,19 +1,7 @@
 import React, { Component } from "react";
 import RaisedButton from "material-ui/RaisedButton";
 
-//import { utilOpenURL } from "../utils";
-import GsText from "../components/GsText";
-
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
-
 class addShareablePage extends Component {
-  static navigationOptions = {
-    title: "Add Shareable"
-  };
-  constructor(props) {
-    super(props);
-  }
   _handlePress(url) {
   /*  Linking.canOpenURL(url)
       .then(supported => {

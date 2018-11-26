@@ -1,45 +1,29 @@
 import React, { Component } from "react";
-
-import GsButton from "../components/GsButton";
-
 import { connect } from "react-redux";
-import PropTypes from "prop-types";
+import {Link} from 'react-router-dom';
 
 class ChooseSubcategoryPage extends Component {
-  static navigationOptions = {
-    title: "Choose Subcategory"
-  };
-
-  constructor(props) {
-    super(props);
-  }
-
   render() {
-    const navigation = this.props.navigation;
-    const category = navigation.getParam("category", "");
+    let category = this.props.match.params["category"];
     const subcategories = this.props.categorization[category];
 
     return (
       <div style={styles.chooseSubcategoryPageContainer}>
         {subcategories.map(s => (
-          <GsButton
-            styleContainer={{
+          <div>
+            <div style={{
               backgroundColor: "black",
               padding: 20,
               margin: 25,
-              width: "80%"
-            }}
-            styleText={{ color: "red", fontWeight: "900", textAlign: "center" }}
-            key={s}
-            title={s}
-            onPress={() => {
-              this.props.navigation.navigate("ShareablesPage", {
-                subcategory: s
-              });
-            }}
-          >
-            {s}
-          </GsButton>
+              width: "80%",
+              color: "red",
+              fontWeight: "900",
+              textAlign: "center"
+            }}>
+              <Link to={`shareables/${s}`}>{s}</Link>
+            </div>
+          </div>
+
         ))}
       </div>
     );

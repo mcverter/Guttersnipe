@@ -20,7 +20,7 @@ const GSRouter = () => (
       <Route path="about" component={AboutPage} />
       <Route path="/shareable/:id" component={ShareableDetailPage} />
       <Route path="/category" component={ChooseCategoryPage} />
-      <Route path="/subcategory" component={ChooseSubcategoryPage} />
+      <Route path="/subcategory/:category" component={ChooseSubcategoryPage} />
       <Route path="/shareables" component={ShareablesPage} />
       <Route path="/add" component={AddShareablePage} />
     </Switch>

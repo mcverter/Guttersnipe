@@ -1,12 +1,8 @@
 import React, { Component } from "react";
 
-// import Mapdiv, { Marker, Callout } from "react-native-maps";
 import PropTypes from "prop-types";
 
-class Map extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+class Map extends Component {
 
   render() {
     const { center, zoom, shareables, navigation } = this.props;

@@ -19,3 +19,5 @@ function receiveShareableCategorization(json) {
     categorizationMeta: json
   };
 }
+
+

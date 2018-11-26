@@ -1,6 +1,10 @@
 import * as types from "../types";
 import initialState from "../store/initialState";
 
+function setCurrentCategory(category) {}
+function setCurrentSubcategory(subcategory) {}
+
+
 export default function categorization(
   categorization = initialState.categorization,
   action = {}

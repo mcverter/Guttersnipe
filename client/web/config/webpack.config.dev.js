@@ -149,8 +149,10 @@ module.exports = {
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web',
-      'redux-logic': path.resolve('../mobile', "src", "shared", "redux"),
-      '@assets': path.resolve('../mobile/src/shared/assets')
+      'redux-logic': path.resolve("../shared/redux"),
+      '@assets': path.resolve("../shared/assets"),
+      'Components': path.resolve("src/components"),
+      "Pages": path.resolve("src/pages")
     },
     plugins: [
       // Adds support for installing with Plug'n'Play, leading to faster installs and adding
@@ -187,7 +189,6 @@ module.exports = {
             options: {
               formatter: require.resolve('react-dev-utils/eslintFormatter'),
               eslintPath: require.resolve('eslint'),
-
             },
             loader: require.resolve('eslint-loader'),
           },

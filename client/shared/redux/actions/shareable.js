@@ -3,6 +3,17 @@ import find from "lodash.find";
 // import { SERVER_URL } from "../../config/api";
 let SERVER_URL = "http:/localhost:3000";
 // import fetch from "isomorphic-fetch";
+function applyGeographicalFilter() {}
+function applyCategoryFilter(){}
+function applySubcategoryFilter(){}
+let filters = [applyCategoryFilter, applyGeographicalFilter, applySubcategoryFilter]
+export function getFilteredShareables(allShareables) {
+  let filtered = allShareables;
+  filters.forEach(ffn => {
+    filtered = ffn.apply(null, filtered)
+  });
+  return filtered;
+}
 
 export function* currentShareablesSaga() {
   console.log("Hello World");

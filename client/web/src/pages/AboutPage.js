@@ -1,40 +1,19 @@
 import React, { Component } from "react";
-
-//import Video from "react-native-video";
 import FTK from "../components/FTK";
-import GsText from "../components/GsText";
 import LegalNotice from "../components/LegalNotice";
 import ContactPanel from "../components/ContactPanel";
-import guttersnipeVideo from "@assets/video/Guttersnipe.mp4";
-
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
 import RaisedButton from "material-ui/RaisedButton";
-const vid = require("@assets/video/Guttersnipe.mp4")
-const videoIsVisible = false;
+const vid = require("@assets/video/Guttersnipe.mp4");
 
 class AboutPage extends Component {
-  static navigationOptions = {
-    title: "About Guttersnipe"
-  };
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div style={styles.aboutPageContainer}>
-        <div style={styles.videoPanel}>
+        <div style={styles.videoPanel} >
           <div style={styles.videoContainer}>
-            <video
-              source={vid}
-              rate={1.0}
-              volume={1.0}
-              muted={false}
-              resizeMode="cover"
-              style={{ width: "100%", height: 200 }}
-              poster={"../../shared/assets/images/JoeStrummerGuttersnipe.png"}
-            />
+            <video style={{ width: "100%", height: 200 }}>
+              <source src={vid} type="video/mp4" />
+            </video>
           </div>
         </div>
 

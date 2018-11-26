@@ -24,9 +24,6 @@ const defaultParagraph = `
 `;
 
 class Kroptkin extends Component {
-  static navigationOptions = {
-    title: "The Conquest of Bread"
-  };
   constructor(props) {
     super(props);
     this.state = {

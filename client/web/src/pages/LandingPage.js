@@ -1,49 +1,24 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import {Link} from 'react-router-dom';
+import FTK from "../components/FTK";
 import RaisedButton from "material-ui/RaisedButton";
 
-import FTK from "../components/FTK";
-import GsButton from "../components/GsButton";
-import PropTypes from "prop-types";
-
 class LandingPage extends Component {
-  static navigationOptions = {
-    title: "Welcome to Guttersnipe"
-  };
-
-  constructor(props) {
-    super(props);
-  }
-
-  componentDidMount() {
-    console.log("foo");
-    this.props.onRequestDog();
-  }
   render() {
-    const user = this.props.user;
     const navigation = this.props.navigation;
     return (
       <div style={styles.landingPageContainer}>
         <div style={styles.searchShareablesButtonContainer}>
-          <GsButton
-            styleContainer={{ backgroundColor: "red", padding: 20 }}
-            styleText={{ color: "black", fontWeight: "700" }}
-            color="#910f0f"
-            accessibilityLabel="Click here to start search"
-            title="Search Shareables"
-            onPress={() => navigation.navigate("ChooseCategoryPage")}
-          />
-        </div>
-
-        <div style={styles.searchShareablesButtonContainer}>
-          <GsButton
-            styleContainer={{ backgroundColor: "red", padding: 20 }}
-            styleText={{ color: "black", fontWeight: "700" }}
-            color="#910f0f"
-            accessibilityLabel="Click here to add shareable"
-            title="Add Shareables"
-            onPress={() => navigation.navigate("AddShareablePage")}
-          />
+          <div>
+            <RaisedButton><Link to="/category">Choose Category</Link></RaisedButton>
+          </div>
+          <div>
+            <RaisedButton><Link to="/location">Set Location</Link></RaisedButton>
+          </div>
+          <div>
+            <RaisedButton><Link to="/add"> Add Shareables</Link></RaisedButton>
+          </div>
         </div>
 
         <RaisedButton
@@ -55,6 +30,7 @@ class LandingPage extends Component {
       </div>
     );
   }
+
 }
 const styles = {
   landingPageContainer: {

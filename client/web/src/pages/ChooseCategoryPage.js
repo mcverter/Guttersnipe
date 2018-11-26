@@ -1,18 +1,13 @@
 import React, { Component } from "react";
-
-import GsButton from "../components/GsButton";
-
+import {Link} from 'react-router-dom';
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
 class ChooseCategoryPage extends Component {
-  static navigationOptions = {
-    title: "Choose Category"
-  };
-  constructor(props) {
-    super(props);
-  }
+  _setCategory(category) {
+    
 
+  }
   render() {
     const categorization = this.props.categorization;
 
@@ -22,28 +17,22 @@ class ChooseCategoryPage extends Component {
           <div>Choose a Category</div>
         </div>
         {Object.keys(categorization).map(c => (
-          <GsButton
-            styleContainer={{
-              backgroundColor: "red",
-              padding: 20,
-              margin: 25,
-              width: "80%"
-            }}
-            styleText={{
-              color: "black",
-              fontWeight: "900",
-              textAlign: "center"
-            }}
-            key={c}
-            title={c}
-            onPress={() => {
-              this.props.navigation.navigate("ChooseSubcategoryPage", {
-                category: c
-              });
-            }}
-          >
-            {c}
-          </GsButton>
+          <div>
+            <div>
+              <div style={{
+                backgroundColor: "red",
+                padding: 20,
+                margin: 25,
+                width: "80%",
+                color: "black",
+                fontWeight: "900",
+                textAlign: "center"
+
+              }}>
+                <Link to={`subcategory/${c}`}>{c}</Link>
+              </div>
+            </div>
+          </div>
         ))}
       </div>
     );
@@ -57,11 +46,9 @@ const styles = {
   }
 };
 
-ChooseCategoryPage.propTypes = {};
+ChooseCategoryPage.propTypes = {
+  categorizations: PropTypes.object,
+};
 
-const mapDispatchToProps = {};
 const mapStateToProps = state => state.categorization;
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ChooseCategoryPage);
+export default connect(mapStateToProps)(ChooseCategoryPage);

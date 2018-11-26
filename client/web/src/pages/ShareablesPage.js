@@ -4,7 +4,6 @@ import ShareablesList from "../components/ShareablesList";
 import ShareablesMap from "../components/ShareablesMap";
 
 import { connect } from "react-redux";
-import PropTypes from "prop-types";
 
 class ShareableResultsTabContainer extends Component {
   static navigationOptions = {
