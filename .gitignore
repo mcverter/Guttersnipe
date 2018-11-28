@@ -9,7 +9,6 @@ older/
 
 selenium/
 tutorials/
-__tutorials__/
 
 package-lock.json
 yarn.lock

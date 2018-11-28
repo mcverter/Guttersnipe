@@ -1,11 +1,13 @@
 import rootReducer from "";
 import ReduxComponentConnect from "./ReduxComponent";
+const sagaMiddleware = createSagaMiddleWare();
 
 const store = createStore(
   rootReducer,
-//  window.__REDUX
+//  window.__REDUX,
+  applyMiddleware(sagaMiddleware)
 );
-
+sagaMiddleware.run();
 render(
   <Provider store={store}>
     <Router history={browserHistory}>
