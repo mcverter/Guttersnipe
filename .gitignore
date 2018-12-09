@@ -25,7 +25,6 @@ node_modules
 errors.txt
 
 # JetBrains
-*.xml
 .idea
 .vscode
 
