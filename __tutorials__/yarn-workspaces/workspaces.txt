@@ -1,0 +1,333 @@
+
+How to use yarn workspaces with Create React App and Create React Native App (Expo) to share common code across
+Go to the profile of Darío Javier Cravero
+Darío Javier Cravero
+Dec 2, 2017
+The goal of this tutorial is to make a monorepo using yarn workspaces to share common code across a Create React App (CRA) and a Create React Native App (CRNA/Expo).
+
+There are currently some issues with the projects that when fixed, these workarounds shouldn’t be needed anymore:
+
+facebook/metro#1,
+react-community/create-react-native-app#232,
+react-community/create-react-native-app#340,
+react-community/create-react-native-app#408,
+facebookincubator/create-react-app#3405,
+facebookincubator/create-react-app#3435,
+yarnpkg/yarn#3882.
+Some of the solutions below may also help for lerna setups.
+
+Pre-requisites
+Make sure you’re running node ~ version 8 and at least yarn 1.3.0 and have create-react-app and create-react-native-app installed.
+
+Setup workspaces
+In this guide, we’ll setup four folders but feel free to structure it as you see fit:
+
+web the CRA project,
+native the CRNA project,
+core common logic, and
+views for shared UI.
+Make a new folder where you want your workspaces to be and add a package.json that looks like this:
+
+{
+  "private": true,
+  "workspaces": [
+    "web",
+    "native",
+    "core",
+    "views"
+  ]
+}
+For the rest of this guide, we’re going to assume that this folder is called workspaces and it's in your home directory. We will refer to it as ~/workspaces.
+
+Setup core
+core in our example will be just an empty project. Make a core folder and put this package.json inside:
+
+{
+  "name": "core",
+  "version": "0.0.1"
+}
+Let’s put a few sample files in there to use as a test. We’ll also leverage the project specific extensions in web and native.
+
+test.js:
+
+import value from './value'
+export default value
+value.native.js:
+
+export default 'value in native'
+value.web.js:
+
+export default 'value in web'
+Setup views
+We will use Views for our UI. If you want to use React directly, you may still benefit from this folder by putting shared components across your projects here. Otherwise, just skip this section.
+
+views is where our UI sits. Make a views folder and put this package.json inside:
+
+{
+  "name": "views",
+  "version": "0.0.1",
+  "scripts": {
+    "native": "views-morph . --as react-native --watch",
+    "native:build": "views-morph . --as react-native",
+    "web": "views-morph . --as react-dom --watch",
+    "web:build": "views-morph . --as react-dom"
+  }
+}
+Then add the latest views-morph to it:
+
+yarn add --dev views-morph
+Add a file called Test.view with this:
+
+Test Vertical
+backgroundColor deepskyblue
+margin 50
+onClick props.onClick
+Text
+fontSize 28
+text Hey I'm a button!
+Views uses some CSS defaults that make it behave close to how React Native renders the UI, add them by copying views.css to src/index.css.
+
+Views is a productive way to create interfaces together with your design team and design in production. If you want to learn more about it, reach out at https://twitter.com/viewsdx or join the conversation at https://slack.viewsdx.com:).
+
+Web
+There are some issues with running CRA’s init scripts inside the workspace, so just go to a temporary folder anywhere and make a new project:
+
+# go to some temporary location
+cd /tmp
+# make the app
+create-react-app web
+# get rid of node modules and yarn.lock
+rm -rf web/node_modules yarn.lock
+# move it to the workspaces
+mv web ~/workspaces
+cd ~/workspaces/web
+The next step is to have CRA compile your other workspaces code if they’re imported by your app.
+
+Install react-app-rewired and react-app-rewire-yarn-workspaces in the web project:
+
+yarn add --dev react-app-rewired react-app-rewire-yarn-workspaces
+Swap the start, build, and test scripts in package.json for these:
+
+"start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+And add a file called config-overrides.js with this:
+
+const rewireYarnWorkspaces = require('react-app-rewire-yarn-workspaces');
+module.exports = function override(config, env) {
+  return rewireYarnWorkspaces(config, env);
+};
+To test the connection with core, add this to src/App.js:
+
+import test from 'core/test'
+alert(test)
+If you’re using Views, test it by overwriting App.js with this:
+
+import React, {Component} from 'react';
+import test from 'core/test';
+import Test from 'views/Test.view.js';
+alert(test);
+class App extends Component {
+  render() {
+    return <Test onClick={() => alert('just clicked a button!')} />;
+  }
+}
+export default App;
+Native
+There are some issues with running CRNA’s init scripts inside the workspace, so just go to a temporary folder anywhere and make a new project:
+
+# go to some temporary location
+cd /tmp
+# make the app
+create-react-native-app native
+# get rid of node modules and yarn.lock
+rm -rf native/node_modules yarn.lock
+# move it to the workspaces
+mv native ~/workspaces
+cd ~/workspaces/native
+We’ll first need to swap CRNA’s entry point because the way it picks up our App.js is very much dependent on the location of files, so it's easier this way. We'll call that file crna-entry.js.
+
+Either get the original file from here. If you do, make sure you change import App from '../../../../App'; for import App from './App'; so it picks up your app.
+
+…or, use this version want to avoid wrapping your app in a View. Add a file called crna-entry.js with this:
+
+import App from './App';
+import Expo from 'expo';
+import React from 'react';
+const AwakeInDevApp = props => [
+  <App key="app" {...props} />,
+  process.env.NODE_ENV === 'development' ? (
+    <Expo.KeepAwake key="keep-awake" />
+  ) : null,
+];
+Expo.registerRootComponent(AwakeInDevApp);
+After that, in package.json, replace:
+
+"main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+for:
+
+"main": "crna-entry.js",
+Then, replace app.json for this:
+
+{
+  "expo": {
+    "sdkVersion": "23.0.0",
+    "ignoreNodeModulesValidation": true,
+    "packagerOpts": {
+      "config": "rn-cli.config.js",
+      "projectRoots": ""
+    }
+  }
+}
+Note that this guide was created when Expo’s SDK was at v23.0.0. If your app.json has a different version, use that instead.
+
+Install metro-bundler-config-yarn-workspaces and crna-make-symlinks-for-yarn-workspaces:
+
+yarn add --dev metro-bundler-config-yarn-workspaces crna-make-symlinks-for-yarn-workspaces
+Add a file called rn-cli.config.js with this:
+
+const getConfig = require('metro-bundler-config-yarn-workspaces')
+module.exports = getConfig(__dirname)
+Add a file called link-workspaces.js with this:
+
+require('crna-make-symlinks-for-yarn-workspaces')(__dirname)
+Add prestart script to your native project's package.json:
+
+"prestart": "node link-workspaces.js",
+To test the connection with core, add this to App.js:
+
+import test from 'core/test'
+alert(test)
+If you’re using Views, test it by overwriting App.js with this:
+
+import React, {Component} from 'react';
+import test from 'core/test';
+import Test from 'views/Test.view.js';
+alert(test);
+class App extends Component {
+  render() {
+    return <Test onClick={() => alert('just clicked a button!')} />;
+  }
+}
+export default App;
+If you get an error like Cannot find entry file crna-entry.js in any of the roots..., press shift+R when you start the expo runner so it restarts the packager and clears the cache.
+
+Part of the setup may also come in handy for React Native CLI. See this comment. I also wanted to thank Neil Ding @GingerBear for his gist, without it metro-bundler-config-yarn-workspaces wouldn’t be possible.
+
+Before starting the apps…
+At this point, I’d probably recommend wiping all the node_modules of each project and starting from scratch:
+
+cd ~/workspaces
+rm -rf node_modules core/node_modules views/node_modules native/node_modules web/node_modules
+yarn
+Dependencies are still added to the different project folders.
+
+If you’re using Views, you need to start the morpher by project type until viewsdx/morph#31 is implemented.
+
+For web, in the views folder, run:
+
+yarn web
+For native, in the views folder, run:
+
+yarn native
+We’ll be providing a concurrent process runner like the one implemented in https://github.com/viewsdx/use soon.
+
+I hope the process works for you! Here’s the GitHub repo that contains a sample project and the supporting dev packages used in here. If you find any issues or have suggestions around some of the steps, feel free to comment in here or open an issue on the repo.
+
+Thanks to Larissa and Neil for their help 🙏.
+
+Happy hacking!
+
+JavaScriptReactReact NativeExpo
+Go to the profile of Darío Javier Cravero
+Darío Javier Cravero
+Making Views Tools, a simple, fast way to design, build and change interfaces together https://views.tools
+
+Views Tools
+Views Tools
+Become better at building interfaces
+
+More from Views Tools
+Building an app in Views and React
+Go to the profile of Tom Parandyk
+Tom Parandyk
+More from Views Tools
+The easiest way I know to replace icons in a React app
+Go to the profile of Tom Parandyk
+Tom Parandyk
+Also tagged Expo
+E2E Testing React Native with Detox + Screenshots
+Go to the profile of Carlo
+Carlo
+Responses
+Conversation between m0a and Darío Javier Cravero.
+Go to the profile of m0a
+m0a
+Feb 14
+Thanks for your awesome tutorial!
+If that’s all right with you, May I translate in Japanese ?
+
+Go to the profile of Darío Javier Cravero
+Darío Javier Cravero
+Feb 14
+That would be amazing! Of course you can do it :) Thanks for your help!
+
+Applause from Darío Javier Cravero (author)
+Go to the profile of Reginald Johnson
+Reginald Johnson
+Aug 3
+Great article! I think there definitely needs to be a way for native, web, and whatever else may come to share business logic like this.
+
+I found that on my Windows machine I had to manually run “npm run prestart” as an administrator in order to create symlinks in the react-native project’s node-modules directory. Hopefully…
+
+Conversation between Andy McVitty and Darío Javier Cravero.
+Go to the profile of Andy McVitty
+Andy McVitty
+Feb 16
+Thanks Darío for this. Super helpful.
+
+I ran into an issue and submitted a PR to update the metro-bundler to metro.
+
+https://github.com/viewstools/yarn-workspaces-cra-crna/pull/12
+
+One thing I don’t completely understand here is the magic that pulls the right version of the…
+
+Go to the profile of Darío Javier Cravero
+Darío Javier Cravero
+Feb 23
+Hey Andy,
+
+Sorry for the late reply. Thanks for your PR, I didn’t realised metro-bundler had been renamed to metro. I’ve just merged it and released a new version of metro-bundler-config-yarn-workspaces with it.
+
+As for your question on the platform specific extensions, you’re right, it’s the bundler…
+
+Conversation with Darío Javier Cravero.
+Go to the profile of Aleksey Karpenko
+Aleksey Karpenko
+Mar 7
+Thx for your tutorial!
+
+Have u ever faced with this Jest issue: https://github.com/facebook/jest/issues/5325
+
+I’ve got it right after implementing your example and running `yarn test`…
+
+Go to the profile of Darío Javier Cravero
+Darío Javier Cravero
+Mar 17
+Does this work for you https://github.com/viewstools/yarn-workspaces-cra-crna/pull/8/files?
+
+Conversation with Darío Javier Cravero.
+Go to the profile of Rafael Rozon
+Rafael Rozon
+Mar 17
+Thank you for the excellent tutorial. It helped me a lot. I’m writing a tutorial on a similar topic, is it ok if I mention your article as one of my sources?
+
+Thank you.
+
+Go to the profile of Darío Javier Cravero
+Darío Javier Cravero
+Mar 17
+Definitely :)!
+
+Views Tools
+Never miss a story from Views Tools, when you sign up for Medium. Learn more

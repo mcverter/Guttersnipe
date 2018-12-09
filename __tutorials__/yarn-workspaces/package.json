@@ -1,0 +1,13 @@
+{
+				"private": true,
+				"workspaces": [
+								"web",
+								"native",
+								"shared",
+								"views"
+				],
+				"name": "yarn-workspaces",
+				"version": "1.0.0",
+				"main": "index.js",
+				"license": "MIT"
+}
