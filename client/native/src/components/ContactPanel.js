@@ -12,6 +12,7 @@ import GsText from "./GsText";
 import { utilOpenURL } from "../utils";
 
 import PropTypes from "prop-types";
+import roadrunnerAtWaste from "../../guttersnipe-shared/assets/images/roadrunnerAtWaste.png";
 
 const sendMailToAdmin = () => {
   utilOpenURL("mailto:roadrunner@waste.org");
@@ -26,7 +27,7 @@ const ContactPanel = () => {
       <TouchableOpacity onPress={sendMailToAdmin}>
         <Image
           style={{ height: 50, alignSelf: "center" }}
-          source={require("../shared/assets/images/roadrunnerAtWaste.png")}
+          source={roadrunnerAtWaste}
         />
         <GsText style={styles.contactPanel}>
           email: roadrunner [at] waste [dot] org

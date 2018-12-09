@@ -15,6 +15,8 @@ import ContactPanel from "../components/ContactPanel";
 
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
+import guttersnipeVideo from "../../guttersnipe-shared/assets/video/Guttersnipe.mp4";
+import guttersnipePoster from "../../guttersnipe-shared/assets/images/JoeStrummerGuttersnipe.png";
 
 const videoIsVisible = false;
 
@@ -32,13 +34,13 @@ class AboutScreen extends Component {
         <View style={styles.videoPanel}>
           <View style={styles.videoContainer}>
             <Video
-              source={require("./zideo/Guttersnipe.mp4")}
+              source={guttersnipeVideo}
               rate={1.0}
               volume={1.0}
               muted={false}
               resizeMode="cover"
               style={{ width: "100%", height: 200 }}
-              poster={"../shared/assets/images/JoeStrummerGuttersnipe.png"}
+              poster={guttersnipePoster}
             />
           </View>
         </View>

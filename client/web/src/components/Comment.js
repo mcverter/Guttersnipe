@@ -1,25 +1,9 @@
 import React from "react";
-
 import GsText from "./GsText";
-
 import PropTypes from "prop-types";
 
-let commentText = "foo";
-const mitchell_comment = {
-  comment_text: commentText,
-  author_id: 5,
-  author_name: "mitchell",
-  author_role: "admin",
-  comment_id: "2",
-  date_posted: "November 26 1998",
-  comment_title: commentText
-    .split(" ")
-    .slice(0, 3)
-    .join(" ")
-};
-
 const Comment = props => {
-  const comment = props.comment || mitchell_comment;
+  const comment = props.comment || mitchellComment();
   const {
     author_id,
     author_name,
@@ -37,17 +21,14 @@ const Comment = props => {
         <GsText style={styles.commentText}>{comment_text}</GsText>
       </div>
       <div>
-        <GsText
-          style={styles.commentAuthor}
-        >{`Posted by ${author_name} on ${date_posted}`}</GsText>
+        <GsText style={styles.commentAuthor}>
+          {`Posted by ${author_name} on ${date_posted}`}
+        </GsText>
       </div>
     </div>
   );
 };
 
-/*
-
- */
 const styles = {
   commentAuthor: {
     fontStyle: "italic",
@@ -66,3 +47,22 @@ const styles = {
 Comment.propTypes = {};
 
 export default Comment;
+
+const mitchellComment = () => {
+  let commentText = "foo";
+  const mitchell_comment = {
+    comment_text: commentText,
+    author_id: 5,
+    author_name: "mitchell",
+    author_role: "admin",
+    comment_id: "2",
+    date_posted: "November 26 1998",
+    comment_title: commentText
+      .split(" ")
+      .slice(0, 3)
+      .join(" ")
+  };
+
+  return mitchell_comment;
+}
+

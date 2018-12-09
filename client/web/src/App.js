@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
-import rootReducer from "redux-logic/reducers";
+import rootReducer from "@guttersnipe-shared/redux/reducers";
 import createSagaMiddleware from "redux-saga";
 import logo from "./logo.svg";
 import "./App.css";

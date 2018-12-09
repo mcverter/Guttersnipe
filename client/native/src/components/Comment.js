@@ -1,7 +1,6 @@
 import React from "react";
 import { View, Image, StyleSheet } from "react-native";
 import GsText from "../components/GsText";
-
 import PropTypes from "prop-types";
 
 let commentText = "foo bar";
@@ -64,3 +63,18 @@ const styles = StyleSheet.create({
 Comment.propTypes = {};
 
 export default Comment;
+
+function defaultComment() {
+  return {
+    comment_text: "foo bar",
+    author_id: 5,
+    author_name: "mitchell",
+    author_role: "admin",
+    comment_id: "2",
+    date_posted: "November 26 1998",
+    comment_title: commentText
+      .split(" ")
+      .slice(0, 3)
+      .join(" ")
+  };
+}

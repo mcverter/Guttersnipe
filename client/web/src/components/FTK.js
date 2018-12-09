@@ -1,10 +1,9 @@
 import React from "react";
-
 import PropTypes from "prop-types";
 
-const FTK = ({ style }) => {
+const FTK = () => {
   return (
-    <div style={style}>
+    <div style={styles.ftkContainer}>
       *********
       {"\n"}
       !! FOR !!

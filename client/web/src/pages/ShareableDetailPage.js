@@ -5,7 +5,9 @@ import Shareable from "../components/Shareable";
 import CommentList from "../components/CommentList";
 
 /** TODO  remove comments */
-import comments from "redux-logic/store/comments";
+import comments from "@guttersnipe-shared/redux/store/comments";
+
+    //"@guttersnipe-shareable/redux/store/comments";
 
 import { connect } from "react-redux";
 import PropTypes from "prop-types";

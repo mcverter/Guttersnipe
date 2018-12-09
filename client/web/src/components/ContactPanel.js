@@ -1,15 +1,11 @@
 import React from "react";
 import RaisedButton from "material-ui/RaisedButton";
-import roadrunnerImage from "@assets/images/roadrunnerAtWaste.png";
+import roadrunnerImage from "@guttersnipe-shared/assets/images/roadrunnerAtWaste.png";
 import GsText from "./GsText";
-
-// import { utilOpenURL } from "../utils";
 
 import PropTypes from "prop-types";
 
-const sendMailToAdmin = () => {
-  // utilOpenURL("mailto:roadrunner@waste.org");
-};
+const sendMailToAdmin = () => {};
 
 const ContactPanel = () => {
   return (
@@ -20,7 +16,7 @@ const ContactPanel = () => {
       <RaisedButton onPress={sendMailToAdmin}>
         <img
           style={{ height: 50, alignSelf: "center" }}
-          source={roadrunnerImage}
+          src={roadrunnerImage}
         />qho
         <GsText style={styles.contactPanel}>
           email: roadrunner [at] waste [dot] org
