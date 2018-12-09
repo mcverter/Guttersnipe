@@ -1,4 +1,6 @@
-gsnipe-env
+# built files
+client/native/android/app/build
+.gradle
 
 doc/
 z_older/
@@ -42,3 +44,4 @@ notes.txt
 yarn-error.log
 yarn.lock
 client/yarn.lock
+

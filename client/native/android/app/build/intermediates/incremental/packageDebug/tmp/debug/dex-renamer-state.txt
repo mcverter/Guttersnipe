@@ -1,4 +1,0 @@
-#Fri Dec 07 20:03:37 EST 2018
-base.0=/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/transforms/dexMerger/debug/0
-renamed.0=classes.dex
-path.0=classes.dex
