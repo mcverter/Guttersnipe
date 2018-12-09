@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable-v21/notification_action_background.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/b7a3e36a31e10a687c7861b787ec2abe/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable-v21/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable-v21/abc_edit_text_material.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable-v21/abc_edit_text_material.xml"
+    }
+]

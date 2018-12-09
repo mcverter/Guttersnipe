@@ -1,0 +1,218 @@
+[
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_ic_go_search_api_material.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/notification_bg.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/b7a3e36a31e10a687c7861b787ec2abe/res/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_switch_thumb_material.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_cab_background_top_material.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_spinner_textfield_background_material.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_btn_check_material.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_btn_check_material.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_ratingbar_small_material.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/tooltip_frame_dark.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/tooltip_frame_dark.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/common_google_signin_btn_icon_disabled.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.4.aar/df46a7aee1d6b13529b6bdc637a581d5/res/drawable/common_google_signin_btn_icon_disabled.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_btn_default_mtrl_shape.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_textfield_search_material.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/common_google_signin_btn_text_light_focused.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.4.aar/df46a7aee1d6b13529b6bdc637a581d5/res/drawable/common_google_signin_btn_text_light_focused.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/common_google_signin_btn_text_disabled.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.4.aar/df46a7aee1d6b13529b6bdc637a581d5/res/drawable/common_google_signin_btn_text_disabled.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_seekbar_track_material.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/common_google_signin_btn_text_light_normal.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.4.aar/df46a7aee1d6b13529b6bdc637a581d5/res/drawable/common_google_signin_btn_text_light_normal.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/common_google_signin_btn_text_light.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.4.aar/df46a7aee1d6b13529b6bdc637a581d5/res/drawable/common_google_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/notification_tile_bg.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/b7a3e36a31e10a687c7861b787ec2abe/res/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_item_background_holo_dark.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/common_google_signin_btn_text_dark_focused.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.4.aar/df46a7aee1d6b13529b6bdc637a581d5/res/drawable/common_google_signin_btn_text_dark_focused.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_btn_colored_material.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/common_google_signin_btn_icon_dark_normal.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.4.aar/df46a7aee1d6b13529b6bdc637a581d5/res/drawable/common_google_signin_btn_icon_dark_normal.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_list_selector_holo_dark.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_list_selector_holo_light.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_list_selector_background_transition_holo_dark.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_ic_menu_overflow_material.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/common_google_signin_btn_text_dark_normal.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.4.aar/df46a7aee1d6b13529b6bdc637a581d5/res/drawable/common_google_signin_btn_text_dark_normal.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_item_background_holo_light.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/common_google_signin_btn_icon_light_normal.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.4.aar/df46a7aee1d6b13529b6bdc637a581d5/res/drawable/common_google_signin_btn_icon_light_normal.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_ic_ab_back_material.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_tab_indicator_material.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/common_google_signin_btn_icon_dark_focused.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.4.aar/df46a7aee1d6b13529b6bdc637a581d5/res/drawable/common_google_signin_btn_icon_dark_focused.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/common_google_signin_btn_icon_dark.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.4.aar/df46a7aee1d6b13529b6bdc637a581d5/res/drawable/common_google_signin_btn_icon_dark.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/common_google_signin_btn_text_dark.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.4.aar/df46a7aee1d6b13529b6bdc637a581d5/res/drawable/common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/common_google_signin_btn_icon_light.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.4.aar/df46a7aee1d6b13529b6bdc637a581d5/res/drawable/common_google_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_ic_search_api_material.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_edit_text_material.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_ratingbar_indicator_material.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_vector_test.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_vector_test.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_ic_clear_material.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_ic_clear_material.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_seekbar_thumb_material.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_seekbar_tick_mark_material.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_seekbar_tick_mark_material.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/notification_bg_low.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/b7a3e36a31e10a687c7861b787ec2abe/res/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_dialog_material_background.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_btn_borderless_material.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/notification_icon_background.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/b7a3e36a31e10a687c7861b787ec2abe/res/drawable/notification_icon_background.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_text_cursor_material.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_list_selector_background_transition_holo_light.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_btn_radio_material.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/tooltip_frame_light.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/tooltip_frame_light.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_ic_voice_search_api_material.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/common_google_signin_btn_icon_light_focused.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/play-services-base-10.2.4.aar/df46a7aee1d6b13529b6bdc637a581d5/res/drawable/common_google_signin_btn_icon_light_focused.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_cab_background_internal_bg.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/guttersnipe/android/app/build/intermediates/res/merged/release/drawable/abc_ratingbar_material.xml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/d1b57517ed65317a88df6ef1e8aef0d9/res/drawable/abc_ratingbar_material.xml"
+    }
+]

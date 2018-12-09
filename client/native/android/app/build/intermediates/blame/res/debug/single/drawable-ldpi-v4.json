@@ -1,0 +1,54 @@
+[
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/exo_controls_repeat_one.png",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/exoplayer-ui-2.7.3.aar/773f937c82b74348640f93df02853eb0/res/drawable-ldpi-v4/exo_controls_repeat_one.png"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/exo_controls_fastforward.png",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/exoplayer-ui-2.7.3.aar/773f937c82b74348640f93df02853eb0/res/drawable-ldpi-v4/exo_controls_fastforward.png"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/exo_controls_fullscreen_exit.png",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/exoplayer-ui-2.7.3.aar/773f937c82b74348640f93df02853eb0/res/drawable-ldpi-v4/exo_controls_fullscreen_exit.png"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/exo_controls_play.png",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/exoplayer-ui-2.7.3.aar/773f937c82b74348640f93df02853eb0/res/drawable-ldpi-v4/exo_controls_play.png"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/exo_controls_shuffle.png",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/exoplayer-ui-2.7.3.aar/773f937c82b74348640f93df02853eb0/res/drawable-ldpi-v4/exo_controls_shuffle.png"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/exo_controls_previous.png",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/exoplayer-ui-2.7.3.aar/773f937c82b74348640f93df02853eb0/res/drawable-ldpi-v4/exo_controls_previous.png"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/exo_controls_rewind.png",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/exoplayer-ui-2.7.3.aar/773f937c82b74348640f93df02853eb0/res/drawable-ldpi-v4/exo_controls_rewind.png"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/exo_controls_repeat_off.png",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/exoplayer-ui-2.7.3.aar/773f937c82b74348640f93df02853eb0/res/drawable-ldpi-v4/exo_controls_repeat_off.png"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/exo_edit_mode_logo.png",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/exoplayer-ui-2.7.3.aar/773f937c82b74348640f93df02853eb0/res/drawable-ldpi-v4/exo_edit_mode_logo.png"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/exo_controls_pause.png",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/exoplayer-ui-2.7.3.aar/773f937c82b74348640f93df02853eb0/res/drawable-ldpi-v4/exo_controls_pause.png"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/exo_controls_next.png",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/exoplayer-ui-2.7.3.aar/773f937c82b74348640f93df02853eb0/res/drawable-ldpi-v4/exo_controls_next.png"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/exo_controls_repeat_all.png",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/exoplayer-ui-2.7.3.aar/773f937c82b74348640f93df02853eb0/res/drawable-ldpi-v4/exo_controls_repeat_all.png"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/drawable-ldpi-v4/exo_controls_fullscreen_enter.png",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/exoplayer-ui-2.7.3.aar/773f937c82b74348640f93df02853eb0/res/drawable-ldpi-v4/exo_controls_fullscreen_enter.png"
+    }
+]

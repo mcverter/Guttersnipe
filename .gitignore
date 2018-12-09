@@ -1,8 +1,6 @@
 gsnipe-env
 
-ios/
 doc/
-android/
 z_older/
 .z_older/
 older/
@@ -45,7 +43,3 @@ notes.txt
 yarn-error.log
 yarn.lock
 client/yarn.lock
-
-android/app/build/
-guttersnipe/android/.gradle/
-guttersnipe/android/app/build/

@@ -1,0 +1,82 @@
+[
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/raw/amu_unsupported.kml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/63efb2d276b81aa6959fa2c4b58adfda/res/raw/amu_unsupported.kml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/raw/amu_poly_style_boolean_numeric.kml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/63efb2d276b81aa6959fa2c4b58adfda/res/raw/amu_poly_style_boolean_numeric.kml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/raw/amu_extended_data.kml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/63efb2d276b81aa6959fa2c4b58adfda/res/raw/amu_extended_data.kml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/raw/amu_ground_overlay.kml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/63efb2d276b81aa6959fa2c4b58adfda/res/raw/amu_ground_overlay.kml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/raw/amu_unknwown_folder.kml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/63efb2d276b81aa6959fa2c4b58adfda/res/raw/amu_unknwown_folder.kml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/raw/amu_draw_order_ground_overlay.kml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/63efb2d276b81aa6959fa2c4b58adfda/res/raw/amu_draw_order_ground_overlay.kml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/raw/amu_basic_placemark.kml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/63efb2d276b81aa6959fa2c4b58adfda/res/raw/amu_basic_placemark.kml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/raw/amu_multigeometry_placemarks.kml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/63efb2d276b81aa6959fa2c4b58adfda/res/raw/amu_multigeometry_placemarks.kml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/raw/amu_basic_folder.kml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/63efb2d276b81aa6959fa2c4b58adfda/res/raw/amu_basic_folder.kml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/raw/amu_ballon_gx_prefix.kml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/63efb2d276b81aa6959fa2c4b58adfda/res/raw/amu_ballon_gx_prefix.kml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/raw/amu_cdata.kml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/63efb2d276b81aa6959fa2c4b58adfda/res/raw/amu_cdata.kml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/raw/amu_ground_overlay_color.kml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/63efb2d276b81aa6959fa2c4b58adfda/res/raw/amu_ground_overlay_color.kml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/raw/amu_multiple_placemarks.kml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/63efb2d276b81aa6959fa2c4b58adfda/res/raw/amu_multiple_placemarks.kml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/raw/amu_poly_style_boolean_alpha.kml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/63efb2d276b81aa6959fa2c4b58adfda/res/raw/amu_poly_style_boolean_alpha.kml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/raw/amu_inline_style.kml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/63efb2d276b81aa6959fa2c4b58adfda/res/raw/amu_inline_style.kml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/raw/amu_document_nest.kml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/63efb2d276b81aa6959fa2c4b58adfda/res/raw/amu_document_nest.kml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/raw/amu_nested_multigeometry.kml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/63efb2d276b81aa6959fa2c4b58adfda/res/raw/amu_nested_multigeometry.kml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/raw/amu_nested_folders.kml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/63efb2d276b81aa6959fa2c4b58adfda/res/raw/amu_nested_folders.kml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/raw/amu_default_balloon.kml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/63efb2d276b81aa6959fa2c4b58adfda/res/raw/amu_default_balloon.kml"
+    },
+    {
+        "merged": "/home/mitchell/ComputerScience_UBUNTU/guttersnipe/client/native/android/app/build/intermediates/res/merged/debug/raw/amu_visibility_ground_overlay.kml",
+        "source": "/home/mitchell/.gradle/caches/transforms-1/files-1.1/android-maps-utils-0.5.aar/63efb2d276b81aa6959fa2c4b58adfda/res/raw/amu_visibility_ground_overlay.kml"
+    }
+]
