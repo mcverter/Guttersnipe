@@ -2,6 +2,13 @@
 client/native/android/app/build
 .gradle
 
+# no local properties
+local.properties
+client/native/android/local.properties
+client/native/local.properties
+client/native/ios/guttersnipe.xcodeproj/
+
+
 doc/
 z_older/
 .z_older/
