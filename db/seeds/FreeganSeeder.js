@@ -13,22 +13,9 @@ if (XML_MODE) {
   parser = new JSONInputParser();
 }
 
-const defaultClient = new Client({
-  user: "postgres",
-  host: "localhost",
-  database: "guttersnipeTest",
-  password: "postgres",
-  port: 5432
-});
-
 class FreeganSeeder {
   constructor(client) {
-    if (client) {
       this.client = client;
-    } else {
-      defaultClient.connect();
-      this.client = defaultClient;
-    }
   }
 
   parseShareable(shareable, author_id) {
