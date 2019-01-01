@@ -1,6 +1,6 @@
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 CREATE EXTENSION if not exists "postgis";
-/*CREATE EXTENSION if not exists "plv8";*/
+CREATE EXTENSION if not exists "plv8";
 
 DROP TABLE IF EXISTS shareable CASCADE;
 CREATE TABLE shareable
@@ -42,9 +42,9 @@ CREATE TABLE shareable_comment
 (
   id           uuid DEFAULT uuid_generate_v4() PRIMARY KEY,
   "text"       TEXT,
+  title        TEXT,
   shareable_id uuid REFERENCES shareable (id),
   user_id      uuid REFERENCES guttersnipe_user (id),
-
   created_on   TIMESTAMP WITH TIME ZONE NOT NULL,
   updated_on   TIMESTAMP WITH TIME ZONE NOT NULL
 );

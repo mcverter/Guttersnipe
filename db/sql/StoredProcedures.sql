@@ -1,9 +1,9 @@
 DROP FUNCTION IF EXISTS select_or_insert_comment( TEXT, TEXT, uuid, uuid, TIMESTAMP WITH TIME ZONE );
 CREATE OR REPLACE FUNCTION SELECT_OR_INSERT_COMMENT(
   c_text         TEXT,
+  c_title        TEXT,
   c_shareable_id uuid,
-  c_user_id      uuid,
-  c_posted       TIMESTAMP WITH TIME ZONE)
+  c_user_id      uuid)
   RETURNS uuid
 AS $$
 DECLARE
@@ -13,8 +13,8 @@ BEGIN
   INTO comment_id
   FROM shareable_comment
   WHERE shareable_comment."title" = c_title AND
+        shareable_comment."text" = c_text AND
         shareable_comment."shareable_id" = c_shareable_id AND
-        shareable_comment."date_posted" = c_posted AND
         shareable_comment."user_id" = c_user_id;
 
 
@@ -24,8 +24,8 @@ BEGIN
   THEN
     RAISE NOTICE 'inserting comment with shareable id %', c_shareable_id;
 
-    INSERT INTO shareable_comment ("title", "shareable_id", "user_id", date_posted, created_on, updated_on)
-    VALUES (c_title, c_shareable_id, c_user_id, c_posted, now(), now())
+    INSERT INTO shareable_comment ("text", "title", "shareable_id", "user_id", created_on, updated_on)
+    VALUES (c_text, c_title, c_shareable_id, c_user_id, now(), now())
     returning id
       into comment_id;
   end if;
@@ -84,11 +84,6 @@ DECLARE
   geometry_string    Text;
 BEGIN
 
-  geometry_string := 'POINT(' || s_longitude || ' ' || s_latitude || ')';
-
-  SELECT ST_GeomFromText(geometry_string)
-  into shareable_geometry;
-
   SELECT id
   INTO shareable_id
   FROM shareable
@@ -97,16 +92,15 @@ BEGIN
         shareable.description = s_description AND
         shareable.address = s_address AND
         shareable.time = s_time AND
-        shareable.geolocation = shareable_geometry AND
         shareable.longitude = s_longitude AND
         shareable.latitude = s_latitude;
 
   if (shareable_id is null)
   THEN
-    INSERT INTO shareable (longitude, latitude, geolocation, subcategory, name,
+    INSERT INTO shareable (longitude, latitude, subcategory, name,
                            description, address,
                            time, created_on, updated_on)
-    VALUES (s_longitude, s_latitude, shareable_geometry,
+    VALUES (s_longitude, s_latitude,
             s_subclass, s_name, s_description,
             s_address, s_time, now(), now())
     returning id
@@ -196,11 +190,9 @@ FROM (
          gu.id           AS authorId,
          gu.name         AS authorName,
          gu.role         AS authorRole,
-
          sc.id           AS commentId,
-         sc.title        AS commentTitle,
          sc.text         AS commentText,
-         sc.date_posted  AS datePosted,
+         sc.title        AS commentTitle,
          sc.shareable_id AS shareableId
 
        FROM shareable_comment sc
@@ -234,5 +226,4 @@ SELECT SELECT_OR_INSERT_COMMENT(
                        where name = 'moo'),
     c_user_id := (select id
                   from guttersnipe_user
-                  where name = 'mitchell'),
-    c_posted := '2012-03-06 11:22:23-05:00');
+                  where name = 'mitchell'));
