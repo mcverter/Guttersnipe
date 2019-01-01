@@ -2,15 +2,11 @@
   "extends": [
     "eslint:recommended",
     "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:prettier/recommended",
-    "prettier/flowtype",
-    "prettier/react",
-    "prettier/standard"
+    "plugin:import/warnings"
   ],
   "plugins": [
     "react",
-    "prettier"
+//    "prettier"
   ],
   "parserOptions": {
     "ecmaVersion": 6,
@@ -70,7 +66,6 @@
     "react/require-extension": 1,
     "react/self-closing-comp": 1,
     "react/sort-comp": 1,
-    "react/wrap-multilines": 1,
-    "prettier/prettier": "error"
+    "react/wrap-multilines": 1
   }
 }
