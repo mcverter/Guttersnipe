@@ -1,7 +1,6 @@
 const fs = require("fs");
 const { Client } = require("pg");
 const dbConfig = require("../../config/dbConfig");
-// NEED NODE_ENV
 const client = new Client(dbConfig["test"]);
 
 client.connect((err) => {

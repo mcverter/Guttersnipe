@@ -1,9 +1,9 @@
 const fs = require("fs");
 const { Client } = require("pg");
-const dbConfig = require("../../config/dbConfig");
-// NODE_ENV
-const client = new Client(dbConfig["test"]);
+const dbUrl = process.env.DATABASE_URL;
+const client = new Client(dbUrl);
 const defaultState = require("./initialState");
+
 client.connect((err) => {
   if (err) {
     console.error('connection error', err.stack)
