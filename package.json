@@ -6,7 +6,8 @@
     "start": "npm run start-server",
     "start-server": "node ./server/bin/www",
     "build-client": "cd ./client/web && npm run-script build",
-    "seed": "node $NODE_DEBUG_OPTION ./db/seeds/SeederController.js",
+    "db:create" : "psql -U postgres -d guttersnipeDB -a -f db/sql/CreateTables.sql && psql -U postgres -d guttersnipeDB -a -f db/sql/StoredProcedures.sql",
+    "seed": "node %NODE_DEBUG_OPTION% ./db/seeds/SeederController.js",
     "test": "mocha $NODE_DEBUG_OPTION './test/**/*.spec.js'"
   },
   "dependencies": {
@@ -22,6 +23,7 @@
     "cheerio": "^1.0.0-rc.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
+    "dotenv": "^6.2.0",
     "eslint": "^5.1.0",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-react": "^7.10.0",
@@ -43,8 +45,5 @@
     "xml2js": "^0.4.19"
   },
   "devDependencies": {
-    "eslint-config-prettier": "^3.1.0",
-    "eslint-plugin-prettier": "^3.0.0",
-    "prettier": "^1.14.3"
   }
 }
