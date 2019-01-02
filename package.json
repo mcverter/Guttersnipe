@@ -7,8 +7,11 @@
     "start-server": "node ./server/bin/www",
     "build-client": "cd ./client/web && npm run-script build",
     "db:create" : "psql -U postgres -d guttersnipeDB -a -f db/sql/CreateTables.sql && psql -U postgres -d guttersnipeDB -a -f db/sql/StoredProcedures.sql",
-    "seed": "node %NODE_DEBUG_OPTION% ./db/seeds/SeederController.js",
-    "test": "mocha $NODE_DEBUG_OPTION './test/**/*.spec.js'"
+    "seed": "node ./db/seeds/SeederController.js",
+    "test": "mocha $NODE_DEBUG_OPTION './test/**/*.spec.js'",
+
+    "seed-debug-windows": "node %NODE_DEBUG_OPTION% ./db/seeds/SeederController.js",
+    "seed-debug-linux": "node $NODE_DEBUG_OPTION ./db/seeds/SeederController.js"
   },
   "dependencies": {
     "@google/maps": "^0.5.4",
