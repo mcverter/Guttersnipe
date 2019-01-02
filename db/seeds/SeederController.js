@@ -1,8 +1,9 @@
-const FreeganSeeder = require("./FreeganSeeder");
-const KropotkinSeeder = require("./KropotkinSeeder");
-const CategorySeeder = require("./CategorySeeder");
 const { Client } = require("pg");
 require('dotenv').config();
+
+const {seedFreegans} = require("./FreeganSeeder");
+const {seedKropotkins} = require("./KropotkinSeeder");
+const {seedCategories} = require("./CategorySeeder");
 
 let client = process.env.DATABASE_URL
   ? new Client({
@@ -19,9 +20,6 @@ let client = process.env.DATABASE_URL
 client.connect();
 
 // populate database
-const fseeder = new FreeganSeeder(client);
-const kseeder = new KropotkinSeeder(client);
-//const cseeder = new CategorySeeder(client);
-fseeder.seedFreegans();
-kseeder.seedKropotkins();
-//cseeder.seedCategories();
+seedFreegans(client);
+seedKropotkins(client);
+seedCategories(client);
