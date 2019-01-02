@@ -3,7 +3,8 @@ CREATE OR REPLACE FUNCTION SELECT_OR_INSERT_COMMENT(
   c_text         TEXT,
   c_title        TEXT,
   c_shareable_id uuid,
-  c_user_id      uuid)
+  c_user_id      uuid,
+  c_posted       TIMESTAMP WITH TIME ZONE)
   RETURNS uuid
 AS $$
 DECLARE
@@ -14,6 +15,7 @@ BEGIN
   FROM shareable_comment
   WHERE shareable_comment."title" = c_title AND
         shareable_comment."text" = c_text AND
+        shareable_comment."date_posted" = c_posted AND
         shareable_comment."shareable_id" = c_shareable_id AND
         shareable_comment."user_id" = c_user_id;
 
@@ -24,8 +26,8 @@ BEGIN
   THEN
     RAISE NOTICE 'inserting comment with shareable id %', c_shareable_id;
 
-    INSERT INTO shareable_comment ("text", "title", "shareable_id", "user_id", created_on, updated_on)
-    VALUES (c_text, c_title, c_shareable_id, c_user_id, now(), now())
+    INSERT INTO shareable_comment ("text", "title", "shareable_id", "user_id", date_posted, created_on, updated_on)
+    VALUES (c_text, c_title, c_shareable_id, c_user_id, c_posted, now(), now())
     returning id
       into comment_id;
   end if;
@@ -192,6 +194,7 @@ FROM (
          gu.role         AS authorRole,
          sc.id           AS commentId,
          sc.text         AS commentText,
+         sc.date_posted  AS datePosted,
          sc.title        AS commentTitle,
          sc.shareable_id AS shareableId
 
@@ -226,4 +229,5 @@ SELECT SELECT_OR_INSERT_COMMENT(
                        where name = 'moo'),
     c_user_id := (select id
                   from guttersnipe_user
-                  where name = 'mitchell'));
+                  where name = 'mitchell'),
+    c_posted := '2012-03-06 11:22:23-05:00');

@@ -5,19 +5,9 @@ const XML_MODE = false;
 
 let parser = XML_MODE ? new XMLInputParser() : new JSONInputParser();
 
-function parseShareable(client, shareable, author_id) {
-  let {
-    subclass,
-    name,
-    description,
-    address,
-    longitude,
-    latitude,
-    time,
-    // Comments
-    comments,
-    author
-  } = parser.parseShareable(shareable);
+function insertShareable(client, shareable, author_id) {
+  let {subclass, name, description, address,
+    longitude, latitude, time, comments} = parser.parseShareable(shareable);
   const insertShareableQuery = `
     SELECT SELECT_OR_INSERT_SHAREABLE(
       s_time := '${time}', 
@@ -30,29 +20,17 @@ function parseShareable(client, shareable, author_id) {
   client
     .query(insertShareableQuery)
     .then(shareable_response => {
-      console.log(
-        "s_response",
-        shareable_response.rows[0]["select_or_insert_shareable"]
-      );
       let shareable_id =
         shareable_response.rows[0]["select_or_insert_shareable"];
       let date = moment("06 Mar 2012 21:22:23 +0500").format(
         "YYYY-MM-DD hh:mm:ssZ"
       );
-      console.log("date", date);
       if (comments) {
         for (let i = 0; i < comments.length; i++) {
           let { title, text } = parser.parseComment(comments, i);
           if (text && !title) {
             title = text.substring(0, 20);
           }
-          console.log(
-            "about to insert comment",
-            "title",
-            title,
-            "text",
-            text
-          );
           const insertCommentQuery = `
             SELECT SELECT_OR_INSERT_COMMENT(
               c_text := '${text}', 
@@ -61,7 +39,7 @@ function parseShareable(client, shareable, author_id) {
               c_user_id := '${author_id}', 
               c_posted := '${date}');
               `;
-          console.log("sql statemebt", insertCommentQuery);
+          console.log("comment sql statement", insertCommentQuery);
           client
             .query(insertCommentQuery)
             .then(comment_response => {
@@ -77,7 +55,7 @@ function parseShareable(client, shareable, author_id) {
       }
     })
     .catch(error => {
-      console.log("error", error);
+      console.error("error", error);
     });
 }
 
@@ -96,7 +74,7 @@ const seedFreegans = (client) => {
     );
     let author_id = author_response.rows[0]["select_or_insert_user"];
     for (let i = 0; i < shareables.length; i++) {
-      parseShareable(client, shareables[i], author_id);
+      insertShareable(client, shareables[i], author_id);
     }
   });
 };

@@ -45,6 +45,7 @@ CREATE TABLE shareable_comment
   title        TEXT,
   shareable_id uuid REFERENCES shareable (id),
   user_id      uuid REFERENCES guttersnipe_user (id),
+  date_posted  TIMESTAMP WITH TIME ZONE NOT NULL,
   created_on   TIMESTAMP WITH TIME ZONE NOT NULL,
   updated_on   TIMESTAMP WITH TIME ZONE NOT NULL
 );
