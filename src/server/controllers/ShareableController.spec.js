@@ -8,7 +8,6 @@ describe('Shareable Controller', function(){
   describe('Select Shareables List', ()=>{
     it('should list all shareables ', ()=>{
       expect(1).toBe(1);
-      expect(2).toBe(1);
       //    const sc = new ShareableController();
       //    sc.selectShareablesList();
     })

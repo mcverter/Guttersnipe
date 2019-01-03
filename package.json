@@ -14,7 +14,9 @@
     "seed-debug-windows": "node %NODE_DEBUG_OPTION% ./src/db/seeds/SeederController.js",
     "seed-debug-linux": "node $NODE_DEBUG_OPTION ./src/db/seeds/SeederController.js"
   },
-  "jest": {},
+  "jest": {
+    "verbose": true
+  },
   "dependencies": {
     "@babel/core": "7.2.2",
     "@google/maps": "^0.5.4",
