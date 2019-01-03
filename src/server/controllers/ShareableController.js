@@ -6,19 +6,12 @@ const { Client } = require("pg");
 require('dotenv').config();
 let client = new Client({connectionString: process.env.DATABASE_URL});
 client.connect((err) => {
-  if (err) {
-    console.error('connection error', err.stack)
-  } else {
-    console.log('connected')
-  }
+  if (err) {console.error('connection error', err.stack)}
+  else {console.log('connected')}
 });
 
 class ShareableController {
   async selectShareableWithComments(id) {
-    console.error("ID IS ", id);
-    // NO DB YET
-    return defaultState.shareables.shareables;
-
     let commentsJSON, shareableJSON;
 
     const commentsQueryFromFile = fs.readFileSync(
@@ -40,19 +33,12 @@ class ShareableController {
   }
 
   async selectShareablesList() {
-    // NO DB YET
-    return defaultState.shareables.shareables;
     const shareableListQueryFromFile = fs.readFileSync(
-      __dirname + "/../../db/sql/AllShareablesQuery.sql",
-      //"/../../db/sql/ShareableListQuery.sql",
-      "utf8"
-    );
-    console.log(shareableListQueryFromFile);
+      __dirname + "/../../db/sql/AllShareablesQuery.sql", "utf8");
     let shareableListQueryResult = await client.query(
       shareableListQueryFromFile
     );
     let shareableListJSON = shareableListQueryResult.rows[0]["json_agg"];
-    console.log("shareable list json", shareableListJSON);
     return shareableListJSON;
   }
 }
