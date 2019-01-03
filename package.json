@@ -4,21 +4,21 @@
   "private": true,
   "scripts": {
     "start": "npm run start-server",
-    "start-server": "node ./server/bin/www",
-    "build-client": "cd ./client/web && npm run-script build",
+    "start-server": "node ./src/server/bin/www",
+    "build-client": "cd ./src/client/web && npm run-script build",
     "db:create": "psql -U postgres -d guttersnipeDB -a -f db/sql/CreateTables.sql && psql -U postgres -d guttersnipeDB -a -f db/sql/StoredProcedures.sql",
-    "seed": "node ./db/seeds/SeederController.js",
+    "seed": "node ./src/db/seeds/SeederController.js",
     "test": "jest",
     "test-debug-linux": "jest $NODE_DEBUG_OPTION",
     "test-debug-windows": "jest %NODE_DEBUG_OPTION%",
-    "seed-debug-windows": "node %NODE_DEBUG_OPTION% ./db/seeds/SeederController.js",
-    "seed-debug-linux": "node $NODE_DEBUG_OPTION ./db/seeds/SeederController.js"
+    "seed-debug-windows": "node %NODE_DEBUG_OPTION% ./src/db/seeds/SeederController.js",
+    "seed-debug-linux": "node $NODE_DEBUG_OPTION ./src/db/seeds/SeederController.js"
   },
-  "jest": {
-    "testMatch": ["./db/**/*.test.js", "./server/**/*.test.js", "./client/*/src/**/*.test.js"]
-  },
+  "jest": {},
   "dependencies": {
+    "@babel/core": "7.2.2",
     "@google/maps": "^0.5.4",
+    "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^9.0.0-beta.3",
     "babel-preset-env": "^1.7.0",
     "babel-preset-latest": "^6.24.1",

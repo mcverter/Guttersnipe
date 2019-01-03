@@ -1,5 +1,5 @@
 var expect = require('chai').expect; //actually call the function
-const {client} = require("./helpers/dbHelper");
+const {client} = require("../test/helpers/dbHelper");
 
 function printError(error) {
   console.error("SELECT ERROR", error);

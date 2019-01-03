@@ -1,8 +1,8 @@
 const fs = require('fs');
 const {Client} = require('pg');
-const FreeganSeeder = require('../../db/seeds/FreeganSeeder');
-const KropotkinSeeder = require('../../db/seeds/KropotkinSeeder');
-const CategorySeeder = require('../../db/seeds/CategorySeeder');
+const FreeganSeeder = require('./seeds/FreeganSeeder');
+const KropotkinSeeder = require('./seeds/KropotkinSeeder');
+const CategorySeeder = require('./seeds/CategorySeeder');
 
 
 const client = new Client({
