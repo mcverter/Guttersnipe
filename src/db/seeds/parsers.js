@@ -62,10 +62,8 @@ class XMLInputParser {
 
 class JSONInputParser {
   parseShareablesList() {
-    const fileContents = fs.readFileSync(
-      __dirname + "/../scripts/node/geocodedShareables.json"
-    );
-    return JSON.parse(fileContents);
+    const shareables = require("./geocodedShareables");
+    return shareables;
   }
   parseShareable(shareable) {
     Object.keys(shareable).forEach(key => {

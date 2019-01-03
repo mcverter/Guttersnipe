@@ -39,15 +39,9 @@ function insertShareable(client, shareable, author_id) {
               c_user_id := '${author_id}', 
               c_posted := '${date}');
               `;
-          console.log("comment sql statement", insertCommentQuery);
           client
             .query(insertCommentQuery)
-            .then(comment_response => {
-              console.log(
-                "c_response",
-                comment_response.rows[0]["select_or_insert_comment"]
-              );
-            })
+            .then(comment_response => {})
             .catch(error => {
               console.error("aaaaaa", error);
             });

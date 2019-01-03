@@ -27,7 +27,6 @@ class ShareableController {
     );
     let shareableQueryResult = await client.query(shareableFullQuery, [id]);
     shareableJSON = shareableQueryResult.rows[0]["json_agg"];
-
     console.log("comments json", commentsJSON, "shareable json", shareableJSON);
     return { commentsJSON, shareableJSON };
   }

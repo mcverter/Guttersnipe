@@ -1,9 +1,7 @@
-const gsnipeJSON = require(__dirname +
-  "/../data/json/older/01_guttersnipeOld.json");
-const kropotkins = gsnipeJSON.find(el => el.name === "kropotkin").records;
+const kropotkinData = require("./kropotkinData");
 
 const seedKropotkins = (client) => {
-  kropotkins.forEach(kropotkin => {
+  kropotkinData.forEach(kropotkin => {
     let kropotkinInsertStatement = `
           SELECT SELECT_OR_INSERT_KROPOTKIN(
             k_paragraph := '${kropotkin.paragraph}');
