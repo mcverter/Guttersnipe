@@ -18,9 +18,9 @@ describe('Routes', function(){
       });
     });
   });
-  describe('Kropotkins Route', ()=>{
+  describe('Random Kropotkins Route', ()=>{
     it("should respond to the GET method", (done) => {
-      request(app).get('/').then((response) => {
+      request(app).get('/api/kropotkins/random').then((response) => {
         expect(response.statusCode).toBe(200);
         done();
       });

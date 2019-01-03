@@ -4,7 +4,9 @@ const kropotkinDB = require(__dirname + "/../controllers/KropotkinController");
 
 const kropotkinController = new kropotkinDB();
 
-router.get("/", function(req, res, next) {});
+router.get("/", function(req, res, next) {
+  res.json("use 'random' route");
+});
 router.get("/random", function(req, res, next) {
   console.log("Hello Kropotkin Router");
   kropotkinController
