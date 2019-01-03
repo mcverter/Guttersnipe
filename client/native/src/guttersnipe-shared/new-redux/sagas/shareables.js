@@ -1,7 +1,8 @@
 import {takeEvery,delay} from 'redux-saga'
 import {call, put, take} from 'redux-saga/effects'
-import {asyncTestInitial,asyncTestSaga,asyncFetchInitial,
-  asyncFetchSuccess,asyncFetchError} from '../actions/middlewareActions'
+import {/*asyncTestSaga,asyncFetchInitial,
+  asyncFetchSuccess,asyncFetchError, */
+  receiveAllShareables, fetchSingleShareable, setCurrentShareable} from '../actions';
 
 
 export function ShareableFetchAll(){
