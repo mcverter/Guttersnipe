@@ -112,6 +112,14 @@ describe('Routes', function(){
         done();
       });
     });
+    it("should respond with a paragraph of text", (done) => {
+      request(app).get('/api/kropotkins/random').then((response) => {
+        const data = response.body;
+        const paragraph = data.paragraph;
+        expect(typeof paragraph).toBe("string");
+        expect(paragraph.length).toBeGreaterThan(3);
+        done();
+      });
+    });
   });
-
 });
