@@ -22,6 +22,7 @@ function insertShareable(client, shareable, author_id) {
     .then(shareable_response => {
       let shareable_id =
         shareable_response.rows[0]["select_or_insert_shareable"];
+      console.log("s_id", shareable_id);
       let date = moment("06 Mar 2012 21:22:23 +0500").format(
         "YYYY-MM-DD hh:mm:ssZ"
       );
@@ -41,7 +42,9 @@ function insertShareable(client, shareable, author_id) {
               `;
           client
             .query(insertCommentQuery)
-            .then(comment_response => {})
+            .then(comment_response => {
+              console.log("c_id", comment_response.rows[0]["select_or_insert_comment"]);
+            })
             .catch(error => {
               console.error("aaaaaa", error);
             });
@@ -62,11 +65,9 @@ const seedFreegans = (client) => {
           u_expiration := NULL, 
           u_role := 'superadmin');`;
   client.query(insertUserQuery).then(author_response => {
-    console.log(
-      "a_response",
-      author_response.rows[0]["select_or_insert_user"]
-    );
     let author_id = author_response.rows[0]["select_or_insert_user"];
+    console.log("a_id", author_id);
+
     for (let i = 0; i < shareables.length; i++) {
       insertShareable(client, shareables[i], author_id);
     }
