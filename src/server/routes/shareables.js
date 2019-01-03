@@ -5,7 +5,6 @@ const shareableDB = require(__dirname + "/../controllers/ShareableController");
 const shareableController = new shareableDB();
 /* GET shareables listing. */
 router.get("/", function(req, res, next) {
-  console.log("Hello Shareable Router");
   shareableController.selectShareablesList().then(function(collection) {
     res.json({
       error: false,

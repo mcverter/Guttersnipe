@@ -8,11 +8,9 @@ router.get("/", function(req, res, next) {
   res.json("use 'random' route");
 });
 router.get("/random", function(req, res, next) {
-  console.log("Hello Kropotkin Router");
   kropotkinController
     .selectRandomKropotkin()
     .then(function(paragraph) {
-      console.log("paragraph", paragraph);
       res.json({
         error: false,
         paragraph
