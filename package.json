@@ -6,7 +6,7 @@
     "start": "npm run start-server",
     "start-server": "node ./src/server/bin/server.js",
     "build-client": "cd ./client/web && npm run-script build",
-    "db:create": "psql -U postgres -d guttersnipeDB -a -f db/sql/CreateTables.sql && psql -U postgres -d guttersnipeDB -a -f db/sql/StoredProcedures.sql",
+    "db:create": "psql -U postgres -a -f ./src/db/sql/CreateTables.sql && psql -U postgres -a -f ./src/db/sql/StoredProcedures.sql",
     "seed": "node ./src/db/seeds/SeederController.js",
     "test": "jest",
     "test-debug-linux": "jest $NODE_DEBUG_OPTION",
