@@ -148,7 +148,7 @@ module.exports = {
     alias: {
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
-      '@guttersnipe-shared': path.resolve("../native/guttersnipe-shared"),
+      '@guttersnipe-shared': path.resolve("../native/src/guttersnipe-shared"),
       'react-native': 'react-native-web',
       'redux-logic': path.resolve("../shared/redux"),
       '@assets': path.resolve("../shared/assets"),
