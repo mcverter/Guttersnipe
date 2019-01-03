@@ -1,14 +1,14 @@
-var assert = require('assert');
 //var shareableController = require(__dirname + '/../../server/controllers/ShareableController');
 
 describe('Shareable Controller', function(){
   beforeEach(function(){
-    console.log("before each");
+//    console.log("before each");
   });
 
   describe('Select Shareables List', ()=>{
     it('should list all shareables ', ()=>{
-      assert.equal(1,0);
+      expect(1).toBe(1);
+      expect(2).toBe(1);
       //    const sc = new ShareableController();
       //    sc.selectShareablesList();
     })
