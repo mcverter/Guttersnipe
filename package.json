@@ -6,16 +6,21 @@
     "start": "npm run start-server",
     "start-server": "node ./server/bin/www",
     "build-client": "cd ./client/web && npm run-script build",
-    "db:create" : "psql -U postgres -d guttersnipeDB -a -f db/sql/CreateTables.sql && psql -U postgres -d guttersnipeDB -a -f db/sql/StoredProcedures.sql",
+    "db:create": "psql -U postgres -d guttersnipeDB -a -f db/sql/CreateTables.sql && psql -U postgres -d guttersnipeDB -a -f db/sql/StoredProcedures.sql",
     "seed": "node ./db/seeds/SeederController.js",
-    "test": "mocha $NODE_DEBUG_OPTION './test/**/*.spec.js'",
-
+    "test": "jest",
+    "test-debug-linux": "jest $NODE_DEBUG_OPTION",
+    "test-debug-windows": "jest %NODE_DEBUG_OPTION%",
     "seed-debug-windows": "node %NODE_DEBUG_OPTION% ./db/seeds/SeederController.js",
     "seed-debug-linux": "node $NODE_DEBUG_OPTION ./db/seeds/SeederController.js"
+  },
+  "jest": {
+    "testMatch": ["./db/**/*.test.js", "./server/**/*.test.js", "./client/*/src/**/*.test.js"]
   },
   "dependencies": {
     "@google/maps": "^0.5.4",
     "babel-eslint": "^9.0.0-beta.3",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "bluebird": "^3.5.1",
@@ -32,6 +37,7 @@
     "eslint-plugin-react": "^7.10.0",
     "express": "^4.15.5",
     "http-errors": "^1.7.1",
+    "jest": "^23.6.0",
     "knex": "^0.13.0",
     "knex-postgis": "^0.5.0",
     "lodash.find": "^4.6.0",
@@ -45,8 +51,9 @@
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.1",
     "serve-favicon": "~2.4.5",
+    "superagent": "^4.1.0",
+    "supertest": "^3.3.0",
     "xml2js": "^0.4.19"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
