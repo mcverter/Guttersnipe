@@ -31,7 +31,7 @@ describe("Database", ()=> {
   it("one equals one", ()=>{
     expect(1).toBe(1);
   })
-})
+});
 
 /*
 describe('Database', function () {
@@ -46,7 +46,6 @@ describe('Database', function () {
         printError(error);
       })
   });
-
   describe('Gristedes', function () {
     it('is in DB', function (done) {
       client.query("SELECT * FROM shareable WHERE name='Gristedes'")

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "npm run start-server",
-    "start-server": "node ./src/server/bin/www",
+    "start-server": "node ./src/server/bin/server.js",
     "build-client": "cd ./src/client/web && npm run-script build",
     "db:create": "psql -U postgres -d guttersnipeDB -a -f db/sql/CreateTables.sql && psql -U postgres -d guttersnipeDB -a -f db/sql/StoredProcedures.sql",
     "seed": "node ./src/db/seeds/SeederController.js",

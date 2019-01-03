@@ -1,15 +1,10 @@
 const fs = require("fs");
-const { Client } = require("pg");
-const dbConfig = require("../../config/dbConfig");
-const client = new Client(dbConfig["test"]);
 
-client.connect((err) => {
-  if (err) {
-    console.error('connection error', err.stack)
-  } else {
-    console.log('connected')
-  }
-})
+// connect db
+const { Client } = require("pg");
+require('dotenv').config();
+let client = new Client({connectionString: process.env.DATABASE_URL});
+client.connect();
 
 class KropotkinController {
   async selectRandomKropotkin() {

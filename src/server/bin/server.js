@@ -6,7 +6,6 @@
 const app = require("../app");
 const debug = require("debug")("server:server");
 const http = require("http");
-//var connection = require('../../db-bookshelf/');
 
 /**
  * Get port from environment and store in Express.

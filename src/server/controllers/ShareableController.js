@@ -1,16 +1,17 @@
 const fs = require("fs");
-const { Client } = require("pg");
-const dbUrl = process.env.DATABASE_URL;
-const client = new Client(dbUrl);
 const defaultState = require("./initialState");
 
+// connect db
+const { Client } = require("pg");
+require('dotenv').config();
+let client = new Client({connectionString: process.env.DATABASE_URL});
 client.connect((err) => {
   if (err) {
     console.error('connection error', err.stack)
   } else {
     console.log('connected')
   }
-})
+});
 
 class ShareableController {
   async selectShareableWithComments(id) {
