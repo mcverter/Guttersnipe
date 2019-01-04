@@ -1,8 +1,11 @@
-import {call, put, takeLatest} from 'redux-saga/effects'
-import {fetchAllShareablesSuccessAction, fetchAllShareablesFailureAction} from '../actions/shareables';
 import * as types from "../types";
-let SERVER_URL = "http:/localhost:3000";
 import fetch from "isomorphic-fetch";
+import {call, put, takeLatest} from 'redux-saga/effects'
+import {
+  fetchAllShareablesSuccessAction,
+  fetchAllShareablesFailureAction
+} from '../actions/shareables';
+let SERVER_URL = "http:/localhost:3000";
 
 
 function* shareableFetchWorkerSaga (action){
@@ -11,7 +14,7 @@ function* shareableFetchWorkerSaga (action){
     const data = yield apply(response, response.json);
     yield put(fetchAllShareablesSuccessAction(data));
   } catch (error) {
-    yield put(fetchAllShareablesFailureAction())
+    yield put(fetchAllShareablesFailureAction(error));
   }
 }
 
@@ -24,20 +27,3 @@ export default function* rootSaga(){
     shareableFetchWatcherSaga(),
   ])
 }
-
-
-/*
-let SERVER_URL = "http:/localhost:3000";
-
-import fetch from "isomorphic-fetch";
-export function* currentShareablesSaga() {
-  console.log("Hello World");
-
-  const response = yield call(fetch, `${SERVER_URL}/api/shareables`);
-  const data = yield apply(response, response.json);
-  yield put(setCurrentUser(data));
-
-  console.log(data);
-}
-
-*/

@@ -1,15 +1,15 @@
 import * as types from "../types";
 
-export const fetchAllShareablesSuccessAction = (dummyOutput) => {
+export const fetchAllShareablesSuccessAction = (shareables) => {
   return {
-    type: "ASYNC_FETCH_SUCCESS",
-    output: "ASYNC_FETCH_SUCCESS ".concat(dummyOutput)
+    type: types.SHAREABLE_LIST_SUCCESS,
+    shareables
   }
 }
 
-export const fetchAllShareablesFailureAction = () => {
+export const fetchAllShareablesFailureAction = (error) => {
   return {
-    type: "ASYNC_FETCH_ERROR",
-    output: "ASYNC_FETCH_ERROR - Async fetch failed"
+    type: types.SHAREABLE_LIST_FAILURE,
+    error
   }
 }
