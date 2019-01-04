@@ -1,32 +1,43 @@
-import {takeEvery,delay} from 'redux-saga'
-import {call, put, take} from 'redux-saga/effects'
-import {/*asyncTestSaga,asyncFetchInitial,
-  asyncFetchSuccess,asyncFetchError, */
-  receiveAllShareables, fetchSingleShareable, setCurrentShareable} from '../actions';
+import {call, put, takeLatest} from 'redux-saga/effects'
+import {fetchAllShareablesSuccessAction, fetchAllShareablesFailureAction} from '../actions/shareables';
+import * as types from "../types";
+let SERVER_URL = "http:/localhost:3000";
+import fetch from "isomorphic-fetch";
 
 
-export function ShareableFetchAll(){
-  return fetch('testdata.json')
-    .then((res)=> res.json())
-    .then((jsondata)=> {
-      const {dummyOutput} = jsondata.dummy
-      return dummyOutput
-    })
-}
-
-export  function* shareableFetchSaga (action){
-  yield call(delay,1000)
-  yield put(asyncFetchInitial())
+function* shareableFetchWorkerSaga (action){
   try {
-    const dummyOutput = yield call(FetchTestData)
-    yield put(asyncFetchSuccess(dummyOutput))
+    const response = yield call(fetch, `${SERVER_URL}/api/shareables`);
+    const data = yield apply(response, response.json);
+    yield put(fetchAllShareablesSuccessAction(data));
   } catch (error) {
-    console.log("Error in fetch" + error)
-    yield put(asyncFetchError())
+    yield put(fetchAllShareablesFailureAction())
   }
 }
 
-
-export default function* shareableFetchWatcher (){
-  yield takeEvery("ASYNC_TEST_SAGA",fetchAsyncSaga)
+function* shareableFetchWatcherSaga (){
+  yield takeLatest(types.SHAREABLE_LIST_REQUEST,shareableFetchWorkerSaga);
 }
+
+export default function* rootSaga(){
+  yield all([
+    shareableFetchWatcherSaga(),
+  ])
+}
+
+
+/*
+let SERVER_URL = "http:/localhost:3000";
+
+import fetch from "isomorphic-fetch";
+export function* currentShareablesSaga() {
+  console.log("Hello World");
+
+  const response = yield call(fetch, `${SERVER_URL}/api/shareables`);
+  const data = yield apply(response, response.json);
+  yield put(setCurrentUser(data));
+
+  console.log(data);
+}
+
+*/
