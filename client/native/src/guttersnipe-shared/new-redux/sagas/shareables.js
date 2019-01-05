@@ -1,18 +1,18 @@
 import * as types from "../types";
 import fetch from "isomorphic-fetch";
-import {call, put, takeLatest} from 'redux-saga/effects'
+import {call, put, takeLatest, apply, all} from 'redux-saga/effects'
 import {
   fetchAllShareablesSuccessAction,
   fetchAllShareablesFailureAction
 } from '../actions/shareables';
-let SERVER_URL = "http:/localhost:3000";
+let SERVER_URL = "http://localhost:5000";
 
 
 function* shareableFetchWorkerSaga (action){
   try {
     const response = yield call(fetch, `${SERVER_URL}/api/shareables`);
-    const data = yield apply(response, response.json);
-    yield put(fetchAllShareablesSuccessAction(data));
+    const json = yield apply(response, response.json);
+    yield put(fetchAllShareablesSuccessAction(json.data));
   } catch (error) {
     yield put(fetchAllShareablesFailureAction(error));
   }

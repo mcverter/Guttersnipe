@@ -3,8 +3,14 @@ import { connect } from "react-redux";
 import {Link} from 'react-router-dom';
 import FTK from "../components/FTK";
 import RaisedButton from "material-ui/RaisedButton";
+import { fetchAllShareablesRequestAction } from '@guttersnipe-shared/new-redux/actions/shareables';
+
 
 class LandingPage extends Component {
+  componentWillMount() {
+    this.props.fetchAllShareablesRequestAction();
+  }
+
   render() {
     const navigation = this.props.navigation;
     return (
@@ -71,7 +77,7 @@ const mapStateToProps = state => state;
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  {fetchAllShareablesRequestAction}
 )(LandingPage);
 
 const maybeCreate = () => {
