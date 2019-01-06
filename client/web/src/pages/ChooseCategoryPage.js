@@ -14,7 +14,7 @@ class ChooseCategoryPage extends Component {
         <div>
           <div>Choose a Category</div>
         </div>
-        {Object.keys(categorization).map(c => (
+        {/*Object.keys(categorization).map(c => (
           <div>
             <div>
               <div style={{
@@ -30,7 +30,7 @@ class ChooseCategoryPage extends Component {
               </div>
             </div>
           </div>
-        ))}
+        ))*/}
       </div>
     );
   }
