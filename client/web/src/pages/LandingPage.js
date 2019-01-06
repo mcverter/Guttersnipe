@@ -6,7 +6,7 @@ import RaisedButton from "material-ui/RaisedButton";
 import {
   fetchAllShareablesRequestAction,
   fetchCategoriesRequestAction,
-} from '@guttersnipe-shared/new-redux/actions/shareables';
+} from '@guttersnipe-shared/redux/actions/shareables';
 
 
 class LandingPage extends Component {

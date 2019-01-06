@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {Link} from 'react-router-dom';
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { getCategorizationState } from '@guttersnipe-shared/new-redux/selectors/shareables';
+import { getCategorizationState } from '@guttersnipe-shared/redux/selectors/shareables';
 ;
 
 class ChooseCategoryPage extends Component {

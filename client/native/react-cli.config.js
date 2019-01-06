@@ -6,7 +6,7 @@ module.exports = {
       path.join(__dirname, '..'),
 
       path.join(__dirname, '..', 'shared'),
-      path.join(__dirname, '..', 'shared', 'new-redux'),
+      path.join(__dirname, '..', 'shared', 'redux'),
       __dirname
     ];
   }

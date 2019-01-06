@@ -9,7 +9,7 @@ import { Provider } from "react-redux";
 import Router from "./src/routes";
 import { createStore, applyMiddleware } from "redux";
 import createSagaMiddleware from "redux-saga";
-import rootReducer from "./src/guttersnipe-shared/redux/reducers";
+import rootReducer from "./src/guttersnipe-shared/__old_redux/reducers";
 // import initSagas from "./initSagas";
 
 // import configureStore from "./src/guttersnipe-shared/redux/store/configureStore";

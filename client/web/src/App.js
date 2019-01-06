@@ -6,9 +6,9 @@ import createSagaMiddleware from "redux-saga";
 import "./App.css";
 import Router from "./routes";
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import { fetchAllShareablesRequestAction } from '@guttersnipe-shared/new-redux/actions/shareables';
+import { fetchAllShareablesRequestAction } from '@guttersnipe-shared/redux/actions/shareables';
 
-import rootSaga from "@guttersnipe-shared/new-redux/sagas/shareables";
+import rootSaga from "@guttersnipe-shared/redux/sagas/shareables";
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
