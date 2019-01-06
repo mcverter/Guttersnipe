@@ -43,7 +43,7 @@ class ShareableController {
 
   async selectCategories() {
     const categoryQueryFromFile = fs.readFileSync(
-      __dirname + "/../../db/sql/AllCategories.sql", "utf8");
+      __dirname + "/../../db/sql/AllCategoriesAndSubcategories.sql", "utf8");
     let categoryQueryResult = await client.query(
       categoryQueryFromFile
     );
