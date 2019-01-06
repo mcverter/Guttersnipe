@@ -40,6 +40,16 @@ class ShareableController {
     let shareableListJSON = shareableListQueryResult.rows[0]["json_agg"];
     return shareableListJSON;
   }
+
+  async selectCategories() {
+    const categoryQueryFromFile = fs.readFileSync(
+      __dirname + "/../../db/sql/AllCategories.sql", "utf8");
+    let categoryQueryResult = await client.query(
+      categoryQueryFromFile
+    );
+    let categoryJSON = categoryQueryResult.rows[0]["json_agg"];
+    return categoryJSON;
+  }
 }
 
 module.exports = ShareableController;

@@ -12,6 +12,14 @@ router.get("/", function(req, res, next) {
     });
   });
 });
+router.get("/categories", function(req, res, next) {
+  shareableController.selectCategories().then(function(categories) {
+    res.json({
+      error: false,
+      data: categories
+    });
+  });
+});
 
 /* GET single shareable with comments. */
 router.get("/:id", function(req, res, next) {
@@ -25,4 +33,5 @@ router.get("/:id", function(req, res, next) {
       });
     });
 });
+
 module.exports = router;
