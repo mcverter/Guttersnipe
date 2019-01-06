@@ -2,12 +2,10 @@ import React, { Component } from "react";
 import {Link} from 'react-router-dom';
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
+import { getCategorizationState } from '@guttersnipe-shared/new-redux/selectors/shareables';
+;
 
 class ChooseCategoryPage extends Component {
-  _setCategory(category) {
-    
-
-  }
   render() {
     const categorization = this.props.categorization;
 
@@ -27,7 +25,6 @@ class ChooseCategoryPage extends Component {
                 color: "black",
                 fontWeight: "900",
                 textAlign: "center"
-
               }}>
                 <Link to={`subcategory/${c}`}>{c}</Link>
               </div>
@@ -50,5 +47,10 @@ ChooseCategoryPage.propTypes = {
   categorizations: PropTypes.object,
 };
 
-const mapStateToProps = state => state.categorization;
+const mapStateToProps = state => {
+  return {
+    categorizations: getCategorizationState(state)
+  }
+};
+
 export default connect(mapStateToProps)(ChooseCategoryPage);

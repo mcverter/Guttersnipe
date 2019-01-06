@@ -3,13 +3,23 @@ import { connect } from "react-redux";
 import {Link} from 'react-router-dom';
 import FTK from "../components/FTK";
 import RaisedButton from "material-ui/RaisedButton";
-import { fetchAllShareablesRequestAction } from '@guttersnipe-shared/new-redux/actions/shareables';
+import {
+  fetchAllShareablesRequestAction,
+  fetchCategoriesRequestAction,
+} from '@guttersnipe-shared/new-redux/actions/shareables';
 
 
 class LandingPage extends Component {
-  componentWillMount() {
-    this.props.fetchAllShareablesRequestAction();
+  constructor(props) {
+    super(props);
+    this.fetchInitialData = this.fetchInitialData.bind(this);
   }
+
+  fetchInitialData() {
+    this.props.fetchAllShareablesRequestAction();
+    this.props.fetchCategoriesRequestAction();
+  }
+
 
   render() {
     const navigation = this.props.navigation;
@@ -17,10 +27,9 @@ class LandingPage extends Component {
       <div style={styles.landingPageContainer}>
         <div style={styles.searchShareablesButtonContainer}>
           <div>
-            <RaisedButton><Link to="/category">Choose Category</Link></RaisedButton>
-          </div>
-          <div>
-            <RaisedButton><Link to="/location">Set Location</Link></RaisedButton>
+            <RaisedButton
+              onClick={this.fetchInitialData}
+            ><Link to="/category">Search Shareables</Link></RaisedButton>
           </div>
           <div>
             <RaisedButton><Link to="/add"> Add Shareables</Link></RaisedButton>
@@ -77,7 +86,7 @@ const mapStateToProps = state => state;
 
 export default connect(
   mapStateToProps,
-  {fetchAllShareablesRequestAction}
+  {fetchAllShareablesRequestAction, fetchCategoriesRequestAction}
 )(LandingPage);
 
 const maybeCreate = () => {
@@ -90,5 +99,12 @@ const maybeCreate = () => {
               accessibilityLabel="Click here to create a shareable"
             />
           </div>
-          } */
+          }
+
+                    <div>
+            <RaisedButton><Link to="/location">Set Location</Link></RaisedButton>
+          </div>
+
+
+          */
 };

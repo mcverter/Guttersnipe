@@ -1,5 +1,24 @@
 import * as types from "../types";
 
+export const fetchCategoriesRequestAction = () => {
+  return {
+    type: types.CATEGORIES_REQUEST
+  }
+};
+
+export const fetchCategoriesSuccessAction = (categories) => {
+  return {
+    type: types.CATEGORIES_SUCCESS,
+    categories
+  }
+}
+
+export const fetchCategoriesFailureAction = (error) => {
+  return {
+    type: types.CATEGORIES_FAILURE,
+    error
+  }
+}
 
 export const fetchAllShareablesRequestAction = () => {
   return {
