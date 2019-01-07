@@ -5,13 +5,13 @@ import PropTypes from "prop-types";
 const CommentList = ({ comments }) => {
   if (!comments || comments.length < 1) {
     return (
-      <div>
+      <div style={styles.noComments}>
         <span>No Comments</span>
       </div>
     );
   }
   return (
-    <div>
+    <div style={styles.comments}>
       <ul>
         {comments.map(c => (
           <li><Comment comment={c}/></li>))}
@@ -19,7 +19,10 @@ const CommentList = ({ comments }) => {
     </div>
   );
 };
-const styles = {};
+const styles = {
+  comments: {},
+  noComments: {}
+};
 
 CommentList.propTypes = {
   comments: PropTypes.array

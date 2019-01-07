@@ -22,7 +22,6 @@ class LandingPage extends Component {
 
 
   render() {
-    const navigation = this.props.navigation;
     return (
       <div style={styles.landingPageContainer}>
         <div style={styles.searchShareablesButtonContainer}>
@@ -36,12 +35,9 @@ class LandingPage extends Component {
           </div>
         </div>
 
-        <RaisedButton
-          style={styles.shareablesFTKContainer}
-          onPress={() => navigation.navigate("AboutPage")}
-        >
+        <RaisedButton><Link to="/about">
           <FTK style={styles.shareablesFTKText} />
-        </RaisedButton>
+        </Link></RaisedButton>
       </div>
     );
   }
@@ -76,12 +72,6 @@ const styles = {
 
 LandingPage.propTypes = {};
 
-const mapDispatchToProps = dispatch => {
-  return {
-    onRequestDog: () => dispatch({ type: "API_CALL_REQUEST" })
-  };
-};
-
 const mapStateToProps = state => state;
 
 export default connect(
@@ -89,8 +79,6 @@ export default connect(
   {fetchAllShareablesRequestAction, fetchCategoriesRequestAction}
 )(LandingPage);
 
-const maybeCreate = () => {
-  return "goo";
   /*{user && (user.role === 'admin' || user.role === 'superadmin') &&
           <div style={styles.createShareablesButton}>
             <Button
@@ -107,4 +95,3 @@ const maybeCreate = () => {
 
 
           */
-};
