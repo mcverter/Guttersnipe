@@ -12,7 +12,7 @@ import GsText from "./GsText";
 import { utilOpenURL } from "../utils";
 
 import PropTypes from "prop-types";
-import roadrunnerAtWaste from "../../src/guttersnipe-shared/assets/images/roadrunnerAtWaste.png";
+import roadrunnerAtWaste from "guttersnipe-shared/assets/images/roadrunnerAtWaste.png";
 
 const sendMailToAdmin = () => {
   utilOpenURL("mailto:roadrunner@waste.org");

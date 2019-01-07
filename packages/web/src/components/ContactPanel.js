@@ -1,6 +1,6 @@
 import React from "react";
 import RaisedButton from "material-ui/RaisedButton";
-import roadrunnerImage from "@guttersnipe-shared/assets/images/roadrunnerAtWaste.png";
+import roadrunnerImage from "guttersnipe-shared/assets/images/roadrunnerAtWaste.png";
 import GsText from "./GsText";
 
 import PropTypes from "prop-types";

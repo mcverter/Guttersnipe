@@ -3,7 +3,7 @@ import FTK from "../components/FTK";
 import LegalNotice from "../components/LegalNotice";
 import ContactPanel from "../components/ContactPanel";
 import RaisedButton from "material-ui/RaisedButton";
-const vid = require("@guttersnipe-shared/assets/video/Guttersnipe.mp4");
+const vid = require("guttersnipe-shared/assets/video/Guttersnipe.mp4");
 
 class AboutPage extends Component {
   render() {

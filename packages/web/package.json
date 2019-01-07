@@ -102,6 +102,7 @@
     "file-loader": "2.0.0",
     "fork-ts-checker-webpack-plugin-alt": "0.4.14",
     "fs-extra": "7.0.0",
+    "guttersnipe-shared": "*",
     "html-webpack-plugin": "4.0.0-alpha.2",
     "jest": "23.6.0",
     "jest-pnp-resolver": "1.0.1",

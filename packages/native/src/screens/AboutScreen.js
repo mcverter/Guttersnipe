@@ -15,8 +15,8 @@ import ContactPanel from "../components/ContactPanel";
 
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import guttersnipeVideo from "../../src/guttersnipe-shared/assets/video/Guttersnipe.mp4";
-import guttersnipePoster from "../../src/guttersnipe-shared/assets/images/JoeStrummerGuttersnipe.png";
+import guttersnipeVideo from "guttersnipe-shared/assets/video/Guttersnipe.mp4";
+import guttersnipePoster from "guttersnipe-shared/assets/images/JoeStrummerGuttersnipe.png";
 
 const videoIsVisible = false;
 

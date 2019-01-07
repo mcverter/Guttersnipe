@@ -9,10 +9,10 @@ import { Provider } from "react-redux";
 import Router from "./src/routes";
 import { createStore, applyMiddleware } from "redux";
 import createSagaMiddleware from "redux-saga";
-import rootReducer from "./src/guttersnipe-shared/redux/reducers";
+import rootReducer from "guttersnipe-shared/redux/reducers";
 // import initSagas from "./initSagas";
 
-// import configureStore from "./src/guttersnipe-shared/redux/store/configureStore";
+// import configureStore from "guttersnipe-shared/redux/store/configureStore";
 // import rootReducer from "./redux/reducers";
 //const initialState = require("./redux/store/initialState");
 // const store = configureStore(initialState);  REVIEW THIS CODE PATH
