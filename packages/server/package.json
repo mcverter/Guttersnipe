@@ -1,13 +1,12 @@
 {
-  "name": "guttersnipe-mobile",
+  "name": "guttersnipe-server",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "npm run start-server",
-    "start-server": "node ./packages/server/src/server/bin/server.js",
-    "build-client": "cd ./packages/web && npm run-script build",
-    "db:create": "psql -U postgres -a -f ./packages/server/src/db/sql/CreateTables.sql && psql -U postgres -a -f ./packages/server/src/db/sql/StoredProcedures.sql",
-    "seed": "node ./packages/server/src/db/seeds/SeederController.js",
+    "start-server": "node ./src/server/bin/server.js",
+    "db:create": "psql -U postgres -a -f ./src/db/sql/CreateTables.sql && psql -U postgres -a -f ./src/db/sql/StoredProcedures.sql",
+    "seed": "node ./src/db/seeds/SeederController.js",
     "test": "jest"
   },
   "dependencies": {
