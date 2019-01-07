@@ -1,3 +1,11 @@
-{"name": "guttersnipe-shared",
+{
+  "name": "guttersnipe-shared",
   "version": "0.1.0",
-  "private": false}
+  "private": false,
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "redux-saga": "^0.16.2"
+  }
+}
