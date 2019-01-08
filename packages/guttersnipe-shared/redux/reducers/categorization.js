@@ -16,12 +16,14 @@ export default function categorization(
         categorizationFetchError: false
       });
     case types.CATEGORIES_SUCCESS:
+      console.log(categorization);
       return Object.assign({}, categorization, {
         isFetchingCategorization: false,
         categorizationFetchError: false,
         paragraph: action.categorization.paragraph
       });
     case types.CATEGORIES_FAILURE:
+
       return Object.assign({}, categorization, {
         isFetchingCategorization: false,
         categorizationFetchError: true

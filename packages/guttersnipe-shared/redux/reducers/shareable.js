@@ -16,6 +16,7 @@ export default function shareables(
         }
       );
     case types.SHAREABLE_LIST_SUCCESS:
+      console.log(shareables);
       return Object.assign(
         {},
         {
